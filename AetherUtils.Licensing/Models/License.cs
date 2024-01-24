@@ -51,21 +51,21 @@ namespace AetherUtils.Licensing.Models
         public int Quantity { get; set; } = 0;
 
         /// <summary>
-        /// A list of product features that are actived via this license.
+        /// A list of product features that are activated via this license.
         /// </summary>
         [XmlArray(ElementName = "ProductFeatures")]
         [XmlArrayItem(typeof(Feature), ElementName = "Feature")]
         [Browsable(false)]
         [Category("License")]
         [DisplayName("Product Features")]
-        public List<Feature> ProductFeatures { get; set; } = [];
+        public List<Feature> ProductFeatures { get; set; } = new();
 
         /// <summary>
         /// The <see cref="Models.Customer"/> this license is assigned to, or <c>null</c> if no customer assigned.
         /// </summary>
         [XmlElement(ElementName = "Customer")]
         [Browsable(false)]
-        public Customer? Customer { get; set; } = null;
+        public Customer? Customer { get; set; }
 
         /// <summary>
         /// The signature of the license after signed with private key.

@@ -104,8 +104,8 @@ namespace AetherUtils.Core.Extensions
         /// <returns>The resized image.</returns>
         public static Image ResizeImageScaled(this Image image, SizeF desiredSize)
         {
-            var scaleHeight = (float)desiredSize.Height / image.Height;
-            var scaleWidth = (float)desiredSize.Width / image.Width;
+            var scaleHeight = desiredSize.Height / image.Height;
+            var scaleWidth = desiredSize.Width / image.Width;
             var scale = Math.Min(scaleHeight, scaleWidth);
             return new Bitmap(image, (int)(image.Width * scale), (int)(image.Height * scale));
         }
@@ -134,7 +134,7 @@ namespace AetherUtils.Core.Extensions
                 using var ms = new MemoryStream();
                 image.Save(ms, image.RawFormat);
                 return ms.ToArray();
-            } catch (Exception ex) { Debug.WriteLine(ex); return []; }
+            } catch (Exception ex) { Debug.WriteLine(ex); return Array.Empty<byte>(); }
         }
 
         /// <summary>

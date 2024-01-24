@@ -12,7 +12,7 @@ namespace AetherUtils.Core.Filtering
     /// </summary>
     public class ANDFilter : IFilter
     {
-        private readonly FilterExpressionList expressions = [];
+        private readonly FilterExpressionList expressions = new();
 
         /// <summary>
         /// Create a new AND filter statement. The left and right hand sides of the supplied statements are conjoined with an AND between them.
@@ -32,17 +32,16 @@ namespace AetherUtils.Core.Filtering
         {
             get
             {
-                string strFilter = string.Empty;
+                var strFilter = string.Empty;
                 StringBuilder sb = new();
-                if (expressions.Count > 0)
-                {
-                    for (int i = 0; i < expressions.Count - 1; i++)
-                        sb = sb.Append(expressions[i].FilterString).Append(" AND ");
+                if (expressions.Count <= 0) return strFilter;
+                
+                for (var i = 0; i < expressions.Count - 1; i++)
+                    sb = sb.Append(expressions[i].FilterString).Append(" AND ");
 
-                    sb = sb.Append(expressions[^1].FilterString);
-                    strFilter = sb.ToString();
-                    strFilter = string.Format("({0})", strFilter);
-                }
+                sb = sb.Append(expressions[^1].FilterString);
+                strFilter = sb.ToString();
+                strFilter = $"({strFilter})";
                 return strFilter;
             }
         }

@@ -17,7 +17,7 @@ namespace AetherUtils.Core.Filtering
 
         public FilterExpressionList()
         {
-            items = [];
+            items = new List<IFilter>();
             enumerator = items.GetEnumerator();
         }
 
@@ -26,21 +26,9 @@ namespace AetherUtils.Core.Filtering
             return this;
         }
 
-        public IFilter Current
-        {
-            get
-            {
-                return (IFilter)enumerator.Current;
-            }
-        }
+        public IFilter Current => (IFilter)enumerator.Current;
 
-        object IEnumerator.Current
-        {
-            get
-            {
-                return enumerator.Current;
-            }
-        }
+        object IEnumerator.Current => enumerator.Current;
 
         public void Reset()
         {
@@ -55,10 +43,10 @@ namespace AetherUtils.Core.Filtering
         /// <summary>
         /// Add a new <see cref="IFilter"/> to the list.
         /// </summary>
-        /// <param name="filterExpresion">The <see cref="IFilter"/> expression.</param>
-        public void Add(IFilter filterExpresion)
+        /// <param name="filterExpression">The <see cref="IFilter"/> expression.</param>
+        public void Add(IFilter filterExpression)
         {
-            items.Add(filterExpresion);
+            items.Add(filterExpression);
         }
 
         /// <summary>
@@ -68,25 +56,13 @@ namespace AetherUtils.Core.Filtering
         /// <returns>The <see cref="IFilter"/> expression at the specified index.</returns>
         public IFilter this[int index]
         {
-            get
-            {
-                return items[index];
-            }
-            set
-            {
-                items[index] = value;
-            }
+            get => items[index];
+            set => items[index] = value;
         }
 
         /// <summary>
         /// Get the number of objects in the list.
         /// </summary>
-        public int Count
-        {
-            get
-            {
-                return items.Count;
-            }
-        }
+        public int Count => items.Count;
     }
 }

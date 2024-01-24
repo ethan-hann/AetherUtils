@@ -20,25 +20,13 @@ namespace AetherUtils.Core.Filtering
         /// </summary>
         public string FilterValue
         {
-            get
-            {
-                return initialFilterValue;
-            }
-            set
-            {
-                initialFilterValue = value.Replace("'", "''");
-            }
+            get => initialFilterValue;
+            set => initialFilterValue = value.Replace("'", "''");
         }
 
         /// <summary>
         /// Get the final filter string for this <see cref="SqlFilter"/>.
         /// </summary>
-        public string FilterString
-        {
-            get
-            {
-                return string.Format(sqlOperator.ToDescriptionString(), columnName, FilterValue);
-            }
-        }
+        public string FilterString => string.Format(sqlOperator.ToDescriptionString(), columnName, FilterValue);
     }
 }

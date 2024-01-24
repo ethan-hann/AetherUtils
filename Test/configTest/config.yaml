@@ -1,0 +1,7 @@
+connectionString: This is a test!
+licenseFile: This is another test!!!
+logOptions:
+  logFileDirectory: '%TEMP%\logs'
+  includeDateTime: true
+  includeDateOnly: false
+  newFileEveryLaunch: true
