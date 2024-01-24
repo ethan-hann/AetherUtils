@@ -1,0 +1,92 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AetherUtils.Core.Filtering
+{
+    /// <summary>
+    /// Implements the <see cref="IEnumerable"/> interface using a <see cref="List{T}"/> of <see cref="IFilter"/> objects.
+    /// </summary>
+    public class FilterExpressionList : IEnumerable, IEnumerator
+    {
+        readonly List<IFilter> items;
+        readonly IEnumerator enumerator;
+
+        public FilterExpressionList()
+        {
+            items = [];
+            enumerator = items.GetEnumerator();
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return this;
+        }
+
+        public IFilter Current
+        {
+            get
+            {
+                return (IFilter)enumerator.Current;
+            }
+        }
+
+        object IEnumerator.Current
+        {
+            get
+            {
+                return enumerator.Current;
+            }
+        }
+
+        public void Reset()
+        {
+            enumerator.Reset();
+        }
+
+        public bool MoveNext()
+        {
+            return enumerator.MoveNext();
+        }
+
+        /// <summary>
+        /// Add a new <see cref="IFilter"/> to the list.
+        /// </summary>
+        /// <param name="filterExpresion">The <see cref="IFilter"/> expression.</param>
+        public void Add(IFilter filterExpresion)
+        {
+            items.Add(filterExpresion);
+        }
+
+        /// <summary>
+        /// Get the <see cref="IFilter"/> expression at the specified index.
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns>The <see cref="IFilter"/> expression at the specified index.</returns>
+        public IFilter this[int index]
+        {
+            get
+            {
+                return items[index];
+            }
+            set
+            {
+                items[index] = value;
+            }
+        }
+
+        /// <summary>
+        /// Get the number of objects in the list.
+        /// </summary>
+        public int Count
+        {
+            get
+            {
+                return items.Count;
+            }
+        }
+    }
+}
