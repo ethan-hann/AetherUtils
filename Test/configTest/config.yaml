@@ -1,7 +1,20 @@
-connectionString: This is a test!
-licenseFile: This is another test!!!
+connectionString: Yet another test2!
+licenseFile: Gobeldigook 3!
 logOptions:
   logFileDirectory: '%TEMP%\logs'
   includeDateTime: true
   includeDateOnly: false
   newFileEveryLaunch: true
+  testNest:
+    testProp: TestNest String Property
+    testPropList:
+    - Item 1
+    - Changed Item 2
+    - Item 3
+    testNest2:
+      testPropListInts:
+      - 52
+      - 6
+      - 7
+      - 27
+      - 212

@@ -30,4 +30,7 @@ public class LogOptions
     /// </summary>
     [Config("newFileEveryLaunch")]
     public bool NewFileEveryLaunch { get; set; } = true;
+
+    [Config("testNest")]
+    public TestNest TestNest { get; set; } = new TestNest();
 }
