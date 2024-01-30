@@ -18,3 +18,9 @@ logOptions:
       - 7
       - 27
       - 212
+      testNest3:
+        testPropListDoubles:
+        - 0.5
+        - 5.9
+        - 52.21
+        - 79.52

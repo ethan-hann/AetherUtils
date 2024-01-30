@@ -1,4 +1,6 @@
-﻿namespace AetherUtils.Core.Configuration;
+﻿using AetherUtils.Core.Structs;
+
+namespace AetherUtils.Core.Configuration;
 
 public interface IConfig
 {
@@ -22,12 +24,13 @@ public interface IConfig
     /// </summary>
     /// <param name="configName">The name of the configuration value to get.</param>
     /// <returns>The value of the configuration property.</returns>
-    public object? Get(string configName);
+    public object? Get(ConfigOption option);
 
     /// <summary>
     /// Set a configuration value for the named config property.
     /// </summary>
     /// <param name="configName">The name of the configuration value to set.</param>
     /// <param name="value">The value to set the configuration option to.</param>
-    public void Set(string configName, object? value);
+    /// <returns><c>true</c> if the value was set successfully; <c>false</c> otherwise.</returns>
+    public bool Set(ConfigOption option);
 }

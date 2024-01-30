@@ -14,5 +14,8 @@ namespace AetherUtils.Core.Configuration
         {
             1, 6, 19, 20, 212
         };
+
+        [Config("testNest3")]
+        public TestNest3 TestNest3 { get; set; } = new TestNest3();
     }
 }

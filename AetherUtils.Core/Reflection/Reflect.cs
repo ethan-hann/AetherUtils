@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace AetherUtils.Core.Reflection
 {
     /// <summary>
-    /// Contains methods to help with reflection of classes and types.
+    /// Contains methods to help with reflection of classes, types, and attributes.
     /// </summary>
     public static class Reflect
     {
@@ -91,19 +91,25 @@ namespace AetherUtils.Core.Reflection
         }
 
         //SEE: https://stackoverflow.com/questions/53029972/recursively-get-properties-marked-with-an-attribute
-        public static IEnumerable<(Type Class, PropertyInfo Property, Attribute Attribute, object? Instance)> GetAttributeList<T>(object? instance, Type type, HashSet<Type>? visited = null) where T : Attribute
+        /// <summary>
+        /// Retrieve all of the <see cref="Type"/>, <see cref="PropertyInfo"/>, <see cref="Attribute"/>, and <see cref="object"/>s 
+        /// related to the custom attribute <typeparamref name="T"/> specified, recursively.
+        /// </summary>
+        /// <typeparam name="T">The custom attribute to search for.</typeparam>
+        /// <param name="instance">The initial <see cref="object"/> instance to start the search on.</param>
+        /// <param name="type">The initial <see cref="Type"/> to start the search on.</param>
+        /// <param name="visited">Defaults to <c>null</c>. Used to maintain a <see cref="HashSet"/> of already visited types while searching.</param>
+        /// <returns><para>
+        /// An <see cref="IEnumerable"/> of tuples:<br/>
+        /// <c>(</c><see cref="Type"/>, <see cref="PropertyInfo"/>, <see cref="Attribute"/>, <see cref="object"/><c>)</c>
+        /// </para></returns>
+        public static IEnumerable<(Type Class, PropertyInfo Property, Attribute Attribute, object? Instance)> GetAttributesRecurse<T>(object? instance, Type type, HashSet<Type>? visited = null) where T : Attribute
         {
             // Keep track of where we have been.
             visited ??= []; //Shorthand for visitied = visited ?? new HashSet<Type>();
 
-            //If we've been here before, bail to prevent StackOverflow error.
-            if (!visited.Add(type))
-                yield break;
-
-            if (type.FullName.Equals("System.String") || type.IsPrimitive)
-                yield break;
-
-            if (IsList(type))
+            //If we've been here before, the type is System.String, or the type is a list, bail to prevent StackOverflow error.
+            if (!visited.Add(type) || type.FullName.Equals("System.String") || type.IsPrimitive || IsList(type))
                 yield break;
 
             foreach (var prop in type.GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
@@ -116,22 +122,9 @@ namespace AetherUtils.Core.Reflection
                 //if (prop.GetCustomAttributes<T>(true).Any())
 
                 // Recurse the property's type as well.
-                foreach (var result in GetAttributeList<T>(prop.GetValue(instance), prop.PropertyType, visited))
+                foreach (var result in GetAttributesRecurse<T>(prop.GetValue(instance), prop.PropertyType, visited))
                     yield return result;
             }
         }
-
-        //public static IEnumerable<(Type Class, PropertyInfo Property, object? Instance)> GetInstanceFromAttribute<T>(Type type, string attributeName) where T : Attribute
-        //{
-        //    var attributeList = GetAttributeList<T>(type);
-
-        //    foreach (var attribute in attributeList)
-        //    {
-        //        if (attribute.Attribute is T)
-        //        {
-        //            var instance = attribute.Property.GetValue()
-        //        }
-        //    }
-        //}
     }
 }

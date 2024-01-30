@@ -13,25 +13,27 @@ namespace AetherUtils.Core.Structs
     public struct ConfigOption
     {
         public string Name { get; set; }
-        public string ExtraOptions { get; set; }
+        public int ArrayIndexer { get; set; } = -1;
         public object? Value { get; set; }
-        public bool IsExtraOptionsArrayIndex { get; set; } = false;
+        public readonly bool ArrayIndexExists
+        {
+            get { return ArrayIndexer > -1; }
+        }
 
         public ConfigOption(string name, object? value)
         {
-            if (name.Contains('['))
+            if (!name.Contains('['))
+                Name = name;
+            else //If the name contains '[]', parse out the number between brackets and use for array index of list config value.
             {
                 string option = name[..name.IndexOf('[')];
-                string extraOption = name.Substring(name.IndexOf('[') + 1, name.Length - name.IndexOf(']'));
+                string extraOption = name[(name.IndexOf('[') + 1)..];
+                extraOption = extraOption.Remove(extraOption.IndexOf(']'));
                 Name = option;
-                ExtraOptions = extraOption;
-                IsExtraOptionsArrayIndex = true;
-            }
-            else
-            {
-                Name = name;
-                ExtraOptions = string.Empty;
-                IsExtraOptionsArrayIndex = false;
+                if (int.TryParse(extraOption, out int result))
+                {
+                    ArrayIndexer = result;
+                }
             }
 
             Value = value;

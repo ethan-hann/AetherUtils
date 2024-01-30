@@ -24,11 +24,11 @@ namespace AetherUtils.Core.Configuration;
 public abstract class ConfigManager<T>(string configFilePath) : IConfig
     where T : class
 {
-    private IDeserializer _deserializer = new DeserializerBuilder()
+    private readonly IDeserializer _deserializer = new DeserializerBuilder()
         .WithNamingConvention(CamelCaseNamingConvention.Instance)
         .IncludeNonPublicProperties().Build();
     
-    private ISerializer _serializer = new SerializerBuilder()
+    private readonly ISerializer _serializer = new SerializerBuilder()
         .WithNamingConvention(CamelCaseNamingConvention.Instance)
         .IncludeNonPublicProperties().Build();
 
@@ -72,47 +72,63 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     }
 
     /// <summary>
-    /// Get a configuration value from the current configuration.
+    /// Get a configuration value specified by <paramref name="option"/>.
     /// </summary>
-    /// <param name="configName">The name of the configuration, determined by its <see cref="ConfigAttribute"/>.</param>
-    /// <returns>The configuration value, or <c>null</c> if no value was found.</returns>
+    /// <param name="option">The <see cref="ConfigOption"/> containing information about the value to get.</param>
+    /// <returns>The configuration value or <c>null</c> if the value did not exist.</returns>
+    public object? Get(ConfigOption option)
+    {
+        if (!IsInitialized) return false;
+        if (CurrentConfig == null) return false;
+
+        foreach (var result in Reflect.GetAttributesRecurse<ConfigAttribute>(CurrentConfig, CurrentConfig.GetType()))
+        {
+            var attrib = result.Property.GetCustomAttribute<ConfigAttribute>();
+            if (attrib != null)
+            {
+                if (attrib.Name.Equals(option.Name))
+                {
+                    if (!option.ArrayIndexExists)
+                        return result.Property.GetValue(result.Instance);
+                    else
+                    {
+                        var currentVal = result.Property.GetValue(result.Instance);
+                        if (currentVal != null && Reflect.IsList(currentVal.GetType()))
+                        {
+                            try
+                            {
+                                IList? currentList = currentVal as IList;
+                                return currentList[option.ArrayIndexer];
+                            }
+                            catch (Exception ex) { Debug.WriteLine(ex.Message); return false; }
+                        }
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    /// <summary>
+    /// Get a configuration value specified by <paramref name="configName"/>.
+    /// </summary>
+    /// <param name="configName">The name of the configuration to get.</param>
+    /// <returns>The configuration value or <c>null</c> if the value did not exist.</returns>
     public object? Get(string configName)
     {
         if (!IsInitialized) return default;
-        return Get(configName, CurrentConfig);
-    }
-
-    private object? Get(string configName, object? instance)
-    {
-        if (!IsInitialized) return default;
-        if (instance == null) return default;
-
-        var type = instance.GetType();
-
-        foreach (var property in type.GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
-        {
-            IEnumerable<ConfigAttribute> configAttributes = property.GetCustomAttributes<ConfigAttribute>();
-            ConfigAttribute? attrib = configAttributes.FirstOrDefault(e => e.Name.Equals(configName));
-            if (attrib == null)
-            {
-                if (property.PropertyType.FullName != "System.String" && !property.PropertyType.IsPrimitive)
-                    return Get(configName, property.GetValue(instance));
-                else continue;
-            }
-
-            return property.GetValue(instance);
-        }
-        return null; //The property with the specified config name was not found.
+        return Get(new ConfigOption(configName, null));
     }
 
     /// <summary>
     /// Set a configuration value specified by <paramref name="option"/>.
     /// </summary>
     /// <param name="option">The <see cref="ConfigOption"/> containing information about the value to set.</param>
-    public void Set(ConfigOption option)
+    /// <returns><c>true</c> if the value was set successfully; <c>false</c> otherwise.</returns>
+    public bool Set(ConfigOption option)
     {
-        if (!IsInitialized) return;
-        Set(option, CurrentConfig);
+        if (!IsInitialized) return false;
+        return Set(option, CurrentConfig);
     }
 
     /// <summary>
@@ -120,10 +136,11 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     /// </summary>
     /// <param name="configName">The name of the configuration to set.</param>
     /// <param name="value">The value to set.</param>
-    public void Set(string configName, object? value)
+    /// <returns><c>true</c> if the value was set successfully; <c>false</c> otherwise.</returns>
+    public bool Set(string configName, object? value)
     {
-        if (!IsInitialized) return;
-        Set(new ConfigOption(configName, value), CurrentConfig);
+        if (!IsInitialized) return false;
+        return Set(new ConfigOption(configName, value), CurrentConfig);
     }
 
     private bool Set(ConfigOption option, object? instance)
@@ -131,50 +148,40 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
         if (!IsInitialized) return false;
         if (instance == null) return false;
 
-        var type = instance.GetType();
-
-        foreach (var result in Reflect.GetAttributeList<ConfigAttribute>(instance, instance.GetType()))
+        foreach (var result in Reflect.GetAttributesRecurse<ConfigAttribute>(instance, instance.GetType()))
         {
-            var attrib = result.Property.GetCustomAttribute<ConfigAttribute>();
-            if (attrib != null) 
+            if (((ConfigAttribute)result.Attribute).Name.Equals(option.Name))
             {
-                if (attrib.Name.Equals(option.Name))
+                if (!option.ArrayIndexExists)
                 {
-                    if (option.IsExtraOptionsArrayIndex)
+                    result.Property.SetValue(result.Instance, option.Value);
+                    return true;
+                }
+                else
+                {
+                    var currentVal = result.Property.GetValue(result.Instance);
+                    if (currentVal != null && Reflect.IsList(currentVal.GetType()))
                     {
-                        if (int.TryParse(option.ExtraOptions, out int index))
+                        Type? elementType = Reflect.GetCollectionElementType(currentVal.GetType());
+                        if (elementType != null)
                         {
-                            var currentVal = result.Property.GetValue(result.Instance);
-                            if (Reflect.IsList(currentVal.GetType()))
+                            try
                             {
-                                Type? elementType = Reflect.GetCollectionElementType(currentVal.GetType());
-                                if (elementType != null)
-                                {
-                                    IList? newList = Activator.CreateInstance(currentVal.GetType()) as IList;
-                                    IList? currentList = currentVal as IList;
-                                    for (int i = 0; i < currentList.Count; i++)
-                                        newList.Add(currentList[i]);
+                                IList? newList = Activator.CreateInstance(currentVal.GetType()) as IList;
+                                IList? currentList = currentVal as IList;
+                                for (int i = 0; i < currentList.Count; i++)
+                                    newList.Add(currentList[i]);
 
-                                    newList[index] = option.Value;
-                                    result.Property.SetValue(result.Instance, newList);
-                                }
+                                newList[option.ArrayIndexer] = option.Value;
+                                result.Property.SetValue(result.Instance, newList);
+                                return true;
                             }
+                            catch (Exception ex) { Debug.WriteLine(ex.Message); return false; }
                         }
                     }
-                    else
-                    {
-                        result.Property.SetValue(result.Instance, option.Value);
-                    }
-                    //var prop = (from property in typeof(T).GetProperties(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public)
-                    //            where property.PropertyType.Equals(result.Property) select property).FirstOrDefault();
-                    //PropertyInfo pInfo = result.Property ?? throw new Exception($"Property {option.Name.ToLower()} not found");
-
-                    //var currentVal = pInfo.GetValue(result.Instance, null);
-                    
-                    //result.Property.SetValue(instance, option.Value);
                 }
             }
         }
-        return true;
+        return false;
     }
 }
