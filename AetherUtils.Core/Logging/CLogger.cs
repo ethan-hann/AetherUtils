@@ -18,6 +18,8 @@ namespace AetherUtils.Core.Logging
     {
         private static bool _isInitialized = false;
 
+        public static bool IsInitialized => _isInitialized;
+
         /// <summary>
         /// Initialize the logger for the application. This should be called before any logging takes place; 
         /// usually, directly after reading or creating the initial configuration for the application.

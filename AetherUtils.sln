@@ -7,9 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AetherUtils.Core", "AetherU
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AetherUtils.Licensing", "AetherUtils.Licensing\AetherUtils.Licensing.csproj", "{FC3E8FA8-26F7-4C3E-ACBA-D7427F4F78B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{A67D854A-B921-48C2-9B88-FB9B2CE5DFBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{A67D854A-B921-48C2-9B88-FB9B2CE5DFBC}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4087346F-659A-42E3-9F83-6EBEB52AA32F} = {4087346F-659A-42E3-9F83-6EBEB52AA32F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AetherUtils.Tests", "AetherUtils.Tests\AetherUtils.Tests.csproj", "{D594F7A2-97F8-4140-A43D-F0E879C133EB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4087346F-659A-42E3-9F83-6EBEB52AA32F} = {4087346F-659A-42E3-9F83-6EBEB52AA32F}
+		{FC3E8FA8-26F7-4C3E-ACBA-D7427F4F78B2} = {FC3E8FA8-26F7-4C3E-ACBA-D7427F4F78B2}
 	EndProjectSection
 EndProject
 Global
@@ -30,6 +36,10 @@ Global
 		{A67D854A-B921-48C2-9B88-FB9B2CE5DFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A67D854A-B921-48C2-9B88-FB9B2CE5DFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A67D854A-B921-48C2-9B88-FB9B2CE5DFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D594F7A2-97F8-4140-A43D-F0E879C133EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D594F7A2-97F8-4140-A43D-F0E879C133EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D594F7A2-97F8-4140-A43D-F0E879C133EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D594F7A2-97F8-4140-A43D-F0E879C133EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
