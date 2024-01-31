@@ -41,6 +41,7 @@ namespace AetherUtils.Core.Files
         public static void SaveFile(string filePath, string content, bool expandPath = true)
         {
             filePath = expandPath ? ExpandPath(filePath) : filePath;
+            CreateDirectories(filePath, false);
             try
             {
                 File.WriteAllText(filePath, content);
@@ -90,6 +91,7 @@ namespace AetherUtils.Core.Files
         public static void SaveFile(string filePath, string content, Encoding encoding, bool expandPath = true)
         {
             filePath = expandPath ? ExpandPath(filePath) : filePath;
+            CreateDirectories(filePath, false);
             try
             {
                 File.WriteAllText(filePath, content, encoding);
@@ -107,6 +109,7 @@ namespace AetherUtils.Core.Files
         public static void SaveFile(string filePath, byte[] contents, bool expandPath = true)
         {
             filePath = expandPath ? ExpandPath(filePath) : filePath;
+            CreateDirectories(filePath, false);
             try
             {
                 File.WriteAllBytes(filePath, contents);
@@ -124,6 +127,7 @@ namespace AetherUtils.Core.Files
         public static async void SaveFileAsync(string filePath, string content, bool expandPath = true)
         {
             filePath = expandPath ? ExpandPath(filePath) : filePath;
+            CreateDirectories(filePath, false);
             try
             {
                 await File.WriteAllTextAsync(filePath, content);
@@ -141,6 +145,7 @@ namespace AetherUtils.Core.Files
         public static async void SaveFileAsync(string filePath, string content, Encoding encoding,  bool expandPath = true)
         {
             filePath = expandPath ? ExpandPath(filePath) : filePath;
+            CreateDirectories(filePath, false);
             try
             {
                 await File.WriteAllTextAsync(filePath, content, encoding);
@@ -158,6 +163,7 @@ namespace AetherUtils.Core.Files
         public static async void SaveFileAsync(string filePath, byte[] content, bool expandPath = true)
         {
             filePath = expandPath ? ExpandPath(filePath) : filePath;
+            CreateDirectories(filePath, false);
             try
             {
                 await File.WriteAllBytesAsync(filePath, content);

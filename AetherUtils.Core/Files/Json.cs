@@ -9,10 +9,10 @@ using Newtonsoft.Json;
 namespace AetherUtils.Core.Files
 {
     /// <summary>
-    /// Implements serializing and de-serializing JSON files on generic object types.
+    /// Implements serializing and de-serializing JSON files to/from generic object types.
     /// </summary>
     /// <typeparam name="T">The type of object to serialize/deserialize.</typeparam>
-    public class Json<T> where T : class
+    public sealed class Json<T> where T : class
     {
         private readonly JsonSerializerSettings _settings;
         private readonly JsonSerializer _serializer;
