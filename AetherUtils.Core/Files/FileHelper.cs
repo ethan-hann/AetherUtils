@@ -28,7 +28,7 @@ namespace AetherUtils.Core.Files
                 if (dInfo != null)
                     Directory.CreateDirectory(dInfo.FullName);
             }
-            catch (Exception ex) { Debug.WriteLine(ex); }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); }
         }
 
         /// <summary>
@@ -44,7 +44,39 @@ namespace AetherUtils.Core.Files
             try
             {
                 File.WriteAllText(filePath, content);
-            } catch (Exception ex) { Debug.WriteLine(ex); }
+            } catch (Exception ex) { Debug.WriteLine(ex.Message); }
+        }
+
+        /// <summary>
+        /// Open a text file, read all text within to a string, and close the file.
+        /// </summary>
+        /// <param name="filePath">The path to the file.</param>
+        /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before attempting to open the file?</param>
+        /// <returns>The contents of <paramref name="filePath"/> or <see cref="string.Empty"/> if the file could not be opened.</returns>
+        public static string OpenFile(string filePath, bool expandPath = true)
+        {
+            filePath = expandPath ? ExpandPath(filePath) : filePath;
+            try
+            {
+                return File.ReadAllText(filePath);
+            }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); return string.Empty; }
+        }
+
+        /// <summary>
+        /// Open a binary file, read all bytes within to a byte array, and close the file.
+        /// </summary>
+        /// <param name="filePath">The path to the file.</param>
+        /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before attempting to open the file?</param>
+        /// <returns>The contents of <paramref name="filePath"/> or an empty array if the file could not be opened.</returns>
+        public static byte[] OpenNonTextFile(string filePath, bool expandPath = true)
+        {
+            filePath = expandPath ? ExpandPath(filePath) : filePath;
+            try
+            {
+                return File.ReadAllBytes(filePath);
+            }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); return []; }
         }
 
         /// <summary>
@@ -62,7 +94,7 @@ namespace AetherUtils.Core.Files
             {
                 File.WriteAllText(filePath, content, encoding);
             }
-            catch (Exception ex) { Debug.WriteLine(ex); }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); }
         }
 
         /// <summary>
@@ -79,7 +111,7 @@ namespace AetherUtils.Core.Files
             {
                 File.WriteAllBytes(filePath, contents);
             }
-            catch (Exception ex) { Debug.WriteLine(ex); }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); }
         }
 
         /// <summary>
@@ -95,7 +127,7 @@ namespace AetherUtils.Core.Files
             try
             {
                 await File.WriteAllTextAsync(filePath, content);
-            } catch (Exception ex) { Debug.WriteLine(ex); }
+            } catch (Exception ex) { Debug.WriteLine(ex.Message); }
         }
 
         /// <summary>
@@ -113,7 +145,7 @@ namespace AetherUtils.Core.Files
             {
                 await File.WriteAllTextAsync(filePath, content, encoding);
             }
-            catch (Exception ex) { Debug.WriteLine(ex); }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); }
         }
 
         /// <summary>
@@ -129,7 +161,7 @@ namespace AetherUtils.Core.Files
             try
             {
                 await File.WriteAllBytesAsync(filePath, content);
-            } catch (Exception ex) { Debug.WriteLine(ex); }
+            } catch (Exception ex) { Debug.WriteLine(ex.Message); }
         }
 
         #endregion
@@ -149,7 +181,7 @@ namespace AetherUtils.Core.Files
                     return Environment.ExpandEnvironmentVariables(filePath);
                 return filePath;
             }
-            catch (Exception ex) { Debug.WriteLine(ex); return filePath; }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); return filePath; }
         }
 
         /// <summary>
@@ -167,7 +199,7 @@ namespace AetherUtils.Core.Files
                     expandedPath = Environment.ExpandEnvironmentVariables(path);
                     return true;
                 }
-            } catch (Exception ex) { Debug.WriteLine(ex); }
+            } catch (Exception ex) { Debug.WriteLine(ex.Message); }
             expandedPath = path;
             return false;
         }

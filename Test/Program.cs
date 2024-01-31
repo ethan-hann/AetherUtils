@@ -4,7 +4,7 @@ using AetherUtils.Core.Logging;
 using NLog;
 
 var manager = new YamlConfigManager("F:\\GitHub\\AetherUtils\\Test\\configTest\\config.yaml");
-if (!manager.ConfigExists())
+if (!manager.ConfigExists)
     manager.CreateConfig(); //create and save the configuration if the file does not exist.
 
 manager.Load(); //load the configuration
