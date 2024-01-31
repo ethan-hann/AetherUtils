@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace AetherUtils.Core.Structs
 {
     /// <summary>
-    /// Represents a single configuration option. This option can contain a single-dimensional list indexer:
+    /// Represents a single configuration option and it's value. This option can contain a single-dimensional list indexer:
     /// <c>optionName[0]</c> - get/set the configuration with name <c>optionName</c> at index 0, where <c>optionName</c> is a list.
     /// </summary>
     public struct ConfigOption
@@ -20,17 +20,19 @@ namespace AetherUtils.Core.Structs
             get { return ArrayIndexer > -1; }
         }
 
-        public ConfigOption(string name, object? value)
+        public ConfigOption(string option, object? value)
         {
-            if (!name.Contains('['))
-                Name = name;
+            if (!option.Contains('['))
+                Name = option;
             else //If the name contains '[]', parse out the number between brackets and use for array index of list config value.
             {
-                string option = name[..name.IndexOf('[')];
-                string extraOption = name[(name.IndexOf('[') + 1)..];
-                extraOption = extraOption.Remove(extraOption.IndexOf(']'));
-                Name = option;
-                if (int.TryParse(extraOption, out int result))
+                string optionName = option[..option.IndexOf('[')];
+                string extraIndex = option[(option.IndexOf('[') + 1)..];
+                extraIndex = extraIndex.Remove(extraIndex.IndexOf(']'));
+
+                Name = optionName;
+
+                if (int.TryParse(extraIndex, out int result))
                 {
                     ArrayIndexer = result;
                 }

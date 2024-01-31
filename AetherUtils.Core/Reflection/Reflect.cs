@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace AetherUtils.Core.Reflection
 {
     /// <summary>
-    /// Contains methods to help with reflection of classes, types, and attributes.
+    /// Contains methods to help with runtime reflection of classes, types, and attributes.
     /// </summary>
     public static class Reflect
     {
@@ -108,18 +108,16 @@ namespace AetherUtils.Core.Reflection
             // Keep track of where we have been.
             visited ??= []; //Shorthand for visitied = visited ?? new HashSet<Type>();
 
-            //If we've been here before, the type is System.String, or the type is a list, bail to prevent StackOverflow error.
+            //If we've been here before, the type is System.String, or the type is a list, yield to prevent StackOverflow error.
             if (!visited.Add(type) || type.FullName.Equals("System.String") || type.IsPrimitive || IsList(type))
                 yield break;
 
             foreach (var prop in type.GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
             {
-                // The Attribute exists, let's yield.
                 var customAttribute = prop.GetCustomAttribute<T>(true);
                 if (customAttribute != null)
+                    // The Attribute exists, let's yield and return.
                     yield return (type, prop, customAttribute, instance);
-
-                //if (prop.GetCustomAttributes<T>(true).Any())
 
                 // Recurse the property's type as well.
                 foreach (var result in GetAttributesRecurse<T>(prop.GetValue(instance), prop.PropertyType, visited))

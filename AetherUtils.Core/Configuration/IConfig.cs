@@ -2,10 +2,26 @@
 
 namespace AetherUtils.Core.Configuration;
 
+/// <summary>
+/// Interface that all Configuration Manager classes must implement.
+/// </summary>
 public interface IConfig
 {
+    /// <summary>
+    /// The file path to a configuration file. This path can contain Windows path variables (i.e., <c>%TEMP%</c>). They will be
+    /// expanded when saving and loading.
+    /// </summary>
     public string ConfigFilePath { get; set; }
+
+    /// <summary>
+    /// Get a value indicating whether this configuration is initialized and ready to be used.
+    /// </summary>
     public bool IsInitialized { get; }
+
+    /// <summary>
+    /// Get a value indicating whether the configuration file specified by <see cref="ConfigFilePath"/> exists.
+    /// </summary>
+    public bool ConfigExists { get; }
     
     /// <summary>
     /// Deserialize a configuration file from disk, if it exists.

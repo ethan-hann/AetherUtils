@@ -3,9 +3,9 @@ licenseFile: ''
 logOptions:
   appName: ''
   logFileDirectory: '%TEMP%\logs'
-  includeDateTime: true
-  includeDateOnly: false
-  newFileEveryLaunch: true
+  includeDateTime: false
+  includeDateOnly: true
+  newFileEveryLaunch: false
   writeLogToConsole: true
   logLayout: ${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}
   logHeader: ''

@@ -4,12 +4,11 @@ using AetherUtils.Core.Logging;
 using NLog;
 
 var manager = new YamlConfigManager("F:\\GitHub\\AetherUtils\\Test\\configTest\\config.yaml");
-manager.CreateConfig();
-manager.Save();
+if (!manager.ConfigExists())
+    manager.CreateConfig(); //create and save the configuration if the file does not exist.
 
-Console.WriteLine(manager.Get("testProp"));
-Console.WriteLine(manager.Get("testPropListDoubles[1]"));
-Console.WriteLine(manager.Get("testPropListInts[2]"));
+manager.Load(); //load the configuration
+
 //manager.Set("connectionString", "Yet another test2!");
 //manager.Set("licenseFile", "Gobeldigook 3!");
 ////manager.Set("logFileDirectory", "%TEMP%\\logs2");
@@ -24,16 +23,15 @@ Console.WriteLine(manager.Get("testPropListInts[2]"));
 
 CLogger.Initialize((LogOptions) manager.Get("logOptions"));
 Logger log = CLogger.GetCurrentLogger<YamlConfigManager>();
+Logger log2 = CLogger.GetCurrentLogger("FooMethod1::GetObject()");
 
 log.Info("Test log message");
+log2.Fatal("This is a fatal message! GetObject() returned nothing...");
 
-
-
-
-public class YamlConfigManager(string configFilePath) : ConfigManager<DefaultConfig>(configFilePath)
+try
 {
-    public void CreateConfig()
-    {
-        CurrentConfig = new DefaultConfig();
-    }
-}
+    Console.WriteLine("Enter 0: ");
+    int num = int.Parse(Console.ReadLine());
+
+    double div = 1 / num;
+} catch (Exception ex) { log2.Fatal(ex); }

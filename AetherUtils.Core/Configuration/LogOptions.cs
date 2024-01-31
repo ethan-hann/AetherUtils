@@ -23,19 +23,19 @@ public class LogOptions
     /// Indicates if the log file name should include the current DateTime the file was created.
     /// </summary>
     [Config("includeDateTime")]
-    public bool IncludeDateTime { get; set; } = true;
+    public bool IncludeDateTime { get; set; } = false;
 
     /// <summary>
     /// Indicates if the log file name should include the date only, instead of the full DateTime.
     /// </summary>
     [Config("includeDateOnly")]
-    public bool IncludeDateOnly { get; set; } = false;
+    public bool IncludeDateOnly { get; set; } = true;
 
     /// <summary>
     /// Indicates whether a new log file should be created every new launch of the application.
     /// </summary>
     [Config("newFileEveryLaunch")]
-    public bool NewFileEveryLaunch { get; set; } = true;
+    public bool NewFileEveryLaunch { get; set; } = false;
 
     /// <summary>
     /// Indicates whether the log should also write to the system console.

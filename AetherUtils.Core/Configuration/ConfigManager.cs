@@ -38,6 +38,13 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
 
     public bool IsInitialized { get => CurrentConfig != null; }
 
+    public bool ConfigExists { get => FileHelper.DoesFileExist(ConfigFilePath); }
+
+    /// <summary>
+    /// Create the configuration and optionally, save the file to disk.
+    /// </summary>
+    public abstract void CreateConfig(bool saveToDisk = true);
+
     /// <summary>
     /// Loads a configuration file from disk based on the <see cref="ConfigFilePath"/>.
     /// </summary>

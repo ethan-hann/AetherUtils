@@ -180,7 +180,7 @@ namespace AetherUtils.Core.Files
         /// </summary>
         /// <param name="filePath">The path to a file.</param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before checking?</param>
-        /// <returns><see cref="true"/> if the file exists; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the file exists; <c>false</c> otherwise.</returns>
         public static bool DoesFileExist(string filePath, bool expandPath = true)
         {
             if (expandPath)
@@ -197,7 +197,7 @@ namespace AetherUtils.Core.Files
         /// </summary>
         /// <param name="folderPath">The path to a folder.</param>
         /// <param name="expandPath">Should the <paramref name="folderPath"/> be expanded before checking?</param>
-        /// <returns></returns>
+        /// <returns><c>true</c> if the folder exists; <c>false</c> otherwise.</returns>
         public static bool DoesFolderExist(string folderPath, bool expandPath = true)
         {
             if (expandPath)
