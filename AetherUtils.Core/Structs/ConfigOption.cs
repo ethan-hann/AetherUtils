@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace AetherUtils.Core.Structs
 {
     /// <summary>
-    /// Represents a single configuration option. This option can contain a single-dimensional array indexer:
-    /// <c>optionName[0]</c> - get/set the configuration with name <c>optionName</c> at index 0.
+    /// Represents a single configuration option. This option can contain a single-dimensional list indexer:
+    /// <c>optionName[0]</c> - get/set the configuration with name <c>optionName</c> at index 0, where <c>optionName</c> is a list.
     /// </summary>
     public struct ConfigOption
     {

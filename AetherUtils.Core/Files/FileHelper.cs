@@ -17,10 +17,13 @@ namespace AetherUtils.Core.Files
         /// Create directories along the specified file path if they don't already exist.
         /// </summary>
         /// <param name="filePath">The path to create directories on.</param>
-        public static void CreateDirectories(string filePath)
+        /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before creating directories?</param>
+        public static void CreateDirectories(string filePath, bool expandPath = true)
         {
             try
             {
+                filePath = expandPath ? ExpandPath(filePath) : filePath;
+
                 DirectoryInfo? dInfo = Directory.GetParent(filePath);
                 if (dInfo != null)
                     Directory.CreateDirectory(dInfo.FullName);

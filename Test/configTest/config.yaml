@@ -1,26 +1,12 @@
-connectionString: Yet another test2!
-licenseFile: Gobeldigook 3!
+connectionString: host=;port=;user=;password=;database=;
+licenseFile: ''
 logOptions:
+  appName: ''
   logFileDirectory: '%TEMP%\logs'
   includeDateTime: true
   includeDateOnly: false
   newFileEveryLaunch: true
-  testNest:
-    testProp: TestNest String Property
-    testPropList:
-    - Item 1
-    - Changed Item 2
-    - Item 3
-    testNest2:
-      testPropListInts:
-      - 52
-      - 6
-      - 7
-      - 27
-      - 212
-      testNest3:
-        testPropListDoubles:
-        - 0.5
-        - 5.9
-        - 52.21
-        - 79.52
+  writeLogToConsole: true
+  logLayout: ${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}
+  logHeader: ''
+  logFooter: ''

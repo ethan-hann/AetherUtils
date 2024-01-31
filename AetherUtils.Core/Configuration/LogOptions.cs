@@ -8,6 +8,12 @@ namespace AetherUtils.Core.Configuration;
 public class LogOptions
 {
     /// <summary>
+    /// The name of the application doing the logging.
+    /// </summary>
+    [Config("appName")]
+    public string AppName { get; set; } = string.Empty;
+
+    /// <summary>
     /// The directory that the log file should be saved to.
     /// </summary>
     [Config("logFileDirectory")]
@@ -31,6 +37,26 @@ public class LogOptions
     [Config("newFileEveryLaunch")]
     public bool NewFileEveryLaunch { get; set; } = true;
 
-    [Config("testNest")]
-    public TestNest TestNest { get; set; } = new TestNest();
+    /// <summary>
+    /// Indicates whether the log should also write to the system console.
+    /// </summary>
+    [Config("writeLogToConsole")]
+    public bool WriteLogToConsole { get; set; } = true;
+
+    /// <summary>
+    /// Specifies the default log layout to use for NLog.
+    /// </summary>
+    public string LogLayout { get; set; } = "${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}";
+
+    /// <summary>
+    /// Specifies the header to add at the top of each log file.
+    /// </summary>
+    [Config("logHeader")]
+    public string LogHeader { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Specifies the footer to add at the end of each log file.
+    /// </summary>
+    [Config("logFooter")]
+    public string LogFooter { get; set; } = string.Empty;
 }
