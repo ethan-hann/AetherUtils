@@ -1,8 +1,11 @@
-﻿using System;
+﻿using AetherUtils.Core.Regex;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace AetherUtils.Core.Files
@@ -210,6 +213,42 @@ namespace AetherUtils.Core.Files
             return false;
         }
 
+        /// <summary>
+        /// Gets whether the specified path is a valid absolute file path on Windows.
+        /// </summary>
+        /// <param name="path">A path to check.</param>
+        static public bool IsValidPath(string path)
+        {
+            try { return RegexGenerator.PathRegex().IsMatch(path); } catch { return false; }
+        }
+
+        #endregion
+
+        #region File Name and Path Manipulators
+
+        /// <summary>
+        /// Removes the platform-specific invalid file name characters from the specified file name.
+        /// </summary>
+        /// <param name="fileName">The filename.</param>
+        /// <returns>A string with the invalid characters removed from the filename.</returns>
+        public static string RemoveInvalidFileNameChars(string fileName)
+        {
+            char[] invalidFileChars = Path.GetInvalidFileNameChars();
+            string? newFileName = fileName.Except(invalidFileChars).ToString();
+            return newFileName ?? fileName;
+        }
+
+        /// <summary>
+        /// Removes the platform-specific invalid path characters from the specified path.
+        /// </summary>
+        /// <param name="path">The path.</param>
+        /// <returns>A string with the invalid characters removed from the path.</returns>
+        public static string RemoveInvalidPathChars(string path)
+        {
+            char[] invalidPathChars = Path.GetInvalidPathChars();
+            string? newPath = path.Except(invalidPathChars).ToString();
+            return newPath ?? path;
+        }
         #endregion
 
         #region Exist Helpers
