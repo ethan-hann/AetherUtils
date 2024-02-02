@@ -435,5 +435,39 @@ namespace AetherUtils.Core.Extensions
             }
             return null;
         }
+
+        private static readonly object SyncRoot = new object();
+
+        //Implemented based on: https://josipmisko.com/posts/c-sharp-rename-dictionary-key
+        /// <summary>
+        /// Provides a thread-safe way to rename a key contained within a dictionary.
+        /// <para>If the <paramref name="newKey"/> is the same as the <paramref name="oldKey"/> using the default equality operator,
+        /// nothing is done.</para>
+        /// </summary>
+        /// <typeparam name="TKey">The <see cref="Type"/> of the key.</typeparam>
+        /// <typeparam name="TValue">The <see cref="Type"/> of the value.</typeparam>
+        /// <param name="dictionary">The dictionary to perform the rename on.</param>
+        /// <param name="oldKey">The name of the old key.</param>
+        /// <param name="newKey">The name to change <paramref name="oldKey"/> to.</param>
+        /// <exception cref="ArgumentException">Throws if the <paramref name="dictionary"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentException">Throws if the <paramref name="newKey"/> already exists in the dictionary.</exception>
+        public static void RenameKey<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey oldKey, TKey newKey) where TKey : notnull
+        {
+            ArgumentException.ThrowIfNullOrEmpty(nameof(dictionary));
+
+            if (EqualityComparer<TKey>.Default.Equals(oldKey, newKey))
+                return;
+            lock (SyncRoot)
+            {
+                if (dictionary.TryGetValue(oldKey, out TValue? value))
+                {
+                    if (dictionary.ContainsKey(newKey))
+                        throw new ArgumentException("The new key already exists in the dictionary");
+
+                    dictionary.Remove(oldKey);
+                    dictionary.Add(newKey, value);
+                }
+            }
+        }
     }
 }
