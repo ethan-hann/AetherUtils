@@ -1,12 +1,6 @@
 ﻿using AetherUtils.Core.Files;
 using Newtonsoft.Json;
-using Standard.Licensing.Security.Cryptography;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AetherUtils.Core.Licensing
 {

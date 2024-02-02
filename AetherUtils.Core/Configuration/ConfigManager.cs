@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Diagnostics;
-using System.Reflection;
-using System.Text;
-using AetherUtils.Core.Attributes;
+﻿using AetherUtils.Core.Attributes;
 using AetherUtils.Core.Files;
 using AetherUtils.Core.Reflection;
 using AetherUtils.Core.Structs;
-using Microsoft.Extensions.DependencyInjection;
+using System.Collections;
+using System.Diagnostics;
+using System.Reflection;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
@@ -27,7 +25,7 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     private readonly IDeserializer _deserializer = new DeserializerBuilder()
         .WithNamingConvention(CamelCaseNamingConvention.Instance)
         .IncludeNonPublicProperties().Build();
-    
+
     private readonly ISerializer _serializer = new SerializerBuilder()
         .WithNamingConvention(CamelCaseNamingConvention.Instance)
         .IncludeNonPublicProperties().Build();
@@ -56,8 +54,9 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
             ConfigFilePath = FileHelper.ExpandPath(ConfigFilePath);
             var text = File.ReadAllText(ConfigFilePath);
             CurrentConfig = _deserializer.Deserialize<T>(text);
-        } catch (Exception ex) { Debug.WriteLine(ex.StackTrace); return false; }
-        
+        }
+        catch (Exception ex) { Debug.WriteLine(ex.StackTrace); return false; }
+
         return IsInitialized;
     }
 
@@ -73,9 +72,10 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
             var serializedString = _serializer.Serialize(CurrentConfig);
             FileHelper.CreateDirectories(ConfigFilePath);
             File.WriteAllText(ConfigFilePath, serializedString);
-            
+
             return FileHelper.DoesFileExist(ConfigFilePath, false);
-        } catch (Exception ex) {Debug.WriteLine(ex.StackTrace); return false; }
+        }
+        catch (Exception ex) { Debug.WriteLine(ex.StackTrace); return false; }
     }
 
     /// <summary>

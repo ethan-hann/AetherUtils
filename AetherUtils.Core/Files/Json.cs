@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Newtonsoft.Json;
 using System.Diagnostics;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace AetherUtils.Core.Files
 {
@@ -41,7 +37,8 @@ namespace AetherUtils.Core.Files
                 }
 
                 ResetWriters();
-            } catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); }
         }
 
         public T? LoadJSON(string filePath)
@@ -52,7 +49,8 @@ namespace AetherUtils.Core.Files
                 string json = FileHelper.OpenFile(filePath);
                 using JsonTextReader reader = new JsonTextReader(new StringReader(json));
                 obj = _serializer.Deserialize<T>(reader);
-            } catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); }
 
             ResetWriters();
             return obj;

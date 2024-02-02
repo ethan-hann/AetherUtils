@@ -1,12 +1,6 @@
 ﻿using AetherUtils.Core.Regex;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Security.Permissions;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace AetherUtils.Core.Files
 {
@@ -48,7 +42,8 @@ namespace AetherUtils.Core.Files
             try
             {
                 File.WriteAllText(filePath, content);
-            } catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); }
         }
 
         /// <summary>
@@ -134,7 +129,8 @@ namespace AetherUtils.Core.Files
             try
             {
                 await File.WriteAllTextAsync(filePath, content);
-            } catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); }
         }
 
         /// <summary>
@@ -145,7 +141,7 @@ namespace AetherUtils.Core.Files
         /// <param name="content"></param>
         /// <param name="encoding"></param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before creating file?</param>
-        public static async void SaveFileAsync(string filePath, string content, Encoding encoding,  bool expandPath = true)
+        public static async void SaveFileAsync(string filePath, string content, Encoding encoding, bool expandPath = true)
         {
             filePath = expandPath ? ExpandPath(filePath) : filePath;
             CreateDirectories(filePath, false);
@@ -170,7 +166,8 @@ namespace AetherUtils.Core.Files
             try
             {
                 await File.WriteAllBytesAsync(filePath, content);
-            } catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); }
         }
 
         #endregion
@@ -208,7 +205,8 @@ namespace AetherUtils.Core.Files
                     expandedPath = Environment.ExpandEnvironmentVariables(path);
                     return true;
                 }
-            } catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); }
             expandedPath = path;
             return false;
         }

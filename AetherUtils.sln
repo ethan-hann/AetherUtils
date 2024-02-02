@@ -5,12 +5,9 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AetherUtils.Core", "AetherUtils.Core\AetherUtils.Core.csproj", "{4087346F-659A-42E3-9F83-6EBEB52AA32F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AetherUtils.Licensing", "AetherUtils.Licensing\AetherUtils.Licensing.csproj", "{FC3E8FA8-26F7-4C3E-ACBA-D7427F4F78B2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AetherUtils.Tests", "AetherUtils.Tests\AetherUtils.Tests.csproj", "{D594F7A2-97F8-4140-A43D-F0E879C133EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AetherUtils.Tests", "AetherUtils.Tests\AetherUtils.Tests.csproj", "{D594F7A2-97F8-4140-A43D-F0E879C133EB}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4087346F-659A-42E3-9F83-6EBEB52AA32F} = {4087346F-659A-42E3-9F83-6EBEB52AA32F}
-		{FC3E8FA8-26F7-4C3E-ACBA-D7427F4F78B2} = {FC3E8FA8-26F7-4C3E-ACBA-D7427F4F78B2}
 	EndProjectSection
 EndProject
 Global
@@ -23,10 +20,6 @@ Global
 		{4087346F-659A-42E3-9F83-6EBEB52AA32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4087346F-659A-42E3-9F83-6EBEB52AA32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4087346F-659A-42E3-9F83-6EBEB52AA32F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC3E8FA8-26F7-4C3E-ACBA-D7427F4F78B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC3E8FA8-26F7-4C3E-ACBA-D7427F4F78B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC3E8FA8-26F7-4C3E-ACBA-D7427F4F78B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC3E8FA8-26F7-4C3E-ACBA-D7427F4F78B2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D594F7A2-97F8-4140-A43D-F0E879C133EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D594F7A2-97F8-4140-A43D-F0E879C133EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D594F7A2-97F8-4140-A43D-F0E879C133EB}.Release|Any CPU.ActiveCfg = Release|Any CPU

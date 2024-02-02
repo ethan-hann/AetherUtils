@@ -1,6 +1,5 @@
 ﻿using AetherUtils.Core.Enums;
 using AetherUtils.Core.Extensions;
-using System.Text;
 
 namespace AetherUtils.Core.Filtering
 {

@@ -1,10 +1,5 @@
 ﻿using AetherUtils.Core.Configuration;
 using AetherUtils.Core.Files;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AetherUtils.Tests
 {
@@ -13,7 +8,7 @@ namespace AetherUtils.Tests
         DefaultConfig config;
         Json<DefaultConfig> jsonHelper;
 
-        [SetUp] 
+        [SetUp]
         public void SetUp()
         {
             config = new DefaultConfig();

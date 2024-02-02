@@ -1,9 +1,4 @@
-﻿using NLog.Filters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace AetherUtils.Core.Filtering
 {
@@ -35,7 +30,7 @@ namespace AetherUtils.Core.Filtering
                 var strFilter = string.Empty;
                 StringBuilder sb = new();
                 if (expressions.Count <= 0) return strFilter;
-                
+
                 for (var i = 0; i < expressions.Count - 1; i++)
                     sb = sb.Append(expressions[i].FilterString).Append(" AND ");
 

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -42,7 +37,8 @@ namespace AetherUtils.Core.Files
             try
             {
                 return (T?)_serializer.Deserialize(reader);
-            } catch (Exception ex) { Debug.WriteLine(ex.Message); return null; }
+            }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); return null; }
             finally { reader.Close(); }
         }
     }

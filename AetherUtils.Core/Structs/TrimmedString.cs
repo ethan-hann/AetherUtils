@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AetherUtils.Core.Structs
+﻿namespace AetherUtils.Core.Structs
 {
     /// <summary>
     /// Represents a string that has new line characters (\n) inserted and has been formatted to be a specific length.

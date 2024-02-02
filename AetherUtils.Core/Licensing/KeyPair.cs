@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AetherUtils.Core.Licensing
+﻿namespace AetherUtils.Core.Licensing
 {
     /// <summary>
     /// Stores a read-only pair of keys.

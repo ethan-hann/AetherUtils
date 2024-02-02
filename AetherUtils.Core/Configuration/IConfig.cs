@@ -22,19 +22,19 @@ public interface IConfig
     /// Get a value indicating whether the configuration file specified by <see cref="ConfigFilePath"/> exists.
     /// </summary>
     public bool ConfigExists { get; }
-    
+
     /// <summary>
     /// Deserialize a configuration file from disk, if it exists.
     /// </summary>
     /// <returns><c>true</c> if the file loaded successfully; <c>false</c>, otherwise.</returns>
     public bool Load();
-    
+
     /// <summary>
     /// Serialize and save a configuration file to disk based on the current configuration.
     /// </summary>
     /// <returns><c>true</c> if the file saved successfully; <c>false</c>, otherwise.</returns>
     public bool Save();
-    
+
     /// <summary>
     /// Get the configuration value for the named config property.
     /// </summary>

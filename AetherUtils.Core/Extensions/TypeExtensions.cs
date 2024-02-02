@@ -1,18 +1,15 @@
 ﻿using AetherUtils.Core.Structs;
 using Microsoft.CSharp;
-using System;
 using System.CodeDom;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security;
-using System.Text;
-using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace AetherUtils.Core.Extensions
 {
@@ -46,7 +43,7 @@ namespace AetherUtils.Core.Extensions
 
                 if (field == null) return string.Empty;
 
-                if (field.GetCustomAttributes(typeof(DescriptionAttribute), false) 
+                if (field.GetCustomAttributes(typeof(DescriptionAttribute), false)
                     is not DescriptionAttribute[] attributes) return string.Empty;
 
                 return attributes.Length > 0 ? attributes[0].Description : string.Empty;
@@ -134,7 +131,8 @@ namespace AetherUtils.Core.Extensions
                 using var ms = new MemoryStream();
                 image.Save(ms, image.RawFormat);
                 return ms.ToArray();
-            } catch (Exception ex) { Debug.WriteLine(ex); return Array.Empty<byte>(); }
+            }
+            catch (Exception ex) { Debug.WriteLine(ex); return Array.Empty<byte>(); }
         }
 
         /// <summary>
@@ -404,6 +402,38 @@ namespace AetherUtils.Core.Extensions
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Serializes an object to an XML string.
+        /// </summary>
+        /// <typeparam name="T">The type of the object to serialize.</typeparam>
+        /// <param name="obj">An instance of an object to serialize.</param>
+        /// <returns>An XML string representing the serialized object.</returns>
+        public static string Serialize<T>(this T obj) where T : class
+        {
+            XmlSerializer _serializer = new XmlSerializer(obj.GetType());
+            using StringWriter sw = new();
+            _serializer.Serialize(sw, obj);
+            return sw.ToString();
+        }
+
+        /// <summary>
+        /// Deserializes an object from an XML string.
+        /// </summary>
+        /// <typeparam name="T">The type of object to deserialize to.</typeparam>
+        /// <param name="xml">The XML string to deserialize.</param>
+        /// <returns>The deserialized object or <c>null</c> if the deserialization failed.</returns>
+        public static T? Deserialize<T>(this string xml) where T : class
+        {
+            XmlSerializer _serializer = new XmlSerializer(typeof(T));
+            using (StringReader sr = new StringReader(xml))
+            using (XmlReader reader = XmlReader.Create(sr))
+            {
+                if (_serializer.CanDeserialize(reader))
+                    return (T?)_serializer.Deserialize(reader);
+            }
+            return null;
         }
     }
 }

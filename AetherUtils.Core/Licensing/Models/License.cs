@@ -1,10 +1,5 @@
 ﻿using Standard.Licensing;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace AetherUtils.Core.Licensing.Models
@@ -22,13 +17,13 @@ namespace AetherUtils.Core.Licensing.Models
         [Browsable(true)]
         [Category("License")]
         [DisplayName("License Type")]
-        public LicenseType Type { get; set; }
+        public LicenseType Type { get; set; } = LicenseType.Trial;
 
         [XmlElement(ElementName = "Expiration")]
         [Browsable(true)]
         [Category("License")]
         [DisplayName("Expiration Date")]
-        public DateTime Expiration { get; set; }
+        public DateTime Expiration { get; set; } = DateTime.Now.Date;
 
         [XmlElement(ElementName = "Quantity")]
         [Browsable(true)]
@@ -41,7 +36,7 @@ namespace AetherUtils.Core.Licensing.Models
         [Browsable(false)]
         [Category("License")]
         [DisplayName("Product Features")]
-        public List<Feature> ProductFeatures { get; set; } = [new() { Name = "Core", Text = "Yes" }];
+        public List<Feature> ProductFeatures { get; set; } = [];
 
         [XmlElement(ElementName = "Customer")]
         [Browsable(false)]

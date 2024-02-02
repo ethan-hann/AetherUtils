@@ -2,11 +2,6 @@
 using NLog;
 using NLog.Config;
 using NLog.Targets;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AetherUtils.Core.Logging
 {
@@ -31,7 +26,7 @@ namespace AetherUtils.Core.Logging
 
             //Set up targets for logging
             var logFile = CreateLogFileFromOptions(options);
-            
+
             if (options.WriteLogToConsole)
             {
                 var logConsole = CreateLogConsoleFromOptions(options);
@@ -57,7 +52,7 @@ namespace AetherUtils.Core.Logging
                 + (options.IncludeDateOnly ? DateTime.Now.ToString("_MM-dd-yyyy")
                     : (options.IncludeDateTime ? DateTime.Now.ToString("_MM-dd-yyyy-hh-mm-ss-ff") : string.Empty))
                 + ".log";
-            
+
             string fullPath = Path.Combine(options.LogFileDirectory, fileName);
             fullPath = Files.FileHelper.ExpandPath(fullPath);
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AetherUtils.Core.Structs
+﻿namespace AetherUtils.Core.Structs
 {
     /// <summary>
     /// Represents a single configuration option and it's value. This option can contain a single-dimensional list indexer:

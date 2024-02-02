@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AetherUtils.Core.Filtering
+﻿namespace AetherUtils.Core.Filtering
 {
     /// <summary>
     /// Represents an interface to create filters.

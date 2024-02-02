@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AetherUtils.Core.Configuration
+﻿namespace AetherUtils.Core.Configuration
 {
     /// <summary>
     /// Represents a configuration manager for a YAML configuration file using <see cref="DefaultConfig"/> as the base configuration.
