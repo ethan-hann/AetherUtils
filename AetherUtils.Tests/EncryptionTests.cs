@@ -1,11 +1,12 @@
-﻿using AetherUtils.Core.Licensing.Models;
+﻿using AetherUtils.Core.Files;
+using AetherUtils.Core.Licensing.Models;
 using AetherUtils.Core.Security;
 
 namespace AetherUtils.Tests
 {
     public class EncryptionTests
     {
-        private byte[] Key = EncryptionService.GetRandomKey();
+        private readonly byte[] Key = EncryptionService.GetRandomKey();
         private EncryptionService _service;
 
         [SetUp]
@@ -17,7 +18,7 @@ namespace AetherUtils.Tests
         [Test]
         public void TestRoundTripString()
         {
-            string testString = "Somewhere over the rainbow!";
+            string testString = "Somewhere over the rainbow!!!";
 
             //Encrypt
             string encrypted = _service.EncryptString(testString, Key);
@@ -38,6 +39,8 @@ namespace AetherUtils.Tests
         public void TestRoundTripObject()
         {
             License l = new License();
+            Guid guid = Guid.NewGuid();
+            l.Id = guid.ToString();
 
             //Encrypt
             string? encrypted = _service.EncryptObject(l, Key);
@@ -50,8 +53,46 @@ namespace AetherUtils.Tests
             License? decrypted = _service.DecryptObject<License>(encrypted, Key);
             Assert.That(decrypted, Is.Not.Null);
 
+            Console.WriteLine("License ID: " + decrypted.Id);
+
             //Verify that the decrypted object is equal to the initial object.
             Assert.That(decrypted.Id, Is.EqualTo(l.Id));
+        }
+
+        [Test]
+        public void TestEncryptedFileSave()
+        {
+            License l = new License();
+            Guid guid = Guid.NewGuid();
+            l.Id = guid.ToString();
+
+            //Encrypt
+            string? encrypted = _service.EncryptObject(l, Key);
+
+            //Verify that the encrypted string is not null (indicating a failed encryption
+            Assert.That(encrypted, Is.Not.Null);
+            Console.WriteLine("Encrypted: " + encrypted);
+
+            //Save to file
+            EncryptionService.SaveToFile("files\\TestEncryptedFileSave.enc", encrypted);
+
+            //Assert the file was created.
+            Assert.That(FileHelper.DoesFileExist("files\\TestEncryptedFileSave.enc"));
+        }
+
+        [Test]
+        public void TestEncryptedFileLoad()
+        {
+            //Load from file
+            string encryptedContents = EncryptionService.LoadFromFile("files\\TestEncryptedFileSave.enc");
+
+            Console.WriteLine("Encrypted: " + encryptedContents);
+
+            //Decrypt
+            License? decrypted = _service.DecryptObject<License>(encryptedContents, Key);
+            Assert.That(decrypted, Is.Not.Null);
+
+            Console.WriteLine("License ID: " + decrypted.Id);
         }
     }
 }

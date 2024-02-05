@@ -440,6 +440,21 @@ namespace AetherUtils.Core.Extensions
             return null;
         }
 
+        /// <summary>
+        /// Get a value indicating if this object can be serialized via XML serialization.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj"></param>
+        /// <returns><c>true</c> if the object can be serialized; <c>false</c> otherwise.</returns>
+        public static bool CanSerialize<T>(this T obj) where T : class
+        {
+            try
+            {
+                string _ = obj.Serialize();
+            } catch (Exception) { return false; }
+            return true;
+        }
+
         private static readonly object SyncRoot = new object();
 
         //Implemented based on: https://josipmisko.com/posts/c-sharp-rename-dictionary-key

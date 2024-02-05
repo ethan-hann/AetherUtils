@@ -1,4 +1,5 @@
 ﻿using AetherUtils.Core.Extensions;
+using AetherUtils.Core.Files;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -23,22 +24,28 @@ namespace AetherUtils.Core.Security
         private const string ENCRYPTED_VALUE_PREFIX = "AU:";
 
         /// <summary>
-        /// Determines if a specified text is encrypted.
+        /// Determines if the input string is encrypted.
         /// </summary>
-        /// <param name="text">The text to check</param>
-        /// <returns>True if the text is encrypted, otherwise false</returns>
-        public bool IsEncrypted(string input) =>
+        /// <param name="input">The string to check</param>
+        /// <returns><c>true</c> if the string is encrypted; <c>false</c> otherwise.</returns>
+        public static bool IsEncrypted(string input) =>
             input.StartsWith(ENCRYPTED_VALUE_PREFIX, StringComparison.OrdinalIgnoreCase);
 
         /// <summary>
-        /// Encrypts the object <typeparamref name="T"/> to an encrypted XML string.
+        /// Encrypt the object <typeparamref name="T"/> to an encrypted XML string.
+        /// <para><typeparamref name="T"/> must support XML serialization.</para>
         /// </summary>
         /// <param name="input">The object to encrypt.</param>
         /// <param name="key">The encryption key.</param>
         /// <returns>The encrypted object's string or <c>null</c> if encryption failed.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="input"/> is <c>null</c>.</exception>
+        /// <exception cref="InvalidOperationException">If <paramref name="input"/> does not support XML serialization.</exception>
         public string? EncryptObject<T>(T input, byte[] key) where T : class
         {
             ArgumentNullException.ThrowIfNull(input);
+
+            if (!input.CanSerialize())
+                throw new InvalidOperationException($"{input.GetType()} does not support XML serialization.");
 
             string? objectString;
 
@@ -54,11 +61,13 @@ namespace AetherUtils.Core.Security
         }
 
         /// <summary>
-        /// Decrypts an encrypted XML string containing an object of type <typeparamref name="T"/>.
+        /// Decrypt an encrypted XML string containing an object of type <typeparamref name="T"/>.
+        /// <para><typeparamref name="T"/> must support serialization.</para>
         /// </summary>
-        /// <param name="input">The encrypted JSON string.</param>
+        /// <param name="input">The encrypted XML string.</param>
         /// <param name="key">The encryption key.</param>
         /// <returns>The decrypted <typeparamref name="T"/> object, or <c>null</c> if decryption failed.</returns>
+        /// <exception cref="ArgumentException">If <paramref name="input"/> is <c>null</c> or empty.</exception>
         public T? DecryptObject<T>(string input, byte[] key) where T : class
         {
             ArgumentException.ThrowIfNullOrEmpty(input);
@@ -111,7 +120,7 @@ namespace AetherUtils.Core.Security
         }
 
         /// <summary>
-        /// Gets a cryptographically strong random key that can be used for encryption/decryption.
+        /// Get a cryptographically strong random key that can be used for encryption/decryption.
         /// </summary>
         /// <returns></returns>
         public static byte[] GetRandomKey()
@@ -120,6 +129,28 @@ namespace AetherUtils.Core.Security
             RandomNumberGenerator.Create().GetBytes(bytes);
             return bytes;
         }
+
+        /// <summary>
+        /// Save the encrypted string contents to a new file.
+        /// </summary>
+        /// <param name="fileName">The full path to the file to save.</param>
+        /// <param name="encryptedContents">The encrypted contents to save.</param>
+        /// <exception cref="ArgumentException">If the <paramref name="encryptedContents"/> are not encrypted.</exception>
+        public static void SaveToFile(string fileName, string encryptedContents)
+        {
+            if (!IsEncrypted(encryptedContents))
+                throw new ArgumentException("Contents are not encrypted!", nameof(encryptedContents));
+
+            fileName = FileHelper.ExpandPath(fileName);
+            FileHelper.SaveFileAsync(fileName, encryptedContents, Encoding.UTF8, false);
+        }
+
+        /// <summary>
+        /// Load a file containing encrypted data.
+        /// </summary>
+        /// <param name="fileName">The full path of the file to load.</param>
+        /// <returns>An encrypted string representing the file's contents.</returns>
+        public static string LoadFromFile(string fileName) => FileHelper.OpenFile(fileName);
 
         /// <summary>
         /// Decrypts the specified byte array to plain text.
@@ -131,11 +162,38 @@ namespace AetherUtils.Core.Security
         private static string Decrypt(byte[] encryptedBytes, byte[] key, byte[] vector)
         {
             using var aesAlgo = Aes.Create();
-            using var decryptor = aesAlgo.CreateDecryptor(key, vector);
-            using var memoryStream = new MemoryStream(encryptedBytes);
-            using var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read);
-            using var streamReader = new StreamReader(cryptoStream, Encoding.UTF8);
-            return streamReader.ReadToEnd();
+            aesAlgo.Padding = PaddingMode.PKCS7;
+            aesAlgo.Mode = CipherMode.CBC;
+            aesAlgo.Key = key;
+            aesAlgo.IV = vector;
+
+            byte[] data = [];
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (CryptoStream cs = new CryptoStream(ms, aesAlgo.CreateDecryptor(), CryptoStreamMode.Read))
+                {
+                    cs.Read(encryptedBytes, 0, encryptedBytes.Length);
+                }
+                data = ms.ToArray();
+            }
+            return Encoding.UTF8.GetString(data);
+            //string str = string.Empty;
+
+            //using var aesAlgo = Aes.Create();
+            //aesAlgo.Padding = PaddingMode.ISO10126;
+
+            //using var decryptor = aesAlgo.CreateDecryptor(key, vector);
+            //using var memoryStream = new MemoryStream(encryptedBytes);
+            //using (var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read))
+            //{
+            //    using (var streamReader = new StreamReader(cryptoStream, Encoding.UTF8))
+            //    {
+            //        str = streamReader.ReadToEnd();
+            //    }
+            //}
+
+            //return str;
         }
 
         /// <summary>
@@ -148,14 +206,34 @@ namespace AetherUtils.Core.Security
         private static byte[] Encrypt(string input, byte[] key, byte[] vector)
         {
             using var aesAlgo = Aes.Create();
-            using var encryptor = aesAlgo.CreateEncryptor(key, vector);
-            using var memoryStream = new MemoryStream();
-            using var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write);
-            using (var streamWriter = new StreamWriter(cryptoStream, Encoding.UTF8))
+            aesAlgo.Padding = PaddingMode.PKCS7;
+            aesAlgo.Mode = CipherMode.CBC;
+            aesAlgo.Key = key;
+            aesAlgo.IV = vector;
+
+            byte[] data = Encoding.UTF8.GetBytes(input);
+
+            using (MemoryStream ms = new MemoryStream())
             {
-                streamWriter.Write(input);
+                using (CryptoStream cs = new CryptoStream(ms, aesAlgo.CreateEncryptor(), CryptoStreamMode.Write))
+                {
+                    cs.Write(data, 0, data.Length);
+                }
+                return ms.ToArray();
             }
-            return memoryStream.ToArray();
+
+            //using var encryptor = aesAlgo.CreateEncryptor(key, vector);
+            //using var memoryStream = new MemoryStream();
+            //using (var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
+            //{
+            //    using (var streamWriter = new StreamWriter(cryptoStream, Encoding.UTF8))
+            //    {
+            //        streamWriter.Write(input);
+            //        streamWriter.Flush();
+            //    }
+            //}
+            
+            //return memoryStream.ToArray();
         }
 
         /// <summary>
