@@ -1,4 +1,5 @@
-﻿using AetherUtils.Core.Structs;
+﻿using AetherUtils.Core.Utility;
+using AetherUtils.Core.Structs;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -6,9 +7,12 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using AetherUtils.Core.Extensions;
 
 namespace AetherUtils.Core.Security
 {
+    //Implemented based on: https://stackoverflow.com/questions/2138429/hash-and-salt-passwords-in-c-sharp/73126492#73126492
+
     /// <summary>
     /// Provides a service for creating cryptographically strong hashes of <see cref="string"/>s and comparing plain-text <see cref="string"/>s against them for equality.
     /// <para>This class hashes strings based on the provided <see cref="HashOptions"/>. Once this service has been created and used,
@@ -21,6 +25,8 @@ namespace AetherUtils.Core.Security
         private readonly Random _random = new((int)DateTime.Now.Ticks);
 
         private string _hashedString = string.Empty;
+
+        private const char _delimiter = ':';
 
         /// <summary>
         /// Get the hashed string for this <see cref="HashService"/>.
@@ -40,7 +46,6 @@ namespace AetherUtils.Core.Security
 
         /// <summary>
         /// Generate a hash string for the specified plain-text string according to this object's <see cref="HashOptions"/>.
-        /// <para>This method can only be called once. Subsequent calls will result in an <see cref="InvalidOperationException"/>.</para>
         /// </summary>
         /// <param name="value">The plain text string to hash.</param>
         /// <returns>A cryptographically strong hashed string.</returns>
@@ -48,59 +53,79 @@ namespace AetherUtils.Core.Security
         /// <exception cref="InvalidOperationException">Thrown if this method has already been called and generated a valid hashed string previously.</exception>
         public string HashString(string value)
         {
-            ArgumentNullException.ThrowIfNull(value);
+            ArgumentNullException.ThrowIfNull(nameof(value));
 
-            if (!_hashedString.Equals(string.Empty))
-                throw new InvalidOperationException("A hashed string has already been created on this instance.");
+            byte[] salt = RandomNumberGenerator.GetBytes(_options.SaltLength);
+            int iterations = _options.Iterations;
 
-            RandomNumberGenerator rng = RandomNumberGenerator.Create();
-            byte[] salt = new byte[_options.SaltLength];
-            rng.GetBytes(salt);
+            byte[] hash = Rfc2898DeriveBytes.Pbkdf2(
+                value,
+                salt,
+                iterations,
+                _options.HashAlgorithm,
+                _options.KeySize
+            );
 
-            int iterations = _random.Next(_options.Iterations.Key, _options.Iterations.Value);
-            Rfc2898DeriveBytes hashTool = new(value, _options.SaltLength, 
-                iterations, _options.HashAlgorithm);
-
-            byte[] hash = hashTool.GetBytes(_options.SaltLength);
-
-            _hashedString = string.Format("{0}:{1}:{2}", iterations, Convert.ToBase64String(salt), Convert.ToBase64String(hash));
-
+            _hashedString = string.Join(
+                _delimiter,
+                _options.Encoding,
+                _options.Encoding == HashEncoding.Hex ? Convert.ToHexString(hash) : Convert.ToBase64String(hash),
+                _options.Encoding == HashEncoding.Hex ? Convert.ToHexString(salt) : Convert.ToBase64String(salt),
+                iterations,
+                _options.HashAlgorithm
+            );
             return _hashedString;
         }
 
         /// <summary>
-        /// Compares the provided <paramref name="value"/> against this object's <see cref="HashedString"/> to verify they are the same.
+        /// Parse a hashed string into its <see cref="ParsedHash"/> equivalent.
         /// </summary>
-        /// <param name="value">The plain-text value to check against the hashed string.</param>
-        /// <returns><c>true</c> if the two values are equivalent; <c>false</c> otherwise.</returns>
-        /// <exception cref="InvalidOperationException">Thrown if there is not a valid <see cref="HashedString"/> created.</exception>
-        public bool CompareHash(string value)
+        /// <param name="hashString"></param>
+        /// <returns></returns>
+        private static ParsedHash ParseHashedString(string hashString)
         {
-            if (_hashedString == null || _hashedString.Equals(string.Empty)) 
-                throw new InvalidOperationException("There is not a hashed string defined to compare against.");
-            
-            try
-            {
-                string[] hashParts = _hashedString.Split(':');
-                if (int.TryParse(hashParts[0], out int iterations))
-                {
-                    byte[] originalSalt = Convert.FromBase64String(hashParts[1]);
-                    byte[] originalHash = Convert.FromBase64String(hashParts[2]);
+            ArgumentException.ThrowIfNullOrEmpty(nameof(hashString));
 
-                    Rfc2898DeriveBytes hashTool = new(value, originalSalt, iterations, _options.HashAlgorithm);
-                    byte[] testHash = hashTool.GetBytes(originalHash.Length);
+            string[] segments = hashString.Split(_delimiter);
+            HashEncoding encoding = Enum.Parse<HashEncoding>(segments[0]);
+            byte[] hash = segments[1].DecodedBytesFromEncodedString(encoding);
+            byte[] salt = segments[2].DecodedBytesFromEncodedString(encoding);
+            int iterations = int.Parse(segments[3]);
+            HashAlgorithmName algorithm = new(segments[4]);
 
-                    //Compare the two strings (hashed and non-hashed)
-                    var differences = Convert.ToUInt32(originalHash.Length) ^ Convert.ToUInt32(testHash.Length);
+            return new ParsedHash(encoding, salt, hash, iterations, algorithm);
+        }
 
-                    //Iterate through the differences and ensure that each bit is equal
-                    for (var position = 0; position <= Math.Min(originalHash.Length, testHash.Length) - 1; position++)
-                        differences |= Convert.ToUInt32(originalHash[position] ^ testHash[position]);
+        /// <summary>
+        /// Compare a non-hashed input <see cref="string"/> against the last hashed string for this <see cref="HashService"/>.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns><c>true</c> if the two strings are equivalent; <c>false</c> otherwise.</returns>
+        /// <exception cref="ArgumentException">Thrown if <paramref name="input"/> is <c>null</c> or empty.</exception>
+        public bool CompareHash(string input) => CompareHash(input, _hashedString);
 
-                    return differences == 0;
-                }
-                return false;
-            } catch (Exception ex) { Debug.WriteLine(ex.Message); return false; }
+        /// <summary>
+        /// Compare a non-hashed input <see cref="string"/> against a hashed <see cref="string"/>.
+        /// </summary>
+        /// <param name="input">The non-hashed string.</param>
+        /// <param name="hashString">A hash string to compare against.</param>
+        /// <returns><c>true</c> if the two strings are equivalent; <c>false</c> otherwise.</returns>
+        /// <exception cref="ArgumentException">Thrown if <paramref name="input"/> or <paramref name="hashString"/> are <c>null</c> or empty.</exception>
+        public static bool CompareHash(string input, string hashString)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(nameof(input));
+            ArgumentException.ThrowIfNullOrEmpty(nameof(hashString));
+
+            ParsedHash p = ParseHashedString(hashString);
+
+            byte[] inputHash = Rfc2898DeriveBytes.Pbkdf2(
+                input,
+                p.Salt,
+                p.Iterations,
+                p.Algorithm,
+                p.Hash.Length
+            );
+            return CryptographicOperations.FixedTimeEquals(inputHash, p.Hash);
         }
     }
 }

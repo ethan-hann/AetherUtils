@@ -54,8 +54,8 @@ namespace AetherUtils.Tests
             dictionary2.Add(2, "Second item");
             dictionary2.Add(3, "Third item");
 
-            //Assert that an exception is thrown if we try to rename a key with the same name.
-            Assert.Throws<ArgumentException>(() => dictionary2.RenameKey(1, 1));
+            //Assert that an exception is thrown if we try to rename a key with a name that already exists in the dictionary.
+            Assert.Throws<ArgumentException>(() => dictionary2.RenameKey(1, 2));
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using AetherUtils.Core.Regex;
+﻿using AetherUtils.Core.RegEx;
 using System.Diagnostics;
 using System.Text;
 

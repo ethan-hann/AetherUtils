@@ -1,4 +1,6 @@
-﻿using AetherUtils.Core.Structs;
+﻿using AetherUtils.Core.RegEx;
+using AetherUtils.Core.Security;
+using AetherUtils.Core.Structs;
 using Microsoft.CSharp;
 using System.CodeDom;
 using System.ComponentModel;
@@ -8,8 +10,10 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Security;
+using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
+using YamlDotNet.Core.Tokens;
 
 namespace AetherUtils.Core.Extensions
 {
@@ -469,5 +473,19 @@ namespace AetherUtils.Core.Extensions
                 }
             }
         }
+
+        /// <summary>
+        /// Get a value indicating if the string appears to be a base-64 encoded string.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static bool IsBase64Encoded(this string value) => RegexGenerator.Base64Regex().IsMatch(value);
+
+        /// <summary>
+        /// Get a value indicating if the string appears to be a hex encoded string.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static bool IsHexEncoded(this string value) => RegexGenerator.HexRegex().IsMatch(value);
     }
 }
