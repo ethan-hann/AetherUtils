@@ -1,10 +1,5 @@
-﻿using AetherUtils.Core.Security;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using AetherUtils.Core.Security.Hashing;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AetherUtils.Core.Structs
 {

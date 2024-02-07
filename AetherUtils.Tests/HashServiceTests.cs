@@ -1,11 +1,5 @@
-﻿using AetherUtils.Core.Security;
+﻿using AetherUtils.Core.Security.Hashing;
 using AetherUtils.Core.Structs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AetherUtils.Tests
 {

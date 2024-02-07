@@ -1,5 +1,4 @@
 ﻿using AetherUtils.Core.RegEx;
-using AetherUtils.Core.Security;
 using AetherUtils.Core.Structs;
 using Microsoft.CSharp;
 using System.CodeDom;
@@ -10,10 +9,8 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Security;
-using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-using YamlDotNet.Core.Tokens;
 
 namespace AetherUtils.Core.Extensions
 {
@@ -451,7 +448,8 @@ namespace AetherUtils.Core.Extensions
             try
             {
                 string _ = obj.Serialize();
-            } catch (Exception) { return false; }
+            }
+            catch (Exception) { return false; }
             return true;
         }
 

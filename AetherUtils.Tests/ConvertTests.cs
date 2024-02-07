@@ -1,9 +1,6 @@
-﻿using AetherUtils.Core.Utility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using AetherUtils.Core.Security.Hashing;
+using AetherUtils.Core.Utility;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace AetherUtils.Tests
 {
@@ -19,7 +16,7 @@ namespace AetherUtils.Tests
         [Test]
         public void ConvertToBase64Test()
         {
-            string base64 = strToEncode.StringToEncodedString(Core.Security.HashEncoding.Base64);
+            string base64 = strToEncode.StringToEncodedString(HashEncoding.Base64);
             Console.WriteLine(base64);
 
             Assert.That(base64, Is.Not.Empty);
@@ -30,7 +27,7 @@ namespace AetherUtils.Tests
         [Test]
         public void ConvertToHexTest()
         {
-            string hex = strToEncode.StringToEncodedString(Core.Security.HashEncoding.Hex);
+            string hex = strToEncode.StringToEncodedString(HashEncoding.Hex);
             Console.WriteLine(hex);
 
             Assert.That(hex, Is.Not.Empty);
@@ -41,7 +38,7 @@ namespace AetherUtils.Tests
         [Test]
         public void ConvertBytesToBase64Test()
         {
-            string base64 = strToEncode.StringToEncodedString(Core.Security.HashEncoding.Base64);
+            string base64 = strToEncode.StringToEncodedString(HashEncoding.Base64);
             byte[] bytes = base64.BytesFromString();
 
             string converted = Encoding.UTF8.GetString(bytes);
@@ -55,7 +52,7 @@ namespace AetherUtils.Tests
         [Test]
         public void ConvertBytesToHexTest()
         {
-            string hex = strToEncode.StringToEncodedString(Core.Security.HashEncoding.Hex);
+            string hex = strToEncode.StringToEncodedString(HashEncoding.Hex);
             byte[] bytes = hex.BytesFromString();
 
             string converted = Encoding.UTF8.GetString(bytes);

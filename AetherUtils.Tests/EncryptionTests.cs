@@ -1,14 +1,10 @@
-﻿using AetherUtils.Core.Files;
-using AetherUtils.Core.Licensing.Models;
-using AetherUtils.Core.Security;
+﻿using AetherUtils.Core.Licensing.Models;
 using AetherUtils.Core.Security.Encryption;
-using System.Text;
 
 namespace AetherUtils.Tests
 {
     public class EncryptionTests
     {
-        private readonly byte[] Key = EncryptionService2.GetRandomKey();
         private string testString = "Somewhere over the rainbow!!!";
         private string testFilePath = "files\\TestEncryptedFileSave.enc";
         private Guid testLicenseID = Guid.NewGuid();
@@ -55,108 +51,52 @@ namespace AetherUtils.Tests
             Assert.That(decrypted.Result.Id, Is.EqualTo(testLicenseID.ToString()));
         }
 
-        //[Test]
-        //public void TestRoundTripString()
-        //{
-        //    //Encrypt string
-        //    byte[] encrypted = EncryptionService.EncryptString(testString, Key);
-        //    Console.WriteLine("Encrypted: " + encrypted);
+        [Test]
+        public void TestRoundTripFile()
+        {
+            var service = new FileEncryptionService(testFilePath);
+            var result = service.EncryptAsync(testString, passphrase);
 
-        //    //Verify the initial string and the encrypted string are not the same.
-        //    Assert.That(encrypted, Is.Not.EqualTo(testString));
+            Console.WriteLine(result.Result);
 
-        //    //Decrypt
-        //    var decrypted = EncryptionService.DecryptString(encrypted, Key);
-        //    Console.WriteLine("Decrypted: " + decrypted.Result);
+            var decrypted = service.DecryptAsync(testFilePath, passphrase);
+            Console.WriteLine($"Decrypted: {decrypted.Result}");
 
-        //    //Verify that the decrypted string is equal to our initial input string.
-        //    Assert.That(decrypted.Result, Is.EqualTo(testString));
-        //}
+            Assert.That(decrypted.Result, Is.EqualTo(testString));
+        }
 
-        //[Test]
-        //public void TestRoundTripObject()
-        //{
-        //    License l = new License()
-        //    {
-        //        Id = testLicenseID.ToString()
-        //    };
+        [Test]
+        public void TestRoundTripObjectFile()
+        {
+            var service = new ObjectEncryptionService<License>();
+            License l = new License();
+            l.Id = testLicenseID.ToString();
+            var encrypted = service.EncryptToFileAsync(l, testFilePath, passphrase);
 
-        //    //Encrypt
-        //    byte[]? encrypted = EncryptionService.EncryptObject(l, Key);
+            Console.WriteLine($"Encrypted Data: {encrypted.Result}");
+            Assert.That(encrypted.Result, Is.Not.Empty);
 
-        //    //Verify that the encrypted string is not null (indicating a failed encryption
-        //    Assert.That(encrypted, Is.Not.Null);
-        //    Console.WriteLine("Encrypted: " + encrypted);
+            var decrypted = service.DecryptFromFileAsync(testFilePath, passphrase);
+            Console.WriteLine($"Decrypted: {decrypted.Result}");
 
-        //    //Decrypt
-        //    License? decrypted = EncryptionService.DecryptObject<License>(encrypted, Key);
-        //    Assert.That(decrypted, Is.Not.Null);
+            Assert.That(decrypted.Result.Id, Is.EqualTo(testLicenseID.ToString()));
+        }
 
-        //    Console.WriteLine("License ID: " + decrypted.Id);
+        [Test]
+        public void TestRandomPassPhrase()
+        {
+            var service = new StringEncryptionService();
+            string passKey = service.GetRandomKeyPhrase();
 
-        //    //Verify that the decrypted object is equal to the initial object.
-        //    Assert.That(decrypted.Id, Is.EqualTo(l.Id));
-        //}
+            Console.WriteLine($"Passphrase: {passKey}");
 
-        //[Test]
-        //public void TestEncryptedStringFileSave()
-        //{
-        //    bool isEncrypted = EncryptionService.EncryptFile("Hello World!", testFilePath, Key);
-        //    Assert.That(isEncrypted, Is.True);
+            var encrypted = service.EncryptAsync(testString, passKey);
+            Console.WriteLine($"Encrypted: {encrypted.Result}");
 
-        //}
+            var decrypted = service.DecryptAsync(encrypted.Result, passKey);
+            Console.WriteLine($"Decrypted: {decrypted.Result}");
 
-        //[Test]
-        //public void TestEncryptedStringFileLoad()
-        //{
-        //    var decrypted = EncryptionService.DecryptFile(testFilePath, Key);
-        //    Console.WriteLine(decrypted);
-
-        //    Assert.That(decrypted, Is.EqualTo("Hello World!"));
-        //}
-
-        //[Test]
-        //public void TestEncryptedFileSave()
-        //{
-        //    License l = new License()
-        //    {
-        //        Id = testLicenseID.ToString()
-        //    };
-
-        //    //Encrypt
-        //    bool isEncrypted = EncryptionService.EncryptObjectToFile(l, testFilePath, Key);
-        //    Assert.That(isEncrypted, Is.True);
-
-        //    //Assert the file was created.
-        //    Assert.That(FileHelper.DoesFileExist(testFilePath));
-
-        //    //byte[]? encrypted = EncryptionService.EncryptObject(l, Key);
-
-        //    //Verify that the encrypted string is not null (indicating a failed encryption
-        //    //Assert.That(encrypted, Is.Not.Null);
-        //    //Console.WriteLine("Encrypted: " + encrypted);
-
-        //    //Save to file
-        //    // EncryptionService.EncryptFile(Encoding.UTF8.GetString(encrypted), testFilePath, Key);
-        //}
-
-        //[Test]
-        //public void TestEncryptedFileLoad()
-        //{
-        //    ////Load from file
-        //    //var encryptedContents = EncryptionService.DecryptFile("files\\TestEncryptedFileSave.enc", Key);
-
-        //    //Console.WriteLine("Encrypted: " + encryptedContents.Result);
-
-        //    //Decrypt
-        //    License? decrypted = EncryptionService.DecryptObjectFromFile<License>(testFilePath, Key);
-
-        //    Assert.That(decrypted, Is.Not.Null);
-
-        //    Console.WriteLine("License ID: " + decrypted.Id);
-
-        //    //Verify that the decrypted object is equal to the initial object.
-        //    Assert.That(decrypted.Id, Is.EqualTo(testLicenseID.ToString()));
-        //}
+            Assert.That(decrypted.Result, Is.EqualTo(testString));
+        }
     }
 }

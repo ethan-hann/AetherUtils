@@ -1,22 +1,14 @@
-﻿using AetherUtils.Core.Utility;
-using AetherUtils.Core.Structs;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using AetherUtils.Core.Structs;
+using AetherUtils.Core.Utility;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using AetherUtils.Core.Extensions;
 
-namespace AetherUtils.Core.Security
+namespace AetherUtils.Core.Security.Hashing
 {
     //Implemented based on: https://stackoverflow.com/questions/2138429/hash-and-salt-passwords-in-c-sharp/73126492#73126492
 
     /// <summary>
     /// Provides a service for creating cryptographically strong hashes of <see cref="string"/>s and comparing plain-text <see cref="string"/>s against them for equality.
-    /// <para>This class hashes strings based on the provided <see cref="HashOptions"/>. Once this service has been created and used,
-    /// the hashed string cannot be changed and a new <see cref="HashService"/> must be created.</para>
+    /// <para>This class hashes strings based on the provided <see cref="HashOptions"/>.</para>
     /// </summary>
     public class HashService
     {

@@ -1,11 +1,5 @@
-﻿using AetherUtils.Core.Security;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using AetherUtils.Core.Security.Hashing;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AetherUtils.Core.Structs
 {
@@ -33,7 +27,7 @@ namespace AetherUtils.Core.Structs
         /// The number of iterations to perform when hashing.
         /// <para>A random value between the minimum and maximum iterations is retrieved every time this property is called.</para>
         /// </summary>
-        public readonly int Iterations => (int)new Random().Next(_iterationsSpan.Key, _iterationsSpan.Value);
+        public readonly int Iterations => new Random().Next(_iterationsSpan.Key, _iterationsSpan.Value);
 
         /// <summary>
         /// The algorithm to use when hashing.
@@ -58,11 +52,11 @@ namespace AetherUtils.Core.Structs
         { HashAlgorithm = hashAlgorithm; }
 
         public HashOptions(int minIterations, int maxIterations, HashEncoding hashEncoding)
-            : this(minIterations, maxIterations) 
+            : this(minIterations, maxIterations)
         { Encoding = hashEncoding; }
 
         public HashOptions(ReadOnlyPair<int, int> iterations, HashEncoding hashEncoding)
-            : this(iterations) 
+            : this(iterations)
         { Encoding = hashEncoding; }
 
         public HashOptions(ReadOnlyPair<int, int> iterations, HashAlgorithmName hashAlgorithm, HashEncoding hashEncoding)
@@ -70,7 +64,7 @@ namespace AetherUtils.Core.Structs
         { HashAlgorithm = hashAlgorithm; Encoding = hashEncoding; }
 
         public HashOptions(int saltLength, ReadOnlyPair<int, int> iterations, HashAlgorithmName hashAlgorithm, HashEncoding hashEncoding)
-            : this(iterations, hashAlgorithm, hashEncoding) 
+            : this(iterations, hashAlgorithm, hashEncoding)
         { SaltLength = saltLength; }
 
         public HashOptions(int saltLength, ReadOnlyPair<int, int> iterations, HashAlgorithmName hashAlgorithm)
@@ -78,74 +72,19 @@ namespace AetherUtils.Core.Structs
         { SaltLength = saltLength; HashAlgorithm = hashAlgorithm; }
 
         public HashOptions(int saltLength, int minIterations, int maxIterations)
-            : this(minIterations, maxIterations) 
+            : this(minIterations, maxIterations)
         { SaltLength = saltLength; }
 
         public HashOptions(int saltLength, int keySize, int minIterations, int maxIterations)
-            : this(saltLength, minIterations, maxIterations) 
+            : this(saltLength, minIterations, maxIterations)
         { KeySize = keySize; }
 
         public HashOptions(int saltLength, int keySize, int minIterations, int maxIterations, HashAlgorithmName hashAlgorithm)
-            : this(saltLength, keySize, minIterations, maxIterations) 
+            : this(saltLength, keySize, minIterations, maxIterations)
         { HashAlgorithm = hashAlgorithm; }
 
         public HashOptions(int saltLength, int keySize, int minIterations, int maxIterations, HashAlgorithmName hashAlgorithm, HashEncoding hashEncoding)
-            : this(saltLength, keySize, minIterations, maxIterations, hashAlgorithm) 
-        {  Encoding = hashEncoding; }
-
-
-        //public HashOptions(int saltLength, int keySize, int minIterations, int maxIterations, HashAlgorithmName hashAlgorithm, HashEncoding encoding)
-        //{
-        //    SaltLength = saltLength;
-        //    KeySize = keySize;
-        //    _iterationsSpan = new ReadOnlyPair<int, int>(minIterations, maxIterations);
-        //    HashAlgorithm = hashAlgorithm;
-        //    HashEncoding = encoding;
-        //}
-
-        //public HashOptions(int saltLength, int keySize, ReadOnlyPair<int, int> iterations, HashAlgorithmName hashAlgorithm, HashEncoding encoding)
-        //{
-        //    SaltLength = saltLength;
-        //    KeySize = keySize;
-        //    _iterationsSpan = iterations;
-        //    HashAlgorithm = hashAlgorithm;
-        //    HashEncoding = encoding;
-        //}
-
-        //public HashOptions(int saltLength, int minIterations, int maxIterations, HashAlgorithmName hashAlgorithm, HashEncoding encoding)
-        //{
-        //    SaltLength = saltLength;
-        //    _iterationsSpan = new ReadOnlyPair<int, int>(minIterations, maxIterations);
-        //    HashAlgorithm = hashAlgorithm;
-        //    HashEncoding = encoding;
-        //}
-
-        //public HashOptions(int minIterations, int maxIterations)
-        //{
-        //    _iterationsSpan = new ReadOnlyPair<int, int>(minIterations, maxIterations);
-        //}
-
-        //public HashOptions(ReadOnlyPair<int, int> iterations)
-        //{
-        //    _iterationsSpan = iterations;
-        //}
-
-        //public HashOptions(int minIterations, int maxIterations,  HashAlgorithmName hashAlgorithm, HashEncoding encoding) 
-        //    : this(minIterations, maxIterations, hashAlgorithm) { HashEncoding = encoding; }
-
-        //public HashOptions(int minIterations, int maxIterations, HashAlgorithmName hashAlgorithm) 
-        //    : this(minIterations, maxIterations) {  HashAlgorithm = hashAlgorithm; }
-
-        //public HashOptions(int saltLength,  ReadOnlyPair<int, int> iterations) 
-        //    : this(iterations) { SaltLength = saltLength; }
-
-        //public HashOptions(int saltLength, ReadOnlyPair<int, int> iterations, HashAlgorithmName hashAlgorithm)
-        //    : this(saltLength, iterations) { HashAlgorithm = hashAlgorithm; }
-
-        //public HashOptions(int saltLength, int minIterations, int maxIterations, HashAlgorithmName hashAlgorithm) 
-        //    : this(saltLength, minIterations, maxIterations) { HashAlgorithm = hashAlgorithm; }
-
-        //public HashOptions(int saltLength, int minIterations, int maxIterations)
-        //    : this(saltLength, new ReadOnlyPair<int, int>(minIterations, maxIterations)) { }
+            : this(saltLength, keySize, minIterations, maxIterations, hashAlgorithm)
+        { Encoding = hashEncoding; }
     }
 }

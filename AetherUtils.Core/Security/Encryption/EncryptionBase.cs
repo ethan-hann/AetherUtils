@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace AetherUtils.Core.Security.Encryption
 {
@@ -48,6 +44,29 @@ namespace AetherUtils.Core.Security.Encryption
                 iterations,
                 HashAlgorithmName.SHA384,
                 (int)keyLength);
+        }
+
+        /// <summary>
+        /// Get a cryptographically strong random key that can be used for encryption.
+        /// </summary>
+        /// <param name="keySize">The size, in bytes, for the generated key.</param>
+        /// <returns>A cryptographically strong <see cref="byte"/> array.</returns>
+        public byte[] GetRandomKey(int keySize = 32)
+        {
+            var bytes = new byte[keySize];
+            RandomNumberGenerator.Create().GetBytes(bytes);
+            return bytes;
+        }
+
+        /// <summary>
+        /// Get a cryptographically strong random key phrase that can be used for encryption.
+        /// </summary>
+        /// <param name="keySize">The size, in bytes, for the generated key.</param>
+        /// <returns>A cryptographically strong <see cref="string"/>.</returns>
+        public string GetRandomKeyPhrase(int keySize = 32)
+        {
+            var bytes = GetRandomKey(keySize);
+            return GetStringFromUTF32(bytes);
         }
 
         /// <summary>

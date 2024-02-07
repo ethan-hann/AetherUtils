@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AetherUtils.Core.Security.Encryption
+﻿namespace AetherUtils.Core.Security.Encryption
 {
     /// <summary>
     /// Represents the valid key lengths (in bits) for the AES encryption algorithm.

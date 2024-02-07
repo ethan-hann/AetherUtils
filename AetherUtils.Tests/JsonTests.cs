@@ -5,7 +5,7 @@ namespace AetherUtils.Tests
 {
     public class JsonTests
     {
-        DefaultConfig config;
+        DefaultConfig? config;
         Json<DefaultConfig> jsonHelper;
 
         [SetUp]

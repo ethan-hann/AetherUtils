@@ -1,10 +1,5 @@
 ﻿using AetherUtils.Core.Extensions;
 using AetherUtils.Core.Utility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AetherUtils.Tests
 {
@@ -12,8 +7,8 @@ namespace AetherUtils.Tests
     {
         public SerializableDictionary<int, string> dictionary;
 
-        [SetUp] 
-        public void SetUp() 
+        [SetUp]
+        public void SetUp()
         {
             //Create dictionary and populate
             dictionary = [];

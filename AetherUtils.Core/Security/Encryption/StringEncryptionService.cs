@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Security.Cryptography;
 
 namespace AetherUtils.Core.Security.Encryption
 {
@@ -22,7 +17,7 @@ namespace AetherUtils.Core.Security.Encryption
             using CryptoStream cryptoStream = new(output, aes.CreateEncryptor(), CryptoStreamMode.Write);
             await cryptoStream.WriteAsync(GetBytesToUTF32(input));
             await cryptoStream.FlushFinalBlockAsync();
-            
+
             return output.ToArray();
         }
 

@@ -1,12 +1,5 @@
 ﻿using AetherUtils.Core.Extensions;
-using AetherUtils.Core.Structs;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AetherUtils.Core.Security
 {

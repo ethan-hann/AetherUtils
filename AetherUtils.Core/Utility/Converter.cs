@@ -1,12 +1,5 @@
-﻿using AetherUtils.Core.Extensions;
-using AetherUtils.Core.RegEx;
-using AetherUtils.Core.Security;
-using Org.BouncyCastle.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using AetherUtils.Core.Security.Hashing;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace AetherUtils.Core.Utility
 {

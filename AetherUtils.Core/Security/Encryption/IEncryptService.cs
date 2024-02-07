@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AetherUtils.Core.Security.Encryption
+﻿namespace AetherUtils.Core.Security.Encryption
 {
     /// <summary>
     /// Represents an interface for encryption classes to implement. Provides generic methods for encryption and decryption of data.
