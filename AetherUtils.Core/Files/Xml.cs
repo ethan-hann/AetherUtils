@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using AetherUtils.Core.Extensions;
+using System.Diagnostics;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -17,29 +18,36 @@ namespace AetherUtils.Core.Files
             _serializer = new XmlSerializer(typeof(T));
         }
 
-        public void SaveXML(string filePath, T obj)
+        /// <summary>
+        /// Serialize a .NET object, <typeparamref name="T"/>, to an XML string and save to a file.
+        /// <para>If the file already exists, it is overwritten.</para>
+        /// </summary>
+        /// <param name="filePath">The file to save.</param>
+        /// <param name="obj">The .NET object to serialize and save.</param>
+        /// <returns><c>true</c> if the object was serialized and the file was saved; <c>false</c> otherwise.</returns>
+        public bool SaveXML(string filePath, T obj)
         {
             filePath = FileHelper.ExpandPath(filePath);
             FileHelper.CreateDirectories(filePath, false);
-            using XmlWriter writer = XmlWriter.Create(filePath);
-            try
-            {
-                _serializer.Serialize(writer, obj);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); }
-            finally { writer.Close(); }
+
+            if (!obj.CanSerialize())
+                return false;
+
+            string xml = obj.Serialize();
+            FileHelper.SaveFile(filePath, xml);
+
+            return true;
         }
 
+        /// <summary>
+        /// Deserialize and load a .NET object from a file.
+        /// </summary>
+        /// <param name="filePath">The file to load.</param>
+        /// <returns>The <typeparamref name="T"/> object, or <c>null</c> if the object could not be deserialized.</returns>
         public T? LoadXML(string filePath)
         {
-            filePath = FileHelper.ExpandPath(filePath);
-            using XmlReader reader = XmlReader.Create(filePath);
-            try
-            {
-                return (T?)_serializer.Deserialize(reader);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); return null; }
-            finally { reader.Close(); }
+            string xml = FileHelper.OpenFile(filePath, true);
+            return xml.Deserialize<T>();
         }
     }
 }

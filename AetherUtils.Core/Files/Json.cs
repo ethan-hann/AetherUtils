@@ -26,7 +26,14 @@ namespace AetherUtils.Core.Files
             _stringWriter = new StringWriter(_stringBuilder);
         }
 
-        public void SaveJSON(string filePath, T obj)
+        /// <summary>
+        /// Serialize a .NET object, <typeparamref name="T"/>, to a JSON string and save to a file.
+        /// <para>If the file already exists, it is overwritten.</para>
+        /// </summary>
+        /// <param name="filePath">The file to save.</param>
+        /// <param name="obj">The .NET object to serialize and save.</param>
+        /// <returns><c>true</c> if the object was serialized and the file was saved; <c>false</c> otherwise.</returns>
+        public bool SaveJSON(string filePath, T obj)
         {
             try
             {
@@ -37,10 +44,17 @@ namespace AetherUtils.Core.Files
                 }
 
                 ResetWriters();
+
+                return true;
             }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); return false; }
         }
 
+        /// <summary>
+        /// Deserialize and load a .NET object from a JSON file.
+        /// </summary>
+        /// <param name="filePath">The file to load.</param>
+        /// <returns>The <typeparamref name="T"/> object, or <c>null</c> if the object could not be deserialized.</returns>
         public T? LoadJSON(string filePath)
         {
             T? obj = null;
