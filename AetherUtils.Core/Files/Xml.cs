@@ -40,7 +40,7 @@ namespace AetherUtils.Core.Files
         }
 
         /// <summary>
-        /// Deserialize and load a .NET object from a file.
+        /// Deserialize and load a .NET object from an XML file.
         /// </summary>
         /// <param name="filePath">The file to load.</param>
         /// <returns>The <typeparamref name="T"/> object, or <c>null</c> if the object could not be deserialized.</returns>
