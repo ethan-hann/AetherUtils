@@ -6,7 +6,7 @@ namespace AetherUtils.Tests
     public class EncryptionTests
     {
         private string testString = "Somewhere over the rainbow!!!";
-        private string testFilePath = "files\\TestEncryptedFileSave.enc";
+        private readonly string testFilePath = @"%temp%\AetherTests\files\TestEncryptedFileSave.enc";
         private Guid testLicenseID = Guid.NewGuid();
         const string passphrase = "secure_password!";
 
@@ -86,7 +86,7 @@ namespace AetherUtils.Tests
         public void TestRandomPassPhrase()
         {
             var service = new StringEncryptionService();
-            string passKey = service.GetRandomKeyPhrase();
+            string passKey = EncryptionBase.GetRandomKeyPhrase();
 
             Console.WriteLine($"Passphrase: {passKey}");
 

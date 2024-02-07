@@ -6,17 +6,11 @@ namespace AetherUtils.Core.Security.Encryption
     /// <summary>
     /// Provides methods to encrypt and decrypt XML serializable .NET objects.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class ObjectEncryptionService<T> : EncryptionBase, IEncryptService<T, byte[]> where T : class
+    /// <typeparam name="T">The object type to encrypt/decrypt. This type must support XML serialization.</typeparam>
+    public sealed class ObjectEncryptionService<T> : EncryptionBase, IEncryptService<T, byte[]> where T : class
     {
-        private readonly StringEncryptionService _stringEncryptor;
-        private readonly FileEncryptionService _fileEncryptionService;
-
-        public ObjectEncryptionService()
-        {
-            _stringEncryptor = new();
-            _fileEncryptionService = new(string.Empty);
-        }
+        private readonly StringEncryptionService _stringEncryptor = new();
+        private readonly FileEncryptionService _fileEncryptionService = new();
 
         /// <summary>
         /// Encrypt a .NET XML serializable object to an encrypted <see cref="byte"/> array.
@@ -39,7 +33,7 @@ namespace AetherUtils.Core.Security.Encryption
             else
                 objectString = input.Serialize();
 
-            if (objectString is string obj)
+            if (objectString is { } obj)
                 return await _stringEncryptor.EncryptAsync(obj, passphrase);
 
             return [];
@@ -59,11 +53,11 @@ namespace AetherUtils.Core.Security.Encryption
 
             var decrypted = await _stringEncryptor.DecryptAsync(input, passphrase);
 
-            T? result = decrypted.Deserialize<T>();
-            if (result is not null)
-                return result;
-
-            throw new FormatException("The input was not in the correct format for decryption.");
+            var result = decrypted.Deserialize<T>();
+            
+            if (result == null)
+                throw new FormatException("The input was not in the correct format for decryption.");
+            return result;
         }
 
         /// <summary>
@@ -90,8 +84,8 @@ namespace AetherUtils.Core.Security.Encryption
             else
                 objectString = input.Serialize();
 
-            string encryptedPath = string.Empty;
-            if (objectString is string obj)
+            var encryptedPath = string.Empty;
+            if (objectString is { } obj)
                 encryptedPath = await _fileEncryptionService.EncryptAsync(obj, passphrase);
 
             if (!encryptedPath.Equals(string.Empty))
@@ -112,8 +106,12 @@ namespace AetherUtils.Core.Security.Encryption
         {
             ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
 
+            filePath = FileHelper.ExpandPath(filePath);
+            
             if (!FileHelper.DoesFileExist(filePath))
                 throw new FileNotFoundException(nameof(filePath));
+
+            
 
             var decryptedContents = await _fileEncryptionService.DecryptAsync(filePath, passphrase);
 

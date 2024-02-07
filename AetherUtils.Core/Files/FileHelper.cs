@@ -15,35 +15,32 @@ namespace AetherUtils.Core.Files
         /// </summary>
         /// <param name="filePath">The path to create directories on.</param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before creating directories?</param>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static void CreateDirectories(string filePath, bool expandPath = true)
         {
-            try
-            {
-                filePath = expandPath ? ExpandPath(filePath) : filePath;
-
-                DirectoryInfo? dInfo = Directory.GetParent(filePath);
-                if (dInfo != null)
-                    Directory.CreateDirectory(dInfo.FullName);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            
+            filePath = expandPath ? ExpandPath(filePath) : filePath;
+            DirectoryInfo? dInfo = Directory.GetParent(filePath);
+            if (dInfo != null)
+                Directory.CreateDirectory(dInfo.FullName);
         }
 
         /// <summary>
-        /// Create a new file and write the specified content to it. 
-        /// If the file already exists, it is overwritten.
+        /// Create a new file and write the specified content to it, using <see cref="Encoding.UTF32"/> encoding.
+        /// <para>If the file already exists, it is overwritten.</para>
         /// </summary>
-        /// <param name="filePath"></param>
-        /// <param name="content"></param>
+        /// <param name="filePath">The path to the file.</param>
+        /// <param name="content">The text to save to the file.</param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before creating file?</param>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static void SaveFile(string filePath, string content, bool expandPath = true)
         {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            
             filePath = expandPath ? ExpandPath(filePath) : filePath;
             CreateDirectories(filePath, false);
-            try
-            {
-                File.WriteAllText(filePath, content);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            File.WriteAllText(filePath, content, Encoding.UTF32);
         }
 
         /// <summary>
@@ -52,14 +49,13 @@ namespace AetherUtils.Core.Files
         /// <param name="filePath">The path to the file.</param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before attempting to open the file?</param>
         /// <returns>The contents of <paramref name="filePath"/> or <see cref="string.Empty"/> if the file could not be opened.</returns>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static string OpenFile(string filePath, bool expandPath = true)
         {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            
             filePath = expandPath ? ExpandPath(filePath) : filePath;
-            try
-            {
-                return File.ReadAllText(filePath);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); return string.Empty; }
+            return File.ReadAllText(filePath);
         }
 
         /// <summary>
@@ -68,106 +64,100 @@ namespace AetherUtils.Core.Files
         /// <param name="filePath">The path to the file.</param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before attempting to open the file?</param>
         /// <returns>The contents of <paramref name="filePath"/> or an empty array if the file could not be opened.</returns>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static byte[] OpenNonTextFile(string filePath, bool expandPath = true)
         {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            
             filePath = expandPath ? ExpandPath(filePath) : filePath;
-            try
-            {
-                return File.ReadAllBytes(filePath);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); return []; }
+            return File.ReadAllBytes(filePath);
         }
 
         /// <summary>
         /// Create a new file and write the specified content to it, using the specified encoding. 
         /// If the file exists, it is overwritten.
         /// </summary>
-        /// <param name="filePath"></param>
-        /// <param name="content"></param>
-        /// <param name="encoding"></param>
+        /// <param name="filePath">The path of the file to save.</param>
+        /// <param name="content">The text to save to the file.</param>
+        /// <param name="encoding">The <see cref="Encoding"/> to use when saving the file.</param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before creating file?</param>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static void SaveFile(string filePath, string content, Encoding encoding, bool expandPath = true)
         {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            
             filePath = expandPath ? ExpandPath(filePath) : filePath;
             CreateDirectories(filePath, false);
-            try
-            {
-                File.WriteAllText(filePath, content, encoding);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            File.WriteAllText(filePath, content, encoding);
         }
 
         /// <summary>
         /// Create a new file and write the specified <see cref="byte"/> array to it.
         /// If the file exists, it is overwritten.
         /// </summary>
-        /// <param name="filePath"></param>
-        /// <param name="contents"></param>
+        /// <param name="filePath">The path of the file to save.</param>
+        /// <param name="contents">The <see cref="byte"/>s to save to the file.</param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before creating file?</param>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static void SaveFile(string filePath, byte[] contents, bool expandPath = true)
         {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            
             filePath = expandPath ? ExpandPath(filePath) : filePath;
             CreateDirectories(filePath, false);
-            try
-            {
-                File.WriteAllBytes(filePath, contents);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            File.WriteAllBytes(filePath, contents);
         }
 
         /// <summary>
-        /// Asynchronously create a new file and write the specified content to it.
-        /// If the file exists, it is overwritten.
+        /// Asynchronously create a new file and write the specified content to it, using <see cref="Encoding.UTF32"/> encoding.
+        /// <para>If the file exists, it is overwritten.</para>
         /// </summary>
-        /// <param name="filePath"></param>
-        /// <param name="content"></param>
+        /// <param name="filePath">The path of the file to save.</param>
+        /// <param name="content">The text to save to the file.</param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before creating file?</param>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static async void SaveFileAsync(string filePath, string content, bool expandPath = true)
         {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            
             filePath = expandPath ? ExpandPath(filePath) : filePath;
             CreateDirectories(filePath, false);
-            try
-            {
-                await File.WriteAllTextAsync(filePath, content);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            await File.WriteAllTextAsync(filePath, content, Encoding.UTF32);
         }
 
         /// <summary>
         /// Asynchronously create a new file and write the specified content to it, using the specified encoding.
         /// If the file exists, it is overwritten.
         /// </summary>
-        /// <param name="filePath"></param>
-        /// <param name="content"></param>
-        /// <param name="encoding"></param>
+        /// <param name="filePath">The path of the file to save.</param>
+        /// <param name="content">The text to save to the file.</param>
+        /// <param name="encoding">The <see cref="Encoding"/> to use when saving the file.</param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before creating file?</param>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static async void SaveFileAsync(string filePath, string content, Encoding encoding, bool expandPath = true)
         {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            
             filePath = expandPath ? ExpandPath(filePath) : filePath;
             CreateDirectories(filePath, false);
-            try
-            {
-                await File.WriteAllTextAsync(filePath, content, encoding);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            await File.WriteAllTextAsync(filePath, content, encoding);
         }
 
         /// <summary>
         /// Asynchronously create a new file and write the specified <see cref="byte"/> array to it.
         /// If the file exists, it is overwritten.
         /// </summary>
-        /// <param name="filePath"></param>
-        /// <param name="content"></param>
+        /// <param name="filePath">The path of the file to save.</param>
+        /// <param name="content">The <see cref="byte"/>s to save to the file.</param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before creating file?</param>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static async void SaveFileAsync(string filePath, byte[] content, bool expandPath = true)
         {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            
             filePath = expandPath ? ExpandPath(filePath) : filePath;
             CreateDirectories(filePath, false);
-            try
-            {
-                await File.WriteAllBytesAsync(filePath, content);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            await File.WriteAllBytesAsync(filePath, content);
         }
 
         #endregion
@@ -178,46 +168,22 @@ namespace AetherUtils.Core.Files
         /// </summary>
         /// <param name="filePath">The path to expand.</param>
         /// <returns>The expanded path, or the original path if no expansion was necessary or an error occured.</returns>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static string ExpandPath(string filePath)
         {
-            try
-            {
-                //Expand environment path variables, if present in the file path string.
-                if (filePath.Contains('%'))
-                    return Environment.ExpandEnvironmentVariables(filePath);
-                return filePath;
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); return filePath; }
-        }
-
-        /// <summary>
-        /// Try to expand a file path containing environment path variables (%), if possible.
-        /// </summary>
-        /// <param name="path">The path to expand.</param>
-        /// <param name="expandedPath">The expanded path, or the original path if no expansion was necessary.</param>
-        /// <returns><c>true</c> if expansion was successful; <c>false</c> otherwise.</returns>
-        public static bool TryExpandPath(string path, out string expandedPath)
-        {
-            try
-            {
-                if (path.Contains('%'))
-                {
-                    expandedPath = Environment.ExpandEnvironmentVariables(path);
-                    return true;
-                }
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); }
-            expandedPath = path;
-            return false;
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            return filePath.Contains('%') ? Environment.ExpandEnvironmentVariables(filePath) : filePath;
         }
 
         /// <summary>
         /// Gets whether the specified path is a valid absolute file path on Windows.
         /// </summary>
         /// <param name="path">A path to check.</param>
-        static public bool IsValidPath(string path)
+        /// <exception cref="ArgumentException">If the <paramref name="path"/> was <c>null</c> or empty.</exception>
+        public static bool IsValidPath(string path)
         {
-            try { return RegexGenerator.PathRegex().IsMatch(path); } catch { return false; }
+            ArgumentException.ThrowIfNullOrEmpty(path, nameof(path));
+            return RegexGenerator.PathRegex().IsMatch(path);
         }
 
         #endregion
@@ -229,9 +195,12 @@ namespace AetherUtils.Core.Files
         /// </summary>
         /// <param name="fileName">The filename.</param>
         /// <returns>A string with the invalid characters removed from the filename.</returns>
+        /// <exception cref="ArgumentException">If the <paramref name="fileName"/> was <c>null</c> or empty.</exception>
         public static string RemoveInvalidFileNameChars(string fileName)
         {
-            char[] invalidFileChars = Path.GetInvalidFileNameChars();
+            ArgumentException.ThrowIfNullOrEmpty(fileName, nameof(fileName));
+            
+            var invalidFileChars = Path.GetInvalidFileNameChars();
             string? newFileName = fileName.Except(invalidFileChars).ToString();
             return newFileName ?? fileName;
         }
@@ -241,9 +210,12 @@ namespace AetherUtils.Core.Files
         /// </summary>
         /// <param name="path">The path.</param>
         /// <returns>A string with the invalid characters removed from the path.</returns>
+        /// <exception cref="ArgumentException">If the <paramref name="path"/> was <c>null</c> or empty.</exception>
         public static string RemoveInvalidPathChars(string path)
         {
-            char[] invalidPathChars = Path.GetInvalidPathChars();
+            ArgumentException.ThrowIfNullOrEmpty(path, nameof(path));
+            
+            var invalidPathChars = Path.GetInvalidPathChars();
             string? newPath = path.Except(invalidPathChars).ToString();
             return newPath ?? path;
         }
@@ -256,14 +228,12 @@ namespace AetherUtils.Core.Files
         /// <param name="filePath">The path to a file.</param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before checking?</param>
         /// <returns><c>true</c> if the file exists; <c>false</c> otherwise.</returns>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static bool DoesFileExist(string filePath, bool expandPath = true)
         {
-            if (expandPath)
-            {
-                filePath = ExpandPath(filePath);
-                return File.Exists(filePath);
-            }
-
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            
+            filePath = expandPath ? ExpandPath(filePath) : filePath;
             return File.Exists(filePath);
         }
 
@@ -273,13 +243,12 @@ namespace AetherUtils.Core.Files
         /// <param name="folderPath">The path to a folder.</param>
         /// <param name="expandPath">Should the <paramref name="folderPath"/> be expanded before checking?</param>
         /// <returns><c>true</c> if the folder exists; <c>false</c> otherwise.</returns>
+        /// <exception cref="ArgumentException">If the <paramref name="folderPath"/> was <c>null</c> or empty.</exception>
         public static bool DoesFolderExist(string folderPath, bool expandPath = true)
         {
-            if (expandPath)
-            {
-                folderPath = ExpandPath(folderPath);
-                return Directory.Exists(folderPath);
-            }
+            ArgumentException.ThrowIfNullOrEmpty(folderPath, nameof(folderPath));
+
+            folderPath = expandPath ? ExpandPath(folderPath) : folderPath;
             return Directory.Exists(folderPath);
         }
         #endregion

@@ -7,6 +7,7 @@ namespace AetherUtils.Tests
     {
         DefaultConfig? config;
         Json<DefaultConfig> jsonHelper;
+        private readonly string configPath = @"%temp%\AetherTests\json\config.json";
 
         [SetUp]
         public void SetUp()
@@ -18,14 +19,14 @@ namespace AetherUtils.Tests
         [Test]
         public void TestSavingJson()
         {
-            jsonHelper.SaveJSON("json\\config.json", config);
-            Assert.That(Path.Exists("json\\config.json"), Is.True);
+            jsonHelper.SaveJson(configPath, config);
+            Assert.That(FileHelper.DoesFileExist(configPath), Is.True);
         }
 
         [Test]
         public void TestLoadingJson()
         {
-            config = jsonHelper.LoadJSON("json\\config.json");
+            config = jsonHelper.LoadJson(configPath);
             Assert.That(config, Is.Not.Null);
         }
     }

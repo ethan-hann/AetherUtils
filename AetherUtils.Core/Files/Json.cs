@@ -33,21 +33,18 @@ namespace AetherUtils.Core.Files
         /// <param name="filePath">The file to save.</param>
         /// <param name="obj">The .NET object to serialize and save.</param>
         /// <returns><c>true</c> if the object was serialized and the file was saved; <c>false</c> otherwise.</returns>
-        public bool SaveJSON(string filePath, T obj)
+        public bool SaveJson(string filePath, T obj)
         {
-            try
-            {
-                using (JsonWriter writer = new JsonTextWriter(_stringWriter))
-                {
-                    _serializer.Serialize(writer, obj);
-                    FileHelper.SaveFile(filePath, _stringWriter.ToString());
-                }
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
 
-                ResetWriters();
+            string newPath = FileHelper.ExpandPath(filePath);
+            
+            using JsonWriter writer = new JsonTextWriter(_stringWriter);
+            _serializer.Serialize(writer, obj);
+            FileHelper.SaveFile(newPath, _stringWriter.ToString(), false);
 
-                return true;
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); return false; }
+            ResetWriters();
+            return FileHelper.DoesFileExist(newPath, false);
         }
 
         /// <summary>
@@ -55,18 +52,19 @@ namespace AetherUtils.Core.Files
         /// </summary>
         /// <param name="filePath">The file to load.</param>
         /// <returns>The <typeparamref name="T"/> object, or <c>null</c> if the object could not be deserialized.</returns>
-        public T? LoadJSON(string filePath)
+        public T? LoadJson(string filePath)
         {
-            T? obj = null;
-            try
-            {
-                string json = FileHelper.OpenFile(filePath);
-                using JsonTextReader reader = new JsonTextReader(new StringReader(json));
-                obj = _serializer.Deserialize<T>(reader);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            string newPath = FileHelper.ExpandPath(filePath);
 
+            if (!FileHelper.DoesFileExist(newPath, false))
+                throw new FileNotFoundException("File was not found");
+
+            string json = FileHelper.OpenFile(newPath);
+            using JsonTextReader reader = new JsonTextReader(new StringReader(json));
+            var obj = _serializer.Deserialize<T>(reader);
             ResetWriters();
+            
             return obj;
         }
 

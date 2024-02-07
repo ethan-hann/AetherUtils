@@ -14,10 +14,10 @@ namespace AetherUtils.Core.Security.Encryption
         /// <param name="encryptedData">The encrypted data to read.</param>
         /// <param name="stream">The stream to read from.</param>
         /// <returns></returns>
-        internal virtual byte[] ReadIVFromStream(Stream stream)
+        internal byte[] ReadIvFromStream(Stream stream)
         {
-            byte[] iv = new byte[16];
-            stream.Read(iv, 0, 16);
+            var iv = new byte[16];
+            _ = stream.Read(iv, 0, 16);
             return iv;
         }
 
@@ -26,7 +26,7 @@ namespace AetherUtils.Core.Security.Encryption
         /// </summary>
         /// <param name="iv">The IV to write.</param>
         /// <param name="stream">The stream to write to.</param>
-        internal virtual void WriteIVToStream(byte[] iv, Stream stream) => stream.Write(iv, 0, 16);
+        internal void WriteIvToStream(byte[] iv, Stream stream) => stream.Write(iv, 0, 16);
 
         /// <summary>
         /// Derives a key to use for encryption/decryption from an input string.
@@ -37,7 +37,7 @@ namespace AetherUtils.Core.Security.Encryption
         /// <param name="iterations">The number of iterations. (Default is 5000).</param>
         /// <param name="keyLength">The length of the generated key, in bytes.</param>
         /// <returns>A cryptographically strong key.</returns>
-        internal virtual byte[] DeriveKeyFromString(string input, int iterations = 5000, KeyLength keyLength = KeyLength.Bits_128)
+        internal byte[] DeriveKeyFromString(string input, int iterations = 5000, KeyLength keyLength = KeyLength.Bits_128)
         {
             return Rfc2898DeriveBytes.Pbkdf2(Encoding.UTF32.GetBytes(input),
                 Array.Empty<byte>(),
@@ -51,7 +51,7 @@ namespace AetherUtils.Core.Security.Encryption
         /// </summary>
         /// <param name="keySize">The size, in bytes, for the generated key.</param>
         /// <returns>A cryptographically strong <see cref="byte"/> array.</returns>
-        public byte[] GetRandomKey(int keySize = 32)
+        private static byte[] GetRandomKey(int keySize = 32)
         {
             var bytes = new byte[keySize];
             RandomNumberGenerator.Create().GetBytes(bytes);
@@ -63,10 +63,10 @@ namespace AetherUtils.Core.Security.Encryption
         /// </summary>
         /// <param name="keySize">The size, in bytes, for the generated key.</param>
         /// <returns>A cryptographically strong <see cref="string"/>.</returns>
-        public string GetRandomKeyPhrase(int keySize = 32)
+        public static string GetRandomKeyPhrase(int keySize = 32)
         {
             var bytes = GetRandomKey(keySize);
-            return GetStringFromUTF32(bytes);
+            return GetStringFromUtf32(bytes);
         }
 
         /// <summary>
@@ -74,13 +74,13 @@ namespace AetherUtils.Core.Security.Encryption
         /// </summary>
         /// <param name="input"></param>
         /// <returns>A <see cref="string"/> representing the <paramref name="input"/> in <see cref="Encoding.UTF32"/>.</returns>
-        internal virtual string GetStringFromUTF32(byte[] input) => Encoding.UTF32.GetString(input);
+        internal static string GetStringFromUtf32(byte[] input) => Encoding.UTF32.GetString(input);
 
         /// <summary>
-        /// Get a <see cref="byte"/> array equalvalent to the <paramref name="input"/> in <see cref="Encoding.UTF32"/> encoding.
+        /// Get a <see cref="byte"/> array equivalent to the <paramref name="input"/> in <see cref="Encoding.UTF32"/> encoding.
         /// </summary>
         /// <param name="input"></param>
         /// <returns>A <see cref="byte"/> array representing the <paramref name="input"/> in <see cref="Encoding.UTF32"/> encoding.</returns>
-        internal virtual byte[] GetBytesToUTF32(string input) => Encoding.UTF32.GetBytes(input);
+        internal static byte[] GetBytesToUtf32(string input) => Encoding.UTF32.GetBytes(input);
     }
 }

@@ -5,35 +5,47 @@ namespace AetherUtils.Core.Security.Encryption
     /// <summary>
     /// Provides methods to encrypt and decrypt strings.
     /// </summary>
-    public class StringEncryptionService : EncryptionBase, IEncryptService<string, byte[]>
+    public sealed class StringEncryptionService : EncryptionBase, IEncryptService<string, byte[]>
     {
+        /// <summary>
+        /// Encrypt a string using the <paramref name="passphrase"/>.
+        /// </summary>
+        /// <param name="input">The string to encrypt.</param>
+        /// <param name="passphrase">The passphrase used for encryption.</param>
+        /// <returns>The encrypted <see cref="byte"/> array.</returns>
         public async Task<byte[]> EncryptAsync(string input, string passphrase)
         {
             using Aes aes = Aes.Create();
             aes.Key = DeriveKeyFromString(passphrase, 5000, KeyLength.Bits_256);
             using MemoryStream output = new();
-            WriteIVToStream(aes.IV, output);
+            WriteIvToStream(aes.IV, output);
 
-            using CryptoStream cryptoStream = new(output, aes.CreateEncryptor(), CryptoStreamMode.Write);
-            await cryptoStream.WriteAsync(GetBytesToUTF32(input));
+            await using CryptoStream cryptoStream = new(output, aes.CreateEncryptor(), CryptoStreamMode.Write);
+            await cryptoStream.WriteAsync(GetBytesToUtf32(input));
             await cryptoStream.FlushFinalBlockAsync();
 
             return output.ToArray();
         }
 
+        /// <summary>
+        /// Decrypt an encrypted <see cref="byte"/> array using the <paramref name="passphrase"/>.
+        /// </summary>
+        /// <param name="encrypted">An encrypted <see cref="byte"/> array.</param>
+        /// <param name="passphrase">The passphrase used for decryption.</param>
+        /// <returns>The decrypted <see cref="string"/>.</returns>
         public async Task<string> DecryptAsync(byte[] encrypted, string passphrase)
         {
             using Aes aes = Aes.Create();
             aes.Key = DeriveKeyFromString(passphrase, 5000, KeyLength.Bits_256);
 
             using MemoryStream input = new MemoryStream(encrypted);
-            aes.IV = ReadIVFromStream(input);
+            aes.IV = ReadIvFromStream(input);
 
-            using CryptoStream cs = new(input, aes.CreateDecryptor(), CryptoStreamMode.Read);
+            await using CryptoStream cs = new(input, aes.CreateDecryptor(), CryptoStreamMode.Read);
             using MemoryStream output = new();
             await cs.CopyToAsync(output);
 
-            return GetStringFromUTF32(output.ToArray());
+            return GetStringFromUtf32(output.ToArray());
         }
     }
 }
