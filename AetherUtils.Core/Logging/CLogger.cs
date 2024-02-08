@@ -91,8 +91,8 @@ namespace AetherUtils.Core.Logging
         /// <returns>A <see cref="Logger"/> object that can be used for logging. Returns default name if logging has not been initialized via <see cref="Initialize(LogOptions)"/></returns>
         public static Logger GetCurrentLogger<T>() where T : class
         {
-            if (!_isInitialized) { return LogManager.GetCurrentClassLogger(); }
-            return LogManager.GetLogger($"{typeof(T).FullName}");
+            return !_isInitialized ? LogManager.GetCurrentClassLogger() 
+                : LogManager.GetLogger($"{typeof(T).FullName}");
         }
 
         /// <summary>
@@ -103,8 +103,8 @@ namespace AetherUtils.Core.Logging
         /// <returns>A <see cref="Logger"/> object that can be used for logging. Returns default name if logging has not been initialized.</returns>
         public static Logger GetCurrentLogger<T>(string name) where T : class
         {
-            if (!_isInitialized) { return LogManager.GetCurrentClassLogger(); }
-            return LogManager.GetLogger($"{typeof(T).FullName}.{name}");
+            return !_isInitialized ? LogManager.GetCurrentClassLogger() 
+                : LogManager.GetLogger($"{typeof(T).FullName}.{name}");
         }
 
         /// <summary>
@@ -114,8 +114,8 @@ namespace AetherUtils.Core.Logging
         /// <returns>A <see cref="Logger"/> object that can be used for logging. Returns default name if logging has not been initialized.</returns>
         public static Logger GetCurrentLogger(string name)
         {
-            if (!_isInitialized) { return LogManager.GetCurrentClassLogger(); }
-            return LogManager.GetLogger(name);
+            return !_isInitialized ? LogManager.GetCurrentClassLogger() 
+                : LogManager.GetLogger(name);
         }
     }
 }
