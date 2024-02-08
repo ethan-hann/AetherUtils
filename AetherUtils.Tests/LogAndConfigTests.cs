@@ -21,7 +21,7 @@ namespace AetherUtils.Tests
         [Test]
         public void TestLoggerCreate()
         {
-            LogOptions? options = (LogOptions)configManager.Get("logOptions");
+            LogOptions? options = (LogOptions?)configManager.Get("logOptions");
             Assert.That(options, Is.Not.Null);
 
             CLogger.Initialize(options);
