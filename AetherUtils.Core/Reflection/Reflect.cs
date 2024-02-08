@@ -100,10 +100,10 @@ namespace AetherUtils.Core.Reflection
         public static IEnumerable<(Type Class, PropertyInfo Property, Attribute Attribute, object? Instance)> GetAttributesRecurse<T>(object? instance, Type type, HashSet<Type>? visited = null) where T : Attribute
         {
             // Keep track of where we have been.
-            visited ??= []; //Shorthand for visitied = visited ?? new HashSet<Type>();
+            visited ??= []; //Shorthand for visited = visited ?? new HashSet<Type>();
 
             //If we've been here before, the type is System.String, or the type is a list, yield to prevent StackOverflow error.
-            if (!visited.Add(type) || type.FullName.Equals("System.String") || type.IsPrimitive || IsList(type))
+            if (type.FullName != null && (!visited.Add(type) || type.FullName.Equals("System.String") || type.IsPrimitive || IsList(type)))
                 yield break;
 
             foreach (var prop in type.GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))

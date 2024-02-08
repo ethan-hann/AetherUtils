@@ -1,6 +1,7 @@
 ﻿using AetherUtils.Core.Security.Hashing;
 using AetherUtils.Core.Utility;
 using System.Text;
+using AetherUtils.Core.Extensions;
 
 namespace AetherUtils.Tests
 {

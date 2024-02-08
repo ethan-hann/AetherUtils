@@ -1,4 +1,6 @@
-﻿namespace AetherUtils.Core.Extensions;
+﻿using AetherUtils.Core.Enums;
+
+namespace AetherUtils.Core.Extensions;
 
 /// <summary>
 /// Provides extension methods for manipulating various number objects.
@@ -44,22 +46,21 @@ public static class NumberExtensions
     /// <param name="conversionFactor">How many bytes are in 1KB? (Default is <c>1024</c>)</param>
     /// <returns>The number formatted with its suffix as a <see cref="string"/>.</returns>
     /// <exception cref="ArgumentNullException">If <paramref name="sizeInBytes"/> was <c>null</c>.</exception>
-    public static string FormatSize(this long sizeInBytes, int conversionFactor = 1024)
+    public static string FormatSize(this ulong sizeInBytes)
     {
         ArgumentNullException.ThrowIfNull(sizeInBytes, nameof(sizeInBytes));
-        
-        string[] suffixes = ["Bit", "Nibble", "Byte", "KB", "MB", "GB", "TB", "PB"];
+
+        var sizes = Enum.GetValues<MemorySize>();
         var counter = 0;
-        decimal number = sizeInBytes;
+        decimal size = sizeInBytes;
 
-        if (conversionFactor <= 0) { return string.Empty; } //divide-by-zero check.
-
-        while (Math.Round(number / conversionFactor) >= 1)
+        while (Math.Round(size / 1024) >= 1)
         {
-            number /= conversionFactor;
+            size /= 1024;
             counter++;
         }
-
-        return $"{number:n2} {suffixes[counter]}";
+        return $"{size:F} " +
+               $"{sizes[counter].ToDescriptionString()}" +
+               $"{(size > 1 && sizes[counter].Equals(MemorySize.Byte) ? "s" : string.Empty)}";
     }
 }

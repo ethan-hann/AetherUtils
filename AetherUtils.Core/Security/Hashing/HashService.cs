@@ -1,6 +1,6 @@
-﻿using AetherUtils.Core.Structs;
-using AetherUtils.Core.Utility;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
+using AetherUtils.Core.Extensions;
+using AetherUtils.Core.Structs;
 
 namespace AetherUtils.Core.Security.Hashing
 {
@@ -14,27 +14,18 @@ namespace AetherUtils.Core.Security.Hashing
     {
         private readonly HashOptions _options;
 
-        private readonly Random _random = new((int)DateTime.Now.Ticks);
-
-        private string _hashedString = string.Empty;
-
-        private const char _delimiter = ':';
+        private const char SHGFI_DELIMITER = ':';
 
         /// <summary>
         /// Get the hashed string for this <see cref="HashService"/>.
         /// </summary>
-        public string HashedString => _hashedString;
-
-        private HashService() { }
+        public string HashedString { get; private set; } = string.Empty;
 
         /// <summary>
         /// Create a new service with the specified <see cref="HashOptions"/>.
         /// </summary>
         /// <param name="options">The options that should be used for hashing.</param>
-        public HashService(HashOptions options)
-        {
-            _options = options;
-        }
+        public HashService(HashOptions options) => _options = options;
 
         /// <summary>
         /// Generate a hash string for the specified plain-text string according to this object's <see cref="HashOptions"/>.
@@ -47,10 +38,10 @@ namespace AetherUtils.Core.Security.Hashing
         {
             ArgumentNullException.ThrowIfNull(nameof(value));
 
-            byte[] salt = RandomNumberGenerator.GetBytes(_options.SaltLength);
-            int iterations = _options.Iterations;
+            var salt = RandomNumberGenerator.GetBytes(_options.SaltLength);
+            var iterations = _options.Iterations;
 
-            byte[] hash = Rfc2898DeriveBytes.Pbkdf2(
+            var hash = Rfc2898DeriveBytes.Pbkdf2(
                 value,
                 salt,
                 iterations,
@@ -58,15 +49,15 @@ namespace AetherUtils.Core.Security.Hashing
                 _options.KeySize
             );
 
-            _hashedString = string.Join(
-                _delimiter,
+            HashedString = string.Join(
+                SHGFI_DELIMITER,
                 _options.Encoding,
                 _options.Encoding == HashEncoding.Hex ? Convert.ToHexString(hash) : Convert.ToBase64String(hash),
                 _options.Encoding == HashEncoding.Hex ? Convert.ToHexString(salt) : Convert.ToBase64String(salt),
                 iterations,
                 _options.HashAlgorithm
             );
-            return _hashedString;
+            return HashedString;
         }
 
         /// <summary>
@@ -78,11 +69,11 @@ namespace AetherUtils.Core.Security.Hashing
         {
             ArgumentException.ThrowIfNullOrEmpty(nameof(hashString));
 
-            string[] segments = hashString.Split(_delimiter);
-            HashEncoding encoding = Enum.Parse<HashEncoding>(segments[0]);
-            byte[] hash = segments[1].DecodedBytesFromEncodedString(encoding);
-            byte[] salt = segments[2].DecodedBytesFromEncodedString(encoding);
-            int iterations = int.Parse(segments[3]);
+            var segments = hashString.Split(SHGFI_DELIMITER);
+            var encoding = Enum.Parse<HashEncoding>(segments[0]);
+            var hash = segments[1].DecodedBytesFromEncodedString(encoding);
+            var salt = segments[2].DecodedBytesFromEncodedString(encoding);
+            var iterations = int.Parse(segments[3]);
             HashAlgorithmName algorithm = new(segments[4]);
 
             return new ParsedHash(encoding, salt, hash, iterations, algorithm);
@@ -94,7 +85,7 @@ namespace AetherUtils.Core.Security.Hashing
         /// <param name="input"></param>
         /// <returns><c>true</c> if the two strings are equivalent; <c>false</c> otherwise.</returns>
         /// <exception cref="ArgumentException">Thrown if <paramref name="input"/> is <c>null</c> or empty.</exception>
-        public bool CompareHash(string input) => CompareHash(input, _hashedString);
+        public bool CompareHash(string input) => CompareHash(input, HashedString);
 
         /// <summary>
         /// Compare a non-hashed input <see cref="string"/> against a hashed <see cref="string"/>.
@@ -108,9 +99,9 @@ namespace AetherUtils.Core.Security.Hashing
             ArgumentException.ThrowIfNullOrEmpty(nameof(input));
             ArgumentException.ThrowIfNullOrEmpty(nameof(hashString));
 
-            ParsedHash p = ParseHashedString(hashString);
+            var p = ParseHashedString(hashString);
 
-            byte[] inputHash = Rfc2898DeriveBytes.Pbkdf2(
+            var inputHash = Rfc2898DeriveBytes.Pbkdf2(
                 input,
                 p.Salt,
                 p.Iterations,
