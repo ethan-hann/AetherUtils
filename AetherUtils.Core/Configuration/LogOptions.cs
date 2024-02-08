@@ -5,7 +5,7 @@ namespace AetherUtils.Core.Configuration;
 /// <summary>
 /// Represents options for how log files are handled and formatted for an application.
 /// </summary>
-public class LogOptions
+public sealed class LogOptions
 {
     /// <summary>
     /// The name of the application doing the logging.
@@ -17,28 +17,28 @@ public class LogOptions
     /// The directory that the log file should be saved to.
     /// </summary>
     [Config("logFileDirectory")]
-    public string LogFileDirectory { get; set; } = "%TEMP%\\logs";
+    public string LogFileDirectory { get; set; } = @"%TEMP%\logs";
 
     /// <summary>
-    /// Indicates if the log file name should include the current DateTime the file was created.
+    /// Indicates if the log file name should include the current formatted <see cref="DateTime"/> the file was created.
     /// </summary>
     [Config("includeDateTime")]
     public bool IncludeDateTime { get; set; } = false;
 
     /// <summary>
-    /// Indicates if the log file name should include the date only, instead of the full DateTime.
+    /// Indicates if the log file name should include the date only, instead of the full formatted <see cref="DateTime"/>.
     /// </summary>
     [Config("includeDateOnly")]
     public bool IncludeDateOnly { get; set; } = true;
 
     /// <summary>
-    /// Indicates whether a new log file should be created every new launch of the application.
+    /// Indicates whether a new log file should be created for every new launch of the application.
     /// </summary>
     [Config("newFileEveryLaunch")]
     public bool NewFileEveryLaunch { get; set; } = false;
 
     /// <summary>
-    /// Indicates whether the log should also write to the system console.
+    /// Indicates whether the log should write to the system console in addition to a log file.
     /// </summary>
     [Config("writeLogToConsole")]
     public bool WriteLogToConsole { get; set; } = true;

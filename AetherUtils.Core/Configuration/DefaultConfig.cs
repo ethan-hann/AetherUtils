@@ -7,7 +7,7 @@ namespace AetherUtils.Core.Configuration;
 /// or a new class can be created to store the configuration. If a new class is created, it must be a DTO class and it's properties
 /// should be marked with <see cref="ConfigAttribute"/> attributes in order to be saved and loaded from disk by a <see cref="ConfigManager{T}"/>.
 /// </summary>
-public class DefaultConfig
+public sealed class DefaultConfig
 {
     /// <summary>
     /// The connection string used for connecting to a database.

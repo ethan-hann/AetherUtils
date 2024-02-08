@@ -9,7 +9,5 @@ public class ConfigAttribute(string name) : Attribute
     /// <summary>
     /// The YAML name of the property in the configuration file.
     /// </summary>
-    public string Name { get; set; } = name;
-
-    public ConfigAttribute() : this(string.Empty) { }
+    public string Name { get; } = name;
 }

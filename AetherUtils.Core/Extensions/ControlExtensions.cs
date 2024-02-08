@@ -3,15 +3,14 @@
 namespace AetherUtils.Core.Extensions
 {
     /// <summary>
-    /// Contains extension methods for WinForm <see cref="Control"/> classes.
+    /// Provides extension methods for manipulating WinForm <see cref="Control"/> objects.
     /// </summary>
     public static class ControlExtensions
     {
-        #region Generic Extensions
         /// <summary>
         /// Invoke the specified action on the specified control, if required.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="T">The <see cref="Control"/> type.</typeparam>
         /// <param name="control">The <see cref="System.Windows.Forms.Control"/> to invoke an action on.</param>
         /// <param name="action">The <see cref="System.Action"/> to invoke on the control.</param>
         public static void InvokeIfRequired<T>(this T control, Action<T> action) where T : ISynchronizeInvoke
@@ -21,9 +20,7 @@ namespace AetherUtils.Core.Extensions
             else
                 action(control);
         }
-        #endregion
-
-        #region List View
+        
         /// <summary>
         /// Resizes the columns of a <see cref="ListView"/> control to be a best-fit compromise between the header and the content.
         /// </summary>
@@ -33,31 +30,20 @@ namespace AetherUtils.Core.Extensions
             //Prevents flickering
             listView.BeginUpdate();
 
-            Dictionary<int, int> columnSize = new Dictionary<int, int>();
-
             //Auto size using header
             listView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
-            //Grab column size based on header
-            foreach (ColumnHeader colHeader in listView.Columns)
-                columnSize.Add(colHeader.Index, colHeader.Width);
+            //Grab column size based on header into a dictionary {index, width}
+            var columnSize = listView.Columns.Cast<ColumnHeader>().ToDictionary(colHeader => colHeader.Index, colHeader => colHeader.Width);
 
-            //Auto size using data
+            //Auto size using data first
             listView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
 
-            //Grab comumn size based on data and set max width
+            //Grab column size based on data and set max width
             foreach (ColumnHeader colHeader in listView.Columns)
-            {
-                int nColWidth;
-                if (columnSize.TryGetValue(colHeader.Index, out nColWidth))
-                    colHeader.Width = Math.Max(nColWidth, colHeader.Width);
-                else
-                    //Default to 50
-                    colHeader.Width = Math.Max(50, colHeader.Width);
-            }
+                colHeader.Width = Math.Max(columnSize.GetValueOrDefault(colHeader.Index, 50), colHeader.Width);
 
             listView.EndUpdate();
         }
-        #endregion
     }
 }

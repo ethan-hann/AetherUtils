@@ -7,21 +7,21 @@ namespace AetherUtils.Tests
 {
     public class LogAndConfigTests
     {
-        YamlConfigManager configManager;
+        private YamlConfigManager _configManager;
 
         [SetUp]
         public void Setup()
         {
-            configManager = new YamlConfigManager("config\\test.yaml");
-            if (!configManager.ConfigExists)
-                configManager.CreateConfig();
-            Assert.That(configManager.Load(), Is.True);
+            _configManager = new YamlConfigManager("config\\test.yaml");
+            if (!_configManager.ConfigExists)
+                _configManager.CreateConfig();
+            Assert.That(_configManager.LoadAsync().Result, Is.True);
         }
 
         [Test]
         public void TestLoggerCreate()
         {
-            LogOptions? options = (LogOptions?)configManager.Get("logOptions");
+            LogOptions? options = (LogOptions?)_configManager.Get("logOptions");
             Assert.That(options, Is.Not.Null);
 
             CLogger.Initialize(options);
@@ -34,20 +34,20 @@ namespace AetherUtils.Tests
         [Test]
         public void TestChangeConfigValue()
         {
-            if (!configManager.ConfigExists)
-                configManager.CreateConfig();
-            Assert.That(configManager.Load(), Is.True);
+            if (!_configManager.ConfigExists)
+                _configManager.CreateConfig();
+            Assert.That(_configManager.LoadAsync().Result, Is.True);
 
             string testString = "Test String";
             ConfigOption option = new("connectionString", testString);
             Assert.Multiple(() =>
             {
-                Assert.That(configManager.Set(option), Is.True);
-                Assert.That(configManager.Save(), Is.True);
-                Assert.That(configManager.Load(), Is.True);
+                Assert.That(_configManager.Set(option), Is.True);
+                Assert.That(_configManager.SaveAsync().Result, Is.True);
+                Assert.That(_configManager.LoadAsync().Result, Is.True);
             });
 
-            var readString = configManager.Get(option);
+            var readString = _configManager.Get(option);
             readString = readString as string;
             Assert.That(readString, Is.Not.Null);
             Assert.That(readString, Is.EqualTo(testString));

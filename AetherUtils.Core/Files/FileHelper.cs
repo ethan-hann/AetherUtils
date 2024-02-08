@@ -1,11 +1,10 @@
 ﻿using AetherUtils.Core.RegEx;
-using System.Diagnostics;
 using System.Text;
 
 namespace AetherUtils.Core.Files
 {
     /// <summary>
-    /// Provides helper methods to manipulate files and folders on the Windows file system.
+    /// Provides methods to manipulate files and folders on the Windows file system.
     /// </summary>
     public static class FileHelper
     {
@@ -21,13 +20,13 @@ namespace AetherUtils.Core.Files
             ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
             
             filePath = expandPath ? ExpandPath(filePath) : filePath;
-            DirectoryInfo? dInfo = Directory.GetParent(filePath);
+            var dInfo = Directory.GetParent(filePath);
             if (dInfo != null)
                 Directory.CreateDirectory(dInfo.FullName);
         }
 
         /// <summary>
-        /// Create a new file and write the specified content to it, using <see cref="Encoding.UTF32"/> encoding.
+        /// Create a new file and write the specified content to it.
         /// <para>If the file already exists, it is overwritten.</para>
         /// </summary>
         /// <param name="filePath">The path to the file.</param>
@@ -40,7 +39,7 @@ namespace AetherUtils.Core.Files
             
             filePath = expandPath ? ExpandPath(filePath) : filePath;
             CreateDirectories(filePath, false);
-            File.WriteAllText(filePath, content, Encoding.UTF32);
+            File.WriteAllText(filePath, content);
         }
 
         /// <summary>
@@ -59,11 +58,26 @@ namespace AetherUtils.Core.Files
         }
 
         /// <summary>
-        /// Open a binary file, read all bytes within to a byte array, and close the file.
+        /// Open a text file, read all text within asynchronously to a string, and close the file.
         /// </summary>
         /// <param name="filePath">The path to the file.</param>
         /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before attempting to open the file?</param>
-        /// <returns>The contents of <paramref name="filePath"/> or an empty array if the file could not be opened.</returns>
+        /// <returns>A <see cref="Task{TResult}"/> which contains the <see cref="string"/> contents upon completion.</returns>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
+        public static async Task<string> OpenFileAsync(string filePath, bool expandPath = true)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+
+            filePath = expandPath ? ExpandPath(filePath) : filePath;
+            return await File.ReadAllTextAsync(filePath);
+        }
+
+        /// <summary>
+        /// Open a binary file, read all bytes within to a <see cref="byte"/> array, and close the file.
+        /// </summary>
+        /// <param name="filePath">The path to the file.</param>
+        /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before attempting to open the file?</param>
+        /// <returns>The contents of <paramref name="filePath"/> as a <see cref="byte"/> array.</returns>
         /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static byte[] OpenNonTextFile(string filePath, bool expandPath = true)
         {
@@ -71,6 +85,21 @@ namespace AetherUtils.Core.Files
             
             filePath = expandPath ? ExpandPath(filePath) : filePath;
             return File.ReadAllBytes(filePath);
+        }
+
+        /// <summary>
+        /// Open a binary file asynchronously, read all bytes within to a <see cref="byte"/> array, and close the file.
+        /// </summary>
+        /// <param name="filePath">The path to the file.</param>
+        /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before attempting to open the file?</param>
+        /// <returns>A <see cref="Task{TResult}"/> which contains the <see cref="byte"/> array upon completion.</returns>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
+        public static async Task<byte[]> OpenNonTextFileAsync(string filePath, bool expandPath = true)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+
+            filePath = expandPath ? ExpandPath(filePath) : filePath;
+            return await File.ReadAllBytesAsync(filePath);
         }
 
         /// <summary>
@@ -109,7 +138,7 @@ namespace AetherUtils.Core.Files
         }
 
         /// <summary>
-        /// Asynchronously create a new file and write the specified content to it, using <see cref="Encoding.UTF32"/> encoding.
+        /// Asynchronously create a new file and write the specified content to it.
         /// <para>If the file exists, it is overwritten.</para>
         /// </summary>
         /// <param name="filePath">The path of the file to save.</param>
@@ -122,7 +151,7 @@ namespace AetherUtils.Core.Files
             
             filePath = expandPath ? ExpandPath(filePath) : filePath;
             CreateDirectories(filePath, false);
-            await File.WriteAllTextAsync(filePath, content, Encoding.UTF32);
+            await File.WriteAllTextAsync(filePath, content);
         }
 
         /// <summary>
@@ -167,7 +196,7 @@ namespace AetherUtils.Core.Files
         /// Expand a file path containing environment path variables, if possible.
         /// </summary>
         /// <param name="filePath">The path to expand.</param>
-        /// <returns>The expanded path, or the original path if no expansion was necessary or an error occured.</returns>
+        /// <returns>The expanded path, or the original path if no expansion was necessary.</returns>
         /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public static string ExpandPath(string filePath)
         {
@@ -176,7 +205,7 @@ namespace AetherUtils.Core.Files
         }
 
         /// <summary>
-        /// Gets whether the specified path is a valid absolute file path on Windows.
+        /// Get whether the specified <paramref name="path"/> is a valid absolute file path on Windows.
         /// </summary>
         /// <param name="path">A path to check.</param>
         /// <exception cref="ArgumentException">If the <paramref name="path"/> was <c>null</c> or empty.</exception>
@@ -191,7 +220,7 @@ namespace AetherUtils.Core.Files
         #region File Name and Path Manipulators
 
         /// <summary>
-        /// Removes the platform-specific invalid file name characters from the specified file name.
+        /// Remove the platform-specific invalid file name characters from the specified file name.
         /// </summary>
         /// <param name="fileName">The filename.</param>
         /// <returns>A string with the invalid characters removed from the filename.</returns>
@@ -201,12 +230,12 @@ namespace AetherUtils.Core.Files
             ArgumentException.ThrowIfNullOrEmpty(fileName, nameof(fileName));
             
             var invalidFileChars = Path.GetInvalidFileNameChars();
-            string? newFileName = fileName.Except(invalidFileChars).ToString();
+            var newFileName = fileName.Except(invalidFileChars).ToString();
             return newFileName ?? fileName;
         }
 
         /// <summary>
-        /// Removes the platform-specific invalid path characters from the specified path.
+        /// Remove the platform-specific invalid path characters from the specified path.
         /// </summary>
         /// <param name="path">The path.</param>
         /// <returns>A string with the invalid characters removed from the path.</returns>
@@ -216,7 +245,7 @@ namespace AetherUtils.Core.Files
             ArgumentException.ThrowIfNullOrEmpty(path, nameof(path));
             
             var invalidPathChars = Path.GetInvalidPathChars();
-            string? newPath = path.Except(invalidPathChars).ToString();
+            var newPath = path.Except(invalidPathChars).ToString();
             return newPath ?? path;
         }
         #endregion

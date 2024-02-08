@@ -30,52 +30,72 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
         .WithNamingConvention(CamelCaseNamingConvention.Instance)
         .IncludeNonPublicProperties().Build();
 
+    /// <summary>
+    /// Get or set the current configuration.
+    /// </summary>
     protected T? CurrentConfig { get; set; }
 
+    /// <summary>
+    /// Get or set the path to the configuration file on disk.
+    /// </summary>
     public string ConfigFilePath { get; set; } = configFilePath;
 
-    public bool IsInitialized { get => CurrentConfig != null; }
-
-    public bool ConfigExists { get => FileHelper.DoesFileExist(ConfigFilePath); }
+    /// <summary>
+    /// Get a value indicating whether the configuration has been initialized.
+    /// </summary>
+    public bool IsInitialized => CurrentConfig != null;
 
     /// <summary>
-    /// Create the configuration and optionally, save the file to disk.
+    /// Get a value indicating whether the configuration file exists on disk.
+    /// </summary>
+    public bool ConfigExists => FileHelper.DoesFileExist(ConfigFilePath);
+
+    /// <summary>
+    /// Create the configuration, and optionally save the file to disk.
     /// </summary>
     public abstract void CreateConfig(bool saveToDisk = true);
 
     /// <summary>
-    /// Loads a configuration file from disk based on the <see cref="ConfigFilePath"/>.
+    /// Asynchronously load a configuration file from disk based on the <see cref="ConfigFilePath"/>.
     /// </summary>
     /// <returns><c>true</c> if the config loaded successfully; <c>false</c> otherwise.</returns>
-    public virtual bool Load()
+    /// <exception cref="FileNotFoundException">If the configuration file specified by <see cref="ConfigFilePath"/>
+    /// was not found on disk.</exception>
+    public async Task<bool> LoadAsync()
     {
-        try
-        {
-            ConfigFilePath = FileHelper.ExpandPath(ConfigFilePath);
-            var text = File.ReadAllText(ConfigFilePath);
-            CurrentConfig = _deserializer.Deserialize<T>(text);
-        }
-        catch (Exception ex) { Debug.WriteLine(ex.StackTrace); return false; }
+        string filePath = FileHelper.ExpandPath(ConfigFilePath);
+        
+        if (!FileHelper.DoesFileExist(filePath, false))
+            throw new FileNotFoundException("Configuration file not found.", filePath);
 
+        var text = await FileHelper.OpenFileAsync(filePath, false);
+        CurrentConfig = _deserializer.Deserialize<T>(text);
+        ConfigFilePath = filePath;
+        
         return IsInitialized;
     }
 
     /// <summary>
-    /// Saves a configuration file to disk based on the <see cref="CurrentConfig"/> and the <see cref="ConfigFilePath"/>.
+    /// Asynchronously save a configuration file to disk based on the <see cref="CurrentConfig"/> and the <see cref="ConfigFilePath"/>.
     /// </summary>
     /// <returns><c>true</c> if the config saved successfully; <c>false</c> otherwise.</returns>
-    public virtual bool Save()
+    /// <exception cref="ArgumentException">If <see cref="ConfigFilePath"/> is <c>null</c> or empty.</exception>
+    public Task<bool> SaveAsync()
     {
-        try
-        {
-            ConfigFilePath = FileHelper.ExpandPath(ConfigFilePath);
-            var serializedString = _serializer.Serialize(CurrentConfig);
-            FileHelper.CreateDirectories(ConfigFilePath);
-            File.WriteAllText(ConfigFilePath, serializedString);
+        ArgumentException.ThrowIfNullOrEmpty(ConfigFilePath);
+        
+        string filePath = FileHelper.ExpandPath(ConfigFilePath);
+        
+        var serializedString = _serializer.Serialize(CurrentConfig);
+        FileHelper.CreateDirectories(filePath);
+        FileHelper.SaveFileAsync(filePath, serializedString, false);
 
-            return FileHelper.DoesFileExist(ConfigFilePath, false);
-        }
-        catch (Exception ex) { Debug.WriteLine(ex.StackTrace); return false; }
+        var fileExists = FileHelper.DoesFileExist(filePath);
+        
+        if (fileExists)
+            ConfigFilePath = filePath;
+        
+        return Task.FromResult(fileExists);
     }
 
     /// <summary>
@@ -91,26 +111,25 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
         foreach (var result in Reflect.GetAttributesRecurse<ConfigAttribute>(CurrentConfig, CurrentConfig.GetType()))
         {
             var attrib = result.Property.GetCustomAttribute<ConfigAttribute>();
-            if (attrib != null)
+            if (attrib == null) continue;
+            
+            if (!attrib.Name.Equals(option.Name)) continue;
+            
+            if (!option.ArrayIndexExists)
+                return result.Property.GetValue(result.Instance);
+            
+            var currentVal = result.Property.GetValue(result.Instance);
+            if (currentVal == null || !Reflect.IsList(currentVal.GetType())) continue;
+            
+            try
             {
-                if (attrib.Name.Equals(option.Name))
-                {
-                    if (!option.ArrayIndexExists)
-                        return result.Property.GetValue(result.Instance);
-                    else
-                    {
-                        var currentVal = result.Property.GetValue(result.Instance);
-                        if (currentVal != null && Reflect.IsList(currentVal.GetType()))
-                        {
-                            try
-                            {
-                                IList? currentList = currentVal as IList;
-                                return currentList[option.ArrayIndexer];
-                            }
-                            catch (Exception ex) { Debug.WriteLine(ex.Message); return false; }
-                        }
-                    }
-                }
+                var currentList = currentVal as IList;
+                return currentList?[option.ArrayIndexer];
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return false;
             }
         }
         return null;
@@ -123,8 +142,8 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     /// <returns>The configuration value or <c>null</c> if the value did not exist.</returns>
     public object? Get(string configName)
     {
-        if (!IsInitialized) return default;
-        return Get(new ConfigOption(configName, null));
+        return !IsInitialized ? default
+            : Get(new ConfigOption(configName, null));
     }
 
     /// <summary>
@@ -134,8 +153,7 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     /// <returns><c>true</c> if the value was set successfully; <c>false</c> otherwise.</returns>
     public bool Set(ConfigOption option)
     {
-        if (!IsInitialized) return false;
-        return Set(option, CurrentConfig);
+        return IsInitialized && Set(option, CurrentConfig);
     }
 
     /// <summary>
@@ -146,8 +164,7 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     /// <returns><c>true</c> if the value was set successfully; <c>false</c> otherwise.</returns>
     public bool Set(string configName, object? value)
     {
-        if (!IsInitialized) return false;
-        return Set(new ConfigOption(configName, value), CurrentConfig);
+        return IsInitialized && Set(new ConfigOption(configName, value), CurrentConfig);
     }
 
     private bool Set(ConfigOption option, object? instance)
@@ -157,37 +174,31 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
 
         foreach (var result in Reflect.GetAttributesRecurse<ConfigAttribute>(instance, instance.GetType()))
         {
-            if (((ConfigAttribute)result.Attribute).Name.Equals(option.Name))
+            if (!((ConfigAttribute)result.Attribute).Name.Equals(option.Name)) continue;
+            if (!option.ArrayIndexExists)
             {
-                if (!option.ArrayIndexExists)
-                {
-                    result.Property.SetValue(result.Instance, option.Value);
-                    return true;
-                }
-                else
-                {
-                    var currentVal = result.Property.GetValue(result.Instance);
-                    if (currentVal != null && Reflect.IsList(currentVal.GetType()))
-                    {
-                        Type? elementType = Reflect.GetCollectionElementType(currentVal.GetType());
-                        if (elementType != null)
-                        {
-                            try
-                            {
-                                IList? newList = Activator.CreateInstance(currentVal.GetType()) as IList;
-                                IList? currentList = currentVal as IList;
-                                for (int i = 0; i < currentList.Count; i++)
-                                    newList.Add(currentList[i]);
-
-                                newList[option.ArrayIndexer] = option.Value;
-                                result.Property.SetValue(result.Instance, newList);
-                                return true;
-                            }
-                            catch (Exception ex) { Debug.WriteLine(ex.Message); return false; }
-                        }
-                    }
-                }
+                result.Property.SetValue(result.Instance, option.Value);
+                return true;
             }
+
+            var currentVal = result.Property.GetValue(result.Instance);
+            if (currentVal == null || !Reflect.IsList(currentVal.GetType())) continue;
+            
+            var elementType = Reflect.GetCollectionElementType(currentVal.GetType());
+            if (elementType == null) continue;
+            
+            var newList = Activator.CreateInstance(currentVal.GetType()) as IList;
+                
+            if (currentVal is not IList currentList) continue;
+            if (newList == null) continue;
+                
+            foreach (var t in currentList)
+                newList.Add(t);
+
+            newList[option.ArrayIndexer] = option.Value;
+            result.Property.SetValue(result.Instance, newList);
+
+            return true;
         }
         return false;
     }

@@ -10,7 +10,7 @@
         {
             CurrentConfig = new DefaultConfig();
             if (saveToDisk)
-                Save();
+                SaveAsync();
         }
     }
 }
