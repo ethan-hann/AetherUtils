@@ -1,5 +1,6 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
+using AetherUtils.Core.Structs;
 
 namespace AetherUtils.Core.Security.Encryption
 {
@@ -38,7 +39,7 @@ namespace AetherUtils.Core.Security.Encryption
         /// <param name="iterations">The number of iterations. (Default is 5000).</param>
         /// <param name="keyLength">The length of the generated key, in bytes.</param>
         /// <returns>A cryptographically strong key.</returns>
-        internal static byte[] DeriveKeyFromString(string input, int iterations = 5000, KeyLength keyLength = KeyLength.Bits_128)
+        internal static byte[] DeriveKeyFromString(string input, int iterations = 5000, KeyLength keyLength = KeyLength.Bits_256)
         {
             return Rfc2898DeriveBytes.Pbkdf2(Encoding.UTF8.GetBytes(input),
                 Array.Empty<byte>(),
@@ -51,7 +52,7 @@ namespace AetherUtils.Core.Security.Encryption
         /// Get a cryptographically strong random key that can be used for encryption.
         /// </summary>
         /// <param name="keySize">The size, in bytes, for the generated key.</param>
-        /// <returns>A cryptographically strong <see cref="byte"/> array.</returns>
+        /// <returns>A cryptographically strong and random <see cref="byte"/> array.</returns>
         private static byte[] GetRandomKey(int keySize = 32)
         {
             var bytes = new byte[keySize];
@@ -63,7 +64,7 @@ namespace AetherUtils.Core.Security.Encryption
         /// Get a cryptographically strong random key phrase that can be used for encryption.
         /// </summary>
         /// <param name="keySize">The size, in bytes, for the generated key.</param>
-        /// <returns>A cryptographically strong <see cref="string"/>.</returns>
+        /// <returns>A cryptographically strong and random <see cref="string"/>.</returns>
         public static string GetRandomKeyPhrase(int keySize = 32)
         {
             var bytes = GetRandomKey(keySize);
@@ -100,19 +101,41 @@ namespace AetherUtils.Core.Security.Encryption
         /// <param name="buffer">The buffer of bytes to read the extension from, passed by reference.</param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException">If <paramref name="buffer"/> was <c>null</c>.</exception>
-        /// <exception cref="NullReferenceException">If the extension could not be read from the supplied
-        /// <see cref="byte"/> array.</exception>
         internal static string GetExtensionFromBytes(ref byte[] buffer)
         {
             ArgumentNullException.ThrowIfNull(buffer, nameof(buffer));
             
-            var firstIndexSeparator = 0;
-            var lastIndexSeparator = 0;
+            //Find the first and last index of the separator char from the byte array.
+            ReadOnlyPair<int, int> separatorIndices = FindSeparatorIndices(buffer);
+            
+            //Get the bytes for the extension using the first and last index found above.
+            var extensionBytes = buffer[separatorIndices.Key..(separatorIndices.Value + 1)];
+            
+            //Create a new buffer array with the correct length (the extension bytes truncated)
+            var newBuffer = new byte[buffer.Length - extensionBytes.Length];
+            
+            //Copy the correct number of bytes from the original buffer into the new buffer.
+            //This is a crucial step otherwise we will get padding errors on decryption.
+            Array.Copy(buffer, newBuffer, newBuffer.Length);
+            buffer = newBuffer; //Finally, assign the new buffer back to the original buffer.
+
+            return GetExtensionString(extensionBytes);
+        }
+
+        /// <summary>
+        /// Find the first and last indices of the separtar character in the specified <see cref="byte"/> array.
+        /// </summary>
+        /// <param name="buffer">The <see cref="byte"/> array to search.</param>
+        /// <returns>A <see cref="ReadOnlyPair{K,V}"/> where the <c>key</c> is the first index
+        /// and the <c>value</c> is the last index.</returns>
+        private static ReadOnlyPair<int, int> FindSeparatorIndices(IReadOnlyList<byte> buffer)
+        {
             var foundLastIndex = false;
             var foundFirstIndex = false;
+            var lastIndexSeparator = 0;
+            var firstIndexSeparator = 0;
             
-            //Find the first and last index of the separator char from the byte array.
-            for (int i = buffer.Length - 1; i > 0; i--)
+            for (int i = buffer.Count - 1; i > 0; i--)
             {
                 if ((char)buffer[i] != SHGFI_EXTENSION_SEPARATOR) continue;
                 
@@ -128,18 +151,19 @@ namespace AetherUtils.Core.Security.Encryption
                 }
             }
 
-            //Get the bytes for the extension using the first and last index found above.
-            var extensionBytes = buffer[firstIndexSeparator..(lastIndexSeparator+1)];
-            
-            //Create a new buffer array with the correct length (the extension bytes truncated)
-            var newBuffer = new byte[buffer.Length - extensionBytes.Length];
-            
-            //Copy the correct number of bytes from the original buffer into the new buffer.
-            Array.Copy(buffer, newBuffer, newBuffer.Length);
+            return new ReadOnlyPair<int, int>(firstIndexSeparator, lastIndexSeparator);
+        }
 
-            buffer = newBuffer; //Finally, assign the new buffer back to the original buffer.
-            
-            var byteString = Encoding.UTF8.GetString(extensionBytes);
+        /// <summary>
+        /// Get the extension string from the <see cref="byte"/> array.
+        /// </summary>
+        /// <param name="buffer">An array of bytes representing an extension.</param>
+        /// <returns>A string representation of the extension.</returns>
+        /// <exception cref="NullReferenceException">If the extension could not be read from the supplied
+        /// <see cref="byte"/> array.</exception>
+        private static string GetExtensionString(byte[] buffer)
+        {
+            var byteString = Encoding.UTF8.GetString(buffer);
             
             var separatorIndex = byteString.IndexOf(SHGFI_EXTENSION_SEPARATOR);
             var extension = byteString.TakeLast(byteString.Length - separatorIndex);

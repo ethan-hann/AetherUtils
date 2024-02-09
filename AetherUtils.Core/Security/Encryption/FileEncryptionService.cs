@@ -56,7 +56,18 @@ namespace AetherUtils.Core.Security.Encryption
             return FilePath;
         }
 
-        public static async Task<string> EncryptFileAsync(string filePath, string passphrase)
+        /// <summary>
+        /// Encrypt an existing file on disk using the specified <paramref name="passphrase"/> to derive the key.
+        /// </summary>
+        /// <remarks>If the original file's extension is different than the encrypted file's,
+        /// the original file is deleted after encryption occurs and the file extension is
+        /// changed to the new extension.</remarks>
+        /// <param name="filePath">The path to the file on disk to encrypt.</param>
+        /// <param name="passphrase">The passphrase used for encryption.</param>
+        /// <param name="newExtension">The file extensions to change the encrypted file to; default is <c>.enc</c>.</param>
+        /// <returns>The path to the encrypted file.</returns>
+        /// <exception cref="FileNotFoundException">If the file could not be found at the <paramref name="filePath"/>.</exception>
+        public static async Task<string> EncryptFileAsync(string filePath, string passphrase, string newExtension = ".enc")
         {
             ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
             ArgumentNullException.ThrowIfNull(passphrase, nameof(passphrase));
@@ -73,13 +84,25 @@ namespace AetherUtils.Core.Security.Encryption
 
             var oldFilePath = filePath;
             
-            filePath = Path.ChangeExtension(filePath, ".enc"); //change extension on path file to encrypted file extension.
+            filePath = Path.ChangeExtension(filePath, newExtension); //change extension on path file to encrypted file extension.
             FileHelper.SaveFileAsync(filePath, encryptedContents, false); //save the encrypted file.
-            FileHelper.DeleteFile(oldFilePath, false); //delete the original file.
+            
+            if (!FileHelper.GetExtension(oldFilePath, false).Equals(newExtension))
+                FileHelper.DeleteFile(oldFilePath, false); //delete the original file if the extensions are different.
 
             return filePath;
         }
         
+        /// <summary>
+        /// Decrypt an encrypted file from disk using the specified <paramref name="passphrase"/> to derive the key.
+        /// </summary>
+        /// <remarks>If the encrypted file's extension is different than the original file's,
+        /// the encrypted file is deleted after decryption occurs and the file extension is
+        /// changed back to the original extension.</remarks>
+        /// <param name="filePath">The path to the file on disk to decrypt.</param>
+        /// <param name="passphrase">The passphrase used for decryption.</param>
+        /// <returns>The path to the decrypted file.</returns>
+        /// <exception cref="FileNotFoundException">If the file could not be found at the <paramref name="filePath"/>.</exception>
         public static async Task<string> DecryptFileAsync(string filePath, string passphrase)
         {
             ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
@@ -97,7 +120,9 @@ namespace AetherUtils.Core.Security.Encryption
             
             filePath = Path.ChangeExtension(filePath, extension);
             FileHelper.SaveFileAsync(filePath, decryptedContents.Result, false); //save the decrypted file.
-            FileHelper.DeleteFile(oldFilePath, false); //delete the encrypted file.
+            
+            if (!FileHelper.GetExtension(oldFilePath, false).Equals(extension))
+                FileHelper.DeleteFile(oldFilePath, false); //delete the encrypted file if the extensions are different.
             
             return filePath;
         }
