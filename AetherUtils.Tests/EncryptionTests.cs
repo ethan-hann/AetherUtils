@@ -108,7 +108,7 @@ namespace AetherUtils.Tests
             
             Console.WriteLine($"Passphrase: {passphrase}");
 
-            var newFilePath = await FileEncryptionService.EncryptFileAsync("files\\Hello.txt", passphrase);
+            var newFilePath = await FileEncryptionService.EncryptFileAsync("files\\fast internet.png", passphrase);
             Console.WriteLine($"Encrypted: {newFilePath}");
         }
 
@@ -118,7 +118,7 @@ namespace AetherUtils.Tests
             var service = new FileEncryptionService(testFilePath);
             Console.WriteLine($"Passphrase: {passphrase}");
 
-            var newFilePath = await FileEncryptionService.DecryptFileAsync("files\\Hello.enc", passphrase);
+            var newFilePath = await FileEncryptionService.DecryptFileAsync("files\\fast internet.enc", passphrase);
             Console.WriteLine($"Decrypted: {newFilePath}");
         }
 

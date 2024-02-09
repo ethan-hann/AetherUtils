@@ -8,6 +8,8 @@ namespace AetherUtils.Core.Security.Encryption
     /// </summary>
     public class EncryptionBase
     {
+        private const char SHGFI_EXTENSION_SEPARATOR = ':';
+
         /// <summary>
         /// Reads the first 16 bytes from an encrypted <see cref="Stream"/>. The first 16 bytes should be the IV.
         /// </summary>
@@ -84,7 +86,7 @@ namespace AetherUtils.Core.Security.Encryption
             using MemoryStream inputStream = new(buffer);
             using MemoryStream outputStream = new();
             inputStream.CopyTo(outputStream);
-            var extensionBytes = Encoding.UTF8.GetBytes(":" + extension + ":");
+            var extensionBytes = Encoding.UTF8.GetBytes($"{SHGFI_EXTENSION_SEPARATOR}{extension}{SHGFI_EXTENSION_SEPARATOR}");
             outputStream.WriteAsync(extensionBytes, 0, extensionBytes.Length);
             
             buffer = outputStream.ToArray();
@@ -112,7 +114,7 @@ namespace AetherUtils.Core.Security.Encryption
             //Find the first and last index of the separator char from the byte array.
             for (int i = buffer.Length - 1; i > 0; i--)
             {
-                if ((char)buffer[i] != ':') continue;
+                if ((char)buffer[i] != SHGFI_EXTENSION_SEPARATOR) continue;
                 
                 if (!foundLastIndex)
                 {
@@ -139,7 +141,7 @@ namespace AetherUtils.Core.Security.Encryption
             
             var byteString = Encoding.UTF8.GetString(extensionBytes);
             
-            var separatorIndex = byteString.IndexOf(':');
+            var separatorIndex = byteString.IndexOf(SHGFI_EXTENSION_SEPARATOR);
             var extension = byteString.TakeLast(byteString.Length - separatorIndex);
             var sb = new StringBuilder();
             var enumerable = extension as char[] ?? extension.ToArray();
@@ -148,7 +150,8 @@ namespace AetherUtils.Core.Security.Encryption
                 throw new NullReferenceException("Extension was null after reading from bytes.");
             
             var extensionString = sb.ToString();
-            extensionString = extensionString.Substring(extensionString.IndexOf(':') + 1, extensionString.LastIndexOf(':') - 1);
+            extensionString = extensionString.Substring(extensionString.IndexOf(SHGFI_EXTENSION_SEPARATOR) + 1,
+                extensionString.LastIndexOf(SHGFI_EXTENSION_SEPARATOR) - 1);
             return extensionString;
         }
 

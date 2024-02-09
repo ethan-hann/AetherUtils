@@ -29,11 +29,17 @@ public static class ArrayExtensions
         catch (ArgumentException ex) { throw new FormatException("The image format was not recognized.", ex); }
     }
 
+    /// <summary>
+    /// Convert the numeric value of each element of a specified array of bytes to
+    /// its equivalent hexadecimal string representation.
+    /// </summary>
+    /// <param name="bytes">An <see cref="IEnumerable{T}"/> of bytes.</param>
+    /// <returns>A string of hexadecimal pairs separated by hyphens, where each pair represents the corresponding
+    /// element in value; for example, "7F-2C-4A-00".</returns>
+    /// <exception cref="ArgumentNullException">If <paramref name="bytes"/> was <c>null</c>.</exception>
     public static string ToPrintableString(this IEnumerable<byte> bytes)
     {
+        ArgumentNullException.ThrowIfNull(bytes, nameof(bytes));
         return BitConverter.ToString(bytes.ToArray());
-        // StringBuilder sb = new();
-        // bytes.ToList().ForEach(b => sb = sb.Append($"{{{}}}"));
-        // return sb.ToString();
     }
 }
