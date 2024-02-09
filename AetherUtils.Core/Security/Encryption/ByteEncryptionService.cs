@@ -13,7 +13,7 @@ public class ByteEncryptionService : EncryptionBase, IEncryptService<byte[], byt
         ArgumentNullException.ThrowIfNull(passphrase, nameof(passphrase));
 
         using Aes aes = Aes.Create();
-        aes.Key = DeriveKeyFromString(passphrase, 5000, KeyLength.Bits_256);
+        aes.Key = DeriveKeyFromString(passphrase);
 
         await using MemoryStream output = new();
         WriteIvToStream(aes.IV, output);
@@ -31,7 +31,7 @@ public class ByteEncryptionService : EncryptionBase, IEncryptService<byte[], byt
         ArgumentNullException.ThrowIfNull(passphrase, nameof(passphrase));
 
         using Aes aes = Aes.Create();
-        aes.Key = DeriveKeyFromString(passphrase, 5000, KeyLength.Bits_256);
+        aes.Key = DeriveKeyFromString(passphrase);
         await using MemoryStream inputStream = new(input);
         aes.IV = ReadIvFromStream(inputStream);
 

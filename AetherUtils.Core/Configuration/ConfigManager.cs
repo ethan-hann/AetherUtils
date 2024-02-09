@@ -13,11 +13,11 @@ namespace AetherUtils.Core.Configuration;
 /// <summary>
 /// This class cannot be instantiated. A child class must be created inheriting from <see cref="ConfigManager{T}"/>.
 /// Handles saving, loading, and querying a generic configuration based on class <see cref="T"/>.
-/// <para>
+/// </summary>
+/// <remarks>
 /// The custom class should have its properties related to configuration marked with a <see cref="ConfigAttribute"/>.
 /// These properties are the only ones which will be serialized and de-serialized from disk.
-/// </para>
-/// </summary>
+/// </remarks>
 /// <typeparam name="T">The DTO class that represents the configuration.</typeparam>
 public abstract class ConfigManager<T>(string configFilePath) : IConfig
     where T : class

@@ -46,11 +46,11 @@ public static class TimeExtensions
     }
     
     /// <summary>
-    /// Get a <see cref="string"/> representing the <see cref="TimeSpan"/> in the form of:
+    /// Get a <see cref="string"/> representing the <see cref="TimeSpan"/> in the form of:<br/>
     /// <para><c>w day(s), x hour(s), y minute(s), z second(s)</c></para>
     /// </summary>
     /// <param name="timeSpan">The <see cref="TimeSpan"/> to convert.</param>
-    /// <returns>A string representing the <see cref="TimeSpan"/>.</returns>
+    /// <returns>A <see cref="string"/> representing the <see cref="TimeSpan"/>.</returns>
     /// <exception cref="ArgumentNullException">If <paramref name="timeSpan"/> was <c>null</c>.</exception>
     public static string TimeSpanToString(this TimeSpan timeSpan)
     {

@@ -1,5 +1,7 @@
 ﻿using Microsoft.CSharp;
 using System.CodeDom;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Xml;
 using System.Xml.Serialization;
 

@@ -10,7 +10,7 @@ namespace AetherUtils.Core.Security.Hashing
     /// Provides a service for creating cryptographically strong hashes of <see cref="string"/>s and comparing plain-text <see cref="string"/>s against them for equality.
     /// <para>This class hashes strings based on the provided <see cref="HashOptions"/>.</para>
     /// </summary>
-    public class HashService
+    public sealed class HashService
     {
         private readonly HashOptions _options;
 

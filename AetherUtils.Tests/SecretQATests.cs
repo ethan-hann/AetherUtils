@@ -8,7 +8,7 @@ namespace AetherUtils.Tests
         [Test]
         public void CreateListTest()
         {
-            SecretQAList list = new SecretQAList();
+            SecretQaList list = new SecretQaList();
 
             for (int i = 0; i < 10; i++)
                 list.Add($"Question {i}", $"Answer {i}");
@@ -19,7 +19,7 @@ namespace AetherUtils.Tests
         [Test]
         public void RemoveItemTest()
         {
-            SecretQAList list = new SecretQAList();
+            SecretQaList list = new SecretQaList();
 
             for (int i = 0; i < 10; i++)
                 list.Add($"Question {i}", $"Answer {i}");
@@ -32,7 +32,7 @@ namespace AetherUtils.Tests
         [Test]
         public void GetItemTest()
         {
-            SecretQAList list = new SecretQAList();
+            SecretQaList list = new SecretQaList();
 
             for (int i = 0; i < 10; i++)
                 list.Add($"Question {i}", $"Answer {i}");

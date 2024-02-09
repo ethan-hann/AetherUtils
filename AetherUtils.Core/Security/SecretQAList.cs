@@ -4,50 +4,50 @@ using System.Collections;
 namespace AetherUtils.Core.Security
 {
     /// <summary>
-    /// Implements the <see cref="IEnumerable"/> interface using a <see cref="List{SecretQA}"/> of <see cref="SecretQA"/> objects.
+    /// Implements the <see cref="IEnumerable"/> interface using a <see cref="List{SecretQA}"/> of <see cref="SecretQa"/> objects.
     /// <inheritdoc cref="IEnumerator{SecretQA}"/>
     /// </summary>
-    public class SecretQAList : IEnumerable<SecretQA>, IEnumerator<SecretQA>
+    public sealed class SecretQaList : IEnumerable<SecretQa>, IEnumerator<SecretQa>
     {
-        private readonly List<SecretQA> _list;
-        private readonly IEnumerator<SecretQA> _enumerator;
+        private readonly List<SecretQa> _list;
+        private readonly IEnumerator<SecretQa> _enumerator;
         private bool disposedValue;
 
         public int Count => _list.Count;
 
-        SecretQA IEnumerator<SecretQA>.Current => _enumerator.Current;
+        SecretQa IEnumerator<SecretQa>.Current => _enumerator.Current;
 
         public object Current => _enumerator.Current;
 
-        public SecretQAList()
+        public SecretQaList()
         {
             _list = [];
             _enumerator = _list.GetEnumerator();
         }
 
         /// <summary>
-        /// Get the <see cref="SecretQA"/> at the specified index.
+        /// Get the <see cref="SecretQa"/> at the specified index.
         /// </summary>
         /// <param name="index"></param>
         /// <returns></returns>
-        public SecretQA this[int index]
+        public SecretQa this[int index]
         {
             get => _list[index];
             set => _list[index] = value;
         }
 
         /// <summary>
-        /// Add a new <see cref="SecretQA"/> to this list.
+        /// Add a new <see cref="SecretQa"/> to this list.
         /// </summary>
         /// <param name="secretQA"></param>
-        public void Add(SecretQA secretQA) => _list.Add(secretQA);
+        public void Add(SecretQa secretQA) => _list.Add(secretQA);
 
         /// <summary>
         /// Add a new item with the specified <paramref name="question"/> and <paramref name="answer"/> to the list.
         /// </summary>
         /// <param name="question"></param>
         /// <param name="answer"></param>
-        public void Add(string question, string answer) => _list.Add(new SecretQA(question, answer.ToSecureString()));
+        public void Add(string question, string answer) => _list.Add(new SecretQa(question, answer.ToSecureString()));
 
         /// <summary>
         /// Clear this list.
@@ -58,7 +58,7 @@ namespace AetherUtils.Core.Security
         /// Remove the first occurance of the <paramref name="secretQA"/> from the list.
         /// </summary>
         /// <param name="secretQA"></param>
-        public void Remove(SecretQA secretQA) => _list.Remove(secretQA);
+        public void Remove(SecretQa secretQA) => _list.Remove(secretQA);
 
         /// <summary>
         /// Remove the first occurance of the <paramref name="question"/> from the list.
@@ -74,13 +74,13 @@ namespace AetherUtils.Core.Security
 
         public IEnumerator GetEnumerator() => this;
 
-        IEnumerator<SecretQA> IEnumerable<SecretQA>.GetEnumerator() => this;
+        IEnumerator<SecretQa> IEnumerable<SecretQa>.GetEnumerator() => this;
 
         public bool MoveNext() => _enumerator.MoveNext();
 
         public void Reset() => _enumerator.Reset();
 
-        protected virtual void Dispose(bool disposing)
+        private void Dispose(bool disposing)
         {
             if (!disposedValue)
             {

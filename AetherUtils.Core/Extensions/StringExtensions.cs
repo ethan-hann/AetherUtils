@@ -50,7 +50,7 @@ public static class StringExtensions
     
     //TODO: Find a better way to do this without potentially leaking the secure string into unmanaged memory.
     /// <summary>
-    /// Convert a <see cref="SecureString"/> to an unsecured string.
+    /// Convert a <see cref="SecureString"/> to an unsecured <see cref="string"/>.
     /// </summary>
     /// <param name="secure">The <see cref="SecureString"/>.</param>
     /// <returns>The unsecured <see cref="string"/>.</returns>
@@ -72,14 +72,14 @@ public static class StringExtensions
     }
     
     /// <summary>
-    /// Trims the string to be the length specified before a new-line character is inserted.
+    /// Trims the <see cref="string"/> to be the length specified before a new-line character is inserted.
     /// <para>If the new-line character would be inserted at the position of a period (<c>.</c>), the
     /// new line is inserted at the index of <c>(.) + 1</c>.
     /// If the line being checked contains a new-line character already, nothing is done for that line.</para>
     /// </summary>
-    /// <param name="input">The string to trim.</param>
+    /// <param name="input">The <see cref="string"/> to trim.</param>
     /// <param name="lineLength">The number of characters in the line; default is <c>80</c>.</param>
-    /// <returns>A new <see cref="TrimmedString"/> containing the trimmed string and the number of new lines.</returns>
+    /// <returns>A new <see cref="TrimmedString"/> containing the trimmed <see cref="string"/> and the number of new lines.</returns>
     /// <exception cref="ArgumentNullException">If <paramref name="input"/> was <c>null</c>.</exception>
     public static TrimmedString Trim(this string input, int lineLength = 80)
     {
@@ -109,11 +109,11 @@ public static class StringExtensions
     }
     
     /// <summary>
-    /// Deserializes an object from an XML string.
+    /// Deserializes an object from an XML <see cref="string"/>.
     /// </summary>
-    /// <typeparam name="T">The type of object to deserialize to.</typeparam>
-    /// <param name="xml">The XML string to deserialize.</param>
-    /// <returns>The deserialized object or <c>null</c> if the deserialization failed.</returns>
+    /// <typeparam name="T">The type of <see cref="object"/> to deserialize to.</typeparam>
+    /// <param name="xml">The XML <see cref="string"/> to deserialize.</param>
+    /// <returns>The deserialized <see cref="object"/> or <c>null</c> if the deserialization failed.</returns>
     /// <exception cref="ArgumentNullException">If <paramref name="xml"/> was <c>null</c>.</exception>
     public static T? Deserialize<T>(this string xml) where T : class
     {
@@ -130,10 +130,10 @@ public static class StringExtensions
     }
 
     /// <summary>
-    /// Get a value indicating if the string appears to be Base64 encoded.
+    /// Get a value indicating if the <see cref="string"/> appears to be Base64 encoded.
     /// </summary>
-    /// <param name="input">The string to check encoding on.</param>
-    /// <returns><c>true</c> if the string is Base64 encoded; <c>false</c> otherwise.</returns>
+    /// <param name="input">The <see cref="string"/> to check encoding on.</param>
+    /// <returns><c>true</c> if the <see cref="string"/> is Base64 encoded; <c>false</c> otherwise.</returns>
     /// <exception cref="ArgumentNullException">If <paramref name="input"/> was <c>null</c>.</exception>
     public static bool IsBase64Encoded(this string input)
     {
@@ -142,10 +142,10 @@ public static class StringExtensions
     }
 
     /// <summary>
-    /// Get a value indicating if the string appears to be Hex (Base16) encoded.
+    /// Get a value indicating if the <see cref="string"/> appears to be Hex (Base16) encoded.
     /// </summary>
-    /// <param name="input">The string to check encoding on.</param>
-    /// <returns><c>true</c> if the string is Hex encoded; <c>false</c> otherwise.</returns>
+    /// <param name="input">The <see cref="string"/> to check encoding on.</param>
+    /// <returns><c>true</c> if the <see cref="string"/> is Hex encoded; <c>false</c> otherwise.</returns>
     /// <exception cref="ArgumentNullException">If <paramref name="input"/> was <c>null</c>.</exception>
     public static bool IsHexEncoded(this string input)
     {
@@ -154,94 +154,93 @@ public static class StringExtensions
     }
     
     /// <summary>
-        /// Encode the string to the specified <see cref="HashEncoding"/>.
-        /// </summary>
-        /// <param name="bytes"></param>
-        /// <param name="encoding"></param>
-        /// <returns>A string that has been encoded using the specified <see cref="HashEncoding"/>.</returns>
-        public static string StringToEncodedString(this string value, HashEncoding encoding)
+    /// Encode the <see cref="string"/> to the specified <see cref="HashEncoding"/>.
+    /// </summary>
+    /// <param name="value">The <see cref="string"/> to encode.</param>
+    /// <param name="encoding">The <see cref="HashEncoding"/> to use.</param>
+    /// <returns>A <see cref="string"/> encoded using the specified <see cref="HashEncoding"/>.</returns>
+    public static string StringToEncodedString(this string value, HashEncoding encoding)
+    {
+        return encoding switch
         {
-            return encoding switch
-            {
-                HashEncoding.Base64 => Convert.ToBase64String(Encoding.UTF8.GetBytes(value)),
-                HashEncoding.Hex => Convert.ToHexString(Encoding.UTF8.GetBytes(value)),
-                _ => value,
-            };
-        }
+            HashEncoding.Base64 => Convert.ToBase64String(Encoding.UTF8.GetBytes(value)),
+            HashEncoding.Hex => Convert.ToHexString(Encoding.UTF8.GetBytes(value)),
+            _ => value,
+        };
+    }
 
-        /// <summary>
-        /// Encode the string to the specified <see cref="HashEncoding"/>.
-        /// </summary>
-        /// <param name="bytes"></param>
-        /// <param name="encoding"></param>
-        /// <returns>A string that has been encoded using the specified <see cref="HashEncoding"/>.</returns>
-        public static string BytesToEncodedString(this byte[] bytes, HashEncoding encoding)
+    /// <summary>
+    /// Encode the <see cref="byte"/> array to the specified <see cref="HashEncoding"/>.
+    /// </summary>
+    /// <param name="bytes">A <see cref="byte"/> array to encode.</param>
+    /// <param name="encoding">The <see cref="HashEncoding"/> to use.</param>
+    /// <returns>A <see cref="string"/> encoded using the specified <see cref="HashEncoding"/>.</returns>
+    public static string BytesToEncodedString(this byte[] bytes, HashEncoding encoding)
+    {
+        string byteString = Encoding.UTF8.GetString(bytes);
+        return StringToEncodedString(byteString, encoding);
+    }
+
+    /// <summary>
+    /// Encode the <see cref="string"/> to the specified <see cref="HashEncoding"/>.
+    /// </summary>
+    /// <param name="value">The <see cref="string"/> to encode.</param>
+    /// <param name="encoding">The <see cref="HashEncoding"/> to use.</param>
+    /// <returns>A <see cref="byte"/> array containing the encoded bytes.</returns>
+    public static byte[] StringToEncodedBytes(this string value, HashEncoding encoding)
+    {
+        string encodedString = value.StringToEncodedString(encoding); //Encode input string
+        return Encoding.UTF8.GetBytes(encodedString); //Get bytes in UTF8
+    }
+
+    /// <summary>
+    /// Encode the <see cref="byte"/> array to the specified <see cref="HashEncoding"/>.
+    /// </summary>
+    /// <param name="bytes">A <see cref="byte"/> array to encode.</param>
+    /// <param name="encoding">The <see cref="HashEncoding"/> to use.</param>
+    /// <returns>A <see cref="byte"/> array containing the encoded bytes.</returns>
+    public static byte[] BytesToEncodedBytes(this byte[] bytes, HashEncoding encoding)
+    {
+        string byteString = Encoding.UTF8.GetString(bytes);
+        return byteString.StringToEncodedBytes(encoding);
+    }
+
+    /// <summary>
+    /// Decodes an encoded <see cref="string"/> according to the specified <see cref="HashEncoding"/>.
+    /// </summary>
+    /// <param name="value">The encoded <see cref="string"/>.</param>
+    /// <param name="encoding">The <see cref="HashEncoding"/> to use.</param>
+    /// <returns>A decoded <see cref="string"/>.</returns>
+    public static string DecodedStringFromEncodedString(this string value, HashEncoding encoding)
+    {
+        return encoding switch
         {
-            string byteString = Encoding.UTF8.GetString(bytes);
-            return StringToEncodedString(byteString, encoding);
-        }
+            HashEncoding.Base64 => Encoding.UTF8.GetString(Convert.FromBase64String(value)),
+            HashEncoding.Hex => Encoding.UTF8.GetString(Convert.FromHexString(value)),
+            _ => value,
+        };
+    }
 
-        /// <summary>
-        /// Encode the string to the specified <see cref="HashEncoding"/>.
-        /// </summary>
-        /// <param name="value"></param>
-        /// <param name="encoding"></param>
-        /// <returns>An array of encoded <see cref="byte"/>s.</returns>
-        public static byte[] StringToEncodedBytes(this string value, HashEncoding encoding)
+    /// <summary>
+    /// Decodes the encoded <see cref="string"/> according to the specified <see cref="HashEncoding"/>.
+    /// </summary>
+    /// <param name="value">The encoded <see cref="string"/>.</param>
+    /// <param name="encoding">The <see cref="HashEncoding"/> to use.</param>
+    /// <returns>A <see cref="byte"/> array containing the decoded bytes.</returns>
+    public static byte[] DecodedBytesFromEncodedString(this string value, HashEncoding encoding)
+    {
+        return encoding switch
         {
-            string encodedString = value.StringToEncodedString(encoding); //Encode input string
-            return Encoding.UTF8.GetBytes(encodedString); //Get bytes in UTF8
-        }
+            HashEncoding.Base64 => Convert.FromBase64String(value),
+            HashEncoding.Hex => Convert.FromHexString(value),
+            _ => Encoding.UTF8.GetBytes(value),
+        };
+    }
 
-        /// <summary>
-        /// Encode the <see cref="byte"/> array to the specifed <see cref="HashEncoding"/>.
-        /// </summary>
-        /// <param name="value"></param>
-        /// <param name="encoding"></param>
-        /// <returns>An array of encoded <see cref="byte"/>s.</returns>
-        public static byte[] BytesToEncodedBytes(this byte[] value, HashEncoding encoding)
-        {
-            string byteString = Encoding.UTF8.GetString(value);
-            return byteString.StringToEncodedBytes(encoding);
-        }
-
-        /// <summary>
-        /// Decodes the encoded string to according to the specified <see cref="HashEncoding"/>.
-        /// </summary>
-        /// <param name="value"></param>
-        /// <param name="encoding"></param>
-        /// <returns>A decoded string.</returns>
-        public static string DecodedStringFromEncodedString(this string value, HashEncoding encoding)
-        {
-            return encoding switch
-            {
-                HashEncoding.Base64 => Encoding.UTF8.GetString(Convert.FromBase64String(value)),
-                HashEncoding.Hex => Encoding.UTF8.GetString(Convert.FromHexString(value)),
-                _ => value,
-            };
-        }
-
-        /// <summary>
-        /// Decodes the encoded <see cref="string"/> according to the specified <see cref="HashEncoding"/>.
-        /// </summary>
-        /// <param name="value"></param>
-        /// <param name="encoding"></param>
-        /// <returns>A <see cref="byte"/> array of decoded bytes.</returns>
-        public static byte[] DecodedBytesFromEncodedString(this string value, HashEncoding encoding)
-        {
-            return encoding switch
-            {
-                HashEncoding.Base64 => Convert.FromBase64String(value),
-                HashEncoding.Hex => Convert.FromHexString(value),
-                _ => Encoding.UTF8.GetBytes(value),
-            };
-        }
-
-        /// <summary>
-        /// Get a <see cref="byte"/> array representing the string using <see cref="Encoding.UTF8"/>.
-        /// </summary>
-        /// <param name="value"></param>
-        /// <param name="encoding"></param>
-        /// <returns></returns>
-        public static byte[] BytesFromString(this string value) => Encoding.UTF8.GetBytes(value);
+    /// <summary>
+    /// Get a <see cref="byte"/> array representing the <see cref="string"/> using <see cref="Encoding.UTF8"/>.
+    /// </summary>
+    /// <param name="value">A <see cref="string"/> to get the bytes of.</param>
+    /// <returns>A <see cref="byte"/> array containing the bytes representing the <see cref="string"/>.</returns>
+    public static byte[] BytesFromString(this string value) => Encoding.UTF8.GetBytes(value);
 }

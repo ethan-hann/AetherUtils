@@ -16,7 +16,7 @@ namespace AetherUtils.Core.Security.Encryption
         public async Task<byte[]> EncryptAsync(string input, string passphrase)
         {
             using Aes aes = Aes.Create();
-            aes.Key = DeriveKeyFromString(passphrase, 5000, KeyLength.Bits_256);
+            aes.Key = DeriveKeyFromString(passphrase);
             await using MemoryStream output = new();
             WriteIvToStream(aes.IV, output);
 
@@ -36,7 +36,7 @@ namespace AetherUtils.Core.Security.Encryption
         public async Task<string> DecryptAsync(byte[] encrypted, string passphrase)
         {
             using Aes aes = Aes.Create();
-            aes.Key = DeriveKeyFromString(passphrase, 5000, KeyLength.Bits_256);
+            aes.Key = DeriveKeyFromString(passphrase);
 
             using MemoryStream input = new MemoryStream(encrypted);
             aes.IV = ReadIvFromStream(input);

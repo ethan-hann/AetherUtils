@@ -15,7 +15,7 @@ public static class NumberExtensions
     /// <returns>The inches equivalent of the pixels.</returns>
     /// <exception cref="ArgumentNullException">If <paramref name="pixels"/> was <c>null</c>.</exception>
     /// <exception cref="DivideByZeroException">If <paramref name="dpi"/> was 0.</exception>
-    public static double ToInches(this double pixels, double dpi = 96)
+    public static double ToInches(this double pixels, double dpi = 96D)
     {
         ArgumentNullException.ThrowIfNull(pixels, nameof(pixels));
         if (dpi == 0)
@@ -31,7 +31,7 @@ public static class NumberExtensions
     /// <param name="dpi">The DPI (dots per inch) of the screen; default is <c>96</c>.</param>
     /// <returns>The pixels equivalent of the inches.</returns>
     /// <exception cref="ArgumentNullException">If <paramref name="inches"/> was <c>null</c>.</exception>
-    public static double ToPixels(this double inches, double dpi = 96)
+    public static double ToPixels(this double inches, double dpi = 96D)
     {
         ArgumentNullException.ThrowIfNull(inches, nameof(inches));
         return Math.Abs(inches * dpi);
@@ -39,11 +39,10 @@ public static class NumberExtensions
 
     //TODO: Clean this up and make it more robust!
     /// <summary>
-    /// Formats a size in bytes (represented by a <see cref="long"/> value) to the next closest base-2 size
+    /// Formats a size in bytes (represented by an <see cref="long"/> value) to the next closest base-2 size
     /// representation and appends its suffix to the end; uses <c>1024</c> as the conversion factor.
     /// </summary>
     /// <param name="sizeInBytes">The size, in bytes, to format.</param>
-    /// <param name="conversionFactor">How many bytes are in 1KB? (Default is <c>1024</c>)</param>
     /// <returns>The number formatted with its suffix as a <see cref="string"/>.</returns>
     /// <exception cref="ArgumentNullException">If <paramref name="sizeInBytes"/> was <c>null</c>.</exception>
     public static string FormatSize(this ulong sizeInBytes)

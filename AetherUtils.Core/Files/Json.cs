@@ -5,23 +5,24 @@ using System.Text;
 namespace AetherUtils.Core.Files
 {
     /// <summary>
-    /// Implements serializing and de-serializing JSON files to/from generic object types.
+    /// Implements serializing and de-serializing generic object types to/from JSON files.
     /// </summary>
+    /// <remarks><typeparamref name="T"/> must support JSON serialization.</remarks>
     /// <typeparam name="T">The type of object to serialize/deserialize.</typeparam>
     public sealed class Json<T> where T : class
     {
-        private readonly JsonSerializerSettings _settings;
         private readonly JsonSerializer _serializer;
         private StringBuilder _stringBuilder;
         private StringWriter _stringWriter;
 
         public Json()
         {
-            _settings = new JsonSerializerSettings()
+            var settings = new JsonSerializerSettings()
             {
                 Formatting = Formatting.Indented
             };
-            _serializer = JsonSerializer.Create(_settings);
+            
+            _serializer = JsonSerializer.Create(settings);
             _stringBuilder = new StringBuilder();
             _stringWriter = new StringWriter(_stringBuilder);
         }
@@ -33,18 +34,20 @@ namespace AetherUtils.Core.Files
         /// <param name="filePath">The file to save.</param>
         /// <param name="obj">The .NET object to serialize and save.</param>
         /// <returns><c>true</c> if the object was serialized and the file was saved; <c>false</c> otherwise.</returns>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
         public bool SaveJson(string filePath, T obj)
         {
             ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
 
-            string newPath = FileHelper.ExpandPath(filePath);
+            filePath = FileHelper.ExpandPath(filePath);
             
             using JsonWriter writer = new JsonTextWriter(_stringWriter);
             _serializer.Serialize(writer, obj);
-            FileHelper.SaveFile(newPath, _stringWriter.ToString(), false);
+            FileHelper.SaveFile(filePath, _stringWriter.ToString(), false);
 
             ResetWriters();
-            return FileHelper.DoesFileExist(newPath, false);
+            
+            return FileHelper.DoesFileExist(filePath, false);
         }
 
         /// <summary>
@@ -52,16 +55,19 @@ namespace AetherUtils.Core.Files
         /// </summary>
         /// <param name="filePath">The file to load.</param>
         /// <returns>The <typeparamref name="T"/> object, or <c>null</c> if the object could not be deserialized.</returns>
+        /// <exception cref="ArgumentException">If <paramref name="filePath"/> was <c>null</c> or empty.</exception>
+        /// <exception cref="FileNotFoundException">If the <see cref="filePath"/> did not exist.</exception>
         public T? LoadJson(string filePath)
         {
             ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
-            string newPath = FileHelper.ExpandPath(filePath);
+            
+            filePath = FileHelper.ExpandPath(filePath);
 
-            if (!FileHelper.DoesFileExist(newPath, false))
+            if (!FileHelper.DoesFileExist(filePath, false))
                 throw new FileNotFoundException("File was not found");
 
-            string json = FileHelper.OpenFile(newPath);
-            using JsonTextReader reader = new JsonTextReader(new StringReader(json));
+            var json = FileHelper.OpenFile(filePath);
+            using var reader = new JsonTextReader(new StringReader(json));
             var obj = _serializer.Deserialize<T>(reader);
             ResetWriters();
             

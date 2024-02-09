@@ -6,7 +6,7 @@ namespace AetherUtils.Core.Security
     /// Represents a secret question and answer pair. Once instantiated, neither the question nor the answer can be changed.
     /// <inheritdoc cref="ICloneable"/>
     /// </summary>
-    public class SecretQA : ICloneable
+    public sealed class SecretQa : ICloneable
     {
         /// <summary>
         /// The question component.
@@ -18,14 +18,14 @@ namespace AetherUtils.Core.Security
         /// </summary>
         public SecureString Answer { get; private set; } = new SecureString();
 
-        private SecretQA() { }
+        private SecretQa() { }
 
         /// <summary>
-        /// Create a new <see cref="SecretQA"/> with the specified <paramref name="question"/> and <paramref name="answer"/>.
+        /// Create a new <see cref="SecretQa"/> with the specified <paramref name="question"/> and <paramref name="answer"/>.
         /// </summary>
         /// <param name="question"></param>
         /// <param name="answer"></param>
-        public SecretQA(string question, SecureString answer)
+        public SecretQa(string question, SecureString answer)
         {
             Question = question;
             Answer = answer;
@@ -33,7 +33,7 @@ namespace AetherUtils.Core.Security
 
         public object Clone()
         {
-            return new SecretQA(Question, Answer);
+            return new SecretQa(Question, Answer);
         }
     }
 }

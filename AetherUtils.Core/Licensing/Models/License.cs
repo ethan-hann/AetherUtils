@@ -1,5 +1,7 @@
 ﻿using Standard.Licensing;
 using System.ComponentModel;
+using System.Globalization;
+using System.Text;
 using System.Xml.Serialization;
 
 namespace AetherUtils.Core.Licensing.Models
@@ -47,5 +49,29 @@ namespace AetherUtils.Core.Licensing.Models
         public string Signature { get; set; } = string.Empty;
 
         public License() { }
+
+        /// <summary>
+        /// Get a string that represents this license object:<br/>
+        /// 
+        /// ID: <br/>
+        /// Type: <br/>
+        /// Expiration: <br/>
+        /// Quantity: <br/>
+        /// Customer Name: <br/>
+        /// Customer Email:
+        /// </summary>
+        /// <returns>A string representing this <see cref="License"/>.</returns>
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb = sb.AppendLine($"ID: {Id}")
+                .AppendLine($"Type: {Type.ToString()}")
+                .AppendLine($"Expiration: {Expiration.ToString(CultureInfo.InvariantCulture)}")
+                .AppendLine($"Quantity: {Quantity}")
+                .AppendLine($"Customer: {Customer.Name}")
+                .AppendLine($"Customer Email: {Customer.Email}");
+            return sb.ToString();
+
+        }
     }
 }
