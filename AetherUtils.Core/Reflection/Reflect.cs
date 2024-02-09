@@ -92,7 +92,7 @@ namespace AetherUtils.Core.Reflection
         /// <typeparam name="T">The custom attribute to search for.</typeparam>
         /// <param name="instance">The initial <see cref="object"/> instance to start the search on.</param>
         /// <param name="type">The initial <see cref="Type"/> to start the search on.</param>
-        /// <param name="visited">Defaults to <c>null</c>. Used to maintain a <see cref="HashSet"/> of already visited types while searching.</param>
+        /// <param name="visited">Defaults to <c>null</c>. Used to maintain a <see cref="HashSet{T}"/> of already visited types while searching.</param>
         /// <returns><para>
         /// An <see cref="IEnumerable"/> of tuples:<br/>
         /// <c>(</c><see cref="Type"/>, <see cref="PropertyInfo"/>, <see cref="Attribute"/>, <see cref="object"/><c>)</c>

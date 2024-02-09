@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Drawing.Imaging;
+using System.Text;
 
 namespace AetherUtils.Core.Extensions;
 
@@ -26,5 +27,13 @@ public static class ArrayExtensions
         }
         catch (OutOfMemoryException ex) { throw new FormatException("The image format was not recognized.", ex); }
         catch (ArgumentException ex) { throw new FormatException("The image format was not recognized.", ex); }
+    }
+
+    public static string ToPrintableString(this IEnumerable<byte> bytes)
+    {
+        return BitConverter.ToString(bytes.ToArray());
+        // StringBuilder sb = new();
+        // bytes.ToList().ForEach(b => sb = sb.Append($"{{{}}}"));
+        // return sb.ToString();
     }
 }

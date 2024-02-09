@@ -280,6 +280,28 @@ namespace AetherUtils.Core.Files
             folderPath = expandPath ? ExpandPath(folderPath) : folderPath;
             return Directory.Exists(folderPath);
         }
+
+        /// <summary>
+        /// Get the extension component, including the <c>.</c>, of a file name specified by <paramref name="filePath"/>.
+        /// </summary>
+        /// <param name="filePath">The path to a file.</param>
+        /// <param name="expandPath">Should the <paramref name="filePath"/> be expanded before accessing?</param>
+        /// <returns>The file extension, including the <c>.</c>.</returns>
+        /// <exception cref="ArgumentException">If the <paramref name="filePath"/> was <c>null</c> or empty.</exception>
+        public static string GetExtension(string filePath, bool expandPath = true)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            filePath = expandPath ? ExpandPath(filePath) : filePath;
+            return Path.GetExtension(filePath);
+        }
+
+        public static void DeleteFile(string filePath, bool expandPath = true)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            filePath = expandPath ? ExpandPath(filePath) : filePath;
+            if (DoesFileExist(filePath))
+                File.Delete(filePath);
+        }
         #endregion
     }
 }

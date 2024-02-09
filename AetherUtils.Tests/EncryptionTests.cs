@@ -1,4 +1,6 @@
-﻿using AetherUtils.Core.Licensing.Models;
+﻿using System.Text;
+using AetherUtils.Core.Extensions;
+using AetherUtils.Core.Licensing.Models;
 using AetherUtils.Core.Security.Encryption;
 
 namespace AetherUtils.Tests
@@ -98,5 +100,43 @@ namespace AetherUtils.Tests
 
             Assert.That(decrypted.Result, Is.EqualTo(testString));
         }
+
+        [Test]
+        public async Task TestExistingFileEncrypt()
+        {
+            var service = new FileEncryptionService(testFilePath);
+            
+            Console.WriteLine($"Passphrase: {passphrase}");
+
+            var newFilePath = await FileEncryptionService.EncryptFileAsync("files\\Hello.txt", passphrase);
+            Console.WriteLine($"Encrypted: {newFilePath}");
+        }
+
+        [Test]
+        public async Task TestExistingFileDecrypt()
+        {
+            var service = new FileEncryptionService(testFilePath);
+            Console.WriteLine($"Passphrase: {passphrase}");
+
+            var newFilePath = await FileEncryptionService.DecryptFileAsync("files\\Hello.enc", passphrase);
+            Console.WriteLine($"Decrypted: {newFilePath}");
+        }
+
+        [Test]
+        public void GetCharacterCode()
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(new[] { '█' });
+            Console.WriteLine(bytes.ToPrintableString());
+        }
+        //
+        // [Test]
+        // public void TestExistingFileDecrypt()
+        // {
+        //     var service = new FileEncryptionService(testFilePath);
+        //     service.FilePath = "files\\Hello.txt";
+        //
+        //     var decrypted = service.DecryptAsync(service.FilePath, passphrase);
+        //     Console.WriteLine($"Decrypted: {decrypted.Result}");
+        // }
     }
 }

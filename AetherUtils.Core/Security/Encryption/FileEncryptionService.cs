@@ -8,6 +8,8 @@ namespace AetherUtils.Core.Security.Encryption
     /// </summary>
     public sealed class FileEncryptionService : EncryptionBase, IEncryptService<string, string>
     {
+        private static ByteEncryptionService _byteEncryptor = new();
+        
         /// <summary>
         /// Get or set the file path that is used for encryption.
         /// </summary>
@@ -22,16 +24,19 @@ namespace AetherUtils.Core.Security.Encryption
         internal FileEncryptionService() => FilePath = string.Empty;
 
         /// <summary>
-        /// Encrypt a file with the specified <paramref name="content"/> using the <paramref name="passphrase"/>.
+        /// Create and encrypt a file with the specified <paramref name="content"/> using the <paramref name="passphrase"/>.
         /// <para>This method will either create a new file if one does not exist or overwrite the existing file.</para>
         /// </summary>
         /// <param name="content">The string to encrypt into the file.</param>
         /// <param name="passphrase">The passphrase used for encryption.</param>
         /// <returns>The path to the encrypted file.</returns>
+        /// <exception cref="ArgumentException">If <paramref name="content"/> was <c>null</c> or empty.</exception>
+        /// <exception cref="ArgumentNullException">If <paramref name="passphrase"/> was <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">If the <see cref="FilePath"/> property is empty.</exception>
         public async Task<string> EncryptAsync(string content, string passphrase)
         {
             ArgumentException.ThrowIfNullOrEmpty(content, nameof(content));
+            ArgumentNullException.ThrowIfNull(passphrase, nameof(passphrase));
 
             if (FilePath.Equals(string.Empty))
                 throw new InvalidOperationException("File path was empty.");
@@ -45,10 +50,56 @@ namespace AetherUtils.Core.Security.Encryption
             WriteIvToStream(aes.IV, output);
 
             await using CryptoStream cryptoStream = new(output, aes.CreateEncryptor(), CryptoStreamMode.Write);
-            await cryptoStream.WriteAsync(GetBytesToUtf32(content));
+            await cryptoStream.WriteAsync(GetBytesFromUtf8String(content));
             await cryptoStream.FlushFinalBlockAsync();
 
             return FilePath;
+        }
+
+        public static async Task<string> EncryptFileAsync(string filePath, string passphrase)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            ArgumentNullException.ThrowIfNull(passphrase, nameof(passphrase));
+
+            filePath = FileHelper.ExpandPath(filePath);
+            if (!FileHelper.DoesFileExist(filePath, false))
+                 throw new FileNotFoundException("The file was not found.", filePath);
+
+            var contents = await FileHelper.OpenNonTextFileAsync(filePath, false);
+            var extension = FileHelper.GetExtension(filePath, false);
+            var encryptedContents = _byteEncryptor.EncryptAsync(contents, passphrase).Result;
+            
+            WriteExtensionToBytes(extension, ref encryptedContents);
+
+            var oldFilePath = filePath;
+            
+            filePath = Path.ChangeExtension(filePath, ".enc"); //change extension on path file to encrypted file extension.
+            FileHelper.SaveFileAsync(filePath, encryptedContents, false); //save the encrypted file.
+            FileHelper.DeleteFile(oldFilePath, false); //delete the original file.
+
+            return filePath;
+        }
+        
+        public static async Task<string> DecryptFileAsync(string filePath, string passphrase)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            ArgumentNullException.ThrowIfNull(passphrase, nameof(passphrase));
+
+            filePath = FileHelper.ExpandPath(filePath);
+            if (!FileHelper.DoesFileExist(filePath, false))
+                throw new FileNotFoundException("The file was not found.", filePath);
+
+            var contents = await FileHelper.OpenNonTextFileAsync(filePath, false);
+            var extension = GetExtensionFromBytes(ref contents);
+            var decryptedContents = _byteEncryptor.DecryptAsync(contents, passphrase);
+
+            var oldFilePath = filePath;
+            
+            filePath = Path.ChangeExtension(filePath, extension);
+            FileHelper.SaveFileAsync(filePath, decryptedContents.Result, false); //save the decrypted file.
+            FileHelper.DeleteFile(oldFilePath, false); //delete the encrypted file.
+            
+            return filePath;
         }
 
         /// <summary>
@@ -77,7 +128,7 @@ namespace AetherUtils.Core.Security.Encryption
             using MemoryStream output = new();
             await cryptoStream.CopyToAsync(output);
 
-            return GetStringFromUtf32(output.ToArray());
+            return GetStringFromUtf8Bytes(output.ToArray());
         }
     }
 }

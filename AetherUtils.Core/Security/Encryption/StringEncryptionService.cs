@@ -17,11 +17,11 @@ namespace AetherUtils.Core.Security.Encryption
         {
             using Aes aes = Aes.Create();
             aes.Key = DeriveKeyFromString(passphrase, 5000, KeyLength.Bits_256);
-            using MemoryStream output = new();
+            await using MemoryStream output = new();
             WriteIvToStream(aes.IV, output);
 
             await using CryptoStream cryptoStream = new(output, aes.CreateEncryptor(), CryptoStreamMode.Write);
-            await cryptoStream.WriteAsync(GetBytesToUtf32(input));
+            await cryptoStream.WriteAsync(GetBytesFromUtf8String(input));
             await cryptoStream.FlushFinalBlockAsync();
 
             return output.ToArray();
@@ -42,10 +42,10 @@ namespace AetherUtils.Core.Security.Encryption
             aes.IV = ReadIvFromStream(input);
 
             await using CryptoStream cs = new(input, aes.CreateDecryptor(), CryptoStreamMode.Read);
-            using MemoryStream output = new();
+            await using MemoryStream output = new();
             await cs.CopyToAsync(output);
 
-            return GetStringFromUtf32(output.ToArray());
+            return GetStringFromUtf8Bytes(output.ToArray());
         }
     }
 }
