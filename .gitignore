@@ -3,7 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
-# Licensing framework
+# Manual Database Querying and Filtering
+Manual\ Database\ Querying\ and\ Filtering/
 
 # User-specific files
 *.rsuser

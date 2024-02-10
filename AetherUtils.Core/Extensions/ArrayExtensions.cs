@@ -42,4 +42,35 @@ public static class ArrayExtensions
         ArgumentNullException.ThrowIfNull(bytes, nameof(bytes));
         return BitConverter.ToString(bytes.ToArray());
     }
+
+    /// <summary>
+    /// Convert an array of values to a string using the specified prefix, delimiter, and optional suffix.
+    /// </summary>
+    /// <example>
+    /// <code>
+    /// string[] values = ["val1", "val2", "val3"];
+    /// string str = values.ToStringList(',', "PRE(", ")");
+    /// returns: "PRE(val1,val2,val3)"
+    /// </code>
+    /// </example>
+    /// <param name="values">The array of values to combine.</param>
+    /// <param name="delimiter">The delimiter to separate the values with; default is <c>','</c></param>
+    /// <param name="prefix">The prefix to add to the resulting string; default is an empty string.</param>
+    /// <param name="suffix">The suffix to add to the resulting string; default is an empty string.</param>
+    /// <typeparam name="T">The type of objects contained within the array.</typeparam>
+    /// <returns>A string formatted with the <paramref name="values"/> seperated by the <paramref name="delimiter"/>.</returns>
+    /// <exception cref="ArgumentNullException">If <paramref name="values"/>, <paramref name="prefix"/>,
+    /// or <paramref name="delimiter"/> was <c>null</c>.</exception>
+    public static string ToStringList<T>(this T[] values, char delimiter = ',', string prefix = "", string suffix = "")
+    {
+        ArgumentNullException.ThrowIfNull(values, nameof(values));
+        ArgumentNullException.ThrowIfNull(prefix, nameof(prefix));
+        ArgumentNullException.ThrowIfNull(delimiter, nameof(delimiter));
+        
+        StringBuilder sb = new(prefix);
+        for (var i = 0; i < values.Length - 1; i++)
+            sb = sb.Append($"{values[i]?.ToString()}{delimiter}");
+        sb = sb.Append(suffix);
+        return sb.ToString();
+    }
 }
