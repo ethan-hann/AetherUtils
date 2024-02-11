@@ -8,14 +8,14 @@
         /// <summary>
         /// Specifies a key length of 128 bits (16 bytes)
         /// </summary>
-        Bits_128 = 16,
+        Bits128 = 16,
         /// <summary>
         /// Specifies a key length of 192 bits (24 bytes)
         /// </summary>
-        Bits_192 = 24,
+        Bits192 = 24,
         /// <summary>
         /// Specifies a key length of 256 bits (32 bytes)
         /// </summary>
-        Bits_256 = 32
+        Bits256 = 32
     }
 }

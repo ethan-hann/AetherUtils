@@ -30,8 +30,8 @@ namespace AetherUtils.Core.Security.Encryption
 
             if (input is string inputString)
                 return await _stringEncryptor.EncryptAsync(inputString, passphrase);
-            else
-                objectString = input.Serialize();
+            
+            objectString = input.Serialize();
 
             if (objectString is { } obj)
                 return await _stringEncryptor.EncryptAsync(obj, passphrase);
@@ -78,11 +78,10 @@ namespace AetherUtils.Core.Security.Encryption
             if (!input.CanSerialize())
                 throw new InvalidOperationException($"{input.GetType()} does not support XML serialization.");
 
-            string? objectString;
             if (input is string inputString)
                 return await _stringEncryptor.EncryptAsync(inputString, passphrase);
-            else
-                objectString = input.Serialize();
+            
+            var objectString = input.Serialize();
 
             var encryptedPath = string.Empty;
             if (objectString is { } obj)

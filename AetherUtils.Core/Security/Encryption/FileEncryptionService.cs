@@ -151,7 +151,7 @@ namespace AetherUtils.Core.Security.Encryption
             ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
             
             if (!FileHelper.DoesFileExist(filePath))
-                throw new FileNotFoundException($"File {filePath} was not found.");
+                throw new FileNotFoundException("The file was not found.", filePath);
             
             filePath = FileHelper.ExpandPath(filePath);
             

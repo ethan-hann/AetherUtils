@@ -32,8 +32,7 @@ namespace AetherUtils.Core.Security.Hashing
         /// </summary>
         /// <param name="value">The plain text string to hash.</param>
         /// <returns>A cryptographically strong hashed string.</returns>
-        /// <exception cref="ArgumentNullException">Thrown if <paramref name="value"/> was <c>null</c>.</exception>
-        /// <exception cref="InvalidOperationException">Thrown if this method has already been called and generated a valid hashed string previously.</exception>
+        /// <exception cref="ArgumentNullException">If <paramref name="value"/> was <c>null</c>.</exception>
         public string HashString(string value)
         {
             ArgumentNullException.ThrowIfNull(nameof(value));
@@ -63,8 +62,9 @@ namespace AetherUtils.Core.Security.Hashing
         /// <summary>
         /// Parse a hashed string into its <see cref="ParsedHash"/> equivalent.
         /// </summary>
-        /// <param name="hashString"></param>
-        /// <returns></returns>
+        /// <param name="hashString">The hashed string to parse.</param>
+        /// <returns>A new <see cref="ParsedHash"/> containing the components of the hashed string.</returns>
+        /// <exception cref="ArgumentException">If <paramref name="hashString"/> was <c>null</c> or empty.</exception>
         private static ParsedHash ParseHashedString(string hashString)
         {
             ArgumentException.ThrowIfNullOrEmpty(nameof(hashString));

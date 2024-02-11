@@ -5,7 +5,8 @@ using AetherUtils.Core.Structs;
 namespace AetherUtils.Core.Security.Encryption
 {
     /// <summary>
-    /// Represents the base class for all encryption service classes. All encryption is performed using AES-256 and encoded with <see cref="Encoding.UTF8"/>.
+    /// Represents the base class for all encryption service classes. All encryption is performed using AES-256
+    /// and encoded with <see cref="Encoding.UTF8"/>.
     /// </summary>
     public class EncryptionBase
     {
@@ -39,7 +40,7 @@ namespace AetherUtils.Core.Security.Encryption
         /// <param name="iterations">The number of iterations. (Default is 5000).</param>
         /// <param name="keyLength">The length of the generated key, in bytes.</param>
         /// <returns>A cryptographically strong key.</returns>
-        internal static byte[] DeriveKeyFromString(string input, int iterations = 5000, KeyLength keyLength = KeyLength.Bits_256)
+        internal static byte[] DeriveKeyFromString(string input, int iterations = 5000, KeyLength keyLength = KeyLength.Bits256)
         {
             return Rfc2898DeriveBytes.Pbkdf2(Encoding.UTF8.GetBytes(input),
                 Array.Empty<byte>(),
@@ -123,7 +124,7 @@ namespace AetherUtils.Core.Security.Encryption
         }
 
         /// <summary>
-        /// Find the first and last indices of the separtar character in the specified <see cref="byte"/> array.
+        /// Find the first and last indices of the separator character in the specified <see cref="byte"/> array.
         /// </summary>
         /// <param name="buffer">The <see cref="byte"/> array to search.</param>
         /// <returns>A <see cref="ReadOnlyPair{K,V}"/> where the <c>key</c> is the first index

@@ -40,14 +40,33 @@ namespace AetherUtils.Core.Files
             ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
 
             filePath = FileHelper.ExpandPath(filePath);
-            
-            using JsonWriter writer = new JsonTextWriter(_stringWriter);
-            _serializer.Serialize(writer, obj);
-            FileHelper.SaveFile(filePath, _stringWriter.ToString(), false);
 
-            ResetWriters();
+            string json = ToJson(obj);
+            FileHelper.SaveFile(filePath, json, false);
             
             return FileHelper.DoesFileExist(filePath, false);
+        }
+
+        public string ToJson(T obj)
+        {
+            ArgumentNullException.ThrowIfNull(obj, nameof(obj));
+            using JsonWriter writer = new JsonTextWriter(_stringWriter);
+            _serializer.Serialize(writer, obj);
+            var json = _stringWriter.ToString();
+            
+            ResetWriters();
+
+            return json;
+        }
+
+        public T? FromJson(string json)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(json, nameof(json));
+            using var reader = new JsonTextReader(new StringReader(json));
+            var obj = _serializer.Deserialize<T>(reader);
+            ResetWriters();
+
+            return obj;
         }
 
         /// <summary>
