@@ -2,7 +2,9 @@
 
 namespace AetherUtils.Core.Security.Passwords;
 
-[Serializable]
+/// <summary>
+/// Holds the data relating to a <see cref="PasswordRule"/> built using <see cref="IPasswordRuleBuilder"/>.
+/// </summary>
 public class PasswordRuleData
 {
     public bool WhitespaceAllowed { get; set; } = false;

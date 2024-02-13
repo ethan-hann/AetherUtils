@@ -8,12 +8,11 @@ namespace AetherUtils.Core.Licensing.Models
 {
     [XmlRoot(ElementName = "License")]
     [TypeConverter(typeof(ExpandableObjectConverter))]
-    [Serializable]
-    public class License : ExpandableObjectConverter
+    public sealed class License : ExpandableObjectConverter
     {
         [XmlAttribute(AttributeName = "Id")]
         [Browsable(false)]
-        public string Id { get; set; } = "Default";
+        public string Id { get; set; }
 
         [XmlElement(ElementName = "Type")]
         [Browsable(true)]
@@ -61,17 +60,17 @@ namespace AetherUtils.Core.Licensing.Models
         /// Customer Email:
         /// </summary>
         /// <returns>A string representing this <see cref="License"/>.</returns>
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb = sb.AppendLine($"ID: {Id}")
-                .AppendLine($"Type: {Type.ToString()}")
-                .AppendLine($"Expiration: {Expiration.ToString(CultureInfo.InvariantCulture)}")
-                .AppendLine($"Quantity: {Quantity}")
-                .AppendLine($"Customer: {Customer.Name}")
-                .AppendLine($"Customer Email: {Customer.Email}");
-            return sb.ToString();
-
-        }
+        // public override string ToString()
+        // {
+        //     var sb = new StringBuilder();
+        //     sb = sb.AppendLine($"ID: {Id}")
+        //         .AppendLine($"Type: {Type.ToString()}")
+        //         .AppendLine($"Expiration: {Expiration.ToString(CultureInfo.InvariantCulture)}")
+        //         .AppendLine($"Quantity: {Quantity}")
+        //         .AppendLine($"Customer: {Customer.Name}")
+        //         .AppendLine($"Customer Email: {Customer.Email}");
+        //     return sb.ToString();
+        //
+        // }
     }
 }

@@ -28,10 +28,10 @@ namespace AetherUtils.Core.Files
             
             filePath = FileHelper.ExpandPath(filePath);
 
-            if (!obj.CanSerialize())
+            if (!obj.CanSerializeXml())
                 return false;
 
-            var xml = obj.Serialize();
+            var xml = obj.SerializeXml();
             FileHelper.SaveFile(filePath, xml, false);
 
             return FileHelper.DoesFileExist(filePath, false);
@@ -48,7 +48,7 @@ namespace AetherUtils.Core.Files
             ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
             
             var xml = FileHelper.OpenFile(filePath);
-            return xml.Deserialize<T>();
+            return xml.DeserializeXml<T>();
         }
     }
 }

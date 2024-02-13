@@ -23,7 +23,7 @@ namespace AetherUtils.Core.Security.Encryption
         {
             ArgumentNullException.ThrowIfNull(input, nameof(input));
 
-            if (!input.CanSerialize())
+            if (!input.CanSerializeXml())
                 throw new InvalidOperationException($"{input.GetType()} does not support XML serialization.");
 
             string? objectString;
@@ -31,7 +31,7 @@ namespace AetherUtils.Core.Security.Encryption
             if (input is string inputString)
                 return await _stringEncryptor.EncryptAsync(inputString, passphrase);
             
-            objectString = input.Serialize();
+            objectString = input.SerializeXml();
 
             if (objectString is { } obj)
                 return await _stringEncryptor.EncryptAsync(obj, passphrase);
@@ -53,7 +53,7 @@ namespace AetherUtils.Core.Security.Encryption
 
             var decrypted = await _stringEncryptor.DecryptAsync(input, passphrase);
 
-            var result = decrypted.Deserialize<T>();
+            var result = decrypted.DeserializeXml<T>();
             
             if (result == null)
                 throw new FormatException("The input was not in the correct format for decryption.");
@@ -75,13 +75,13 @@ namespace AetherUtils.Core.Security.Encryption
 
             _fileEncryptionService.FilePath = filePath;
 
-            if (!input.CanSerialize())
+            if (!input.CanSerializeXml())
                 throw new InvalidOperationException($"{input.GetType()} does not support XML serialization.");
 
             if (input is string inputString)
                 return await _stringEncryptor.EncryptAsync(inputString, passphrase);
             
-            var objectString = input.Serialize();
+            var objectString = input.SerializeXml();
 
             var encryptedPath = string.Empty;
             if (objectString is { } obj)
@@ -114,7 +114,7 @@ namespace AetherUtils.Core.Security.Encryption
 
             var decryptedContents = await _fileEncryptionService.DecryptAsync(filePath, passphrase);
 
-            T? result = decryptedContents.Deserialize<T>();
+            T? result = decryptedContents.DeserializeXml<T>();
             if (result is not null)
                 return result;
 

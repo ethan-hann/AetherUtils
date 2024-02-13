@@ -1,5 +1,8 @@
 ﻿namespace AetherUtils.Core.Security.Passwords;
 
+/// <summary>
+/// Internal builder class for a <see cref="PasswordRule"/>.
+/// </summary>
 internal class PasswordRuleBuilder : IPasswordRuleBuilder
 {
     private readonly PasswordRule _rule;
@@ -48,9 +51,9 @@ internal class PasswordRuleBuilder : IPasswordRuleBuilder
         return this;
     }
 
-    public IPasswordRuleBuilder Expires(DateTime date)
+    public IPasswordRuleBuilder Expires(DateTime expires)
     {
-        _rule.Expires(date);
+        _rule.Expires(expires);
         return this;
     }
 

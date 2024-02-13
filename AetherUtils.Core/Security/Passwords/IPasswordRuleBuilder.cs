@@ -2,6 +2,9 @@
 
 namespace AetherUtils.Core.Security.Passwords;
 
+/// <summary>
+/// Builder interface for creating a new <see cref="PasswordRule"/>.
+/// </summary>
 public interface IPasswordRuleBuilder : IFluentInterface
 {
     /// <summary>
@@ -9,6 +12,12 @@ public interface IPasswordRuleBuilder : IFluentInterface
     /// </summary>
     /// <returns>The builder instance.</returns>
     IPasswordRuleBuilder AllowWhitespace();
+    
+    /// <summary>
+    /// Allows the password to contain special characters.
+    /// </summary>
+    /// <returns>The builder instance.</returns>
+    IPasswordRuleBuilder AllowSpecials();
 
     /// <summary>
     /// Allows the password to contain numbers.
@@ -17,44 +26,42 @@ public interface IPasswordRuleBuilder : IFluentInterface
     IPasswordRuleBuilder AllowNumbers();
 
     /// <summary>
-    /// Sets the minimum length a password can be.
+    /// Set the minimum length this password should be.
     /// </summary>
     /// <returns>The builder instance.</returns>
     IPasswordRuleBuilder MinimumLength(int length);
     
     /// <summary>
-    /// Sets the minimum number of letters allowed for the password.
+    /// Set the minimum number of letters a password should contain.
     /// </summary>
     /// <param name="count">The minimum number of letters allowed.</param>
     /// <returns>The builder instance.</returns>
     IPasswordRuleBuilder MinimumLetterCount(int count);
     
     /// <summary>
-    /// Sets the minimum number of digits allowed for the password.
+    /// Set the minimum count of numbers a password should contain.
     /// </summary>
     /// <param name="count">The minimum number of digits allowed.</param>
     /// <returns>The builder instance.</returns>
     IPasswordRuleBuilder MinimumNumberCount(int count);
 
     /// <summary>
-    /// Sets the minimum number of special characters allowed for the password.
+    /// Set the minimum count of special characters a password should contain.
     /// </summary>
     /// <param name="count">The minimum number of special characters allowed.</param>
     /// <returns>The builder instance.</returns>
     IPasswordRuleBuilder MinimumSpecialCount(int count);
 
     /// <summary>
-    /// Allows the password to contain special characters.
+    /// Set the date that a password should expire at.
     /// </summary>
+    /// <param name="expires">The expiration expires of passwords validated against the rule.</param>
     /// <returns>The builder instance.</returns>
-    IPasswordRuleBuilder AllowSpecials();
+    IPasswordRuleBuilder Expires(DateTime expires);
 
     /// <summary>
-    /// Sets the date and time that the password should expire at.
+    /// Build and compile the password rule.
     /// </summary>
-    /// <param name="date">The date and time to expire the password.</param>
-    /// <returns>The builder instance.</returns>
-    IPasswordRuleBuilder Expires(DateTime date);
-
+    /// <returns>The built <see cref="PasswordRule"/>.</returns>
     PasswordRule Build();
 }

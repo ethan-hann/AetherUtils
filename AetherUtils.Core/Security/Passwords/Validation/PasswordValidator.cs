@@ -1,8 +1,16 @@
 ﻿namespace AetherUtils.Core.Security.Passwords.Validation;
 
+/// <summary>
+/// Validates a password against a <see cref="PasswordRule"/>.
+/// <remarks>This class cannot be inherited and should only be
+/// called from an instance of <see cref="PasswordRule"/> to validate a password.</remarks>
+/// </summary>
 public abstract class PasswordValidator
 {
-    private static readonly char[] SpecialChars = "!?#$%^&*()-+=".ToCharArray();
+    //List taken from: https://owasp.org/www-community/password-special-characters
+    //Excluding a space character since that is handled in the WhiteSpaceChars array.
+    private static readonly char[] SpecialChars = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~".ToCharArray();
+    
     private static readonly char[] NumberChars = "1234567890".ToCharArray();
     private static readonly char[] WhiteSpaceChars = " ".ToCharArray();
     

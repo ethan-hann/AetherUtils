@@ -86,11 +86,7 @@ namespace AetherUtils.Core.Files
                 throw new FileNotFoundException("File was not found");
 
             var json = FileHelper.OpenFile(filePath);
-            using var reader = new JsonTextReader(new StringReader(json));
-            var obj = _serializer.Deserialize<T>(reader);
-            ResetWriters();
-            
-            return obj;
+            return FromJson(json);
         }
 
         private void ResetWriters()

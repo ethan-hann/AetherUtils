@@ -3,6 +3,7 @@ using System.Security;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
+using AetherUtils.Core.Files;
 using AetherUtils.Core.RegEx;
 using AetherUtils.Core.Security.Hashing;
 using AetherUtils.Core.Structs;
@@ -111,13 +112,13 @@ public static class StringExtensions
     /// <summary>
     /// Deserializes an object from an XML <see cref="string"/>.
     /// </summary>
-    /// <typeparam name="T">The type of <see cref="object"/> to deserialize to.</typeparam>
     /// <param name="xml">The XML <see cref="string"/> to deserialize.</param>
+    /// <typeparam name="T">The type of <see cref="object"/> to deserialize to.</typeparam>
     /// <returns>The deserialized <see cref="object"/> or <c>null</c> if the deserialization failed.</returns>
-    /// <exception cref="ArgumentNullException">If <paramref name="xml"/> was <c>null</c>.</exception>
-    public static T? Deserialize<T>(this string xml) where T : class
+    /// <exception cref="ArgumentException">If <paramref name="xml"/> was <c>null</c> or empty.</exception>
+    public static T? DeserializeXml<T>(this string xml) where T : class
     {
-        ArgumentNullException.ThrowIfNull(xml, nameof(xml));
+        ArgumentException.ThrowIfNullOrEmpty(xml, nameof(xml));
         
         var serializer = new XmlSerializer(typeof(T));
         using var sr = new StringReader(xml);
@@ -127,6 +128,21 @@ public static class StringExtensions
             return (T?)serializer.Deserialize(reader);
         
         return null;
+    }
+
+    /// <summary>
+    /// Deserializes an object from a JSON <see cref="string"/>.
+    /// </summary>
+    /// <param name="json">The JSON <see cref="string"/> to deserialize.</param>
+    /// <typeparam name="T">The type of <see cref="object"/> to deserialize to.</typeparam>
+    /// <returns>The deserialized <see cref="object"/> or <c>null</c> if the deserialization failed.</returns>
+    /// <exception cref="ArgumentException">If <paramref name="json"/> was <c>null</c> or empty.</exception>
+    public static T? DeserializeJson<T>(this string json) where T : class
+    {
+        ArgumentException.ThrowIfNullOrEmpty(json, nameof(json));
+
+        var serializer = new Json<T>();
+        return serializer.FromJson(json);
     }
 
     /// <summary>
