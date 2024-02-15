@@ -259,4 +259,11 @@ public static class StringExtensions
     /// <param name="value">A <see cref="string"/> to get the bytes of.</param>
     /// <returns>A <see cref="byte"/> array containing the bytes representing the <see cref="string"/>.</returns>
     public static byte[] BytesFromString(this string value) => Encoding.UTF8.GetBytes(value);
+    
+    /// <summary>
+    /// Removes all whitespace characters from the specified <see cref="string"/>.
+    /// </summary>
+    /// <param name="str">The string to remove whitespace from.</param>
+    /// <returns>A new string, without the whitespace characters.</returns>
+    public static string RemoveWhitespace(this string str) => new(str.Where(c => !char.IsWhiteSpace(c)).ToArray());
 }
