@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SetupCode | AetherUtils ">
       
-      
+      <meta name="description" content="Represents a setup code needed by the user to setup two factor authentication.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="AetherUtils_Core_Security_TwoFactor_SetupCode" data-uid="AetherUtils.Core.Security.TwoFactor.SetupCode" class="text-break">
-Class SetupCode  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/SetupCode.cs/#L3"><i class="bi bi-code-slash"></i></a>
+Class SetupCode  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/SetupCode.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class SetupCode  <a class="header-action link-secondary" title="View source" hre
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary">Represents a setup code needed by the user to setup two factor authentication.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -169,10 +169,10 @@ Class SetupCode  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="AetherUtils_Core_Security_TwoFactor_SetupCode__ctor_System_String_System_String_" data-uid="AetherUtils.Core.Security.TwoFactor.SetupCode.#ctor(System.String,System.String)">
   SetupCode(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/SetupCode.cs/#L3"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/SetupCode.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">Represents a setup code needed by the user to setup two factor authentication.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -182,9 +182,9 @@ Class SetupCode  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>manualEntryKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>The secret key that can be manually entered in a 2FA app.</dd>
     <dt><code>qrCodeSetupImageUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>The base64 string representing the QR code.</dd>
   </dl>
 
 
@@ -206,14 +206,14 @@ Class SetupCode  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="AetherUtils_Core_Security_TwoFactor_SetupCode_ManualEntryKey" data-uid="AetherUtils.Core.Security.TwoFactor.SetupCode.ManualEntryKey">
   ManualEntryKey
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/SetupCode.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/SetupCode.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">The secret key that can be manually entered in a 2FA app.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ManualEntryKey { get; internal set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ManualEntryKey { get; }</code></pre>
   </div>
 
 
@@ -237,14 +237,14 @@ Class SetupCode  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="AetherUtils_Core_Security_TwoFactor_SetupCode_QrCodeSetupImageUrl" data-uid="AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl">
   QrCodeSetupImageUrl
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/SetupCode.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/SetupCode.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">The base64 string representing the QR code.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string QrCodeSetupImageUrl { get; internal set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string QrCodeSetupImageUrl { get; }</code></pre>
   </div>
 
 
@@ -268,7 +268,7 @@ Class SetupCode  <a class="header-action link-secondary" title="View source" hre
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/SetupCode.cs/#L3" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/SetupCode.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

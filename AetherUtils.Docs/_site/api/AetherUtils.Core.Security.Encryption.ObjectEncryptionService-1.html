@@ -101,7 +101,7 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ObjectEncryptionService&lt;T&gt; : EncryptionBase, IEncryptService&lt;T, byte[]&gt; where T : class</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ObjectEncryptionService&lt;T&gt; : EncryptionBase where T : class</code></pre>
   </div>
 
 
@@ -121,12 +121,6 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
     </dd>
   </dl>
 
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="AetherUtils.Core.Security.Encryption.IEncryptService-2.html">IEncryptService</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
-    </dd>
-  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -171,70 +165,6 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
       <a class="xref" href="AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_">TypeExtensions.SerializeXml&lt;T&gt;(T)</a>
   </div>
   </dd></dl>
-
-
-
-
-
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="AetherUtils_Core_Security_Encryption_ObjectEncryptionService_1__fileEncryptionService" data-uid="AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._fileEncryptionService">
-  _fileEncryptionService
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs/#L13"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private readonly FileEncryptionService _fileEncryptionService</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="AetherUtils.Core.Security.Encryption.FileEncryptionService.html">FileEncryptionService</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="AetherUtils_Core_Security_Encryption_ObjectEncryptionService_1__stringEncryptor" data-uid="AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._stringEncryptor">
-  _stringEncryptor
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs/#L12"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private readonly StringEncryptionService _stringEncryptor</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="AetherUtils.Core.Security.Encryption.StringEncryptionService.html">StringEncryptionService</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
 
 
 

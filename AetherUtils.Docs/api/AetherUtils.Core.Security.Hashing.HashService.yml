@@ -10,9 +10,6 @@ items:
   - AetherUtils.Core.Security.Hashing.HashService.CompareHash(System.String,System.String)
   - AetherUtils.Core.Security.Hashing.HashService.HashString(System.String)
   - AetherUtils.Core.Security.Hashing.HashService.HashedString
-  - AetherUtils.Core.Security.Hashing.HashService.ParseHashedString(System.String)
-  - AetherUtils.Core.Security.Hashing.HashService.SHGFI_DELIMITER
-  - AetherUtils.Core.Security.Hashing.HashService._options
   langs:
   - csharp
   - vb
@@ -53,60 +50,6 @@ items:
   - AetherUtils.Core.Security.Hashing.HashService.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1
   - AetherUtils.Core.Security.Hashing.HashService.AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1
   - AetherUtils.Core.Security.Hashing.HashService.AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1
-- uid: AetherUtils.Core.Security.Hashing.HashService._options
-  commentId: F:AetherUtils.Core.Security.Hashing.HashService._options
-  id: _options
-  parent: AetherUtils.Core.Security.Hashing.HashService
-  langs:
-  - csharp
-  - vb
-  name: _options
-  nameWithType: HashService._options
-  fullName: AetherUtils.Core.Security.Hashing.HashService._options
-  type: Field
-  source:
-    remote:
-      path: AetherUtils.Core/Security/Hashing/HashService.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: _options
-    path: ../AetherUtils.Core/Security/Hashing/HashService.cs
-    startLine: 14
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Security.Hashing
-  syntax:
-    content: private readonly HashOptions _options
-    return:
-      type: AetherUtils.Core.Structs.HashOptions
-    content.vb: Private ReadOnly _options As HashOptions
-- uid: AetherUtils.Core.Security.Hashing.HashService.SHGFI_DELIMITER
-  commentId: F:AetherUtils.Core.Security.Hashing.HashService.SHGFI_DELIMITER
-  id: SHGFI_DELIMITER
-  parent: AetherUtils.Core.Security.Hashing.HashService
-  langs:
-  - csharp
-  - vb
-  name: SHGFI_DELIMITER
-  nameWithType: HashService.SHGFI_DELIMITER
-  fullName: AetherUtils.Core.Security.Hashing.HashService.SHGFI_DELIMITER
-  type: Field
-  source:
-    remote:
-      path: AetherUtils.Core/Security/Hashing/HashService.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: SHGFI_DELIMITER
-    path: ../AetherUtils.Core/Security/Hashing/HashService.cs
-    startLine: 16
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Security.Hashing
-  syntax:
-    content: private const char SHGFI_DELIMITER = ':'
-    return:
-      type: System.Char
-    content.vb: Private Const SHGFI_DELIMITER As Char = ":"c
 - uid: AetherUtils.Core.Security.Hashing.HashService.HashedString
   commentId: P:AetherUtils.Core.Security.Hashing.HashService.HashedString
   id: HashedString
@@ -132,7 +75,7 @@ items:
   summary: Get the hashed string for this <xref href="AetherUtils.Core.Security.Hashing.HashService" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: public string HashedString { get; private set; }
+    content: public string HashedString { get; }
     parameters: []
     return:
       type: System.String
@@ -215,48 +158,6 @@ items:
   nameWithType.vb: HashService.HashString(String)
   fullName.vb: AetherUtils.Core.Security.Hashing.HashService.HashString(String)
   name.vb: HashString(String)
-- uid: AetherUtils.Core.Security.Hashing.HashService.ParseHashedString(System.String)
-  commentId: M:AetherUtils.Core.Security.Hashing.HashService.ParseHashedString(System.String)
-  id: ParseHashedString(System.String)
-  parent: AetherUtils.Core.Security.Hashing.HashService
-  langs:
-  - csharp
-  - vb
-  name: ParseHashedString(string)
-  nameWithType: HashService.ParseHashedString(string)
-  fullName: AetherUtils.Core.Security.Hashing.HashService.ParseHashedString(string)
-  type: Method
-  source:
-    remote:
-      path: AetherUtils.Core/Security/Hashing/HashService.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: ParseHashedString
-    path: ../AetherUtils.Core/Security/Hashing/HashService.cs
-    startLine: 67
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Security.Hashing
-  summary: Parse a hashed string into its <xref href="AetherUtils.Core.Structs.ParsedHash" data-throw-if-not-resolved="false"></xref> equivalent.
-  example: []
-  syntax:
-    content: private static ParsedHash ParseHashedString(string hashString)
-    parameters:
-    - id: hashString
-      type: System.String
-      description: The hashed string to parse.
-    return:
-      type: AetherUtils.Core.Structs.ParsedHash
-      description: A new <xref href="AetherUtils.Core.Structs.ParsedHash" data-throw-if-not-resolved="false"></xref> containing the components of the hashed string.
-    content.vb: Private Shared Function ParseHashedString(hashString As String) As ParsedHash
-  overload: AetherUtils.Core.Security.Hashing.HashService.ParseHashedString*
-  exceptions:
-  - type: System.ArgumentException
-    commentId: T:System.ArgumentException
-    description: If <code class="paramref">hashString</code> was <code>null</code> or empty.
-  nameWithType.vb: HashService.ParseHashedString(String)
-  fullName.vb: AetherUtils.Core.Security.Hashing.HashService.ParseHashedString(String)
-  name.vb: ParseHashedString(String)
 - uid: AetherUtils.Core.Security.Hashing.HashService.CompareHash(System.String)
   commentId: M:AetherUtils.Core.Security.Hashing.HashService.CompareHash(System.String)
   id: CompareHash(System.String)
@@ -969,17 +870,6 @@ references:
   - uid: AetherUtils.Core.Extensions
     name: Extensions
     href: AetherUtils.Core.Extensions.html
-- uid: System.Char
-  commentId: T:System.Char
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.char
-  name: char
-  nameWithType: char
-  fullName: char
-  nameWithType.vb: Char
-  fullName.vb: Char
-  name.vb: Char
 - uid: AetherUtils.Core.Security.Hashing.HashService
   commentId: T:AetherUtils.Core.Security.Hashing.HashService
   href: AetherUtils.Core.Security.Hashing.HashService.html
@@ -1014,13 +904,6 @@ references:
   name: HashString
   nameWithType: HashService.HashString
   fullName: AetherUtils.Core.Security.Hashing.HashService.HashString
-- uid: AetherUtils.Core.Structs.ParsedHash
-  commentId: T:AetherUtils.Core.Structs.ParsedHash
-  parent: AetherUtils.Core.Structs
-  href: AetherUtils.Core.Structs.ParsedHash.html
-  name: ParsedHash
-  nameWithType: ParsedHash
-  fullName: AetherUtils.Core.Structs.ParsedHash
 - uid: System.ArgumentException
   commentId: T:System.ArgumentException
   isExternal: true
@@ -1028,12 +911,6 @@ references:
   name: ArgumentException
   nameWithType: ArgumentException
   fullName: System.ArgumentException
-- uid: AetherUtils.Core.Security.Hashing.HashService.ParseHashedString*
-  commentId: Overload:AetherUtils.Core.Security.Hashing.HashService.ParseHashedString
-  href: AetherUtils.Core.Security.Hashing.HashService.html#AetherUtils_Core_Security_Hashing_HashService_ParseHashedString_System_String_
-  name: ParseHashedString
-  nameWithType: HashService.ParseHashedString
-  fullName: AetherUtils.Core.Security.Hashing.HashService.ParseHashedString
 - uid: AetherUtils.Core.Security.Hashing.HashService.CompareHash*
   commentId: Overload:AetherUtils.Core.Security.Hashing.HashService.CompareHash
   href: AetherUtils.Core.Security.Hashing.HashService.html#AetherUtils_Core_Security_Hashing_HashService_CompareHash_System_String_

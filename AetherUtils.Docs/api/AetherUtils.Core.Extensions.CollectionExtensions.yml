@@ -6,7 +6,6 @@ items:
   parent: AetherUtils.Core.Extensions
   children:
   - AetherUtils.Core.Extensions.CollectionExtensions.RenameKey``2(System.Collections.Generic.IDictionary{``0,``1},``0,``0)
-  - AetherUtils.Core.Extensions.CollectionExtensions.SyncRoot
   langs:
   - csharp
   - vb
@@ -43,33 +42,6 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: AetherUtils.Core.Extensions.CollectionExtensions.SyncRoot
-  commentId: F:AetherUtils.Core.Extensions.CollectionExtensions.SyncRoot
-  id: SyncRoot
-  parent: AetherUtils.Core.Extensions.CollectionExtensions
-  langs:
-  - csharp
-  - vb
-  name: SyncRoot
-  nameWithType: CollectionExtensions.SyncRoot
-  fullName: AetherUtils.Core.Extensions.CollectionExtensions.SyncRoot
-  type: Field
-  source:
-    remote:
-      path: AetherUtils.Core/Extensions/CollectionExtensions.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: SyncRoot
-    path: ../AetherUtils.Core/Extensions/CollectionExtensions.cs
-    startLine: 9
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Extensions
-  syntax:
-    content: private static readonly object SyncRoot
-    return:
-      type: System.Object
-    content.vb: Private Shared ReadOnly SyncRoot As Object
 - uid: AetherUtils.Core.Extensions.CollectionExtensions.RenameKey``2(System.Collections.Generic.IDictionary{``0,``1},``0,``0)
   commentId: M:AetherUtils.Core.Extensions.CollectionExtensions.RenameKey``2(System.Collections.Generic.IDictionary{``0,``1},``0,``0)
   id: RenameKey``2(System.Collections.Generic.IDictionary{``0,``1},``0,``0)

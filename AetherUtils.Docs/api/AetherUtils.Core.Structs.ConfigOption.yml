@@ -24,17 +24,18 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ConfigOption
     path: ../AetherUtils.Core/Structs/ConfigOption.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
-  summary: >-
-    Represents a single configuration option and it's value. This option can contain a single-dimensional list indexer:
+  summary: Represents a single configuration option and it's value. This option can contain a single-dimensional list indexer.
+  remarks: >-
+    <code> var option = new ConfigOption("listOption[0]", 2);</code> <br />
 
-    <code>optionName[0]</code> - get/set the configuration with name <code>optionName</code> at index 0, where <code>optionName</code> is a list.
+    would allow you to change the value of the listOption at index 0 to the value 2.
   example: []
   syntax:
-    content: public struct ConfigOption
+    content: public readonly struct ConfigOption
     content.vb: Public Structure ConfigOption
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
@@ -61,16 +62,16 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Name
     path: ../AetherUtils.Core/Structs/ConfigOption.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
   syntax:
-    content: public string Name { readonly get; set; }
+    content: public string Name { get; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Name As String
+    content.vb: Public ReadOnly Property Name As String
   overload: AetherUtils.Core.Structs.ConfigOption.Name*
 - uid: AetherUtils.Core.Structs.ConfigOption.ArrayIndexer
   commentId: P:AetherUtils.Core.Structs.ConfigOption.ArrayIndexer
@@ -90,16 +91,16 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ArrayIndexer
     path: ../AetherUtils.Core/Structs/ConfigOption.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
   syntax:
-    content: public int ArrayIndexer { readonly get; set; }
+    content: public int ArrayIndexer { get; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property ArrayIndexer As Integer
+    content.vb: Public ReadOnly Property ArrayIndexer As Integer
   overload: AetherUtils.Core.Structs.ConfigOption.ArrayIndexer*
 - uid: AetherUtils.Core.Structs.ConfigOption.Value
   commentId: P:AetherUtils.Core.Structs.ConfigOption.Value
@@ -119,16 +120,16 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Value
     path: ../AetherUtils.Core/Structs/ConfigOption.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
   syntax:
-    content: public object? Value { readonly get; set; }
+    content: public object? Value { get; }
     parameters: []
     return:
       type: System.Object
-    content.vb: Public Property Value As Object
+    content.vb: Public ReadOnly Property Value As Object
   overload: AetherUtils.Core.Structs.ConfigOption.Value*
 - uid: AetherUtils.Core.Structs.ConfigOption.ArrayIndexExists
   commentId: P:AetherUtils.Core.Structs.ConfigOption.ArrayIndexExists
@@ -148,12 +149,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ArrayIndexExists
     path: ../AetherUtils.Core/Structs/ConfigOption.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
   syntax:
-    content: public readonly bool ArrayIndexExists { get; }
+    content: public bool ArrayIndexExists { get; }
     parameters: []
     return:
       type: System.Boolean

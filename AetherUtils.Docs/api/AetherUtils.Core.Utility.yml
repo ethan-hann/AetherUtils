@@ -6,7 +6,6 @@ items:
   children:
   - AetherUtils.Core.Utility.ProportionalRandomSelector`1
   - AetherUtils.Core.Utility.SerializableDictionary`2
-  - AetherUtils.Core.Utility.SizeConverter
   langs:
   - csharp
   - vb
@@ -73,10 +72,4 @@ references:
   - name: " "
   - name: TValue
   - name: )
-- uid: AetherUtils.Core.Utility.SizeConverter
-  commentId: T:AetherUtils.Core.Utility.SizeConverter
-  href: AetherUtils.Core.Utility.SizeConverter.html
-  name: SizeConverter
-  nameWithType: SizeConverter
-  fullName: AetherUtils.Core.Utility.SizeConverter
 shouldSkipMarkup: true

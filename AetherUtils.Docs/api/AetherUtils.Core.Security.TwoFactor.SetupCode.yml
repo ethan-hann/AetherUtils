@@ -22,10 +22,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SetupCode
     path: ../AetherUtils.Core/Security/TwoFactor/SetupCode.cs
-    startLine: 2
+    startLine: 7
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
+  summary: Represents a setup code needed by the user to setup two factor authentication.
+  example: []
   syntax:
     content: public sealed class SetupCode
     content.vb: Public NotInheritable Class SetupCode
@@ -61,17 +63,21 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Security/TwoFactor/SetupCode.cs
-    startLine: 2
+    startLine: 7
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
+  summary: Represents a setup code needed by the user to setup two factor authentication.
+  example: []
   syntax:
     content: public SetupCode(string manualEntryKey, string qrCodeSetupImageUrl)
     parameters:
     - id: manualEntryKey
       type: System.String
+      description: The secret key that can be manually entered in a 2FA app.
     - id: qrCodeSetupImageUrl
       type: System.String
+      description: The base64 string representing the QR code.
     content.vb: Public Sub New(manualEntryKey As String, qrCodeSetupImageUrl As String)
   overload: AetherUtils.Core.Security.TwoFactor.SetupCode.#ctor*
   nameWithType.vb: SetupCode.New(String, String)
@@ -95,16 +101,18 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ManualEntryKey
     path: ../AetherUtils.Core/Security/TwoFactor/SetupCode.cs
-    startLine: 4
+    startLine: 12
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
+  summary: The secret key that can be manually entered in a 2FA app.
+  example: []
   syntax:
-    content: public string ManualEntryKey { get; internal set; }
+    content: public string ManualEntryKey { get; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ManualEntryKey As String
+    content.vb: Public ReadOnly Property ManualEntryKey As String
   overload: AetherUtils.Core.Security.TwoFactor.SetupCode.ManualEntryKey*
 - uid: AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl
   commentId: P:AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl
@@ -124,16 +132,18 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: QrCodeSetupImageUrl
     path: ../AetherUtils.Core/Security/TwoFactor/SetupCode.cs
-    startLine: 5
+    startLine: 17
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
+  summary: The base64 string representing the QR code.
+  example: []
   syntax:
-    content: public string QrCodeSetupImageUrl { get; internal set; }
+    content: public string QrCodeSetupImageUrl { get; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property QrCodeSetupImageUrl As String
+    content.vb: Public ReadOnly Property QrCodeSetupImageUrl As String
   overload: AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl*
 references:
 - uid: AetherUtils.Core.Security.TwoFactor

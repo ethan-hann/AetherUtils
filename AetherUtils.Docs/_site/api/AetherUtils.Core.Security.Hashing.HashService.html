@@ -197,70 +197,6 @@ Class HashService  <a class="header-action link-secondary" title="View source" h
 
 
 
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="AetherUtils_Core_Security_Hashing_HashService_SHGFI_DELIMITER" data-uid="AetherUtils.Core.Security.Hashing.HashService.SHGFI_DELIMITER">
-  SHGFI_DELIMITER
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Hashing/HashService.cs/#L17"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private const char SHGFI_DELIMITER = &#39;:&#39;</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="AetherUtils_Core_Security_Hashing_HashService__options" data-uid="AetherUtils.Core.Security.Hashing.HashService._options">
-  _options
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Hashing/HashService.cs/#L15"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private readonly HashOptions _options</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="AetherUtils.Core.Structs.HashOptions.html">HashOptions</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -276,7 +212,7 @@ Class HashService  <a class="header-action link-secondary" title="View source" h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string HashedString { get; private set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string HashedString { get; }</code></pre>
   </div>
 
 
@@ -421,47 +357,6 @@ Class HashService  <a class="header-action link-secondary" title="View source" h
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
     <dd>If <code class="paramref">value</code> was <code>null</code>.</dd>
-  </dl>
-
-
-
-  <a id="AetherUtils_Core_Security_Hashing_HashService_ParseHashedString_" data-uid="AetherUtils.Core.Security.Hashing.HashService.ParseHashedString*"></a>
-
-  <h3 id="AetherUtils_Core_Security_Hashing_HashService_ParseHashedString_System_String_" data-uid="AetherUtils.Core.Security.Hashing.HashService.ParseHashedString(System.String)">
-  ParseHashedString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Hashing/HashService.cs/#L68"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary">Parse a hashed string into its <a class="xref" href="AetherUtils.Core.Structs.ParsedHash.html">ParsedHash</a> equivalent.</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static ParsedHash ParseHashedString(string hashString)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>hashString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd>The hashed string to parse.</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="AetherUtils.Core.Structs.ParsedHash.html">ParsedHash</a></dt>
-    <dd>A new <a class="xref" href="AetherUtils.Core.Structs.ParsedHash.html">ParsedHash</a> containing the components of the hashed string.</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd>If <code class="paramref">hashString</code> was <code>null</code> or empty.</dd>
   </dl>
 
 

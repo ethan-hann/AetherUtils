@@ -5,12 +5,9 @@ items:
   id: Encoder
   parent: AetherUtils.Core.Security.TwoFactor
   children:
-  - AetherUtils.Core.Security.TwoFactor.Encoder.BIF_URL_ENCODE_ALPHABET
   - AetherUtils.Core.Security.TwoFactor.Encoder.Base32Encode(System.Byte[])
-  - AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue(System.Char)
   - AetherUtils.Core.Security.TwoFactor.Encoder.ToBytes(System.String)
   - AetherUtils.Core.Security.TwoFactor.Encoder.UrlEncode(System.String)
-  - AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar(System.Byte)
   langs:
   - csharp
   - vb
@@ -44,33 +41,6 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: AetherUtils.Core.Security.TwoFactor.Encoder.BIF_URL_ENCODE_ALPHABET
-  commentId: F:AetherUtils.Core.Security.TwoFactor.Encoder.BIF_URL_ENCODE_ALPHABET
-  id: BIF_URL_ENCODE_ALPHABET
-  parent: AetherUtils.Core.Security.TwoFactor.Encoder
-  langs:
-  - csharp
-  - vb
-  name: BIF_URL_ENCODE_ALPHABET
-  nameWithType: Encoder.BIF_URL_ENCODE_ALPHABET
-  fullName: AetherUtils.Core.Security.TwoFactor.Encoder.BIF_URL_ENCODE_ALPHABET
-  type: Field
-  source:
-    remote:
-      path: AetherUtils.Core/Security/TwoFactor/Encoder.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: BIF_URL_ENCODE_ALPHABET
-    path: ../AetherUtils.Core/Security/TwoFactor/Encoder.cs
-    startLine: 9
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Security.TwoFactor
-  syntax:
-    content: private const string BIF_URL_ENCODE_ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.~"
-    return:
-      type: System.String
-    content.vb: Private Const BIF_URL_ENCODE_ALPHABET As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.~"
 - uid: AetherUtils.Core.Security.TwoFactor.Encoder.UrlEncode(System.String)
   commentId: M:AetherUtils.Core.Security.TwoFactor.Encoder.UrlEncode(System.String)
   id: UrlEncode(System.String)
@@ -89,7 +59,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: UrlEncode
     path: ../AetherUtils.Core/Security/TwoFactor/Encoder.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -127,7 +97,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Base32Encode
     path: ../AetherUtils.Core/Security/TwoFactor/Encoder.cs
-    startLine: 40
+    startLine: 43
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -169,7 +139,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ToBytes
     path: ../AetherUtils.Core/Security/TwoFactor/Encoder.cs
-    startLine: 82
+    startLine: 85
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -193,74 +163,6 @@ items:
   nameWithType.vb: Encoder.ToBytes(String)
   fullName.vb: AetherUtils.Core.Security.TwoFactor.Encoder.ToBytes(String)
   name.vb: ToBytes(String)
-- uid: AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue(System.Char)
-  commentId: M:AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue(System.Char)
-  id: CharToValue(System.Char)
-  parent: AetherUtils.Core.Security.TwoFactor.Encoder
-  langs:
-  - csharp
-  - vb
-  name: CharToValue(char)
-  nameWithType: Encoder.CharToValue(char)
-  fullName: AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue(char)
-  type: Method
-  source:
-    remote:
-      path: AetherUtils.Core/Security/TwoFactor/Encoder.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: CharToValue
-    path: ../AetherUtils.Core/Security/TwoFactor/Encoder.cs
-    startLine: 119
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Security.TwoFactor
-  syntax:
-    content: private static int CharToValue(char c)
-    parameters:
-    - id: c
-      type: System.Char
-    return:
-      type: System.Int32
-    content.vb: Private Shared Function CharToValue(c As Char) As Integer
-  overload: AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue*
-  nameWithType.vb: Encoder.CharToValue(Char)
-  fullName.vb: AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue(Char)
-  name.vb: CharToValue(Char)
-- uid: AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar(System.Byte)
-  commentId: M:AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar(System.Byte)
-  id: ValueToChar(System.Byte)
-  parent: AetherUtils.Core.Security.TwoFactor.Encoder
-  langs:
-  - csharp
-  - vb
-  name: ValueToChar(byte)
-  nameWithType: Encoder.ValueToChar(byte)
-  fullName: AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar(byte)
-  type: Method
-  source:
-    remote:
-      path: AetherUtils.Core/Security/TwoFactor/Encoder.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: ValueToChar
-    path: ../AetherUtils.Core/Security/TwoFactor/Encoder.cs
-    startLine: 130
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Security.TwoFactor
-  syntax:
-    content: private static char ValueToChar(byte b)
-    parameters:
-    - id: b
-      type: System.Byte
-    return:
-      type: System.Char
-    content.vb: Private Shared Function ValueToChar(b As Byte) As Char
-  overload: AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar*
-  nameWithType.vb: Encoder.ValueToChar(Byte)
-  fullName.vb: AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar(Byte)
-  name.vb: ValueToChar(Byte)
 references:
 - uid: AetherUtils.Core.Security.TwoFactor
   commentId: N:AetherUtils.Core.Security.TwoFactor
@@ -537,6 +439,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: AetherUtils.Core.Security.TwoFactor.Encoder.UrlEncode*
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.Encoder.UrlEncode
+  href: AetherUtils.Core.Security.TwoFactor.Encoder.html#AetherUtils_Core_Security_TwoFactor_Encoder_UrlEncode_System_String_
+  name: UrlEncode
+  nameWithType: Encoder.UrlEncode
+  fullName: AetherUtils.Core.Security.TwoFactor.Encoder.UrlEncode
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -548,15 +456,8 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: AetherUtils.Core.Security.TwoFactor.Encoder.UrlEncode*
-  commentId: Overload:AetherUtils.Core.Security.TwoFactor.Encoder.UrlEncode
-  href: AetherUtils.Core.Security.TwoFactor.Encoder.html#AetherUtils_Core_Security_TwoFactor_Encoder_UrlEncode_System_String_
-  name: UrlEncode
-  nameWithType: Encoder.UrlEncode
-  fullName: AetherUtils.Core.Security.TwoFactor.Encoder.UrlEncode
 - uid: System.Byte
   commentId: T:System.Byte
-  parent: System
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.byte
   name: byte
@@ -614,38 +515,4 @@ references:
   name: ToBytes
   nameWithType: Encoder.ToBytes
   fullName: AetherUtils.Core.Security.TwoFactor.Encoder.ToBytes
-- uid: AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue*
-  commentId: Overload:AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue
-  href: AetherUtils.Core.Security.TwoFactor.Encoder.html#AetherUtils_Core_Security_TwoFactor_Encoder_CharToValue_System_Char_
-  name: CharToValue
-  nameWithType: Encoder.CharToValue
-  fullName: AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue
-- uid: System.Char
-  commentId: T:System.Char
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.char
-  name: char
-  nameWithType: char
-  fullName: char
-  nameWithType.vb: Char
-  fullName.vb: Char
-  name.vb: Char
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar*
-  commentId: Overload:AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar
-  href: AetherUtils.Core.Security.TwoFactor.Encoder.html#AetherUtils_Core_Security_TwoFactor_Encoder_ValueToChar_System_Byte_
-  name: ValueToChar
-  nameWithType: Encoder.ValueToChar
-  fullName: AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar
 shouldSkipMarkup: true

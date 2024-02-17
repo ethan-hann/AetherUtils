@@ -7,8 +7,6 @@ items:
   - AetherUtils.Core.Security.Encryption.ByteEncryptionService
   - AetherUtils.Core.Security.Encryption.EncryptionBase
   - AetherUtils.Core.Security.Encryption.FileEncryptionService
-  - AetherUtils.Core.Security.Encryption.IEncryptService`2
-  - AetherUtils.Core.Security.Encryption.KeyLength
   - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
   - AetherUtils.Core.Security.Encryption.StringEncryptionService
   langs:
@@ -23,7 +21,6 @@ items:
 references:
 - uid: AetherUtils.Core.Security.Encryption.ByteEncryptionService
   commentId: T:AetherUtils.Core.Security.Encryption.ByteEncryptionService
-  parent: AetherUtils.Core.Security.Encryption
   href: AetherUtils.Core.Security.Encryption.ByteEncryptionService.html
   name: ByteEncryptionService
   nameWithType: ByteEncryptionService
@@ -37,49 +34,10 @@ references:
   fullName: AetherUtils.Core.Security.Encryption.EncryptionBase
 - uid: AetherUtils.Core.Security.Encryption.FileEncryptionService
   commentId: T:AetherUtils.Core.Security.Encryption.FileEncryptionService
-  parent: AetherUtils.Core.Security.Encryption
   href: AetherUtils.Core.Security.Encryption.FileEncryptionService.html
   name: FileEncryptionService
   nameWithType: FileEncryptionService
   fullName: AetherUtils.Core.Security.Encryption.FileEncryptionService
-- uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
-  commentId: T:AetherUtils.Core.Security.Encryption.IEncryptService`2
-  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
-  name: IEncryptService<T, U>
-  nameWithType: IEncryptService<T, U>
-  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, U>
-  nameWithType.vb: IEncryptService(Of T, U)
-  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, U)
-  name.vb: IEncryptService(Of T, U)
-  spec.csharp:
-  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
-    name: IEncryptService
-    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
-  - name: <
-  - name: T
-  - name: ','
-  - name: " "
-  - name: U
-  - name: '>'
-  spec.vb:
-  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
-    name: IEncryptService
-    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: ','
-  - name: " "
-  - name: U
-  - name: )
-- uid: AetherUtils.Core.Security.Encryption.KeyLength
-  commentId: T:AetherUtils.Core.Security.Encryption.KeyLength
-  parent: AetherUtils.Core.Security.Encryption
-  href: AetherUtils.Core.Security.Encryption.KeyLength.html
-  name: KeyLength
-  nameWithType: KeyLength
-  fullName: AetherUtils.Core.Security.Encryption.KeyLength
 - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
   commentId: T:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
   href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
@@ -107,7 +65,6 @@ references:
   - name: )
 - uid: AetherUtils.Core.Security.Encryption.StringEncryptionService
   commentId: T:AetherUtils.Core.Security.Encryption.StringEncryptionService
-  parent: AetherUtils.Core.Security.Encryption
   href: AetherUtils.Core.Security.Encryption.StringEncryptionService.html
   name: StringEncryptionService
   nameWithType: StringEncryptionService

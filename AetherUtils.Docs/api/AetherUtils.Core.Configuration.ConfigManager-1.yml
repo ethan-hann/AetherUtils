@@ -18,10 +18,7 @@ items:
   - AetherUtils.Core.Configuration.ConfigManager`1.Save
   - AetherUtils.Core.Configuration.ConfigManager`1.SaveAsync
   - AetherUtils.Core.Configuration.ConfigManager`1.Set(AetherUtils.Core.Structs.ConfigOption)
-  - AetherUtils.Core.Configuration.ConfigManager`1.Set(AetherUtils.Core.Structs.ConfigOption,System.Object)
   - AetherUtils.Core.Configuration.ConfigManager`1.Set(System.String,System.Object)
-  - AetherUtils.Core.Configuration.ConfigManager`1._deserializer
-  - AetherUtils.Core.Configuration.ConfigManager`1._serializer
   langs:
   - csharp
   - vb
@@ -118,64 +115,6 @@ items:
   nameWithType.vb: ConfigManager(Of T).New(String)
   fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).New(String)
   name.vb: New(String)
-- uid: AetherUtils.Core.Configuration.ConfigManager`1._deserializer
-  commentId: F:AetherUtils.Core.Configuration.ConfigManager`1._deserializer
-  id: _deserializer
-  parent: AetherUtils.Core.Configuration.ConfigManager`1
-  langs:
-  - csharp
-  - vb
-  name: _deserializer
-  nameWithType: ConfigManager<T>._deserializer
-  fullName: AetherUtils.Core.Configuration.ConfigManager<T>._deserializer
-  type: Field
-  source:
-    remote:
-      path: AetherUtils.Core/Configuration/ConfigManager.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: _deserializer
-    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
-    startLine: 24
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Configuration
-  syntax:
-    content: private readonly IDeserializer _deserializer
-    return:
-      type: YamlDotNet.Serialization.IDeserializer
-    content.vb: Private ReadOnly _deserializer As IDeserializer
-  nameWithType.vb: ConfigManager(Of T)._deserializer
-  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T)._deserializer
-- uid: AetherUtils.Core.Configuration.ConfigManager`1._serializer
-  commentId: F:AetherUtils.Core.Configuration.ConfigManager`1._serializer
-  id: _serializer
-  parent: AetherUtils.Core.Configuration.ConfigManager`1
-  langs:
-  - csharp
-  - vb
-  name: _serializer
-  nameWithType: ConfigManager<T>._serializer
-  fullName: AetherUtils.Core.Configuration.ConfigManager<T>._serializer
-  type: Field
-  source:
-    remote:
-      path: AetherUtils.Core/Configuration/ConfigManager.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: _serializer
-    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
-    startLine: 28
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Configuration
-  syntax:
-    content: private readonly ISerializer _serializer
-    return:
-      type: YamlDotNet.Serialization.ISerializer
-    content.vb: Private ReadOnly _serializer As ISerializer
-  nameWithType.vb: ConfigManager(Of T)._serializer
-  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T)._serializer
 - uid: AetherUtils.Core.Configuration.ConfigManager`1.CurrentConfig
   commentId: P:AetherUtils.Core.Configuration.ConfigManager`1.CurrentConfig
   id: CurrentConfig
@@ -667,47 +606,6 @@ items:
   nameWithType.vb: ConfigManager(Of T).Set(String, Object)
   fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Set(String, Object)
   name.vb: Set(String, Object)
-- uid: AetherUtils.Core.Configuration.ConfigManager`1.Set(AetherUtils.Core.Structs.ConfigOption,System.Object)
-  commentId: M:AetherUtils.Core.Configuration.ConfigManager`1.Set(AetherUtils.Core.Structs.ConfigOption,System.Object)
-  id: Set(AetherUtils.Core.Structs.ConfigOption,System.Object)
-  parent: AetherUtils.Core.Configuration.ConfigManager`1
-  langs:
-  - csharp
-  - vb
-  name: Set(ConfigOption, object?)
-  nameWithType: ConfigManager<T>.Set(ConfigOption, object?)
-  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.Set(AetherUtils.Core.Structs.ConfigOption, object?)
-  type: Method
-  source:
-    remote:
-      path: AetherUtils.Core/Configuration/ConfigManager.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: Set
-    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
-    startLine: 223
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Configuration
-  summary: Set a configuration option specified by <code class="paramref">option</code>.
-  example: []
-  syntax:
-    content: private bool Set(ConfigOption option, object? instance)
-    parameters:
-    - id: option
-      type: AetherUtils.Core.Structs.ConfigOption
-      description: The configuration option to set.
-    - id: instance
-      type: System.Object
-      description: The instance of the configuration to set the option on.
-    return:
-      type: System.Boolean
-      description: <code>true</code> if the value was set successfully; <code>false</code> otherwise.
-    content.vb: Private Function [Set]([option] As ConfigOption, instance As Object) As Boolean
-  overload: AetherUtils.Core.Configuration.ConfigManager`1.Set*
-  nameWithType.vb: ConfigManager(Of T).Set(ConfigOption, Object)
-  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Set(AetherUtils.Core.Structs.ConfigOption, Object)
-  name.vb: Set(ConfigOption, Object)
 references:
 - uid: AetherUtils.Core.Configuration.ConfigManager`1
   commentId: T:AetherUtils.Core.Configuration.ConfigManager`1
@@ -1454,42 +1352,6 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: YamlDotNet.Serialization.IDeserializer
-  commentId: T:YamlDotNet.Serialization.IDeserializer
-  parent: YamlDotNet.Serialization
-  isExternal: true
-  name: IDeserializer
-  nameWithType: IDeserializer
-  fullName: YamlDotNet.Serialization.IDeserializer
-- uid: YamlDotNet.Serialization
-  commentId: N:YamlDotNet.Serialization
-  isExternal: true
-  name: YamlDotNet.Serialization
-  nameWithType: YamlDotNet.Serialization
-  fullName: YamlDotNet.Serialization
-  spec.csharp:
-  - uid: YamlDotNet
-    name: YamlDotNet
-    isExternal: true
-  - name: .
-  - uid: YamlDotNet.Serialization
-    name: Serialization
-    isExternal: true
-  spec.vb:
-  - uid: YamlDotNet
-    name: YamlDotNet
-    isExternal: true
-  - name: .
-  - uid: YamlDotNet.Serialization
-    name: Serialization
-    isExternal: true
-- uid: YamlDotNet.Serialization.ISerializer
-  commentId: T:YamlDotNet.Serialization.ISerializer
-  parent: YamlDotNet.Serialization
-  isExternal: true
-  name: ISerializer
-  nameWithType: ISerializer
-  fullName: YamlDotNet.Serialization.ISerializer
 - uid: AetherUtils.Core.Configuration.ConfigManager`1.CurrentConfig*
   commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.CurrentConfig
   href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_CurrentConfig

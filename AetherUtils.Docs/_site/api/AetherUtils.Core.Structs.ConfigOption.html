@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct ConfigOption | AetherUtils ">
       
-      <meta name="description" content="Represents a single configuration option and it&#39;s value. This option can contain a single-dimensional list indexer: optionName[0] - get/set the configuration with name optionName at index 0, where optionName is a list.">
+      <meta name="description" content="Represents a single configuration option and it&#39;s value. This option can contain a single-dimensional list indexer.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="AetherUtils_Core_Structs_ConfigOption" data-uid="AetherUtils.Core.Structs.ConfigOption" class="text-break">
-Struct ConfigOption  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ConfigOption.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Struct ConfigOption  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ConfigOption.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,11 @@ Struct ConfigOption  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary">Represents a single configuration option and it's value. This option can contain a single-dimensional list indexer:
-<code>optionName[0]</code> - get/set the configuration with name <code>optionName</code> at index 0, where <code>optionName</code> is a list.</div>
+  <div class="markdown summary">Represents a single configuration option and it's value. This option can contain a single-dimensional list indexer.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct ConfigOption</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly struct ConfigOption</code></pre>
   </div>
 
 
@@ -137,6 +136,9 @@ Struct ConfigOption  <a class="header-action link-secondary" title="View source"
 
 
 
+  <h2 id="AetherUtils_Core_Structs_ConfigOption_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><code> var option = new ConfigOption("listOption[0]", 2);</code> <br>
+would allow you to change the value of the listOption at index 0 to the value 2.</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -184,14 +186,14 @@ Struct ConfigOption  <a class="header-action link-secondary" title="View source"
 
   <h3 id="AetherUtils_Core_Structs_ConfigOption_ArrayIndexExists" data-uid="AetherUtils.Core.Structs.ConfigOption.ArrayIndexExists">
   ArrayIndexExists
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ConfigOption.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ConfigOption.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly bool ArrayIndexExists { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool ArrayIndexExists { get; }</code></pre>
   </div>
 
 
@@ -215,14 +217,14 @@ Struct ConfigOption  <a class="header-action link-secondary" title="View source"
 
   <h3 id="AetherUtils_Core_Structs_ConfigOption_ArrayIndexer" data-uid="AetherUtils.Core.Structs.ConfigOption.ArrayIndexer">
   ArrayIndexer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ConfigOption.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ConfigOption.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ArrayIndexer { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int ArrayIndexer { get; }</code></pre>
   </div>
 
 
@@ -246,14 +248,14 @@ Struct ConfigOption  <a class="header-action link-secondary" title="View source"
 
   <h3 id="AetherUtils_Core_Structs_ConfigOption_Name" data-uid="AetherUtils.Core.Structs.ConfigOption.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ConfigOption.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ConfigOption.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
   </div>
 
 
@@ -277,14 +279,14 @@ Struct ConfigOption  <a class="header-action link-secondary" title="View source"
 
   <h3 id="AetherUtils_Core_Structs_ConfigOption_Value" data-uid="AetherUtils.Core.Structs.ConfigOption.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ConfigOption.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ConfigOption.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object? Value { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public object? Value { get; }</code></pre>
   </div>
 
 
@@ -308,7 +310,7 @@ Struct ConfigOption  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ConfigOption.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ConfigOption.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -109,11 +109,11 @@ items:
   summary: The issuer of the 2FA tokens.
   example: []
   syntax:
-    content: public string Issuer { get; internal set; }
+    content: public string Issuer { get; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Issuer As String
+    content.vb: Public ReadOnly Property Issuer As String
   overload: AetherUtils.Core.Security.TwoFactor.TwoFactorUser.Issuer*
 - uid: AetherUtils.Core.Security.TwoFactor.TwoFactorUser.AccountTitle
   commentId: P:AetherUtils.Core.Security.TwoFactor.TwoFactorUser.AccountTitle
@@ -140,7 +140,7 @@ items:
   summary: The account title as shown in the user's authenticator app.
   example: []
   syntax:
-    content: public string AccountTitle { get; internal set; }
+    content: public string AccountTitle { get; }
     parameters: []
     return:
       type: System.String
@@ -171,7 +171,7 @@ items:
   summary: The information needed for the user to set the account up in their authenticator app.
   example: []
   syntax:
-    content: public SetupCode? SetupInformation { get; internal set; }
+    content: public SetupCode? SetupInformation { get; }
     parameters: []
     return:
       type: AetherUtils.Core.Security.TwoFactor.SetupCode

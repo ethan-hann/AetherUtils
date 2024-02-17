@@ -225,186 +225,8 @@ Class TwoFactorAuth  <a class="header-action link-secondary" title="View source"
 
 
 
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_Epoch" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.Epoch">
-  Epoch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs/#L15"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static readonly DateTime Epoch</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_DefaultClockDriftTolerance_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.DefaultClockDriftTolerance*"></a>
-
-  <h3 id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_DefaultClockDriftTolerance" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.DefaultClockDriftTolerance">
-  DefaultClockDriftTolerance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs/#L17"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private TimeSpan DefaultClockDriftTolerance { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_HashType_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.HashType*"></a>
-
-  <h3 id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_HashType" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.HashType">
-  HashType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs/#L19"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private HashType HashType { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="AetherUtils.Core.Security.TwoFactor.HashType.html">HashType</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
-
-
-  <a id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_ConvertSecretToBytes_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.ConvertSecretToBytes*"></a>
-
-  <h3 id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_ConvertSecretToBytes_System_String_System_Boolean_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.ConvertSecretToBytes(System.String,System.Boolean)">
-  ConvertSecretToBytes(string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs/#L304"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static byte[] ConvertSecretToBytes(string secret, bool secretIsBase32)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>secret</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>secretIsBase32</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GenerateHashedCode_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateHashedCode*"></a>
-
-  <h3 id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GenerateHashedCode_System_Byte___System_Int64_System_Int32_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateHashedCode(System.Byte[],System.Int64,System.Int32)">
-  GenerateHashedCode(byte[], long, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs/#L105"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private string GenerateHashedCode(byte[] key, long iterationNumber, int digits = 6)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd></dd>
-    <dt><code>iterationNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
-    <dt><code>digits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
 
 
   <a id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GeneratePinAtInterval_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GeneratePinAtInterval*"></a>
@@ -489,44 +311,6 @@ Class TwoFactorAuth  <a class="header-action link-secondary" title="View source"
 
 
 
-  <a id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GenerateQrCodeUrl_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateQrCodeUrl*"></a>
-
-  <h3 id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GenerateQrCodeUrl_System_Int32_System_String_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateQrCodeUrl(System.Int32,System.String)">
-  GenerateQrCodeUrl(int, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs/#L52"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static string GenerateQrCodeUrl(int qrPixelsPerModule, string provisionUrl)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>qrPixelsPerModule</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>provisionUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GenerateSetupInformation_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateSetupInformation*"></a>
 
   <h3 id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GenerateSetupInformation_AetherUtils_Core_Security_TwoFactor_TwoFactorUser__System_Byte___" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateSetupInformation(AetherUtils.Core.Security.TwoFactor.TwoFactorUser@,System.Byte[])">
@@ -560,77 +344,6 @@ Class TwoFactorAuth  <a class="header-action link-secondary" title="View source"
 
 
 
-  <a id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GetCurrentCounter_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter*"></a>
-
-  <h3 id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GetCurrentCounter" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter">
-  GetCurrentCounter()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs/#L133"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static long GetCurrentCounter()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GetCurrentCounter_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter*"></a>
-
-  <h3 id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GetCurrentCounter_System_DateTime_System_DateTime_System_Int32_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter(System.DateTime,System.DateTime,System.Int32)">
-  GetCurrentCounter(DateTime, DateTime, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs/#L135"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static long GetCurrentCounter(DateTime now, DateTime epoch, int timeStep)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>now</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
-    <dt><code>epoch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
-    <dt><code>timeStep</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GetCurrentPin_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentPin*"></a>
 
   <h3 id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GetCurrentPin_System_Byte___" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentPin(System.Byte[])">
@@ -639,7 +352,7 @@ Class TwoFactorAuth  <a class="header-action link-secondary" title="View source"
   </h3>
 
   <div class="markdown level1 summary">Get the PIN for current time; the same code that a 2FA app would generate for the current time.
-Do not validate directly against this as clock drift may cause a a different PIN to be generated.</div>
+Do not validate directly against this as clock drift may cause a different PIN to be generated.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -676,7 +389,7 @@ Do not validate directly against this as clock drift may cause a a different PIN
   </h3>
 
   <div class="markdown level1 summary">Get the PIN for current time; the same code that a 2FA app would generate for the current time.
-Do not validate directly against this as clock drift may cause a a different PIN to be generated.</div>
+Do not validate directly against this as clock drift may cause a different PIN to be generated.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -715,7 +428,7 @@ Do not validate directly against this as clock drift may cause a a different PIN
   </h3>
 
   <div class="markdown level1 summary">Get the PIN for current time; the same code that a 2FA app would generate for the current time.
-Do not validate directly against this as clock drift may cause a a different PIN to be generated than one you did a second ago.</div>
+Do not validate directly against this as clock drift may cause a different PIN to be generated than one you did a second ago.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -754,7 +467,7 @@ Do not validate directly against this as clock drift may cause a a different PIN
   </h3>
 
   <div class="markdown level1 summary">Get the PIN for current time; the same code that a 2FA app would generate for the current time.
-Do not validate directly against this as clock drift may cause a a different PIN to be generated than one you did a second ago.</div>
+Do not validate directly against this as clock drift may cause a different PIN to be generated than one you did a second ago.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -964,42 +677,6 @@ Do not validate directly against this as clock drift may cause a a different PIN
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_UrlEncode_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.UrlEncode*"></a>
-
-  <h3 id="AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_UrlEncode_System_String_" data-uid="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.UrlEncode(System.String)">
-  UrlEncode(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs/#L79"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static string UrlEncode(string value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 

@@ -51,10 +51,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Sha1
     path: ../AetherUtils.Core/Security/TwoFactor/HashType.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
+  summary: Indicates the 2FA codes should use the SHA1 algorithm.
+  example: []
   syntax:
     content: Sha1 = 0
     return:
@@ -77,10 +79,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Sha256
     path: ../AetherUtils.Core/Security/TwoFactor/HashType.cs
-    startLine: 8
+    startLine: 14
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
+  summary: Indicates the 2FA codes should use the SHA256 algorithm.
+  example: []
   syntax:
     content: Sha256 = 1
     return:
@@ -103,10 +107,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Sha512
     path: ../AetherUtils.Core/Security/TwoFactor/HashType.cs
-    startLine: 9
+    startLine: 18
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
+  summary: Indicates the 2FA codes should use the SHA512 algorithm.
+  example: []
   syntax:
     content: Sha512 = 2
     return:

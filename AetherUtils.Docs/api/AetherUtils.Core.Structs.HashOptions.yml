@@ -23,7 +23,6 @@ items:
   - AetherUtils.Core.Structs.HashOptions.Iterations
   - AetherUtils.Core.Structs.HashOptions.KeySize
   - AetherUtils.Core.Structs.HashOptions.SaltLength
-  - AetherUtils.Core.Structs.HashOptions._iterationsSpan
   langs:
   - csharp
   - vb
@@ -61,33 +60,6 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: AetherUtils.Core.Structs.HashOptions._iterationsSpan
-  commentId: F:AetherUtils.Core.Structs.HashOptions._iterationsSpan
-  id: _iterationsSpan
-  parent: AetherUtils.Core.Structs.HashOptions
-  langs:
-  - csharp
-  - vb
-  name: _iterationsSpan
-  nameWithType: HashOptions._iterationsSpan
-  fullName: AetherUtils.Core.Structs.HashOptions._iterationsSpan
-  type: Field
-  source:
-    remote:
-      path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: _iterationsSpan
-    path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 13
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Structs
-  syntax:
-    content: private readonly ReadOnlyPair<int, int> _iterationsSpan
-    return:
-      type: AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32}
-    content.vb: Private ReadOnly _iterationsSpan As ReadOnlyPair(Of Integer, Integer)
 - uid: AetherUtils.Core.Structs.HashOptions.SaltLength
   commentId: P:AetherUtils.Core.Structs.HashOptions.SaltLength
   id: SaltLength
@@ -995,82 +967,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32}
-  commentId: T:AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32}
-  parent: AetherUtils.Core.Structs
-  definition: AetherUtils.Core.Structs.ReadOnlyPair`2
-  href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
-  name: ReadOnlyPair<int, int>
-  nameWithType: ReadOnlyPair<int, int>
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<int, int>
-  nameWithType.vb: ReadOnlyPair(Of Integer, Integer)
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of Integer, Integer)
-  name.vb: ReadOnlyPair(Of Integer, Integer)
-  spec.csharp:
-  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
-    name: ReadOnlyPair
-    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
-  - name: <
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: '>'
-  spec.vb:
-  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
-    name: ReadOnlyPair
-    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-- uid: AetherUtils.Core.Structs.ReadOnlyPair`2
-  commentId: T:AetherUtils.Core.Structs.ReadOnlyPair`2
-  href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
-  name: ReadOnlyPair<K, V>
-  nameWithType: ReadOnlyPair<K, V>
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>
-  nameWithType.vb: ReadOnlyPair(Of K, V)
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V)
-  name.vb: ReadOnlyPair(Of K, V)
-  spec.csharp:
-  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
-    name: ReadOnlyPair
-    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
-  - name: <
-  - name: K
-  - name: ','
-  - name: " "
-  - name: V
-  - name: '>'
-  spec.vb:
-  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
-    name: ReadOnlyPair
-    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: K
-  - name: ','
-  - name: " "
-  - name: V
-  - name: )
 - uid: AetherUtils.Core.Structs.HashOptions.SaltLength*
   commentId: Overload:AetherUtils.Core.Structs.HashOptions.SaltLength
   href: AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_SaltLength
@@ -1211,4 +1107,80 @@ references:
   nameWithType.vb: HashOptions.New
   fullName.vb: AetherUtils.Core.Structs.HashOptions.New
   name.vb: New
+- uid: AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32}
+  commentId: T:AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32}
+  parent: AetherUtils.Core.Structs
+  definition: AetherUtils.Core.Structs.ReadOnlyPair`2
+  href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  name: ReadOnlyPair<int, int>
+  nameWithType: ReadOnlyPair<int, int>
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<int, int>
+  nameWithType.vb: ReadOnlyPair(Of Integer, Integer)
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of Integer, Integer)
+  name.vb: ReadOnlyPair(Of Integer, Integer)
+  spec.csharp:
+  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+    name: ReadOnlyPair
+    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+    name: ReadOnlyPair
+    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+  commentId: T:AetherUtils.Core.Structs.ReadOnlyPair`2
+  href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  name: ReadOnlyPair<K, V>
+  nameWithType: ReadOnlyPair<K, V>
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>
+  nameWithType.vb: ReadOnlyPair(Of K, V)
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V)
+  name.vb: ReadOnlyPair(Of K, V)
+  spec.csharp:
+  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+    name: ReadOnlyPair
+    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  - name: <
+  - name: K
+  - name: ','
+  - name: " "
+  - name: V
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+    name: ReadOnlyPair
+    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: K
+  - name: ','
+  - name: " "
+  - name: V
+  - name: )
 shouldSkipMarkup: true
