@@ -12,7 +12,7 @@ namespace AetherUtils.Core.Licensing.Models
     {
         [XmlAttribute(AttributeName = "Id")]
         [Browsable(false)]
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         [XmlElement(ElementName = "Type")]
         [Browsable(true)]
@@ -46,12 +46,10 @@ namespace AetherUtils.Core.Licensing.Models
         [XmlElement(ElementName = "Signature")]
         [Browsable(false)]
         public string Signature { get; set; } = string.Empty;
-
-        public License() { }
+        
 
         /// <summary>
         /// Get a string that represents this license object:<br/>
-        /// 
         /// ID: <br/>
         /// Type: <br/>
         /// Expiration: <br/>
@@ -60,17 +58,17 @@ namespace AetherUtils.Core.Licensing.Models
         /// Customer Email:
         /// </summary>
         /// <returns>A string representing this <see cref="License"/>.</returns>
-        // public override string ToString()
-        // {
-        //     var sb = new StringBuilder();
-        //     sb = sb.AppendLine($"ID: {Id}")
-        //         .AppendLine($"Type: {Type.ToString()}")
-        //         .AppendLine($"Expiration: {Expiration.ToString(CultureInfo.InvariantCulture)}")
-        //         .AppendLine($"Quantity: {Quantity}")
-        //         .AppendLine($"Customer: {Customer.Name}")
-        //         .AppendLine($"Customer Email: {Customer.Email}");
-        //     return sb.ToString();
-        //
-        // }
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb = sb.AppendLine($"ID: {Id}")
+                .AppendLine($"Type: {Type.ToString()}")
+                .AppendLine($"Expiration: {Expiration.ToString(CultureInfo.InvariantCulture)}")
+                .AppendLine($"Quantity: {Quantity}")
+                .AppendLine($"Customer: {Customer.Name}")
+                .AppendLine($"Customer Email: {Customer.Email}");
+            return sb.ToString();
+        
+        }
     }
 }
