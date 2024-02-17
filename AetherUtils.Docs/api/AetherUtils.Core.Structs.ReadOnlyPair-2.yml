@@ -1,0 +1,427 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+  commentId: T:AetherUtils.Core.Structs.ReadOnlyPair`2
+  id: ReadOnlyPair`2
+  parent: AetherUtils.Core.Structs
+  children:
+  - AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor(`0,`1)
+  - AetherUtils.Core.Structs.ReadOnlyPair`2.Key
+  - AetherUtils.Core.Structs.ReadOnlyPair`2.Value
+  langs:
+  - csharp
+  - vb
+  name: ReadOnlyPair<K, V>
+  nameWithType: ReadOnlyPair<K, V>
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>
+  type: Struct
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/ReadOnlyPair.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: ReadOnlyPair
+    path: ../AetherUtils.Core/Structs/ReadOnlyPair.cs
+    startLine: 7
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  summary: Represents a generic key-value pair that is read-only; Once the pair is instantiated, the values cannot be changed.
+  example: []
+  syntax:
+    content: public readonly struct ReadOnlyPair<K, V>
+    typeParameters:
+    - id: K
+      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> for the key.
+    - id: V
+      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> for the value.
+    content.vb: Public Structure ReadOnlyPair(Of K, V)
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  nameWithType.vb: ReadOnlyPair(Of K, V)
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V)
+  name.vb: ReadOnlyPair(Of K, V)
+- uid: AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor(`0,`1)
+  commentId: M:AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor(`0,`1)
+  id: '#ctor(`0,`1)'
+  parent: AetherUtils.Core.Structs.ReadOnlyPair`2
+  langs:
+  - csharp
+  - vb
+  name: ReadOnlyPair(K?, V?)
+  nameWithType: ReadOnlyPair<K, V>.ReadOnlyPair(K?, V?)
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>.ReadOnlyPair(K?, V?)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/ReadOnlyPair.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/ReadOnlyPair.cs
+    startLine: 7
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  summary: Represents a generic key-value pair that is read-only; Once the pair is instantiated, the values cannot be changed.
+  example: []
+  syntax:
+    content: public ReadOnlyPair(K? key, V? value)
+    parameters:
+    - id: key
+      type: '{K}'
+    - id: value
+      type: '{V}'
+    content.vb: Public Sub New(key As K, value As V)
+  overload: AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor*
+  nameWithType.vb: ReadOnlyPair(Of K, V).New(K, V)
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V).New(K, V)
+  name.vb: New(K, V)
+- uid: AetherUtils.Core.Structs.ReadOnlyPair`2.Key
+  commentId: F:AetherUtils.Core.Structs.ReadOnlyPair`2.Key
+  id: Key
+  parent: AetherUtils.Core.Structs.ReadOnlyPair`2
+  langs:
+  - csharp
+  - vb
+  name: Key
+  nameWithType: ReadOnlyPair<K, V>.Key
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>.Key
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/ReadOnlyPair.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Key
+    path: ../AetherUtils.Core/Structs/ReadOnlyPair.cs
+    startLine: 9
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public readonly K? Key
+    return:
+      type: '{K}'
+    content.vb: Public ReadOnly Key As K
+  nameWithType.vb: ReadOnlyPair(Of K, V).Key
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V).Key
+- uid: AetherUtils.Core.Structs.ReadOnlyPair`2.Value
+  commentId: F:AetherUtils.Core.Structs.ReadOnlyPair`2.Value
+  id: Value
+  parent: AetherUtils.Core.Structs.ReadOnlyPair`2
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ReadOnlyPair<K, V>.Value
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>.Value
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/ReadOnlyPair.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Value
+    path: ../AetherUtils.Core/Structs/ReadOnlyPair.cs
+    startLine: 10
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public readonly V? Value
+    return:
+      type: '{V}'
+    content.vb: Public ReadOnly Value As V
+  nameWithType.vb: ReadOnlyPair(Of K, V).Value
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V).Value
+references:
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: AetherUtils.Core.Structs
+  commentId: N:AetherUtils.Core.Structs
+  href: AetherUtils.html
+  name: AetherUtils.Core.Structs
+  nameWithType: AetherUtils.Core.Structs
+  fullName: AetherUtils.Core.Structs
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Structs
+    name: Structs
+    href: AetherUtils.Core.Structs.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Structs
+    name: Structs
+    href: AetherUtils.Core.Structs.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor*
+  commentId: Overload:AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor
+  href: AetherUtils.Core.Structs.ReadOnlyPair-2.html#AetherUtils_Core_Structs_ReadOnlyPair_2__ctor__0__1_
+  name: ReadOnlyPair
+  nameWithType: ReadOnlyPair<K, V>.ReadOnlyPair
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>.ReadOnlyPair
+  nameWithType.vb: ReadOnlyPair(Of K, V).New
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V).New
+  name.vb: New
+- uid: '{K}'
+  commentId: '!:K'
+  definition: K
+  name: K
+  nameWithType: K
+  fullName: K
+- uid: '{V}'
+  commentId: '!:V'
+  definition: V
+  name: V
+  nameWithType: V
+  fullName: V
+- uid: K
+  name: K
+  nameWithType: K
+  fullName: K
+- uid: V
+  name: V
+  nameWithType: V
+  fullName: V

@@ -1,0 +1,133 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Extensions
+  commentId: N:AetherUtils.Core.Extensions
+  id: AetherUtils.Core.Extensions
+  children:
+  - AetherUtils.Core.Extensions.ArrayExtensions
+  - AetherUtils.Core.Extensions.CollectionExtensions
+  - AetherUtils.Core.Extensions.ControlExtensions
+  - AetherUtils.Core.Extensions.DataTableExtensions
+  - AetherUtils.Core.Extensions.EnumExtensions
+  - AetherUtils.Core.Extensions.ImageExtensions
+  - AetherUtils.Core.Extensions.NumberExtensions
+  - AetherUtils.Core.Extensions.SizeExtensions
+  - AetherUtils.Core.Extensions.StreamExtensions
+  - AetherUtils.Core.Extensions.StringExtensions
+  - AetherUtils.Core.Extensions.TimeExtensions
+  - AetherUtils.Core.Extensions.TypeExtensions
+  langs:
+  - csharp
+  - vb
+  name: AetherUtils.Core.Extensions
+  nameWithType: AetherUtils.Core.Extensions
+  fullName: AetherUtils.Core.Extensions
+  type: Namespace
+  assemblies:
+  - AetherUtils.Core
+references:
+- uid: AetherUtils.Core.Extensions.ArrayExtensions
+  commentId: T:AetherUtils.Core.Extensions.ArrayExtensions
+  href: AetherUtils.Core.Extensions.ArrayExtensions.html
+  name: ArrayExtensions
+  nameWithType: ArrayExtensions
+  fullName: AetherUtils.Core.Extensions.ArrayExtensions
+- uid: AetherUtils.Core.Extensions.CollectionExtensions
+  commentId: T:AetherUtils.Core.Extensions.CollectionExtensions
+  parent: AetherUtils.Core.Extensions
+  href: AetherUtils.Core.Extensions.CollectionExtensions.html
+  name: CollectionExtensions
+  nameWithType: CollectionExtensions
+  fullName: AetherUtils.Core.Extensions.CollectionExtensions
+- uid: AetherUtils.Core.Extensions.ControlExtensions
+  commentId: T:AetherUtils.Core.Extensions.ControlExtensions
+  href: AetherUtils.Core.Extensions.ControlExtensions.html
+  name: ControlExtensions
+  nameWithType: ControlExtensions
+  fullName: AetherUtils.Core.Extensions.ControlExtensions
+- uid: AetherUtils.Core.Extensions.DataTableExtensions
+  commentId: T:AetherUtils.Core.Extensions.DataTableExtensions
+  href: AetherUtils.Core.Extensions.DataTableExtensions.html
+  name: DataTableExtensions
+  nameWithType: DataTableExtensions
+  fullName: AetherUtils.Core.Extensions.DataTableExtensions
+- uid: AetherUtils.Core.Extensions.EnumExtensions
+  commentId: T:AetherUtils.Core.Extensions.EnumExtensions
+  parent: AetherUtils.Core.Extensions
+  href: AetherUtils.Core.Extensions.EnumExtensions.html
+  name: EnumExtensions
+  nameWithType: EnumExtensions
+  fullName: AetherUtils.Core.Extensions.EnumExtensions
+- uid: AetherUtils.Core.Extensions.ImageExtensions
+  commentId: T:AetherUtils.Core.Extensions.ImageExtensions
+  href: AetherUtils.Core.Extensions.ImageExtensions.html
+  name: ImageExtensions
+  nameWithType: ImageExtensions
+  fullName: AetherUtils.Core.Extensions.ImageExtensions
+- uid: AetherUtils.Core.Extensions.NumberExtensions
+  commentId: T:AetherUtils.Core.Extensions.NumberExtensions
+  href: AetherUtils.Core.Extensions.NumberExtensions.html
+  name: NumberExtensions
+  nameWithType: NumberExtensions
+  fullName: AetherUtils.Core.Extensions.NumberExtensions
+- uid: AetherUtils.Core.Extensions.SizeExtensions
+  commentId: T:AetherUtils.Core.Extensions.SizeExtensions
+  href: AetherUtils.Core.Extensions.SizeExtensions.html
+  name: SizeExtensions
+  nameWithType: SizeExtensions
+  fullName: AetherUtils.Core.Extensions.SizeExtensions
+- uid: AetherUtils.Core.Extensions.StreamExtensions
+  commentId: T:AetherUtils.Core.Extensions.StreamExtensions
+  href: AetherUtils.Core.Extensions.StreamExtensions.html
+  name: StreamExtensions
+  nameWithType: StreamExtensions
+  fullName: AetherUtils.Core.Extensions.StreamExtensions
+- uid: AetherUtils.Core.Extensions.StringExtensions
+  commentId: T:AetherUtils.Core.Extensions.StringExtensions
+  href: AetherUtils.Core.Extensions.StringExtensions.html
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: AetherUtils.Core.Extensions.StringExtensions
+- uid: AetherUtils.Core.Extensions.TimeExtensions
+  commentId: T:AetherUtils.Core.Extensions.TimeExtensions
+  href: AetherUtils.Core.Extensions.TimeExtensions.html
+  name: TimeExtensions
+  nameWithType: TimeExtensions
+  fullName: AetherUtils.Core.Extensions.TimeExtensions
+- uid: AetherUtils.Core.Extensions.TypeExtensions
+  commentId: T:AetherUtils.Core.Extensions.TypeExtensions
+  parent: AetherUtils.Core.Extensions
+  href: AetherUtils.Core.Extensions.TypeExtensions.html
+  name: TypeExtensions
+  nameWithType: TypeExtensions
+  fullName: AetherUtils.Core.Extensions.TypeExtensions
+- uid: AetherUtils.Core.Extensions
+  commentId: N:AetherUtils.Core.Extensions
+  href: AetherUtils.html
+  name: AetherUtils.Core.Extensions
+  nameWithType: AetherUtils.Core.Extensions
+  fullName: AetherUtils.Core.Extensions
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html

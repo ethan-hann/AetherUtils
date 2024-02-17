@@ -1,0 +1,495 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  commentId: T:AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  id: Shell32.SHFILEINFO
+  parent: AetherUtils.Core.WinForms
+  children:
+  - AetherUtils.Core.WinForms.Shell32.SHFILEINFO.NAMESIZE
+  - AetherUtils.Core.WinForms.Shell32.SHFILEINFO.dwAttributes
+  - AetherUtils.Core.WinForms.Shell32.SHFILEINFO.hIcon
+  - AetherUtils.Core.WinForms.Shell32.SHFILEINFO.iIcon
+  - AetherUtils.Core.WinForms.Shell32.SHFILEINFO.szDisplayName
+  - AetherUtils.Core.WinForms.Shell32.SHFILEINFO.szTypeName
+  langs:
+  - csharp
+  - vb
+  name: Shell32.SHFILEINFO
+  nameWithType: Shell32.SHFILEINFO
+  fullName: AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  type: Struct
+  source:
+    remote:
+      path: AetherUtils.Core/WinForms/IconReader.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: SHFILEINFO
+    path: ../AetherUtils.Core/WinForms/IconReader.cs
+    startLine: 195
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.WinForms
+  syntax:
+    content: public struct Shell32.SHFILEINFO
+    content.vb: Public Structure Shell32.SHFILEINFO
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.NAMESIZE
+  commentId: F:AetherUtils.Core.WinForms.Shell32.SHFILEINFO.NAMESIZE
+  id: NAMESIZE
+  parent: AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  langs:
+  - csharp
+  - vb
+  name: NAMESIZE
+  nameWithType: Shell32.SHFILEINFO.NAMESIZE
+  fullName: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.NAMESIZE
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/WinForms/IconReader.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: NAMESIZE
+    path: ../AetherUtils.Core/WinForms/IconReader.cs
+    startLine: 198
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.WinForms
+  syntax:
+    content: public const int NAMESIZE = 80
+    return:
+      type: System.Int32
+    content.vb: Public Const NAMESIZE As Integer = 80
+- uid: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.hIcon
+  commentId: F:AetherUtils.Core.WinForms.Shell32.SHFILEINFO.hIcon
+  id: hIcon
+  parent: AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  langs:
+  - csharp
+  - vb
+  name: hIcon
+  nameWithType: Shell32.SHFILEINFO.hIcon
+  fullName: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.hIcon
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/WinForms/IconReader.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: hIcon
+    path: ../AetherUtils.Core/WinForms/IconReader.cs
+    startLine: 199
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.WinForms
+  syntax:
+    content: public nint hIcon
+    return:
+      type: System.IntPtr
+    content.vb: Public hIcon As IntPtr
+- uid: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.iIcon
+  commentId: F:AetherUtils.Core.WinForms.Shell32.SHFILEINFO.iIcon
+  id: iIcon
+  parent: AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  langs:
+  - csharp
+  - vb
+  name: iIcon
+  nameWithType: Shell32.SHFILEINFO.iIcon
+  fullName: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.iIcon
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/WinForms/IconReader.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: iIcon
+    path: ../AetherUtils.Core/WinForms/IconReader.cs
+    startLine: 200
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.WinForms
+  syntax:
+    content: public int iIcon
+    return:
+      type: System.Int32
+    content.vb: Public iIcon As Integer
+- uid: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.dwAttributes
+  commentId: F:AetherUtils.Core.WinForms.Shell32.SHFILEINFO.dwAttributes
+  id: dwAttributes
+  parent: AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  langs:
+  - csharp
+  - vb
+  name: dwAttributes
+  nameWithType: Shell32.SHFILEINFO.dwAttributes
+  fullName: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.dwAttributes
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/WinForms/IconReader.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: dwAttributes
+    path: ../AetherUtils.Core/WinForms/IconReader.cs
+    startLine: 201
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.WinForms
+  syntax:
+    content: public uint dwAttributes
+    return:
+      type: System.UInt32
+    content.vb: Public dwAttributes As UInteger
+- uid: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.szDisplayName
+  commentId: F:AetherUtils.Core.WinForms.Shell32.SHFILEINFO.szDisplayName
+  id: szDisplayName
+  parent: AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  langs:
+  - csharp
+  - vb
+  name: szDisplayName
+  nameWithType: Shell32.SHFILEINFO.szDisplayName
+  fullName: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.szDisplayName
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/WinForms/IconReader.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: szDisplayName
+    path: ../AetherUtils.Core/WinForms/IconReader.cs
+    startLine: 204
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.WinForms
+  syntax:
+    content: public string szDisplayName
+    return:
+      type: System.String
+    content.vb: Public szDisplayName As String
+- uid: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.szTypeName
+  commentId: F:AetherUtils.Core.WinForms.Shell32.SHFILEINFO.szTypeName
+  id: szTypeName
+  parent: AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  langs:
+  - csharp
+  - vb
+  name: szTypeName
+  nameWithType: Shell32.SHFILEINFO.szTypeName
+  fullName: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.szTypeName
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/WinForms/IconReader.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: szTypeName
+    path: ../AetherUtils.Core/WinForms/IconReader.cs
+    startLine: 207
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.WinForms
+  syntax:
+    content: public string szTypeName
+    return:
+      type: System.String
+    content.vb: Public szTypeName As String
+references:
+- uid: AetherUtils.Core.WinForms
+  commentId: N:AetherUtils.Core.WinForms
+  href: AetherUtils.html
+  name: AetherUtils.Core.WinForms
+  nameWithType: AetherUtils.Core.WinForms
+  fullName: AetherUtils.Core.WinForms
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms
+    name: WinForms
+    href: AetherUtils.Core.WinForms.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms
+    name: WinForms
+    href: AetherUtils.Core.WinForms.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

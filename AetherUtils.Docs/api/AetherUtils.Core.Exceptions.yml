@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Exceptions
+  commentId: N:AetherUtils.Core.Exceptions
+  id: AetherUtils.Core.Exceptions
+  children:
+  - AetherUtils.Core.Exceptions.PasswordRuleException
+  - AetherUtils.Core.Exceptions.QrException
+  langs:
+  - csharp
+  - vb
+  name: AetherUtils.Core.Exceptions
+  nameWithType: AetherUtils.Core.Exceptions
+  fullName: AetherUtils.Core.Exceptions
+  type: Namespace
+  assemblies:
+  - AetherUtils.Core
+references:
+- uid: AetherUtils.Core.Exceptions.PasswordRuleException
+  commentId: T:AetherUtils.Core.Exceptions.PasswordRuleException
+  href: AetherUtils.Core.Exceptions.PasswordRuleException.html
+  name: PasswordRuleException
+  nameWithType: PasswordRuleException
+  fullName: AetherUtils.Core.Exceptions.PasswordRuleException
+- uid: AetherUtils.Core.Exceptions.QrException
+  commentId: T:AetherUtils.Core.Exceptions.QrException
+  href: AetherUtils.Core.Exceptions.QrException.html
+  name: QrException
+  nameWithType: QrException
+  fullName: AetherUtils.Core.Exceptions.QrException

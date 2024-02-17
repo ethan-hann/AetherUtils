@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Licensing
+  commentId: N:AetherUtils.Core.Licensing
+  id: AetherUtils.Core.Licensing
+  children:
+  - AetherUtils.Core.Licensing.KeyManager
+  - AetherUtils.Core.Licensing.KeyPair
+  - AetherUtils.Core.Licensing.Licenser
+  langs:
+  - csharp
+  - vb
+  name: AetherUtils.Core.Licensing
+  nameWithType: AetherUtils.Core.Licensing
+  fullName: AetherUtils.Core.Licensing
+  type: Namespace
+  assemblies:
+  - AetherUtils.Core
+references:
+- uid: AetherUtils.Core.Licensing.KeyManager
+  commentId: T:AetherUtils.Core.Licensing.KeyManager
+  href: AetherUtils.Core.Licensing.KeyManager.html
+  name: KeyManager
+  nameWithType: KeyManager
+  fullName: AetherUtils.Core.Licensing.KeyManager
+- uid: AetherUtils.Core.Licensing.KeyPair
+  commentId: T:AetherUtils.Core.Licensing.KeyPair
+  parent: AetherUtils.Core.Licensing
+  href: AetherUtils.Core.Licensing.KeyPair.html
+  name: KeyPair
+  nameWithType: KeyPair
+  fullName: AetherUtils.Core.Licensing.KeyPair
+- uid: AetherUtils.Core.Licensing.Licenser
+  commentId: T:AetherUtils.Core.Licensing.Licenser
+  href: AetherUtils.Core.Licensing.Licenser.html
+  name: Licenser
+  nameWithType: Licenser
+  fullName: AetherUtils.Core.Licensing.Licenser
+- uid: AetherUtils.Core.Licensing
+  commentId: N:AetherUtils.Core.Licensing
+  href: AetherUtils.html
+  name: AetherUtils.Core.Licensing
+  nameWithType: AetherUtils.Core.Licensing
+  fullName: AetherUtils.Core.Licensing
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Licensing
+    name: Licensing
+    href: AetherUtils.Core.Licensing.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Licensing
+    name: Licensing
+    href: AetherUtils.Core.Licensing.html

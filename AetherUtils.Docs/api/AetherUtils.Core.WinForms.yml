@@ -1,0 +1,216 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.WinForms
+  commentId: N:AetherUtils.Core.WinForms
+  id: AetherUtils.Core.WinForms
+  children:
+  - AetherUtils.Core.WinForms.IconListManager
+  - AetherUtils.Core.WinForms.IconReader
+  - AetherUtils.Core.WinForms.IconReader.FolderType
+  - AetherUtils.Core.WinForms.IconReader.IconSize
+  - AetherUtils.Core.WinForms.Shell32
+  - AetherUtils.Core.WinForms.Shell32.BROWSEINFO
+  - AetherUtils.Core.WinForms.Shell32.ITEMIDLIST
+  - AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  - AetherUtils.Core.WinForms.Shell32.SHITEMID
+  - AetherUtils.Core.WinForms.User32
+  langs:
+  - csharp
+  - vb
+  name: AetherUtils.Core.WinForms
+  nameWithType: AetherUtils.Core.WinForms
+  fullName: AetherUtils.Core.WinForms
+  type: Namespace
+  assemblies:
+  - AetherUtils.Core
+references:
+- uid: AetherUtils.Core.WinForms.IconListManager
+  commentId: T:AetherUtils.Core.WinForms.IconListManager
+  href: AetherUtils.Core.WinForms.IconListManager.html
+  name: IconListManager
+  nameWithType: IconListManager
+  fullName: AetherUtils.Core.WinForms.IconListManager
+- uid: AetherUtils.Core.WinForms.IconReader
+  commentId: T:AetherUtils.Core.WinForms.IconReader
+  href: AetherUtils.Core.WinForms.IconReader.html
+  name: IconReader
+  nameWithType: IconReader
+  fullName: AetherUtils.Core.WinForms.IconReader
+- uid: AetherUtils.Core.WinForms.IconReader.FolderType
+  commentId: T:AetherUtils.Core.WinForms.IconReader.FolderType
+  parent: AetherUtils.Core.WinForms
+  href: AetherUtils.Core.WinForms.IconReader.html
+  name: IconReader.FolderType
+  nameWithType: IconReader.FolderType
+  fullName: AetherUtils.Core.WinForms.IconReader.FolderType
+  spec.csharp:
+  - uid: AetherUtils.Core.WinForms.IconReader
+    name: IconReader
+    href: AetherUtils.Core.WinForms.IconReader.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms.IconReader.FolderType
+    name: FolderType
+    href: AetherUtils.Core.WinForms.IconReader.FolderType.html
+  spec.vb:
+  - uid: AetherUtils.Core.WinForms.IconReader
+    name: IconReader
+    href: AetherUtils.Core.WinForms.IconReader.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms.IconReader.FolderType
+    name: FolderType
+    href: AetherUtils.Core.WinForms.IconReader.FolderType.html
+- uid: AetherUtils.Core.WinForms.IconReader.IconSize
+  commentId: T:AetherUtils.Core.WinForms.IconReader.IconSize
+  parent: AetherUtils.Core.WinForms
+  href: AetherUtils.Core.WinForms.IconReader.html
+  name: IconReader.IconSize
+  nameWithType: IconReader.IconSize
+  fullName: AetherUtils.Core.WinForms.IconReader.IconSize
+  spec.csharp:
+  - uid: AetherUtils.Core.WinForms.IconReader
+    name: IconReader
+    href: AetherUtils.Core.WinForms.IconReader.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms.IconReader.IconSize
+    name: IconSize
+    href: AetherUtils.Core.WinForms.IconReader.IconSize.html
+  spec.vb:
+  - uid: AetherUtils.Core.WinForms.IconReader
+    name: IconReader
+    href: AetherUtils.Core.WinForms.IconReader.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms.IconReader.IconSize
+    name: IconSize
+    href: AetherUtils.Core.WinForms.IconReader.IconSize.html
+- uid: AetherUtils.Core.WinForms.Shell32
+  commentId: T:AetherUtils.Core.WinForms.Shell32
+  href: AetherUtils.Core.WinForms.Shell32.html
+  name: Shell32
+  nameWithType: Shell32
+  fullName: AetherUtils.Core.WinForms.Shell32
+- uid: AetherUtils.Core.WinForms.Shell32.SHITEMID
+  commentId: T:AetherUtils.Core.WinForms.Shell32.SHITEMID
+  parent: AetherUtils.Core.WinForms
+  href: AetherUtils.Core.WinForms.Shell32.html
+  name: Shell32.SHITEMID
+  nameWithType: Shell32.SHITEMID
+  fullName: AetherUtils.Core.WinForms.Shell32.SHITEMID
+  spec.csharp:
+  - uid: AetherUtils.Core.WinForms.Shell32
+    name: Shell32
+    href: AetherUtils.Core.WinForms.Shell32.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms.Shell32.SHITEMID
+    name: SHITEMID
+    href: AetherUtils.Core.WinForms.Shell32.SHITEMID.html
+  spec.vb:
+  - uid: AetherUtils.Core.WinForms.Shell32
+    name: Shell32
+    href: AetherUtils.Core.WinForms.Shell32.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms.Shell32.SHITEMID
+    name: SHITEMID
+    href: AetherUtils.Core.WinForms.Shell32.SHITEMID.html
+- uid: AetherUtils.Core.WinForms.Shell32.ITEMIDLIST
+  commentId: T:AetherUtils.Core.WinForms.Shell32.ITEMIDLIST
+  href: AetherUtils.Core.WinForms.Shell32.html
+  name: Shell32.ITEMIDLIST
+  nameWithType: Shell32.ITEMIDLIST
+  fullName: AetherUtils.Core.WinForms.Shell32.ITEMIDLIST
+  spec.csharp:
+  - uid: AetherUtils.Core.WinForms.Shell32
+    name: Shell32
+    href: AetherUtils.Core.WinForms.Shell32.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms.Shell32.ITEMIDLIST
+    name: ITEMIDLIST
+    href: AetherUtils.Core.WinForms.Shell32.ITEMIDLIST.html
+  spec.vb:
+  - uid: AetherUtils.Core.WinForms.Shell32
+    name: Shell32
+    href: AetherUtils.Core.WinForms.Shell32.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms.Shell32.ITEMIDLIST
+    name: ITEMIDLIST
+    href: AetherUtils.Core.WinForms.Shell32.ITEMIDLIST.html
+- uid: AetherUtils.Core.WinForms.Shell32.BROWSEINFO
+  commentId: T:AetherUtils.Core.WinForms.Shell32.BROWSEINFO
+  href: AetherUtils.Core.WinForms.Shell32.html
+  name: Shell32.BROWSEINFO
+  nameWithType: Shell32.BROWSEINFO
+  fullName: AetherUtils.Core.WinForms.Shell32.BROWSEINFO
+  spec.csharp:
+  - uid: AetherUtils.Core.WinForms.Shell32
+    name: Shell32
+    href: AetherUtils.Core.WinForms.Shell32.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms.Shell32.BROWSEINFO
+    name: BROWSEINFO
+    href: AetherUtils.Core.WinForms.Shell32.BROWSEINFO.html
+  spec.vb:
+  - uid: AetherUtils.Core.WinForms.Shell32
+    name: Shell32
+    href: AetherUtils.Core.WinForms.Shell32.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms.Shell32.BROWSEINFO
+    name: BROWSEINFO
+    href: AetherUtils.Core.WinForms.Shell32.BROWSEINFO.html
+- uid: AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  commentId: T:AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  parent: AetherUtils.Core.WinForms
+  href: AetherUtils.Core.WinForms.Shell32.html
+  name: Shell32.SHFILEINFO
+  nameWithType: Shell32.SHFILEINFO
+  fullName: AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+  spec.csharp:
+  - uid: AetherUtils.Core.WinForms.Shell32
+    name: Shell32
+    href: AetherUtils.Core.WinForms.Shell32.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+    name: SHFILEINFO
+    href: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.html
+  spec.vb:
+  - uid: AetherUtils.Core.WinForms.Shell32
+    name: Shell32
+    href: AetherUtils.Core.WinForms.Shell32.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms.Shell32.SHFILEINFO
+    name: SHFILEINFO
+    href: AetherUtils.Core.WinForms.Shell32.SHFILEINFO.html
+- uid: AetherUtils.Core.WinForms.User32
+  commentId: T:AetherUtils.Core.WinForms.User32
+  href: AetherUtils.Core.WinForms.User32.html
+  name: User32
+  nameWithType: User32
+  fullName: AetherUtils.Core.WinForms.User32
+- uid: AetherUtils.Core.WinForms
+  commentId: N:AetherUtils.Core.WinForms
+  href: AetherUtils.html
+  name: AetherUtils.Core.WinForms
+  nameWithType: AetherUtils.Core.WinForms
+  fullName: AetherUtils.Core.WinForms
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms
+    name: WinForms
+    href: AetherUtils.Core.WinForms.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.WinForms
+    name: WinForms
+    href: AetherUtils.Core.WinForms.html

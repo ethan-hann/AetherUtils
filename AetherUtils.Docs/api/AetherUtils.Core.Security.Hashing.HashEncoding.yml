@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Security.Hashing.HashEncoding
+  commentId: T:AetherUtils.Core.Security.Hashing.HashEncoding
+  id: HashEncoding
+  parent: AetherUtils.Core.Security.Hashing
+  children:
+  - AetherUtils.Core.Security.Hashing.HashEncoding.Base64
+  - AetherUtils.Core.Security.Hashing.HashEncoding.Hex
+  langs:
+  - csharp
+  - vb
+  name: HashEncoding
+  nameWithType: HashEncoding
+  fullName: AetherUtils.Core.Security.Hashing.HashEncoding
+  type: Enum
+  source:
+    remote:
+      path: AetherUtils.Core/Security/Hashing/HashEncoding.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: HashEncoding
+    path: ../AetherUtils.Core/Security/Hashing/HashEncoding.cs
+    startLine: 5
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.Hashing
+  summary: Represents valid encoding options for hashing.
+  example: []
+  syntax:
+    content: public enum HashEncoding
+    content.vb: Public Enum HashEncoding
+  extensionMethods:
+  - AetherUtils.Core.Security.Hashing.HashEncoding.AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString``1
+- uid: AetherUtils.Core.Security.Hashing.HashEncoding.Hex
+  commentId: F:AetherUtils.Core.Security.Hashing.HashEncoding.Hex
+  id: Hex
+  parent: AetherUtils.Core.Security.Hashing.HashEncoding
+  langs:
+  - csharp
+  - vb
+  name: Hex
+  nameWithType: HashEncoding.Hex
+  fullName: AetherUtils.Core.Security.Hashing.HashEncoding.Hex
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/Security/Hashing/HashEncoding.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Hex
+    path: ../AetherUtils.Core/Security/Hashing/HashEncoding.cs
+    startLine: 10
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.Hashing
+  summary: Represents Hexadecimal encoding (BASE-16).
+  example: []
+  syntax:
+    content: Hex = 16
+    return:
+      type: AetherUtils.Core.Security.Hashing.HashEncoding
+- uid: AetherUtils.Core.Security.Hashing.HashEncoding.Base64
+  commentId: F:AetherUtils.Core.Security.Hashing.HashEncoding.Base64
+  id: Base64
+  parent: AetherUtils.Core.Security.Hashing.HashEncoding
+  langs:
+  - csharp
+  - vb
+  name: Base64
+  nameWithType: HashEncoding.Base64
+  fullName: AetherUtils.Core.Security.Hashing.HashEncoding.Base64
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/Security/Hashing/HashEncoding.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Base64
+    path: ../AetherUtils.Core/Security/Hashing/HashEncoding.cs
+    startLine: 15
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.Hashing
+  summary: Represents BASE-64 encoding.
+  example: []
+  syntax:
+    content: Base64 = 64
+    return:
+      type: AetherUtils.Core.Security.Hashing.HashEncoding
+references:
+- uid: AetherUtils.Core.Security.Hashing
+  commentId: N:AetherUtils.Core.Security.Hashing
+  href: AetherUtils.html
+  name: AetherUtils.Core.Security.Hashing
+  nameWithType: AetherUtils.Core.Security.Hashing
+  fullName: AetherUtils.Core.Security.Hashing
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Security
+    name: Security
+    href: AetherUtils.Core.Security.html
+  - name: .
+  - uid: AetherUtils.Core.Security.Hashing
+    name: Hashing
+    href: AetherUtils.Core.Security.Hashing.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Security
+    name: Security
+    href: AetherUtils.Core.Security.html
+  - name: .
+  - uid: AetherUtils.Core.Security.Hashing
+    name: Hashing
+    href: AetherUtils.Core.Security.Hashing.html
+- uid: AetherUtils.Core.Security.Hashing.HashEncoding.AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString``1
+  commentId: M:AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString``1(``0)
+  parent: AetherUtils.Core.Extensions.EnumExtensions
+  definition: AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString``1(``0)
+  href: AetherUtils.Core.Extensions.EnumExtensions.html#AetherUtils_Core_Extensions_EnumExtensions_ToDescriptionString__1___0_
+  name: ToDescriptionString<HashEncoding>(HashEncoding)
+  nameWithType: EnumExtensions.ToDescriptionString<HashEncoding>(HashEncoding)
+  fullName: AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString<AetherUtils.Core.Security.Hashing.HashEncoding>(AetherUtils.Core.Security.Hashing.HashEncoding)
+  nameWithType.vb: EnumExtensions.ToDescriptionString(Of HashEncoding)(HashEncoding)
+  fullName.vb: AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString(Of AetherUtils.Core.Security.Hashing.HashEncoding)(AetherUtils.Core.Security.Hashing.HashEncoding)
+  name.vb: ToDescriptionString(Of HashEncoding)(HashEncoding)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString``1(AetherUtils.Core.Security.Hashing.HashEncoding)
+    name: ToDescriptionString
+    href: AetherUtils.Core.Extensions.EnumExtensions.html#AetherUtils_Core_Extensions_EnumExtensions_ToDescriptionString__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Security.Hashing.HashEncoding
+    name: HashEncoding
+    href: AetherUtils.Core.Security.Hashing.HashEncoding.html
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Security.Hashing.HashEncoding
+    name: HashEncoding
+    href: AetherUtils.Core.Security.Hashing.HashEncoding.html
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString``1(AetherUtils.Core.Security.Hashing.HashEncoding)
+    name: ToDescriptionString
+    href: AetherUtils.Core.Extensions.EnumExtensions.html#AetherUtils_Core_Extensions_EnumExtensions_ToDescriptionString__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Security.Hashing.HashEncoding
+    name: HashEncoding
+    href: AetherUtils.Core.Security.Hashing.HashEncoding.html
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Security.Hashing.HashEncoding
+    name: HashEncoding
+    href: AetherUtils.Core.Security.Hashing.HashEncoding.html
+  - name: )
+- uid: AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString``1(``0)
+  href: AetherUtils.Core.Extensions.EnumExtensions.html#AetherUtils_Core_Extensions_EnumExtensions_ToDescriptionString__1___0_
+  name: ToDescriptionString<T>(T)
+  nameWithType: EnumExtensions.ToDescriptionString<T>(T)
+  fullName: AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString<T>(T)
+  nameWithType.vb: EnumExtensions.ToDescriptionString(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString(Of T)(T)
+  name.vb: ToDescriptionString(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString``1(``0)
+    name: ToDescriptionString
+    href: AetherUtils.Core.Extensions.EnumExtensions.html#AetherUtils_Core_Extensions_EnumExtensions_ToDescriptionString__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.EnumExtensions.ToDescriptionString``1(``0)
+    name: ToDescriptionString
+    href: AetherUtils.Core.Extensions.EnumExtensions.html#AetherUtils_Core_Extensions_EnumExtensions_ToDescriptionString__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.EnumExtensions
+  commentId: T:AetherUtils.Core.Extensions.EnumExtensions
+  parent: AetherUtils.Core.Extensions
+  href: AetherUtils.Core.Extensions.EnumExtensions.html
+  name: EnumExtensions
+  nameWithType: EnumExtensions
+  fullName: AetherUtils.Core.Extensions.EnumExtensions
+- uid: AetherUtils.Core.Extensions
+  commentId: N:AetherUtils.Core.Extensions
+  href: AetherUtils.html
+  name: AetherUtils.Core.Extensions
+  nameWithType: AetherUtils.Core.Extensions
+  fullName: AetherUtils.Core.Extensions
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+- uid: AetherUtils.Core.Security.Hashing.HashEncoding
+  commentId: T:AetherUtils.Core.Security.Hashing.HashEncoding
+  parent: AetherUtils.Core.Security.Hashing
+  href: AetherUtils.Core.Security.Hashing.HashEncoding.html
+  name: HashEncoding
+  nameWithType: HashEncoding
+  fullName: AetherUtils.Core.Security.Hashing.HashEncoding

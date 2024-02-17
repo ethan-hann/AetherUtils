@@ -1,0 +1,746 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+  commentId: T:AetherUtils.Core.Security.TwoFactor.SetupCode
+  id: SetupCode
+  parent: AetherUtils.Core.Security.TwoFactor
+  children:
+  - AetherUtils.Core.Security.TwoFactor.SetupCode.#ctor(System.String,System.String)
+  - AetherUtils.Core.Security.TwoFactor.SetupCode.ManualEntryKey
+  - AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl
+  langs:
+  - csharp
+  - vb
+  name: SetupCode
+  nameWithType: SetupCode
+  fullName: AetherUtils.Core.Security.TwoFactor.SetupCode
+  type: Class
+  source:
+    remote:
+      path: AetherUtils.Core/Security/TwoFactor/SetupCode.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: SetupCode
+    path: ../AetherUtils.Core/Security/TwoFactor/SetupCode.cs
+    startLine: 2
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.TwoFactor
+  syntax:
+    content: public sealed class SetupCode
+    content.vb: Public NotInheritable Class SetupCode
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - AetherUtils.Core.Security.TwoFactor.SetupCode.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1
+  - AetherUtils.Core.Security.TwoFactor.SetupCode.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1
+  - AetherUtils.Core.Security.TwoFactor.SetupCode.AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1
+  - AetherUtils.Core.Security.TwoFactor.SetupCode.AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1
+- uid: AetherUtils.Core.Security.TwoFactor.SetupCode.#ctor(System.String,System.String)
+  commentId: M:AetherUtils.Core.Security.TwoFactor.SetupCode.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: AetherUtils.Core.Security.TwoFactor.SetupCode
+  langs:
+  - csharp
+  - vb
+  name: SetupCode(string, string)
+  nameWithType: SetupCode.SetupCode(string, string)
+  fullName: AetherUtils.Core.Security.TwoFactor.SetupCode.SetupCode(string, string)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Security/TwoFactor/SetupCode.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Security/TwoFactor/SetupCode.cs
+    startLine: 2
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.TwoFactor
+  syntax:
+    content: public SetupCode(string manualEntryKey, string qrCodeSetupImageUrl)
+    parameters:
+    - id: manualEntryKey
+      type: System.String
+    - id: qrCodeSetupImageUrl
+      type: System.String
+    content.vb: Public Sub New(manualEntryKey As String, qrCodeSetupImageUrl As String)
+  overload: AetherUtils.Core.Security.TwoFactor.SetupCode.#ctor*
+  nameWithType.vb: SetupCode.New(String, String)
+  fullName.vb: AetherUtils.Core.Security.TwoFactor.SetupCode.New(String, String)
+  name.vb: New(String, String)
+- uid: AetherUtils.Core.Security.TwoFactor.SetupCode.ManualEntryKey
+  commentId: P:AetherUtils.Core.Security.TwoFactor.SetupCode.ManualEntryKey
+  id: ManualEntryKey
+  parent: AetherUtils.Core.Security.TwoFactor.SetupCode
+  langs:
+  - csharp
+  - vb
+  name: ManualEntryKey
+  nameWithType: SetupCode.ManualEntryKey
+  fullName: AetherUtils.Core.Security.TwoFactor.SetupCode.ManualEntryKey
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Security/TwoFactor/SetupCode.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: ManualEntryKey
+    path: ../AetherUtils.Core/Security/TwoFactor/SetupCode.cs
+    startLine: 4
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.TwoFactor
+  syntax:
+    content: public string ManualEntryKey { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ManualEntryKey As String
+  overload: AetherUtils.Core.Security.TwoFactor.SetupCode.ManualEntryKey*
+- uid: AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl
+  commentId: P:AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl
+  id: QrCodeSetupImageUrl
+  parent: AetherUtils.Core.Security.TwoFactor.SetupCode
+  langs:
+  - csharp
+  - vb
+  name: QrCodeSetupImageUrl
+  nameWithType: SetupCode.QrCodeSetupImageUrl
+  fullName: AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Security/TwoFactor/SetupCode.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: QrCodeSetupImageUrl
+    path: ../AetherUtils.Core/Security/TwoFactor/SetupCode.cs
+    startLine: 5
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.TwoFactor
+  syntax:
+    content: public string QrCodeSetupImageUrl { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property QrCodeSetupImageUrl As String
+  overload: AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl*
+references:
+- uid: AetherUtils.Core.Security.TwoFactor
+  commentId: N:AetherUtils.Core.Security.TwoFactor
+  href: AetherUtils.html
+  name: AetherUtils.Core.Security.TwoFactor
+  nameWithType: AetherUtils.Core.Security.TwoFactor
+  fullName: AetherUtils.Core.Security.TwoFactor
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Security
+    name: Security
+    href: AetherUtils.Core.Security.html
+  - name: .
+  - uid: AetherUtils.Core.Security.TwoFactor
+    name: TwoFactor
+    href: AetherUtils.Core.Security.TwoFactor.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Security
+    name: Security
+    href: AetherUtils.Core.Security.html
+  - name: .
+  - uid: AetherUtils.Core.Security.TwoFactor
+    name: TwoFactor
+    href: AetherUtils.Core.Security.TwoFactor.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: AetherUtils.Core.Security.TwoFactor.SetupCode.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  name: CanSerializeJson<SetupCode>(SetupCode)
+  nameWithType: TypeExtensions.CanSerializeJson<SetupCode>(SetupCode)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson<AetherUtils.Core.Security.TwoFactor.SetupCode>(AetherUtils.Core.Security.TwoFactor.SetupCode)
+  nameWithType.vb: TypeExtensions.CanSerializeJson(Of SetupCode)(SetupCode)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson(Of AetherUtils.Core.Security.TwoFactor.SetupCode)(AetherUtils.Core.Security.TwoFactor.SetupCode)
+  name.vb: CanSerializeJson(Of SetupCode)(SetupCode)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(AetherUtils.Core.Security.TwoFactor.SetupCode)
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(AetherUtils.Core.Security.TwoFactor.SetupCode)
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: )
+- uid: AetherUtils.Core.Security.TwoFactor.SetupCode.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  name: CanSerializeXml<SetupCode>(SetupCode)
+  nameWithType: TypeExtensions.CanSerializeXml<SetupCode>(SetupCode)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml<AetherUtils.Core.Security.TwoFactor.SetupCode>(AetherUtils.Core.Security.TwoFactor.SetupCode)
+  nameWithType.vb: TypeExtensions.CanSerializeXml(Of SetupCode)(SetupCode)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml(Of AetherUtils.Core.Security.TwoFactor.SetupCode)(AetherUtils.Core.Security.TwoFactor.SetupCode)
+  name.vb: CanSerializeXml(Of SetupCode)(SetupCode)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(AetherUtils.Core.Security.TwoFactor.SetupCode)
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(AetherUtils.Core.Security.TwoFactor.SetupCode)
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: )
+- uid: AetherUtils.Core.Security.TwoFactor.SetupCode.AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  name: SerializeJson<SetupCode>(SetupCode)
+  nameWithType: TypeExtensions.SerializeJson<SetupCode>(SetupCode)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson<AetherUtils.Core.Security.TwoFactor.SetupCode>(AetherUtils.Core.Security.TwoFactor.SetupCode)
+  nameWithType.vb: TypeExtensions.SerializeJson(Of SetupCode)(SetupCode)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson(Of AetherUtils.Core.Security.TwoFactor.SetupCode)(AetherUtils.Core.Security.TwoFactor.SetupCode)
+  name.vb: SerializeJson(Of SetupCode)(SetupCode)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(AetherUtils.Core.Security.TwoFactor.SetupCode)
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(AetherUtils.Core.Security.TwoFactor.SetupCode)
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: )
+- uid: AetherUtils.Core.Security.TwoFactor.SetupCode.AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  name: SerializeXml<SetupCode>(SetupCode)
+  nameWithType: TypeExtensions.SerializeXml<SetupCode>(SetupCode)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml<AetherUtils.Core.Security.TwoFactor.SetupCode>(AetherUtils.Core.Security.TwoFactor.SetupCode)
+  nameWithType.vb: TypeExtensions.SerializeXml(Of SetupCode)(SetupCode)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml(Of AetherUtils.Core.Security.TwoFactor.SetupCode)(AetherUtils.Core.Security.TwoFactor.SetupCode)
+  name.vb: SerializeXml(Of SetupCode)(SetupCode)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(AetherUtils.Core.Security.TwoFactor.SetupCode)
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(AetherUtils.Core.Security.TwoFactor.SetupCode)
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Security.TwoFactor.SetupCode
+    name: SetupCode
+    href: AetherUtils.Core.Security.TwoFactor.SetupCode.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  name: CanSerializeJson<T>(T)
+  nameWithType: TypeExtensions.CanSerializeJson<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson<T>(T)
+  nameWithType.vb: TypeExtensions.CanSerializeJson(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson(Of T)(T)
+  name.vb: CanSerializeJson(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.TypeExtensions
+  commentId: T:AetherUtils.Core.Extensions.TypeExtensions
+  parent: AetherUtils.Core.Extensions
+  href: AetherUtils.Core.Extensions.TypeExtensions.html
+  name: TypeExtensions
+  nameWithType: TypeExtensions
+  fullName: AetherUtils.Core.Extensions.TypeExtensions
+- uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  name: CanSerializeXml<T>(T)
+  nameWithType: TypeExtensions.CanSerializeXml<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml<T>(T)
+  nameWithType.vb: TypeExtensions.CanSerializeXml(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml(Of T)(T)
+  name.vb: CanSerializeXml(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  name: SerializeJson<T>(T)
+  nameWithType: TypeExtensions.SerializeJson<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson<T>(T)
+  nameWithType.vb: TypeExtensions.SerializeJson(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson(Of T)(T)
+  name.vb: SerializeJson(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  name: SerializeXml<T>(T)
+  nameWithType: TypeExtensions.SerializeXml<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml<T>(T)
+  nameWithType.vb: TypeExtensions.SerializeXml(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml(Of T)(T)
+  name.vb: SerializeXml(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions
+  commentId: N:AetherUtils.Core.Extensions
+  href: AetherUtils.html
+  name: AetherUtils.Core.Extensions
+  nameWithType: AetherUtils.Core.Extensions
+  fullName: AetherUtils.Core.Extensions
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+- uid: AetherUtils.Core.Security.TwoFactor.SetupCode.#ctor*
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.SetupCode.#ctor
+  href: AetherUtils.Core.Security.TwoFactor.SetupCode.html#AetherUtils_Core_Security_TwoFactor_SetupCode__ctor_System_String_System_String_
+  name: SetupCode
+  nameWithType: SetupCode.SetupCode
+  fullName: AetherUtils.Core.Security.TwoFactor.SetupCode.SetupCode
+  nameWithType.vb: SetupCode.New
+  fullName.vb: AetherUtils.Core.Security.TwoFactor.SetupCode.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AetherUtils.Core.Security.TwoFactor.SetupCode.ManualEntryKey*
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.SetupCode.ManualEntryKey
+  href: AetherUtils.Core.Security.TwoFactor.SetupCode.html#AetherUtils_Core_Security_TwoFactor_SetupCode_ManualEntryKey
+  name: ManualEntryKey
+  nameWithType: SetupCode.ManualEntryKey
+  fullName: AetherUtils.Core.Security.TwoFactor.SetupCode.ManualEntryKey
+- uid: AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl*
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl
+  href: AetherUtils.Core.Security.TwoFactor.SetupCode.html#AetherUtils_Core_Security_TwoFactor_SetupCode_QrCodeSetupImageUrl
+  name: QrCodeSetupImageUrl
+  nameWithType: SetupCode.QrCodeSetupImageUrl
+  fullName: AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl

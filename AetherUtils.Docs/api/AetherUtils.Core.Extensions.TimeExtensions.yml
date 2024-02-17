@@ -1,0 +1,545 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Extensions.TimeExtensions
+  commentId: T:AetherUtils.Core.Extensions.TimeExtensions
+  id: TimeExtensions
+  parent: AetherUtils.Core.Extensions
+  children:
+  - AetherUtils.Core.Extensions.TimeExtensions.EndOfMonth(System.DateTime)
+  - AetherUtils.Core.Extensions.TimeExtensions.StartOfMonth(System.DateTime)
+  - AetherUtils.Core.Extensions.TimeExtensions.StartOfWeek(System.DateTime)
+  - AetherUtils.Core.Extensions.TimeExtensions.TimeSpanToString(System.TimeSpan)
+  langs:
+  - csharp
+  - vb
+  name: TimeExtensions
+  nameWithType: TimeExtensions
+  fullName: AetherUtils.Core.Extensions.TimeExtensions
+  type: Class
+  source:
+    remote:
+      path: AetherUtils.Core/Extensions/TimeExtensions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: TimeExtensions
+    path: ../AetherUtils.Core/Extensions/TimeExtensions.cs
+    startLine: 5
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Extensions
+  summary: Provides extension methods for manipulating various time related objects.
+  example: []
+  syntax:
+    content: public static class TimeExtensions
+    content.vb: Public Module TimeExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AetherUtils.Core.Extensions.TimeExtensions.StartOfWeek(System.DateTime)
+  commentId: M:AetherUtils.Core.Extensions.TimeExtensions.StartOfWeek(System.DateTime)
+  id: StartOfWeek(System.DateTime)
+  isExtensionMethod: true
+  parent: AetherUtils.Core.Extensions.TimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: StartOfWeek(DateTime)
+  nameWithType: TimeExtensions.StartOfWeek(DateTime)
+  fullName: AetherUtils.Core.Extensions.TimeExtensions.StartOfWeek(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Extensions/TimeExtensions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: StartOfWeek
+    path: ../AetherUtils.Core/Extensions/TimeExtensions.cs
+    startLine: 13
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Extensions
+  summary: Get the starting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> of the week based on the supplied <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static DateTime StartOfWeek(this DateTime date)
+    parameters:
+    - id: date
+      type: System.DateTime
+      description: The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to get the start of the week of.
+    return:
+      type: System.DateTime
+      description: A <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> representing the start of the week.
+    content.vb: Public Shared Function StartOfWeek([date] As Date) As Date
+  overload: AetherUtils.Core.Extensions.TimeExtensions.StartOfWeek*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If the <code class="paramref">date</code> was <code>null</code>.
+  nameWithType.vb: TimeExtensions.StartOfWeek(Date)
+  fullName.vb: AetherUtils.Core.Extensions.TimeExtensions.StartOfWeek(Date)
+  name.vb: StartOfWeek(Date)
+- uid: AetherUtils.Core.Extensions.TimeExtensions.StartOfMonth(System.DateTime)
+  commentId: M:AetherUtils.Core.Extensions.TimeExtensions.StartOfMonth(System.DateTime)
+  id: StartOfMonth(System.DateTime)
+  isExtensionMethod: true
+  parent: AetherUtils.Core.Extensions.TimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: StartOfMonth(DateTime)
+  nameWithType: TimeExtensions.StartOfMonth(DateTime)
+  fullName: AetherUtils.Core.Extensions.TimeExtensions.StartOfMonth(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Extensions/TimeExtensions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: StartOfMonth
+    path: ../AetherUtils.Core/Extensions/TimeExtensions.cs
+    startLine: 29
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Extensions
+  summary: Get the starting <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> of the month based on the supplied <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static DateTime StartOfMonth(this DateTime date)
+    parameters:
+    - id: date
+      type: System.DateTime
+      description: The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to get the start of the month of.
+    return:
+      type: System.DateTime
+      description: A <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> representing the start of the month.
+    content.vb: Public Shared Function StartOfMonth([date] As Date) As Date
+  overload: AetherUtils.Core.Extensions.TimeExtensions.StartOfMonth*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If the <code class="paramref">date</code> was <code>null</code>.
+  nameWithType.vb: TimeExtensions.StartOfMonth(Date)
+  fullName.vb: AetherUtils.Core.Extensions.TimeExtensions.StartOfMonth(Date)
+  name.vb: StartOfMonth(Date)
+- uid: AetherUtils.Core.Extensions.TimeExtensions.EndOfMonth(System.DateTime)
+  commentId: M:AetherUtils.Core.Extensions.TimeExtensions.EndOfMonth(System.DateTime)
+  id: EndOfMonth(System.DateTime)
+  isExtensionMethod: true
+  parent: AetherUtils.Core.Extensions.TimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: EndOfMonth(DateTime)
+  nameWithType: TimeExtensions.EndOfMonth(DateTime)
+  fullName: AetherUtils.Core.Extensions.TimeExtensions.EndOfMonth(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Extensions/TimeExtensions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: EndOfMonth
+    path: ../AetherUtils.Core/Extensions/TimeExtensions.cs
+    startLine: 41
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Extensions
+  summary: Get the ending <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> of the month based on the supplied <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static DateTime EndOfMonth(this DateTime date)
+    parameters:
+    - id: date
+      type: System.DateTime
+      description: The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> representing the current date for the month.
+    return:
+      type: System.DateTime
+      description: A <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> representing the end of the month.
+    content.vb: Public Shared Function EndOfMonth([date] As Date) As Date
+  overload: AetherUtils.Core.Extensions.TimeExtensions.EndOfMonth*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If the <code class="paramref">date</code> was <code>null</code>.
+  nameWithType.vb: TimeExtensions.EndOfMonth(Date)
+  fullName.vb: AetherUtils.Core.Extensions.TimeExtensions.EndOfMonth(Date)
+  name.vb: EndOfMonth(Date)
+- uid: AetherUtils.Core.Extensions.TimeExtensions.TimeSpanToString(System.TimeSpan)
+  commentId: M:AetherUtils.Core.Extensions.TimeExtensions.TimeSpanToString(System.TimeSpan)
+  id: TimeSpanToString(System.TimeSpan)
+  isExtensionMethod: true
+  parent: AetherUtils.Core.Extensions.TimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: TimeSpanToString(TimeSpan)
+  nameWithType: TimeExtensions.TimeSpanToString(TimeSpan)
+  fullName: AetherUtils.Core.Extensions.TimeExtensions.TimeSpanToString(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Extensions/TimeExtensions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: TimeSpanToString
+    path: ../AetherUtils.Core/Extensions/TimeExtensions.cs
+    startLine: 54
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Extensions
+  summary: >-
+    Get a <xref href="System.String" data-throw-if-not-resolved="false"></xref> representing the <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> in the form of:<br />
+
+    <p><code>w day(s), x hour(s), y minute(s), z second(s)</code></p>
+  example: []
+  syntax:
+    content: public static string TimeSpanToString(this TimeSpan timeSpan)
+    parameters:
+    - id: timeSpan
+      type: System.TimeSpan
+      description: The <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> to convert.
+    return:
+      type: System.String
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> representing the <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function TimeSpanToString(timeSpan As TimeSpan) As String
+  overload: AetherUtils.Core.Extensions.TimeExtensions.TimeSpanToString*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If <code class="paramref">timeSpan</code> was <code>null</code>.
+references:
+- uid: AetherUtils.Core.Extensions
+  commentId: N:AetherUtils.Core.Extensions
+  href: AetherUtils.html
+  name: AetherUtils.Core.Extensions
+  nameWithType: AetherUtils.Core.Extensions
+  fullName: AetherUtils.Core.Extensions
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: AetherUtils.Core.Extensions.TimeExtensions.StartOfWeek*
+  commentId: Overload:AetherUtils.Core.Extensions.TimeExtensions.StartOfWeek
+  href: AetherUtils.Core.Extensions.TimeExtensions.html#AetherUtils_Core_Extensions_TimeExtensions_StartOfWeek_System_DateTime_
+  name: StartOfWeek
+  nameWithType: TimeExtensions.StartOfWeek
+  fullName: AetherUtils.Core.Extensions.TimeExtensions.StartOfWeek
+- uid: AetherUtils.Core.Extensions.TimeExtensions.StartOfMonth*
+  commentId: Overload:AetherUtils.Core.Extensions.TimeExtensions.StartOfMonth
+  href: AetherUtils.Core.Extensions.TimeExtensions.html#AetherUtils_Core_Extensions_TimeExtensions_StartOfMonth_System_DateTime_
+  name: StartOfMonth
+  nameWithType: TimeExtensions.StartOfMonth
+  fullName: AetherUtils.Core.Extensions.TimeExtensions.StartOfMonth
+- uid: AetherUtils.Core.Extensions.TimeExtensions.EndOfMonth*
+  commentId: Overload:AetherUtils.Core.Extensions.TimeExtensions.EndOfMonth
+  href: AetherUtils.Core.Extensions.TimeExtensions.html#AetherUtils_Core_Extensions_TimeExtensions_EndOfMonth_System_DateTime_
+  name: EndOfMonth
+  nameWithType: TimeExtensions.EndOfMonth
+  fullName: AetherUtils.Core.Extensions.TimeExtensions.EndOfMonth
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: AetherUtils.Core.Extensions.TimeExtensions.TimeSpanToString*
+  commentId: Overload:AetherUtils.Core.Extensions.TimeExtensions.TimeSpanToString
+  href: AetherUtils.Core.Extensions.TimeExtensions.html#AetherUtils_Core_Extensions_TimeExtensions_TimeSpanToString_System_TimeSpan_
+  name: TimeSpanToString
+  nameWithType: TimeExtensions.TimeSpanToString
+  fullName: AetherUtils.Core.Extensions.TimeExtensions.TimeSpanToString

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Logging
+  commentId: N:AetherUtils.Core.Logging
+  id: AetherUtils.Core.Logging
+  children:
+  - AetherUtils.Core.Logging.CLogger
+  langs:
+  - csharp
+  - vb
+  name: AetherUtils.Core.Logging
+  nameWithType: AetherUtils.Core.Logging
+  fullName: AetherUtils.Core.Logging
+  type: Namespace
+  assemblies:
+  - AetherUtils.Core
+references:
+- uid: AetherUtils.Core.Logging.CLogger
+  commentId: T:AetherUtils.Core.Logging.CLogger
+  href: AetherUtils.Core.Logging.CLogger.html
+  name: CLogger
+  nameWithType: CLogger
+  fullName: AetherUtils.Core.Logging.CLogger

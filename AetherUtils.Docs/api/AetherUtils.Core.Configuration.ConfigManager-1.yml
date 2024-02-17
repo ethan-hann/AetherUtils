@@ -1,0 +1,1777 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Configuration.ConfigManager`1
+  commentId: T:AetherUtils.Core.Configuration.ConfigManager`1
+  id: ConfigManager`1
+  parent: AetherUtils.Core.Configuration
+  children:
+  - AetherUtils.Core.Configuration.ConfigManager`1.#ctor(System.String)
+  - AetherUtils.Core.Configuration.ConfigManager`1.ConfigExists
+  - AetherUtils.Core.Configuration.ConfigManager`1.ConfigFilePath
+  - AetherUtils.Core.Configuration.ConfigManager`1.CreateDefaultConfig
+  - AetherUtils.Core.Configuration.ConfigManager`1.CurrentConfig
+  - AetherUtils.Core.Configuration.ConfigManager`1.Get(AetherUtils.Core.Structs.ConfigOption)
+  - AetherUtils.Core.Configuration.ConfigManager`1.Get(System.String)
+  - AetherUtils.Core.Configuration.ConfigManager`1.IsInitialized
+  - AetherUtils.Core.Configuration.ConfigManager`1.Load
+  - AetherUtils.Core.Configuration.ConfigManager`1.LoadAsync
+  - AetherUtils.Core.Configuration.ConfigManager`1.Save
+  - AetherUtils.Core.Configuration.ConfigManager`1.SaveAsync
+  - AetherUtils.Core.Configuration.ConfigManager`1.Set(AetherUtils.Core.Structs.ConfigOption)
+  - AetherUtils.Core.Configuration.ConfigManager`1.Set(System.String,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: ConfigManager<T>
+  nameWithType: ConfigManager<T>
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>
+  type: Class
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: ConfigManager
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 21
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: >-
+    This class cannot be instantiated. A child class must be created inheriting from <xref href="AetherUtils.Core.Configuration.ConfigManager%601" data-throw-if-not-resolved="false"></xref>.
+
+    Handles saving, loading, and querying a generic configuration based on class T.
+  remarks: >-
+    The custom class should have its properties related to configuration marked with a <xref href="AetherUtils.Core.Attributes.ConfigAttribute" data-throw-if-not-resolved="false"></xref>.
+
+    These properties are the only ones which will be serialized and de-serialized from disk.
+  example: []
+  syntax:
+    content: 'public abstract class ConfigManager<T> : IConfig where T : class'
+    typeParameters:
+    - id: T
+      description: The DTO class that represents the configuration.
+    content.vb: Public MustInherit Class ConfigManager(Of T As Class) Implements IConfig
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - AetherUtils.Core.Configuration.YamlConfigManager
+  implements:
+  - AetherUtils.Core.Configuration.IConfig
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - AetherUtils.Core.Configuration.ConfigManager`1.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1
+  - AetherUtils.Core.Configuration.ConfigManager`1.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1
+  - AetherUtils.Core.Configuration.ConfigManager`1.AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1
+  - AetherUtils.Core.Configuration.ConfigManager`1.AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1
+  nameWithType.vb: ConfigManager(Of T)
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T)
+  name.vb: ConfigManager(Of T)
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.#ctor(System.String)
+  commentId: M:AetherUtils.Core.Configuration.ConfigManager`1.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: ConfigManager(string)
+  nameWithType: ConfigManager<T>.ConfigManager(string)
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.ConfigManager(string)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 21
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: >-
+    This class cannot be instantiated. A child class must be created inheriting from <xref href="AetherUtils.Core.Configuration.ConfigManager%601" data-throw-if-not-resolved="false"></xref>.
+
+    Handles saving, loading, and querying a generic configuration based on class T.
+  remarks: >-
+    The custom class should have its properties related to configuration marked with a <xref href="AetherUtils.Core.Attributes.ConfigAttribute" data-throw-if-not-resolved="false"></xref>.
+
+    These properties are the only ones which will be serialized and de-serialized from disk.
+  example: []
+  syntax:
+    content: protected ConfigManager(string configFilePath)
+    parameters:
+    - id: configFilePath
+      type: System.String
+    content.vb: Protected Sub New(configFilePath As String)
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.#ctor*
+  nameWithType.vb: ConfigManager(Of T).New(String)
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).New(String)
+  name.vb: New(String)
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.CurrentConfig
+  commentId: P:AetherUtils.Core.Configuration.ConfigManager`1.CurrentConfig
+  id: CurrentConfig
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: CurrentConfig
+  nameWithType: ConfigManager<T>.CurrentConfig
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.CurrentConfig
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: CurrentConfig
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 35
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Get or set the current configuration.
+  example: []
+  syntax:
+    content: protected T? CurrentConfig { get; set; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Protected Property CurrentConfig As T
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.CurrentConfig*
+  nameWithType.vb: ConfigManager(Of T).CurrentConfig
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).CurrentConfig
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.ConfigFilePath
+  commentId: P:AetherUtils.Core.Configuration.ConfigManager`1.ConfigFilePath
+  id: ConfigFilePath
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: ConfigFilePath
+  nameWithType: ConfigManager<T>.ConfigFilePath
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.ConfigFilePath
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: ConfigFilePath
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 40
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Get or set the path to the configuration file on disk.
+  example: []
+  syntax:
+    content: public string? ConfigFilePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ConfigFilePath As String
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.ConfigFilePath*
+  implements:
+  - AetherUtils.Core.Configuration.IConfig.ConfigFilePath
+  nameWithType.vb: ConfigManager(Of T).ConfigFilePath
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).ConfigFilePath
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.IsInitialized
+  commentId: P:AetherUtils.Core.Configuration.ConfigManager`1.IsInitialized
+  id: IsInitialized
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: IsInitialized
+  nameWithType: ConfigManager<T>.IsInitialized
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.IsInitialized
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: IsInitialized
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 45
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Get a value indicating whether the configuration has been initialized.
+  example: []
+  syntax:
+    content: public bool IsInitialized { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInitialized As Boolean
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.IsInitialized*
+  implements:
+  - AetherUtils.Core.Configuration.IConfig.IsInitialized
+  nameWithType.vb: ConfigManager(Of T).IsInitialized
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).IsInitialized
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.ConfigExists
+  commentId: P:AetherUtils.Core.Configuration.ConfigManager`1.ConfigExists
+  id: ConfigExists
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: ConfigExists
+  nameWithType: ConfigManager<T>.ConfigExists
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.ConfigExists
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: ConfigExists
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 50
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Get a value indicating whether the configuration file exists on disk.
+  example: []
+  syntax:
+    content: public bool ConfigExists { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ConfigExists As Boolean
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.ConfigExists*
+  implements:
+  - AetherUtils.Core.Configuration.IConfig.ConfigExists
+  nameWithType.vb: ConfigManager(Of T).ConfigExists
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).ConfigExists
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.CreateDefaultConfig
+  commentId: M:AetherUtils.Core.Configuration.ConfigManager`1.CreateDefaultConfig
+  id: CreateDefaultConfig
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultConfig()
+  nameWithType: ConfigManager<T>.CreateDefaultConfig()
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.CreateDefaultConfig()
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: CreateDefaultConfig
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 55
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Create the default configuration.
+  example: []
+  syntax:
+    content: public abstract bool CreateDefaultConfig()
+    return:
+      type: System.Boolean
+    content.vb: Public MustOverride Function CreateDefaultConfig() As Boolean
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.CreateDefaultConfig*
+  nameWithType.vb: ConfigManager(Of T).CreateDefaultConfig()
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).CreateDefaultConfig()
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.LoadAsync
+  commentId: M:AetherUtils.Core.Configuration.ConfigManager`1.LoadAsync
+  id: LoadAsync
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: LoadAsync()
+  nameWithType: ConfigManager<T>.LoadAsync()
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.LoadAsync()
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: LoadAsync
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 64
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Asynchronously load a configuration file from disk based on the <xref href="AetherUtils.Core.Configuration.ConfigManager%601.ConfigFilePath" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Task<bool> LoadAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: <code>true</code> if the config loaded successfully; <code>false</code> otherwise.
+    content.vb: Public Function LoadAsync() As Task(Of Boolean)
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.LoadAsync*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If <xref href="AetherUtils.Core.Configuration.ConfigManager%601.ConfigFilePath" data-throw-if-not-resolved="false"></xref> is <code>null</code> or empty.
+  - type: System.IO.FileNotFoundException
+    commentId: T:System.IO.FileNotFoundException
+    description: >-
+      If the configuration file specified by <xref href="AetherUtils.Core.Configuration.ConfigManager%601.ConfigFilePath" data-throw-if-not-resolved="false"></xref>
+          was not found on disk.
+  implements:
+  - AetherUtils.Core.Configuration.IConfig.LoadAsync
+  nameWithType.vb: ConfigManager(Of T).LoadAsync()
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).LoadAsync()
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.Load
+  commentId: M:AetherUtils.Core.Configuration.ConfigManager`1.Load
+  id: Load
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: Load()
+  nameWithType: ConfigManager<T>.Load()
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.Load()
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Load
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 86
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Load a configuration file from disk based on the <xref href="AetherUtils.Core.Configuration.ConfigManager%601.ConfigFilePath" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool Load()
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the config loaded successfully; <code>false</code> otherwise.
+    content.vb: Public Function Load() As Boolean
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.Load*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If <xref href="AetherUtils.Core.Configuration.ConfigManager%601.ConfigFilePath" data-throw-if-not-resolved="false"></xref> is <code>null</code> or empty.
+  - type: System.IO.FileNotFoundException
+    commentId: T:System.IO.FileNotFoundException
+    description: ''
+  implements:
+  - AetherUtils.Core.Configuration.IConfig.Load
+  nameWithType.vb: ConfigManager(Of T).Load()
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Load()
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.SaveAsync
+  commentId: M:AetherUtils.Core.Configuration.ConfigManager`1.SaveAsync
+  id: SaveAsync
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: SaveAsync()
+  nameWithType: ConfigManager<T>.SaveAsync()
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.SaveAsync()
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: SaveAsync
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 107
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Asynchronously save a configuration file to disk based on the <xref href="AetherUtils.Core.Configuration.ConfigManager%601.CurrentConfig" data-throw-if-not-resolved="false"></xref> and the <xref href="AetherUtils.Core.Configuration.ConfigManager%601.ConfigFilePath" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Task<bool> SaveAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: <code>true</code> if the config saved successfully; <code>false</code> otherwise.
+    content.vb: Public Function SaveAsync() As Task(Of Boolean)
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.SaveAsync*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If <xref href="AetherUtils.Core.Configuration.ConfigManager%601.ConfigFilePath" data-throw-if-not-resolved="false"></xref> is <code>null</code> or empty.
+  implements:
+  - AetherUtils.Core.Configuration.IConfig.SaveAsync
+  nameWithType.vb: ConfigManager(Of T).SaveAsync()
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).SaveAsync()
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.Save
+  commentId: M:AetherUtils.Core.Configuration.ConfigManager`1.Save
+  id: Save
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: Save()
+  nameWithType: ConfigManager<T>.Save()
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.Save()
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Save
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 130
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Save a configuration file to disk based on the <xref href="AetherUtils.Core.Configuration.ConfigManager%601.CurrentConfig" data-throw-if-not-resolved="false"></xref> and the <xref href="AetherUtils.Core.Configuration.ConfigManager%601.ConfigFilePath" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool Save()
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the config saved successfully; <code>false</code> otherwise.
+    content.vb: Public Function Save() As Boolean
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.Save*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If <xref href="AetherUtils.Core.Configuration.ConfigManager%601.ConfigFilePath" data-throw-if-not-resolved="false"></xref> is <code>null</code> or empty.
+  implements:
+  - AetherUtils.Core.Configuration.IConfig.Save
+  nameWithType.vb: ConfigManager(Of T).Save()
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Save()
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.Get(AetherUtils.Core.Structs.ConfigOption)
+  commentId: M:AetherUtils.Core.Configuration.ConfigManager`1.Get(AetherUtils.Core.Structs.ConfigOption)
+  id: Get(AetherUtils.Core.Structs.ConfigOption)
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: Get(ConfigOption)
+  nameWithType: ConfigManager<T>.Get(ConfigOption)
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.Get(AetherUtils.Core.Structs.ConfigOption)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Get
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 153
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Get a configuration value specified by the configuration <code class="paramref">option</code>.
+  example: []
+  syntax:
+    content: public object? Get(ConfigOption option)
+    parameters:
+    - id: option
+      type: AetherUtils.Core.Structs.ConfigOption
+      description: The <xref href="AetherUtils.Core.Structs.ConfigOption" data-throw-if-not-resolved="false"></xref> containing information about the value to get.
+    return:
+      type: System.Object
+      description: The configuration value or <code>null</code> if the value did not exist.
+    content.vb: Public Function [Get]([option] As ConfigOption) As Object
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.Get*
+  implements:
+  - AetherUtils.Core.Configuration.IConfig.Get(AetherUtils.Core.Structs.ConfigOption)
+  nameWithType.vb: ConfigManager(Of T).Get(ConfigOption)
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Get(AetherUtils.Core.Structs.ConfigOption)
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.Get(System.String)
+  commentId: M:AetherUtils.Core.Configuration.ConfigManager`1.Get(System.String)
+  id: Get(System.String)
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: Get(string)
+  nameWithType: ConfigManager<T>.Get(string)
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.Get(string)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Get
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 190
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Get a configuration value specified by <code class="paramref">configName</code>.
+  example: []
+  syntax:
+    content: public object? Get(string configName)
+    parameters:
+    - id: configName
+      type: System.String
+      description: The name of the configuration to get.
+    return:
+      type: System.Object
+      description: The configuration value or <code>null</code> if the value did not exist.
+    content.vb: Public Function [Get](configName As String) As Object
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.Get*
+  nameWithType.vb: ConfigManager(Of T).Get(String)
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Get(String)
+  name.vb: Get(String)
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.Set(AetherUtils.Core.Structs.ConfigOption)
+  commentId: M:AetherUtils.Core.Configuration.ConfigManager`1.Set(AetherUtils.Core.Structs.ConfigOption)
+  id: Set(AetherUtils.Core.Structs.ConfigOption)
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: Set(ConfigOption)
+  nameWithType: ConfigManager<T>.Set(ConfigOption)
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.Set(AetherUtils.Core.Structs.ConfigOption)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Set
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 201
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Set a configuration value specified by the configuration <code class="paramref">option</code>.
+  example: []
+  syntax:
+    content: public bool Set(ConfigOption option)
+    parameters:
+    - id: option
+      type: AetherUtils.Core.Structs.ConfigOption
+      description: The <xref href="AetherUtils.Core.Structs.ConfigOption" data-throw-if-not-resolved="false"></xref> containing information about the value to set.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the value was set successfully; <code>false</code> otherwise.
+    content.vb: Public Function [Set]([option] As ConfigOption) As Boolean
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.Set*
+  implements:
+  - AetherUtils.Core.Configuration.IConfig.Set(AetherUtils.Core.Structs.ConfigOption)
+  nameWithType.vb: ConfigManager(Of T).Set(ConfigOption)
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Set(AetherUtils.Core.Structs.ConfigOption)
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.Set(System.String,System.Object)
+  commentId: M:AetherUtils.Core.Configuration.ConfigManager`1.Set(System.String,System.Object)
+  id: Set(System.String,System.Object)
+  parent: AetherUtils.Core.Configuration.ConfigManager`1
+  langs:
+  - csharp
+  - vb
+  name: Set(string, object?)
+  nameWithType: ConfigManager<T>.Set(string, object?)
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.Set(string, object?)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Configuration/ConfigManager.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Set
+    path: ../AetherUtils.Core/Configuration/ConfigManager.cs
+    startLine: 212
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Configuration
+  summary: Set a configuration <code class="paramref">value</code> specified by <code class="paramref">configName</code>.
+  example: []
+  syntax:
+    content: public bool Set(string configName, object? value)
+    parameters:
+    - id: configName
+      type: System.String
+      description: The name of the configuration to set.
+    - id: value
+      type: System.Object
+      description: The value to set.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the value was set successfully; <code>false</code> otherwise.
+    content.vb: Public Function [Set](configName As String, value As Object) As Boolean
+  overload: AetherUtils.Core.Configuration.ConfigManager`1.Set*
+  nameWithType.vb: ConfigManager(Of T).Set(String, Object)
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Set(String, Object)
+  name.vb: Set(String, Object)
+references:
+- uid: AetherUtils.Core.Configuration.ConfigManager`1
+  commentId: T:AetherUtils.Core.Configuration.ConfigManager`1
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  name: ConfigManager<T>
+  nameWithType: ConfigManager<T>
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>
+  nameWithType.vb: ConfigManager(Of T)
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T)
+  name.vb: ConfigManager(Of T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Attributes.ConfigAttribute
+  commentId: T:AetherUtils.Core.Attributes.ConfigAttribute
+  parent: AetherUtils.Core.Attributes
+  href: AetherUtils.Core.Attributes.ConfigAttribute.html
+  name: ConfigAttribute
+  nameWithType: ConfigAttribute
+  fullName: AetherUtils.Core.Attributes.ConfigAttribute
+- uid: AetherUtils.Core.Configuration
+  commentId: N:AetherUtils.Core.Configuration
+  href: AetherUtils.html
+  name: AetherUtils.Core.Configuration
+  nameWithType: AetherUtils.Core.Configuration
+  fullName: AetherUtils.Core.Configuration
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Configuration
+    name: Configuration
+    href: AetherUtils.Core.Configuration.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Configuration
+    name: Configuration
+    href: AetherUtils.Core.Configuration.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AetherUtils.Core.Configuration.IConfig
+  commentId: T:AetherUtils.Core.Configuration.IConfig
+  parent: AetherUtils.Core.Configuration
+  href: AetherUtils.Core.Configuration.IConfig.html
+  name: IConfig
+  nameWithType: IConfig
+  fullName: AetherUtils.Core.Configuration.IConfig
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  name: CanSerializeJson<ConfigManager<T>>(ConfigManager<T>)
+  nameWithType: TypeExtensions.CanSerializeJson<ConfigManager<T>>(ConfigManager<T>)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson<AetherUtils.Core.Configuration.ConfigManager<T>>(AetherUtils.Core.Configuration.ConfigManager<T>)
+  nameWithType.vb: TypeExtensions.CanSerializeJson(Of ConfigManager(Of T))(ConfigManager(Of T))
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson(Of AetherUtils.Core.Configuration.ConfigManager(Of T))(AetherUtils.Core.Configuration.ConfigManager(Of T))
+  name.vb: CanSerializeJson(Of ConfigManager(Of T))(ConfigManager(Of T))
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(AetherUtils.Core.Configuration.ConfigManager{`0})
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(AetherUtils.Core.Configuration.ConfigManager{`0})
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  name: CanSerializeXml<ConfigManager<T>>(ConfigManager<T>)
+  nameWithType: TypeExtensions.CanSerializeXml<ConfigManager<T>>(ConfigManager<T>)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml<AetherUtils.Core.Configuration.ConfigManager<T>>(AetherUtils.Core.Configuration.ConfigManager<T>)
+  nameWithType.vb: TypeExtensions.CanSerializeXml(Of ConfigManager(Of T))(ConfigManager(Of T))
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml(Of AetherUtils.Core.Configuration.ConfigManager(Of T))(AetherUtils.Core.Configuration.ConfigManager(Of T))
+  name.vb: CanSerializeXml(Of ConfigManager(Of T))(ConfigManager(Of T))
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(AetherUtils.Core.Configuration.ConfigManager{`0})
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(AetherUtils.Core.Configuration.ConfigManager{`0})
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  name: SerializeJson<ConfigManager<T>>(ConfigManager<T>)
+  nameWithType: TypeExtensions.SerializeJson<ConfigManager<T>>(ConfigManager<T>)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson<AetherUtils.Core.Configuration.ConfigManager<T>>(AetherUtils.Core.Configuration.ConfigManager<T>)
+  nameWithType.vb: TypeExtensions.SerializeJson(Of ConfigManager(Of T))(ConfigManager(Of T))
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson(Of AetherUtils.Core.Configuration.ConfigManager(Of T))(AetherUtils.Core.Configuration.ConfigManager(Of T))
+  name.vb: SerializeJson(Of ConfigManager(Of T))(ConfigManager(Of T))
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(AetherUtils.Core.Configuration.ConfigManager{`0})
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(AetherUtils.Core.Configuration.ConfigManager{`0})
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  name: SerializeXml<ConfigManager<T>>(ConfigManager<T>)
+  nameWithType: TypeExtensions.SerializeXml<ConfigManager<T>>(ConfigManager<T>)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml<AetherUtils.Core.Configuration.ConfigManager<T>>(AetherUtils.Core.Configuration.ConfigManager<T>)
+  nameWithType.vb: TypeExtensions.SerializeXml(Of ConfigManager(Of T))(ConfigManager(Of T))
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml(Of AetherUtils.Core.Configuration.ConfigManager(Of T))(AetherUtils.Core.Configuration.ConfigManager(Of T))
+  name.vb: SerializeXml(Of ConfigManager(Of T))(ConfigManager(Of T))
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(AetherUtils.Core.Configuration.ConfigManager{`0})
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(AetherUtils.Core.Configuration.ConfigManager{`0})
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Attributes
+  commentId: N:AetherUtils.Core.Attributes
+  href: AetherUtils.html
+  name: AetherUtils.Core.Attributes
+  nameWithType: AetherUtils.Core.Attributes
+  fullName: AetherUtils.Core.Attributes
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Attributes
+    name: Attributes
+    href: AetherUtils.Core.Attributes.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Attributes
+    name: Attributes
+    href: AetherUtils.Core.Attributes.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  name: CanSerializeJson<T>(T)
+  nameWithType: TypeExtensions.CanSerializeJson<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson<T>(T)
+  nameWithType.vb: TypeExtensions.CanSerializeJson(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson(Of T)(T)
+  name.vb: CanSerializeJson(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.TypeExtensions
+  commentId: T:AetherUtils.Core.Extensions.TypeExtensions
+  parent: AetherUtils.Core.Extensions
+  href: AetherUtils.Core.Extensions.TypeExtensions.html
+  name: TypeExtensions
+  nameWithType: TypeExtensions
+  fullName: AetherUtils.Core.Extensions.TypeExtensions
+- uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  name: CanSerializeXml<T>(T)
+  nameWithType: TypeExtensions.CanSerializeXml<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml<T>(T)
+  nameWithType.vb: TypeExtensions.CanSerializeXml(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml(Of T)(T)
+  name.vb: CanSerializeXml(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  name: SerializeJson<T>(T)
+  nameWithType: TypeExtensions.SerializeJson<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson<T>(T)
+  nameWithType.vb: TypeExtensions.SerializeJson(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson(Of T)(T)
+  name.vb: SerializeJson(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  name: SerializeXml<T>(T)
+  nameWithType: TypeExtensions.SerializeXml<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml<T>(T)
+  nameWithType.vb: TypeExtensions.SerializeXml(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml(Of T)(T)
+  name.vb: SerializeXml(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions
+  commentId: N:AetherUtils.Core.Extensions
+  href: AetherUtils.html
+  name: AetherUtils.Core.Extensions
+  nameWithType: AetherUtils.Core.Extensions
+  fullName: AetherUtils.Core.Extensions
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.#ctor*
+  commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.#ctor
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1__ctor_System_String_
+  name: ConfigManager
+  nameWithType: ConfigManager<T>.ConfigManager
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.ConfigManager
+  nameWithType.vb: ConfigManager(Of T).New
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.CurrentConfig*
+  commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.CurrentConfig
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_CurrentConfig
+  name: CurrentConfig
+  nameWithType: ConfigManager<T>.CurrentConfig
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.CurrentConfig
+  nameWithType.vb: ConfigManager(Of T).CurrentConfig
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).CurrentConfig
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.ConfigFilePath*
+  commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.ConfigFilePath
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath
+  name: ConfigFilePath
+  nameWithType: ConfigManager<T>.ConfigFilePath
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.ConfigFilePath
+  nameWithType.vb: ConfigManager(Of T).ConfigFilePath
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).ConfigFilePath
+- uid: AetherUtils.Core.Configuration.IConfig.ConfigFilePath
+  commentId: P:AetherUtils.Core.Configuration.IConfig.ConfigFilePath
+  parent: AetherUtils.Core.Configuration.IConfig
+  href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_ConfigFilePath
+  name: ConfigFilePath
+  nameWithType: IConfig.ConfigFilePath
+  fullName: AetherUtils.Core.Configuration.IConfig.ConfigFilePath
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.IsInitialized*
+  commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.IsInitialized
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_IsInitialized
+  name: IsInitialized
+  nameWithType: ConfigManager<T>.IsInitialized
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.IsInitialized
+  nameWithType.vb: ConfigManager(Of T).IsInitialized
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).IsInitialized
+- uid: AetherUtils.Core.Configuration.IConfig.IsInitialized
+  commentId: P:AetherUtils.Core.Configuration.IConfig.IsInitialized
+  parent: AetherUtils.Core.Configuration.IConfig
+  href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_IsInitialized
+  name: IsInitialized
+  nameWithType: IConfig.IsInitialized
+  fullName: AetherUtils.Core.Configuration.IConfig.IsInitialized
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.ConfigExists*
+  commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.ConfigExists
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigExists
+  name: ConfigExists
+  nameWithType: ConfigManager<T>.ConfigExists
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.ConfigExists
+  nameWithType.vb: ConfigManager(Of T).ConfigExists
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).ConfigExists
+- uid: AetherUtils.Core.Configuration.IConfig.ConfigExists
+  commentId: P:AetherUtils.Core.Configuration.IConfig.ConfigExists
+  parent: AetherUtils.Core.Configuration.IConfig
+  href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_ConfigExists
+  name: ConfigExists
+  nameWithType: IConfig.ConfigExists
+  fullName: AetherUtils.Core.Configuration.IConfig.ConfigExists
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.CreateDefaultConfig*
+  commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.CreateDefaultConfig
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_CreateDefaultConfig
+  name: CreateDefaultConfig
+  nameWithType: ConfigManager<T>.CreateDefaultConfig
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.CreateDefaultConfig
+  nameWithType.vb: ConfigManager(Of T).CreateDefaultConfig
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).CreateDefaultConfig
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.ConfigFilePath
+  commentId: P:AetherUtils.Core.Configuration.ConfigManager`1.ConfigFilePath
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath
+  name: ConfigFilePath
+  nameWithType: ConfigManager<T>.ConfigFilePath
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.ConfigFilePath
+  nameWithType.vb: ConfigManager(Of T).ConfigFilePath
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).ConfigFilePath
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.IO.FileNotFoundException
+  commentId: T:System.IO.FileNotFoundException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception
+  name: FileNotFoundException
+  nameWithType: FileNotFoundException
+  fullName: System.IO.FileNotFoundException
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.LoadAsync*
+  commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.LoadAsync
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_LoadAsync
+  name: LoadAsync
+  nameWithType: ConfigManager<T>.LoadAsync
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.LoadAsync
+  nameWithType.vb: ConfigManager(Of T).LoadAsync
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).LoadAsync
+- uid: AetherUtils.Core.Configuration.IConfig.LoadAsync
+  commentId: M:AetherUtils.Core.Configuration.IConfig.LoadAsync
+  parent: AetherUtils.Core.Configuration.IConfig
+  href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_LoadAsync
+  name: LoadAsync()
+  nameWithType: IConfig.LoadAsync()
+  fullName: AetherUtils.Core.Configuration.IConfig.LoadAsync()
+  spec.csharp:
+  - uid: AetherUtils.Core.Configuration.IConfig.LoadAsync
+    name: LoadAsync
+    href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_LoadAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Configuration.IConfig.LoadAsync
+    name: LoadAsync
+    href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_LoadAsync
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.Load*
+  commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.Load
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_Load
+  name: Load
+  nameWithType: ConfigManager<T>.Load
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.Load
+  nameWithType.vb: ConfigManager(Of T).Load
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Load
+- uid: AetherUtils.Core.Configuration.IConfig.Load
+  commentId: M:AetherUtils.Core.Configuration.IConfig.Load
+  parent: AetherUtils.Core.Configuration.IConfig
+  href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_Load
+  name: Load()
+  nameWithType: IConfig.Load()
+  fullName: AetherUtils.Core.Configuration.IConfig.Load()
+  spec.csharp:
+  - uid: AetherUtils.Core.Configuration.IConfig.Load
+    name: Load
+    href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_Load
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Configuration.IConfig.Load
+    name: Load
+    href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_Load
+  - name: (
+  - name: )
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.CurrentConfig
+  commentId: P:AetherUtils.Core.Configuration.ConfigManager`1.CurrentConfig
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_CurrentConfig
+  name: CurrentConfig
+  nameWithType: ConfigManager<T>.CurrentConfig
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.CurrentConfig
+  nameWithType.vb: ConfigManager(Of T).CurrentConfig
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).CurrentConfig
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.SaveAsync*
+  commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.SaveAsync
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_SaveAsync
+  name: SaveAsync
+  nameWithType: ConfigManager<T>.SaveAsync
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.SaveAsync
+  nameWithType.vb: ConfigManager(Of T).SaveAsync
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).SaveAsync
+- uid: AetherUtils.Core.Configuration.IConfig.SaveAsync
+  commentId: M:AetherUtils.Core.Configuration.IConfig.SaveAsync
+  parent: AetherUtils.Core.Configuration.IConfig
+  href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_SaveAsync
+  name: SaveAsync()
+  nameWithType: IConfig.SaveAsync()
+  fullName: AetherUtils.Core.Configuration.IConfig.SaveAsync()
+  spec.csharp:
+  - uid: AetherUtils.Core.Configuration.IConfig.SaveAsync
+    name: SaveAsync
+    href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_SaveAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Configuration.IConfig.SaveAsync
+    name: SaveAsync
+    href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_SaveAsync
+  - name: (
+  - name: )
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.Save*
+  commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.Save
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_Save
+  name: Save
+  nameWithType: ConfigManager<T>.Save
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.Save
+  nameWithType.vb: ConfigManager(Of T).Save
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Save
+- uid: AetherUtils.Core.Configuration.IConfig.Save
+  commentId: M:AetherUtils.Core.Configuration.IConfig.Save
+  parent: AetherUtils.Core.Configuration.IConfig
+  href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_Save
+  name: Save()
+  nameWithType: IConfig.Save()
+  fullName: AetherUtils.Core.Configuration.IConfig.Save()
+  spec.csharp:
+  - uid: AetherUtils.Core.Configuration.IConfig.Save
+    name: Save
+    href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_Save
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Configuration.IConfig.Save
+    name: Save
+    href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_Save
+  - name: (
+  - name: )
+- uid: AetherUtils.Core.Structs.ConfigOption
+  commentId: T:AetherUtils.Core.Structs.ConfigOption
+  parent: AetherUtils.Core.Structs
+  href: AetherUtils.Core.Structs.ConfigOption.html
+  name: ConfigOption
+  nameWithType: ConfigOption
+  fullName: AetherUtils.Core.Structs.ConfigOption
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.Get*
+  commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.Get
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_Get_AetherUtils_Core_Structs_ConfigOption_
+  name: Get
+  nameWithType: ConfigManager<T>.Get
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.Get
+  nameWithType.vb: ConfigManager(Of T).Get
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Get
+- uid: AetherUtils.Core.Configuration.IConfig.Get(AetherUtils.Core.Structs.ConfigOption)
+  commentId: M:AetherUtils.Core.Configuration.IConfig.Get(AetherUtils.Core.Structs.ConfigOption)
+  parent: AetherUtils.Core.Configuration.IConfig
+  href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_Get_AetherUtils_Core_Structs_ConfigOption_
+  name: Get(ConfigOption)
+  nameWithType: IConfig.Get(ConfigOption)
+  fullName: AetherUtils.Core.Configuration.IConfig.Get(AetherUtils.Core.Structs.ConfigOption)
+  spec.csharp:
+  - uid: AetherUtils.Core.Configuration.IConfig.Get(AetherUtils.Core.Structs.ConfigOption)
+    name: Get
+    href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_Get_AetherUtils_Core_Structs_ConfigOption_
+  - name: (
+  - uid: AetherUtils.Core.Structs.ConfigOption
+    name: ConfigOption
+    href: AetherUtils.Core.Structs.ConfigOption.html
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Configuration.IConfig.Get(AetherUtils.Core.Structs.ConfigOption)
+    name: Get
+    href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_Get_AetherUtils_Core_Structs_ConfigOption_
+  - name: (
+  - uid: AetherUtils.Core.Structs.ConfigOption
+    name: ConfigOption
+    href: AetherUtils.Core.Structs.ConfigOption.html
+  - name: )
+- uid: AetherUtils.Core.Structs
+  commentId: N:AetherUtils.Core.Structs
+  href: AetherUtils.html
+  name: AetherUtils.Core.Structs
+  nameWithType: AetherUtils.Core.Structs
+  fullName: AetherUtils.Core.Structs
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Structs
+    name: Structs
+    href: AetherUtils.Core.Structs.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Structs
+    name: Structs
+    href: AetherUtils.Core.Structs.html
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.Set*
+  commentId: Overload:AetherUtils.Core.Configuration.ConfigManager`1.Set
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_Set_AetherUtils_Core_Structs_ConfigOption_
+  name: Set
+  nameWithType: ConfigManager<T>.Set
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.Set
+  nameWithType.vb: ConfigManager(Of T).Set
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Set
+- uid: AetherUtils.Core.Configuration.IConfig.Set(AetherUtils.Core.Structs.ConfigOption)
+  commentId: M:AetherUtils.Core.Configuration.IConfig.Set(AetherUtils.Core.Structs.ConfigOption)
+  parent: AetherUtils.Core.Configuration.IConfig
+  href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_Set_AetherUtils_Core_Structs_ConfigOption_
+  name: Set(ConfigOption)
+  nameWithType: IConfig.Set(ConfigOption)
+  fullName: AetherUtils.Core.Configuration.IConfig.Set(AetherUtils.Core.Structs.ConfigOption)
+  spec.csharp:
+  - uid: AetherUtils.Core.Configuration.IConfig.Set(AetherUtils.Core.Structs.ConfigOption)
+    name: Set
+    href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_Set_AetherUtils_Core_Structs_ConfigOption_
+  - name: (
+  - uid: AetherUtils.Core.Structs.ConfigOption
+    name: ConfigOption
+    href: AetherUtils.Core.Structs.ConfigOption.html
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Configuration.IConfig.Set(AetherUtils.Core.Structs.ConfigOption)
+    name: Set
+    href: AetherUtils.Core.Configuration.IConfig.html#AetherUtils_Core_Configuration_IConfig_Set_AetherUtils_Core_Structs_ConfigOption_
+  - name: (
+  - uid: AetherUtils.Core.Structs.ConfigOption
+    name: ConfigOption
+    href: AetherUtils.Core.Structs.ConfigOption.html
+  - name: )

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.RegEx
+  commentId: N:AetherUtils.Core.RegEx
+  id: AetherUtils.Core.RegEx
+  children:
+  - AetherUtils.Core.RegEx.RegexGenerator
+  langs:
+  - csharp
+  - vb
+  name: AetherUtils.Core.RegEx
+  nameWithType: AetherUtils.Core.RegEx
+  fullName: AetherUtils.Core.RegEx
+  type: Namespace
+  assemblies:
+  - AetherUtils.Core
+references:
+- uid: AetherUtils.Core.RegEx.RegexGenerator
+  commentId: T:AetherUtils.Core.RegEx.RegexGenerator
+  href: AetherUtils.Core.RegEx.RegexGenerator.html
+  name: RegexGenerator
+  nameWithType: RegexGenerator
+  fullName: AetherUtils.Core.RegEx.RegexGenerator

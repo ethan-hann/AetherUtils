@@ -1,0 +1,1185 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Structs.HashOptions
+  commentId: T:AetherUtils.Core.Structs.HashOptions
+  id: HashOptions
+  parent: AetherUtils.Core.Structs
+  children:
+  - AetherUtils.Core.Structs.HashOptions.#ctor(AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32})
+  - AetherUtils.Core.Structs.HashOptions.#ctor(AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},AetherUtils.Core.Security.Hashing.HashEncoding)
+  - AetherUtils.Core.Structs.HashOptions.#ctor(AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)
+  - AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},System.Security.Cryptography.HashAlgorithmName)
+  - AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)
+  - AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32)
+  - AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,AetherUtils.Core.Security.Hashing.HashEncoding)
+  - AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Int32)
+  - AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  - AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  - AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)
+  - AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  - AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)
+  - AetherUtils.Core.Structs.HashOptions.Encoding
+  - AetherUtils.Core.Structs.HashOptions.HashAlgorithm
+  - AetherUtils.Core.Structs.HashOptions.Iterations
+  - AetherUtils.Core.Structs.HashOptions.KeySize
+  - AetherUtils.Core.Structs.HashOptions.SaltLength
+  langs:
+  - csharp
+  - vb
+  name: HashOptions
+  nameWithType: HashOptions
+  fullName: AetherUtils.Core.Structs.HashOptions
+  type: Struct
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: HashOptions
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 11
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  summary: >-
+    Represents the options used for performing hashing functions. If unspecified at struct creation, 
+
+    the <xref href="AetherUtils.Core.Structs.HashOptions.HashAlgorithm" data-throw-if-not-resolved="false"></xref> defaults to <xref href="System.Security.Cryptography.HashAlgorithmName.SHA384" data-throw-if-not-resolved="false"></xref> 
+
+    and the <xref href="AetherUtils.Core.Structs.HashOptions.Encoding" data-throw-if-not-resolved="false"></xref> defaults to <xref href="AetherUtils.Core.Security.Hashing.HashEncoding.Base64" data-throw-if-not-resolved="false"></xref>.
+
+    <p>Once created, this struct's options cannot be changed.</p>
+  example: []
+  syntax:
+    content: public readonly struct HashOptions
+    content.vb: Public Structure HashOptions
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: AetherUtils.Core.Structs.HashOptions.SaltLength
+  commentId: P:AetherUtils.Core.Structs.HashOptions.SaltLength
+  id: SaltLength
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: SaltLength
+  nameWithType: HashOptions.SaltLength
+  fullName: AetherUtils.Core.Structs.HashOptions.SaltLength
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: SaltLength
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 18
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  summary: The length (in bytes) used for the salt when hashing.
+  example: []
+  syntax:
+    content: public int SaltLength { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property SaltLength As Integer
+  overload: AetherUtils.Core.Structs.HashOptions.SaltLength*
+- uid: AetherUtils.Core.Structs.HashOptions.KeySize
+  commentId: P:AetherUtils.Core.Structs.HashOptions.KeySize
+  id: KeySize
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: KeySize
+  nameWithType: HashOptions.KeySize
+  fullName: AetherUtils.Core.Structs.HashOptions.KeySize
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: KeySize
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 23
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  summary: The size (in bytes) of the hash key used when hashing.
+  example: []
+  syntax:
+    content: public int KeySize { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property KeySize As Integer
+  overload: AetherUtils.Core.Structs.HashOptions.KeySize*
+- uid: AetherUtils.Core.Structs.HashOptions.Iterations
+  commentId: P:AetherUtils.Core.Structs.HashOptions.Iterations
+  id: Iterations
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: Iterations
+  nameWithType: HashOptions.Iterations
+  fullName: AetherUtils.Core.Structs.HashOptions.Iterations
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Iterations
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 29
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  summary: >-
+    The number of iterations to perform when hashing.
+
+    <p>A random value between the minimum and maximum iterations is retrieved every time this property is called.</p>
+  example: []
+  syntax:
+    content: public int Iterations { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Iterations As Integer
+  overload: AetherUtils.Core.Structs.HashOptions.Iterations*
+- uid: AetherUtils.Core.Structs.HashOptions.HashAlgorithm
+  commentId: P:AetherUtils.Core.Structs.HashOptions.HashAlgorithm
+  id: HashAlgorithm
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashAlgorithm
+  nameWithType: HashOptions.HashAlgorithm
+  fullName: AetherUtils.Core.Structs.HashOptions.HashAlgorithm
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: HashAlgorithm
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 34
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  summary: The algorithm to use when hashing.
+  example: []
+  syntax:
+    content: public HashAlgorithmName HashAlgorithm { get; }
+    parameters: []
+    return:
+      type: System.Security.Cryptography.HashAlgorithmName
+    content.vb: Public ReadOnly Property HashAlgorithm As HashAlgorithmName
+  overload: AetherUtils.Core.Structs.HashOptions.HashAlgorithm*
+- uid: AetherUtils.Core.Structs.HashOptions.Encoding
+  commentId: P:AetherUtils.Core.Structs.HashOptions.Encoding
+  id: Encoding
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: Encoding
+  nameWithType: HashOptions.Encoding
+  fullName: AetherUtils.Core.Structs.HashOptions.Encoding
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Encoding
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 39
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  summary: The encoding scheme to use when hashing.
+  example: []
+  syntax:
+    content: public HashEncoding Encoding { get; }
+    parameters: []
+    return:
+      type: AetherUtils.Core.Security.Hashing.HashEncoding
+    content.vb: Public ReadOnly Property Encoding As HashEncoding
+  overload: AetherUtils.Core.Structs.HashOptions.Encoding*
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32})
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32})
+  id: '#ctor(AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32})'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(ReadOnlyPair<int, int>)
+  nameWithType: HashOptions.HashOptions(ReadOnlyPair<int, int>)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(AetherUtils.Core.Structs.ReadOnlyPair<int, int>)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 41
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(ReadOnlyPair<int, int> iterations)
+    parameters:
+    - id: iterations
+      type: AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32}
+    content.vb: Public Sub New(iterations As ReadOnlyPair(Of Integer, Integer))
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(ReadOnlyPair(Of Integer, Integer))
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(AetherUtils.Core.Structs.ReadOnlyPair(Of Integer, Integer))
+  name.vb: New(ReadOnlyPair(Of Integer, Integer))
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32)
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(int, int)
+  nameWithType: HashOptions.HashOptions(int, int)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(int, int)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 43
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(int minIterations, int maxIterations)
+    parameters:
+    - id: minIterations
+      type: System.Int32
+    - id: maxIterations
+      type: System.Int32
+    content.vb: Public Sub New(minIterations As Integer, maxIterations As Integer)
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(Integer, Integer)
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)
+  id: '#ctor(System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(int, int, HashAlgorithmName, HashEncoding)
+  nameWithType: HashOptions.HashOptions(int, int, HashAlgorithmName, HashEncoding)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(int, int, System.Security.Cryptography.HashAlgorithmName, AetherUtils.Core.Security.Hashing.HashEncoding)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 45
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(int minIterations, int maxIterations, HashAlgorithmName hashAlgorithm, HashEncoding hashEncoding)
+    parameters:
+    - id: minIterations
+      type: System.Int32
+    - id: maxIterations
+      type: System.Int32
+    - id: hashAlgorithm
+      type: System.Security.Cryptography.HashAlgorithmName
+    - id: hashEncoding
+      type: AetherUtils.Core.Security.Hashing.HashEncoding
+    content.vb: Public Sub New(minIterations As Integer, maxIterations As Integer, hashAlgorithm As HashAlgorithmName, hashEncoding As HashEncoding)
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(Integer, Integer, HashAlgorithmName, HashEncoding)
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(Integer, Integer, System.Security.Cryptography.HashAlgorithmName, AetherUtils.Core.Security.Hashing.HashEncoding)
+  name.vb: New(Integer, Integer, HashAlgorithmName, HashEncoding)
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  id: '#ctor(System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(int, int, HashAlgorithmName)
+  nameWithType: HashOptions.HashOptions(int, int, HashAlgorithmName)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(int, int, System.Security.Cryptography.HashAlgorithmName)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 49
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(int minIterations, int maxIterations, HashAlgorithmName hashAlgorithm)
+    parameters:
+    - id: minIterations
+      type: System.Int32
+    - id: maxIterations
+      type: System.Int32
+    - id: hashAlgorithm
+      type: System.Security.Cryptography.HashAlgorithmName
+    content.vb: Public Sub New(minIterations As Integer, maxIterations As Integer, hashAlgorithm As HashAlgorithmName)
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(Integer, Integer, HashAlgorithmName)
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(Integer, Integer, System.Security.Cryptography.HashAlgorithmName)
+  name.vb: New(Integer, Integer, HashAlgorithmName)
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,AetherUtils.Core.Security.Hashing.HashEncoding)
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,AetherUtils.Core.Security.Hashing.HashEncoding)
+  id: '#ctor(System.Int32,System.Int32,AetherUtils.Core.Security.Hashing.HashEncoding)'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(int, int, HashEncoding)
+  nameWithType: HashOptions.HashOptions(int, int, HashEncoding)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(int, int, AetherUtils.Core.Security.Hashing.HashEncoding)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 53
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(int minIterations, int maxIterations, HashEncoding hashEncoding)
+    parameters:
+    - id: minIterations
+      type: System.Int32
+    - id: maxIterations
+      type: System.Int32
+    - id: hashEncoding
+      type: AetherUtils.Core.Security.Hashing.HashEncoding
+    content.vb: Public Sub New(minIterations As Integer, maxIterations As Integer, hashEncoding As HashEncoding)
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(Integer, Integer, HashEncoding)
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(Integer, Integer, AetherUtils.Core.Security.Hashing.HashEncoding)
+  name.vb: New(Integer, Integer, HashEncoding)
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},AetherUtils.Core.Security.Hashing.HashEncoding)
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},AetherUtils.Core.Security.Hashing.HashEncoding)
+  id: '#ctor(AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},AetherUtils.Core.Security.Hashing.HashEncoding)'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(ReadOnlyPair<int, int>, HashEncoding)
+  nameWithType: HashOptions.HashOptions(ReadOnlyPair<int, int>, HashEncoding)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(AetherUtils.Core.Structs.ReadOnlyPair<int, int>, AetherUtils.Core.Security.Hashing.HashEncoding)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 57
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(ReadOnlyPair<int, int> iterations, HashEncoding hashEncoding)
+    parameters:
+    - id: iterations
+      type: AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32}
+    - id: hashEncoding
+      type: AetherUtils.Core.Security.Hashing.HashEncoding
+    content.vb: Public Sub New(iterations As ReadOnlyPair(Of Integer, Integer), hashEncoding As HashEncoding)
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(ReadOnlyPair(Of Integer, Integer), HashEncoding)
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(AetherUtils.Core.Structs.ReadOnlyPair(Of Integer, Integer), AetherUtils.Core.Security.Hashing.HashEncoding)
+  name.vb: New(ReadOnlyPair(Of Integer, Integer), HashEncoding)
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)
+  id: '#ctor(AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(ReadOnlyPair<int, int>, HashAlgorithmName, HashEncoding)
+  nameWithType: HashOptions.HashOptions(ReadOnlyPair<int, int>, HashAlgorithmName, HashEncoding)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(AetherUtils.Core.Structs.ReadOnlyPair<int, int>, System.Security.Cryptography.HashAlgorithmName, AetherUtils.Core.Security.Hashing.HashEncoding)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 61
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(ReadOnlyPair<int, int> iterations, HashAlgorithmName hashAlgorithm, HashEncoding hashEncoding)
+    parameters:
+    - id: iterations
+      type: AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32}
+    - id: hashAlgorithm
+      type: System.Security.Cryptography.HashAlgorithmName
+    - id: hashEncoding
+      type: AetherUtils.Core.Security.Hashing.HashEncoding
+    content.vb: Public Sub New(iterations As ReadOnlyPair(Of Integer, Integer), hashAlgorithm As HashAlgorithmName, hashEncoding As HashEncoding)
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(ReadOnlyPair(Of Integer, Integer), HashAlgorithmName, HashEncoding)
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(AetherUtils.Core.Structs.ReadOnlyPair(Of Integer, Integer), System.Security.Cryptography.HashAlgorithmName, AetherUtils.Core.Security.Hashing.HashEncoding)
+  name.vb: New(ReadOnlyPair(Of Integer, Integer), HashAlgorithmName, HashEncoding)
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)
+  id: '#ctor(System.Int32,AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(int, ReadOnlyPair<int, int>, HashAlgorithmName, HashEncoding)
+  nameWithType: HashOptions.HashOptions(int, ReadOnlyPair<int, int>, HashAlgorithmName, HashEncoding)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(int, AetherUtils.Core.Structs.ReadOnlyPair<int, int>, System.Security.Cryptography.HashAlgorithmName, AetherUtils.Core.Security.Hashing.HashEncoding)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 65
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(int saltLength, ReadOnlyPair<int, int> iterations, HashAlgorithmName hashAlgorithm, HashEncoding hashEncoding)
+    parameters:
+    - id: saltLength
+      type: System.Int32
+    - id: iterations
+      type: AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32}
+    - id: hashAlgorithm
+      type: System.Security.Cryptography.HashAlgorithmName
+    - id: hashEncoding
+      type: AetherUtils.Core.Security.Hashing.HashEncoding
+    content.vb: Public Sub New(saltLength As Integer, iterations As ReadOnlyPair(Of Integer, Integer), hashAlgorithm As HashAlgorithmName, hashEncoding As HashEncoding)
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(Integer, ReadOnlyPair(Of Integer, Integer), HashAlgorithmName, HashEncoding)
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(Integer, AetherUtils.Core.Structs.ReadOnlyPair(Of Integer, Integer), System.Security.Cryptography.HashAlgorithmName, AetherUtils.Core.Security.Hashing.HashEncoding)
+  name.vb: New(Integer, ReadOnlyPair(Of Integer, Integer), HashAlgorithmName, HashEncoding)
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},System.Security.Cryptography.HashAlgorithmName)
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},System.Security.Cryptography.HashAlgorithmName)
+  id: '#ctor(System.Int32,AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32},System.Security.Cryptography.HashAlgorithmName)'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(int, ReadOnlyPair<int, int>, HashAlgorithmName)
+  nameWithType: HashOptions.HashOptions(int, ReadOnlyPair<int, int>, HashAlgorithmName)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(int, AetherUtils.Core.Structs.ReadOnlyPair<int, int>, System.Security.Cryptography.HashAlgorithmName)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 69
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(int saltLength, ReadOnlyPair<int, int> iterations, HashAlgorithmName hashAlgorithm)
+    parameters:
+    - id: saltLength
+      type: System.Int32
+    - id: iterations
+      type: AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32}
+    - id: hashAlgorithm
+      type: System.Security.Cryptography.HashAlgorithmName
+    content.vb: Public Sub New(saltLength As Integer, iterations As ReadOnlyPair(Of Integer, Integer), hashAlgorithm As HashAlgorithmName)
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(Integer, ReadOnlyPair(Of Integer, Integer), HashAlgorithmName)
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(Integer, AetherUtils.Core.Structs.ReadOnlyPair(Of Integer, Integer), System.Security.Cryptography.HashAlgorithmName)
+  name.vb: New(Integer, ReadOnlyPair(Of Integer, Integer), HashAlgorithmName)
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Int32)
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32)'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(int, int, int)
+  nameWithType: HashOptions.HashOptions(int, int, int)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(int, int, int)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 73
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(int saltLength, int minIterations, int maxIterations)
+    parameters:
+    - id: saltLength
+      type: System.Int32
+    - id: minIterations
+      type: System.Int32
+    - id: maxIterations
+      type: System.Int32
+    content.vb: Public Sub New(saltLength As Integer, minIterations As Integer, maxIterations As Integer)
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(Integer, Integer, Integer)
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(Integer, Integer, Integer)
+  name.vb: New(Integer, Integer, Integer)
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32)'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(int, int, int, int)
+  nameWithType: HashOptions.HashOptions(int, int, int, int)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(int, int, int, int)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 77
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(int saltLength, int keySize, int minIterations, int maxIterations)
+    parameters:
+    - id: saltLength
+      type: System.Int32
+    - id: keySize
+      type: System.Int32
+    - id: minIterations
+      type: System.Int32
+    - id: maxIterations
+      type: System.Int32
+    content.vb: Public Sub New(saltLength As Integer, keySize As Integer, minIterations As Integer, maxIterations As Integer)
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(Integer, Integer, Integer, Integer)
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(Integer, Integer, Integer, Integer)
+  name.vb: New(Integer, Integer, Integer, Integer)
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(int, int, int, int, HashAlgorithmName)
+  nameWithType: HashOptions.HashOptions(int, int, int, int, HashAlgorithmName)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(int, int, int, int, System.Security.Cryptography.HashAlgorithmName)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 81
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(int saltLength, int keySize, int minIterations, int maxIterations, HashAlgorithmName hashAlgorithm)
+    parameters:
+    - id: saltLength
+      type: System.Int32
+    - id: keySize
+      type: System.Int32
+    - id: minIterations
+      type: System.Int32
+    - id: maxIterations
+      type: System.Int32
+    - id: hashAlgorithm
+      type: System.Security.Cryptography.HashAlgorithmName
+    content.vb: Public Sub New(saltLength As Integer, keySize As Integer, minIterations As Integer, maxIterations As Integer, hashAlgorithm As HashAlgorithmName)
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(Integer, Integer, Integer, Integer, HashAlgorithmName)
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(Integer, Integer, Integer, Integer, System.Security.Cryptography.HashAlgorithmName)
+  name.vb: New(Integer, Integer, Integer, Integer, HashAlgorithmName)
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)
+  commentId: M:AetherUtils.Core.Structs.HashOptions.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName,AetherUtils.Core.Security.Hashing.HashEncoding)'
+  parent: AetherUtils.Core.Structs.HashOptions
+  langs:
+  - csharp
+  - vb
+  name: HashOptions(int, int, int, int, HashAlgorithmName, HashEncoding)
+  nameWithType: HashOptions.HashOptions(int, int, int, int, HashAlgorithmName, HashEncoding)
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions(int, int, int, int, System.Security.Cryptography.HashAlgorithmName, AetherUtils.Core.Security.Hashing.HashEncoding)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/HashOptions.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/HashOptions.cs
+    startLine: 85
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: public HashOptions(int saltLength, int keySize, int minIterations, int maxIterations, HashAlgorithmName hashAlgorithm, HashEncoding hashEncoding)
+    parameters:
+    - id: saltLength
+      type: System.Int32
+    - id: keySize
+      type: System.Int32
+    - id: minIterations
+      type: System.Int32
+    - id: maxIterations
+      type: System.Int32
+    - id: hashAlgorithm
+      type: System.Security.Cryptography.HashAlgorithmName
+    - id: hashEncoding
+      type: AetherUtils.Core.Security.Hashing.HashEncoding
+    content.vb: Public Sub New(saltLength As Integer, keySize As Integer, minIterations As Integer, maxIterations As Integer, hashAlgorithm As HashAlgorithmName, hashEncoding As HashEncoding)
+  overload: AetherUtils.Core.Structs.HashOptions.#ctor*
+  nameWithType.vb: HashOptions.New(Integer, Integer, Integer, Integer, HashAlgorithmName, HashEncoding)
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New(Integer, Integer, Integer, Integer, System.Security.Cryptography.HashAlgorithmName, AetherUtils.Core.Security.Hashing.HashEncoding)
+  name.vb: New(Integer, Integer, Integer, Integer, HashAlgorithmName, HashEncoding)
+references:
+- uid: AetherUtils.Core.Structs.HashOptions.HashAlgorithm
+  commentId: P:AetherUtils.Core.Structs.HashOptions.HashAlgorithm
+  href: AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_HashAlgorithm
+  name: HashAlgorithm
+  nameWithType: HashOptions.HashAlgorithm
+  fullName: AetherUtils.Core.Structs.HashOptions.HashAlgorithm
+- uid: System.Security.Cryptography.HashAlgorithmName.SHA384
+  commentId: P:System.Security.Cryptography.HashAlgorithmName.SHA384
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.security.cryptography.hashalgorithmname.sha384
+  name: SHA384
+  nameWithType: HashAlgorithmName.SHA384
+  fullName: System.Security.Cryptography.HashAlgorithmName.SHA384
+- uid: AetherUtils.Core.Structs.HashOptions.Encoding
+  commentId: P:AetherUtils.Core.Structs.HashOptions.Encoding
+  href: AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_Encoding
+  name: Encoding
+  nameWithType: HashOptions.Encoding
+  fullName: AetherUtils.Core.Structs.HashOptions.Encoding
+- uid: AetherUtils.Core.Security.Hashing.HashEncoding.Base64
+  commentId: F:AetherUtils.Core.Security.Hashing.HashEncoding.Base64
+  href: AetherUtils.Core.Security.Hashing.HashEncoding.html#AetherUtils_Core_Security_Hashing_HashEncoding_Base64
+  name: Base64
+  nameWithType: HashEncoding.Base64
+  fullName: AetherUtils.Core.Security.Hashing.HashEncoding.Base64
+- uid: AetherUtils.Core.Structs
+  commentId: N:AetherUtils.Core.Structs
+  href: AetherUtils.html
+  name: AetherUtils.Core.Structs
+  nameWithType: AetherUtils.Core.Structs
+  fullName: AetherUtils.Core.Structs
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Structs
+    name: Structs
+    href: AetherUtils.Core.Structs.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Structs
+    name: Structs
+    href: AetherUtils.Core.Structs.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AetherUtils.Core.Structs.HashOptions.SaltLength*
+  commentId: Overload:AetherUtils.Core.Structs.HashOptions.SaltLength
+  href: AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_SaltLength
+  name: SaltLength
+  nameWithType: HashOptions.SaltLength
+  fullName: AetherUtils.Core.Structs.HashOptions.SaltLength
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AetherUtils.Core.Structs.HashOptions.KeySize*
+  commentId: Overload:AetherUtils.Core.Structs.HashOptions.KeySize
+  href: AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_KeySize
+  name: KeySize
+  nameWithType: HashOptions.KeySize
+  fullName: AetherUtils.Core.Structs.HashOptions.KeySize
+- uid: AetherUtils.Core.Structs.HashOptions.Iterations*
+  commentId: Overload:AetherUtils.Core.Structs.HashOptions.Iterations
+  href: AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_Iterations
+  name: Iterations
+  nameWithType: HashOptions.Iterations
+  fullName: AetherUtils.Core.Structs.HashOptions.Iterations
+- uid: AetherUtils.Core.Structs.HashOptions.HashAlgorithm*
+  commentId: Overload:AetherUtils.Core.Structs.HashOptions.HashAlgorithm
+  href: AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_HashAlgorithm
+  name: HashAlgorithm
+  nameWithType: HashOptions.HashAlgorithm
+  fullName: AetherUtils.Core.Structs.HashOptions.HashAlgorithm
+- uid: System.Security.Cryptography.HashAlgorithmName
+  commentId: T:System.Security.Cryptography.HashAlgorithmName
+  parent: System.Security.Cryptography
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.security.cryptography.hashalgorithmname
+  name: HashAlgorithmName
+  nameWithType: HashAlgorithmName
+  fullName: System.Security.Cryptography.HashAlgorithmName
+- uid: System.Security.Cryptography
+  commentId: N:System.Security.Cryptography
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Security.Cryptography
+  nameWithType: System.Security.Cryptography
+  fullName: System.Security.Cryptography
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Security
+    name: Security
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security
+  - name: .
+  - uid: System.Security.Cryptography
+    name: Cryptography
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.cryptography
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Security
+    name: Security
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security
+  - name: .
+  - uid: System.Security.Cryptography
+    name: Cryptography
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.cryptography
+- uid: AetherUtils.Core.Structs.HashOptions.Encoding*
+  commentId: Overload:AetherUtils.Core.Structs.HashOptions.Encoding
+  href: AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_Encoding
+  name: Encoding
+  nameWithType: HashOptions.Encoding
+  fullName: AetherUtils.Core.Structs.HashOptions.Encoding
+- uid: AetherUtils.Core.Security.Hashing.HashEncoding
+  commentId: T:AetherUtils.Core.Security.Hashing.HashEncoding
+  parent: AetherUtils.Core.Security.Hashing
+  href: AetherUtils.Core.Security.Hashing.HashEncoding.html
+  name: HashEncoding
+  nameWithType: HashEncoding
+  fullName: AetherUtils.Core.Security.Hashing.HashEncoding
+- uid: AetherUtils.Core.Security.Hashing
+  commentId: N:AetherUtils.Core.Security.Hashing
+  href: AetherUtils.html
+  name: AetherUtils.Core.Security.Hashing
+  nameWithType: AetherUtils.Core.Security.Hashing
+  fullName: AetherUtils.Core.Security.Hashing
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Security
+    name: Security
+    href: AetherUtils.Core.Security.html
+  - name: .
+  - uid: AetherUtils.Core.Security.Hashing
+    name: Hashing
+    href: AetherUtils.Core.Security.Hashing.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Security
+    name: Security
+    href: AetherUtils.Core.Security.html
+  - name: .
+  - uid: AetherUtils.Core.Security.Hashing
+    name: Hashing
+    href: AetherUtils.Core.Security.Hashing.html
+- uid: AetherUtils.Core.Structs.HashOptions.#ctor*
+  commentId: Overload:AetherUtils.Core.Structs.HashOptions.#ctor
+  href: AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions__ctor_AetherUtils_Core_Structs_ReadOnlyPair_System_Int32_System_Int32__
+  name: HashOptions
+  nameWithType: HashOptions.HashOptions
+  fullName: AetherUtils.Core.Structs.HashOptions.HashOptions
+  nameWithType.vb: HashOptions.New
+  fullName.vb: AetherUtils.Core.Structs.HashOptions.New
+  name.vb: New
+- uid: AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32}
+  commentId: T:AetherUtils.Core.Structs.ReadOnlyPair{System.Int32,System.Int32}
+  parent: AetherUtils.Core.Structs
+  definition: AetherUtils.Core.Structs.ReadOnlyPair`2
+  href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  name: ReadOnlyPair<int, int>
+  nameWithType: ReadOnlyPair<int, int>
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<int, int>
+  nameWithType.vb: ReadOnlyPair(Of Integer, Integer)
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of Integer, Integer)
+  name.vb: ReadOnlyPair(Of Integer, Integer)
+  spec.csharp:
+  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+    name: ReadOnlyPair
+    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+    name: ReadOnlyPair
+    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+  commentId: T:AetherUtils.Core.Structs.ReadOnlyPair`2
+  href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  name: ReadOnlyPair<K, V>
+  nameWithType: ReadOnlyPair<K, V>
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>
+  nameWithType.vb: ReadOnlyPair(Of K, V)
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V)
+  name.vb: ReadOnlyPair(Of K, V)
+  spec.csharp:
+  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+    name: ReadOnlyPair
+    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  - name: <
+  - name: K
+  - name: ','
+  - name: " "
+  - name: V
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+    name: ReadOnlyPair
+    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: K
+  - name: ','
+  - name: " "
+  - name: V
+  - name: )

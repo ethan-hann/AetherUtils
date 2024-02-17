@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Configuration
+  commentId: N:AetherUtils.Core.Configuration
+  id: AetherUtils.Core.Configuration
+  children:
+  - AetherUtils.Core.Configuration.ConfigManager`1
+  - AetherUtils.Core.Configuration.DefaultConfig
+  - AetherUtils.Core.Configuration.IConfig
+  - AetherUtils.Core.Configuration.LogOptions
+  - AetherUtils.Core.Configuration.YamlConfigManager
+  langs:
+  - csharp
+  - vb
+  name: AetherUtils.Core.Configuration
+  nameWithType: AetherUtils.Core.Configuration
+  fullName: AetherUtils.Core.Configuration
+  type: Namespace
+  assemblies:
+  - AetherUtils.Core
+references:
+- uid: AetherUtils.Core.Configuration.ConfigManager`1
+  commentId: T:AetherUtils.Core.Configuration.ConfigManager`1
+  href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  name: ConfigManager<T>
+  nameWithType: ConfigManager<T>
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>
+  nameWithType.vb: ConfigManager(Of T)
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T)
+  name.vb: ConfigManager(Of T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: AetherUtils.Core.Configuration.ConfigManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Configuration.DefaultConfig
+  commentId: T:AetherUtils.Core.Configuration.DefaultConfig
+  href: AetherUtils.Core.Configuration.DefaultConfig.html
+  name: DefaultConfig
+  nameWithType: DefaultConfig
+  fullName: AetherUtils.Core.Configuration.DefaultConfig
+- uid: AetherUtils.Core.Configuration.IConfig
+  commentId: T:AetherUtils.Core.Configuration.IConfig
+  parent: AetherUtils.Core.Configuration
+  href: AetherUtils.Core.Configuration.IConfig.html
+  name: IConfig
+  nameWithType: IConfig
+  fullName: AetherUtils.Core.Configuration.IConfig
+- uid: AetherUtils.Core.Configuration.LogOptions
+  commentId: T:AetherUtils.Core.Configuration.LogOptions
+  parent: AetherUtils.Core.Configuration
+  href: AetherUtils.Core.Configuration.LogOptions.html
+  name: LogOptions
+  nameWithType: LogOptions
+  fullName: AetherUtils.Core.Configuration.LogOptions
+- uid: AetherUtils.Core.Configuration.YamlConfigManager
+  commentId: T:AetherUtils.Core.Configuration.YamlConfigManager
+  href: AetherUtils.Core.Configuration.YamlConfigManager.html
+  name: YamlConfigManager
+  nameWithType: YamlConfigManager
+  fullName: AetherUtils.Core.Configuration.YamlConfigManager
+- uid: AetherUtils.Core.Configuration
+  commentId: N:AetherUtils.Core.Configuration
+  href: AetherUtils.html
+  name: AetherUtils.Core.Configuration
+  nameWithType: AetherUtils.Core.Configuration
+  fullName: AetherUtils.Core.Configuration
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Configuration
+    name: Configuration
+    href: AetherUtils.Core.Configuration.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Configuration
+    name: Configuration
+    href: AetherUtils.Core.Configuration.html

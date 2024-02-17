@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Structs
+  commentId: N:AetherUtils.Core.Structs
+  id: AetherUtils.Core.Structs
+  children:
+  - AetherUtils.Core.Structs.ConfigOption
+  - AetherUtils.Core.Structs.HashOptions
+  - AetherUtils.Core.Structs.Pair`2
+  - AetherUtils.Core.Structs.ReadOnlyPair`2
+  - AetherUtils.Core.Structs.TrimmedString
+  langs:
+  - csharp
+  - vb
+  name: AetherUtils.Core.Structs
+  nameWithType: AetherUtils.Core.Structs
+  fullName: AetherUtils.Core.Structs
+  type: Namespace
+  assemblies:
+  - AetherUtils.Core
+references:
+- uid: AetherUtils.Core.Structs.ConfigOption
+  commentId: T:AetherUtils.Core.Structs.ConfigOption
+  parent: AetherUtils.Core.Structs
+  href: AetherUtils.Core.Structs.ConfigOption.html
+  name: ConfigOption
+  nameWithType: ConfigOption
+  fullName: AetherUtils.Core.Structs.ConfigOption
+- uid: AetherUtils.Core.Structs.HashOptions
+  commentId: T:AetherUtils.Core.Structs.HashOptions
+  parent: AetherUtils.Core.Structs
+  href: AetherUtils.Core.Structs.HashOptions.html
+  name: HashOptions
+  nameWithType: HashOptions
+  fullName: AetherUtils.Core.Structs.HashOptions
+- uid: AetherUtils.Core.Structs.Pair`2
+  commentId: T:AetherUtils.Core.Structs.Pair`2
+  href: AetherUtils.Core.Structs.Pair-2.html
+  name: Pair<K, V>
+  nameWithType: Pair<K, V>
+  fullName: AetherUtils.Core.Structs.Pair<K, V>
+  nameWithType.vb: Pair(Of K, V)
+  fullName.vb: AetherUtils.Core.Structs.Pair(Of K, V)
+  name.vb: Pair(Of K, V)
+  spec.csharp:
+  - uid: AetherUtils.Core.Structs.Pair`2
+    name: Pair
+    href: AetherUtils.Core.Structs.Pair-2.html
+  - name: <
+  - name: K
+  - name: ','
+  - name: " "
+  - name: V
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Structs.Pair`2
+    name: Pair
+    href: AetherUtils.Core.Structs.Pair-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: K
+  - name: ','
+  - name: " "
+  - name: V
+  - name: )
+- uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+  commentId: T:AetherUtils.Core.Structs.ReadOnlyPair`2
+  href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  name: ReadOnlyPair<K, V>
+  nameWithType: ReadOnlyPair<K, V>
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>
+  nameWithType.vb: ReadOnlyPair(Of K, V)
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V)
+  name.vb: ReadOnlyPair(Of K, V)
+  spec.csharp:
+  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+    name: ReadOnlyPair
+    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  - name: <
+  - name: K
+  - name: ','
+  - name: " "
+  - name: V
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+    name: ReadOnlyPair
+    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: K
+  - name: ','
+  - name: " "
+  - name: V
+  - name: )
+- uid: AetherUtils.Core.Structs.TrimmedString
+  commentId: T:AetherUtils.Core.Structs.TrimmedString
+  parent: AetherUtils.Core.Structs
+  href: AetherUtils.Core.Structs.TrimmedString.html
+  name: TrimmedString
+  nameWithType: TrimmedString
+  fullName: AetherUtils.Core.Structs.TrimmedString
+- uid: AetherUtils.Core.Structs
+  commentId: N:AetherUtils.Core.Structs
+  href: AetherUtils.html
+  name: AetherUtils.Core.Structs
+  nameWithType: AetherUtils.Core.Structs
+  fullName: AetherUtils.Core.Structs
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Structs
+    name: Structs
+    href: AetherUtils.Core.Structs.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Structs
+    name: Structs
+    href: AetherUtils.Core.Structs.html

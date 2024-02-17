@@ -1,0 +1,75 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Files
+  commentId: N:AetherUtils.Core.Files
+  id: AetherUtils.Core.Files
+  children:
+  - AetherUtils.Core.Files.FileHelper
+  - AetherUtils.Core.Files.Json`1
+  - AetherUtils.Core.Files.Xml`1
+  langs:
+  - csharp
+  - vb
+  name: AetherUtils.Core.Files
+  nameWithType: AetherUtils.Core.Files
+  fullName: AetherUtils.Core.Files
+  type: Namespace
+  assemblies:
+  - AetherUtils.Core
+references:
+- uid: AetherUtils.Core.Files.FileHelper
+  commentId: T:AetherUtils.Core.Files.FileHelper
+  href: AetherUtils.Core.Files.FileHelper.html
+  name: FileHelper
+  nameWithType: FileHelper
+  fullName: AetherUtils.Core.Files.FileHelper
+- uid: AetherUtils.Core.Files.Json`1
+  commentId: T:AetherUtils.Core.Files.Json`1
+  href: AetherUtils.Core.Files.Json-1.html
+  name: Json<T>
+  nameWithType: Json<T>
+  fullName: AetherUtils.Core.Files.Json<T>
+  nameWithType.vb: Json(Of T)
+  fullName.vb: AetherUtils.Core.Files.Json(Of T)
+  name.vb: Json(Of T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Files.Json`1
+    name: Json
+    href: AetherUtils.Core.Files.Json-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Files.Json`1
+    name: Json
+    href: AetherUtils.Core.Files.Json-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Files.Xml`1
+  commentId: T:AetherUtils.Core.Files.Xml`1
+  href: AetherUtils.Core.Files.Xml-1.html
+  name: Xml<T>
+  nameWithType: Xml<T>
+  fullName: AetherUtils.Core.Files.Xml<T>
+  nameWithType.vb: Xml(Of T)
+  fullName.vb: AetherUtils.Core.Files.Xml(Of T)
+  name.vb: Xml(Of T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Files.Xml`1
+    name: Xml
+    href: AetherUtils.Core.Files.Xml-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Files.Xml`1
+    name: Xml
+    href: AetherUtils.Core.Files.Xml-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

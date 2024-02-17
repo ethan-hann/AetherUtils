@@ -1,0 +1,1171 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+  commentId: T:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+  id: ObjectEncryptionService`1
+  parent: AetherUtils.Core.Security.Encryption
+  children:
+  - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptAsync(System.Byte[],System.String)
+  - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptFromFileAsync(System.String,System.String)
+  - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptAsync(`0,System.String)
+  - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptToFileAsync(`0,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: ObjectEncryptionService<T>
+  nameWithType: ObjectEncryptionService<T>
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>
+  type: Class
+  source:
+    remote:
+      path: AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: ObjectEncryptionService
+    path: ../AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+    startLine: 9
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.Encryption
+  summary: Provides methods to encrypt and decrypt XML serializable .NET objects.
+  example: []
+  syntax:
+    content: 'public sealed class ObjectEncryptionService<T> : EncryptionBase where T : class'
+    typeParameters:
+    - id: T
+      description: The object type to encrypt/decrypt. This type must support XML serialization.
+    content.vb: Public NotInheritable Class ObjectEncryptionService(Of T As Class) Inherits EncryptionBase
+  inheritance:
+  - System.Object
+  - AetherUtils.Core.Security.Encryption.EncryptionBase
+  inheritedMembers:
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1
+  - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1
+  - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1
+  - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1
+  nameWithType.vb: ObjectEncryptionService(Of T)
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T)
+  name.vb: ObjectEncryptionService(Of T)
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptAsync(`0,System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptAsync(`0,System.String)
+  id: EncryptAsync(`0,System.String)
+  parent: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+  langs:
+  - csharp
+  - vb
+  name: EncryptAsync(T, string)
+  nameWithType: ObjectEncryptionService<T>.EncryptAsync(T, string)
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>.EncryptAsync(T, string)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: EncryptAsync
+    path: ../AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+    startLine: 21
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.Encryption
+  summary: Encrypt a .NET XML serializable object to an encrypted <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array.
+  example: []
+  syntax:
+    content: public Task<byte[]> EncryptAsync(T input, string passphrase)
+    parameters:
+    - id: input
+      type: '{T}'
+      description: The serializable .NET object.
+    - id: passphrase
+      type: System.String
+      description: The passphrase for encryption.
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+      description: An encrypted .NET object represented as a serialized <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array.
+    content.vb: Public Function EncryptAsync(input As T, passphrase As String) As Task(Of Byte())
+  overload: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptAsync*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: If the <code class="paramref">input</code> could not serialized to type <code class="typeparamref">T</code>.
+  nameWithType.vb: ObjectEncryptionService(Of T).EncryptAsync(T, String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).EncryptAsync(T, String)
+  name.vb: EncryptAsync(T, String)
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptAsync(System.Byte[],System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptAsync(System.Byte[],System.String)
+  id: DecryptAsync(System.Byte[],System.String)
+  parent: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+  langs:
+  - csharp
+  - vb
+  name: DecryptAsync(byte[], string)
+  nameWithType: ObjectEncryptionService<T>.DecryptAsync(byte[], string)
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>.DecryptAsync(byte[], string)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: DecryptAsync
+    path: ../AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+    startLine: 49
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.Encryption
+  summary: Decrypt a .NET object represented as an encrypted XML serialized <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array.
+  example: []
+  syntax:
+    content: public Task<T> DecryptAsync(byte[] input, string passphrase)
+    parameters:
+    - id: input
+      type: System.Byte[]
+      description: The serialized, encrypted .NET object as a <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array.
+    - id: passphrase
+      type: System.String
+      description: The passphrase for decryption.
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+      description: The <code class="typeparamref">T</code> object, decrypted and deserialized.
+    content.vb: Public Function DecryptAsync(input As Byte(), passphrase As String) As Task(Of T)
+  overload: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If the <code class="paramref">input</code> was <code>null</code> or 0-length.
+  - type: System.FormatException
+    commentId: T:System.FormatException
+    description: If the <code class="paramref">input</code> could not be deserialized to type <code class="typeparamref">T</code>.
+  nameWithType.vb: ObjectEncryptionService(Of T).DecryptAsync(Byte(), String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).DecryptAsync(Byte(), String)
+  name.vb: DecryptAsync(Byte(), String)
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptToFileAsync(`0,System.String,System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptToFileAsync(`0,System.String,System.String)
+  id: EncryptToFileAsync(`0,System.String,System.String)
+  parent: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+  langs:
+  - csharp
+  - vb
+  name: EncryptToFileAsync(T, string, string)
+  nameWithType: ObjectEncryptionService<T>.EncryptToFileAsync(T, string, string)
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>.EncryptToFileAsync(T, string, string)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: EncryptToFileAsync
+    path: ../AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+    startLine: 70
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.Encryption
+  summary: Encrypt a .NET XML serializable object to an encrypted file.
+  example: []
+  syntax:
+    content: public Task<byte[]> EncryptToFileAsync(T input, string filePath, string passphrase)
+    parameters:
+    - id: input
+      type: '{T}'
+      description: The serializable .NET object.
+    - id: filePath
+      type: System.String
+      description: The file to create (or overwrite).
+    - id: passphrase
+      type: System.String
+      description: The passphrase for encryption.
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+      description: An encrypted .NET object represented as a serialized <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array; or an empty <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array if the encryption failed.
+    content.vb: Public Function EncryptToFileAsync(input As T, filePath As String, passphrase As String) As Task(Of Byte())
+  overload: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptToFileAsync*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: If the <code class="paramref">input</code> could not serialized to type <code class="typeparamref">T</code>.
+  nameWithType.vb: ObjectEncryptionService(Of T).EncryptToFileAsync(T, String, String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).EncryptToFileAsync(T, String, String)
+  name.vb: EncryptToFileAsync(T, String, String)
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptFromFileAsync(System.String,System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptFromFileAsync(System.String,System.String)
+  id: DecryptFromFileAsync(System.String,System.String)
+  parent: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+  langs:
+  - csharp
+  - vb
+  name: DecryptFromFileAsync(string, string)
+  nameWithType: ObjectEncryptionService<T>.DecryptFromFileAsync(string, string)
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>.DecryptFromFileAsync(string, string)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: DecryptFromFileAsync
+    path: ../AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+    startLine: 103
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.Encryption
+  summary: Decrypt a .NET object from an encrypted file.
+  example: []
+  syntax:
+    content: public Task<T> DecryptFromFileAsync(string filePath, string passphrase)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: The path to the file containing an encrypted, serialized .NET object.
+    - id: passphrase
+      type: System.String
+      description: The passphrase for decryption.
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+      description: The <code class="typeparamref">T</code> object, decrypted and deserialized.
+    content.vb: Public Function DecryptFromFileAsync(filePath As String, passphrase As String) As Task(Of T)
+  overload: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptFromFileAsync*
+  exceptions:
+  - type: System.IO.FileNotFoundException
+    commentId: T:System.IO.FileNotFoundException
+    description: If the file specified by <code class="paramref">filePath</code> did not exist.
+  - type: System.FormatException
+    commentId: T:System.FormatException
+    description: If the object could not be deserialized to a new .NET object.
+  nameWithType.vb: ObjectEncryptionService(Of T).DecryptFromFileAsync(String, String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).DecryptFromFileAsync(String, String)
+  name.vb: DecryptFromFileAsync(String, String)
+references:
+- uid: AetherUtils.Core.Security.Encryption
+  commentId: N:AetherUtils.Core.Security.Encryption
+  href: AetherUtils.html
+  name: AetherUtils.Core.Security.Encryption
+  nameWithType: AetherUtils.Core.Security.Encryption
+  fullName: AetherUtils.Core.Security.Encryption
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Security
+    name: Security
+    href: AetherUtils.Core.Security.html
+  - name: .
+  - uid: AetherUtils.Core.Security.Encryption
+    name: Encryption
+    href: AetherUtils.Core.Security.Encryption.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Security
+    name: Security
+    href: AetherUtils.Core.Security.html
+  - name: .
+  - uid: AetherUtils.Core.Security.Encryption
+    name: Encryption
+    href: AetherUtils.Core.Security.Encryption.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase
+  commentId: T:AetherUtils.Core.Security.Encryption.EncryptionBase
+  parent: AetherUtils.Core.Security.Encryption
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html
+  name: EncryptionBase
+  nameWithType: EncryptionBase
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKeyPhrase_System_Int32_
+  name: GetRandomKeyPhrase(int)
+  nameWithType: EncryptionBase.GetRandomKeyPhrase(int)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(int)
+  nameWithType.vb: EncryptionBase.GetRandomKeyPhrase(Integer)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(Integer)
+  name.vb: GetRandomKeyPhrase(Integer)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
+    name: GetRandomKeyPhrase
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKeyPhrase_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
+    name: GetRandomKeyPhrase
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKeyPhrase_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  name: CanSerializeJson<ObjectEncryptionService<T>>(ObjectEncryptionService<T>)
+  nameWithType: TypeExtensions.CanSerializeJson<ObjectEncryptionService<T>>(ObjectEncryptionService<T>)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson<AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>>(AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>)
+  nameWithType.vb: TypeExtensions.CanSerializeJson(Of ObjectEncryptionService(Of T))(ObjectEncryptionService(Of T))
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson(Of AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T))(AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T))
+  name.vb: CanSerializeJson(Of ObjectEncryptionService(Of T))(ObjectEncryptionService(Of T))
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(AetherUtils.Core.Security.Encryption.ObjectEncryptionService{`0})
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(AetherUtils.Core.Security.Encryption.ObjectEncryptionService{`0})
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  name: CanSerializeXml<ObjectEncryptionService<T>>(ObjectEncryptionService<T>)
+  nameWithType: TypeExtensions.CanSerializeXml<ObjectEncryptionService<T>>(ObjectEncryptionService<T>)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml<AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>>(AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>)
+  nameWithType.vb: TypeExtensions.CanSerializeXml(Of ObjectEncryptionService(Of T))(ObjectEncryptionService(Of T))
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml(Of AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T))(AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T))
+  name.vb: CanSerializeXml(Of ObjectEncryptionService(Of T))(ObjectEncryptionService(Of T))
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(AetherUtils.Core.Security.Encryption.ObjectEncryptionService{`0})
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(AetherUtils.Core.Security.Encryption.ObjectEncryptionService{`0})
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  name: SerializeJson<ObjectEncryptionService<T>>(ObjectEncryptionService<T>)
+  nameWithType: TypeExtensions.SerializeJson<ObjectEncryptionService<T>>(ObjectEncryptionService<T>)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson<AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>>(AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>)
+  nameWithType.vb: TypeExtensions.SerializeJson(Of ObjectEncryptionService(Of T))(ObjectEncryptionService(Of T))
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson(Of AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T))(AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T))
+  name.vb: SerializeJson(Of ObjectEncryptionService(Of T))(ObjectEncryptionService(Of T))
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(AetherUtils.Core.Security.Encryption.ObjectEncryptionService{`0})
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(AetherUtils.Core.Security.Encryption.ObjectEncryptionService{`0})
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  name: SerializeXml<ObjectEncryptionService<T>>(ObjectEncryptionService<T>)
+  nameWithType: TypeExtensions.SerializeXml<ObjectEncryptionService<T>>(ObjectEncryptionService<T>)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml<AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>>(AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>)
+  nameWithType.vb: TypeExtensions.SerializeXml(Of ObjectEncryptionService(Of T))(ObjectEncryptionService(Of T))
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml(Of AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T))(AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T))
+  name.vb: SerializeXml(Of ObjectEncryptionService(Of T))(ObjectEncryptionService(Of T))
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(AetherUtils.Core.Security.Encryption.ObjectEncryptionService{`0})
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(AetherUtils.Core.Security.Encryption.ObjectEncryptionService{`0})
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+    name: ObjectEncryptionService
+    href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  name: CanSerializeJson<T>(T)
+  nameWithType: TypeExtensions.CanSerializeJson<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson<T>(T)
+  nameWithType.vb: TypeExtensions.CanSerializeJson(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson(Of T)(T)
+  name.vb: CanSerializeJson(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.TypeExtensions
+  commentId: T:AetherUtils.Core.Extensions.TypeExtensions
+  parent: AetherUtils.Core.Extensions
+  href: AetherUtils.Core.Extensions.TypeExtensions.html
+  name: TypeExtensions
+  nameWithType: TypeExtensions
+  fullName: AetherUtils.Core.Extensions.TypeExtensions
+- uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  name: CanSerializeXml<T>(T)
+  nameWithType: TypeExtensions.CanSerializeXml<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml<T>(T)
+  nameWithType.vb: TypeExtensions.CanSerializeXml(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml(Of T)(T)
+  name.vb: CanSerializeXml(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  name: SerializeJson<T>(T)
+  nameWithType: TypeExtensions.SerializeJson<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson<T>(T)
+  nameWithType.vb: TypeExtensions.SerializeJson(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson(Of T)(T)
+  name.vb: SerializeJson(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  name: SerializeXml<T>(T)
+  nameWithType: TypeExtensions.SerializeXml<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml<T>(T)
+  nameWithType.vb: TypeExtensions.SerializeXml(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml(Of T)(T)
+  name.vb: SerializeXml(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions
+  commentId: N:AetherUtils.Core.Extensions
+  href: AetherUtils.html
+  name: AetherUtils.Core.Extensions
+  nameWithType: AetherUtils.Core.Extensions
+  fullName: AetherUtils.Core.Extensions
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+- uid: System.Byte
+  commentId: T:System.Byte
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptAsync*
+  commentId: Overload:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptAsync
+  href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html#AetherUtils_Core_Security_Encryption_ObjectEncryptionService_1_EncryptAsync__0_System_String_
+  name: EncryptAsync
+  nameWithType: ObjectEncryptionService<T>.EncryptAsync
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>.EncryptAsync
+  nameWithType.vb: ObjectEncryptionService(Of T).EncryptAsync
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).EncryptAsync
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.Byte[]}
+  commentId: T:System.Threading.Tasks.Task{System.Byte[]}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<byte[]>
+  nameWithType: Task<byte[]>
+  fullName: System.Threading.Tasks.Task<byte[]>
+  nameWithType.vb: Task(Of Byte())
+  fullName.vb: System.Threading.Tasks.Task(Of Byte())
+  name.vb: Task(Of Byte())
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.FormatException
+  commentId: T:System.FormatException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.formatexception
+  name: FormatException
+  nameWithType: FormatException
+  fullName: System.FormatException
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptAsync*
+  commentId: Overload:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptAsync
+  href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html#AetherUtils_Core_Security_Encryption_ObjectEncryptionService_1_DecryptAsync_System_Byte___System_String_
+  name: DecryptAsync
+  nameWithType: ObjectEncryptionService<T>.DecryptAsync
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>.DecryptAsync
+  nameWithType.vb: ObjectEncryptionService(Of T).DecryptAsync
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).DecryptAsync
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task{{T}}
+  commentId: T:System.Threading.Tasks.Task{`0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<T>
+  nameWithType: Task<T>
+  fullName: System.Threading.Tasks.Task<T>
+  nameWithType.vb: Task(Of T)
+  fullName.vb: System.Threading.Tasks.Task(Of T)
+  name.vb: Task(Of T)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptToFileAsync*
+  commentId: Overload:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptToFileAsync
+  href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html#AetherUtils_Core_Security_Encryption_ObjectEncryptionService_1_EncryptToFileAsync__0_System_String_System_String_
+  name: EncryptToFileAsync
+  nameWithType: ObjectEncryptionService<T>.EncryptToFileAsync
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>.EncryptToFileAsync
+  nameWithType.vb: ObjectEncryptionService(Of T).EncryptToFileAsync
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).EncryptToFileAsync
+- uid: System.IO.FileNotFoundException
+  commentId: T:System.IO.FileNotFoundException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception
+  name: FileNotFoundException
+  nameWithType: FileNotFoundException
+  fullName: System.IO.FileNotFoundException
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptFromFileAsync*
+  commentId: Overload:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptFromFileAsync
+  href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html#AetherUtils_Core_Security_Encryption_ObjectEncryptionService_1_DecryptFromFileAsync_System_String_System_String_
+  name: DecryptFromFileAsync
+  nameWithType: ObjectEncryptionService<T>.DecryptFromFileAsync
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>.DecryptFromFileAsync
+  nameWithType.vb: ObjectEncryptionService(Of T).DecryptFromFileAsync
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).DecryptFromFileAsync
