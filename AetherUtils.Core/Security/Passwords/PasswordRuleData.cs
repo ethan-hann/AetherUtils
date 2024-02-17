@@ -15,5 +15,5 @@ public class PasswordRuleData
     public int MinimumSpecialCount { get; set; } = -1;
     public DateTime? Expiration { get; set; }
     
-    public PasswordRuleData() { }
+    internal PasswordRuleData() { }
 }
