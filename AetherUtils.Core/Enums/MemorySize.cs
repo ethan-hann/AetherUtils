@@ -5,7 +5,7 @@ namespace AetherUtils.Core.Enums;
 /// <summary>
 /// Represents the value in bytes of various memory sizes; uses <c>1024</c> as the conversion factor.
 /// </summary>
-public enum MemorySize : ulong
+internal enum MemorySize : ulong
 {
     /// <summary>
     /// Represents 1 Byte.

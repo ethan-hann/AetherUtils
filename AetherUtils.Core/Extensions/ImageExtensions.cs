@@ -46,8 +46,7 @@ public static class ImageExtensions
     }
     
     /// <summary>
-    /// Resize the image to be the desired width and height.
-    /// <para>This method will attempt to maintain the aspect ratio.</para>
+    /// Resize the image to be the desired width and height while attempting to maintain the aspect ratio.
     /// </summary>
     /// <param name="image">The <see cref="Image"/> to resize.</param>
     /// <param name="desiredWidth">The desired width of the new image.</param>

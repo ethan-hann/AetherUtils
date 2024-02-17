@@ -38,7 +38,7 @@ public static class NumberExtensions
     }
     
     /// <summary>
-    /// Formats a size in bytes (represented by an <see cref="long"/> value) to the next closest base-2 size
+    /// Formats a size in bytes (represented by an <see cref="ulong"/> value) to the next closest base-2 size
     /// representation and appends its suffix to the end; uses <c>1024</c> as the conversion factor.
     /// </summary>
     /// <param name="sizeInBytes">The size, in bytes, to format.</param>
@@ -57,6 +57,7 @@ public static class NumberExtensions
             size /= 1024;
             counter++;
         }
+        
         return $"{size:F} " +
                $"{sizes[counter].ToDescriptionString()}" +
                $"{(size > 1 && sizes[counter].Equals(MemorySize.Byte) ? "s" : string.Empty)}";

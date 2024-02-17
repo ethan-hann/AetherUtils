@@ -3,7 +3,8 @@
 namespace AetherUtils.Core.Configuration;
 
 /// <summary>
-/// <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a> representing options for how log files are handled and formatted for an application.
+/// A <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a> representing options for how log
+/// files are handled and formatted for an application.
 /// </summary>
 public sealed class LogOptions
 {

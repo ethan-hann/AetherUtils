@@ -3,7 +3,7 @@
 namespace AetherUtils.Core.Configuration;
 
 /// <summary>
-/// Interface that all Configuration Manager classes must implement.
+/// Interface that all <see cref="ConfigManager{T}"/> classes must implement.
 /// </summary>
 public interface IConfig
 {

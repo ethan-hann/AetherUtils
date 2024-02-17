@@ -215,6 +215,12 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
         return IsInitialized && Set(new ConfigOption(configName, value), CurrentConfig);
     }
 
+    /// <summary>
+    /// Set a configuration option specified by <paramref name="option"/>.
+    /// </summary>
+    /// <param name="option">The configuration option to set.</param>
+    /// <param name="instance">The instance of the configuration to set the option on.</param>
+    /// <returns><c>true</c> if the value was set successfully; <c>false</c> otherwise.</returns>
     private bool Set(ConfigOption option, object? instance)
     {
         if (!IsInitialized) return false;

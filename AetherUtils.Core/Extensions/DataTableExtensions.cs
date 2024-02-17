@@ -33,11 +33,12 @@ public static class DataTableExtensions
         StringBuilder sb = new();
         lines.ToList().ForEach(s => sb = sb.AppendLine(s));
         
-        FileHelper.SaveFileAsync(filePath, sb.ToString(), false);
+        FileHelper.SaveFile(filePath, sb.ToString(), false);
     }
 
     /// <summary>
     /// Create and save individual CSV files based on a <see cref="List{T}"/> containing <see cref="DataTable"/> objects.
+    /// Each file is saved as <c>tablename.csv</c>.
     /// </summary>
     /// <param name="tables">The <see cref="List{T}"/> containing <see cref="DataTable"/> objects.</param>
     /// <param name="folderPath">The folder path that the CSV files should be saved into.</param>

@@ -34,14 +34,16 @@ namespace AetherUtils.Core.Extensions
             listView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
             //Grab column size based on header into a dictionary {index, width}
-            var columnSize = listView.Columns.Cast<ColumnHeader>().ToDictionary(colHeader => colHeader.Index, colHeader => colHeader.Width);
+            var columnSize = listView.Columns.Cast<ColumnHeader>()
+                .ToDictionary(colHeader => colHeader.Index, colHeader => colHeader.Width);
 
             //Auto size using data first
             listView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
 
             //Grab column size based on data and set max width
             foreach (ColumnHeader colHeader in listView.Columns)
-                colHeader.Width = Math.Max(columnSize.GetValueOrDefault(colHeader.Index, 50), colHeader.Width);
+                colHeader.Width = Math.Max(columnSize.GetValueOrDefault(colHeader.Index, 50),
+                    colHeader.Width);
 
             listView.EndUpdate();
         }

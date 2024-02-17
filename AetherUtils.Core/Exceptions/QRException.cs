@@ -1,5 +1,8 @@
 ﻿namespace AetherUtils.Core.Exceptions;
 
+/// <summary>
+/// Custom class for exceptions that occur when handling QR codes.
+/// </summary>
 public class QrException : Exception
 {
     public QrException(string message) : base(message) { }

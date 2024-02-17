@@ -3,7 +3,7 @@
 /// <summary>
 /// Represents the different types of characters allowed in a password rule.
 /// </summary>
-public enum CharacterType
+internal enum CharacterType
 {
     /// <summary>
     /// Whitespace characters.
