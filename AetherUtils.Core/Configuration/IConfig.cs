@@ -11,7 +11,7 @@ public interface IConfig
     /// The file path to a configuration file. This path can contain Windows path variables (i.e., <c>%TEMP%</c>). They will be
     /// expanded when saving and loading.
     /// </summary>
-    public string ConfigFilePath { get; set; }
+    public string? ConfigFilePath { get; set; }
 
     /// <summary>
     /// Get a value indicating whether this configuration is initialized and ready to be used.
@@ -24,17 +24,29 @@ public interface IConfig
     public bool ConfigExists { get; }
 
     /// <summary>
-    /// Deserialize a configuration file from disk, if it exists.
+    /// Asynchronously deserialize a configuration file from disk, if it exists.
     /// </summary>
     /// <returns><c>true</c> if the file loaded successfully; <c>false</c>, otherwise.</returns>
     public Task<bool> LoadAsync();
 
     /// <summary>
-    /// Serialize and save a configuration file to disk based on the current configuration.
+    /// Deserialize a configuration file from disk, if it exists.
+    /// </summary>
+    /// <returns><c>true</c> if the file loaded successfully; <c>false</c>, otherwise.</returns>
+    public bool Load();
+
+    /// <summary>
+    /// Asynchronously serialize and save a configuration file to disk based on the current configuration.
     /// </summary>
     /// <returns><c>true</c> if the file saved successfully; <c>false</c>, otherwise.</returns>
     public Task<bool> SaveAsync();
 
+    /// <summary>
+    /// Serialize and save a configuration file to disk based on the current configuration.
+    /// </summary>
+    /// <returns><c>true</c> if the file saved successfully; <c>false</c>, otherwise.</returns>
+    public bool Save();
+    
     /// <summary>
     /// Get the configuration value for the named config property.
     /// </summary>

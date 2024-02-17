@@ -7,12 +7,13 @@
     /// <param name="configFilePath">The path to the configuration file.</param>
     public sealed class YamlConfigManager(string configFilePath) : ConfigManager<DefaultConfig>(configFilePath)
     {
-        //TODO: make this save -or- load a configuration file from disk!
-        public override void CreateConfig(bool saveToDisk = true)
+        /// <summary>
+        /// Create a new, default configuration in memory.
+        /// </summary>
+        public override bool CreateDefaultConfig()
         {
             CurrentConfig = new DefaultConfig();
-            if (saveToDisk)
-                SaveAsync();
+            return IsInitialized;
         }
     }
 }

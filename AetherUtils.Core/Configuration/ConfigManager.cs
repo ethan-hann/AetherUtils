@@ -38,7 +38,7 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     /// <summary>
     /// Get or set the path to the configuration file on disk.
     /// </summary>
-    public string ConfigFilePath { get; set; } = configFilePath;
+    public string? ConfigFilePath { get; set; } = configFilePath;
 
     /// <summary>
     /// Get a value indicating whether the configuration has been initialized.
@@ -48,30 +48,55 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     /// <summary>
     /// Get a value indicating whether the configuration file exists on disk.
     /// </summary>
-    public bool ConfigExists => FileHelper.DoesFileExist(ConfigFilePath);
+    public bool ConfigExists => ConfigFilePath != null && FileHelper.DoesFileExist(ConfigFilePath);
 
     /// <summary>
-    /// Create the configuration, and optionally save the file to disk.
+    /// Create the default configuration.
     /// </summary>
-    public abstract void CreateConfig(bool saveToDisk = true);
+    public abstract bool CreateDefaultConfig();
 
     /// <summary>
     /// Asynchronously load a configuration file from disk based on the <see cref="ConfigFilePath"/>.
     /// </summary>
     /// <returns><c>true</c> if the config loaded successfully; <c>false</c> otherwise.</returns>
+    /// <exception cref="ArgumentException">If <see cref="ConfigFilePath"/> is <c>null</c> or empty.</exception>
     /// <exception cref="FileNotFoundException">If the configuration file specified by <see cref="ConfigFilePath"/>
     /// was not found on disk.</exception>
-    public async Task<bool> LoadAsync()
+    public Task<bool> LoadAsync()
     {
-        string filePath = FileHelper.ExpandPath(ConfigFilePath);
+        ArgumentException.ThrowIfNullOrEmpty(ConfigFilePath);
+        
+        var filePath = FileHelper.ExpandPath(ConfigFilePath);
         
         if (!FileHelper.DoesFileExist(filePath, false))
             throw new FileNotFoundException("Configuration file not found.", filePath);
 
-        var text = await FileHelper.OpenFileAsync(filePath, false);
-        CurrentConfig = _deserializer.Deserialize<T>(text);
+        var text = FileHelper.OpenFileAsync(filePath, false);
+        CurrentConfig = _deserializer.Deserialize<T>(text.Result);
         ConfigFilePath = filePath;
         
+        return Task.FromResult(IsInitialized);
+    }
+    
+    /// <summary>
+    /// Load a configuration file from disk based on the <see cref="ConfigFilePath"/>.
+    /// </summary>
+    /// <returns><c>true</c> if the config loaded successfully; <c>false</c> otherwise.</returns>
+    /// <exception cref="ArgumentException">If <see cref="ConfigFilePath"/> is <c>null</c> or empty.</exception>
+    /// <exception cref="FileNotFoundException"></exception>
+    public bool Load()
+    {
+        ArgumentException.ThrowIfNullOrEmpty(ConfigFilePath);
+        
+        var filePath = FileHelper.ExpandPath(ConfigFilePath);
+        
+        if (!FileHelper.DoesFileExist(filePath, false))
+            throw new FileNotFoundException("Configuration file not found.", filePath);
+
+        var text = FileHelper.OpenFile(filePath, false);
+        CurrentConfig = _deserializer.Deserialize<T>(text);
+        ConfigFilePath = filePath;
+
         return IsInitialized;
     }
 
@@ -84,7 +109,7 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     {
         ArgumentException.ThrowIfNullOrEmpty(ConfigFilePath);
         
-        string filePath = FileHelper.ExpandPath(ConfigFilePath);
+        var filePath = FileHelper.ExpandPath(ConfigFilePath);
         
         var serializedString = _serializer.Serialize(CurrentConfig);
         FileHelper.CreateDirectories(filePath);
@@ -99,7 +124,30 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     }
 
     /// <summary>
-    /// Get a configuration value specified by <paramref name="option"/>.
+    /// Save a configuration file to disk based on the <see cref="CurrentConfig"/> and the <see cref="ConfigFilePath"/>.
+    /// </summary>
+    /// <returns><c>true</c> if the config saved successfully; <c>false</c> otherwise.</returns>
+    /// <exception cref="ArgumentException">If <see cref="ConfigFilePath"/> is <c>null</c> or empty.</exception>
+    public bool Save()
+    {
+        ArgumentException.ThrowIfNullOrEmpty(ConfigFilePath);
+
+        var filePath = FileHelper.ExpandPath(ConfigFilePath);
+        
+        var serializedString = _serializer.Serialize(CurrentConfig);
+        FileHelper.CreateDirectories(filePath);
+        FileHelper.SaveFile(filePath, serializedString, false);
+
+        var fileExists = FileHelper.DoesFileExist(filePath);
+        
+        if (fileExists)
+            ConfigFilePath = filePath;
+
+        return fileExists;
+    }
+
+    /// <summary>
+    /// Get a configuration value specified by the configuration <paramref name="option"/>.
     /// </summary>
     /// <param name="option">The <see cref="ConfigOption"/> containing information about the value to get.</param>
     /// <returns>The configuration value or <c>null</c> if the value did not exist.</returns>
@@ -147,7 +195,7 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     }
 
     /// <summary>
-    /// Set a configuration value specified by <paramref name="option"/>.
+    /// Set a configuration value specified by the configuration <paramref name="option"/>.
     /// </summary>
     /// <param name="option">The <see cref="ConfigOption"/> containing information about the value to set.</param>
     /// <returns><c>true</c> if the value was set successfully; <c>false</c> otherwise.</returns>
@@ -157,7 +205,7 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     }
 
     /// <summary>
-    /// Set a configuration value <paramref name="value"/> specified by <paramref name="configName"/>.
+    /// Set a configuration <paramref name="value"/> specified by <paramref name="configName"/>.
     /// </summary>
     /// <param name="configName">The name of the configuration to set.</param>
     /// <param name="value">The value to set.</param>
