@@ -11,8 +11,8 @@ using YamlDotNet.Serialization.NamingConventions;
 namespace AetherUtils.Core.Configuration;
 
 /// <summary>
-/// This class cannot be instantiated. A child class must be created inheriting from <see cref="ConfigManager{T}"/>.
-/// Handles saving, loading, and querying a generic configuration based on class <see cref="T"/>.
+/// Provides methods for saving, loading, and querying a generic configuration.
+/// This class cannot be instantiated. A child class must be created inheriting from this class.
 /// </summary>
 /// <remarks>
 /// The custom class should have its properties related to configuration marked with a <see cref="ConfigAttribute"/>.

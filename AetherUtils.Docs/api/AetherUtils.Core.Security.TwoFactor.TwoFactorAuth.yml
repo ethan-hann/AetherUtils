@@ -92,7 +92,7 @@ items:
     parameters:
     - id: hashType
       type: AetherUtils.Core.Security.TwoFactor.HashType
-      description: The <xref href="AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.HashType" data-throw-if-not-resolved="false"></xref> for the generated codes.
+      description: The <xref href="AetherUtils.Core.Security.TwoFactor.HashType" data-throw-if-not-resolved="false"></xref>for the generated codes.
     content.vb: Public Sub New(hashType As HashType)
   overload: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.#ctor*
   nameWithType.vb: TwoFactorAuth.New(HashType)
@@ -905,12 +905,13 @@ items:
   fullName.vb: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentPins(Byte(), Integer)
   name.vb: GetCurrentPins(Byte(), Integer)
 references:
-- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.HashType
-  commentId: P:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.HashType
-  href: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_HashType
+- uid: AetherUtils.Core.Security.TwoFactor.HashType
+  commentId: T:AetherUtils.Core.Security.TwoFactor.HashType
+  parent: AetherUtils.Core.Security.TwoFactor
+  href: AetherUtils.Core.Security.TwoFactor.HashType.html
   name: HashType
-  nameWithType: TwoFactorAuth.HashType
-  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.HashType
+  nameWithType: HashType
+  fullName: AetherUtils.Core.Security.TwoFactor.HashType
 - uid: AetherUtils.Core.Security.TwoFactor
   commentId: N:AetherUtils.Core.Security.TwoFactor
   href: AetherUtils.html
@@ -1520,13 +1521,6 @@ references:
   nameWithType.vb: TwoFactorAuth.New
   fullName.vb: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.New
   name.vb: New
-- uid: AetherUtils.Core.Security.TwoFactor.HashType
-  commentId: T:AetherUtils.Core.Security.TwoFactor.HashType
-  parent: AetherUtils.Core.Security.TwoFactor
-  href: AetherUtils.Core.Security.TwoFactor.HashType.html
-  name: HashType
-  nameWithType: HashType
-  fullName: AetherUtils.Core.Security.TwoFactor.HashType
 - uid: AetherUtils.Core.Security.TwoFactor.TwoFactorUser
   commentId: T:AetherUtils.Core.Security.TwoFactor.TwoFactorUser
   parent: AetherUtils.Core.Security.TwoFactor

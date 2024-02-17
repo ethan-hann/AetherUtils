@@ -239,7 +239,7 @@ items:
     description: If <code class="paramref">filePath</code> was <code>null</code> or empty.
   - type: System.IO.FileNotFoundException
     commentId: T:System.IO.FileNotFoundException
-    description: If the filePath did not exist.
+    description: If the <code class="paramref">filePath</code> did not exist.
   nameWithType.vb: Json(Of T).LoadJson(String)
   fullName.vb: AetherUtils.Core.Files.Json(Of T).LoadJson(String)
   name.vb: LoadJson(String)

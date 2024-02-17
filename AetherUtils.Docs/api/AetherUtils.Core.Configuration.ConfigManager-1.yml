@@ -38,9 +38,9 @@ items:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Configuration
   summary: >-
-    This class cannot be instantiated. A child class must be created inheriting from <xref href="AetherUtils.Core.Configuration.ConfigManager%601" data-throw-if-not-resolved="false"></xref>.
+    Provides methods for saving, loading, and querying a generic configuration.
 
-    Handles saving, loading, and querying a generic configuration based on class T.
+    This class cannot be instantiated. A child class must be created inheriting from this class.
   remarks: >-
     The custom class should have its properties related to configuration marked with a <xref href="AetherUtils.Core.Attributes.ConfigAttribute" data-throw-if-not-resolved="false"></xref>.
 
@@ -97,9 +97,9 @@ items:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Configuration
   summary: >-
-    This class cannot be instantiated. A child class must be created inheriting from <xref href="AetherUtils.Core.Configuration.ConfigManager%601" data-throw-if-not-resolved="false"></xref>.
+    Provides methods for saving, loading, and querying a generic configuration.
 
-    Handles saving, loading, and querying a generic configuration based on class T.
+    This class cannot be instantiated. A child class must be created inheriting from this class.
   remarks: >-
     The custom class should have its properties related to configuration marked with a <xref href="AetherUtils.Core.Attributes.ConfigAttribute" data-throw-if-not-resolved="false"></xref>.
 
@@ -607,31 +607,6 @@ items:
   fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Set(String, Object)
   name.vb: Set(String, Object)
 references:
-- uid: AetherUtils.Core.Configuration.ConfigManager`1
-  commentId: T:AetherUtils.Core.Configuration.ConfigManager`1
-  href: AetherUtils.Core.Configuration.ConfigManager-1.html
-  name: ConfigManager<T>
-  nameWithType: ConfigManager<T>
-  fullName: AetherUtils.Core.Configuration.ConfigManager<T>
-  nameWithType.vb: ConfigManager(Of T)
-  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T)
-  name.vb: ConfigManager(Of T)
-  spec.csharp:
-  - uid: AetherUtils.Core.Configuration.ConfigManager`1
-    name: ConfigManager
-    href: AetherUtils.Core.Configuration.ConfigManager-1.html
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: AetherUtils.Core.Configuration.ConfigManager`1
-    name: ConfigManager
-    href: AetherUtils.Core.Configuration.ConfigManager-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
 - uid: AetherUtils.Core.Attributes.ConfigAttribute
   commentId: T:AetherUtils.Core.Attributes.ConfigAttribute
   parent: AetherUtils.Core.Attributes

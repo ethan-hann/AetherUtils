@@ -75,7 +75,7 @@ namespace AetherUtils.Core.Files
         /// <param name="filePath">The file to load.</param>
         /// <returns>The <typeparamref name="T"/> object, or <c>null</c> if the object could not be deserialized.</returns>
         /// <exception cref="ArgumentException">If <paramref name="filePath"/> was <c>null</c> or empty.</exception>
-        /// <exception cref="FileNotFoundException">If the <see cref="filePath"/> did not exist.</exception>
+        /// <exception cref="FileNotFoundException">If the <paramref name="filePath"/> did not exist.</exception>
         public T? LoadJson(string filePath)
         {
             ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));

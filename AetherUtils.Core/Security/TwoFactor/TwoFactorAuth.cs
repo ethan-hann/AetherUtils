@@ -9,14 +9,14 @@ namespace AetherUtils.Core.Security.TwoFactor;
 /// <summary>
 /// Provides methods to generate and validate two-factor authentication codes.
 /// </summary>
-/// <param name="hashType">The <see cref="HashType"/> for the generated codes.</param>
+/// <param name="hashType">The <see cref="TwoFactor.HashType"/>for the generated codes.</param>
 public class TwoFactorAuth(HashType hashType)
 {
     private static readonly DateTime Epoch = new(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
-    private TimeSpan DefaultClockDriftTolerance { get; set; } = TimeSpan.FromMinutes(5);
+    private TimeSpan DefaultClockDriftTolerance { get; } = TimeSpan.FromMinutes(5);
 
-    private HashType HashType { get; set; } = hashType;
+    private HashType HashType { get; } = hashType;
 
     public TwoFactorAuth() : this(HashType.Sha1) { }
 

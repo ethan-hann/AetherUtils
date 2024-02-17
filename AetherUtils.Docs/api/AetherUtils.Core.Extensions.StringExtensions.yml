@@ -93,7 +93,7 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: If base64 was <code>null</code>.
+    description: If <code class="paramref">base64</code> was <code>null</code>.
   - type: System.FormatException
     commentId: T:System.FormatException
     description: If the input was not a valid Base64 <xref href="System.String" data-throw-if-not-resolved="false"></xref>.

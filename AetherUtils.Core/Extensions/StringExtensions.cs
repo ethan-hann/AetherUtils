@@ -20,7 +20,7 @@ public static class StringExtensions
     /// </summary>
     /// <param name="base64">The <see cref="Image"/> as a Base64 <see cref="string"/>.</param>
     /// <returns>An <see cref="Image"/> or <c>null</c> if <paramref name="base64"/> is an invalid string.</returns>
-    /// <exception cref="ArgumentNullException">If <see cref="base64"/> was <c>null</c>.</exception>
+    /// <exception cref="ArgumentNullException">If <paramref name="base64"/> was <c>null</c>.</exception>
     /// <exception cref="FormatException">If the input was not a valid Base64 <see cref="string"/>.</exception>
     public static Image ImageFromString(this string base64)
     {
