@@ -8,7 +8,7 @@ namespace AetherUtils.Core.WinForms;
 ///         <code>IconReader.GetFileIcon("c:\\general.xls");</code>
 ///     </para>
 /// </summary>
-public class IconReader
+public static class IconReader
 {
     /// <summary>
     ///     Options to specify whether folders should be in the open or closed state.

@@ -15,7 +15,7 @@ namespace AetherUtils.Core.Security.Encryption
         /// <returns>The encrypted <see cref="byte"/> array.</returns>
         public async Task<byte[]> EncryptAsync(string input, string passphrase)
         {
-            using Aes aes = Aes.Create();
+            using var aes = Aes.Create();
             aes.Key = DeriveKeyFromString(passphrase);
             await using MemoryStream output = new();
             WriteIvToStream(aes.IV, output);
@@ -35,10 +35,10 @@ namespace AetherUtils.Core.Security.Encryption
         /// <returns>The decrypted <see cref="string"/>.</returns>
         public async Task<string> DecryptAsync(byte[] encrypted, string passphrase)
         {
-            using Aes aes = Aes.Create();
+            using var aes = Aes.Create();
             aes.Key = DeriveKeyFromString(passphrase);
 
-            using MemoryStream input = new MemoryStream(encrypted);
+            using var input = new MemoryStream(encrypted);
             aes.IV = ReadIvFromStream(input);
 
             await using CryptoStream cs = new(input, aes.CreateDecryptor(), CryptoStreamMode.Read);

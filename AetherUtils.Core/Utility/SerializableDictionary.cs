@@ -15,7 +15,8 @@ namespace AetherUtils.Core.Utility
     /// <typeparam name="TValue">The <see cref="Type"/> for the values in this dictionary.</typeparam>
     [XmlRoot("dictionary")]
     [Serializable]
-    public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, IXmlSerializable where TKey : notnull where TValue : notnull
+    public sealed class SerializableDictionary<TKey, TValue> : 
+        Dictionary<TKey, TValue>, IXmlSerializable where TKey : notnull where TValue : notnull
     {
         public XmlSchema? GetSchema() => null;
 

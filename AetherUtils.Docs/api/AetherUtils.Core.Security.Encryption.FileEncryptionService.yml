@@ -109,15 +109,18 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-    startLine: 27
+    startLine: 31
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Encryption
+  summary: Create a new file encryption service using the specified file path.
+  example: []
   syntax:
     content: public FileEncryptionService(string filePath)
     parameters:
     - id: filePath
       type: System.String
+      description: The file path associated with this service.
     content.vb: Public Sub New(filePath As String)
   overload: AetherUtils.Core.Security.Encryption.FileEncryptionService.#ctor*
   nameWithType.vb: FileEncryptionService.New(String)
@@ -141,12 +144,14 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: EncryptAsync
     path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-    startLine: 45
+    startLine: 50
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Encryption
   summary: >-
-    Create and encrypt a file with the specified <code class="paramref">content</code> using the <code class="paramref">passphrase</code>.
+    Create a file with the specified <code class="paramref">content</code> and encrypt the contents
+
+    using the <code class="paramref">passphrase</code>.
 
     <p>This method will either create a new file if one does not exist or overwrite the existing file.</p>
   example: []
@@ -177,6 +182,54 @@ items:
   nameWithType.vb: FileEncryptionService.EncryptAsync(String, String)
   fullName.vb: AetherUtils.Core.Security.Encryption.FileEncryptionService.EncryptAsync(String, String)
   name.vb: EncryptAsync(String, String)
+- uid: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync(System.String,System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync(System.String,System.String)
+  id: DecryptAsync(System.String,System.String)
+  parent: AetherUtils.Core.Security.Encryption.FileEncryptionService
+  langs:
+  - csharp
+  - vb
+  name: DecryptAsync(string, string)
+  nameWithType: FileEncryptionService.DecryptAsync(string, string)
+  fullName: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync(string, string)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: DecryptAsync
+    path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
+    startLine: 81
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.Encryption
+  summary: Decrypt a file's contents specified by <code class="paramref">filePath</code> using the <code class="paramref">passphrase</code>.
+  example: []
+  syntax:
+    content: public Task<string> DecryptAsync(string filePath, string passphrase)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: The path to the file to decrypt.
+    - id: passphrase
+      type: System.String
+      description: The passphrase used for decryption.
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: The decrypted contents of the file.
+    content.vb: Public Function DecryptAsync(filePath As String, passphrase As String) As Task(Of String)
+  overload: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync*
+  exceptions:
+  - type: System.IO.FileNotFoundException
+    commentId: T:System.IO.FileNotFoundException
+    description: If <code class="paramref">filePath</code> was not a valid path to a file.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If <code class="paramref">filePath</code> was <code>null</code> or empty.
+  nameWithType.vb: FileEncryptionService.DecryptAsync(String, String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync(String, String)
+  name.vb: DecryptAsync(String, String)
 - uid: AetherUtils.Core.Security.Encryption.FileEncryptionService.EncryptFileAsync(System.String,System.String,System.String)
   commentId: M:AetherUtils.Core.Security.Encryption.FileEncryptionService.EncryptFileAsync(System.String,System.String,System.String)
   id: EncryptFileAsync(System.String,System.String,System.String)
@@ -195,7 +248,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: EncryptFileAsync
     path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-    startLine: 80
+    startLine: 114
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Encryption
@@ -249,7 +302,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DecryptFileAsync
     path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-    startLine: 116
+    startLine: 150
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Encryption
@@ -280,54 +333,6 @@ items:
   nameWithType.vb: FileEncryptionService.DecryptFileAsync(String, String)
   fullName.vb: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptFileAsync(String, String)
   name.vb: DecryptFileAsync(String, String)
-- uid: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync(System.String,System.String)
-  commentId: M:AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync(System.String,System.String)
-  id: DecryptAsync(System.String,System.String)
-  parent: AetherUtils.Core.Security.Encryption.FileEncryptionService
-  langs:
-  - csharp
-  - vb
-  name: DecryptAsync(string, string)
-  nameWithType: FileEncryptionService.DecryptAsync(string, string)
-  fullName: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync(string, string)
-  type: Method
-  source:
-    remote:
-      path: AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: DecryptAsync
-    path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-    startLine: 148
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Security.Encryption
-  summary: Decrypt a file specified by <code class="paramref">filePath</code> using the <code class="paramref">passphrase</code>.
-  example: []
-  syntax:
-    content: public Task<string> DecryptAsync(string filePath, string passphrase)
-    parameters:
-    - id: filePath
-      type: System.String
-      description: The path to the file to decrypt.
-    - id: passphrase
-      type: System.String
-      description: The passphrase used for decryption.
-    return:
-      type: System.Threading.Tasks.Task{System.String}
-      description: The decrypted contents of the file.
-    content.vb: Public Function DecryptAsync(filePath As String, passphrase As String) As Task(Of String)
-  overload: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync*
-  exceptions:
-  - type: System.IO.FileNotFoundException
-    commentId: T:System.IO.FileNotFoundException
-    description: If <code class="paramref">filePath</code> was not a valid path to a file.
-  - type: System.ArgumentException
-    commentId: T:System.ArgumentException
-    description: If <code class="paramref">filePath</code> was <code>null</code> or empty.
-  nameWithType.vb: FileEncryptionService.DecryptAsync(String, String)
-  fullName.vb: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync(String, String)
-  name.vb: DecryptAsync(String, String)
 references:
 - uid: AetherUtils.Core.Security.Encryption.FileEncryptionService.EncryptFileAsync(System.String,System.String,System.String)
   commentId: M:AetherUtils.Core.Security.Encryption.FileEncryptionService.EncryptFileAsync(System.String,System.String,System.String)
@@ -1163,6 +1168,12 @@ references:
   name: FileNotFoundException
   nameWithType: FileNotFoundException
   fullName: System.IO.FileNotFoundException
+- uid: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync*
+  commentId: Overload:AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync
+  href: AetherUtils.Core.Security.Encryption.FileEncryptionService.html#AetherUtils_Core_Security_Encryption_FileEncryptionService_DecryptAsync_System_String_System_String_
+  name: DecryptAsync
+  nameWithType: FileEncryptionService.DecryptAsync
+  fullName: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync
 - uid: AetherUtils.Core.Security.Encryption.FileEncryptionService.EncryptFileAsync*
   commentId: Overload:AetherUtils.Core.Security.Encryption.FileEncryptionService.EncryptFileAsync
   href: AetherUtils.Core.Security.Encryption.FileEncryptionService.html#AetherUtils_Core_Security_Encryption_FileEncryptionService_EncryptFileAsync_System_String_System_String_System_String_
@@ -1175,10 +1186,4 @@ references:
   name: DecryptFileAsync
   nameWithType: FileEncryptionService.DecryptFileAsync
   fullName: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptFileAsync
-- uid: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync*
-  commentId: Overload:AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync
-  href: AetherUtils.Core.Security.Encryption.FileEncryptionService.html#AetherUtils_Core_Security_Encryption_FileEncryptionService_DecryptAsync_System_String_System_String_
-  name: DecryptAsync
-  nameWithType: FileEncryptionService.DecryptAsync
-  fullName: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync
 shouldSkipMarkup: true

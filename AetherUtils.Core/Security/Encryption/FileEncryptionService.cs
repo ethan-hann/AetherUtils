@@ -25,6 +25,10 @@ namespace AetherUtils.Core.Security.Encryption
         /// </summary>
         public string FilePath { get; set; }
 
+        /// <summary>
+        /// Create a new file encryption service using the specified file path.
+        /// </summary>
+        /// <param name="filePath">The file path associated with this service.</param>
         public FileEncryptionService(string filePath)
         {
             FilePath = FileHelper.ExpandPath(filePath);
@@ -34,7 +38,8 @@ namespace AetherUtils.Core.Security.Encryption
         internal FileEncryptionService() => FilePath = string.Empty;
 
         /// <summary>
-        /// Create and encrypt a file with the specified <paramref name="content"/> using the <paramref name="passphrase"/>.
+        /// Create a file with the specified <paramref name="content"/> and encrypt the contents
+        /// using the <paramref name="passphrase"/>.
         /// <para>This method will either create a new file if one does not exist or overwrite the existing file.</para>
         /// </summary>
         /// <param name="content">The string to encrypt into the file.</param>
@@ -64,6 +69,35 @@ namespace AetherUtils.Core.Security.Encryption
             await cryptoStream.FlushFinalBlockAsync();
 
             return FilePath;
+        }
+        
+        /// <summary>
+        /// Decrypt a file's contents specified by <paramref name="filePath"/> using the <paramref name="passphrase"/>.
+        /// </summary>
+        /// <param name="filePath">The path to the file to decrypt.</param>
+        /// <param name="passphrase">The passphrase used for decryption.</param>
+        /// <returns>The decrypted contents of the file.</returns>
+        /// <exception cref="FileNotFoundException">If <paramref name="filePath"/> was not a valid path to a file.</exception>
+        /// <exception cref="ArgumentException"> If <paramref name="filePath"/> was <c>null</c> or empty.</exception>
+        public async Task<string> DecryptAsync(string filePath, string passphrase)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            
+            if (!FileHelper.DoesFileExist(filePath))
+                throw new FileNotFoundException("The file was not found.", filePath);
+            
+            filePath = FileHelper.ExpandPath(filePath);
+            
+            using Aes aes = Aes.Create();
+            aes.Key = DeriveKeyFromString(passphrase);
+            await using FileStream inputStream = new(filePath, FileMode.Open);
+            aes.IV = ReadIvFromStream(inputStream);
+
+            await using CryptoStream cryptoStream = new(inputStream, aes.CreateDecryptor(), CryptoStreamMode.Read);
+            using MemoryStream output = new();
+            await cryptoStream.CopyToAsync(output);
+
+            return GetStringFromUtf8Bytes(output.ToArray());
         }
 
         /// <summary>
@@ -136,35 +170,6 @@ namespace AetherUtils.Core.Security.Encryption
                 FileHelper.DeleteFile(oldFilePath, false); //delete the encrypted file if the extensions are different.
             
             return filePath;
-        }
-
-        /// <summary>
-        /// Decrypt a file specified by <paramref name="filePath"/> using the <paramref name="passphrase"/>.
-        /// </summary>
-        /// <param name="filePath">The path to the file to decrypt.</param>
-        /// <param name="passphrase">The passphrase used for decryption.</param>
-        /// <returns>The decrypted contents of the file.</returns>
-        /// <exception cref="FileNotFoundException">If <paramref name="filePath"/> was not a valid path to a file.</exception>
-        /// <exception cref="ArgumentException"> If <paramref name="filePath"/> was <c>null</c> or empty.</exception>
-        public async Task<string> DecryptAsync(string filePath, string passphrase)
-        {
-            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
-            
-            if (!FileHelper.DoesFileExist(filePath))
-                throw new FileNotFoundException("The file was not found.", filePath);
-            
-            filePath = FileHelper.ExpandPath(filePath);
-            
-            using Aes aes = Aes.Create();
-            aes.Key = DeriveKeyFromString(passphrase);
-            await using FileStream inputStream = new(filePath, FileMode.Open);
-            aes.IV = ReadIvFromStream(inputStream);
-
-            await using CryptoStream cryptoStream = new(inputStream, aes.CreateDecryptor(), CryptoStreamMode.Read);
-            using MemoryStream output = new();
-            await cryptoStream.CopyToAsync(output);
-
-            return GetStringFromUtf8Bytes(output.ToArray());
         }
     }
 }

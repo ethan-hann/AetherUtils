@@ -9,22 +9,42 @@
     /// </remarks>
     public readonly struct ConfigOption
     {
+        /// <summary>
+        /// The name of the configuration option.
+        /// </summary>
         public string Name { get; }
+        
+        /// <summary>
+        /// The array index for the option, if <see cref="Name"/> references a list.
+        /// </summary>
         public int ArrayIndexer { get; } = -1;
+        
+        /// <summary>
+        /// The value for the configuration option specified by <see cref="Name"/>.
+        /// </summary>
         public object? Value { get; }
+        
+        /// <summary>
+        /// Get a value indicating if this configuration option contains an array indexer.
+        /// </summary>
         public bool ArrayIndexExists => ArrayIndexer > -1;
 
-        public ConfigOption(string option, object? value)
+        /// <summary>
+        /// Create a new configuration option with the specified 
+        /// </summary>
+        /// <param name="optionName">The name of the option.</param>
+        /// <param name="value">The value for the option.</param>
+        public ConfigOption(string optionName, object? value)
         {
-            if (!option.Contains('['))
-                Name = option;
+            if (!optionName.Contains('['))
+                Name = optionName;
             else //If the name contains '[]', parse out the number between brackets and use for array index of list config value.
             {
-                var optionName = option[..option.IndexOf('[')];
-                var extraIndex = option[(option.IndexOf('[') + 1)..];
+                var name = optionName[..optionName.IndexOf('[')];
+                var extraIndex = optionName[(optionName.IndexOf('[') + 1)..];
                 extraIndex = extraIndex.Remove(extraIndex.IndexOf(']'));
 
-                Name = optionName;
+                Name = name;
 
                 if (int.TryParse(extraIndex, out var result))
                     ArrayIndexer = result;

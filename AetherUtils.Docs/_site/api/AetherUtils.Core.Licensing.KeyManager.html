@@ -168,7 +168,7 @@ Class KeyManager  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="AetherUtils_Core_Licensing_KeyManager_DoesKeyFileExist_System_String_System_String_" data-uid="AetherUtils.Core.Licensing.KeyManager.DoesKeyFileExist(System.String,System.String)">
   DoesKeyFileExist(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/KeyManager.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/KeyManager.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary">Get a value indicating whether the keyPair.keys file exists at the specified base path.</div>
@@ -206,7 +206,7 @@ Class KeyManager  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="AetherUtils_Core_Licensing_KeyManager_LoadKeys_System_String_" data-uid="AetherUtils.Core.Licensing.KeyManager.LoadKeys(System.String)">
   LoadKeys(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/KeyManager.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/KeyManager.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary">Load a key pair from a file.</div>
@@ -249,7 +249,7 @@ Class KeyManager  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static KeyPair? LoadKeys(string basePath, string fileName = &quot;keyPair.keys&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public static KeyPair? LoadKeys(string basePath, string fileName)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -257,7 +257,7 @@ Class KeyManager  <a class="header-action link-secondary" title="View source" hr
     <dt><code>basePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd>The base folder the keys are located in.</dd>
     <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd>The name of the file to load: default is <code>keyPair.keys</code></dd>
+    <dd>The name of the file to load.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>

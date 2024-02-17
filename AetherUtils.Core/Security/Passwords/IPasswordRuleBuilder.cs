@@ -8,19 +8,19 @@ namespace AetherUtils.Core.Security.Passwords;
 public interface IPasswordRuleBuilder : IFluentInterface
 {
     /// <summary>
-    /// Allows the password to contain whitespace.
+    /// Allows a password to contain whitespace.
     /// </summary>
     /// <returns>The builder instance.</returns>
     IPasswordRuleBuilder AllowWhitespace();
     
     /// <summary>
-    /// Allows the password to contain special characters.
+    /// Allows a password to contain special characters.
     /// </summary>
     /// <returns>The builder instance.</returns>
     IPasswordRuleBuilder AllowSpecials();
 
     /// <summary>
-    /// Allows the password to contain numbers.
+    /// Allows a password to contain numbers.
     /// </summary>
     /// <returns>The builder instance.</returns>
     IPasswordRuleBuilder AllowNumbers();

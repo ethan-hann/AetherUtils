@@ -3,11 +3,18 @@
     /// <summary>
     /// Represents a generic key-value pair.
     /// </summary>
-    /// <typeparam name="K">The <see cref="Type"/> for the key.</typeparam>
-    /// <typeparam name="V">The <see cref="Type"/> for the value.</typeparam>
-    public struct Pair<K, V>(K? key, V? value)
+    /// <typeparam name="TK">The <see cref="Type"/> for the key.</typeparam>
+    /// <typeparam name="TV">The <see cref="Type"/> for the value.</typeparam>
+    public struct Pair<TK, TV>(TK? key, TV? value)
     {
-        public K? Key { get; set; } = key;
-        public V? Value { get; set; } = value;
+        /// <summary>
+        /// The key component of this pair.
+        /// </summary>
+        public TK? Key { get; set; } = key;
+        
+        /// <summary>
+        /// The value component of this pair.
+        /// </summary>
+        public TV? Value { get; set; } = value;
     }
 }

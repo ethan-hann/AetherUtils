@@ -27,10 +27,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: License
     path: ../AetherUtils.Core/Licensing/Models/License.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: Represents a license for an application.
+  example: []
   syntax:
     content: >-
       [TypeConverter(typeof(ExpandableObjectConverter))]
@@ -114,10 +116,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Id
     path: ../AetherUtils.Core/Licensing/Models/License.cs
-    startLine: 12
+    startLine: 18
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: The unique ID of this license.
+  example: []
   syntax:
     content: >-
       [Browsable(false)]
@@ -155,10 +159,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Type
     path: ../AetherUtils.Core/Licensing/Models/License.cs
-    startLine: 16
+    startLine: 25
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: The <xref href="Standard.Licensing.LicenseType" data-throw-if-not-resolved="false"></xref> for this license.
+  example: []
   syntax:
     content: >-
       [Browsable(true)]
@@ -196,10 +202,15 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Expiration
     path: ../AetherUtils.Core/Licensing/Models/License.cs
-    startLine: 22
+    startLine: 35
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: >-
+    The date that this license should expire at;
+
+    has no effect if <xref href="AetherUtils.Core.Licensing.Models.License.Type" data-throw-if-not-resolved="false"></xref> is <xref href="Standard.Licensing.LicenseType.Trial" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: >-
       [Browsable(true)]
@@ -237,10 +248,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Quantity
     path: ../AetherUtils.Core/Licensing/Models/License.cs
-    startLine: 28
+    startLine: 44
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: The number of uses allowed for this license.
+  example: []
   syntax:
     content: >-
       [Browsable(true)]
@@ -278,10 +291,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ProductFeatures
     path: ../AetherUtils.Core/Licensing/Models/License.cs
-    startLine: 34
+    startLine: 53
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: A <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> of <xref href="AetherUtils.Core.Licensing.Models.Feature" data-throw-if-not-resolved="false"></xref>s for that are enabled with this license.
+  example: []
   syntax:
     content: >-
       [Browsable(false)]
@@ -319,10 +334,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Customer
     path: ../AetherUtils.Core/Licensing/Models/License.cs
-    startLine: 41
+    startLine: 63
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: The <xref href="AetherUtils.Core.Licensing.Models.License.Customer" data-throw-if-not-resolved="false"></xref> associated with this license.
+  example: []
   syntax:
     content: >-
       [Browsable(false)]
@@ -360,10 +377,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Signature
     path: ../AetherUtils.Core/Licensing/Models/License.cs
-    startLine: 45
+    startLine: 70
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: The signature for this license. Auto-generated when signed with a private key.
+  example: []
   syntax:
     content: >-
       [Browsable(false)]
@@ -401,12 +420,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ToString
     path: ../AetherUtils.Core/Licensing/Models/License.cs
-    startLine: 60
+    startLine: 85
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
   summary: >-
-    Get a string that represents this license object:<br />
+    Get a string that represents this license:<br />
 
     ID: <br />
 
@@ -2364,12 +2383,6 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: AetherUtils.Core.Licensing.Models.License.Type*
-  commentId: Overload:AetherUtils.Core.Licensing.Models.License.Type
-  href: AetherUtils.Core.Licensing.Models.License.html#AetherUtils_Core_Licensing_Models_License_Type
-  name: Type
-  nameWithType: License.Type
-  fullName: AetherUtils.Core.Licensing.Models.License.Type
 - uid: Standard.Licensing.LicenseType
   commentId: T:Standard.Licensing.LicenseType
   parent: Standard.Licensing
@@ -2377,6 +2390,12 @@ references:
   name: LicenseType
   nameWithType: LicenseType
   fullName: Standard.Licensing.LicenseType
+- uid: AetherUtils.Core.Licensing.Models.License.Type*
+  commentId: Overload:AetherUtils.Core.Licensing.Models.License.Type
+  href: AetherUtils.Core.Licensing.Models.License.html#AetherUtils_Core_Licensing_Models_License_Type
+  name: Type
+  nameWithType: License.Type
+  fullName: AetherUtils.Core.Licensing.Models.License.Type
 - uid: Standard.Licensing
   commentId: N:Standard.Licensing
   isExternal: true
@@ -2399,6 +2418,18 @@ references:
   - uid: Standard.Licensing
     name: Licensing
     isExternal: true
+- uid: AetherUtils.Core.Licensing.Models.License.Type
+  commentId: P:AetherUtils.Core.Licensing.Models.License.Type
+  href: AetherUtils.Core.Licensing.Models.License.html#AetherUtils_Core_Licensing_Models_License_Type
+  name: Type
+  nameWithType: License.Type
+  fullName: AetherUtils.Core.Licensing.Models.License.Type
+- uid: Standard.Licensing.LicenseType.Trial
+  commentId: F:Standard.Licensing.LicenseType.Trial
+  isExternal: true
+  name: Trial
+  nameWithType: LicenseType.Trial
+  fullName: Standard.Licensing.LicenseType.Trial
 - uid: AetherUtils.Core.Licensing.Models.License.Expiration*
   commentId: Overload:AetherUtils.Core.Licensing.Models.License.Expiration
   href: AetherUtils.Core.Licensing.Models.License.html#AetherUtils_Core_Licensing_Models_License_Expiration
@@ -2433,6 +2464,40 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Licensing.Models.Feature
+  commentId: T:AetherUtils.Core.Licensing.Models.Feature
+  href: AetherUtils.Core.Licensing.Models.Feature.html
+  name: Feature
+  nameWithType: Feature
+  fullName: AetherUtils.Core.Licensing.Models.Feature
 - uid: AetherUtils.Core.Licensing.Models.License.ProductFeatures*
   commentId: Overload:AetherUtils.Core.Licensing.Models.License.ProductFeatures
   href: AetherUtils.Core.Licensing.Models.License.html#AetherUtils_Core_Licensing_Models_License_ProductFeatures
@@ -2472,34 +2537,6 @@ references:
     name: Feature
     href: AetherUtils.Core.Licensing.Models.Feature.html
   - name: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
@@ -2537,6 +2574,12 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AetherUtils.Core.Licensing.Models.License.Customer
+  commentId: P:AetherUtils.Core.Licensing.Models.License.Customer
+  href: AetherUtils.Core.Licensing.Models.License.html#AetherUtils_Core_Licensing_Models_License_Customer
+  name: Customer
+  nameWithType: License.Customer
+  fullName: AetherUtils.Core.Licensing.Models.License.Customer
 - uid: AetherUtils.Core.Licensing.Models.License.Customer*
   commentId: Overload:AetherUtils.Core.Licensing.Models.License.Customer
   href: AetherUtils.Core.Licensing.Models.License.html#AetherUtils_Core_Licensing_Models_License_Customer

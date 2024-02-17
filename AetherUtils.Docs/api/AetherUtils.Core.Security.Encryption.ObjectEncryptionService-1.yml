@@ -117,7 +117,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DecryptAsync
     path: ../AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
-    startLine: 49
+    startLine: 44
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Encryption
@@ -165,7 +165,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: EncryptToFileAsync
     path: ../AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
-    startLine: 70
+    startLine: 65
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Encryption
@@ -213,7 +213,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DecryptFromFileAsync
     path: ../AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
-    startLine: 103
+    startLine: 98
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Encryption

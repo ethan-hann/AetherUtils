@@ -23,13 +23,15 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Customer
     path: ../AetherUtils.Core/Licensing/Models/Customer.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: Represents a customer for a license.
+  example: []
   syntax:
-    content: public class Customer
-    content.vb: Public Class Customer
+    content: public sealed class Customer
+    content.vb: Public NotInheritable Class Customer
   inheritance:
   - System.Object
   inheritedMembers:
@@ -37,7 +39,6 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
-  - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
   extensionMethods:
@@ -63,10 +64,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Name
     path: ../AetherUtils.Core/Licensing/Models/Customer.cs
-    startLine: 7
+    startLine: 13
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: The customer's name.
+  example: []
   syntax:
     content: public string Name { get; set; }
     parameters: []
@@ -92,10 +95,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Company
     path: ../AetherUtils.Core/Licensing/Models/Customer.cs
-    startLine: 10
+    startLine: 19
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: The customer's company, if any.
+  example: []
   syntax:
     content: public string Company { get; set; }
     parameters: []
@@ -121,10 +126,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Email
     path: ../AetherUtils.Core/Licensing/Models/Customer.cs
-    startLine: 13
+    startLine: 25
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: The customer's email address.
+  example: []
   syntax:
     content: public string Email { get; set; }
     parameters: []
@@ -150,10 +157,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Licensing/Models/Customer.cs
-    startLine: 16
+    startLine: 31
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: Create a new, default customer.
+  example: []
   syntax:
     content: public Customer()
     content.vb: Public Sub New()
@@ -335,30 +344,6 @@ references:
     name: GetType
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
   - name: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)

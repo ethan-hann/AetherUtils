@@ -5,6 +5,9 @@ using System.Diagnostics;
 
 namespace AetherUtils.Core.Licensing
 {
+    /// <summary>
+    /// Contains methods for validating a license file.
+    /// </summary>
     public static class Licenser
     {
         private static readonly GeneralValidationFailure _invalidExtensionFailure = new GeneralValidationFailure()
@@ -33,7 +36,7 @@ namespace AetherUtils.Core.Licensing
         /// <returns>A string representing the results of validation.</returns>
         public static List<IValidationFailure> Validate(string license, string publicKey)
         {
-            string licenseText = license;
+            var licenseText = license;
 
             try
             {

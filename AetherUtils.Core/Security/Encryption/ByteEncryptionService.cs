@@ -5,8 +5,14 @@ namespace AetherUtils.Core.Security.Encryption;
 /// <summary>
 /// Provides methods to encrypt and decrypt <see cref="byte"/> arrays.
 /// </summary>
-public class ByteEncryptionService : EncryptionBase, IEncryptService<byte[], byte[]>
+public sealed class ByteEncryptionService : EncryptionBase, IEncryptService<byte[], byte[]>
 {
+    /// <summary>
+    /// Encrypt the specified <see cref="byte"/> array with the specified passphrase.
+    /// </summary>
+    /// <param name="input">The <see cref="byte"/> array to encrypt.</param>
+    /// <param name="passphrase">The passphrase used to derive the encryption key.</param>
+    /// <returns>The encrypted <see cref="byte"/> array.</returns>
     public async Task<byte[]> EncryptAsync(byte[] input, string passphrase)
     {
         ArgumentNullException.ThrowIfNull(input, nameof(input));
@@ -25,6 +31,12 @@ public class ByteEncryptionService : EncryptionBase, IEncryptService<byte[], byt
         return output.ToArray();
     }
 
+    /// <summary>
+    /// Decrypt the specified <see cref="byte"/> array with the specified passphrase.
+    /// </summary>
+    /// <param name="input">The encrypted <see cref="byte"/> array to decrypt.</param>
+    /// <param name="passphrase">The passphrase used to derive the decryption key.</param>
+    /// <returns>The decrypted <see cref="byte"/> array.</returns>
     public async Task<byte[]> DecryptAsync(byte[] input, string passphrase)
     {
         ArgumentNullException.ThrowIfNull(input, nameof(input));

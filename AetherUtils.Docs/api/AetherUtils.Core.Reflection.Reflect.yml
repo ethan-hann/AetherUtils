@@ -129,7 +129,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetAttributesRecurse
     path: ../AetherUtils.Core/Reflection/Reflect.cs
-    startLine: 99
+    startLine: 100
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Reflection

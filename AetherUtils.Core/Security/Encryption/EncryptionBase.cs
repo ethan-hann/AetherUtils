@@ -5,8 +5,8 @@ using AetherUtils.Core.Structs;
 namespace AetherUtils.Core.Security.Encryption
 {
     /// <summary>
-    /// Represents the base class for all encryption service classes. All encryption is performed using AES-256
-    /// and encoded with <see cref="Encoding.UTF8"/>.
+    /// Represents the base class for all encryption service classes. All encryption is performed using the AES-256
+    /// algorithm and encoded according to <see cref="Encoding.UTF8"/>.
     /// </summary>
     public class EncryptionBase
     {
@@ -17,7 +17,7 @@ namespace AetherUtils.Core.Security.Encryption
         /// </summary>
         /// <param name="stream">The stream to read from.</param>
         /// <returns></returns>
-        internal byte[] ReadIvFromStream(Stream stream)
+        internal static byte[] ReadIvFromStream(Stream stream)
         {
             var iv = new byte[16];
             _ = stream.Read(iv, 0, 16);

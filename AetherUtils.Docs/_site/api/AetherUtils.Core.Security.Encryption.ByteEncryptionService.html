@@ -113,7 +113,7 @@ Class ByteEncryptionService  <a class="header-action link-secondary" title="View
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ByteEncryptionService : EncryptionBase</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ByteEncryptionService : EncryptionBase</code></pre>
   </div>
 
 
@@ -147,9 +147,6 @@ Class ByteEncryptionService  <a class="header-action link-secondary" title="View
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
@@ -188,10 +185,10 @@ Class ByteEncryptionService  <a class="header-action link-secondary" title="View
 
   <h3 id="AetherUtils_Core_Security_Encryption_ByteEncryptionService_DecryptAsync_System_Byte___System_String_" data-uid="AetherUtils.Core.Security.Encryption.ByteEncryptionService.DecryptAsync(System.Byte[],System.String)">
   DecryptAsync(byte[], string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/ByteEncryptionService.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/ByteEncryptionService.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary">Decrypt the <see></see><code class="paramref">input</code> using the specified passphrase.</div>
+  <div class="markdown level1 summary">Decrypt the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array with the specified passphrase.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -201,7 +198,7 @@ Class ByteEncryptionService  <a class="header-action link-secondary" title="View
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd>The data to decrypt.</dd>
+    <dd>The encrypted <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array to decrypt.</dd>
     <dt><code>passphrase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd>The passphrase used to derive the decryption key.</dd>
   </dl>
@@ -209,7 +206,7 @@ Class ByteEncryptionService  <a class="header-action link-secondary" title="View
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
-    <dd>The <see></see> decrypted data.</dd>
+    <dd>The decrypted <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</dd>
   </dl>
 
 
@@ -226,10 +223,10 @@ Class ByteEncryptionService  <a class="header-action link-secondary" title="View
 
   <h3 id="AetherUtils_Core_Security_Encryption_ByteEncryptionService_EncryptAsync_System_Byte___System_String_" data-uid="AetherUtils.Core.Security.Encryption.ByteEncryptionService.EncryptAsync(System.Byte[],System.String)">
   EncryptAsync(byte[], string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/ByteEncryptionService.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/ByteEncryptionService.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary">Encrypt the <see></see><code class="paramref">input</code> using the specified passphrase.</div>
+  <div class="markdown level1 summary">Encrypt the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array with the specified passphrase.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -239,15 +236,15 @@ Class ByteEncryptionService  <a class="header-action link-secondary" title="View
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd>The data to encrypt.</dd>
+    <dd>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array to encrypt.</dd>
     <dt><code>passphrase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd>A passphrase used to derive the encryption key.</dd>
+    <dd>The passphrase used to derive the encryption key.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
-    <dd>The <see></see> encrypted data.</dd>
+    <dd>The encrypted <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</dd>
   </dl>
 
 

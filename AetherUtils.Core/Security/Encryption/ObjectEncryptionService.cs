@@ -26,17 +26,12 @@ namespace AetherUtils.Core.Security.Encryption
             if (!input.CanSerializeXml())
                 throw new InvalidOperationException($"{input.GetType()} does not support XML serialization.");
 
-            string? objectString;
-
             if (input is string inputString)
                 return await _stringEncryptor.EncryptAsync(inputString, passphrase);
             
-            objectString = input.SerializeXml();
+            var objectString = input.SerializeXml();
 
-            if (objectString is { } obj)
-                return await _stringEncryptor.EncryptAsync(obj, passphrase);
-
-            return [];
+            return await _stringEncryptor.EncryptAsync(objectString, passphrase);
         }
 
         /// <summary>

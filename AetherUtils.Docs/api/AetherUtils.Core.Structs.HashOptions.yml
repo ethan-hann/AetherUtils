@@ -48,7 +48,7 @@ items:
 
     and the <xref href="AetherUtils.Core.Structs.HashOptions.Encoding" data-throw-if-not-resolved="false"></xref> defaults to <xref href="AetherUtils.Core.Security.Hashing.HashEncoding.Base64" data-throw-if-not-resolved="false"></xref>.
 
-    <p>Once created, this struct's options cannot be changed.</p>
+    <p>Once created, the properties cannot be changed.</p>
   example: []
   syntax:
     content: public readonly struct HashOptions
@@ -1155,21 +1155,21 @@ references:
 - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
   commentId: T:AetherUtils.Core.Structs.ReadOnlyPair`2
   href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
-  name: ReadOnlyPair<K, V>
-  nameWithType: ReadOnlyPair<K, V>
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>
-  nameWithType.vb: ReadOnlyPair(Of K, V)
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V)
-  name.vb: ReadOnlyPair(Of K, V)
+  name: ReadOnlyPair<TK, TV>
+  nameWithType: ReadOnlyPair<TK, TV>
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<TK, TV>
+  nameWithType.vb: ReadOnlyPair(Of TK, TV)
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of TK, TV)
+  name.vb: ReadOnlyPair(Of TK, TV)
   spec.csharp:
   - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
     name: ReadOnlyPair
     href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
   - name: <
-  - name: K
+  - name: TK
   - name: ','
   - name: " "
-  - name: V
+  - name: TV
   - name: '>'
   spec.vb:
   - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
@@ -1178,9 +1178,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: K
+  - name: TK
   - name: ','
   - name: " "
-  - name: V
+  - name: TV
   - name: )
 shouldSkipMarkup: true

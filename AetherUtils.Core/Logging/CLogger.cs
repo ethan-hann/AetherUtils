@@ -6,14 +6,15 @@ using NLog.Targets;
 namespace AetherUtils.Core.Logging
 {
     /// <summary>
-    /// Provides static methods to facilitate logging to a file as well as to the console for an application.
-    /// Uses <see cref="NLog"/> internally.
+    /// Provides static methods to facilitate logging to a file as well as to the console for an application.<br/>
+    /// This class is a wrapper around <a href="https://nlog-project.org/">NLog</a>.
     /// </summary>
     public static class CLogger
     {
-        private static bool _isInitialized = false;
-
-        public static bool IsInitialized => _isInitialized;
+        /// <summary>
+        /// Get a value indicating if the logger has been initialized.
+        /// </summary>
+        public static bool IsInitialized { get; private set; }
 
         /// <summary>
         /// Initialize the logger for the application. This should be called before any logging takes place; 
@@ -36,7 +37,7 @@ namespace AetherUtils.Core.Logging
             config.AddRule(LogLevel.Debug, LogLevel.Fatal, logFile);
 
             LogManager.Configuration = config;
-            _isInitialized = true;
+            IsInitialized = true;
         }
 
         private static FileTarget CreateLogFileFromOptions(LogOptions options)
@@ -53,7 +54,7 @@ namespace AetherUtils.Core.Logging
                     : (options.IncludeDateTime ? DateTime.Now.ToString("_MM-dd-yyyy-hh-mm-ss-ff") : string.Empty))
                 + ".log";
 
-            string fullPath = Path.Combine(options.LogFileDirectory, fileName);
+            var fullPath = Path.Combine(options.LogFileDirectory, fileName);
             fullPath = Files.FileHelper.ExpandPath(fullPath);
 
             //Create log directory if it doesn't exist.
@@ -91,7 +92,7 @@ namespace AetherUtils.Core.Logging
         /// <returns>A <see cref="Logger"/> object that can be used for logging. Returns default name if logging has not been initialized via <see cref="Initialize(LogOptions)"/></returns>
         public static Logger GetCurrentLogger<T>() where T : class
         {
-            return !_isInitialized ? LogManager.GetCurrentClassLogger() 
+            return !IsInitialized ? LogManager.GetCurrentClassLogger() 
                 : LogManager.GetLogger($"{typeof(T).FullName}");
         }
 
@@ -103,7 +104,7 @@ namespace AetherUtils.Core.Logging
         /// <returns>A <see cref="Logger"/> object that can be used for logging. Returns default name if logging has not been initialized.</returns>
         public static Logger GetCurrentLogger<T>(string name) where T : class
         {
-            return !_isInitialized ? LogManager.GetCurrentClassLogger() 
+            return !IsInitialized ? LogManager.GetCurrentClassLogger() 
                 : LogManager.GetLogger($"{typeof(T).FullName}.{name}");
         }
 
@@ -114,7 +115,7 @@ namespace AetherUtils.Core.Logging
         /// <returns>A <see cref="Logger"/> object that can be used for logging. Returns default name if logging has not been initialized.</returns>
         public static Logger GetCurrentLogger(string name)
         {
-            return !_isInitialized ? LogManager.GetCurrentClassLogger() 
+            return !IsInitialized ? LogManager.GetCurrentClassLogger() 
                 : LogManager.GetLogger(name);
         }
     }

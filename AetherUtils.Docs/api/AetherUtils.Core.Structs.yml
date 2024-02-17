@@ -36,21 +36,21 @@ references:
 - uid: AetherUtils.Core.Structs.Pair`2
   commentId: T:AetherUtils.Core.Structs.Pair`2
   href: AetherUtils.Core.Structs.Pair-2.html
-  name: Pair<K, V>
-  nameWithType: Pair<K, V>
-  fullName: AetherUtils.Core.Structs.Pair<K, V>
-  nameWithType.vb: Pair(Of K, V)
-  fullName.vb: AetherUtils.Core.Structs.Pair(Of K, V)
-  name.vb: Pair(Of K, V)
+  name: Pair<TK, TV>
+  nameWithType: Pair<TK, TV>
+  fullName: AetherUtils.Core.Structs.Pair<TK, TV>
+  nameWithType.vb: Pair(Of TK, TV)
+  fullName.vb: AetherUtils.Core.Structs.Pair(Of TK, TV)
+  name.vb: Pair(Of TK, TV)
   spec.csharp:
   - uid: AetherUtils.Core.Structs.Pair`2
     name: Pair
     href: AetherUtils.Core.Structs.Pair-2.html
   - name: <
-  - name: K
+  - name: TK
   - name: ','
   - name: " "
-  - name: V
+  - name: TV
   - name: '>'
   spec.vb:
   - uid: AetherUtils.Core.Structs.Pair`2
@@ -59,29 +59,29 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: K
+  - name: TK
   - name: ','
   - name: " "
-  - name: V
+  - name: TV
   - name: )
 - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
   commentId: T:AetherUtils.Core.Structs.ReadOnlyPair`2
   href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
-  name: ReadOnlyPair<K, V>
-  nameWithType: ReadOnlyPair<K, V>
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>
-  nameWithType.vb: ReadOnlyPair(Of K, V)
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V)
-  name.vb: ReadOnlyPair(Of K, V)
+  name: ReadOnlyPair<TK, TV>
+  nameWithType: ReadOnlyPair<TK, TV>
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<TK, TV>
+  nameWithType.vb: ReadOnlyPair(Of TK, TV)
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of TK, TV)
+  name.vb: ReadOnlyPair(Of TK, TV)
   spec.csharp:
   - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
     name: ReadOnlyPair
     href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
   - name: <
-  - name: K
+  - name: TK
   - name: ','
   - name: " "
-  - name: V
+  - name: TV
   - name: '>'
   spec.vb:
   - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
@@ -90,10 +90,10 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: K
+  - name: TK
   - name: ','
   - name: " "
-  - name: V
+  - name: TV
   - name: )
 - uid: AetherUtils.Core.Structs.TrimmedString
   commentId: T:AetherUtils.Core.Structs.TrimmedString

@@ -158,9 +158,9 @@ items:
   - uid: AetherUtils.Core.Structs.HashOptions
     name: HashOptions
   - uid: AetherUtils.Core.Structs.Pair`2
-    name: Pair<K, V>
+    name: Pair<TK, TV>
   - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
-    name: ReadOnlyPair<K, V>
+    name: ReadOnlyPair<TK, TV>
   - uid: AetherUtils.Core.Structs.TrimmedString
     name: TrimmedString
 - uid: AetherUtils.Core.Utility

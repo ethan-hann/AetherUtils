@@ -192,18 +192,18 @@ items:
   summary: Load a key pair from a file.
   example: []
   syntax:
-    content: public static KeyPair? LoadKeys(string basePath, string fileName = "keyPair.keys")
+    content: public static KeyPair? LoadKeys(string basePath, string fileName)
     parameters:
     - id: basePath
       type: System.String
       description: The base folder the keys are located in.
     - id: fileName
       type: System.String
-      description: 'The name of the file to load: default is <code>keyPair.keys</code>'
+      description: The name of the file to load.
     return:
       type: System.Nullable{AetherUtils.Core.Licensing.KeyPair}
       description: A <xref href="AetherUtils.Core.Licensing.KeyPair" data-throw-if-not-resolved="false"></xref> representing the key values.
-    content.vb: Public Shared Function LoadKeys(basePath As String, fileName As String = "keyPair.keys") As KeyPair?
+    content.vb: Public Shared Function LoadKeys(basePath As String, fileName As String) As KeyPair?
   overload: AetherUtils.Core.Licensing.KeyManager.LoadKeys*
   nameWithType.vb: KeyManager.LoadKeys(String, String)
   fullName.vb: AetherUtils.Core.Licensing.KeyManager.LoadKeys(String, String)
@@ -226,7 +226,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: LoadKeys
     path: ../AetherUtils.Core/Licensing/KeyManager.cs
-    startLine: 96
+    startLine: 89
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing
@@ -264,7 +264,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DoesKeyFileExist
     path: ../AetherUtils.Core/Licensing/KeyManager.cs
-    startLine: 114
+    startLine: 107
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing

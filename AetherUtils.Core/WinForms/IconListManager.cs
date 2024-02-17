@@ -5,7 +5,7 @@ namespace AetherUtils.Core.WinForms;
 /// <summary>
 /// Maintains a list of currently added file extensions
 /// </summary>
-public class IconListManager
+public sealed class IconListManager
 {
     private readonly Hashtable _extensionList = new();
     private readonly IconReader.IconSize _iconSize;

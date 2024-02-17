@@ -20,10 +20,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Licenser
     path: ../AetherUtils.Core/Licensing/Licenser.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing
+  summary: Contains methods for validating a license file.
+  example: []
   syntax:
     content: public static class Licenser
     content.vb: Public Module Licenser
@@ -55,7 +57,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Validate
     path: ../AetherUtils.Core/Licensing/Licenser.cs
-    startLine: 33
+    startLine: 36
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing

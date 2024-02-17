@@ -3,4 +3,4 @@
 /// <summary>
 /// Custom exception class for password rule validation.
 /// </summary>
-public class PasswordRuleException(string message) : Exception(message);
+public sealed class PasswordRuleException(string message) : Exception(message);

@@ -18,6 +18,13 @@ public abstract class PasswordValidator
     
     private PasswordValidator() {}
 
+    /// <summary>
+    /// Validate the <paramref name="password"/> against the specified <see cref="PasswordRule"/>.
+    /// </summary>
+    /// <param name="rule">The <see cref="PasswordRule"/> used for validation.</param>
+    /// <param name="password">The password to validate.</param>
+    /// <returns>A list of <see cref="IPasswordValidationFailure"/>.
+    /// If validation was successful, this list is empty.</returns>
     internal static List<IPasswordValidationFailure> Validate(PasswordRule rule, string password)
     {
         var data = rule.RuleData;

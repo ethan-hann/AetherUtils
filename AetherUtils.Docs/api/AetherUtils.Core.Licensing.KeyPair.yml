@@ -94,10 +94,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: PrivateKey
     path: ../AetherUtils.Core/Licensing/KeyPair.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing
+  summary: The private key component of the key pair.
+  example: []
   syntax:
     content: public string PrivateKey { get; }
     parameters: []
@@ -123,10 +125,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: PublicKey
     path: ../AetherUtils.Core/Licensing/KeyPair.cs
-    startLine: 10
+    startLine: 17
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing
+  summary: The public key component of the key pair.
+  example: []
   syntax:
     content: public string PublicKey { get; }
     parameters: []

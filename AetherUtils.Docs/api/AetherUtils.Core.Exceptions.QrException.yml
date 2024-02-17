@@ -28,8 +28,8 @@ items:
   summary: Custom class for exceptions that occur when handling QR codes.
   example: []
   syntax:
-    content: 'public class QrException : Exception, ISerializable'
-    content.vb: Public Class QrException Inherits Exception Implements ISerializable
+    content: 'public sealed class QrException : Exception, ISerializable'
+    content.vb: Public NotInheritable Class QrException Inherits Exception Implements ISerializable
   inheritance:
   - System.Object
   - System.Exception
@@ -47,11 +47,9 @@ items:
   - System.Exception.Source
   - System.Exception.StackTrace
   - System.Exception.TargetSite
-  - System.Exception.SerializeObjectState
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
-  - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   extensionMethods:
   - AetherUtils.Core.Exceptions.QrException.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1
@@ -312,14 +310,6 @@ references:
   name: TargetSite
   nameWithType: Exception.TargetSite
   fullName: System.Exception.TargetSite
-- uid: System.Exception.SerializeObjectState
-  commentId: E:System.Exception.SerializeObjectState
-  parent: System.Exception
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.serializeobjectstate
-  name: SerializeObjectState
-  nameWithType: Exception.SerializeObjectState
-  fullName: System.Exception.SerializeObjectState
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -420,30 +410,6 @@ references:
     name: GetHashCode
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
   - name: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)

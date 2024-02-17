@@ -10,7 +10,7 @@ namespace AetherUtils.Core.Security.TwoFactor;
 /// Provides methods to generate and validate two-factor authentication codes.
 /// </summary>
 /// <param name="hashType">The <see cref="TwoFactor.HashType"/>for the generated codes.</param>
-public class TwoFactorAuth(HashType hashType)
+public sealed class TwoFactorAuth(HashType hashType)
 {
     private static readonly DateTime Epoch = new(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
@@ -18,6 +18,9 @@ public class TwoFactorAuth(HashType hashType)
 
     private HashType HashType { get; } = hashType;
 
+    /// <summary>
+    /// Create a new two factor authentication using the default <see cref="TwoFactor.HashType"/>.
+    /// </summary>
     public TwoFactorAuth() : this(HashType.Sha1) { }
 
     /// <summary>

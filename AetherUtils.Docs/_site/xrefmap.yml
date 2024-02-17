@@ -4410,67 +4410,67 @@ references:
   fullName: AetherUtils.Core.Structs.HashOptions.SaltLength
   nameWithType: HashOptions.SaltLength
 - uid: AetherUtils.Core.Structs.Pair`2
-  name: Pair<K, V>
+  name: Pair<TK, TV>
   href: api/AetherUtils.Core.Structs.Pair-2.html
   commentId: T:AetherUtils.Core.Structs.Pair`2
-  name.vb: Pair(Of K, V)
-  fullName: AetherUtils.Core.Structs.Pair<K, V>
-  fullName.vb: AetherUtils.Core.Structs.Pair(Of K, V)
-  nameWithType: Pair<K, V>
-  nameWithType.vb: Pair(Of K, V)
+  name.vb: Pair(Of TK, TV)
+  fullName: AetherUtils.Core.Structs.Pair<TK, TV>
+  fullName.vb: AetherUtils.Core.Structs.Pair(Of TK, TV)
+  nameWithType: Pair<TK, TV>
+  nameWithType.vb: Pair(Of TK, TV)
 - uid: AetherUtils.Core.Structs.Pair`2.#ctor(`0,`1)
-  name: Pair(K?, V?)
+  name: Pair(TK?, TV?)
   href: api/AetherUtils.Core.Structs.Pair-2.html#AetherUtils_Core_Structs_Pair_2__ctor__0__1_
   commentId: M:AetherUtils.Core.Structs.Pair`2.#ctor(`0,`1)
-  name.vb: New(K, V)
-  fullName: AetherUtils.Core.Structs.Pair<K, V>.Pair(K?, V?)
-  fullName.vb: AetherUtils.Core.Structs.Pair(Of K, V).New(K, V)
-  nameWithType: Pair<K, V>.Pair(K?, V?)
-  nameWithType.vb: Pair(Of K, V).New(K, V)
+  name.vb: New(TK, TV)
+  fullName: AetherUtils.Core.Structs.Pair<TK, TV>.Pair(TK?, TV?)
+  fullName.vb: AetherUtils.Core.Structs.Pair(Of TK, TV).New(TK, TV)
+  nameWithType: Pair<TK, TV>.Pair(TK?, TV?)
+  nameWithType.vb: Pair(Of TK, TV).New(TK, TV)
 - uid: AetherUtils.Core.Structs.Pair`2.#ctor*
   name: Pair
   href: api/AetherUtils.Core.Structs.Pair-2.html#AetherUtils_Core_Structs_Pair_2__ctor_
   commentId: Overload:AetherUtils.Core.Structs.Pair`2.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: AetherUtils.Core.Structs.Pair<K, V>.Pair
-  fullName.vb: AetherUtils.Core.Structs.Pair(Of K, V).New
-  nameWithType: Pair<K, V>.Pair
-  nameWithType.vb: Pair(Of K, V).New
+  fullName: AetherUtils.Core.Structs.Pair<TK, TV>.Pair
+  fullName.vb: AetherUtils.Core.Structs.Pair(Of TK, TV).New
+  nameWithType: Pair<TK, TV>.Pair
+  nameWithType.vb: Pair(Of TK, TV).New
 - uid: AetherUtils.Core.Structs.Pair`2.Key
   name: Key
   href: api/AetherUtils.Core.Structs.Pair-2.html#AetherUtils_Core_Structs_Pair_2_Key
   commentId: P:AetherUtils.Core.Structs.Pair`2.Key
-  fullName: AetherUtils.Core.Structs.Pair<K, V>.Key
-  fullName.vb: AetherUtils.Core.Structs.Pair(Of K, V).Key
-  nameWithType: Pair<K, V>.Key
-  nameWithType.vb: Pair(Of K, V).Key
+  fullName: AetherUtils.Core.Structs.Pair<TK, TV>.Key
+  fullName.vb: AetherUtils.Core.Structs.Pair(Of TK, TV).Key
+  nameWithType: Pair<TK, TV>.Key
+  nameWithType.vb: Pair(Of TK, TV).Key
 - uid: AetherUtils.Core.Structs.Pair`2.Key*
   name: Key
   href: api/AetherUtils.Core.Structs.Pair-2.html#AetherUtils_Core_Structs_Pair_2_Key_
   commentId: Overload:AetherUtils.Core.Structs.Pair`2.Key
   isSpec: "True"
-  fullName: AetherUtils.Core.Structs.Pair<K, V>.Key
-  fullName.vb: AetherUtils.Core.Structs.Pair(Of K, V).Key
-  nameWithType: Pair<K, V>.Key
-  nameWithType.vb: Pair(Of K, V).Key
+  fullName: AetherUtils.Core.Structs.Pair<TK, TV>.Key
+  fullName.vb: AetherUtils.Core.Structs.Pair(Of TK, TV).Key
+  nameWithType: Pair<TK, TV>.Key
+  nameWithType.vb: Pair(Of TK, TV).Key
 - uid: AetherUtils.Core.Structs.Pair`2.Value
   name: Value
   href: api/AetherUtils.Core.Structs.Pair-2.html#AetherUtils_Core_Structs_Pair_2_Value
   commentId: P:AetherUtils.Core.Structs.Pair`2.Value
-  fullName: AetherUtils.Core.Structs.Pair<K, V>.Value
-  fullName.vb: AetherUtils.Core.Structs.Pair(Of K, V).Value
-  nameWithType: Pair<K, V>.Value
-  nameWithType.vb: Pair(Of K, V).Value
+  fullName: AetherUtils.Core.Structs.Pair<TK, TV>.Value
+  fullName.vb: AetherUtils.Core.Structs.Pair(Of TK, TV).Value
+  nameWithType: Pair<TK, TV>.Value
+  nameWithType.vb: Pair(Of TK, TV).Value
 - uid: AetherUtils.Core.Structs.Pair`2.Value*
   name: Value
   href: api/AetherUtils.Core.Structs.Pair-2.html#AetherUtils_Core_Structs_Pair_2_Value_
   commentId: Overload:AetherUtils.Core.Structs.Pair`2.Value
   isSpec: "True"
-  fullName: AetherUtils.Core.Structs.Pair<K, V>.Value
-  fullName.vb: AetherUtils.Core.Structs.Pair(Of K, V).Value
-  nameWithType: Pair<K, V>.Value
-  nameWithType.vb: Pair(Of K, V).Value
+  fullName: AetherUtils.Core.Structs.Pair<TK, TV>.Value
+  fullName.vb: AetherUtils.Core.Structs.Pair(Of TK, TV).Value
+  nameWithType: Pair<TK, TV>.Value
+  nameWithType.vb: Pair(Of TK, TV).Value
 - uid: AetherUtils.Core.Structs.ParsedHash
   name: ParsedHash
   href: api/AetherUtils.Core.Structs.ParsedHash.html
@@ -4562,49 +4562,49 @@ references:
   fullName: AetherUtils.Core.Structs.ParsedHash.Salt
   nameWithType: ParsedHash.Salt
 - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
-  name: ReadOnlyPair<K, V>
+  name: ReadOnlyPair<TK, TV>
   href: api/AetherUtils.Core.Structs.ReadOnlyPair-2.html
   commentId: T:AetherUtils.Core.Structs.ReadOnlyPair`2
-  name.vb: ReadOnlyPair(Of K, V)
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V)
-  nameWithType: ReadOnlyPair<K, V>
-  nameWithType.vb: ReadOnlyPair(Of K, V)
+  name.vb: ReadOnlyPair(Of TK, TV)
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<TK, TV>
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of TK, TV)
+  nameWithType: ReadOnlyPair<TK, TV>
+  nameWithType.vb: ReadOnlyPair(Of TK, TV)
 - uid: AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor(`0,`1)
-  name: ReadOnlyPair(K?, V?)
+  name: ReadOnlyPair(TK?, TV?)
   href: api/AetherUtils.Core.Structs.ReadOnlyPair-2.html#AetherUtils_Core_Structs_ReadOnlyPair_2__ctor__0__1_
   commentId: M:AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor(`0,`1)
-  name.vb: New(K, V)
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>.ReadOnlyPair(K?, V?)
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V).New(K, V)
-  nameWithType: ReadOnlyPair<K, V>.ReadOnlyPair(K?, V?)
-  nameWithType.vb: ReadOnlyPair(Of K, V).New(K, V)
+  name.vb: New(TK, TV)
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<TK, TV>.ReadOnlyPair(TK?, TV?)
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of TK, TV).New(TK, TV)
+  nameWithType: ReadOnlyPair<TK, TV>.ReadOnlyPair(TK?, TV?)
+  nameWithType.vb: ReadOnlyPair(Of TK, TV).New(TK, TV)
 - uid: AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor*
   name: ReadOnlyPair
   href: api/AetherUtils.Core.Structs.ReadOnlyPair-2.html#AetherUtils_Core_Structs_ReadOnlyPair_2__ctor_
   commentId: Overload:AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>.ReadOnlyPair
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V).New
-  nameWithType: ReadOnlyPair<K, V>.ReadOnlyPair
-  nameWithType.vb: ReadOnlyPair(Of K, V).New
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<TK, TV>.ReadOnlyPair
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of TK, TV).New
+  nameWithType: ReadOnlyPair<TK, TV>.ReadOnlyPair
+  nameWithType.vb: ReadOnlyPair(Of TK, TV).New
 - uid: AetherUtils.Core.Structs.ReadOnlyPair`2.Key
   name: Key
   href: api/AetherUtils.Core.Structs.ReadOnlyPair-2.html#AetherUtils_Core_Structs_ReadOnlyPair_2_Key
   commentId: F:AetherUtils.Core.Structs.ReadOnlyPair`2.Key
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>.Key
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V).Key
-  nameWithType: ReadOnlyPair<K, V>.Key
-  nameWithType.vb: ReadOnlyPair(Of K, V).Key
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<TK, TV>.Key
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of TK, TV).Key
+  nameWithType: ReadOnlyPair<TK, TV>.Key
+  nameWithType.vb: ReadOnlyPair(Of TK, TV).Key
 - uid: AetherUtils.Core.Structs.ReadOnlyPair`2.Value
   name: Value
   href: api/AetherUtils.Core.Structs.ReadOnlyPair-2.html#AetherUtils_Core_Structs_ReadOnlyPair_2_Value
   commentId: F:AetherUtils.Core.Structs.ReadOnlyPair`2.Value
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>.Value
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V).Value
-  nameWithType: ReadOnlyPair<K, V>.Value
-  nameWithType.vb: ReadOnlyPair(Of K, V).Value
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<TK, TV>.Value
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of TK, TV).Value
+  nameWithType: ReadOnlyPair<TK, TV>.Value
+  nameWithType.vb: ReadOnlyPair(Of TK, TV).Value
 - uid: AetherUtils.Core.Structs.TrimmedString
   name: TrimmedString
   href: api/AetherUtils.Core.Structs.TrimmedString.html
@@ -4633,13 +4633,27 @@ references:
 - uid: AetherUtils.Core.Structs.TrimmedString.Lines
   name: Lines
   href: api/AetherUtils.Core.Structs.TrimmedString.html#AetherUtils_Core_Structs_TrimmedString_Lines
-  commentId: F:AetherUtils.Core.Structs.TrimmedString.Lines
+  commentId: P:AetherUtils.Core.Structs.TrimmedString.Lines
+  fullName: AetherUtils.Core.Structs.TrimmedString.Lines
+  nameWithType: TrimmedString.Lines
+- uid: AetherUtils.Core.Structs.TrimmedString.Lines*
+  name: Lines
+  href: api/AetherUtils.Core.Structs.TrimmedString.html#AetherUtils_Core_Structs_TrimmedString_Lines_
+  commentId: Overload:AetherUtils.Core.Structs.TrimmedString.Lines
+  isSpec: "True"
   fullName: AetherUtils.Core.Structs.TrimmedString.Lines
   nameWithType: TrimmedString.Lines
 - uid: AetherUtils.Core.Structs.TrimmedString.String
   name: String
   href: api/AetherUtils.Core.Structs.TrimmedString.html#AetherUtils_Core_Structs_TrimmedString_String
-  commentId: F:AetherUtils.Core.Structs.TrimmedString.String
+  commentId: P:AetherUtils.Core.Structs.TrimmedString.String
+  fullName: AetherUtils.Core.Structs.TrimmedString.String
+  nameWithType: TrimmedString.String
+- uid: AetherUtils.Core.Structs.TrimmedString.String*
+  name: String
+  href: api/AetherUtils.Core.Structs.TrimmedString.html#AetherUtils_Core_Structs_TrimmedString_String_
+  commentId: Overload:AetherUtils.Core.Structs.TrimmedString.String
+  isSpec: "True"
   fullName: AetherUtils.Core.Structs.TrimmedString.String
   nameWithType: TrimmedString.String
 - uid: AetherUtils.Core.Utility

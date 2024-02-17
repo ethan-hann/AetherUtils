@@ -11,9 +11,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ReadOnlyPair<K, V>
-  nameWithType: ReadOnlyPair<K, V>
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>
+  name: ReadOnlyPair<TK, TV>
+  nameWithType: ReadOnlyPair<TK, TV>
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<TK, TV>
   type: Struct
   source:
     remote:
@@ -29,13 +29,13 @@ items:
   summary: Represents a generic key-value pair that is read-only; Once the pair is instantiated, the values cannot be changed.
   example: []
   syntax:
-    content: public readonly struct ReadOnlyPair<K, V>
+    content: public readonly struct ReadOnlyPair<TK, TV>
     typeParameters:
-    - id: K
+    - id: TK
       description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> for the key.
-    - id: V
+    - id: TV
       description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> for the value.
-    content.vb: Public Structure ReadOnlyPair(Of K, V)
+    content.vb: Public Structure ReadOnlyPair(Of TK, TV)
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
   - System.ValueType.GetHashCode
@@ -43,9 +43,9 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-  nameWithType.vb: ReadOnlyPair(Of K, V)
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V)
-  name.vb: ReadOnlyPair(Of K, V)
+  nameWithType.vb: ReadOnlyPair(Of TK, TV)
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of TK, TV)
+  name.vb: ReadOnlyPair(Of TK, TV)
 - uid: AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor(`0,`1)
   commentId: M:AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor(`0,`1)
   id: '#ctor(`0,`1)'
@@ -53,9 +53,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ReadOnlyPair(K?, V?)
-  nameWithType: ReadOnlyPair<K, V>.ReadOnlyPair(K?, V?)
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>.ReadOnlyPair(K?, V?)
+  name: ReadOnlyPair(TK?, TV?)
+  nameWithType: ReadOnlyPair<TK, TV>.ReadOnlyPair(TK?, TV?)
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<TK, TV>.ReadOnlyPair(TK?, TV?)
   type: Constructor
   source:
     remote:
@@ -71,17 +71,17 @@ items:
   summary: Represents a generic key-value pair that is read-only; Once the pair is instantiated, the values cannot be changed.
   example: []
   syntax:
-    content: public ReadOnlyPair(K? key, V? value)
+    content: public ReadOnlyPair(TK? key, TV? value)
     parameters:
     - id: key
-      type: '{K}'
+      type: '{TK}'
     - id: value
-      type: '{V}'
-    content.vb: Public Sub New(key As K, value As V)
+      type: '{TV}'
+    content.vb: Public Sub New(key As TK, value As TV)
   overload: AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor*
-  nameWithType.vb: ReadOnlyPair(Of K, V).New(K, V)
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V).New(K, V)
-  name.vb: New(K, V)
+  nameWithType.vb: ReadOnlyPair(Of TK, TV).New(TK, TV)
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of TK, TV).New(TK, TV)
+  name.vb: New(TK, TV)
 - uid: AetherUtils.Core.Structs.ReadOnlyPair`2.Key
   commentId: F:AetherUtils.Core.Structs.ReadOnlyPair`2.Key
   id: Key
@@ -90,8 +90,8 @@ items:
   - csharp
   - vb
   name: Key
-  nameWithType: ReadOnlyPair<K, V>.Key
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>.Key
+  nameWithType: ReadOnlyPair<TK, TV>.Key
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<TK, TV>.Key
   type: Field
   source:
     remote:
@@ -100,17 +100,19 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Key
     path: ../AetherUtils.Core/Structs/ReadOnlyPair.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
+  summary: The key component of this pair.
+  example: []
   syntax:
-    content: public readonly K? Key
+    content: public readonly TK? Key
     return:
-      type: '{K}'
-    content.vb: Public ReadOnly Key As K
-  nameWithType.vb: ReadOnlyPair(Of K, V).Key
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V).Key
+      type: '{TK}'
+    content.vb: Public ReadOnly Key As TK
+  nameWithType.vb: ReadOnlyPair(Of TK, TV).Key
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of TK, TV).Key
 - uid: AetherUtils.Core.Structs.ReadOnlyPair`2.Value
   commentId: F:AetherUtils.Core.Structs.ReadOnlyPair`2.Value
   id: Value
@@ -119,8 +121,8 @@ items:
   - csharp
   - vb
   name: Value
-  nameWithType: ReadOnlyPair<K, V>.Value
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>.Value
+  nameWithType: ReadOnlyPair<TK, TV>.Value
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<TK, TV>.Value
   type: Field
   source:
     remote:
@@ -129,17 +131,19 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Value
     path: ../AetherUtils.Core/Structs/ReadOnlyPair.cs
-    startLine: 10
+    startLine: 17
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
+  summary: The value component of this pair.
+  example: []
   syntax:
-    content: public readonly V? Value
+    content: public readonly TV? Value
     return:
-      type: '{V}'
-    content.vb: Public ReadOnly Value As V
-  nameWithType.vb: ReadOnlyPair(Of K, V).Value
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V).Value
+      type: '{TV}'
+    content.vb: Public ReadOnly Value As TV
+  nameWithType.vb: ReadOnlyPair(Of TK, TV).Value
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of TK, TV).Value
 references:
 - uid: System.Type
   commentId: T:System.Type
@@ -400,29 +404,29 @@ references:
   commentId: Overload:AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor
   href: AetherUtils.Core.Structs.ReadOnlyPair-2.html#AetherUtils_Core_Structs_ReadOnlyPair_2__ctor__0__1_
   name: ReadOnlyPair
-  nameWithType: ReadOnlyPair<K, V>.ReadOnlyPair
-  fullName: AetherUtils.Core.Structs.ReadOnlyPair<K, V>.ReadOnlyPair
-  nameWithType.vb: ReadOnlyPair(Of K, V).New
-  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of K, V).New
+  nameWithType: ReadOnlyPair<TK, TV>.ReadOnlyPair
+  fullName: AetherUtils.Core.Structs.ReadOnlyPair<TK, TV>.ReadOnlyPair
+  nameWithType.vb: ReadOnlyPair(Of TK, TV).New
+  fullName.vb: AetherUtils.Core.Structs.ReadOnlyPair(Of TK, TV).New
   name.vb: New
-- uid: '{K}'
-  commentId: '!:K'
-  definition: K
-  name: K
-  nameWithType: K
-  fullName: K
-- uid: '{V}'
-  commentId: '!:V'
-  definition: V
-  name: V
-  nameWithType: V
-  fullName: V
-- uid: K
-  name: K
-  nameWithType: K
-  fullName: K
-- uid: V
-  name: V
-  nameWithType: V
-  fullName: V
+- uid: '{TK}'
+  commentId: '!:TK'
+  definition: TK
+  name: TK
+  nameWithType: TK
+  fullName: TK
+- uid: '{TV}'
+  commentId: '!:TV'
+  definition: TV
+  name: TV
+  nameWithType: TV
+  fullName: TV
+- uid: TK
+  name: TK
+  nameWithType: TK
+  fullName: TK
+- uid: TV
+  name: TV
+  nameWithType: TV
+  fullName: TV
 shouldSkipMarkup: true

@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Struct ReadOnlyPair&lt;K, V&gt; | AetherUtils </title>
+      <title>Struct ReadOnlyPair&lt;TK, TV&gt; | AetherUtils </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Struct ReadOnlyPair&lt;K, V&gt; | AetherUtils ">
+      <meta name="title" content="Struct ReadOnlyPair&lt;TK, TV&gt; | AetherUtils ">
       <meta name="generator" content="docfx ">
   
       <link rel="shortcut icon" href="../images/favicon.png">
@@ -101,7 +101,7 @@
 
 
   <h1 id="AetherUtils_Core_Structs_ReadOnlyPair_2" data-uid="AetherUtils.Core.Structs.ReadOnlyPair`2" class="text-break">
-Struct ReadOnlyPair&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ReadOnlyPair.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Struct ReadOnlyPair&lt;TK, TV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ReadOnlyPair.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -113,16 +113,16 @@ Struct ReadOnlyPair&lt;K, V&gt;  <a class="header-action link-secondary" title="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct ReadOnlyPair&lt;K, V&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly struct ReadOnlyPair&lt;TK, TV&gt;</code></pre>
   </div>
 
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>K</code></dt>
+    <dt><code>TK</code></dt>
     <dd>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> for the key.</dd>
-    <dt><code>V</code></dt>
+    <dt><code>TV</code></dt>
     <dd>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> for the value.</dd>
   </dl>
 
@@ -164,7 +164,7 @@ Struct ReadOnlyPair&lt;K, V&gt;  <a class="header-action link-secondary" title="
   <a id="AetherUtils_Core_Structs_ReadOnlyPair_2__ctor_" data-uid="AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor*"></a>
 
   <h3 id="AetherUtils_Core_Structs_ReadOnlyPair_2__ctor__0__1_" data-uid="AetherUtils.Core.Structs.ReadOnlyPair`2.#ctor(`0,`1)">
-  ReadOnlyPair(K?, V?)
+  ReadOnlyPair(TK?, TV?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ReadOnlyPair.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -172,14 +172,14 @@ Struct ReadOnlyPair&lt;K, V&gt;  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ReadOnlyPair(K? key, V? value)</code></pre>
+    <pre><code class="lang-csharp hljs">public ReadOnlyPair(TK? key, TV? value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>key</code> <span class="xref">K</span></dt>
+    <dt><code>key</code> <span class="xref">TK</span></dt>
     <dd></dd>
-    <dt><code>value</code> <span class="xref">V</span></dt>
+    <dt><code>value</code> <span class="xref">TV</span></dt>
     <dd></dd>
   </dl>
 
@@ -201,14 +201,14 @@ Struct ReadOnlyPair&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h3 id="AetherUtils_Core_Structs_ReadOnlyPair_2_Key" data-uid="AetherUtils.Core.Structs.ReadOnlyPair`2.Key">
   Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ReadOnlyPair.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ReadOnlyPair.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">The key component of this pair.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly K? Key</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly TK? Key</code></pre>
   </div>
 
 
@@ -216,7 +216,7 @@ Struct ReadOnlyPair&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">K</span></dt>
+    <dt><span class="xref">TK</span></dt>
     <dd></dd>
   </dl>
 
@@ -231,14 +231,14 @@ Struct ReadOnlyPair&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h3 id="AetherUtils_Core_Structs_ReadOnlyPair_2_Value" data-uid="AetherUtils.Core.Structs.ReadOnlyPair`2.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ReadOnlyPair.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/ReadOnlyPair.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">The value component of this pair.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly V? Value</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly TV? Value</code></pre>
   </div>
 
 
@@ -246,7 +246,7 @@ Struct ReadOnlyPair&lt;K, V&gt;  <a class="header-action link-secondary" title="
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">V</span></dt>
+    <dt><span class="xref">TV</span></dt>
     <dd></dd>
   </dl>
 

@@ -7,7 +7,7 @@ namespace AetherUtils.Core.Structs
     /// Represents the options used for performing hashing functions. If unspecified at struct creation, 
     /// the <see cref="HashAlgorithm"/> defaults to <see cref="HashAlgorithmName.SHA384"/> 
     /// and the <see cref="Encoding"/> defaults to <see cref="HashEncoding.Base64"/>.
-    /// <para>Once created, this struct's options cannot be changed.</para>
+    /// <para>Once created, the properties cannot be changed.</para>
     /// </summary>
     public readonly struct HashOptions
     {
@@ -16,28 +16,28 @@ namespace AetherUtils.Core.Structs
         /// <summary>
         /// The length (in bytes) used for the salt when hashing.
         /// </summary>
-        public readonly int SaltLength { get; } = 16; //128 bits
+        public int SaltLength { get; } = 16; //128 bits
 
         /// <summary>
         /// The size (in bytes) of the hash key used when hashing.
         /// </summary>
-        public readonly int KeySize { get; } = 48; //384 bits since we are using SHA384 by default.
+        public int KeySize { get; } = 48; //384 bits since we are using SHA384 by default.
 
         /// <summary>
         /// The number of iterations to perform when hashing.
         /// <para>A random value between the minimum and maximum iterations is retrieved every time this property is called.</para>
         /// </summary>
-        public readonly int Iterations => new Random().Next(_iterationsSpan.Key, _iterationsSpan.Value);
+        public int Iterations => new Random().Next(_iterationsSpan.Key, _iterationsSpan.Value);
 
         /// <summary>
         /// The algorithm to use when hashing.
         /// </summary>
-        public readonly HashAlgorithmName HashAlgorithm { get; } = HashAlgorithmName.SHA384;
+        public HashAlgorithmName HashAlgorithm { get; } = HashAlgorithmName.SHA384;
 
         /// <summary>
         /// The encoding scheme to use when hashing.
         /// </summary>
-        public readonly HashEncoding Encoding { get; } = HashEncoding.Base64;
+        public HashEncoding Encoding { get; } = HashEncoding.Base64;
 
         public HashOptions(ReadOnlyPair<int, int> iterations) => _iterationsSpan = iterations;
 

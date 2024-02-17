@@ -46,8 +46,8 @@ items:
   summary: Provides methods to generate and validate two-factor authentication codes.
   example: []
   syntax:
-    content: public class TwoFactorAuth
-    content.vb: Public Class TwoFactorAuth
+    content: public sealed class TwoFactorAuth
+    content.vb: Public NotInheritable Class TwoFactorAuth
   inheritance:
   - System.Object
   inheritedMembers:
@@ -55,7 +55,6 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
-  - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
   extensionMethods:
@@ -116,10 +115,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 20
+    startLine: 23
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
+  summary: Create a new two factor authentication using the default <xref href="AetherUtils.Core.Security.TwoFactor.HashType" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: public TwoFactorAuth()
     content.vb: Public Sub New()
@@ -145,7 +146,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GenerateSetupInformation
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 28
+    startLine: 31
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -183,7 +184,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GeneratePinAtInterval
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 91
+    startLine: 94
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -230,7 +231,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GeneratePinAtInterval
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 101
+    startLine: 104
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -274,7 +275,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ValidateTwoFactorPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 144
+    startLine: 147
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -318,7 +319,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ValidateTwoFactorPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 155
+    startLine: 158
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -365,7 +366,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ValidateTwoFactorPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 164
+    startLine: 167
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -406,7 +407,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ValidateTwoFactorPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 174
+    startLine: 177
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -450,7 +451,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ValidateTwoFactorPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 185
+    startLine: 188
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -497,7 +498,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ValidateTwoFactorPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 195
+    startLine: 198
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -541,7 +542,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 205
+    startLine: 208
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -585,7 +586,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 216
+    startLine: 219
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -632,7 +633,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 225
+    startLine: 228
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -673,7 +674,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 235
+    startLine: 238
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -717,7 +718,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPins
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 244
+    startLine: 247
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -758,7 +759,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPins
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 254
+    startLine: 257
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -802,7 +803,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPins
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 262
+    startLine: 265
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -840,7 +841,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPins
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 271
+    startLine: 274
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -881,7 +882,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPins
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-    startLine: 287
+    startLine: 290
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
@@ -1085,30 +1086,6 @@ references:
     name: GetType
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
   - name: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)

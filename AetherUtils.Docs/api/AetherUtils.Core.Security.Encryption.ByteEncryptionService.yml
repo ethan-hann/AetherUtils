@@ -28,8 +28,8 @@ items:
   summary: Provides methods to encrypt and decrypt <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> arrays.
   example: []
   syntax:
-    content: 'public class ByteEncryptionService : EncryptionBase'
-    content.vb: Public Class ByteEncryptionService Inherits EncryptionBase
+    content: 'public sealed class ByteEncryptionService : EncryptionBase'
+    content.vb: Public NotInheritable Class ByteEncryptionService Inherits EncryptionBase
   inheritance:
   - System.Object
   - AetherUtils.Core.Security.Encryption.EncryptionBase
@@ -39,7 +39,6 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
-  - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
   extensionMethods:
@@ -65,24 +64,24 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: EncryptAsync
     path: ../AetherUtils.Core/Security/Encryption/ByteEncryptionService.cs
-    startLine: 9
+    startLine: 15
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Encryption
-  summary: Encrypt the <see></see><code class="paramref">input</code> using the specified passphrase.
+  summary: Encrypt the specified <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array with the specified passphrase.
   example: []
   syntax:
     content: public Task<byte[]> EncryptAsync(byte[] input, string passphrase)
     parameters:
     - id: input
       type: System.Byte[]
-      description: The data to encrypt.
+      description: The <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array to encrypt.
     - id: passphrase
       type: System.String
-      description: A passphrase used to derive the encryption key.
+      description: The passphrase used to derive the encryption key.
     return:
       type: System.Threading.Tasks.Task{System.Byte[]}
-      description: The <see></see> encrypted data.
+      description: The encrypted <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array.
     content.vb: Public Function EncryptAsync(input As Byte(), passphrase As String) As Task(Of Byte())
   overload: AetherUtils.Core.Security.Encryption.ByteEncryptionService.EncryptAsync*
   nameWithType.vb: ByteEncryptionService.EncryptAsync(Byte(), String)
@@ -106,24 +105,24 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DecryptAsync
     path: ../AetherUtils.Core/Security/Encryption/ByteEncryptionService.cs
-    startLine: 27
+    startLine: 39
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Encryption
-  summary: Decrypt the <see></see><code class="paramref">input</code> using the specified passphrase.
+  summary: Decrypt the specified <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array with the specified passphrase.
   example: []
   syntax:
     content: public Task<byte[]> DecryptAsync(byte[] input, string passphrase)
     parameters:
     - id: input
       type: System.Byte[]
-      description: The data to decrypt.
+      description: The encrypted <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array to decrypt.
     - id: passphrase
       type: System.String
       description: The passphrase used to derive the decryption key.
     return:
       type: System.Threading.Tasks.Task{System.Byte[]}
-      description: The <see></see> decrypted data.
+      description: The decrypted <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array.
     content.vb: Public Function DecryptAsync(input As Byte(), passphrase As String) As Task(Of Byte())
   overload: AetherUtils.Core.Security.Encryption.ByteEncryptionService.DecryptAsync*
   nameWithType.vb: ByteEncryptionService.DecryptAsync(Byte(), String)
@@ -351,30 +350,6 @@ references:
     name: GetType
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
   - name: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)

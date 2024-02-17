@@ -35,7 +35,7 @@ items:
     content: >-
       [Serializable]
 
-      public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, IDictionary<TKey, TValue>, ICollection<KeyValuePair<TKey, TValue>>, IReadOnlyDictionary<TKey, TValue>, IReadOnlyCollection<KeyValuePair<TKey, TValue>>, IEnumerable<KeyValuePair<TKey, TValue>>, IDictionary, ICollection, IEnumerable, IDeserializationCallback, ISerializable, IXmlSerializable where TKey : notnull where TValue : notnull
+      public sealed class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, IDictionary<TKey, TValue>, ICollection<KeyValuePair<TKey, TValue>>, IReadOnlyDictionary<TKey, TValue>, IReadOnlyCollection<KeyValuePair<TKey, TValue>>, IEnumerable<KeyValuePair<TKey, TValue>>, IDictionary, ICollection, IEnumerable, IDeserializationCallback, ISerializable, IXmlSerializable where TKey : notnull where TValue : notnull
     typeParameters:
     - id: TKey
       description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> for the keys in this dictionary.
@@ -44,7 +44,7 @@ items:
     content.vb: >-
       <Serializable>
 
-      Public Class SerializableDictionary(Of TKey, TValue) Inherits Dictionary(Of TKey, TValue) Implements IDictionary(Of TKey, TValue), ICollection(Of KeyValuePair(Of TKey, TValue)), IReadOnlyDictionary(Of TKey, TValue), IReadOnlyCollection(Of KeyValuePair(Of TKey, TValue)), IEnumerable(Of KeyValuePair(Of TKey, TValue)), IDictionary, ICollection, IEnumerable, IDeserializationCallback, ISerializable, IXmlSerializable
+      Public NotInheritable Class SerializableDictionary(Of TKey, TValue) Inherits Dictionary(Of TKey, TValue) Implements IDictionary(Of TKey, TValue), ICollection(Of KeyValuePair(Of TKey, TValue)), IReadOnlyDictionary(Of TKey, TValue), IReadOnlyCollection(Of KeyValuePair(Of TKey, TValue)), IEnumerable(Of KeyValuePair(Of TKey, TValue)), IDictionary, ICollection, IEnumerable, IDeserializationCallback, ISerializable, IXmlSerializable
   inheritance:
   - System.Object
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}
@@ -83,7 +83,6 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
-  - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
   extensionMethods:
@@ -117,7 +116,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetSchema
     path: ../AetherUtils.Core/Utility/SerializableDictionary.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Utility
@@ -150,7 +149,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ReadXml
     path: ../AetherUtils.Core/Utility/SerializableDictionary.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Utility
@@ -186,7 +185,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: WriteXml
     path: ../AetherUtils.Core/Utility/SerializableDictionary.cs
-    startLine: 56
+    startLine: 57
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Utility
@@ -1159,30 +1158,6 @@ references:
     name: GetType
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
   - name: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)

@@ -23,19 +23,21 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Feature
     path: ../AetherUtils.Core/Licensing/Models/Feature.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: Represents a single feature for an application.
+  example: []
   syntax:
     content: >-
       [Serializable]
 
-      public class Feature
+      public sealed class Feature
     content.vb: >-
       <Serializable>
 
-      Public Class Feature
+      Public NotInheritable Class Feature
   inheritance:
   - System.Object
   inheritedMembers:
@@ -43,7 +45,6 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
-  - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
   extensionMethods:
@@ -73,10 +74,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Name
     path: ../AetherUtils.Core/Licensing/Models/Feature.cs
-    startLine: 9
+    startLine: 15
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: The feature name.
+  example: []
   syntax:
     content: >-
       [Browsable(true)]
@@ -114,10 +117,15 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Text
     path: ../AetherUtils.Core/Licensing/Models/Feature.cs
-    startLine: 14
+    startLine: 24
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: >-
+    The text associated with this feature.
+
+    This can be a description of the feature or what aspects of the application are enabled with this feature.
+  example: []
   syntax:
     content: >-
       [Browsable(true)]
@@ -155,10 +163,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Licensing/Models/Feature.cs
-    startLine: 19
+    startLine: 32
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: Create a new, default feature.
+  example: []
   syntax:
     content: public Feature()
     content.vb: Public Sub New()
@@ -184,17 +194,21 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Licensing/Models/Feature.cs
-    startLine: 21
+    startLine: 39
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Licensing.Models
+  summary: Create a new feature with the specified name and text.
+  example: []
   syntax:
     content: public Feature(string name, string text)
     parameters:
     - id: name
       type: System.String
+      description: The name of the feature.
     - id: text
       type: System.String
+      description: The text associated with this feature.
     content.vb: Public Sub New(name As String, text As String)
   overload: AetherUtils.Core.Licensing.Models.Feature.#ctor*
   nameWithType.vb: Feature.New(String, String)
@@ -374,30 +388,6 @@ references:
     name: GetType
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
   - name: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)

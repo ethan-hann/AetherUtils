@@ -29,9 +29,9 @@ items:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Logging
   summary: >-
-    Provides static methods to facilitate logging to a file as well as to the console for an application.
+    Provides static methods to facilitate logging to a file as well as to the console for an application.<br />
 
-    Uses <xref href="NLog" data-throw-if-not-resolved="false"></xref> internally.
+    This class is a wrapper around <a href="https://nlog-project.org/">NLog</a>.
   example: []
   syntax:
     content: public static class CLogger
@@ -64,16 +64,18 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: IsInitialized
     path: ../AetherUtils.Core/Logging/CLogger.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Logging
+  summary: Get a value indicating if the logger has been initialized.
+  example: []
   syntax:
     content: public static bool IsInitialized { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Shared ReadOnly Property IsInitialized As Boolean
+    content.vb: Public Shared Property IsInitialized As Boolean
   overload: AetherUtils.Core.Logging.CLogger.IsInitialized*
 - uid: AetherUtils.Core.Logging.CLogger.Initialize(AetherUtils.Core.Configuration.LogOptions)
   commentId: M:AetherUtils.Core.Logging.CLogger.Initialize(AetherUtils.Core.Configuration.LogOptions)
@@ -93,7 +95,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Initialize
     path: ../AetherUtils.Core/Logging/CLogger.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Logging
@@ -128,7 +130,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentLogger
     path: ../AetherUtils.Core/Logging/CLogger.cs
-    startLine: 91
+    startLine: 92
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Logging
@@ -165,7 +167,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentLogger
     path: ../AetherUtils.Core/Logging/CLogger.cs
-    startLine: 103
+    startLine: 104
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Logging
@@ -206,7 +208,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentLogger
     path: ../AetherUtils.Core/Logging/CLogger.cs
-    startLine: 114
+    startLine: 115
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Logging
@@ -227,12 +229,6 @@ items:
   fullName.vb: AetherUtils.Core.Logging.CLogger.GetCurrentLogger(String)
   name.vb: GetCurrentLogger(String)
 references:
-- uid: NLog
-  commentId: N:NLog
-  isExternal: true
-  name: NLog
-  nameWithType: NLog
-  fullName: NLog
 - uid: AetherUtils.Core.Logging
   commentId: N:AetherUtils.Core.Logging
   href: AetherUtils.html
@@ -597,6 +593,12 @@ references:
   name: GetCurrentLogger
   nameWithType: CLogger.GetCurrentLogger
   fullName: AetherUtils.Core.Logging.CLogger.GetCurrentLogger
+- uid: NLog
+  commentId: N:NLog
+  isExternal: true
+  name: NLog
+  nameWithType: NLog
+  fullName: NLog
 - uid: System.String
   commentId: T:System.String
   parent: System

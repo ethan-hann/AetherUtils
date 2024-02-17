@@ -22,11 +22,14 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: TrimmedString
     path: ../AetherUtils.Core/Structs/TrimmedString.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
-  summary: Represents a string that has new line characters (\n) inserted and has been formatted to be a specific length.
+  summary: >-
+    Represents a string that has new line characters (\n) inserted and has been formatted to be a specific length.
+
+    <p>This struct contains the string and the number of new line characters added.</p>
   example: []
   syntax:
     content: public readonly struct TrimmedString
@@ -39,7 +42,7 @@ items:
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
 - uid: AetherUtils.Core.Structs.TrimmedString.String
-  commentId: F:AetherUtils.Core.Structs.TrimmedString.String
+  commentId: P:AetherUtils.Core.Structs.TrimmedString.String
   id: String
   parent: AetherUtils.Core.Structs.TrimmedString
   langs:
@@ -48,7 +51,7 @@ items:
   name: String
   nameWithType: TrimmedString.String
   fullName: AetherUtils.Core.Structs.TrimmedString.String
-  type: Field
+  type: Property
   source:
     remote:
       path: AetherUtils.Core/Structs/TrimmedString.cs
@@ -56,19 +59,21 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: String
     path: ../AetherUtils.Core/Structs/TrimmedString.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
   summary: The trimmed string.
   example: []
   syntax:
-    content: public readonly string String
+    content: public string String { get; }
+    parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly [String] As String
+    content.vb: Public ReadOnly Property [String] As String
+  overload: AetherUtils.Core.Structs.TrimmedString.String*
 - uid: AetherUtils.Core.Structs.TrimmedString.Lines
-  commentId: F:AetherUtils.Core.Structs.TrimmedString.Lines
+  commentId: P:AetherUtils.Core.Structs.TrimmedString.Lines
   id: Lines
   parent: AetherUtils.Core.Structs.TrimmedString
   langs:
@@ -77,7 +82,7 @@ items:
   name: Lines
   nameWithType: TrimmedString.Lines
   fullName: AetherUtils.Core.Structs.TrimmedString.Lines
-  type: Field
+  type: Property
   source:
     remote:
       path: AetherUtils.Core/Structs/TrimmedString.cs
@@ -85,17 +90,19 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Lines
     path: ../AetherUtils.Core/Structs/TrimmedString.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
   summary: The number of new line characters (\n) in the string.
   example: []
   syntax:
-    content: public readonly int Lines
+    content: public int Lines { get; }
+    parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Lines As Integer
+    content.vb: Public ReadOnly Property Lines As Integer
+  overload: AetherUtils.Core.Structs.TrimmedString.Lines*
 - uid: AetherUtils.Core.Structs.TrimmedString.#ctor(System.String)
   commentId: M:AetherUtils.Core.Structs.TrimmedString.#ctor(System.String)
   id: '#ctor(System.String)'
@@ -114,7 +121,7 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/TrimmedString.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -379,6 +386,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: AetherUtils.Core.Structs.TrimmedString.String*
+  commentId: Overload:AetherUtils.Core.Structs.TrimmedString.String
+  href: AetherUtils.Core.Structs.TrimmedString.html#AetherUtils_Core_Structs_TrimmedString_String
+  name: String
+  nameWithType: TrimmedString.String
+  fullName: AetherUtils.Core.Structs.TrimmedString.String
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -390,6 +403,12 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: AetherUtils.Core.Structs.TrimmedString.Lines*
+  commentId: Overload:AetherUtils.Core.Structs.TrimmedString.Lines
+  href: AetherUtils.Core.Structs.TrimmedString.html#AetherUtils_Core_Structs_TrimmedString_Lines
+  name: Lines
+  nameWithType: TrimmedString.Lines
+  fullName: AetherUtils.Core.Structs.TrimmedString.Lines
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System

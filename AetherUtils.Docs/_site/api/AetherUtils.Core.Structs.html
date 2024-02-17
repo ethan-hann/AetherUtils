@@ -110,13 +110,14 @@ Structs
       <section>Represents the options used for performing hashing functions. If unspecified at struct creation, 
 the <a class="xref" href="AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_HashAlgorithm">HashAlgorithm</a> defaults to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.cryptography.hashalgorithmname.sha384">SHA384</a> 
 and the <a class="xref" href="AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_Encoding">Encoding</a> defaults to <a class="xref" href="AetherUtils.Core.Security.Hashing.HashEncoding.html#AetherUtils_Core_Security_Hashing_HashEncoding_Base64">Base64</a>.
-<p>Once created, this struct's options cannot be changed.</p></section>
-      <h5><a class="xref" href="AetherUtils.Core.Structs.Pair-2.html">Pair&lt;K, V&gt;</a></h5>
+<p>Once created, the properties cannot be changed.</p></section>
+      <h5><a class="xref" href="AetherUtils.Core.Structs.Pair-2.html">Pair&lt;TK, TV&gt;</a></h5>
       <section>Represents a generic key-value pair.</section>
-      <h5><a class="xref" href="AetherUtils.Core.Structs.ReadOnlyPair-2.html">ReadOnlyPair&lt;K, V&gt;</a></h5>
+      <h5><a class="xref" href="AetherUtils.Core.Structs.ReadOnlyPair-2.html">ReadOnlyPair&lt;TK, TV&gt;</a></h5>
       <section>Represents a generic key-value pair that is read-only; Once the pair is instantiated, the values cannot be changed.</section>
       <h5><a class="xref" href="AetherUtils.Core.Structs.TrimmedString.html">TrimmedString</a></h5>
-      <section>Represents a string that has new line characters (\n) inserted and has been formatted to be a specific length.</section>
+      <section>Represents a string that has new line characters (\n) inserted and has been formatted to be a specific length.
+<p>This struct contains the string and the number of new line characters added.</p></section>
 
 
 </article>

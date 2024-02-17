@@ -84,7 +84,8 @@ namespace AetherUtils.Core.Reflection
             return null;
         }
 
-        //SEE: https://stackoverflow.com/questions/53029972/recursively-get-properties-marked-with-an-attribute
+        //Implemented based on:
+        //https://stackoverflow.com/questions/53029972/recursively-get-properties-marked-with-an-attribute
         /// <summary>
         /// Retrieve all of the <see cref="Type"/>, <see cref="PropertyInfo"/>, <see cref="Attribute"/>, and <see cref="object"/>s 
         /// related to the custom attribute <typeparamref name="T"/> specified, recursively.

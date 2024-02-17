@@ -101,7 +101,7 @@
 
 
   <h1 id="AetherUtils_Core_Licensing_Models_License" data-uid="AetherUtils.Core.Licensing.Models.License" class="text-break">
-Class License  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class License  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -109,7 +109,7 @@ Class License  <a class="header-action link-secondary" title="View source" href=
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary">Represents a license for an application.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -286,10 +286,10 @@ public sealed class License : ExpandableObjectConverter</code></pre>
 
   <h3 id="AetherUtils_Core_Licensing_Models_License_Customer" data-uid="AetherUtils.Core.Licensing.Models.License.Customer">
   Customer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">The <a class="xref" href="AetherUtils.Core.Licensing.Models.License.html#AetherUtils_Core_Licensing_Models_License_Customer">Customer</a> associated with this license.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -318,10 +318,11 @@ public Customer Customer { get; set; }</code></pre>
 
   <h3 id="AetherUtils_Core_Licensing_Models_License_Expiration" data-uid="AetherUtils.Core.Licensing.Models.License.Expiration">
   Expiration
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">The date that this license should expire at;
+has no effect if <a class="xref" href="AetherUtils.Core.Licensing.Models.License.html#AetherUtils_Core_Licensing_Models_License_Type">Type</a> is <span class="xref">Standard.Licensing.LicenseType.Trial</span>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -350,10 +351,10 @@ public DateTime Expiration { get; set; }</code></pre>
 
   <h3 id="AetherUtils_Core_Licensing_Models_License_Id" data-uid="AetherUtils.Core.Licensing.Models.License.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">The unique ID of this license.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -382,10 +383,10 @@ public string Id { get; set; }</code></pre>
 
   <h3 id="AetherUtils_Core_Licensing_Models_License_ProductFeatures" data-uid="AetherUtils.Core.Licensing.Models.License.ProductFeatures">
   ProductFeatures
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> of <a class="xref" href="AetherUtils.Core.Licensing.Models.Feature.html">Feature</a>s for that are enabled with this license.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -414,10 +415,10 @@ public List&lt;Feature&gt; ProductFeatures { get; set; }</code></pre>
 
   <h3 id="AetherUtils_Core_Licensing_Models_License_Quantity" data-uid="AetherUtils.Core.Licensing.Models.License.Quantity">
   Quantity
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">The number of uses allowed for this license.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -446,10 +447,10 @@ public int Quantity { get; set; }</code></pre>
 
   <h3 id="AetherUtils_Core_Licensing_Models_License_Signature" data-uid="AetherUtils.Core.Licensing.Models.License.Signature">
   Signature
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">The signature for this license. Auto-generated when signed with a private key.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -478,10 +479,10 @@ public string Signature { get; set; }</code></pre>
 
   <h3 id="AetherUtils_Core_Licensing_Models_License_Type" data-uid="AetherUtils.Core.Licensing.Models.License.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">The <span class="xref">Standard.Licensing.LicenseType</span> for this license.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -514,10 +515,10 @@ public LicenseType Type { get; set; }</code></pre>
 
   <h3 id="AetherUtils_Core_Licensing_Models_License_ToString" data-uid="AetherUtils.Core.Licensing.Models.License.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/License.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary">Get a string that represents this license object:<br>
+  <div class="markdown level1 summary">Get a string that represents this license:<br>
 ID: <br>
 Type: <br>
 Expiration: <br>

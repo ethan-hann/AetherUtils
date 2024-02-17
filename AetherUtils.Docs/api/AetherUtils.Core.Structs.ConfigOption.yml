@@ -62,10 +62,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Name
     path: ../AetherUtils.Core/Structs/ConfigOption.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
+  summary: The name of the configuration option.
+  example: []
   syntax:
     content: public string Name { get; }
     parameters: []
@@ -91,10 +93,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ArrayIndexer
     path: ../AetherUtils.Core/Structs/ConfigOption.cs
-    startLine: 12
+    startLine: 19
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
+  summary: The array index for the option, if <xref href="AetherUtils.Core.Structs.ConfigOption.Name" data-throw-if-not-resolved="false"></xref> references a list.
+  example: []
   syntax:
     content: public int ArrayIndexer { get; }
     parameters: []
@@ -120,10 +124,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Value
     path: ../AetherUtils.Core/Structs/ConfigOption.cs
-    startLine: 13
+    startLine: 24
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
+  summary: The value for the configuration option specified by <xref href="AetherUtils.Core.Structs.ConfigOption.Name" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: public object? Value { get; }
     parameters: []
@@ -149,10 +155,12 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ArrayIndexExists
     path: ../AetherUtils.Core/Structs/ConfigOption.cs
-    startLine: 14
+    startLine: 29
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
+  summary: Get a value indicating if this configuration option contains an array indexer.
+  example: []
   syntax:
     content: public bool ArrayIndexExists { get; }
     parameters: []
@@ -178,18 +186,22 @@ items:
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/ConfigOption.cs
-    startLine: 16
+    startLine: 36
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
+  summary: Create a new configuration option with the specified
+  example: []
   syntax:
-    content: public ConfigOption(string option, object? value)
+    content: public ConfigOption(string optionName, object? value)
     parameters:
-    - id: option
+    - id: optionName
       type: System.String
+      description: The name of the option.
     - id: value
       type: System.Object
-    content.vb: Public Sub New([option] As String, value As Object)
+      description: The value for the option.
+    content.vb: Public Sub New(optionName As String, value As Object)
   overload: AetherUtils.Core.Structs.ConfigOption.#ctor*
   nameWithType.vb: ConfigOption.New(String, Object)
   fullName.vb: AetherUtils.Core.Structs.ConfigOption.New(String, Object)
@@ -459,6 +471,12 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: AetherUtils.Core.Structs.ConfigOption.Name
+  commentId: P:AetherUtils.Core.Structs.ConfigOption.Name
+  href: AetherUtils.Core.Structs.ConfigOption.html#AetherUtils_Core_Structs_ConfigOption_Name
+  name: Name
+  nameWithType: ConfigOption.Name
+  fullName: AetherUtils.Core.Structs.ConfigOption.Name
 - uid: AetherUtils.Core.Structs.ConfigOption.ArrayIndexer*
   commentId: Overload:AetherUtils.Core.Structs.ConfigOption.ArrayIndexer
   href: AetherUtils.Core.Structs.ConfigOption.html#AetherUtils_Core_Structs_ConfigOption_ArrayIndexer

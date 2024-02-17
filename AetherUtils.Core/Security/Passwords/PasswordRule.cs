@@ -161,16 +161,8 @@ public sealed class PasswordRule
     {
         CompileRules();
 
-        if (!PasswordRules.Equals(string.Empty))
-        {
-            _isBuilding = false;
-            _isBuilt = true;
-        }
-        else
-        {
-            _isBuilding = true;
-            _isBuilt = false;
-        }
+        _isBuilding = PasswordRules.Equals(string.Empty);
+        _isBuilt = !_isBuilding;
     }
 
     private void CompileRules() => PasswordRules = ToJsonString();
@@ -275,6 +267,7 @@ public sealed class PasswordRule
         var specialCount = 0;
         var numberCount = 0;
         
+        //Continue looping until we've reached the required minimum password length.
         while (currentCount != minLength)
         {
             //First, get a random character type
@@ -327,6 +320,10 @@ public sealed class PasswordRule
         characterTypes = characterTypes.Except(disallowedTypes).ToList();
 
         ProportionalRandomSelector<CharacterType> selector = new();
+        
+        //We can't just add all of the percentages since we don't know ahead of time which types of characters are
+        //allowed in the password. So, we have to loop through our derived list and only add the percentages that
+        //are allowed.
         foreach (var type in characterTypes)
         {
             switch (type)
@@ -352,8 +349,8 @@ public sealed class PasswordRule
     /// <summary>
     /// Add a whitespace character to the random password, if allowed.
     /// </summary>
-    /// <param name="builder"></param>
-    /// <param name="currentCount"></param>
+    /// <param name="builder">The current <see cref="StringBuilder"/> reference.</param>
+    /// <param name="currentCount">The current loop count reference.</param>
     private void AddWhiteSpace(ref StringBuilder builder, ref int currentCount)
     {
         //if whitespace is not allowed in the rule
@@ -429,17 +426,18 @@ public sealed class PasswordRule
         //Try to add a number first.
         if (AddNumber(ref builder, ref currentCount, ref numberCount)) return;
 
+        //Finally, add a character if we've met the required number of both specials and digits.
+        builder.Append(PasswordValidator.RegularChars[RandomNumberGenerator.GetInt32(
+            PasswordValidator.RegularChars.Length)]);
+        
         //Then try to add a special character.
         if (AddSpecial(ref builder, ref currentCount, ref specialCount)) return;
         
-        //Finally, add a character if we've met the required number of both specials and digits.
-        builder.Append(PasswordValidator.RegularChars[RandomNumberGenerator.GetInt32(
-                                                      PasswordValidator.RegularChars.Length)]);
         currentCount++;
     }
 
     /// <summary>
-    /// Validate a password against the password rule.
+    /// Validate a password against this rule.
     /// </summary>
     /// <param name="password">The password to validate.</param>
     /// <returns>A list of <see cref="IPasswordValidationFailure"/> containing the reasons the

@@ -5,7 +5,7 @@
 /// </summary>
 /// <param name="message">The message associated with the failure.</param>
 /// <param name="howToResolve">Indicates how to fix the failure.</param>
-public class ValidationFailure(string message, string howToResolve) : IPasswordValidationFailure
+public sealed class ValidationFailure(string message, string howToResolve) : IPasswordValidationFailure
 {
     public string Message { get; set; } = message;
     public string HowToResolve { get; set; } = howToResolve;

@@ -101,7 +101,7 @@
 
 
   <h1 id="AetherUtils_Core_Licensing_Models_Feature" data-uid="AetherUtils.Core.Licensing.Models.Feature" class="text-break">
-Class Feature  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/Feature.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class Feature  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/Feature.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -109,12 +109,12 @@ Class Feature  <a class="header-action link-secondary" title="View source" href=
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary">Represents a single feature for an application.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class Feature</code></pre>
+public sealed class Feature</code></pre>
   </div>
 
 
@@ -144,9 +144,6 @@ public class Feature</code></pre>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
@@ -185,10 +182,10 @@ public class Feature</code></pre>
 
   <h3 id="AetherUtils_Core_Licensing_Models_Feature__ctor" data-uid="AetherUtils.Core.Licensing.Models.Feature.#ctor">
   Feature()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/Feature.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/Feature.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">Create a new, default feature.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -211,10 +208,10 @@ public class Feature</code></pre>
 
   <h3 id="AetherUtils_Core_Licensing_Models_Feature__ctor_System_String_System_String_" data-uid="AetherUtils.Core.Licensing.Models.Feature.#ctor(System.String,System.String)">
   Feature(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/Feature.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/Feature.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">Create a new feature with the specified name and text.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -224,9 +221,9 @@ public class Feature</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>The name of the feature.</dd>
     <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>The text associated with this feature.</dd>
   </dl>
 
 
@@ -248,10 +245,10 @@ public class Feature</code></pre>
 
   <h3 id="AetherUtils_Core_Licensing_Models_Feature_Name" data-uid="AetherUtils.Core.Licensing.Models.Feature.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/Feature.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/Feature.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">The feature name.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -280,10 +277,11 @@ public string Name { get; set; }</code></pre>
 
   <h3 id="AetherUtils_Core_Licensing_Models_Feature_Text" data-uid="AetherUtils.Core.Licensing.Models.Feature.Text">
   Text
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/Feature.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Licensing/Models/Feature.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">The text associated with this feature.
+This can be a description of the feature or what aspects of the application are enabled with this feature.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">

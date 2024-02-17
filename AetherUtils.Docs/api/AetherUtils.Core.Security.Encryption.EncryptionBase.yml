@@ -25,9 +25,9 @@ items:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Encryption
   summary: >-
-    Represents the base class for all encryption service classes. All encryption is performed using AES-256
+    Represents the base class for all encryption service classes. All encryption is performed using the AES-256
 
-    and encoded with <xref href="System.Text.Encoding.UTF8" data-throw-if-not-resolved="false"></xref>.
+    algorithm and encoded according to <xref href="System.Text.Encoding.UTF8" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public class EncryptionBase

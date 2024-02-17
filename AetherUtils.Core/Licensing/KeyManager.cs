@@ -20,7 +20,7 @@ namespace AetherUtils.Core.Licensing
             var json = JsonConvert.SerializeObject(keys);
             try
             {
-                string fullPath = Path.Combine(basePath, fileName);
+                var fullPath = Path.Combine(basePath, fileName);
                 fullPath = FileHelper.ExpandPath(fullPath);
                 FileHelper.CreateDirectories(fullPath);
 
@@ -37,11 +37,11 @@ namespace AetherUtils.Core.Licensing
         /// <param name="fileName">The name of the file to save: default is <c>public.key</c></param>
         public static void SavePublicKey(KeyPair keys, string basePath, string fileName = "public.key")
         {
-            string publicKey = keys.PublicKey;
+            var publicKey = keys.PublicKey;
             var json = JsonConvert.SerializeObject(publicKey);
             try
             {
-                string fullPath = Path.Combine(basePath, fileName);
+                var fullPath = Path.Combine(basePath, fileName);
                 fullPath = FileHelper.ExpandPath(fullPath);
                 FileHelper.CreateDirectories(fullPath);
 
@@ -61,7 +61,7 @@ namespace AetherUtils.Core.Licensing
             var json = JsonConvert.SerializeObject(publicKey);
             try
             {
-                string fullPath = Path.Combine(basePath, fileName);
+                var fullPath = Path.Combine(basePath, fileName);
                 fullPath = FileHelper.ExpandPath(fullPath);
                 FileHelper.CreateDirectories(fullPath);
 
@@ -74,19 +74,12 @@ namespace AetherUtils.Core.Licensing
         /// Load a key pair from a file.
         /// </summary>
         /// <param name="basePath">The base folder the keys are located in.</param>
-        /// <param name="fileName">The name of the file to load: default is <c>keyPair.keys</c></param>
+        /// <param name="fileName">The name of the file to load.</param>
         /// <returns>A <see cref="KeyPair"/> representing the key values.</returns>
-        public static KeyPair? LoadKeys(string basePath, string fileName = "keyPair.keys")
+        public static KeyPair? LoadKeys(string basePath, string fileName)
         {
-            string fullPath = Path.Combine(basePath, fileName);
-            fullPath = FileHelper.ExpandPath(fullPath);
-            try
-            {
-                string text = File.ReadAllText(fullPath);
-                return JsonConvert.DeserializeObject<KeyPair>(text);
-            }
-            catch (Exception ex) { Debug.WriteLine(ex); }
-            return null;
+            var fullPath = Path.Combine(basePath, fileName);
+            return LoadKeys(fullPath);
         }
 
         /// <summary>
@@ -99,7 +92,7 @@ namespace AetherUtils.Core.Licensing
             fullPath = FileHelper.ExpandPath(fullPath);
             try
             {
-                string text = File.ReadAllText(fullPath);
+                var text = File.ReadAllText(fullPath);
                 return JsonConvert.DeserializeObject<KeyPair>(text);
             }
             catch (Exception ex) { Debug.WriteLine(ex); }
@@ -114,7 +107,7 @@ namespace AetherUtils.Core.Licensing
         /// <returns><c>true</c> if the file was found; <c>false</c>, otherwise.</returns>
         public static bool DoesKeyFileExist(string basePath, string fileName = "keyPair.keys")
         {
-            string fullPath = Path.Combine(basePath, fileName);
+            var fullPath = Path.Combine(basePath, fileName);
             return FileHelper.DoesFileExist(fullPath);
         }
     }
