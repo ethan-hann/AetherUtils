@@ -26,7 +26,7 @@ public interface IPasswordRuleBuilder : IFluentInterface
     IPasswordRuleBuilder AllowNumbers();
 
     /// <summary>
-    /// Set the minimum length this password should be.
+    /// Set the minimum length a password should be.
     /// </summary>
     /// <returns>The builder instance.</returns>
     IPasswordRuleBuilder MinimumLength(int length);

@@ -1,16 +1,12 @@
-﻿using System.Data;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
 using AetherUtils.Core.Enums;
 using AetherUtils.Core.Exceptions;
-using AetherUtils.Core.Extensions;
 using AetherUtils.Core.Files;
 using AetherUtils.Core.Security.Encryption;
-using AetherUtils.Core.Security.Hashing;
 using AetherUtils.Core.Security.Passwords.Validation;
 using AetherUtils.Core.Utility;
-using Random = System.Random;
 
 namespace AetherUtils.Core.Security.Passwords;
 
@@ -186,7 +182,7 @@ public sealed class PasswordRule
     /// </summary>
     /// <param name="json">The password rule as Json to parse.</param>
     /// <returns>The <see cref="PasswordRule"/> or <c>null</c> if parsing failed.</returns>
-    public static PasswordRule? Parse(string json) => new(json);
+    public static PasswordRule Parse(string json) => new(json);
 
     /// <summary>
     /// Get an encrypted string representing this password rule.
@@ -206,12 +202,12 @@ public sealed class PasswordRule
     /// <param name="encrypted">The encrypted password rule to parse.</param>
     /// <param name="passphrase">The passphrase used for decryption.</param>
     /// <returns>The <see cref="PasswordRule"/> or <c>null</c> if parsing failed.</returns>
-    public static PasswordRule? FromEncryptedString(string encrypted, string passphrase)
+    public static PasswordRule FromEncryptedString(string encrypted, string passphrase)
     {
         var bytes = Convert.FromBase64String(encrypted);
         var decrypted = Encryptor.DecryptAsync(bytes, passphrase);
         var rule = Parse(decrypted.Result);
-        return rule ?? null;
+        return rule;
     }
     
     /// <summary>
@@ -256,7 +252,7 @@ public sealed class PasswordRule
     /// Get a random, cryptographically strong password that follows the password rule.
     /// </summary>
     /// <returns>A new, random password that adheres to the password rule created.</returns>
-    public string GetValidPassword(Random rng)
+    public string GetValidPassword()
     {
         var sb = new StringBuilder();
         
@@ -282,7 +278,7 @@ public sealed class PasswordRule
         while (currentCount != minLength)
         {
             //First, get a random character type
-            var c = selector.SelectItem(rng);
+            var c = selector.SelectItem();
 
             //Then, switch on the type and add appropriate character to the string, increasing counts along the way.
             switch (c)
@@ -364,7 +360,8 @@ public sealed class PasswordRule
         if (!RuleData.WhitespaceAllowed) return;
         
         //Finally add a whitespace character if these fail
-        builder.Append(PasswordValidator.WhiteSpaceChars[0]);
+        builder.Append(PasswordValidator.WhiteSpaceChars[RandomNumberGenerator.GetInt32(
+                                                         PasswordValidator.WhiteSpaceChars.Length)]);
         currentCount++;
     }
 
@@ -387,7 +384,8 @@ public sealed class PasswordRule
         if (specialCount == numOfSpecialsAllowed) return false;
         
         //Otherwise, lets add a special character and increment our counts
-        builder.Append(PasswordValidator.SpecialChars[new Random().Next(0, PasswordValidator.SpecialChars.Length)]);
+        builder.Append(PasswordValidator.SpecialChars[RandomNumberGenerator.GetInt32(
+                                                      PasswordValidator.SpecialChars.Length)]);
         currentCount++;
         specialCount++;
         return true;
@@ -412,7 +410,8 @@ public sealed class PasswordRule
         if (numberCount == numOfNumbersAllowed) return false;
         
         //Otherwise, let's add a number character and increment our counts.
-        builder.Append(PasswordValidator.NumberChars[new Random().Next(0, PasswordValidator.NumberChars.Length)]);
+        builder.Append(PasswordValidator.NumberChars[RandomNumberGenerator.GetInt32(
+                                                     PasswordValidator.NumberChars.Length)]);
         currentCount++;
         numberCount++;
         return true;
@@ -434,7 +433,8 @@ public sealed class PasswordRule
         if (AddSpecial(ref builder, ref currentCount, ref specialCount)) return;
         
         //Finally, add a character if we've met the required number of both specials and digits.
-        builder.Append(PasswordValidator.RegularChars[new Random().Next(0, PasswordValidator.RegularChars.Length)]);
+        builder.Append(PasswordValidator.RegularChars[RandomNumberGenerator.GetInt32(
+                                                      PasswordValidator.RegularChars.Length)]);
         currentCount++;
     }
 

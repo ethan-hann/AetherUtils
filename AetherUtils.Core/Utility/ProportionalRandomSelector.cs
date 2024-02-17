@@ -1,7 +1,9 @@
-﻿namespace AetherUtils.Core.Utility;
+﻿using System.Security.Cryptography;
+
+namespace AetherUtils.Core.Utility;
 
 /// <summary>
-/// Represents a random item selector using proportional percentages.
+/// Represents a cryptographically strong, random item selector using proportional percentages.
 /// </summary>
 /// <typeparam name="T">The type of item to select using this selector.</typeparam>
 public sealed class ProportionalRandomSelector<T> where T : notnull
@@ -23,15 +25,14 @@ public sealed class ProportionalRandomSelector<T> where T : notnull
     /// <summary>
     /// Get a random item from the selector using the percentages defined within.
     /// </summary>
-    /// <param name="random">A random number generator.</param>
     /// <returns>A random item or <c>null</c> if an item could not be selected.</returns>
-    public T? SelectItem(Random random)
+    public T? SelectItem()
     {
         //Calculate the sum of all portions.
         var poolSize = _percentages.Values.Sum();
 
         //Get a random integer between 1 to pool size.
-        var randomNumber = random.Next(1, poolSize);
+        var randomNumber = RandomNumberGenerator.GetInt32(1, poolSize);
         
         //Get the item which corresponds to the current random number
         var accumulatedProbability = 0;

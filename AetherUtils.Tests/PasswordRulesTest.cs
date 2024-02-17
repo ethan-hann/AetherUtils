@@ -183,10 +183,9 @@ public class PasswordRulesTest
             .MinimumNumberCount(3).Build();
         Console.WriteLine(rule.PasswordRules);
         List<string> passwords = [];
-        var random = new Random();
         for (int i = 0; i < 100; i++)
         {
-            passwords.Add(rule.GetValidPassword(random));
+            passwords.Add(rule.GetValidPassword());
             Console.WriteLine(passwords[i]);
         }
         
@@ -196,14 +195,13 @@ public class PasswordRulesTest
     [Test]
     public void RandomPasswordsWithWhiteSpaceTest()
     {
-        var rule = PasswordRule.New().AllowSpecials().AllowNumbers().AllowWhitespace().MinimumSpecialCount(5)
+        PasswordRule rule = PasswordRule.New().AllowSpecials().AllowNumbers().AllowWhitespace().MinimumSpecialCount(5)
             .MinimumNumberCount(4).MinimumLength(15).Build();
         Console.WriteLine(rule.PasswordRules);
         List<string> passwords = [];
-        var random = new Random();
         for (int i = 0; i < 100; i++)
         {
-            passwords.Add(rule.GetValidPassword(random));
+            passwords.Add(rule.GetValidPassword());
             Console.WriteLine(passwords[i]);
         }
 
