@@ -27,12 +27,6 @@ internal class PasswordRuleBuilder : IPasswordRuleBuilder
         return this;
     }
 
-    public IPasswordRuleBuilder MinimumLetterCount(int count)
-    {
-        _rule.MinimumLetterCount(count);
-        return this;
-    }
-
     public IPasswordRuleBuilder MinimumNumberCount(int count)
     {
         _rule.MinimumNumberCount(count);

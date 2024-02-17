@@ -32,13 +32,6 @@ public interface IPasswordRuleBuilder : IFluentInterface
     IPasswordRuleBuilder MinimumLength(int length);
     
     /// <summary>
-    /// Set the minimum number of letters a password should contain.
-    /// </summary>
-    /// <param name="count">The minimum number of letters allowed.</param>
-    /// <returns>The builder instance.</returns>
-    IPasswordRuleBuilder MinimumLetterCount(int count);
-    
-    /// <summary>
     /// Set the minimum count of numbers a password should contain.
     /// </summary>
     /// <param name="count">The minimum number of digits allowed.</param>

@@ -1,10 +1,16 @@
-﻿using System.Text;
+﻿using System.Data;
+using System.Diagnostics;
+using System.Security.Cryptography;
+using System.Text;
+using AetherUtils.Core.Enums;
 using AetherUtils.Core.Exceptions;
 using AetherUtils.Core.Extensions;
 using AetherUtils.Core.Files;
 using AetherUtils.Core.Security.Encryption;
 using AetherUtils.Core.Security.Hashing;
 using AetherUtils.Core.Security.Passwords.Validation;
+using AetherUtils.Core.Utility;
+using Random = System.Random;
 
 namespace AetherUtils.Core.Security.Passwords;
 
@@ -101,22 +107,6 @@ public sealed class PasswordRule
             throw new PasswordRuleException("Password minimum length cannot be less than 0.");
         
         RuleData.MinimumLengthAllowed = length;
-    }
-
-    /// <summary>
-    /// Set the minimum number of letters a password should contain.
-    /// </summary>
-    /// <param name="count">The minimum letter count the password should contain.</param>
-    /// <exception cref="PasswordRuleException">If the password rule is not being built or
-    /// <paramref name="count"/> is less than 0.</exception>
-    internal void MinimumLetterCount(int count)
-    {
-        if (!_isBuilding)
-            throw new PasswordRuleException("Password rule is not being built!");
-        if (count < 0)
-            throw new PasswordRuleException("Password minimum letter count cannot be less than 0.");
-        
-        RuleData.MinimumLetterCount = count;
     }
 
     /// <summary>
@@ -261,15 +251,191 @@ public sealed class PasswordRule
         rule.CompileRules();
         return rule;
     }
-    
+
     /// <summary>
     /// Get a random, cryptographically strong password that follows the password rule.
     /// </summary>
     /// <returns>A new, random password that adheres to the password rule created.</returns>
-    /// <exception cref="NotImplementedException"></exception>
-    public string GetValidPassword()
+    public string GetValidPassword(Random rng)
     {
-        throw new NotImplementedException();
+        var sb = new StringBuilder();
+        
+        //Keep track of the current count of characters in the new password string.
+        //Should always end equal to RuleData.MinimumLengthAllowed.
+        var currentCount = 0;
+        
+        //Define the different types of characters allowed in the password with their likelihoods of being chosen.
+        //Characters are 60% likely to be chosen.
+        //Specials are 20% likely to be chosen.
+        //Numbers are 15% likely to be chosen.
+        //Whitespace is 5% likely to be chosen.
+        ProportionalRandomSelector<CharacterType> selector = GetSelector(60, 20, 
+            15, 5);
+        
+        //Set the minimum length of our new password to the length defined in the rule data.
+        var minLength = RuleData.MinimumLengthAllowed;
+        
+        //Keep track of the number of different character types in the new password string.
+        var specialCount = 0;
+        var numberCount = 0;
+        
+        while (currentCount != minLength)
+        {
+            //First, get a random character type
+            var c = selector.SelectItem(rng);
+
+            //Then, switch on the type and add appropriate character to the string, increasing counts along the way.
+            switch (c)
+            {
+                case CharacterType.WhiteSpace:
+                    AddWhiteSpace(ref sb, ref currentCount);
+                    break;
+                case CharacterType.Special:
+                    AddSpecial(ref sb, ref currentCount, ref specialCount);
+                    break;
+                case CharacterType.Number:
+                    AddNumber(ref sb, ref currentCount, ref numberCount);
+                    break;
+                case CharacterType.Character:
+                    AddCharacter(ref sb, ref currentCount, ref numberCount, ref specialCount);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            Debug.WriteLine($"{c}: {currentCount}");
+        }
+
+        return sb.ToString();
+    }
+
+    /// <summary>
+    /// Get a <see cref="ProportionalRandomSelector{T}"/> based on the supplied percentages.
+    /// Each percentage indicates the likelihood for that character type to be chosen.
+    /// </summary>
+    /// <returns>A <see cref="ProportionalRandomSelector{T}"/> that can be used to select items
+    /// based on percentages.</returns>
+    private ProportionalRandomSelector<CharacterType> GetSelector(int characterPercentage, int specialPercentage,
+        int numberPercentage, int whiteSpacePercentage)
+    {
+        var characterTypes = Enum.GetValues(typeof(CharacterType)).Cast<CharacterType>().ToList();
+        var disallowedTypes = new List<CharacterType>();
+        
+        //remove the character types not allowed
+        if (!RuleData.WhitespaceAllowed)
+            disallowedTypes.Add(CharacterType.WhiteSpace);
+        if (!RuleData.NumbersAllowed)
+            disallowedTypes.Add(CharacterType.Number);
+        if (!RuleData.SpecialsAllowed)
+            disallowedTypes.Add(CharacterType.Special);
+
+        characterTypes = characterTypes.Except(disallowedTypes).ToList();
+
+        ProportionalRandomSelector<CharacterType> selector = new();
+        foreach (var type in characterTypes)
+        {
+            switch (type)
+            {
+                case CharacterType.Character:
+                    selector.AddPercentage(type, characterPercentage);
+                    break;
+                case CharacterType.Special:
+                    selector.AddPercentage(type, specialPercentage);
+                    break;
+                case CharacterType.Number:
+                    selector.AddPercentage(type, numberPercentage);
+                    break;
+                case CharacterType.WhiteSpace:
+                    selector.AddPercentage(type, whiteSpacePercentage);
+                    break;
+            }
+        }
+
+        return selector;
+    }
+
+    /// <summary>
+    /// Add a whitespace character to the random password, if allowed.
+    /// </summary>
+    /// <param name="builder"></param>
+    /// <param name="currentCount"></param>
+    private void AddWhiteSpace(ref StringBuilder builder, ref int currentCount)
+    {
+        //if whitespace is not allowed in the rule
+        if (!RuleData.WhitespaceAllowed) return;
+        
+        //Finally add a whitespace character if these fail
+        builder.Append(PasswordValidator.WhiteSpaceChars[0]);
+        currentCount++;
+    }
+
+    /// <summary>
+    /// Add a special character to the random password, if allowed.
+    /// </summary>
+    /// <param name="builder">The current <see cref="StringBuilder"/> reference.</param>
+    /// <param name="currentCount">The current loop count reference.</param>
+    /// <param name="specialCount">The current count of specials reference.</param>
+    /// <returns><c>true</c> if the character was added; <c>false</c> otherwise.</returns>
+    private bool AddSpecial(ref StringBuilder builder, ref int currentCount, ref int specialCount)
+    {
+        //if special characters are not allowed in the rule
+        if (!RuleData.SpecialsAllowed) return false;
+        
+        //If no minimum specials are defined, we'll use the default of 2.
+        var numOfSpecialsAllowed = RuleData.MinimumSpecialCount <= -1 ? 2 : RuleData.MinimumSpecialCount;
+
+        //If we've already reached the number of specials required, just return.
+        if (specialCount == numOfSpecialsAllowed) return false;
+        
+        //Otherwise, lets add a special character and increment our counts
+        builder.Append(PasswordValidator.SpecialChars[new Random().Next(0, PasswordValidator.SpecialChars.Length)]);
+        currentCount++;
+        specialCount++;
+        return true;
+    }
+
+    /// <summary>
+    /// Add a number to the random password, if allowed.
+    /// </summary>
+    /// <param name="builder">The current <see cref="StringBuilder"/> reference.</param>
+    /// <param name="currentCount">The current loop count reference.</param>
+    /// <param name="numberCount">The current count of numbers reference.</param>
+    /// <returns><c>true</c> if the number was added; <c>false</c> otherwise.</returns>
+    private bool AddNumber(ref StringBuilder builder, ref int currentCount, ref int numberCount)
+    {
+        //If numbers are not allowed in the rule
+        if (!RuleData.NumbersAllowed) return false;
+        
+        //If no minimum number count is defined, we'll use the default of 2.
+        var numOfNumbersAllowed = RuleData.MinimumNumberCount <= -1 ? 2 : RuleData.MinimumNumberCount;
+        
+        //If we've already reached the number of digits required, just return.
+        if (numberCount == numOfNumbersAllowed) return false;
+        
+        //Otherwise, let's add a number character and increment our counts.
+        builder.Append(PasswordValidator.NumberChars[new Random().Next(0, PasswordValidator.NumberChars.Length)]);
+        currentCount++;
+        numberCount++;
+        return true;
+    }
+
+    /// <summary>
+    /// Add an alphabet character to the random password.
+    /// </summary>
+    /// <param name="builder">The current <see cref="StringBuilder"/> reference.</param>
+    /// <param name="currentCount">The current loop count reference.</param>
+    /// <param name="numberCount">The current count of numbers reference.</param>
+    /// <param name="specialCount">The current count of specials reference.</param>
+    private void AddCharacter(ref StringBuilder builder, ref int currentCount, ref int numberCount, ref int specialCount)
+    {
+        //Try to add a number first.
+        if (AddNumber(ref builder, ref currentCount, ref numberCount)) return;
+
+        //Then try to add a special character.
+        if (AddSpecial(ref builder, ref currentCount, ref specialCount)) return;
+        
+        //Finally, add a character if we've met the required number of both specials and digits.
+        builder.Append(PasswordValidator.RegularChars[new Random().Next(0, PasswordValidator.RegularChars.Length)]);
+        currentCount++;
     }
 
     /// <summary>

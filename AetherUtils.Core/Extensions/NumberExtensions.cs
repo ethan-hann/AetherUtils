@@ -36,8 +36,7 @@ public static class NumberExtensions
         ArgumentNullException.ThrowIfNull(inches, nameof(inches));
         return Math.Abs(inches * dpi);
     }
-
-    //TODO: Clean this up and make it more robust!
+    
     /// <summary>
     /// Formats a size in bytes (represented by an <see cref="long"/> value) to the next closest base-2 size
     /// representation and appends its suffix to the end; uses <c>1024</c> as the conversion factor.

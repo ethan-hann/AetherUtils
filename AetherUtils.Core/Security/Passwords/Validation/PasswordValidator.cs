@@ -1,4 +1,6 @@
-﻿namespace AetherUtils.Core.Security.Passwords.Validation;
+﻿using System.Text;
+
+namespace AetherUtils.Core.Security.Passwords.Validation;
 
 /// <summary>
 /// Validates a password against a <see cref="PasswordRule"/>.
@@ -9,10 +11,10 @@ public abstract class PasswordValidator
 {
     //List taken from: https://owasp.org/www-community/password-special-characters
     //Excluding a space character since that is handled in the WhiteSpaceChars array.
-    private static readonly char[] SpecialChars = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~".ToCharArray();
-    
-    private static readonly char[] NumberChars = "1234567890".ToCharArray();
-    private static readonly char[] WhiteSpaceChars = " ".ToCharArray();
+    internal static readonly char[] SpecialChars = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~".ToCharArray();
+    internal static readonly char[] RegularChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+    internal static readonly char[] NumberChars = "1234567890".ToCharArray();
+    internal static readonly char[] WhiteSpaceChars = " ".ToCharArray();
     
     private PasswordValidator() {}
 

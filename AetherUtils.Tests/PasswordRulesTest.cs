@@ -42,7 +42,7 @@ public class PasswordRulesTest
     [Test]
     public void OnlyLettersTest()
     {
-        var rule = PasswordRule.New().MinimumLetterCount(5).Build();
+        var rule = PasswordRule.New().Build();
         Console.WriteLine(rule.PasswordRules);
 
         var failures = rule.Validate(passwordWithAll);
@@ -108,7 +108,6 @@ public class PasswordRulesTest
     {
         var rule = PasswordRule.New().AllowSpecials()
             .AllowNumbers()
-            .MinimumLetterCount(5)
             .MinimumNumberCount(1)
             .MinimumSpecialCount(1).Build();
         Console.WriteLine(rule.PasswordRules);
@@ -140,7 +139,6 @@ public class PasswordRulesTest
     {
         var rule = PasswordRule.New().AllowSpecials()
             .AllowNumbers()
-            .MinimumLetterCount(5)
             .MinimumNumberCount(1)
             .MinimumSpecialCount(1).Build();
         
@@ -156,7 +154,7 @@ public class PasswordRulesTest
     public void PasswordRuleEncryptionTest()
     {
         var rule = PasswordRule.New().AllowNumbers().AllowSpecials().AllowWhitespace().MinimumNumberCount(15)
-            .MinimumLetterCount(10).MinimumSpecialCount(12).Build();
+            .MinimumSpecialCount(12).Build();
         Console.WriteLine(rule.PasswordRules);
 
         var encryptedString = rule.ToEncryptedString(passphrase);
@@ -176,5 +174,44 @@ public class PasswordRulesTest
         var failures = rule.Validate(passwordWithAll);
         Assert.That(failures, Has.Count.EqualTo(2));
         failures.ForEach(f => Console.WriteLine(f.Message));
+    }
+
+    [Test]
+    public void RandomPasswordsTest()
+    {
+        var rule = PasswordRule.New().AllowSpecials().AllowNumbers().MinimumSpecialCount(3)
+            .MinimumNumberCount(3).Build();
+        Console.WriteLine(rule.PasswordRules);
+        List<string> passwords = [];
+        var random = new Random();
+        for (int i = 0; i < 100; i++)
+        {
+            passwords.Add(rule.GetValidPassword(random));
+            Console.WriteLine(passwords[i]);
+        }
+        
+        Assert.That(passwords.TrueForAll(p => rule.Validate(p).Count == 0));
+    }
+
+    [Test]
+    public void RandomPasswordsWithWhiteSpaceTest()
+    {
+        var rule = PasswordRule.New().AllowSpecials().AllowNumbers().AllowWhitespace().MinimumSpecialCount(5)
+            .MinimumNumberCount(4).MinimumLength(15).Build();
+        Console.WriteLine(rule.PasswordRules);
+        List<string> passwords = [];
+        var random = new Random();
+        for (int i = 0; i < 100; i++)
+        {
+            passwords.Add(rule.GetValidPassword(random));
+            Console.WriteLine(passwords[i]);
+        }
+
+        foreach (var p in passwords)
+        {
+            var validation = rule.Validate(p);
+            validation.ForEach(v => Console.WriteLine($"{p}: {v.Message}"));
+        }
+        Assert.That(passwords.TrueForAll(p => rule.Validate(p).Count == 0));
     }
 }

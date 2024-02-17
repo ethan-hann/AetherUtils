@@ -49,7 +49,6 @@ public static class StringExtensions
         return secure;
     }
     
-    //TODO: Find a better way to do this without potentially leaking the secure string into unmanaged memory.
     /// <summary>
     /// Convert a <see cref="SecureString"/> to an unsecured <see cref="string"/>.
     /// </summary>
