@@ -10,7 +10,7 @@ public sealed class TwoFactorUser(string issuer, string accountTitle)
     /// <summary>
     /// The issuer of the 2FA tokens. 
     /// </summary>
-    public string Issuer { get; internal set; } = issuer;
+    public string Issuer { get; } = issuer;
     
     /// <summary>
     /// The account title as shown in the user's authenticator app.

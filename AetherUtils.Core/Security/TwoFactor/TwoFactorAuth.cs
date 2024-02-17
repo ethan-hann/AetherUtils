@@ -198,7 +198,7 @@ public class TwoFactorAuth(HashType hashType)
     
     /// <summary>
     /// Get the PIN for current time; the same code that a 2FA app would generate for the current time.
-    /// Do not validate directly against this as clock drift may cause a a different PIN to be generated than one you did a second ago.
+    /// Do not validate directly against this as clock drift may cause a different PIN to be generated than one you did a second ago.
     /// </summary>
     /// <param name="accountSecretKey">Account Secret Key</param>
     /// <param name="secretIsBase32">Flag saying if accountSecretKey is in Base32 format or original secret</param>
@@ -208,7 +208,7 @@ public class TwoFactorAuth(HashType hashType)
 
     /// <summary>
     /// Get the PIN for current time; the same code that a 2FA app would generate for the current time.
-    /// Do not validate directly against this as clock drift may cause a a different PIN to be generated than one you did a second ago.
+    /// Do not validate directly against this as clock drift may cause a different PIN to be generated than one you did a second ago.
     /// </summary>
     /// <param name="accountSecretKey">Account Secret Key</param>
     /// <param name="now">The time you wish to generate the pin for</param>
@@ -219,7 +219,7 @@ public class TwoFactorAuth(HashType hashType)
 
     /// <summary>
     /// Get the PIN for current time; the same code that a 2FA app would generate for the current time.
-    /// Do not validate directly against this as clock drift may cause a a different PIN to be generated.
+    /// Do not validate directly against this as clock drift may cause a different PIN to be generated.
     /// </summary>
     /// <param name="accountSecretKey">Account Secret Key</param>
     /// <returns>A 6-digit PIN</returns>
@@ -228,7 +228,7 @@ public class TwoFactorAuth(HashType hashType)
 
     /// <summary>
     /// Get the PIN for current time; the same code that a 2FA app would generate for the current time.
-    /// Do not validate directly against this as clock drift may cause a a different PIN to be generated.
+    /// Do not validate directly against this as clock drift may cause a different PIN to be generated.
     /// </summary>
     /// <param name="accountSecretKey">Account Secret Key</param>
     /// <param name="now">The time you wish to generate the pin for</param>

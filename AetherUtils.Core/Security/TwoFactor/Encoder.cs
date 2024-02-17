@@ -7,6 +7,9 @@ namespace AetherUtils.Core.Security.TwoFactor;
 /// </summary>
 public static class Encoder
 {
+    /// <summary>
+    /// The alpha-numeric and special characters allowed in a URL.
+    /// </summary>
     private const string BIF_URL_ENCODE_ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.~";
     
     /// <summary>
@@ -117,6 +120,12 @@ public static class Encoder
         return returnArray;
     }
     
+    /// <summary>
+    /// Convert a <see cref="char"/> to its <see cref="int"/> equivalent.
+    /// </summary>
+    /// <param name="c">The <see cref="char"/> to convert.</param>
+    /// <returns>An <see cref="int"/> representing the <see cref="char"/>.</returns>
+    /// <exception cref="ArgumentException">If <paramref name="c"/> was not a valid BASE32 character.</exception>
     private static int CharToValue(char c)
     {
         return (int)c switch
@@ -128,13 +137,19 @@ public static class Encoder
         };
     }
     
+    /// <summary>
+    /// Convert a <see cref="byte"/> value to its <see cref="char"/> equivalent.
+    /// </summary>
+    /// <param name="b">The <see cref="byte"/> to convert.</param>
+    /// <returns>A <see cref="char"/> representing the <see cref="byte"/>.</returns>
+    /// <exception cref="ArgumentException">If <paramref name="b"/> was not a valid BASE32 value.</exception>
     private static char ValueToChar(byte b)
     {
         return b switch
         {
             < 26 => (char)(b + 65),
             < 32 => (char)(b + 24),
-            _ => throw new ArgumentException("Byte is not a value Base32 value.", nameof(b))
+            _ => throw new ArgumentException("Byte is not a valid Base32 value.", nameof(b))
         };
     }
 }
