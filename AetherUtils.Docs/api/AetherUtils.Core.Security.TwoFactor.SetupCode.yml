@@ -100,7 +100,7 @@ items:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
   syntax:
-    content: public string ManualEntryKey { get; }
+    content: public string ManualEntryKey { get; internal set; }
     parameters: []
     return:
       type: System.String
@@ -129,7 +129,7 @@ items:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.TwoFactor
   syntax:
-    content: public string QrCodeSetupImageUrl { get; }
+    content: public string QrCodeSetupImageUrl { get; internal set; }
     parameters: []
     return:
       type: System.String
@@ -744,3 +744,4 @@ references:
   name: QrCodeSetupImageUrl
   nameWithType: SetupCode.QrCodeSetupImageUrl
   fullName: AetherUtils.Core.Security.TwoFactor.SetupCode.QrCodeSetupImageUrl
+shouldSkipMarkup: true

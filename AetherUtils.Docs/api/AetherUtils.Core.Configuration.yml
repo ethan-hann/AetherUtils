@@ -100,3 +100,4 @@ references:
   - uid: AetherUtils.Core.Configuration
     name: Configuration
     href: AetherUtils.Core.Configuration.html
+shouldSkipMarkup: true

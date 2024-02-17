@@ -97,9 +97,8 @@ Class EncryptionBase  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents the base class for all encryption service classes. All encryption is performed using AES-256
-and encoded with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding.utf8">UTF8</a>.</p>
-</div>
+  <div class="markdown summary">Represents the base class for all encryption service classes. All encryption is performed using AES-256
+and encoded with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding.utf8">UTF8</a>.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -175,8 +174,278 @@ and encoded with <a class="xref" href="https://learn.microsoft.com/dotnet/api/sy
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="AetherUtils_Core_Security_Encryption_EncryptionBase_SHGFI_EXTENSION_SEPARATOR" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.SHGFI_EXTENSION_SEPARATOR">
+  SHGFI_EXTENSION_SEPARATOR
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/EncryptionBase.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private const char SHGFI_EXTENSION_SEPARATOR = &#39;:&#39;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
+
+
+  <a id="AetherUtils_Core_Security_Encryption_EncryptionBase_DeriveKeyFromString_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString*"></a>
+
+  <h3 id="AetherUtils_Core_Security_Encryption_EncryptionBase_DeriveKeyFromString_System_String_System_Int32_AetherUtils_Core_Security_Encryption_KeyLength_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString(System.String,System.Int32,AetherUtils.Core.Security.Encryption.KeyLength)">
+  DeriveKeyFromString(string, int, KeyLength)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/EncryptionBase.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Derives a key to use for encryption/decryption from an input string.
+<p>This method should be called with the same arguments when encrypting and decrypting. Failure to do so will
+result in a failed decryption based on different keys.</p></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal static byte[] DeriveKeyFromString(string input, int iterations = 5000, KeyLength keyLength = KeyLength.Bits256)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd>A plain-text string to derive key from.</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd>The number of iterations. (Default is 5000).</dd>
+    <dt><code>keyLength</code> <a class="xref" href="AetherUtils.Core.Security.Encryption.KeyLength.html">KeyLength</a></dt>
+    <dd>The length of the generated key, in bytes.</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd>A cryptographically strong key.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AetherUtils_Core_Security_Encryption_EncryptionBase_FindSeparatorIndices_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices*"></a>
+
+  <h3 id="AetherUtils_Core_Security_Encryption_EncryptionBase_FindSeparatorIndices_System_Collections_Generic_IReadOnlyList_System_Byte__" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices(System.Collections.Generic.IReadOnlyList{System.Byte})">
+  FindSeparatorIndices(IReadOnlyList&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/EncryptionBase.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Find the first and last indices of the separator character in the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static ReadOnlyPair&lt;int, int&gt; FindSeparatorIndices(IReadOnlyList&lt;byte&gt; buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array to search.</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AetherUtils.Core.Structs.ReadOnlyPair-2.html">ReadOnlyPair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd>A <a class="xref" href="AetherUtils.Core.Structs.ReadOnlyPair-2.html">ReadOnlyPair&lt;K, V&gt;</a> where the <code>key</code> is the first index
+    and the <code>value</code> is the last index.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AetherUtils_Core_Security_Encryption_EncryptionBase_GetBytesFromUtf8String_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String*"></a>
+
+  <h3 id="AetherUtils_Core_Security_Encryption_EncryptionBase_GetBytesFromUtf8String_System_String_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String(System.String)">
+  GetBytesFromUtf8String(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/EncryptionBase.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array equivalent to the <code class="paramref">input</code> in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding.utf8">UTF8</a> encoding.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal static byte[] GetBytesFromUtf8String(string input)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array representing the <code class="paramref">input</code> in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding.utf8">UTF8</a> encoding.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionFromBytes_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes*"></a>
+
+  <h3 id="AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionFromBytes_System_Byte____" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes(System.Byte[]@)">
+  GetExtensionFromBytes(ref byte[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/EncryptionBase.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Get the original extension string from a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> buffer
+that was written to with <a class="xref" href="AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_WriteExtensionToBytes_System_String_System_Byte____">WriteExtensionToBytes(string, ref byte[])</a>. This method modifies the buffer and removes
+the extension bytes from it.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal static string GetExtensionFromBytes(ref byte[] buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd>The buffer of bytes to read the extension from, passed by reference.</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd>If <code class="paramref">buffer</code> was <code>null</code>.</dd>
+  </dl>
+
+
+
+  <a id="AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionString_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString*"></a>
+
+  <h3 id="AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionString_System_Byte___" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString(System.Byte[])">
+  GetExtensionString(byte[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/EncryptionBase.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Get the extension string from the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static string GetExtensionString(byte[] buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd>An array of bytes representing an extension.</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd>A string representation of the extension.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></dt>
+    <dd>If the extension could not be read from the supplied
+    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</dd>
+  </dl>
+
+
+
+  <a id="AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey*"></a>
+
+  <h3 id="AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_System_Int32_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)">
+  GetRandomKey(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/EncryptionBase.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Get a cryptographically strong random key that can be used for encryption.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static byte[] GetRandomKey(int keySize = 32)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>keySize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd>The size, in bytes, for the generated key.</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd>A cryptographically strong and random <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
   <a id="AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKeyPhrase_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase*"></a>
@@ -186,8 +455,7 @@ and encoded with <a class="xref" href="https://learn.microsoft.com/dotnet/api/sy
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/EncryptionBase.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get a cryptographically strong random key phrase that can be used for encryption.</p>
-</div>
+  <div class="markdown level1 summary">Get a cryptographically strong random key phrase that can be used for encryption.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -197,16 +465,160 @@ and encoded with <a class="xref" href="https://learn.microsoft.com/dotnet/api/sy
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>keySize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The size, in bytes, for the generated key.</p>
-</dd>
+    <dd>The size, in bytes, for the generated key.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A cryptographically strong and random <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>.</p>
-</dd>
+    <dd>A cryptographically strong and random <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>.</dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AetherUtils_Core_Security_Encryption_EncryptionBase_GetStringFromUtf8Bytes_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes*"></a>
+
+  <h3 id="AetherUtils_Core_Security_Encryption_EncryptionBase_GetStringFromUtf8Bytes_System_Byte___" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes(System.Byte[])">
+  GetStringFromUtf8Bytes(byte[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/EncryptionBase.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> equalvalent to the <code class="paramref">input</code> in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding.utf8">UTF8</a> encoding.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal static string GetStringFromUtf8Bytes(byte[] input)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representing the <code class="paramref">input</code> in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding.utf8">UTF8</a>.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AetherUtils_Core_Security_Encryption_EncryptionBase_ReadIvFromStream_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream*"></a>
+
+  <h3 id="AetherUtils_Core_Security_Encryption_EncryptionBase_ReadIvFromStream_System_IO_Stream_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream(System.IO.Stream)">
+  ReadIvFromStream(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/EncryptionBase.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Reads the first 16 bytes from an encrypted <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>. The first 16 bytes should be the IV.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal byte[] ReadIvFromStream(Stream stream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd>The stream to read from.</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AetherUtils_Core_Security_Encryption_EncryptionBase_WriteExtensionToBytes_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes*"></a>
+
+  <h3 id="AetherUtils_Core_Security_Encryption_EncryptionBase_WriteExtensionToBytes_System_String_System_Byte____" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes(System.String,System.Byte[]@)">
+  WriteExtensionToBytes(string, ref byte[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/EncryptionBase.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Write the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> representation of the <code class="paramref">extension</code> to the supplied buffer.
+<p>This method writes the extension bytes at the end of the original <code class="paramref">buffer</code>.</p></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal static void WriteExtensionToBytes(string extension, ref byte[] buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd>The file extension to write, including the <code>period (.)</code>.</dd>
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd>The buffer of bytes to write to, passed by reference.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd>If <code class="paramref">extension</code> was <code>null</code> or empty.</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd>If <code class="paramref">buffer</code> was <code>null</code>.</dd>
+  </dl>
+
+
+
+  <a id="AetherUtils_Core_Security_Encryption_EncryptionBase_WriteIvToStream_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream*"></a>
+
+  <h3 id="AetherUtils_Core_Security_Encryption_EncryptionBase_WriteIvToStream_System_Byte___System_IO_Stream_" data-uid="AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream(System.Byte[],System.IO.Stream)">
+  WriteIvToStream(byte[], Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/EncryptionBase.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Writes an initialization vector to the first 16 bytes of a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal static void WriteIvToStream(byte[] iv, Stream stream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>iv</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd>The IV to write.</dd>
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd>The stream to write to.</dd>
+  </dl>
+
 
 
 

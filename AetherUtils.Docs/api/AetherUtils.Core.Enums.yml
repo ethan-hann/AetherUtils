@@ -1,0 +1,63 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Enums
+  commentId: N:AetherUtils.Core.Enums
+  id: AetherUtils.Core.Enums
+  children:
+  - AetherUtils.Core.Enums.CharacterType
+  - AetherUtils.Core.Enums.MemorySize
+  langs:
+  - csharp
+  - vb
+  name: AetherUtils.Core.Enums
+  nameWithType: AetherUtils.Core.Enums
+  fullName: AetherUtils.Core.Enums
+  type: Namespace
+  assemblies:
+  - AetherUtils.Core
+references:
+- uid: AetherUtils.Core.Enums.CharacterType
+  commentId: T:AetherUtils.Core.Enums.CharacterType
+  parent: AetherUtils.Core.Enums
+  href: AetherUtils.Core.Enums.CharacterType.html
+  name: CharacterType
+  nameWithType: CharacterType
+  fullName: AetherUtils.Core.Enums.CharacterType
+- uid: AetherUtils.Core.Enums.MemorySize
+  commentId: T:AetherUtils.Core.Enums.MemorySize
+  parent: AetherUtils.Core.Enums
+  href: AetherUtils.Core.Enums.MemorySize.html
+  name: MemorySize
+  nameWithType: MemorySize
+  fullName: AetherUtils.Core.Enums.MemorySize
+- uid: AetherUtils.Core.Enums
+  commentId: N:AetherUtils.Core.Enums
+  href: AetherUtils.html
+  name: AetherUtils.Core.Enums
+  nameWithType: AetherUtils.Core.Enums
+  fullName: AetherUtils.Core.Enums
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Enums
+    name: Enums
+    href: AetherUtils.Core.Enums.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Enums
+    name: Enums
+    href: AetherUtils.Core.Enums.html
+shouldSkipMarkup: true

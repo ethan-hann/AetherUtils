@@ -97,12 +97,11 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides methods to encrypt and decrypt XML serializable .NET objects.</p>
-</div>
+  <div class="markdown summary">Provides methods to encrypt and decrypt XML serializable .NET objects.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ObjectEncryptionService&lt;T&gt; : EncryptionBase where T : class</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ObjectEncryptionService&lt;T&gt; : EncryptionBase, IEncryptService&lt;T, byte[]&gt; where T : class</code></pre>
   </div>
 
 
@@ -110,8 +109,7 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The object type to encrypt/decrypt. This type must support XML serialization.</p>
-</dd>
+    <dd>The object type to encrypt/decrypt. This type must support XML serialization.</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -123,6 +121,12 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="AetherUtils.Core.Security.Encryption.IEncryptService-2.html">IEncryptService</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -172,6 +176,70 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="AetherUtils_Core_Security_Encryption_ObjectEncryptionService_1__fileEncryptionService" data-uid="AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._fileEncryptionService">
+  _fileEncryptionService
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly FileEncryptionService _fileEncryptionService</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AetherUtils.Core.Security.Encryption.FileEncryptionService.html">FileEncryptionService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="AetherUtils_Core_Security_Encryption_ObjectEncryptionService_1__stringEncryptor" data-uid="AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._stringEncryptor">
+  _stringEncryptor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly StringEncryptionService _stringEncryptor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AetherUtils.Core.Security.Encryption.StringEncryptionService.html">StringEncryptionService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -183,8 +251,7 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Decrypt a .NET object represented as an encrypted XML serialized <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</p>
-</div>
+  <div class="markdown level1 summary">Decrypt a .NET object represented as an encrypted XML serialized <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -194,18 +261,15 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p>The serialized, encrypted .NET object as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</p>
-</dd>
+    <dd>The serialized, encrypted .NET object as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</dd>
     <dt><code>passphrase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The passphrase for decryption.</p>
-</dd>
+    <dd>The passphrase for decryption.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</dt>
-    <dd><p>The <code class="typeparamref">T</code> object, decrypted and deserialized.</p>
-</dd>
+    <dd>The <code class="typeparamref">T</code> object, decrypted and deserialized.</dd>
   </dl>
 
 
@@ -218,11 +282,9 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If the <code class="paramref">input</code> was <code>null</code> or 0-length.</p>
-</dd>
+    <dd>If the <code class="paramref">input</code> was <code>null</code> or 0-length.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>If the <code class="paramref">input</code> could not be deserialized to type <code class="typeparamref">T</code>.</p>
-</dd>
+    <dd>If the <code class="paramref">input</code> could not be deserialized to type <code class="typeparamref">T</code>.</dd>
   </dl>
 
 
@@ -234,8 +296,7 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Decrypt a .NET object from an encrypted file.</p>
-</div>
+  <div class="markdown level1 summary">Decrypt a .NET object from an encrypted file.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -245,18 +306,15 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The path to the file containing an encrypted, serialized .NET object.</p>
-</dd>
+    <dd>The path to the file containing an encrypted, serialized .NET object.</dd>
     <dt><code>passphrase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The passphrase for decryption.</p>
-</dd>
+    <dd>The passphrase for decryption.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</dt>
-    <dd><p>The <code class="typeparamref">T</code> object, decrypted and deserialized.</p>
-</dd>
+    <dd>The <code class="typeparamref">T</code> object, decrypted and deserialized.</dd>
   </dl>
 
 
@@ -269,11 +327,9 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
-    <dd><p>If the file specified by <code class="paramref">filePath</code> did not exist.</p>
-</dd>
+    <dd>If the file specified by <code class="paramref">filePath</code> did not exist.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>If the object could not be deserialized to a new .NET object.</p>
-</dd>
+    <dd>If the object could not be deserialized to a new .NET object.</dd>
   </dl>
 
 
@@ -285,8 +341,7 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Encrypt a .NET XML serializable object to an encrypted <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</p>
-</div>
+  <div class="markdown level1 summary">Encrypt a .NET XML serializable object to an encrypted <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -296,18 +351,15 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>input</code> <span class="xref">T</span></dt>
-    <dd><p>The serializable .NET object.</p>
-</dd>
+    <dd>The serializable .NET object.</dd>
     <dt><code>passphrase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The passphrase for encryption.</p>
-</dd>
+    <dd>The passphrase for encryption.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
-    <dd><p>An encrypted .NET object represented as a serialized <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</p>
-</dd>
+    <dd>An encrypted .NET object represented as a serialized <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</dd>
   </dl>
 
 
@@ -320,8 +372,7 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If the <code class="paramref">input</code> could not serialized to type <code class="typeparamref">T</code>.</p>
-</dd>
+    <dd>If the <code class="paramref">input</code> could not serialized to type <code class="typeparamref">T</code>.</dd>
   </dl>
 
 
@@ -333,8 +384,7 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Encrypt a .NET XML serializable object to an encrypted file.</p>
-</div>
+  <div class="markdown level1 summary">Encrypt a .NET XML serializable object to an encrypted file.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -344,21 +394,17 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>input</code> <span class="xref">T</span></dt>
-    <dd><p>The serializable .NET object.</p>
-</dd>
+    <dd>The serializable .NET object.</dd>
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The file to create (or overwrite).</p>
-</dd>
+    <dd>The file to create (or overwrite).</dd>
     <dt><code>passphrase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The passphrase for encryption.</p>
-</dd>
+    <dd>The passphrase for encryption.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
-    <dd><p>An encrypted .NET object represented as a serialized <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array; or an empty <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array if the encryption failed.</p>
-</dd>
+    <dd>An encrypted .NET object represented as a serialized <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array; or an empty <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array if the encryption failed.</dd>
   </dl>
 
 
@@ -371,8 +417,7 @@ Class ObjectEncryptionService&lt;T&gt;  <a class="header-action link-secondary" 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If the <code class="paramref">input</code> could not serialized to type <code class="typeparamref">T</code>.</p>
-</dd>
+    <dd>If the <code class="paramref">input</code> could not serialized to type <code class="typeparamref">T</code>.</dd>
   </dl>
 
 

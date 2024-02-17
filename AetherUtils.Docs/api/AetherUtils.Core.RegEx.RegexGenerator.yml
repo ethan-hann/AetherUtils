@@ -577,3 +577,4 @@ references:
   name: HexRegex
   nameWithType: RegexGenerator.HexRegex
   fullName: AetherUtils.Core.RegEx.RegexGenerator.HexRegex
+shouldSkipMarkup: true

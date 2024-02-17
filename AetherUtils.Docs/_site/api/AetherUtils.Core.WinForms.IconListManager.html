@@ -97,8 +97,7 @@ Class IconListManager  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Maintains a list of currently added file extensions</p>
-</div>
+  <div class="markdown summary">Maintains a list of currently added file extensions</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -176,9 +175,8 @@ Class IconListManager  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/WinForms/IconListManager.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates an instance of <code>IconListManager</code> that will add icons to a single <code>ImageList</code> using the
-specified <code>IconSize</code>.</p>
-</div>
+  <div class="markdown level1 summary">Creates an instance of <code>IconListManager</code> that will add icons to a single <code>ImageList</code> using the
+specified <code>IconSize</code>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -188,11 +186,9 @@ specified <code>IconSize</code>.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>imageList</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.imagelist">ImageList</a></dt>
-    <dd><p><code>ImageList</code> to add icons to.</p>
-</dd>
+    <dd><code>ImageList</code> to add icons to.</dd>
     <dt><code>iconSize</code> <a class="xref" href="AetherUtils.Core.WinForms.IconReader.html">IconReader</a>.<a class="xref" href="AetherUtils.Core.WinForms.IconReader.IconSize.html">IconSize</a></dt>
-    <dd><p>Size to use (either 32 or 16 pixels).</p>
-</dd>
+    <dd>Size to use (either 32 or 16 pixels).</dd>
   </dl>
 
 
@@ -213,9 +209,8 @@ specified <code>IconSize</code>.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/WinForms/IconListManager.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates an instance of IconListManager that will add icons to two <code>ImageList</code> types. The two
-image lists are intended to be one for large icons, and the other for small icons.</p>
-</div>
+  <div class="markdown level1 summary">Creates an instance of IconListManager that will add icons to two <code>ImageList</code> types. The two
+image lists are intended to be one for large icons, and the other for small icons.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -225,15 +220,137 @@ image lists are intended to be one for large icons, and the other for small icon
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>smallImageList</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.imagelist">ImageList</a></dt>
-    <dd><p>The <code>ImageList</code> that will hold small icons.</p>
-</dd>
+    <dd>The <code>ImageList</code> that will hold small icons.</dd>
     <dt><code>largeImageList</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.imagelist">ImageList</a></dt>
-    <dd><p>The <code>ImageList</code> that will hold large icons.</p>
-</dd>
+    <dd>The <code>ImageList</code> that will hold large icons.</dd>
   </dl>
 
 
 
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="AetherUtils_Core_WinForms_IconListManager__extensionList" data-uid="AetherUtils.Core.WinForms.IconListManager._extensionList">
+  _extensionList
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/WinForms/IconListManager.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly Hashtable _extensionList</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.hashtable">Hashtable</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="AetherUtils_Core_WinForms_IconListManager__iconSize" data-uid="AetherUtils.Core.WinForms.IconListManager._iconSize">
+  _iconSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/WinForms/IconListManager.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly IconReader.IconSize _iconSize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AetherUtils.Core.WinForms.IconReader.html">IconReader</a>.<a class="xref" href="AetherUtils.Core.WinForms.IconReader.IconSize.html">IconSize</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="AetherUtils_Core_WinForms_IconListManager__imageLists" data-uid="AetherUtils.Core.WinForms.IconListManager._imageLists">
+  _imageLists
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/WinForms/IconListManager.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly ArrayList _imageLists</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist">ArrayList</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="AetherUtils_Core_WinForms_IconListManager__manageBothSizes" data-uid="AetherUtils.Core.WinForms.IconListManager._manageBothSizes">
+  _manageBothSizes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/WinForms/IconListManager.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly bool _manageBothSizes</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -247,6 +364,39 @@ image lists are intended to be one for large icons, and the other for small icon
 </h2>
 
 
+  <a id="AetherUtils_Core_WinForms_IconListManager_AddExtension_" data-uid="AetherUtils.Core.WinForms.IconListManager.AddExtension*"></a>
+
+  <h3 id="AetherUtils_Core_WinForms_IconListManager_AddExtension_System_String_System_Int32_" data-uid="AetherUtils.Core.WinForms.IconListManager.AddExtension(System.String,System.Int32)">
+  AddExtension(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/WinForms/IconListManager.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Used internally, adds the extension to the hashtable, so that its value can then be returned.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void AddExtension(string extension, int imageListPosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><code>String</code> of the file's extension.</dd>
+    <dt><code>imageListPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd>Position of the extension in the <code>ImageList</code>.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="AetherUtils_Core_WinForms_IconListManager_AddFileIcon_" data-uid="AetherUtils.Core.WinForms.IconListManager.AddFileIcon*"></a>
 
   <h3 id="AetherUtils_Core_WinForms_IconListManager_AddFileIcon_System_String_" data-uid="AetherUtils.Core.WinForms.IconListManager.AddFileIcon(System.String)">
@@ -254,8 +404,7 @@ image lists are intended to be one for large icons, and the other for small icon
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/WinForms/IconListManager.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Called publicly to add a file's icon to the ImageList.</p>
-</div>
+  <div class="markdown level1 summary">Called publicly to add a file's icon to the ImageList.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -265,15 +414,13 @@ image lists are intended to be one for large icons, and the other for small icon
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Full path to the file.</p>
-</dd>
+    <dd>Full path to the file.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Integer of the icon's position in the ImageList</p>
-</dd>
+    <dd>Integer of the icon's position in the ImageList</dd>
   </dl>
 
 
@@ -293,8 +440,7 @@ image lists are intended to be one for large icons, and the other for small icon
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/WinForms/IconListManager.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Clears all <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.imagelist">ImageList</a>s that <a class="xref" href="AetherUtils.Core.WinForms.IconListManager.html">IconListManager</a> is managing.</p>
-</div>
+  <div class="markdown level1 summary">Clears all <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.imagelist">ImageList</a>s that <a class="xref" href="AetherUtils.Core.WinForms.IconListManager.html">IconListManager</a> is managing.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">

@@ -839,3 +839,4 @@ references:
   fullName: AetherUtils.Core.Files.Xml<T>.LoadXml
   nameWithType.vb: Xml(Of T).LoadXml
   fullName.vb: AetherUtils.Core.Files.Xml(Of T).LoadXml
+shouldSkipMarkup: true

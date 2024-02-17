@@ -96,43 +96,38 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html">ConfigManager&lt;T&gt;</a></dt>
-      <dd><p>This class cannot be instantiated. A child class must be created inheriting from <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html">ConfigManager&lt;T&gt;</a>.
-Handles saving, loading, and querying a generic configuration based on class T.</p>
-</dd>
+      <dd>This class cannot be instantiated. A child class must be created inheriting from <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html">ConfigManager&lt;T&gt;</a>.
+Handles saving, loading, and querying a generic configuration based on class T.</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="AetherUtils.Core.Configuration.DefaultConfig.html">DefaultConfig</a></dt>
-      <dd><p>A <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a> representing the default, bare configuration
+      <dd>A <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a> representing the default, bare configuration
 of a new application. This class can be used as is,
-or a new class can be created to store the configuration for an application.<br></p>
+or a new class can be created to store the configuration for an application.<br>
 <p>If a new class is needed, it must be a <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a>
 and it's properties should be marked with <a class="xref" href="AetherUtils.Core.Attributes.ConfigAttribute.html">ConfigAttribute</a> attributes in order to be saved and
 loaded from disk by a <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html">ConfigManager&lt;T&gt;</a>.</p>
 <remarks>
 This class can contain instances of other <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a>
 classes so long as those classes also have the <a class="xref" href="AetherUtils.Core.Attributes.ConfigAttribute.html">ConfigAttribute</a> on their properties.
-</remarks>
-</dd>
+</remarks></dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="AetherUtils.Core.Configuration.LogOptions.html">LogOptions</a></dt>
-      <dd><p>A <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a> representing options for how log
-files are handled and formatted for an application.</p>
-</dd>
+      <dd>A <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a> representing options for how log
+files are handled and formatted for an application.</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="AetherUtils.Core.Configuration.YamlConfigManager.html">YamlConfigManager</a></dt>
-      <dd><p>Represents a configuration manager for a YAML configuration file using <a class="xref" href="AetherUtils.Core.Configuration.DefaultConfig.html">DefaultConfig</a>
-as the base configuration.</p>
-</dd>
+      <dd>Represents a configuration manager for a YAML configuration file using <a class="xref" href="AetherUtils.Core.Configuration.DefaultConfig.html">DefaultConfig</a>
+as the base configuration.</dd>
     </dl>
     <h3 id="interfaces">
 Interfaces
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="AetherUtils.Core.Configuration.IConfig.html">IConfig</a></dt>
-      <dd><p>Interface that all <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html">ConfigManager&lt;T&gt;</a> classes must implement.</p>
-</dd>
+      <dd>Interface that all <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html">ConfigManager&lt;T&gt;</a> classes must implement.</dd>
     </dl>
 
 

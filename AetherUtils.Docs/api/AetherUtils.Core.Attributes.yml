@@ -52,3 +52,4 @@ references:
   - uid: AetherUtils.Core.Attributes
     name: Attributes
     href: AetherUtils.Core.Attributes.html
+shouldSkipMarkup: true

@@ -96,35 +96,47 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="AetherUtils.Core.Security.Encryption.ByteEncryptionService.html">ByteEncryptionService</a></dt>
-      <dd><p>Provides methods to encrypt and decrypt <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> arrays.</p>
-</dd>
+      <dd>Provides methods to encrypt and decrypt <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> arrays.</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="AetherUtils.Core.Security.Encryption.EncryptionBase.html">EncryptionBase</a></dt>
-      <dd><p>Represents the base class for all encryption service classes. All encryption is performed using AES-256
-and encoded with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding.utf8">UTF8</a>.</p>
-</dd>
+      <dd>Represents the base class for all encryption service classes. All encryption is performed using AES-256
+and encoded with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding.utf8">UTF8</a>.</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="AetherUtils.Core.Security.Encryption.FileEncryptionService.html">FileEncryptionService</a></dt>
-      <dd><p>Provides methods to encrypt and decrypt files on the file system.
-<remarks>This service contains potentially destructive methods that can render a file unreadable for a few reasons:</remarks></p>
+      <dd>Provides methods to encrypt and decrypt files on the file system.
+<remarks>This service contains potentially destructive methods that can render a file unreadable for a few reasons:
 <ol><li>If a file is encrypted with <a class="xref" href="AetherUtils.Core.Security.Encryption.FileEncryptionService.html#AetherUtils_Core_Security_Encryption_FileEncryptionService_EncryptFileAsync_System_String_System_String_System_String_">EncryptFileAsync(string, string, string)</a> and then opened in a text editor
             (to view/edit the contents),
             and then the file is saved, it could render the file unable to be decrypted.</li><li>If after performing item 1, you attempt to encrypt the file again, it could be lost forever.</li><li>If the file extension of an encrypted file is changed manually, the file will be unable to be decrypted.</li></ol>
 <b>Use at your own risk!</b>
-
-</dd>
+</remarks></dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html">ObjectEncryptionService&lt;T&gt;</a></dt>
-      <dd><p>Provides methods to encrypt and decrypt XML serializable .NET objects.</p>
-</dd>
+      <dd>Provides methods to encrypt and decrypt XML serializable .NET objects.</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="AetherUtils.Core.Security.Encryption.StringEncryptionService.html">StringEncryptionService</a></dt>
-      <dd><p>Provides methods to encrypt and decrypt strings.</p>
-</dd>
+      <dd>Provides methods to encrypt and decrypt strings.</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="AetherUtils.Core.Security.Encryption.IEncryptService-2.html">IEncryptService&lt;T, U&gt;</a></dt>
+      <dd>Represents an interface for encryption classes to implement. Provides generic methods for encryption and decryption of data.
+<p><code class="typeparamref">T</code>: The input type for encryption.<br>
+<code class="typeparamref">U</code>: The output type after decryption occurs.
+</p></dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="AetherUtils.Core.Security.Encryption.KeyLength.html">KeyLength</a></dt>
+      <dd>Represents the valid key lengths (in bits) for the AES encryption algorithm.</dd>
     </dl>
 
 

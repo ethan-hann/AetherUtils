@@ -97,8 +97,7 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Implements serializing and de-serializing generic object types to/from JSON files.</p>
-</div>
+  <div class="markdown summary">Implements serializing and de-serializing generic object types to/from JSON files.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -110,8 +109,7 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of object to serialize/deserialize.</p>
-</dd>
+    <dd>The type of object to serialize/deserialize.</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -167,8 +165,7 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
 
 
   <h2 id="AetherUtils_Core_Files_Json_1_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p><code class="typeparamref">T</code> must support JSON serialization.</p>
-</div>
+  <div class="markdown level0 remarks"><code class="typeparamref">T</code> must support JSON serialization.</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -192,6 +189,100 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
 
 
 
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="AetherUtils_Core_Files_Json_1__serializer" data-uid="AetherUtils.Core.Files.Json`1._serializer">
+  _serializer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Files/Json.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly JsonSerializer _serializer</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">JsonSerializer</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="AetherUtils_Core_Files_Json_1__stringBuilder" data-uid="AetherUtils.Core.Files.Json`1._stringBuilder">
+  _stringBuilder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Files/Json.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private StringBuilder _stringBuilder</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="AetherUtils_Core_Files_Json_1__stringWriter" data-uid="AetherUtils.Core.Files.Json`1._stringWriter">
+  _stringWriter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Files/Json.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private StringWriter _stringWriter</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter">StringWriter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -248,8 +339,7 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Files/Json.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deserialize and load a .NET object from a JSON file.</p>
-</div>
+  <div class="markdown level1 summary">Deserialize and load a .NET object from a JSON file.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -259,15 +349,13 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The file to load.</p>
-</dd>
+    <dd>The file to load.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd><p>The <code class="typeparamref">T</code> object, or <code>null</code> if the object could not be deserialized.</p>
-</dd>
+    <dd>The <code class="typeparamref">T</code> object, or <code>null</code> if the object could not be deserialized.</dd>
   </dl>
 
 
@@ -280,12 +368,36 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>If <code class="paramref">filePath</code> was <code>null</code> or empty.</p>
-</dd>
+    <dd>If <code class="paramref">filePath</code> was <code>null</code> or empty.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
-    <dd><p>If the filePath did not exist.</p>
-</dd>
+    <dd>If the filePath did not exist.</dd>
   </dl>
+
+
+
+  <a id="AetherUtils_Core_Files_Json_1_ResetWriters_" data-uid="AetherUtils.Core.Files.Json`1.ResetWriters*"></a>
+
+  <h3 id="AetherUtils_Core_Files_Json_1_ResetWriters" data-uid="AetherUtils.Core.Files.Json`1.ResetWriters">
+  ResetWriters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Files/Json.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void ResetWriters()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -296,9 +408,8 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Files/Json.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Serialize a .NET object, <code class="typeparamref">T</code>, to a JSON string and save to a file.</p>
-<p>If the file already exists, it is overwritten.</p>
-</div>
+  <div class="markdown level1 summary">Serialize a .NET object, <code class="typeparamref">T</code>, to a JSON string and save to a file.
+<p>If the file already exists, it is overwritten.</p></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -308,18 +419,15 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The file to save.</p>
-</dd>
+    <dd>The file to save.</dd>
     <dt><code>obj</code> <span class="xref">T</span></dt>
-    <dd><p>The .NET object to serialize and save.</p>
-</dd>
+    <dd>The .NET object to serialize and save.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the object was serialized and the file was saved; <code>false</code> otherwise.</p>
-</dd>
+    <dd><code>true</code> if the object was serialized and the file was saved; <code>false</code> otherwise.</dd>
   </dl>
 
 
@@ -332,8 +440,7 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>If the <code class="paramref">filePath</code> was <code>null</code> or empty.</p>
-</dd>
+    <dd>If the <code class="paramref">filePath</code> was <code>null</code> or empty.</dd>
   </dl>
 
 

@@ -417,3 +417,4 @@ references:
   nameWithType.vb: TrimmedString.New
   fullName.vb: AetherUtils.Core.Structs.TrimmedString.New
   name.vb: New
+shouldSkipMarkup: true

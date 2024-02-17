@@ -21,3 +21,4 @@ references:
   name: RegexGenerator
   nameWithType: RegexGenerator
   fullName: AetherUtils.Core.RegEx.RegexGenerator
+shouldSkipMarkup: true

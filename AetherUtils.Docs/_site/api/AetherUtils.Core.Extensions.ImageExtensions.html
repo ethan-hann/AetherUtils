@@ -97,8 +97,7 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides extension methods for manipulating <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> objects.</p>
-</div>
+  <div class="markdown summary">Provides extension methods for manipulating <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> objects.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -160,8 +159,7 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/ImageExtensions.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get a value indicating if the image specified by the <code class="paramref">filePath</code> is a valid image file.</p>
-</div>
+  <div class="markdown level1 summary">Get a value indicating if the image specified by the <code class="paramref">filePath</code> is a valid image file.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -171,15 +169,13 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The file path to an image file.</p>
-</dd>
+    <dd>The file path to an image file.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the image was valid; <code>false</code> otherwise.</p>
-</dd>
+    <dd><code>true</code> if the image was valid; <code>false</code> otherwise.</dd>
   </dl>
 
 
@@ -192,11 +188,9 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>If the image specified by <code class="paramref">filePath</code> was not in the correct format.</p>
-</dd>
+    <dd>If the image specified by <code class="paramref">filePath</code> was not in the correct format.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
-    <dd><p>If the file specified by <code class="paramref">filePath</code> was not found.</p>
-</dd>
+    <dd>If the file specified by <code class="paramref">filePath</code> was not found.</dd>
   </dl>
 
 
@@ -208,8 +202,7 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/ImageExtensions.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Resize the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> to the specified width and height.</p>
-</div>
+  <div class="markdown level1 summary">Resize the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> to the specified width and height.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -219,21 +212,17 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>image</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> to resize.</p>
-</dd>
+    <dd>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> to resize.</dd>
     <dt><code>newWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The width to resize to.</p>
-</dd>
+    <dd>The width to resize to.</dd>
     <dt><code>newHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The height to resize to.</p>
-</dd>
+    <dd>The height to resize to.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></dt>
-    <dd><p>The resized <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a>.</p>
-</dd>
+    <dd>The resized <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a>.</dd>
   </dl>
 
 
@@ -246,12 +235,10 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">image</code> was <code>null</code>.</p>
-</dd>
+    <dd>If <code class="paramref">image</code> was <code>null</code>.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If the <code class="paramref">newWidth</code> or
-<code class="paramref">newHeight</code> was less than 0.</p>
-</dd>
+    <dd>If the <code class="paramref">newWidth</code> or
+    <code class="paramref">newHeight</code> was less than 0.</dd>
   </dl>
 
 
@@ -263,8 +250,7 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/ImageExtensions.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Resize the image to be the desired width and height while attempting to maintain the aspect ratio.</p>
-</div>
+  <div class="markdown level1 summary">Resize the image to be the desired width and height while attempting to maintain the aspect ratio.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -274,21 +260,17 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>image</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> to resize.</p>
-</dd>
+    <dd>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> to resize.</dd>
     <dt><code>desiredWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The desired width of the new image.</p>
-</dd>
+    <dd>The desired width of the new image.</dd>
     <dt><code>desiredHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The desired height of the new image.</p>
-</dd>
+    <dd>The desired height of the new image.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></dt>
-    <dd><p>The scaled <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a>.</p>
-</dd>
+    <dd>The scaled <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a>.</dd>
   </dl>
 
 
@@ -301,12 +283,10 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">image</code> was <code>null</code>.</p>
-</dd>
+    <dd>If <code class="paramref">image</code> was <code>null</code>.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If the <code class="paramref">desiredWidth</code> or
-<code class="paramref">desiredHeight</code> was less than 0.</p>
-</dd>
+    <dd>If the <code class="paramref">desiredWidth</code> or
+    <code class="paramref">desiredHeight</code> was less than 0.</dd>
   </dl>
 
 
@@ -318,8 +298,7 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/ImageExtensions.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Convert an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</p>
-</div>
+  <div class="markdown level1 summary">Convert an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -329,15 +308,13 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>image</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></dt>
-    <dd><p>The image to convert.</p>
-</dd>
+    <dd>The image to convert.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array representing the image.</p>
-</dd>
+    <dd>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array representing the image.</dd>
   </dl>
 
 
@@ -350,8 +327,7 @@ Class ImageExtensions  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If the <code class="paramref">image</code> was <code>null</code>.</p>
-</dd>
+    <dd>If the <code class="paramref">image</code> was <code>null</code>.</dd>
   </dl>
 
 

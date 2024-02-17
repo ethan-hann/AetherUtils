@@ -97,8 +97,7 @@ Class NumberExtensions  <a class="header-action link-secondary" title="View sour
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides extension methods for manipulating various number objects.</p>
-</div>
+  <div class="markdown summary">Provides extension methods for manipulating various number objects.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -160,9 +159,8 @@ Class NumberExtensions  <a class="header-action link-secondary" title="View sour
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/NumberExtensions.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Formats a size in bytes (represented by an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> value) to the next closest base-2 size
-representation and appends its suffix to the end; uses <code>1024</code> as the conversion factor.</p>
-</div>
+  <div class="markdown level1 summary">Formats a size in bytes (represented by an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> value) to the next closest base-2 size
+representation and appends its suffix to the end; uses <code>1024</code> as the conversion factor.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -172,15 +170,13 @@ representation and appends its suffix to the end; uses <code>1024</code> as the 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>sizeInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The size, in bytes, to format.</p>
-</dd>
+    <dd>The size, in bytes, to format.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The number formatted with its suffix as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>.</p>
-</dd>
+    <dd>The number formatted with its suffix as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>.</dd>
   </dl>
 
 
@@ -193,8 +189,7 @@ representation and appends its suffix to the end; uses <code>1024</code> as the 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">sizeInBytes</code> was <code>null</code>.</p>
-</dd>
+    <dd>If <code class="paramref">sizeInBytes</code> was <code>null</code>.</dd>
   </dl>
 
 
@@ -206,8 +201,7 @@ representation and appends its suffix to the end; uses <code>1024</code> as the 
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/NumberExtensions.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get an absolute value in inches represented by the specified number of pixels.</p>
-</div>
+  <div class="markdown level1 summary">Get an absolute value in inches represented by the specified number of pixels.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -217,18 +211,15 @@ representation and appends its suffix to the end; uses <code>1024</code> as the 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>pixels</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number of pixels to convert.</p>
-</dd>
+    <dd>The number of pixels to convert.</dd>
     <dt><code>dpi</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The DPI (dots per inch) of the screen; defaults to <code>96</code>.</p>
-</dd>
+    <dd>The DPI (dots per inch) of the screen; defaults to <code>96</code>.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The inches equivalent of the pixels.</p>
-</dd>
+    <dd>The inches equivalent of the pixels.</dd>
   </dl>
 
 
@@ -241,11 +232,9 @@ representation and appends its suffix to the end; uses <code>1024</code> as the 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">pixels</code> was <code>null</code>.</p>
-</dd>
+    <dd>If <code class="paramref">pixels</code> was <code>null</code>.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dividebyzeroexception">DivideByZeroException</a></dt>
-    <dd><p>If <code class="paramref">dpi</code> was 0.</p>
-</dd>
+    <dd>If <code class="paramref">dpi</code> was 0.</dd>
   </dl>
 
 
@@ -257,8 +246,7 @@ representation and appends its suffix to the end; uses <code>1024</code> as the 
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/NumberExtensions.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get an absolute value in pixels represented by the specified number of inches.</p>
-</div>
+  <div class="markdown level1 summary">Get an absolute value in pixels represented by the specified number of inches.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -268,18 +256,15 @@ representation and appends its suffix to the end; uses <code>1024</code> as the 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>inches</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number of inches to convert.</p>
-</dd>
+    <dd>The number of inches to convert.</dd>
     <dt><code>dpi</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The DPI (dots per inch) of the screen; default is <code>96</code>.</p>
-</dd>
+    <dd>The DPI (dots per inch) of the screen; default is <code>96</code>.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The pixels equivalent of the inches.</p>
-</dd>
+    <dd>The pixels equivalent of the inches.</dd>
   </dl>
 
 
@@ -292,8 +277,7 @@ representation and appends its suffix to the end; uses <code>1024</code> as the 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">inches</code> was <code>null</code>.</p>
-</dd>
+    <dd>If <code class="paramref">inches</code> was <code>null</code>.</dd>
   </dl>
 
 

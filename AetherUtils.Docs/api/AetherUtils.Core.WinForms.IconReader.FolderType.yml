@@ -251,3 +251,4 @@ references:
   - uid: AetherUtils.Core.WinForms.IconReader.FolderType
     name: FolderType
     href: AetherUtils.Core.WinForms.IconReader.FolderType.html
+shouldSkipMarkup: true

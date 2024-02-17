@@ -266,6 +266,15 @@ references:
   fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Set(AetherUtils.Core.Structs.ConfigOption)
   nameWithType: ConfigManager<T>.Set(ConfigOption)
   nameWithType.vb: ConfigManager(Of T).Set(ConfigOption)
+- uid: AetherUtils.Core.Configuration.ConfigManager`1.Set(AetherUtils.Core.Structs.ConfigOption,System.Object)
+  name: Set(ConfigOption, object?)
+  href: api/AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_Set_AetherUtils_Core_Structs_ConfigOption_System_Object_
+  commentId: M:AetherUtils.Core.Configuration.ConfigManager`1.Set(AetherUtils.Core.Structs.ConfigOption,System.Object)
+  name.vb: Set(ConfigOption, Object)
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>.Set(AetherUtils.Core.Structs.ConfigOption, object?)
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Set(AetherUtils.Core.Structs.ConfigOption, Object)
+  nameWithType: ConfigManager<T>.Set(ConfigOption, object?)
+  nameWithType.vb: ConfigManager(Of T).Set(ConfigOption, Object)
 - uid: AetherUtils.Core.Configuration.ConfigManager`1.Set(System.String,System.Object)
   name: Set(string, object?)
   href: api/AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_Set_System_String_System_Object_
@@ -284,6 +293,22 @@ references:
   fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T).Set
   nameWithType: ConfigManager<T>.Set
   nameWithType.vb: ConfigManager(Of T).Set
+- uid: AetherUtils.Core.Configuration.ConfigManager`1._deserializer
+  name: _deserializer
+  href: api/AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1__deserializer
+  commentId: F:AetherUtils.Core.Configuration.ConfigManager`1._deserializer
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>._deserializer
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T)._deserializer
+  nameWithType: ConfigManager<T>._deserializer
+  nameWithType.vb: ConfigManager(Of T)._deserializer
+- uid: AetherUtils.Core.Configuration.ConfigManager`1._serializer
+  name: _serializer
+  href: api/AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1__serializer
+  commentId: F:AetherUtils.Core.Configuration.ConfigManager`1._serializer
+  fullName: AetherUtils.Core.Configuration.ConfigManager<T>._serializer
+  fullName.vb: AetherUtils.Core.Configuration.ConfigManager(Of T)._serializer
+  nameWithType: ConfigManager<T>._serializer
+  nameWithType.vb: ConfigManager(Of T)._serializer
 - uid: AetherUtils.Core.Configuration.DefaultConfig
   name: DefaultConfig
   href: api/AetherUtils.Core.Configuration.DefaultConfig.html
@@ -613,6 +638,90 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Configuration.YamlConfigManager.CreateDefaultConfig
   nameWithType: YamlConfigManager.CreateDefaultConfig
+- uid: AetherUtils.Core.Enums
+  name: AetherUtils.Core.Enums
+  href: api/AetherUtils.Core.Enums.html
+  commentId: N:AetherUtils.Core.Enums
+  fullName: AetherUtils.Core.Enums
+  nameWithType: AetherUtils.Core.Enums
+- uid: AetherUtils.Core.Enums.CharacterType
+  name: CharacterType
+  href: api/AetherUtils.Core.Enums.CharacterType.html
+  commentId: T:AetherUtils.Core.Enums.CharacterType
+  fullName: AetherUtils.Core.Enums.CharacterType
+  nameWithType: CharacterType
+- uid: AetherUtils.Core.Enums.CharacterType.Character
+  name: Character
+  href: api/AetherUtils.Core.Enums.CharacterType.html#AetherUtils_Core_Enums_CharacterType_Character
+  commentId: F:AetherUtils.Core.Enums.CharacterType.Character
+  fullName: AetherUtils.Core.Enums.CharacterType.Character
+  nameWithType: CharacterType.Character
+- uid: AetherUtils.Core.Enums.CharacterType.Number
+  name: Number
+  href: api/AetherUtils.Core.Enums.CharacterType.html#AetherUtils_Core_Enums_CharacterType_Number
+  commentId: F:AetherUtils.Core.Enums.CharacterType.Number
+  fullName: AetherUtils.Core.Enums.CharacterType.Number
+  nameWithType: CharacterType.Number
+- uid: AetherUtils.Core.Enums.CharacterType.Special
+  name: Special
+  href: api/AetherUtils.Core.Enums.CharacterType.html#AetherUtils_Core_Enums_CharacterType_Special
+  commentId: F:AetherUtils.Core.Enums.CharacterType.Special
+  fullName: AetherUtils.Core.Enums.CharacterType.Special
+  nameWithType: CharacterType.Special
+- uid: AetherUtils.Core.Enums.CharacterType.WhiteSpace
+  name: WhiteSpace
+  href: api/AetherUtils.Core.Enums.CharacterType.html#AetherUtils_Core_Enums_CharacterType_WhiteSpace
+  commentId: F:AetherUtils.Core.Enums.CharacterType.WhiteSpace
+  fullName: AetherUtils.Core.Enums.CharacterType.WhiteSpace
+  nameWithType: CharacterType.WhiteSpace
+- uid: AetherUtils.Core.Enums.MemorySize
+  name: MemorySize
+  href: api/AetherUtils.Core.Enums.MemorySize.html
+  commentId: T:AetherUtils.Core.Enums.MemorySize
+  fullName: AetherUtils.Core.Enums.MemorySize
+  nameWithType: MemorySize
+- uid: AetherUtils.Core.Enums.MemorySize.Byte
+  name: Byte
+  href: api/AetherUtils.Core.Enums.MemorySize.html#AetherUtils_Core_Enums_MemorySize_Byte
+  commentId: F:AetherUtils.Core.Enums.MemorySize.Byte
+  fullName: AetherUtils.Core.Enums.MemorySize.Byte
+  nameWithType: MemorySize.Byte
+- uid: AetherUtils.Core.Enums.MemorySize.ExaByte
+  name: ExaByte
+  href: api/AetherUtils.Core.Enums.MemorySize.html#AetherUtils_Core_Enums_MemorySize_ExaByte
+  commentId: F:AetherUtils.Core.Enums.MemorySize.ExaByte
+  fullName: AetherUtils.Core.Enums.MemorySize.ExaByte
+  nameWithType: MemorySize.ExaByte
+- uid: AetherUtils.Core.Enums.MemorySize.GigaByte
+  name: GigaByte
+  href: api/AetherUtils.Core.Enums.MemorySize.html#AetherUtils_Core_Enums_MemorySize_GigaByte
+  commentId: F:AetherUtils.Core.Enums.MemorySize.GigaByte
+  fullName: AetherUtils.Core.Enums.MemorySize.GigaByte
+  nameWithType: MemorySize.GigaByte
+- uid: AetherUtils.Core.Enums.MemorySize.KiloByte
+  name: KiloByte
+  href: api/AetherUtils.Core.Enums.MemorySize.html#AetherUtils_Core_Enums_MemorySize_KiloByte
+  commentId: F:AetherUtils.Core.Enums.MemorySize.KiloByte
+  fullName: AetherUtils.Core.Enums.MemorySize.KiloByte
+  nameWithType: MemorySize.KiloByte
+- uid: AetherUtils.Core.Enums.MemorySize.MegaByte
+  name: MegaByte
+  href: api/AetherUtils.Core.Enums.MemorySize.html#AetherUtils_Core_Enums_MemorySize_MegaByte
+  commentId: F:AetherUtils.Core.Enums.MemorySize.MegaByte
+  fullName: AetherUtils.Core.Enums.MemorySize.MegaByte
+  nameWithType: MemorySize.MegaByte
+- uid: AetherUtils.Core.Enums.MemorySize.PetaByte
+  name: PetaByte
+  href: api/AetherUtils.Core.Enums.MemorySize.html#AetherUtils_Core_Enums_MemorySize_PetaByte
+  commentId: F:AetherUtils.Core.Enums.MemorySize.PetaByte
+  fullName: AetherUtils.Core.Enums.MemorySize.PetaByte
+  nameWithType: MemorySize.PetaByte
+- uid: AetherUtils.Core.Enums.MemorySize.TerraByte
+  name: TerraByte
+  href: api/AetherUtils.Core.Enums.MemorySize.html#AetherUtils_Core_Enums_MemorySize_TerraByte
+  commentId: F:AetherUtils.Core.Enums.MemorySize.TerraByte
+  fullName: AetherUtils.Core.Enums.MemorySize.TerraByte
+  nameWithType: MemorySize.TerraByte
 - uid: AetherUtils.Core.Exceptions
   name: AetherUtils.Core.Exceptions
   href: api/AetherUtils.Core.Exceptions.html
@@ -760,6 +869,12 @@ references:
   fullName.vb: AetherUtils.Core.Extensions.CollectionExtensions.RenameKey(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey, TKey)
   nameWithType: CollectionExtensions.RenameKey<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TKey)
   nameWithType.vb: CollectionExtensions.RenameKey(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TKey)
+- uid: AetherUtils.Core.Extensions.CollectionExtensions.SyncRoot
+  name: SyncRoot
+  href: api/AetherUtils.Core.Extensions.CollectionExtensions.html#AetherUtils_Core_Extensions_CollectionExtensions_SyncRoot
+  commentId: F:AetherUtils.Core.Extensions.CollectionExtensions.SyncRoot
+  fullName: AetherUtils.Core.Extensions.CollectionExtensions.SyncRoot
+  nameWithType: CollectionExtensions.SyncRoot
 - uid: AetherUtils.Core.Extensions.ControlExtensions
   name: ControlExtensions
   href: api/AetherUtils.Core.Extensions.ControlExtensions.html
@@ -1788,6 +1903,23 @@ references:
   fullName.vb: AetherUtils.Core.Files.Json(Of T).LoadJson
   nameWithType: Json<T>.LoadJson
   nameWithType.vb: Json(Of T).LoadJson
+- uid: AetherUtils.Core.Files.Json`1.ResetWriters
+  name: ResetWriters()
+  href: api/AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1_ResetWriters
+  commentId: M:AetherUtils.Core.Files.Json`1.ResetWriters
+  fullName: AetherUtils.Core.Files.Json<T>.ResetWriters()
+  fullName.vb: AetherUtils.Core.Files.Json(Of T).ResetWriters()
+  nameWithType: Json<T>.ResetWriters()
+  nameWithType.vb: Json(Of T).ResetWriters()
+- uid: AetherUtils.Core.Files.Json`1.ResetWriters*
+  name: ResetWriters
+  href: api/AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1_ResetWriters_
+  commentId: Overload:AetherUtils.Core.Files.Json`1.ResetWriters
+  isSpec: "True"
+  fullName: AetherUtils.Core.Files.Json<T>.ResetWriters
+  fullName.vb: AetherUtils.Core.Files.Json(Of T).ResetWriters
+  nameWithType: Json<T>.ResetWriters
+  nameWithType.vb: Json(Of T).ResetWriters
 - uid: AetherUtils.Core.Files.Json`1.SaveJson(System.String,`0)
   name: SaveJson(string, T)
   href: api/AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1_SaveJson_System_String__0_
@@ -1823,6 +1955,30 @@ references:
   fullName.vb: AetherUtils.Core.Files.Json(Of T).ToJson
   nameWithType: Json<T>.ToJson
   nameWithType.vb: Json(Of T).ToJson
+- uid: AetherUtils.Core.Files.Json`1._serializer
+  name: _serializer
+  href: api/AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1__serializer
+  commentId: F:AetherUtils.Core.Files.Json`1._serializer
+  fullName: AetherUtils.Core.Files.Json<T>._serializer
+  fullName.vb: AetherUtils.Core.Files.Json(Of T)._serializer
+  nameWithType: Json<T>._serializer
+  nameWithType.vb: Json(Of T)._serializer
+- uid: AetherUtils.Core.Files.Json`1._stringBuilder
+  name: _stringBuilder
+  href: api/AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1__stringBuilder
+  commentId: F:AetherUtils.Core.Files.Json`1._stringBuilder
+  fullName: AetherUtils.Core.Files.Json<T>._stringBuilder
+  fullName.vb: AetherUtils.Core.Files.Json(Of T)._stringBuilder
+  nameWithType: Json<T>._stringBuilder
+  nameWithType.vb: Json(Of T)._stringBuilder
+- uid: AetherUtils.Core.Files.Json`1._stringWriter
+  name: _stringWriter
+  href: api/AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1__stringWriter
+  commentId: F:AetherUtils.Core.Files.Json`1._stringWriter
+  fullName: AetherUtils.Core.Files.Json<T>._stringWriter
+  fullName.vb: AetherUtils.Core.Files.Json(Of T)._stringWriter
+  nameWithType: Json<T>._stringWriter
+  nameWithType.vb: Json(Of T)._stringWriter
 - uid: AetherUtils.Core.Files.Xml`1
   name: Xml<T>
   href: api/AetherUtils.Core.Files.Xml-1.html
@@ -2035,6 +2191,24 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Licensing.Licenser.Validate
   nameWithType: Licenser.Validate
+- uid: AetherUtils.Core.Licensing.Licenser._invalidExtensionFailure
+  name: _invalidExtensionFailure
+  href: api/AetherUtils.Core.Licensing.Licenser.html#AetherUtils_Core_Licensing_Licenser__invalidExtensionFailure
+  commentId: F:AetherUtils.Core.Licensing.Licenser._invalidExtensionFailure
+  fullName: AetherUtils.Core.Licensing.Licenser._invalidExtensionFailure
+  nameWithType: Licenser._invalidExtensionFailure
+- uid: AetherUtils.Core.Licensing.Licenser._invalidFilePathFailure
+  name: _invalidFilePathFailure
+  href: api/AetherUtils.Core.Licensing.Licenser.html#AetherUtils_Core_Licensing_Licenser__invalidFilePathFailure
+  commentId: F:AetherUtils.Core.Licensing.Licenser._invalidFilePathFailure
+  fullName: AetherUtils.Core.Licensing.Licenser._invalidFilePathFailure
+  nameWithType: Licenser._invalidFilePathFailure
+- uid: AetherUtils.Core.Licensing.Licenser._noLicenseFailure
+  name: _noLicenseFailure
+  href: api/AetherUtils.Core.Licensing.Licenser.html#AetherUtils_Core_Licensing_Licenser__noLicenseFailure
+  commentId: F:AetherUtils.Core.Licensing.Licenser._noLicenseFailure
+  fullName: AetherUtils.Core.Licensing.Licenser._noLicenseFailure
+  nameWithType: Licenser._noLicenseFailure
 - uid: AetherUtils.Core.Licensing.Models
   name: AetherUtils.Core.Licensing.Models
   href: api/AetherUtils.Core.Licensing.Models.html
@@ -2287,6 +2461,32 @@ references:
   commentId: T:AetherUtils.Core.Logging.CLogger
   fullName: AetherUtils.Core.Logging.CLogger
   nameWithType: CLogger
+- uid: AetherUtils.Core.Logging.CLogger.CreateLogConsoleFromOptions(AetherUtils.Core.Configuration.LogOptions)
+  name: CreateLogConsoleFromOptions(LogOptions)
+  href: api/AetherUtils.Core.Logging.CLogger.html#AetherUtils_Core_Logging_CLogger_CreateLogConsoleFromOptions_AetherUtils_Core_Configuration_LogOptions_
+  commentId: M:AetherUtils.Core.Logging.CLogger.CreateLogConsoleFromOptions(AetherUtils.Core.Configuration.LogOptions)
+  fullName: AetherUtils.Core.Logging.CLogger.CreateLogConsoleFromOptions(AetherUtils.Core.Configuration.LogOptions)
+  nameWithType: CLogger.CreateLogConsoleFromOptions(LogOptions)
+- uid: AetherUtils.Core.Logging.CLogger.CreateLogConsoleFromOptions*
+  name: CreateLogConsoleFromOptions
+  href: api/AetherUtils.Core.Logging.CLogger.html#AetherUtils_Core_Logging_CLogger_CreateLogConsoleFromOptions_
+  commentId: Overload:AetherUtils.Core.Logging.CLogger.CreateLogConsoleFromOptions
+  isSpec: "True"
+  fullName: AetherUtils.Core.Logging.CLogger.CreateLogConsoleFromOptions
+  nameWithType: CLogger.CreateLogConsoleFromOptions
+- uid: AetherUtils.Core.Logging.CLogger.CreateLogFileFromOptions(AetherUtils.Core.Configuration.LogOptions)
+  name: CreateLogFileFromOptions(LogOptions)
+  href: api/AetherUtils.Core.Logging.CLogger.html#AetherUtils_Core_Logging_CLogger_CreateLogFileFromOptions_AetherUtils_Core_Configuration_LogOptions_
+  commentId: M:AetherUtils.Core.Logging.CLogger.CreateLogFileFromOptions(AetherUtils.Core.Configuration.LogOptions)
+  fullName: AetherUtils.Core.Logging.CLogger.CreateLogFileFromOptions(AetherUtils.Core.Configuration.LogOptions)
+  nameWithType: CLogger.CreateLogFileFromOptions(LogOptions)
+- uid: AetherUtils.Core.Logging.CLogger.CreateLogFileFromOptions*
+  name: CreateLogFileFromOptions
+  href: api/AetherUtils.Core.Logging.CLogger.html#AetherUtils_Core_Logging_CLogger_CreateLogFileFromOptions_
+  commentId: Overload:AetherUtils.Core.Logging.CLogger.CreateLogFileFromOptions
+  isSpec: "True"
+  fullName: AetherUtils.Core.Logging.CLogger.CreateLogFileFromOptions
+  nameWithType: CLogger.CreateLogFileFromOptions
 - uid: AetherUtils.Core.Logging.CLogger.GetCurrentLogger(System.String)
   name: GetCurrentLogger(string)
   href: api/AetherUtils.Core.Logging.CLogger.html#AetherUtils_Core_Logging_CLogger_GetCurrentLogger_System_String_
@@ -2347,6 +2547,12 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Logging.CLogger.IsInitialized
   nameWithType: CLogger.IsInitialized
+- uid: AetherUtils.Core.Logging.CLogger._isInitialized
+  name: _isInitialized
+  href: api/AetherUtils.Core.Logging.CLogger.html#AetherUtils_Core_Logging_CLogger__isInitialized
+  commentId: F:AetherUtils.Core.Logging.CLogger._isInitialized
+  fullName: AetherUtils.Core.Logging.CLogger._isInitialized
+  nameWithType: CLogger._isInitialized
 - uid: AetherUtils.Core.Reflection
   name: AetherUtils.Core.Reflection
   href: api/AetherUtils.Core.Reflection.html
@@ -2508,6 +2714,102 @@ references:
   commentId: T:AetherUtils.Core.Security.Encryption.EncryptionBase
   fullName: AetherUtils.Core.Security.Encryption.EncryptionBase
   nameWithType: EncryptionBase
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString(System.String,System.Int32,AetherUtils.Core.Security.Encryption.KeyLength)
+  name: DeriveKeyFromString(string, int, KeyLength)
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_DeriveKeyFromString_System_String_System_Int32_AetherUtils_Core_Security_Encryption_KeyLength_
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString(System.String,System.Int32,AetherUtils.Core.Security.Encryption.KeyLength)
+  name.vb: DeriveKeyFromString(String, Integer, KeyLength)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString(string, int, AetherUtils.Core.Security.Encryption.KeyLength)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString(String, Integer, AetherUtils.Core.Security.Encryption.KeyLength)
+  nameWithType: EncryptionBase.DeriveKeyFromString(string, int, KeyLength)
+  nameWithType.vb: EncryptionBase.DeriveKeyFromString(String, Integer, KeyLength)
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString*
+  name: DeriveKeyFromString
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_DeriveKeyFromString_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString
+  nameWithType: EncryptionBase.DeriveKeyFromString
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices(System.Collections.Generic.IReadOnlyList{System.Byte})
+  name: FindSeparatorIndices(IReadOnlyList<byte>)
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_FindSeparatorIndices_System_Collections_Generic_IReadOnlyList_System_Byte__
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices(System.Collections.Generic.IReadOnlyList{System.Byte})
+  name.vb: FindSeparatorIndices(IReadOnlyList(Of Byte))
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices(System.Collections.Generic.IReadOnlyList<byte>)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices(System.Collections.Generic.IReadOnlyList(Of Byte))
+  nameWithType: EncryptionBase.FindSeparatorIndices(IReadOnlyList<byte>)
+  nameWithType.vb: EncryptionBase.FindSeparatorIndices(IReadOnlyList(Of Byte))
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices*
+  name: FindSeparatorIndices
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_FindSeparatorIndices_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices
+  nameWithType: EncryptionBase.FindSeparatorIndices
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String(System.String)
+  name: GetBytesFromUtf8String(string)
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetBytesFromUtf8String_System_String_
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String(System.String)
+  name.vb: GetBytesFromUtf8String(String)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String(string)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String(String)
+  nameWithType: EncryptionBase.GetBytesFromUtf8String(string)
+  nameWithType.vb: EncryptionBase.GetBytesFromUtf8String(String)
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String*
+  name: GetBytesFromUtf8String
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetBytesFromUtf8String_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String
+  nameWithType: EncryptionBase.GetBytesFromUtf8String
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes(System.Byte[]@)
+  name: GetExtensionFromBytes(ref byte[])
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionFromBytes_System_Byte____
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes(System.Byte[]@)
+  name.vb: GetExtensionFromBytes(Byte())
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes(ref byte[])
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes(Byte())
+  nameWithType: EncryptionBase.GetExtensionFromBytes(ref byte[])
+  nameWithType.vb: EncryptionBase.GetExtensionFromBytes(Byte())
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes*
+  name: GetExtensionFromBytes
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionFromBytes_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes
+  nameWithType: EncryptionBase.GetExtensionFromBytes
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString(System.Byte[])
+  name: GetExtensionString(byte[])
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionString_System_Byte___
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString(System.Byte[])
+  name.vb: GetExtensionString(Byte())
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString(byte[])
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString(Byte())
+  nameWithType: EncryptionBase.GetExtensionString(byte[])
+  nameWithType.vb: EncryptionBase.GetExtensionString(Byte())
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString*
+  name: GetExtensionString
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionString_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString
+  nameWithType: EncryptionBase.GetExtensionString
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+  name: GetRandomKey(int)
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_System_Int32_
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+  name.vb: GetRandomKey(Integer)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(int)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(Integer)
+  nameWithType: EncryptionBase.GetRandomKey(int)
+  nameWithType.vb: EncryptionBase.GetRandomKey(Integer)
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey*
+  name: GetRandomKey
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey
+  nameWithType: EncryptionBase.GetRandomKey
 - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   name: GetRandomKeyPhrase(int)
   href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKeyPhrase_System_Int32_
@@ -2524,12 +2826,88 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase
   nameWithType: EncryptionBase.GetRandomKeyPhrase
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes(System.Byte[])
+  name: GetStringFromUtf8Bytes(byte[])
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetStringFromUtf8Bytes_System_Byte___
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes(System.Byte[])
+  name.vb: GetStringFromUtf8Bytes(Byte())
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes(byte[])
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes(Byte())
+  nameWithType: EncryptionBase.GetStringFromUtf8Bytes(byte[])
+  nameWithType.vb: EncryptionBase.GetStringFromUtf8Bytes(Byte())
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes*
+  name: GetStringFromUtf8Bytes
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetStringFromUtf8Bytes_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes
+  nameWithType: EncryptionBase.GetStringFromUtf8Bytes
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream(System.IO.Stream)
+  name: ReadIvFromStream(Stream)
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_ReadIvFromStream_System_IO_Stream_
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream(System.IO.Stream)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream(System.IO.Stream)
+  nameWithType: EncryptionBase.ReadIvFromStream(Stream)
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream*
+  name: ReadIvFromStream
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_ReadIvFromStream_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream
+  nameWithType: EncryptionBase.ReadIvFromStream
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.SHGFI_EXTENSION_SEPARATOR
+  name: SHGFI_EXTENSION_SEPARATOR
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_SHGFI_EXTENSION_SEPARATOR
+  commentId: F:AetherUtils.Core.Security.Encryption.EncryptionBase.SHGFI_EXTENSION_SEPARATOR
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.SHGFI_EXTENSION_SEPARATOR
+  nameWithType: EncryptionBase.SHGFI_EXTENSION_SEPARATOR
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes(System.String,System.Byte[]@)
+  name: WriteExtensionToBytes(string, ref byte[])
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_WriteExtensionToBytes_System_String_System_Byte____
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes(System.String,System.Byte[]@)
+  name.vb: WriteExtensionToBytes(String, Byte())
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes(string, ref byte[])
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes(String, Byte())
+  nameWithType: EncryptionBase.WriteExtensionToBytes(string, ref byte[])
+  nameWithType.vb: EncryptionBase.WriteExtensionToBytes(String, Byte())
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes*
+  name: WriteExtensionToBytes
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_WriteExtensionToBytes_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes
+  nameWithType: EncryptionBase.WriteExtensionToBytes
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream(System.Byte[],System.IO.Stream)
+  name: WriteIvToStream(byte[], Stream)
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_WriteIvToStream_System_Byte___System_IO_Stream_
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream(System.Byte[],System.IO.Stream)
+  name.vb: WriteIvToStream(Byte(), Stream)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream(byte[], System.IO.Stream)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream(Byte(), System.IO.Stream)
+  nameWithType: EncryptionBase.WriteIvToStream(byte[], Stream)
+  nameWithType.vb: EncryptionBase.WriteIvToStream(Byte(), Stream)
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream*
+  name: WriteIvToStream
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_WriteIvToStream_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream
+  nameWithType: EncryptionBase.WriteIvToStream
 - uid: AetherUtils.Core.Security.Encryption.FileEncryptionService
   name: FileEncryptionService
   href: api/AetherUtils.Core.Security.Encryption.FileEncryptionService.html
   commentId: T:AetherUtils.Core.Security.Encryption.FileEncryptionService
   fullName: AetherUtils.Core.Security.Encryption.FileEncryptionService
   nameWithType: FileEncryptionService
+- uid: AetherUtils.Core.Security.Encryption.FileEncryptionService.#ctor
+  name: FileEncryptionService()
+  href: api/AetherUtils.Core.Security.Encryption.FileEncryptionService.html#AetherUtils_Core_Security_Encryption_FileEncryptionService__ctor
+  commentId: M:AetherUtils.Core.Security.Encryption.FileEncryptionService.#ctor
+  name.vb: New()
+  fullName: AetherUtils.Core.Security.Encryption.FileEncryptionService.FileEncryptionService()
+  fullName.vb: AetherUtils.Core.Security.Encryption.FileEncryptionService.New()
+  nameWithType: FileEncryptionService.FileEncryptionService()
+  nameWithType.vb: FileEncryptionService.New()
 - uid: AetherUtils.Core.Security.Encryption.FileEncryptionService.#ctor(System.String)
   name: FileEncryptionService(string)
   href: api/AetherUtils.Core.Security.Encryption.FileEncryptionService.html#AetherUtils_Core_Security_Encryption_FileEncryptionService__ctor_System_String_
@@ -2549,6 +2927,12 @@ references:
   fullName.vb: AetherUtils.Core.Security.Encryption.FileEncryptionService.New
   nameWithType: FileEncryptionService.FileEncryptionService
   nameWithType.vb: FileEncryptionService.New
+- uid: AetherUtils.Core.Security.Encryption.FileEncryptionService.ByteEncryptor
+  name: ByteEncryptor
+  href: api/AetherUtils.Core.Security.Encryption.FileEncryptionService.html#AetherUtils_Core_Security_Encryption_FileEncryptionService_ByteEncryptor
+  commentId: F:AetherUtils.Core.Security.Encryption.FileEncryptionService.ByteEncryptor
+  fullName: AetherUtils.Core.Security.Encryption.FileEncryptionService.ByteEncryptor
+  nameWithType: FileEncryptionService.ByteEncryptor
 - uid: AetherUtils.Core.Security.Encryption.FileEncryptionService.DecryptAsync(System.String,System.String)
   name: DecryptAsync(string, string)
   href: api/AetherUtils.Core.Security.Encryption.FileEncryptionService.html#AetherUtils_Core_Security_Encryption_FileEncryptionService_DecryptAsync_System_String_System_String_
@@ -2626,6 +3010,75 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.Encryption.FileEncryptionService.FilePath
   nameWithType: FileEncryptionService.FilePath
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
+  name: IEncryptService<T, U>
+  href: api/AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  commentId: T:AetherUtils.Core.Security.Encryption.IEncryptService`2
+  name.vb: IEncryptService(Of T, U)
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, U>
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, U)
+  nameWithType: IEncryptService<T, U>
+  nameWithType.vb: IEncryptService(Of T, U)
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync(`1,System.String)
+  name: DecryptAsync(U, string)
+  href: api/AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  commentId: M:AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync(`1,System.String)
+  name.vb: DecryptAsync(U, String)
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, U>.DecryptAsync(U, string)
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, U).DecryptAsync(U, String)
+  nameWithType: IEncryptService<T, U>.DecryptAsync(U, string)
+  nameWithType.vb: IEncryptService(Of T, U).DecryptAsync(U, String)
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync*
+  name: DecryptAsync
+  href: api/AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, U>.DecryptAsync
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, U).DecryptAsync
+  nameWithType: IEncryptService<T, U>.DecryptAsync
+  nameWithType.vb: IEncryptService(Of T, U).DecryptAsync
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync(`0,System.String)
+  name: EncryptAsync(T, string)
+  href: api/AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  commentId: M:AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync(`0,System.String)
+  name.vb: EncryptAsync(T, String)
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, U>.EncryptAsync(T, string)
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, U).EncryptAsync(T, String)
+  nameWithType: IEncryptService<T, U>.EncryptAsync(T, string)
+  nameWithType.vb: IEncryptService(Of T, U).EncryptAsync(T, String)
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync*
+  name: EncryptAsync
+  href: api/AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, U>.EncryptAsync
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, U).EncryptAsync
+  nameWithType: IEncryptService<T, U>.EncryptAsync
+  nameWithType.vb: IEncryptService(Of T, U).EncryptAsync
+- uid: AetherUtils.Core.Security.Encryption.KeyLength
+  name: KeyLength
+  href: api/AetherUtils.Core.Security.Encryption.KeyLength.html
+  commentId: T:AetherUtils.Core.Security.Encryption.KeyLength
+  fullName: AetherUtils.Core.Security.Encryption.KeyLength
+  nameWithType: KeyLength
+- uid: AetherUtils.Core.Security.Encryption.KeyLength.Bits128
+  name: Bits128
+  href: api/AetherUtils.Core.Security.Encryption.KeyLength.html#AetherUtils_Core_Security_Encryption_KeyLength_Bits128
+  commentId: F:AetherUtils.Core.Security.Encryption.KeyLength.Bits128
+  fullName: AetherUtils.Core.Security.Encryption.KeyLength.Bits128
+  nameWithType: KeyLength.Bits128
+- uid: AetherUtils.Core.Security.Encryption.KeyLength.Bits192
+  name: Bits192
+  href: api/AetherUtils.Core.Security.Encryption.KeyLength.html#AetherUtils_Core_Security_Encryption_KeyLength_Bits192
+  commentId: F:AetherUtils.Core.Security.Encryption.KeyLength.Bits192
+  fullName: AetherUtils.Core.Security.Encryption.KeyLength.Bits192
+  nameWithType: KeyLength.Bits192
+- uid: AetherUtils.Core.Security.Encryption.KeyLength.Bits256
+  name: Bits256
+  href: api/AetherUtils.Core.Security.Encryption.KeyLength.html#AetherUtils_Core_Security_Encryption_KeyLength_Bits256
+  commentId: F:AetherUtils.Core.Security.Encryption.KeyLength.Bits256
+  fullName: AetherUtils.Core.Security.Encryption.KeyLength.Bits256
+  nameWithType: KeyLength.Bits256
 - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
   name: ObjectEncryptionService<T>
   href: api/AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html
@@ -2707,6 +3160,22 @@ references:
   fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).EncryptToFileAsync
   nameWithType: ObjectEncryptionService<T>.EncryptToFileAsync
   nameWithType.vb: ObjectEncryptionService(Of T).EncryptToFileAsync
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._fileEncryptionService
+  name: _fileEncryptionService
+  href: api/AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html#AetherUtils_Core_Security_Encryption_ObjectEncryptionService_1__fileEncryptionService
+  commentId: F:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._fileEncryptionService
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>._fileEncryptionService
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T)._fileEncryptionService
+  nameWithType: ObjectEncryptionService<T>._fileEncryptionService
+  nameWithType.vb: ObjectEncryptionService(Of T)._fileEncryptionService
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._stringEncryptor
+  name: _stringEncryptor
+  href: api/AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html#AetherUtils_Core_Security_Encryption_ObjectEncryptionService_1__stringEncryptor
+  commentId: F:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._stringEncryptor
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>._stringEncryptor
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T)._stringEncryptor
+  nameWithType: ObjectEncryptionService<T>._stringEncryptor
+  nameWithType.vb: ObjectEncryptionService(Of T)._stringEncryptor
 - uid: AetherUtils.Core.Security.Encryption.StringEncryptionService
   name: StringEncryptionService
   href: api/AetherUtils.Core.Security.Encryption.StringEncryptionService.html
@@ -2848,6 +3317,34 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.Hashing.HashService.HashedString
   nameWithType: HashService.HashedString
+- uid: AetherUtils.Core.Security.Hashing.HashService.ParseHashedString(System.String)
+  name: ParseHashedString(string)
+  href: api/AetherUtils.Core.Security.Hashing.HashService.html#AetherUtils_Core_Security_Hashing_HashService_ParseHashedString_System_String_
+  commentId: M:AetherUtils.Core.Security.Hashing.HashService.ParseHashedString(System.String)
+  name.vb: ParseHashedString(String)
+  fullName: AetherUtils.Core.Security.Hashing.HashService.ParseHashedString(string)
+  fullName.vb: AetherUtils.Core.Security.Hashing.HashService.ParseHashedString(String)
+  nameWithType: HashService.ParseHashedString(string)
+  nameWithType.vb: HashService.ParseHashedString(String)
+- uid: AetherUtils.Core.Security.Hashing.HashService.ParseHashedString*
+  name: ParseHashedString
+  href: api/AetherUtils.Core.Security.Hashing.HashService.html#AetherUtils_Core_Security_Hashing_HashService_ParseHashedString_
+  commentId: Overload:AetherUtils.Core.Security.Hashing.HashService.ParseHashedString
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Hashing.HashService.ParseHashedString
+  nameWithType: HashService.ParseHashedString
+- uid: AetherUtils.Core.Security.Hashing.HashService.SHGFI_DELIMITER
+  name: SHGFI_DELIMITER
+  href: api/AetherUtils.Core.Security.Hashing.HashService.html#AetherUtils_Core_Security_Hashing_HashService_SHGFI_DELIMITER
+  commentId: F:AetherUtils.Core.Security.Hashing.HashService.SHGFI_DELIMITER
+  fullName: AetherUtils.Core.Security.Hashing.HashService.SHGFI_DELIMITER
+  nameWithType: HashService.SHGFI_DELIMITER
+- uid: AetherUtils.Core.Security.Hashing.HashService._options
+  name: _options
+  href: api/AetherUtils.Core.Security.Hashing.HashService.html#AetherUtils_Core_Security_Hashing_HashService__options
+  commentId: F:AetherUtils.Core.Security.Hashing.HashService._options
+  fullName: AetherUtils.Core.Security.Hashing.HashService._options
+  nameWithType: HashService._options
 - uid: AetherUtils.Core.Security.Passwords
   name: AetherUtils.Core.Security.Passwords
   href: api/AetherUtils.Core.Security.Passwords.html
@@ -2982,6 +3479,185 @@ references:
   commentId: T:AetherUtils.Core.Security.Passwords.PasswordRule
   fullName: AetherUtils.Core.Security.Passwords.PasswordRule
   nameWithType: PasswordRule
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.#ctor(System.Boolean)
+  name: PasswordRule(bool)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule__ctor_System_Boolean_
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.#ctor(System.Boolean)
+  name.vb: New(Boolean)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.PasswordRule(bool)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRule.New(Boolean)
+  nameWithType: PasswordRule.PasswordRule(bool)
+  nameWithType.vb: PasswordRule.New(Boolean)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.#ctor(System.String)
+  name: PasswordRule(string)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule__ctor_System_String_
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.#ctor(System.String)
+  name.vb: New(String)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.PasswordRule(string)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRule.New(String)
+  nameWithType: PasswordRule.PasswordRule(string)
+  nameWithType.vb: PasswordRule.New(String)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.#ctor*
+  name: PasswordRule
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule__ctor_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.PasswordRule
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRule.New
+  nameWithType: PasswordRule.PasswordRule
+  nameWithType.vb: PasswordRule.New
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AddCharacter(System.Text.StringBuilder@,System.Int32@,System.Int32@,System.Int32@)
+  name: AddCharacter(ref StringBuilder, ref int, ref int, ref int)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AddCharacter_System_Text_StringBuilder__System_Int32__System_Int32__System_Int32__
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.AddCharacter(System.Text.StringBuilder@,System.Int32@,System.Int32@,System.Int32@)
+  name.vb: AddCharacter(StringBuilder, Integer, Integer, Integer)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AddCharacter(ref System.Text.StringBuilder, ref int, ref int, ref int)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRule.AddCharacter(System.Text.StringBuilder, Integer, Integer, Integer)
+  nameWithType: PasswordRule.AddCharacter(ref StringBuilder, ref int, ref int, ref int)
+  nameWithType.vb: PasswordRule.AddCharacter(StringBuilder, Integer, Integer, Integer)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AddCharacter*
+  name: AddCharacter
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AddCharacter_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.AddCharacter
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AddCharacter
+  nameWithType: PasswordRule.AddCharacter
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AddNumber(System.Text.StringBuilder@,System.Int32@,System.Int32@)
+  name: AddNumber(ref StringBuilder, ref int, ref int)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AddNumber_System_Text_StringBuilder__System_Int32__System_Int32__
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.AddNumber(System.Text.StringBuilder@,System.Int32@,System.Int32@)
+  name.vb: AddNumber(StringBuilder, Integer, Integer)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AddNumber(ref System.Text.StringBuilder, ref int, ref int)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRule.AddNumber(System.Text.StringBuilder, Integer, Integer)
+  nameWithType: PasswordRule.AddNumber(ref StringBuilder, ref int, ref int)
+  nameWithType.vb: PasswordRule.AddNumber(StringBuilder, Integer, Integer)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AddNumber*
+  name: AddNumber
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AddNumber_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.AddNumber
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AddNumber
+  nameWithType: PasswordRule.AddNumber
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AddSpecial(System.Text.StringBuilder@,System.Int32@,System.Int32@)
+  name: AddSpecial(ref StringBuilder, ref int, ref int)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AddSpecial_System_Text_StringBuilder__System_Int32__System_Int32__
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.AddSpecial(System.Text.StringBuilder@,System.Int32@,System.Int32@)
+  name.vb: AddSpecial(StringBuilder, Integer, Integer)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AddSpecial(ref System.Text.StringBuilder, ref int, ref int)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRule.AddSpecial(System.Text.StringBuilder, Integer, Integer)
+  nameWithType: PasswordRule.AddSpecial(ref StringBuilder, ref int, ref int)
+  nameWithType.vb: PasswordRule.AddSpecial(StringBuilder, Integer, Integer)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AddSpecial*
+  name: AddSpecial
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AddSpecial_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.AddSpecial
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AddSpecial
+  nameWithType: PasswordRule.AddSpecial
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AddWhiteSpace(System.Text.StringBuilder@,System.Int32@)
+  name: AddWhiteSpace(ref StringBuilder, ref int)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AddWhiteSpace_System_Text_StringBuilder__System_Int32__
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.AddWhiteSpace(System.Text.StringBuilder@,System.Int32@)
+  name.vb: AddWhiteSpace(StringBuilder, Integer)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AddWhiteSpace(ref System.Text.StringBuilder, ref int)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRule.AddWhiteSpace(System.Text.StringBuilder, Integer)
+  nameWithType: PasswordRule.AddWhiteSpace(ref StringBuilder, ref int)
+  nameWithType.vb: PasswordRule.AddWhiteSpace(StringBuilder, Integer)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AddWhiteSpace*
+  name: AddWhiteSpace
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AddWhiteSpace_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.AddWhiteSpace
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AddWhiteSpace
+  nameWithType: PasswordRule.AddWhiteSpace
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AllowNumbers
+  name: AllowNumbers()
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AllowNumbers
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.AllowNumbers
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AllowNumbers()
+  nameWithType: PasswordRule.AllowNumbers()
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AllowNumbers*
+  name: AllowNumbers
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AllowNumbers_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.AllowNumbers
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AllowNumbers
+  nameWithType: PasswordRule.AllowNumbers
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AllowSpecials
+  name: AllowSpecials()
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AllowSpecials
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.AllowSpecials
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AllowSpecials()
+  nameWithType: PasswordRule.AllowSpecials()
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AllowSpecials*
+  name: AllowSpecials
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AllowSpecials_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.AllowSpecials
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AllowSpecials
+  nameWithType: PasswordRule.AllowSpecials
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AllowWhiteSpace
+  name: AllowWhiteSpace()
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AllowWhiteSpace
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.AllowWhiteSpace
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AllowWhiteSpace()
+  nameWithType: PasswordRule.AllowWhiteSpace()
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.AllowWhiteSpace*
+  name: AllowWhiteSpace
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_AllowWhiteSpace_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.AllowWhiteSpace
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.AllowWhiteSpace
+  nameWithType: PasswordRule.AllowWhiteSpace
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.CompileRules
+  name: CompileRules()
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_CompileRules
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.CompileRules
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.CompileRules()
+  nameWithType: PasswordRule.CompileRules()
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.CompileRules*
+  name: CompileRules
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_CompileRules_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.CompileRules
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.CompileRules
+  nameWithType: PasswordRule.CompileRules
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.Encryptor
+  name: Encryptor
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_Encryptor
+  commentId: F:AetherUtils.Core.Security.Passwords.PasswordRule.Encryptor
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.Encryptor
+  nameWithType: PasswordRule.Encryptor
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.Expires(System.DateTime)
+  name: Expires(DateTime)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_Expires_System_DateTime_
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.Expires(System.DateTime)
+  name.vb: Expires(Date)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.Expires(System.DateTime)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRule.Expires(Date)
+  nameWithType: PasswordRule.Expires(DateTime)
+  nameWithType.vb: PasswordRule.Expires(Date)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.Expires*
+  name: Expires
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_Expires_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.Expires
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.Expires
+  nameWithType: PasswordRule.Expires
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.FinishedBuilding
+  name: FinishedBuilding()
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_FinishedBuilding
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.FinishedBuilding
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.FinishedBuilding()
+  nameWithType: PasswordRule.FinishedBuilding()
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.FinishedBuilding*
+  name: FinishedBuilding
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_FinishedBuilding_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.FinishedBuilding
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.FinishedBuilding
+  nameWithType: PasswordRule.FinishedBuilding
 - uid: AetherUtils.Core.Security.Passwords.PasswordRule.FromEncryptedString(System.String,System.String)
   name: FromEncryptedString(string, string)
   href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_FromEncryptedString_System_String_System_String_
@@ -2998,6 +3674,22 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.Passwords.PasswordRule.FromEncryptedString
   nameWithType: PasswordRule.FromEncryptedString
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.GetSelector(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: GetSelector(int, int, int, int)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_GetSelector_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.GetSelector(System.Int32,System.Int32,System.Int32,System.Int32)
+  name.vb: GetSelector(Integer, Integer, Integer, Integer)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.GetSelector(int, int, int, int)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRule.GetSelector(Integer, Integer, Integer, Integer)
+  nameWithType: PasswordRule.GetSelector(int, int, int, int)
+  nameWithType.vb: PasswordRule.GetSelector(Integer, Integer, Integer, Integer)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.GetSelector*
+  name: GetSelector
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_GetSelector_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.GetSelector
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.GetSelector
+  nameWithType: PasswordRule.GetSelector
 - uid: AetherUtils.Core.Security.Passwords.PasswordRule.GetValidPassword
   name: GetValidPassword()
   href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_GetValidPassword
@@ -3011,6 +3703,54 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.Passwords.PasswordRule.GetValidPassword
   nameWithType: PasswordRule.GetValidPassword
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumLength(System.Int32)
+  name: MinimumLength(int)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_MinimumLength_System_Int32_
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.MinimumLength(System.Int32)
+  name.vb: MinimumLength(Integer)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumLength(int)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumLength(Integer)
+  nameWithType: PasswordRule.MinimumLength(int)
+  nameWithType.vb: PasswordRule.MinimumLength(Integer)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumLength*
+  name: MinimumLength
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_MinimumLength_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.MinimumLength
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumLength
+  nameWithType: PasswordRule.MinimumLength
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumNumberCount(System.Int32)
+  name: MinimumNumberCount(int)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_MinimumNumberCount_System_Int32_
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.MinimumNumberCount(System.Int32)
+  name.vb: MinimumNumberCount(Integer)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumNumberCount(int)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumNumberCount(Integer)
+  nameWithType: PasswordRule.MinimumNumberCount(int)
+  nameWithType.vb: PasswordRule.MinimumNumberCount(Integer)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumNumberCount*
+  name: MinimumNumberCount
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_MinimumNumberCount_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.MinimumNumberCount
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumNumberCount
+  nameWithType: PasswordRule.MinimumNumberCount
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumSpecialCount(System.Int32)
+  name: MinimumSpecialCount(int)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_MinimumSpecialCount_System_Int32_
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.MinimumSpecialCount(System.Int32)
+  name.vb: MinimumSpecialCount(Integer)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumSpecialCount(int)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumSpecialCount(Integer)
+  nameWithType: PasswordRule.MinimumSpecialCount(int)
+  nameWithType.vb: PasswordRule.MinimumSpecialCount(Integer)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumSpecialCount*
+  name: MinimumSpecialCount
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_MinimumSpecialCount_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.MinimumSpecialCount
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.MinimumSpecialCount
+  nameWithType: PasswordRule.MinimumSpecialCount
 - uid: AetherUtils.Core.Security.Passwords.PasswordRule.New
   name: New()
   href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_New
@@ -3069,6 +3809,12 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.Passwords.PasswordRule.PasswordRules
   nameWithType: PasswordRule.PasswordRules
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.RuleData
+  name: RuleData
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_RuleData
+  commentId: F:AetherUtils.Core.Security.Passwords.PasswordRule.RuleData
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.RuleData
+  nameWithType: PasswordRule.RuleData
 - uid: AetherUtils.Core.Security.Passwords.PasswordRule.SaveToFileAsync(System.String,System.String)
   name: SaveToFileAsync(string, string)
   href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_SaveToFileAsync_System_String_System_String_
@@ -3085,6 +3831,12 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.Passwords.PasswordRule.SaveToFileAsync
   nameWithType: PasswordRule.SaveToFileAsync
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.Serializer
+  name: Serializer
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_Serializer
+  commentId: F:AetherUtils.Core.Security.Passwords.PasswordRule.Serializer
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.Serializer
+  nameWithType: PasswordRule.Serializer
 - uid: AetherUtils.Core.Security.Passwords.PasswordRule.ToEncryptedString(System.String)
   name: ToEncryptedString(string)
   href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_ToEncryptedString_System_String_
@@ -3101,6 +3853,19 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.Passwords.PasswordRule.ToEncryptedString
   nameWithType: PasswordRule.ToEncryptedString
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.ToJsonString
+  name: ToJsonString()
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_ToJsonString
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRule.ToJsonString
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.ToJsonString()
+  nameWithType: PasswordRule.ToJsonString()
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule.ToJsonString*
+  name: ToJsonString
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_ToJsonString_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRule.ToJsonString
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule.ToJsonString
+  nameWithType: PasswordRule.ToJsonString
 - uid: AetherUtils.Core.Security.Passwords.PasswordRule.ToString
   name: ToString()
   href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule_ToString
@@ -3130,6 +3895,165 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.Passwords.PasswordRule.Validate
   nameWithType: PasswordRule.Validate
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule._isBuilding
+  name: _isBuilding
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule__isBuilding
+  commentId: F:AetherUtils.Core.Security.Passwords.PasswordRule._isBuilding
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule._isBuilding
+  nameWithType: PasswordRule._isBuilding
+- uid: AetherUtils.Core.Security.Passwords.PasswordRule._isBuilt
+  name: _isBuilt
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRule.html#AetherUtils_Core_Security_Passwords_PasswordRule__isBuilt
+  commentId: F:AetherUtils.Core.Security.Passwords.PasswordRule._isBuilt
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRule._isBuilt
+  nameWithType: PasswordRule._isBuilt
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder
+  name: PasswordRuleBuilder
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html
+  commentId: T:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder
+  nameWithType: PasswordRuleBuilder
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.#ctor
+  name: PasswordRuleBuilder()
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder__ctor
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.#ctor
+  name.vb: New()
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.PasswordRuleBuilder()
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.New()
+  nameWithType: PasswordRuleBuilder.PasswordRuleBuilder()
+  nameWithType.vb: PasswordRuleBuilder.New()
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.#ctor*
+  name: PasswordRuleBuilder
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder__ctor_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.PasswordRuleBuilder
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.New
+  nameWithType: PasswordRuleBuilder.PasswordRuleBuilder
+  nameWithType.vb: PasswordRuleBuilder.New
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowNumbers
+  name: AllowNumbers()
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_AllowNumbers
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowNumbers
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowNumbers()
+  nameWithType: PasswordRuleBuilder.AllowNumbers()
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowNumbers*
+  name: AllowNumbers
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_AllowNumbers_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowNumbers
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowNumbers
+  nameWithType: PasswordRuleBuilder.AllowNumbers
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowSpecials
+  name: AllowSpecials()
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_AllowSpecials
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowSpecials
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowSpecials()
+  nameWithType: PasswordRuleBuilder.AllowSpecials()
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowSpecials*
+  name: AllowSpecials
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_AllowSpecials_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowSpecials
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowSpecials
+  nameWithType: PasswordRuleBuilder.AllowSpecials
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowWhitespace
+  name: AllowWhitespace()
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_AllowWhitespace
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowWhitespace
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowWhitespace()
+  nameWithType: PasswordRuleBuilder.AllowWhitespace()
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowWhitespace*
+  name: AllowWhitespace
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_AllowWhitespace_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowWhitespace
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.AllowWhitespace
+  nameWithType: PasswordRuleBuilder.AllowWhitespace
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Build
+  name: Build()
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_Build
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Build
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Build()
+  nameWithType: PasswordRuleBuilder.Build()
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Build*
+  name: Build
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_Build_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Build
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Build
+  nameWithType: PasswordRuleBuilder.Build
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Expires(System.DateTime)
+  name: Expires(DateTime)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_Expires_System_DateTime_
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Expires(System.DateTime)
+  name.vb: Expires(Date)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Expires(System.DateTime)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Expires(Date)
+  nameWithType: PasswordRuleBuilder.Expires(DateTime)
+  nameWithType.vb: PasswordRuleBuilder.Expires(Date)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Expires*
+  name: Expires
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_Expires_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Expires
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.Expires
+  nameWithType: PasswordRuleBuilder.Expires
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumLength(System.Int32)
+  name: MinimumLength(int)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_MinimumLength_System_Int32_
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumLength(System.Int32)
+  name.vb: MinimumLength(Integer)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumLength(int)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumLength(Integer)
+  nameWithType: PasswordRuleBuilder.MinimumLength(int)
+  nameWithType.vb: PasswordRuleBuilder.MinimumLength(Integer)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumLength*
+  name: MinimumLength
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_MinimumLength_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumLength
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumLength
+  nameWithType: PasswordRuleBuilder.MinimumLength
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumNumberCount(System.Int32)
+  name: MinimumNumberCount(int)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_MinimumNumberCount_System_Int32_
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumNumberCount(System.Int32)
+  name.vb: MinimumNumberCount(Integer)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumNumberCount(int)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumNumberCount(Integer)
+  nameWithType: PasswordRuleBuilder.MinimumNumberCount(int)
+  nameWithType.vb: PasswordRuleBuilder.MinimumNumberCount(Integer)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumNumberCount*
+  name: MinimumNumberCount
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_MinimumNumberCount_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumNumberCount
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumNumberCount
+  nameWithType: PasswordRuleBuilder.MinimumNumberCount
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumSpecialCount(System.Int32)
+  name: MinimumSpecialCount(int)
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_MinimumSpecialCount_System_Int32_
+  commentId: M:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumSpecialCount(System.Int32)
+  name.vb: MinimumSpecialCount(Integer)
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumSpecialCount(int)
+  fullName.vb: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumSpecialCount(Integer)
+  nameWithType: PasswordRuleBuilder.MinimumSpecialCount(int)
+  nameWithType.vb: PasswordRuleBuilder.MinimumSpecialCount(Integer)
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumSpecialCount*
+  name: MinimumSpecialCount
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder_MinimumSpecialCount_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumSpecialCount
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.MinimumSpecialCount
+  nameWithType: PasswordRuleBuilder.MinimumSpecialCount
+- uid: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder._rule
+  name: _rule
+  href: api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html#AetherUtils_Core_Security_Passwords_PasswordRuleBuilder__rule
+  commentId: F:AetherUtils.Core.Security.Passwords.PasswordRuleBuilder._rule
+  fullName: AetherUtils.Core.Security.Passwords.PasswordRuleBuilder._rule
+  nameWithType: PasswordRuleBuilder._rule
 - uid: AetherUtils.Core.Security.Passwords.PasswordRuleData
   name: PasswordRuleData
   href: api/AetherUtils.Core.Security.Passwords.PasswordRuleData.html
@@ -3290,6 +4214,65 @@ references:
   commentId: T:AetherUtils.Core.Security.Passwords.Validation.PasswordValidator
   fullName: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator
   nameWithType: PasswordValidator
+- uid: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.#ctor
+  name: PasswordValidator()
+  href: api/AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.html#AetherUtils_Core_Security_Passwords_Validation_PasswordValidator__ctor
+  commentId: M:AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.#ctor
+  name.vb: New()
+  fullName: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.PasswordValidator()
+  fullName.vb: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.New()
+  nameWithType: PasswordValidator.PasswordValidator()
+  nameWithType.vb: PasswordValidator.New()
+- uid: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.#ctor*
+  name: PasswordValidator
+  href: api/AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.html#AetherUtils_Core_Security_Passwords_Validation_PasswordValidator__ctor_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.PasswordValidator
+  fullName.vb: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.New
+  nameWithType: PasswordValidator.PasswordValidator
+  nameWithType.vb: PasswordValidator.New
+- uid: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.NumberChars
+  name: NumberChars
+  href: api/AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.html#AetherUtils_Core_Security_Passwords_Validation_PasswordValidator_NumberChars
+  commentId: F:AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.NumberChars
+  fullName: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.NumberChars
+  nameWithType: PasswordValidator.NumberChars
+- uid: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.RegularChars
+  name: RegularChars
+  href: api/AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.html#AetherUtils_Core_Security_Passwords_Validation_PasswordValidator_RegularChars
+  commentId: F:AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.RegularChars
+  fullName: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.RegularChars
+  nameWithType: PasswordValidator.RegularChars
+- uid: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.SpecialChars
+  name: SpecialChars
+  href: api/AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.html#AetherUtils_Core_Security_Passwords_Validation_PasswordValidator_SpecialChars
+  commentId: F:AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.SpecialChars
+  fullName: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.SpecialChars
+  nameWithType: PasswordValidator.SpecialChars
+- uid: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.Validate(AetherUtils.Core.Security.Passwords.PasswordRule,System.String)
+  name: Validate(PasswordRule, string)
+  href: api/AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.html#AetherUtils_Core_Security_Passwords_Validation_PasswordValidator_Validate_AetherUtils_Core_Security_Passwords_PasswordRule_System_String_
+  commentId: M:AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.Validate(AetherUtils.Core.Security.Passwords.PasswordRule,System.String)
+  name.vb: Validate(PasswordRule, String)
+  fullName: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.Validate(AetherUtils.Core.Security.Passwords.PasswordRule, string)
+  fullName.vb: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.Validate(AetherUtils.Core.Security.Passwords.PasswordRule, String)
+  nameWithType: PasswordValidator.Validate(PasswordRule, string)
+  nameWithType.vb: PasswordValidator.Validate(PasswordRule, String)
+- uid: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.Validate*
+  name: Validate
+  href: api/AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.html#AetherUtils_Core_Security_Passwords_Validation_PasswordValidator_Validate_
+  commentId: Overload:AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.Validate
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.Validate
+  nameWithType: PasswordValidator.Validate
+- uid: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.WhiteSpaceChars
+  name: WhiteSpaceChars
+  href: api/AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.html#AetherUtils_Core_Security_Passwords_Validation_PasswordValidator_WhiteSpaceChars
+  commentId: F:AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.WhiteSpaceChars
+  fullName: AetherUtils.Core.Security.Passwords.Validation.PasswordValidator.WhiteSpaceChars
+  nameWithType: PasswordValidator.WhiteSpaceChars
 - uid: AetherUtils.Core.Security.Passwords.Validation.ValidationFailure
   name: ValidationFailure
   href: api/AetherUtils.Core.Security.Passwords.Validation.ValidationFailure.html
@@ -3356,6 +4339,15 @@ references:
   commentId: T:AetherUtils.Core.Security.SecretQa
   fullName: AetherUtils.Core.Security.SecretQa
   nameWithType: SecretQa
+- uid: AetherUtils.Core.Security.SecretQa.#ctor
+  name: SecretQa()
+  href: api/AetherUtils.Core.Security.SecretQa.html#AetherUtils_Core_Security_SecretQa__ctor
+  commentId: M:AetherUtils.Core.Security.SecretQa.#ctor
+  name.vb: New()
+  fullName: AetherUtils.Core.Security.SecretQa.SecretQa()
+  fullName.vb: AetherUtils.Core.Security.SecretQa.New()
+  nameWithType: SecretQa.SecretQa()
+  nameWithType.vb: SecretQa.New()
 - uid: AetherUtils.Core.Security.SecretQa.#ctor(System.String,System.String)
   name: SecretQa(string, string)
   href: api/AetherUtils.Core.Security.SecretQa.html#AetherUtils_Core_Security_SecretQa__ctor_System_String_System_String_
@@ -3429,6 +4421,12 @@ references:
   commentId: T:AetherUtils.Core.Security.TwoFactor.Encoder
   fullName: AetherUtils.Core.Security.TwoFactor.Encoder
   nameWithType: Encoder
+- uid: AetherUtils.Core.Security.TwoFactor.Encoder.BIF_URL_ENCODE_ALPHABET
+  name: BIF_URL_ENCODE_ALPHABET
+  href: api/AetherUtils.Core.Security.TwoFactor.Encoder.html#AetherUtils_Core_Security_TwoFactor_Encoder_BIF_URL_ENCODE_ALPHABET
+  commentId: F:AetherUtils.Core.Security.TwoFactor.Encoder.BIF_URL_ENCODE_ALPHABET
+  fullName: AetherUtils.Core.Security.TwoFactor.Encoder.BIF_URL_ENCODE_ALPHABET
+  nameWithType: Encoder.BIF_URL_ENCODE_ALPHABET
 - uid: AetherUtils.Core.Security.TwoFactor.Encoder.Base32Encode(System.Byte[])
   name: Base32Encode(byte[])
   href: api/AetherUtils.Core.Security.TwoFactor.Encoder.html#AetherUtils_Core_Security_TwoFactor_Encoder_Base32Encode_System_Byte___
@@ -3445,6 +4443,22 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.TwoFactor.Encoder.Base32Encode
   nameWithType: Encoder.Base32Encode
+- uid: AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue(System.Char)
+  name: CharToValue(char)
+  href: api/AetherUtils.Core.Security.TwoFactor.Encoder.html#AetherUtils_Core_Security_TwoFactor_Encoder_CharToValue_System_Char_
+  commentId: M:AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue(System.Char)
+  name.vb: CharToValue(Char)
+  fullName: AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue(char)
+  fullName.vb: AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue(Char)
+  nameWithType: Encoder.CharToValue(char)
+  nameWithType.vb: Encoder.CharToValue(Char)
+- uid: AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue*
+  name: CharToValue
+  href: api/AetherUtils.Core.Security.TwoFactor.Encoder.html#AetherUtils_Core_Security_TwoFactor_Encoder_CharToValue_
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.TwoFactor.Encoder.CharToValue
+  nameWithType: Encoder.CharToValue
 - uid: AetherUtils.Core.Security.TwoFactor.Encoder.ToBytes(System.String)
   name: ToBytes(string)
   href: api/AetherUtils.Core.Security.TwoFactor.Encoder.html#AetherUtils_Core_Security_TwoFactor_Encoder_ToBytes_System_String_
@@ -3477,6 +4491,22 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.TwoFactor.Encoder.UrlEncode
   nameWithType: Encoder.UrlEncode
+- uid: AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar(System.Byte)
+  name: ValueToChar(byte)
+  href: api/AetherUtils.Core.Security.TwoFactor.Encoder.html#AetherUtils_Core_Security_TwoFactor_Encoder_ValueToChar_System_Byte_
+  commentId: M:AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar(System.Byte)
+  name.vb: ValueToChar(Byte)
+  fullName: AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar(byte)
+  fullName.vb: AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar(Byte)
+  nameWithType: Encoder.ValueToChar(byte)
+  nameWithType.vb: Encoder.ValueToChar(Byte)
+- uid: AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar*
+  name: ValueToChar
+  href: api/AetherUtils.Core.Security.TwoFactor.Encoder.html#AetherUtils_Core_Security_TwoFactor_Encoder_ValueToChar_
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.TwoFactor.Encoder.ValueToChar
+  nameWithType: Encoder.ValueToChar
 - uid: AetherUtils.Core.Security.TwoFactor.HashType
   name: HashType
   href: api/AetherUtils.Core.Security.TwoFactor.HashType.html
@@ -3586,6 +4616,57 @@ references:
   fullName.vb: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.New
   nameWithType: TwoFactorAuth.TwoFactorAuth
   nameWithType.vb: TwoFactorAuth.New
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.ConvertSecretToBytes(System.String,System.Boolean)
+  name: ConvertSecretToBytes(string, bool)
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_ConvertSecretToBytes_System_String_System_Boolean_
+  commentId: M:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.ConvertSecretToBytes(System.String,System.Boolean)
+  name.vb: ConvertSecretToBytes(String, Boolean)
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.ConvertSecretToBytes(string, bool)
+  fullName.vb: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.ConvertSecretToBytes(String, Boolean)
+  nameWithType: TwoFactorAuth.ConvertSecretToBytes(string, bool)
+  nameWithType.vb: TwoFactorAuth.ConvertSecretToBytes(String, Boolean)
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.ConvertSecretToBytes*
+  name: ConvertSecretToBytes
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_ConvertSecretToBytes_
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.ConvertSecretToBytes
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.ConvertSecretToBytes
+  nameWithType: TwoFactorAuth.ConvertSecretToBytes
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.DefaultClockDriftTolerance
+  name: DefaultClockDriftTolerance
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_DefaultClockDriftTolerance
+  commentId: P:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.DefaultClockDriftTolerance
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.DefaultClockDriftTolerance
+  nameWithType: TwoFactorAuth.DefaultClockDriftTolerance
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.DefaultClockDriftTolerance*
+  name: DefaultClockDriftTolerance
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_DefaultClockDriftTolerance_
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.DefaultClockDriftTolerance
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.DefaultClockDriftTolerance
+  nameWithType: TwoFactorAuth.DefaultClockDriftTolerance
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.Epoch
+  name: Epoch
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_Epoch
+  commentId: F:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.Epoch
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.Epoch
+  nameWithType: TwoFactorAuth.Epoch
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateHashedCode(System.Byte[],System.Int64,System.Int32)
+  name: GenerateHashedCode(byte[], long, int)
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GenerateHashedCode_System_Byte___System_Int64_System_Int32_
+  commentId: M:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateHashedCode(System.Byte[],System.Int64,System.Int32)
+  name.vb: GenerateHashedCode(Byte(), Long, Integer)
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateHashedCode(byte[], long, int)
+  fullName.vb: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateHashedCode(Byte(), Long, Integer)
+  nameWithType: TwoFactorAuth.GenerateHashedCode(byte[], long, int)
+  nameWithType.vb: TwoFactorAuth.GenerateHashedCode(Byte(), Long, Integer)
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateHashedCode*
+  name: GenerateHashedCode
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GenerateHashedCode_
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateHashedCode
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateHashedCode
+  nameWithType: TwoFactorAuth.GenerateHashedCode
 - uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GeneratePinAtInterval(System.Byte[],System.Int64,System.Int32)
   name: GeneratePinAtInterval(byte[], long, int)
   href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GeneratePinAtInterval_System_Byte___System_Int64_System_Int32_
@@ -3611,6 +4692,22 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GeneratePinAtInterval
   nameWithType: TwoFactorAuth.GeneratePinAtInterval
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateQrCodeUrl(System.Int32,System.String)
+  name: GenerateQrCodeUrl(int, string)
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GenerateQrCodeUrl_System_Int32_System_String_
+  commentId: M:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateQrCodeUrl(System.Int32,System.String)
+  name.vb: GenerateQrCodeUrl(Integer, String)
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateQrCodeUrl(int, string)
+  fullName.vb: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateQrCodeUrl(Integer, String)
+  nameWithType: TwoFactorAuth.GenerateQrCodeUrl(int, string)
+  nameWithType.vb: TwoFactorAuth.GenerateQrCodeUrl(Integer, String)
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateQrCodeUrl*
+  name: GenerateQrCodeUrl
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GenerateQrCodeUrl_
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateQrCodeUrl
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateQrCodeUrl
+  nameWithType: TwoFactorAuth.GenerateQrCodeUrl
 - uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateSetupInformation(AetherUtils.Core.Security.TwoFactor.TwoFactorUser@,System.Byte[])
   name: GenerateSetupInformation(ref TwoFactorUser, byte[])
   href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GenerateSetupInformation_AetherUtils_Core_Security_TwoFactor_TwoFactorUser__System_Byte___
@@ -3627,6 +4724,28 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GenerateSetupInformation
   nameWithType: TwoFactorAuth.GenerateSetupInformation
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter
+  name: GetCurrentCounter()
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GetCurrentCounter
+  commentId: M:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter()
+  nameWithType: TwoFactorAuth.GetCurrentCounter()
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter(System.DateTime,System.DateTime,System.Int32)
+  name: GetCurrentCounter(DateTime, DateTime, int)
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GetCurrentCounter_System_DateTime_System_DateTime_System_Int32_
+  commentId: M:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter(System.DateTime,System.DateTime,System.Int32)
+  name.vb: GetCurrentCounter(Date, Date, Integer)
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter(System.DateTime, System.DateTime, int)
+  fullName.vb: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter(Date, Date, Integer)
+  nameWithType: TwoFactorAuth.GetCurrentCounter(DateTime, DateTime, int)
+  nameWithType.vb: TwoFactorAuth.GetCurrentCounter(Date, Date, Integer)
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter*
+  name: GetCurrentCounter
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GetCurrentCounter_
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentCounter
+  nameWithType: TwoFactorAuth.GetCurrentCounter
 - uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentPin(System.Byte[])
   name: GetCurrentPin(byte[])
   href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_GetCurrentPin_System_Byte___
@@ -3722,6 +4841,35 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.GetCurrentPins
   nameWithType: TwoFactorAuth.GetCurrentPins
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.HashType
+  name: HashType
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_HashType
+  commentId: P:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.HashType
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.HashType
+  nameWithType: TwoFactorAuth.HashType
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.HashType*
+  name: HashType
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_HashType_
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.HashType
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.HashType
+  nameWithType: TwoFactorAuth.HashType
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.UrlEncode(System.String)
+  name: UrlEncode(string)
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_UrlEncode_System_String_
+  commentId: M:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.UrlEncode(System.String)
+  name.vb: UrlEncode(String)
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.UrlEncode(string)
+  fullName.vb: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.UrlEncode(String)
+  nameWithType: TwoFactorAuth.UrlEncode(string)
+  nameWithType.vb: TwoFactorAuth.UrlEncode(String)
+- uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.UrlEncode*
+  name: UrlEncode
+  href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_UrlEncode_
+  commentId: Overload:AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.UrlEncode
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.UrlEncode
+  nameWithType: TwoFactorAuth.UrlEncode
 - uid: AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.ValidateTwoFactorPin(System.Byte[],System.String)
   name: ValidateTwoFactorPin(byte[], string)
   href: api/AetherUtils.Core.Security.TwoFactor.TwoFactorAuth.html#AetherUtils_Core_Security_TwoFactor_TwoFactorAuth_ValidateTwoFactorPin_System_Byte___System_String_
@@ -4128,6 +5276,12 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.Structs.HashOptions.SaltLength
   nameWithType: HashOptions.SaltLength
+- uid: AetherUtils.Core.Structs.HashOptions._iterationsSpan
+  name: _iterationsSpan
+  href: api/AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions__iterationsSpan
+  commentId: F:AetherUtils.Core.Structs.HashOptions._iterationsSpan
+  fullName: AetherUtils.Core.Structs.HashOptions._iterationsSpan
+  nameWithType: HashOptions._iterationsSpan
 - uid: AetherUtils.Core.Structs.Pair`2
   name: Pair<K, V>
   href: api/AetherUtils.Core.Structs.Pair-2.html
@@ -4190,6 +5344,96 @@ references:
   fullName.vb: AetherUtils.Core.Structs.Pair(Of K, V).Value
   nameWithType: Pair<K, V>.Value
   nameWithType.vb: Pair(Of K, V).Value
+- uid: AetherUtils.Core.Structs.ParsedHash
+  name: ParsedHash
+  href: api/AetherUtils.Core.Structs.ParsedHash.html
+  commentId: T:AetherUtils.Core.Structs.ParsedHash
+  fullName: AetherUtils.Core.Structs.ParsedHash
+  nameWithType: ParsedHash
+- uid: AetherUtils.Core.Structs.ParsedHash.#ctor(AetherUtils.Core.Security.Hashing.HashEncoding,System.Byte[],System.Byte[],System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  name: ParsedHash(HashEncoding, byte[], byte[], int, HashAlgorithmName)
+  href: api/AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash__ctor_AetherUtils_Core_Security_Hashing_HashEncoding_System_Byte___System_Byte___System_Int32_System_Security_Cryptography_HashAlgorithmName_
+  commentId: M:AetherUtils.Core.Structs.ParsedHash.#ctor(AetherUtils.Core.Security.Hashing.HashEncoding,System.Byte[],System.Byte[],System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  name.vb: New(HashEncoding, Byte(), Byte(), Integer, HashAlgorithmName)
+  fullName: AetherUtils.Core.Structs.ParsedHash.ParsedHash(AetherUtils.Core.Security.Hashing.HashEncoding, byte[], byte[], int, System.Security.Cryptography.HashAlgorithmName)
+  fullName.vb: AetherUtils.Core.Structs.ParsedHash.New(AetherUtils.Core.Security.Hashing.HashEncoding, Byte(), Byte(), Integer, System.Security.Cryptography.HashAlgorithmName)
+  nameWithType: ParsedHash.ParsedHash(HashEncoding, byte[], byte[], int, HashAlgorithmName)
+  nameWithType.vb: ParsedHash.New(HashEncoding, Byte(), Byte(), Integer, HashAlgorithmName)
+- uid: AetherUtils.Core.Structs.ParsedHash.#ctor*
+  name: ParsedHash
+  href: api/AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash__ctor_
+  commentId: Overload:AetherUtils.Core.Structs.ParsedHash.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AetherUtils.Core.Structs.ParsedHash.ParsedHash
+  fullName.vb: AetherUtils.Core.Structs.ParsedHash.New
+  nameWithType: ParsedHash.ParsedHash
+  nameWithType.vb: ParsedHash.New
+- uid: AetherUtils.Core.Structs.ParsedHash.Algorithm
+  name: Algorithm
+  href: api/AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Algorithm
+  commentId: P:AetherUtils.Core.Structs.ParsedHash.Algorithm
+  fullName: AetherUtils.Core.Structs.ParsedHash.Algorithm
+  nameWithType: ParsedHash.Algorithm
+- uid: AetherUtils.Core.Structs.ParsedHash.Algorithm*
+  name: Algorithm
+  href: api/AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Algorithm_
+  commentId: Overload:AetherUtils.Core.Structs.ParsedHash.Algorithm
+  isSpec: "True"
+  fullName: AetherUtils.Core.Structs.ParsedHash.Algorithm
+  nameWithType: ParsedHash.Algorithm
+- uid: AetherUtils.Core.Structs.ParsedHash.Encoding
+  name: Encoding
+  href: api/AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Encoding
+  commentId: P:AetherUtils.Core.Structs.ParsedHash.Encoding
+  fullName: AetherUtils.Core.Structs.ParsedHash.Encoding
+  nameWithType: ParsedHash.Encoding
+- uid: AetherUtils.Core.Structs.ParsedHash.Encoding*
+  name: Encoding
+  href: api/AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Encoding_
+  commentId: Overload:AetherUtils.Core.Structs.ParsedHash.Encoding
+  isSpec: "True"
+  fullName: AetherUtils.Core.Structs.ParsedHash.Encoding
+  nameWithType: ParsedHash.Encoding
+- uid: AetherUtils.Core.Structs.ParsedHash.Hash
+  name: Hash
+  href: api/AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Hash
+  commentId: P:AetherUtils.Core.Structs.ParsedHash.Hash
+  fullName: AetherUtils.Core.Structs.ParsedHash.Hash
+  nameWithType: ParsedHash.Hash
+- uid: AetherUtils.Core.Structs.ParsedHash.Hash*
+  name: Hash
+  href: api/AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Hash_
+  commentId: Overload:AetherUtils.Core.Structs.ParsedHash.Hash
+  isSpec: "True"
+  fullName: AetherUtils.Core.Structs.ParsedHash.Hash
+  nameWithType: ParsedHash.Hash
+- uid: AetherUtils.Core.Structs.ParsedHash.Iterations
+  name: Iterations
+  href: api/AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Iterations
+  commentId: P:AetherUtils.Core.Structs.ParsedHash.Iterations
+  fullName: AetherUtils.Core.Structs.ParsedHash.Iterations
+  nameWithType: ParsedHash.Iterations
+- uid: AetherUtils.Core.Structs.ParsedHash.Iterations*
+  name: Iterations
+  href: api/AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Iterations_
+  commentId: Overload:AetherUtils.Core.Structs.ParsedHash.Iterations
+  isSpec: "True"
+  fullName: AetherUtils.Core.Structs.ParsedHash.Iterations
+  nameWithType: ParsedHash.Iterations
+- uid: AetherUtils.Core.Structs.ParsedHash.Salt
+  name: Salt
+  href: api/AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Salt
+  commentId: P:AetherUtils.Core.Structs.ParsedHash.Salt
+  fullName: AetherUtils.Core.Structs.ParsedHash.Salt
+  nameWithType: ParsedHash.Salt
+- uid: AetherUtils.Core.Structs.ParsedHash.Salt*
+  name: Salt
+  href: api/AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Salt_
+  commentId: Overload:AetherUtils.Core.Structs.ParsedHash.Salt
+  isSpec: "True"
+  fullName: AetherUtils.Core.Structs.ParsedHash.Salt
+  nameWithType: ParsedHash.Salt
 - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
   name: ReadOnlyPair<K, V>
   href: api/AetherUtils.Core.Structs.ReadOnlyPair-2.html
@@ -4321,6 +5565,14 @@ references:
   fullName.vb: AetherUtils.Core.Utility.ProportionalRandomSelector(Of T).SelectItem
   nameWithType: ProportionalRandomSelector<T>.SelectItem
   nameWithType.vb: ProportionalRandomSelector(Of T).SelectItem
+- uid: AetherUtils.Core.Utility.ProportionalRandomSelector`1._percentages
+  name: _percentages
+  href: api/AetherUtils.Core.Utility.ProportionalRandomSelector-1.html#AetherUtils_Core_Utility_ProportionalRandomSelector_1__percentages
+  commentId: F:AetherUtils.Core.Utility.ProportionalRandomSelector`1._percentages
+  fullName: AetherUtils.Core.Utility.ProportionalRandomSelector<T>._percentages
+  fullName.vb: AetherUtils.Core.Utility.ProportionalRandomSelector(Of T)._percentages
+  nameWithType: ProportionalRandomSelector<T>._percentages
+  nameWithType.vb: ProportionalRandomSelector(Of T)._percentages
 - uid: AetherUtils.Core.Utility.SerializableDictionary`2
   name: SerializableDictionary<TKey, TValue>
   href: api/AetherUtils.Core.Utility.SerializableDictionary-2.html
@@ -4387,6 +5639,12 @@ references:
   commentId: T:AetherUtils.Core.Utility.SizeConverter
   fullName: AetherUtils.Core.Utility.SizeConverter
   nameWithType: SizeConverter
+- uid: AetherUtils.Core.Utility.SizeConverter.MemorySizes
+  name: MemorySizes
+  href: api/AetherUtils.Core.Utility.SizeConverter.html#AetherUtils_Core_Utility_SizeConverter_MemorySizes
+  commentId: F:AetherUtils.Core.Utility.SizeConverter.MemorySizes
+  fullName: AetherUtils.Core.Utility.SizeConverter.MemorySizes
+  nameWithType: SizeConverter.MemorySizes
 - uid: AetherUtils.Core.WinForms
   name: AetherUtils.Core.WinForms
   href: api/AetherUtils.Core.WinForms.html
@@ -4427,6 +5685,22 @@ references:
   fullName.vb: AetherUtils.Core.WinForms.IconListManager.New
   nameWithType: IconListManager.IconListManager
   nameWithType.vb: IconListManager.New
+- uid: AetherUtils.Core.WinForms.IconListManager.AddExtension(System.String,System.Int32)
+  name: AddExtension(string, int)
+  href: api/AetherUtils.Core.WinForms.IconListManager.html#AetherUtils_Core_WinForms_IconListManager_AddExtension_System_String_System_Int32_
+  commentId: M:AetherUtils.Core.WinForms.IconListManager.AddExtension(System.String,System.Int32)
+  name.vb: AddExtension(String, Integer)
+  fullName: AetherUtils.Core.WinForms.IconListManager.AddExtension(string, int)
+  fullName.vb: AetherUtils.Core.WinForms.IconListManager.AddExtension(String, Integer)
+  nameWithType: IconListManager.AddExtension(string, int)
+  nameWithType.vb: IconListManager.AddExtension(String, Integer)
+- uid: AetherUtils.Core.WinForms.IconListManager.AddExtension*
+  name: AddExtension
+  href: api/AetherUtils.Core.WinForms.IconListManager.html#AetherUtils_Core_WinForms_IconListManager_AddExtension_
+  commentId: Overload:AetherUtils.Core.WinForms.IconListManager.AddExtension
+  isSpec: "True"
+  fullName: AetherUtils.Core.WinForms.IconListManager.AddExtension
+  nameWithType: IconListManager.AddExtension
 - uid: AetherUtils.Core.WinForms.IconListManager.AddFileIcon(System.String)
   name: AddFileIcon(string)
   href: api/AetherUtils.Core.WinForms.IconListManager.html#AetherUtils_Core_WinForms_IconListManager_AddFileIcon_System_String_
@@ -4456,6 +5730,30 @@ references:
   isSpec: "True"
   fullName: AetherUtils.Core.WinForms.IconListManager.ClearLists
   nameWithType: IconListManager.ClearLists
+- uid: AetherUtils.Core.WinForms.IconListManager._extensionList
+  name: _extensionList
+  href: api/AetherUtils.Core.WinForms.IconListManager.html#AetherUtils_Core_WinForms_IconListManager__extensionList
+  commentId: F:AetherUtils.Core.WinForms.IconListManager._extensionList
+  fullName: AetherUtils.Core.WinForms.IconListManager._extensionList
+  nameWithType: IconListManager._extensionList
+- uid: AetherUtils.Core.WinForms.IconListManager._iconSize
+  name: _iconSize
+  href: api/AetherUtils.Core.WinForms.IconListManager.html#AetherUtils_Core_WinForms_IconListManager__iconSize
+  commentId: F:AetherUtils.Core.WinForms.IconListManager._iconSize
+  fullName: AetherUtils.Core.WinForms.IconListManager._iconSize
+  nameWithType: IconListManager._iconSize
+- uid: AetherUtils.Core.WinForms.IconListManager._imageLists
+  name: _imageLists
+  href: api/AetherUtils.Core.WinForms.IconListManager.html#AetherUtils_Core_WinForms_IconListManager__imageLists
+  commentId: F:AetherUtils.Core.WinForms.IconListManager._imageLists
+  fullName: AetherUtils.Core.WinForms.IconListManager._imageLists
+  nameWithType: IconListManager._imageLists
+- uid: AetherUtils.Core.WinForms.IconListManager._manageBothSizes
+  name: _manageBothSizes
+  href: api/AetherUtils.Core.WinForms.IconListManager.html#AetherUtils_Core_WinForms_IconListManager__manageBothSizes
+  commentId: F:AetherUtils.Core.WinForms.IconListManager._manageBothSizes
+  fullName: AetherUtils.Core.WinForms.IconListManager._manageBothSizes
+  nameWithType: IconListManager._manageBothSizes
 - uid: AetherUtils.Core.WinForms.IconReader
   name: IconReader
   href: api/AetherUtils.Core.WinForms.IconReader.html
@@ -4899,3 +6197,389 @@ references:
   commentId: Overload:AetherUtils.Core.WinForms.User32.DestroyIcon
   fullName: AetherUtils.Core.WinForms.User32.DestroyIcon
   nameWithType: User32.DestroyIcon
+- uid: System.Text.RegularExpressions.Generated
+  name: System.Text.RegularExpressions.Generated
+  href: api/System.Text.RegularExpressions.Generated.html
+  commentId: N:System.Text.RegularExpressions.Generated
+  fullName: System.Text.RegularExpressions.Generated
+  nameWithType: System.Text.RegularExpressions.Generated
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1
+  name: Base64Regex_1
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.html
+  commentId: T:System.Text.RegularExpressions.Generated.Base64Regex_1
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1
+  nameWithType: Base64Regex_1
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.#ctor
+  name: Base64Regex_1()
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.html#System_Text_RegularExpressions_Generated_Base64Regex_1__ctor
+  commentId: M:System.Text.RegularExpressions.Generated.Base64Regex_1.#ctor
+  name.vb: New()
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.Base64Regex_1()
+  fullName.vb: System.Text.RegularExpressions.Generated.Base64Regex_1.New()
+  nameWithType: Base64Regex_1.Base64Regex_1()
+  nameWithType.vb: Base64Regex_1.New()
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.#ctor*
+  name: Base64Regex_1
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.html#System_Text_RegularExpressions_Generated_Base64Regex_1__ctor_
+  commentId: Overload:System.Text.RegularExpressions.Generated.Base64Regex_1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.Base64Regex_1
+  fullName.vb: System.Text.RegularExpressions.Generated.Base64Regex_1.New
+  nameWithType: Base64Regex_1.Base64Regex_1
+  nameWithType.vb: Base64Regex_1.New
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.Instance
+  name: Instance
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.html#System_Text_RegularExpressions_Generated_Base64Regex_1_Instance
+  commentId: F:System.Text.RegularExpressions.Generated.Base64Regex_1.Instance
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.Instance
+  nameWithType: Base64Regex_1.Instance
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory
+  name: Base64Regex_1.RunnerFactory
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.html
+  commentId: T:System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory
+  nameWithType: Base64Regex_1.RunnerFactory
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.CreateInstance
+  name: CreateInstance()
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.html#System_Text_RegularExpressions_Generated_Base64Regex_1_RunnerFactory_CreateInstance
+  commentId: M:System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.CreateInstance
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.CreateInstance()
+  nameWithType: Base64Regex_1.RunnerFactory.CreateInstance()
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.CreateInstance*
+  name: CreateInstance
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.html#System_Text_RegularExpressions_Generated_Base64Regex_1_RunnerFactory_CreateInstance_
+  commentId: Overload:System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.CreateInstance
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.CreateInstance
+  nameWithType: Base64Regex_1.RunnerFactory.CreateInstance
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner
+  name: Base64Regex_1.RunnerFactory.Runner
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.html
+  commentId: T:System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner
+  nameWithType: Base64Regex_1.RunnerFactory.Runner
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})
+  name: Scan(ReadOnlySpan<char>)
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_Base64Regex_1_RunnerFactory_Runner_Scan_System_ReadOnlySpan_System_Char__
+  commentId: M:System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})
+  name.vb: Scan(ReadOnlySpan(Of Char))
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.Scan(System.ReadOnlySpan<char>)
+  fullName.vb: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.Scan(System.ReadOnlySpan(Of Char))
+  nameWithType: Base64Regex_1.RunnerFactory.Runner.Scan(ReadOnlySpan<char>)
+  nameWithType.vb: Base64Regex_1.RunnerFactory.Runner.Scan(ReadOnlySpan(Of Char))
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.Scan*
+  name: Scan
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_Base64Regex_1_RunnerFactory_Runner_Scan_
+  commentId: Overload:System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.Scan
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.Scan
+  nameWithType: Base64Regex_1.RunnerFactory.Runner.Scan
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})
+  name: TryFindNextPossibleStartingPosition(ReadOnlySpan<char>)
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_Base64Regex_1_RunnerFactory_Runner_TryFindNextPossibleStartingPosition_System_ReadOnlySpan_System_Char__
+  commentId: M:System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})
+  name.vb: TryFindNextPossibleStartingPosition(ReadOnlySpan(Of Char))
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan<char>)
+  fullName.vb: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan(Of Char))
+  nameWithType: Base64Regex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(ReadOnlySpan<char>)
+  nameWithType.vb: Base64Regex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(ReadOnlySpan(Of Char))
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition*
+  name: TryFindNextPossibleStartingPosition
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_Base64Regex_1_RunnerFactory_Runner_TryFindNextPossibleStartingPosition_
+  commentId: Overload:System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition
+  nameWithType: Base64Regex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})
+  name: TryMatchAtCurrentPosition(ReadOnlySpan<char>)
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_Base64Regex_1_RunnerFactory_Runner_TryMatchAtCurrentPosition_System_ReadOnlySpan_System_Char__
+  commentId: M:System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})
+  name.vb: TryMatchAtCurrentPosition(ReadOnlySpan(Of Char))
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan<char>)
+  fullName.vb: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan(Of Char))
+  nameWithType: Base64Regex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition(ReadOnlySpan<char>)
+  nameWithType.vb: Base64Regex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition(ReadOnlySpan(Of Char))
+- uid: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition*
+  name: TryMatchAtCurrentPosition
+  href: api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_Base64Regex_1_RunnerFactory_Runner_TryMatchAtCurrentPosition_
+  commentId: Overload:System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition
+  nameWithType: Base64Regex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2
+  name: HexRegex_2
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.html
+  commentId: T:System.Text.RegularExpressions.Generated.HexRegex_2
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2
+  nameWithType: HexRegex_2
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.#ctor
+  name: HexRegex_2()
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.html#System_Text_RegularExpressions_Generated_HexRegex_2__ctor
+  commentId: M:System.Text.RegularExpressions.Generated.HexRegex_2.#ctor
+  name.vb: New()
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.HexRegex_2()
+  fullName.vb: System.Text.RegularExpressions.Generated.HexRegex_2.New()
+  nameWithType: HexRegex_2.HexRegex_2()
+  nameWithType.vb: HexRegex_2.New()
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.#ctor*
+  name: HexRegex_2
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.html#System_Text_RegularExpressions_Generated_HexRegex_2__ctor_
+  commentId: Overload:System.Text.RegularExpressions.Generated.HexRegex_2.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.HexRegex_2
+  fullName.vb: System.Text.RegularExpressions.Generated.HexRegex_2.New
+  nameWithType: HexRegex_2.HexRegex_2
+  nameWithType.vb: HexRegex_2.New
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.Instance
+  name: Instance
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.html#System_Text_RegularExpressions_Generated_HexRegex_2_Instance
+  commentId: F:System.Text.RegularExpressions.Generated.HexRegex_2.Instance
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.Instance
+  nameWithType: HexRegex_2.Instance
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory
+  name: HexRegex_2.RunnerFactory
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.html
+  commentId: T:System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory
+  nameWithType: HexRegex_2.RunnerFactory
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.CreateInstance
+  name: CreateInstance()
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.html#System_Text_RegularExpressions_Generated_HexRegex_2_RunnerFactory_CreateInstance
+  commentId: M:System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.CreateInstance
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.CreateInstance()
+  nameWithType: HexRegex_2.RunnerFactory.CreateInstance()
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.CreateInstance*
+  name: CreateInstance
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.html#System_Text_RegularExpressions_Generated_HexRegex_2_RunnerFactory_CreateInstance_
+  commentId: Overload:System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.CreateInstance
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.CreateInstance
+  nameWithType: HexRegex_2.RunnerFactory.CreateInstance
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner
+  name: HexRegex_2.RunnerFactory.Runner
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.html
+  commentId: T:System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner
+  nameWithType: HexRegex_2.RunnerFactory.Runner
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})
+  name: Scan(ReadOnlySpan<char>)
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_HexRegex_2_RunnerFactory_Runner_Scan_System_ReadOnlySpan_System_Char__
+  commentId: M:System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})
+  name.vb: Scan(ReadOnlySpan(Of Char))
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.Scan(System.ReadOnlySpan<char>)
+  fullName.vb: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.Scan(System.ReadOnlySpan(Of Char))
+  nameWithType: HexRegex_2.RunnerFactory.Runner.Scan(ReadOnlySpan<char>)
+  nameWithType.vb: HexRegex_2.RunnerFactory.Runner.Scan(ReadOnlySpan(Of Char))
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.Scan*
+  name: Scan
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_HexRegex_2_RunnerFactory_Runner_Scan_
+  commentId: Overload:System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.Scan
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.Scan
+  nameWithType: HexRegex_2.RunnerFactory.Runner.Scan
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})
+  name: TryFindNextPossibleStartingPosition(ReadOnlySpan<char>)
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_HexRegex_2_RunnerFactory_Runner_TryFindNextPossibleStartingPosition_System_ReadOnlySpan_System_Char__
+  commentId: M:System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})
+  name.vb: TryFindNextPossibleStartingPosition(ReadOnlySpan(Of Char))
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan<char>)
+  fullName.vb: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan(Of Char))
+  nameWithType: HexRegex_2.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(ReadOnlySpan<char>)
+  nameWithType.vb: HexRegex_2.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(ReadOnlySpan(Of Char))
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryFindNextPossibleStartingPosition*
+  name: TryFindNextPossibleStartingPosition
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_HexRegex_2_RunnerFactory_Runner_TryFindNextPossibleStartingPosition_
+  commentId: Overload:System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryFindNextPossibleStartingPosition
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryFindNextPossibleStartingPosition
+  nameWithType: HexRegex_2.RunnerFactory.Runner.TryFindNextPossibleStartingPosition
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})
+  name: TryMatchAtCurrentPosition(ReadOnlySpan<char>)
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_HexRegex_2_RunnerFactory_Runner_TryMatchAtCurrentPosition_System_ReadOnlySpan_System_Char__
+  commentId: M:System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})
+  name.vb: TryMatchAtCurrentPosition(ReadOnlySpan(Of Char))
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan<char>)
+  fullName.vb: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan(Of Char))
+  nameWithType: HexRegex_2.RunnerFactory.Runner.TryMatchAtCurrentPosition(ReadOnlySpan<char>)
+  nameWithType.vb: HexRegex_2.RunnerFactory.Runner.TryMatchAtCurrentPosition(ReadOnlySpan(Of Char))
+- uid: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryMatchAtCurrentPosition*
+  name: TryMatchAtCurrentPosition
+  href: api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_HexRegex_2_RunnerFactory_Runner_TryMatchAtCurrentPosition_
+  commentId: Overload:System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryMatchAtCurrentPosition
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.TryMatchAtCurrentPosition
+  nameWithType: HexRegex_2.RunnerFactory.Runner.TryMatchAtCurrentPosition
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0
+  name: PathRegex_0
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.html
+  commentId: T:System.Text.RegularExpressions.Generated.PathRegex_0
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0
+  nameWithType: PathRegex_0
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.#ctor
+  name: PathRegex_0()
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.html#System_Text_RegularExpressions_Generated_PathRegex_0__ctor
+  commentId: M:System.Text.RegularExpressions.Generated.PathRegex_0.#ctor
+  name.vb: New()
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.PathRegex_0()
+  fullName.vb: System.Text.RegularExpressions.Generated.PathRegex_0.New()
+  nameWithType: PathRegex_0.PathRegex_0()
+  nameWithType.vb: PathRegex_0.New()
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.#ctor*
+  name: PathRegex_0
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.html#System_Text_RegularExpressions_Generated_PathRegex_0__ctor_
+  commentId: Overload:System.Text.RegularExpressions.Generated.PathRegex_0.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.PathRegex_0
+  fullName.vb: System.Text.RegularExpressions.Generated.PathRegex_0.New
+  nameWithType: PathRegex_0.PathRegex_0
+  nameWithType.vb: PathRegex_0.New
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.Instance
+  name: Instance
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.html#System_Text_RegularExpressions_Generated_PathRegex_0_Instance
+  commentId: F:System.Text.RegularExpressions.Generated.PathRegex_0.Instance
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.Instance
+  nameWithType: PathRegex_0.Instance
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory
+  name: PathRegex_0.RunnerFactory
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.html
+  commentId: T:System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory
+  nameWithType: PathRegex_0.RunnerFactory
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.CreateInstance
+  name: CreateInstance()
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.html#System_Text_RegularExpressions_Generated_PathRegex_0_RunnerFactory_CreateInstance
+  commentId: M:System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.CreateInstance
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.CreateInstance()
+  nameWithType: PathRegex_0.RunnerFactory.CreateInstance()
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.CreateInstance*
+  name: CreateInstance
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.html#System_Text_RegularExpressions_Generated_PathRegex_0_RunnerFactory_CreateInstance_
+  commentId: Overload:System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.CreateInstance
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.CreateInstance
+  nameWithType: PathRegex_0.RunnerFactory.CreateInstance
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner
+  name: PathRegex_0.RunnerFactory.Runner
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.html
+  commentId: T:System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner
+  nameWithType: PathRegex_0.RunnerFactory.Runner
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})
+  name: Scan(ReadOnlySpan<char>)
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_PathRegex_0_RunnerFactory_Runner_Scan_System_ReadOnlySpan_System_Char__
+  commentId: M:System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})
+  name.vb: Scan(ReadOnlySpan(Of Char))
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan<char>)
+  fullName.vb: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan(Of Char))
+  nameWithType: PathRegex_0.RunnerFactory.Runner.Scan(ReadOnlySpan<char>)
+  nameWithType.vb: PathRegex_0.RunnerFactory.Runner.Scan(ReadOnlySpan(Of Char))
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.Scan*
+  name: Scan
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_PathRegex_0_RunnerFactory_Runner_Scan_
+  commentId: Overload:System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.Scan
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.Scan
+  nameWithType: PathRegex_0.RunnerFactory.Runner.Scan
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})
+  name: TryFindNextPossibleStartingPosition(ReadOnlySpan<char>)
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_PathRegex_0_RunnerFactory_Runner_TryFindNextPossibleStartingPosition_System_ReadOnlySpan_System_Char__
+  commentId: M:System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})
+  name.vb: TryFindNextPossibleStartingPosition(ReadOnlySpan(Of Char))
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan<char>)
+  fullName.vb: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan(Of Char))
+  nameWithType: PathRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(ReadOnlySpan<char>)
+  nameWithType.vb: PathRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(ReadOnlySpan(Of Char))
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition*
+  name: TryFindNextPossibleStartingPosition
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_PathRegex_0_RunnerFactory_Runner_TryFindNextPossibleStartingPosition_
+  commentId: Overload:System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition
+  nameWithType: PathRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})
+  name: TryMatchAtCurrentPosition(ReadOnlySpan<char>)
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_PathRegex_0_RunnerFactory_Runner_TryMatchAtCurrentPosition_System_ReadOnlySpan_System_Char__
+  commentId: M:System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})
+  name.vb: TryMatchAtCurrentPosition(ReadOnlySpan(Of Char))
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan<char>)
+  fullName.vb: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan(Of Char))
+  nameWithType: PathRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(ReadOnlySpan<char>)
+  nameWithType.vb: PathRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(ReadOnlySpan(Of Char))
+- uid: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition*
+  name: TryMatchAtCurrentPosition
+  href: api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.html#System_Text_RegularExpressions_Generated_PathRegex_0_RunnerFactory_Runner_TryMatchAtCurrentPosition_
+  commentId: Overload:System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition
+  nameWithType: PathRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition
+- uid: System.Text.RegularExpressions.Generated.Utilities
+  name: Utilities
+  href: api/System.Text.RegularExpressions.Generated.Utilities.html
+  commentId: T:System.Text.RegularExpressions.Generated.Utilities
+  fullName: System.Text.RegularExpressions.Generated.Utilities
+  nameWithType: Utilities
+- uid: System.Text.RegularExpressions.Generated.Utilities.StackPop(System.Int32[],System.Int32@,System.Int32@,System.Int32@)
+  name: StackPop(int[], ref int, out int, out int)
+  href: api/System.Text.RegularExpressions.Generated.Utilities.html#System_Text_RegularExpressions_Generated_Utilities_StackPop_System_Int32___System_Int32__System_Int32__System_Int32__
+  commentId: M:System.Text.RegularExpressions.Generated.Utilities.StackPop(System.Int32[],System.Int32@,System.Int32@,System.Int32@)
+  name.vb: StackPop(Integer(), Integer, Integer, Integer)
+  fullName: System.Text.RegularExpressions.Generated.Utilities.StackPop(int[], ref int, out int, out int)
+  fullName.vb: System.Text.RegularExpressions.Generated.Utilities.StackPop(Integer(), Integer, Integer, Integer)
+  nameWithType: Utilities.StackPop(int[], ref int, out int, out int)
+  nameWithType.vb: Utilities.StackPop(Integer(), Integer, Integer, Integer)
+- uid: System.Text.RegularExpressions.Generated.Utilities.StackPop*
+  name: StackPop
+  href: api/System.Text.RegularExpressions.Generated.Utilities.html#System_Text_RegularExpressions_Generated_Utilities_StackPop_
+  commentId: Overload:System.Text.RegularExpressions.Generated.Utilities.StackPop
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.Utilities.StackPop
+  nameWithType: Utilities.StackPop
+- uid: System.Text.RegularExpressions.Generated.Utilities.StackPush(System.Int32[]@,System.Int32@,System.Int32)
+  name: StackPush(ref int[], ref int, int)
+  href: api/System.Text.RegularExpressions.Generated.Utilities.html#System_Text_RegularExpressions_Generated_Utilities_StackPush_System_Int32____System_Int32__System_Int32_
+  commentId: M:System.Text.RegularExpressions.Generated.Utilities.StackPush(System.Int32[]@,System.Int32@,System.Int32)
+  name.vb: StackPush(Integer(), Integer, Integer)
+  fullName: System.Text.RegularExpressions.Generated.Utilities.StackPush(ref int[], ref int, int)
+  fullName.vb: System.Text.RegularExpressions.Generated.Utilities.StackPush(Integer(), Integer, Integer)
+  nameWithType: Utilities.StackPush(ref int[], ref int, int)
+  nameWithType.vb: Utilities.StackPush(Integer(), Integer, Integer)
+- uid: System.Text.RegularExpressions.Generated.Utilities.StackPush(System.Int32[]@,System.Int32@,System.Int32,System.Int32)
+  name: StackPush(ref int[], ref int, int, int)
+  href: api/System.Text.RegularExpressions.Generated.Utilities.html#System_Text_RegularExpressions_Generated_Utilities_StackPush_System_Int32____System_Int32__System_Int32_System_Int32_
+  commentId: M:System.Text.RegularExpressions.Generated.Utilities.StackPush(System.Int32[]@,System.Int32@,System.Int32,System.Int32)
+  name.vb: StackPush(Integer(), Integer, Integer, Integer)
+  fullName: System.Text.RegularExpressions.Generated.Utilities.StackPush(ref int[], ref int, int, int)
+  fullName.vb: System.Text.RegularExpressions.Generated.Utilities.StackPush(Integer(), Integer, Integer, Integer)
+  nameWithType: Utilities.StackPush(ref int[], ref int, int, int)
+  nameWithType.vb: Utilities.StackPush(Integer(), Integer, Integer, Integer)
+- uid: System.Text.RegularExpressions.Generated.Utilities.StackPush(System.Int32[]@,System.Int32@,System.Int32,System.Int32,System.Int32)
+  name: StackPush(ref int[], ref int, int, int, int)
+  href: api/System.Text.RegularExpressions.Generated.Utilities.html#System_Text_RegularExpressions_Generated_Utilities_StackPush_System_Int32____System_Int32__System_Int32_System_Int32_System_Int32_
+  commentId: M:System.Text.RegularExpressions.Generated.Utilities.StackPush(System.Int32[]@,System.Int32@,System.Int32,System.Int32,System.Int32)
+  name.vb: StackPush(Integer(), Integer, Integer, Integer, Integer)
+  fullName: System.Text.RegularExpressions.Generated.Utilities.StackPush(ref int[], ref int, int, int, int)
+  fullName.vb: System.Text.RegularExpressions.Generated.Utilities.StackPush(Integer(), Integer, Integer, Integer, Integer)
+  nameWithType: Utilities.StackPush(ref int[], ref int, int, int, int)
+  nameWithType.vb: Utilities.StackPush(Integer(), Integer, Integer, Integer, Integer)
+- uid: System.Text.RegularExpressions.Generated.Utilities.StackPush*
+  name: StackPush
+  href: api/System.Text.RegularExpressions.Generated.Utilities.html#System_Text_RegularExpressions_Generated_Utilities_StackPush_
+  commentId: Overload:System.Text.RegularExpressions.Generated.Utilities.StackPush
+  isSpec: "True"
+  fullName: System.Text.RegularExpressions.Generated.Utilities.StackPush
+  nameWithType: Utilities.StackPush
+- uid: System.Text.RegularExpressions.Generated.Utilities.s_asciiHexDigits
+  name: s_asciiHexDigits
+  href: api/System.Text.RegularExpressions.Generated.Utilities.html#System_Text_RegularExpressions_Generated_Utilities_s_asciiHexDigits
+  commentId: F:System.Text.RegularExpressions.Generated.Utilities.s_asciiHexDigits
+  fullName: System.Text.RegularExpressions.Generated.Utilities.s_asciiHexDigits
+  nameWithType: Utilities.s_asciiHexDigits
+- uid: System.Text.RegularExpressions.Generated.Utilities.s_ascii_48500D40000006800000010
+  name: s_ascii_48500D40000006800000010
+  href: api/System.Text.RegularExpressions.Generated.Utilities.html#System_Text_RegularExpressions_Generated_Utilities_s_ascii_48500D40000006800000010
+  commentId: F:System.Text.RegularExpressions.Generated.Utilities.s_ascii_48500D40000006800000010
+  fullName: System.Text.RegularExpressions.Generated.Utilities.s_ascii_48500D40000006800000010
+  nameWithType: Utilities.s_ascii_48500D40000006800000010

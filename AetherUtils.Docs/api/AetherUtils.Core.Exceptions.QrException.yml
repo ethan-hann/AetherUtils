@@ -880,3 +880,4 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+shouldSkipMarkup: true

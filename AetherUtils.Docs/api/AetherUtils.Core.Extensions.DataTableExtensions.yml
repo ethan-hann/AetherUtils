@@ -592,3 +592,4 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+shouldSkipMarkup: true

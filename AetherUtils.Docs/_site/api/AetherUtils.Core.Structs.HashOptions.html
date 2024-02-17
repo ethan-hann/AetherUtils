@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct HashOptions | AetherUtils ">
       
-      <meta name="description" content="Represents the options used for performing hashing functions. If unspecified at struct creation, the  defaults to  and the  defaults to . Once created, this struct&#39;s options cannot be changed.">
+      <meta name="description" content="Represents the options used for performing hashing functions. If unspecified at struct creation,  the  defaults to   and the  defaults to . Once created, this struct&#39;s options cannot be changed.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,11 +97,10 @@ Struct HashOptions  <a class="header-action link-secondary" title="View source" 
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents the options used for performing hashing functions. If unspecified at struct creation,
-the <a class="xref" href="AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_HashAlgorithm">HashAlgorithm</a> defaults to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.cryptography.hashalgorithmname.sha384">SHA384</a>
-and the <a class="xref" href="AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_Encoding">Encoding</a> defaults to <a class="xref" href="AetherUtils.Core.Security.Hashing.HashEncoding.html#AetherUtils_Core_Security_Hashing_HashEncoding_Base64">Base64</a>.</p>
-<p>Once created, this struct's options cannot be changed.</p>
-</div>
+  <div class="markdown summary">Represents the options used for performing hashing functions. If unspecified at struct creation, 
+the <a class="xref" href="AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_HashAlgorithm">HashAlgorithm</a> defaults to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.cryptography.hashalgorithmname.sha384">SHA384</a> 
+and the <a class="xref" href="AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_Encoding">Encoding</a> defaults to <a class="xref" href="AetherUtils.Core.Security.Hashing.HashEncoding.html#AetherUtils_Core_Security_Hashing_HashEncoding_Base64">Base64</a>.
+<p>Once created, this struct's options cannot be changed.</p></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -609,6 +608,40 @@ and the <a class="xref" href="AetherUtils.Core.Structs.HashOptions.html#AetherUt
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="AetherUtils_Core_Structs_HashOptions__iterationsSpan" data-uid="AetherUtils.Core.Structs.HashOptions._iterationsSpan">
+  _iterationsSpan
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/HashOptions.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly ReadOnlyPair&lt;int, int&gt; _iterationsSpan</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AetherUtils.Core.Structs.ReadOnlyPair-2.html">ReadOnlyPair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -620,8 +653,7 @@ and the <a class="xref" href="AetherUtils.Core.Structs.HashOptions.html#AetherUt
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/HashOptions.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The encoding scheme to use when hashing.</p>
-</div>
+  <div class="markdown level1 summary">The encoding scheme to use when hashing.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -652,8 +684,7 @@ and the <a class="xref" href="AetherUtils.Core.Structs.HashOptions.html#AetherUt
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/HashOptions.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The algorithm to use when hashing.</p>
-</div>
+  <div class="markdown level1 summary">The algorithm to use when hashing.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -684,9 +715,8 @@ and the <a class="xref" href="AetherUtils.Core.Structs.HashOptions.html#AetherUt
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/HashOptions.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The number of iterations to perform when hashing.</p>
-<p>A random value between the minimum and maximum iterations is retrieved every time this property is called.</p>
-</div>
+  <div class="markdown level1 summary">The number of iterations to perform when hashing.
+<p>A random value between the minimum and maximum iterations is retrieved every time this property is called.</p></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -717,8 +747,7 @@ and the <a class="xref" href="AetherUtils.Core.Structs.HashOptions.html#AetherUt
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/HashOptions.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The size (in bytes) of the hash key used when hashing.</p>
-</div>
+  <div class="markdown level1 summary">The size (in bytes) of the hash key used when hashing.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -749,8 +778,7 @@ and the <a class="xref" href="AetherUtils.Core.Structs.HashOptions.html#AetherUt
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Structs/HashOptions.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The length (in bytes) used for the salt when hashing.</p>
-</div>
+  <div class="markdown level1 summary">The length (in bytes) used for the salt when hashing.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">

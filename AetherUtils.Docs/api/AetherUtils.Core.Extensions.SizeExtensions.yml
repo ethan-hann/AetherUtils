@@ -466,3 +466,4 @@ references:
   name: GetCenterPointF
   nameWithType: SizeExtensions.GetCenterPointF
   fullName: AetherUtils.Core.Extensions.SizeExtensions.GetCenterPointF
+shouldSkipMarkup: true

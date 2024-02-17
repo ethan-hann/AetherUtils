@@ -9,6 +9,8 @@ items:
   - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.DecryptFromFileAsync(System.String,System.String)
   - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptAsync(`0,System.String)
   - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptToFileAsync(`0,System.String,System.String)
+  - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._fileEncryptionService
+  - AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._stringEncryptor
   langs:
   - csharp
   - vb
@@ -30,14 +32,16 @@ items:
   summary: Provides methods to encrypt and decrypt XML serializable .NET objects.
   example: []
   syntax:
-    content: 'public sealed class ObjectEncryptionService<T> : EncryptionBase where T : class'
+    content: 'public sealed class ObjectEncryptionService<T> : EncryptionBase, IEncryptService<T, byte[]> where T : class'
     typeParameters:
     - id: T
       description: The object type to encrypt/decrypt. This type must support XML serialization.
-    content.vb: Public NotInheritable Class ObjectEncryptionService(Of T As Class) Inherits EncryptionBase
+    content.vb: Public NotInheritable Class ObjectEncryptionService(Of T As Class) Inherits EncryptionBase Implements IEncryptService(Of T, Byte())
   inheritance:
   - System.Object
   - AetherUtils.Core.Security.Encryption.EncryptionBase
+  implements:
+  - AetherUtils.Core.Security.Encryption.IEncryptService{{T},System.Byte[]}
   inheritedMembers:
   - AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   - System.Object.Equals(System.Object)
@@ -54,6 +58,64 @@ items:
   nameWithType.vb: ObjectEncryptionService(Of T)
   fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T)
   name.vb: ObjectEncryptionService(Of T)
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._stringEncryptor
+  commentId: F:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._stringEncryptor
+  id: _stringEncryptor
+  parent: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+  langs:
+  - csharp
+  - vb
+  name: _stringEncryptor
+  nameWithType: ObjectEncryptionService<T>._stringEncryptor
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>._stringEncryptor
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: _stringEncryptor
+    path: ../AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+    startLine: 11
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.Encryption
+  syntax:
+    content: private readonly StringEncryptionService _stringEncryptor
+    return:
+      type: AetherUtils.Core.Security.Encryption.StringEncryptionService
+    content.vb: Private ReadOnly _stringEncryptor As StringEncryptionService
+  nameWithType.vb: ObjectEncryptionService(Of T)._stringEncryptor
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T)._stringEncryptor
+- uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._fileEncryptionService
+  commentId: F:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1._fileEncryptionService
+  id: _fileEncryptionService
+  parent: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1
+  langs:
+  - csharp
+  - vb
+  name: _fileEncryptionService
+  nameWithType: ObjectEncryptionService<T>._fileEncryptionService
+  fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>._fileEncryptionService
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: _fileEncryptionService
+    path: ../AetherUtils.Core/Security/Encryption/ObjectEncryptionService.cs
+    startLine: 12
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.Encryption
+  syntax:
+    content: private readonly FileEncryptionService _fileEncryptionService
+    return:
+      type: AetherUtils.Core.Security.Encryption.FileEncryptionService
+    content.vb: Private ReadOnly _fileEncryptionService As FileEncryptionService
+  nameWithType.vb: ObjectEncryptionService(Of T)._fileEncryptionService
+  fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T)._fileEncryptionService
 - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptAsync(`0,System.String)
   commentId: M:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptAsync(`0,System.String)
   id: EncryptAsync(`0,System.String)
@@ -96,6 +158,8 @@ items:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
     description: If the <code class="paramref">input</code> could not serialized to type <code class="typeparamref">T</code>.
+  implements:
+  - AetherUtils.Core.Security.Encryption.IEncryptService{{T},System.Byte[]}.EncryptAsync({T},System.String)
   nameWithType.vb: ObjectEncryptionService(Of T).EncryptAsync(T, String)
   fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).EncryptAsync(T, String)
   name.vb: EncryptAsync(T, String)
@@ -144,6 +208,8 @@ items:
   - type: System.FormatException
     commentId: T:System.FormatException
     description: If the <code class="paramref">input</code> could not be deserialized to type <code class="typeparamref">T</code>.
+  implements:
+  - AetherUtils.Core.Security.Encryption.IEncryptService{{T},System.Byte[]}.DecryptAsync(System.Byte[],System.String)
   nameWithType.vb: ObjectEncryptionService(Of T).DecryptAsync(Byte(), String)
   fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).DecryptAsync(Byte(), String)
   name.vb: DecryptAsync(Byte(), String)
@@ -300,6 +366,49 @@ references:
   name: EncryptionBase
   nameWithType: EncryptionBase
   fullName: AetherUtils.Core.Security.Encryption.EncryptionBase
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService{{T},System.Byte[]}
+  commentId: T:AetherUtils.Core.Security.Encryption.IEncryptService{`0,System.Byte[]}
+  parent: AetherUtils.Core.Security.Encryption
+  definition: AetherUtils.Core.Security.Encryption.IEncryptService`2
+  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  name: IEncryptService<T, byte[]>
+  nameWithType: IEncryptService<T, byte[]>
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, byte[]>
+  nameWithType.vb: IEncryptService(Of T, Byte())
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, Byte())
+  name.vb: IEncryptService(Of T, Byte())
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
+    name: IEncryptService
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
+    name: IEncryptService
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
 - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   parent: AetherUtils.Core.Security.Encryption.EncryptionBase
@@ -761,6 +870,37 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
+  commentId: T:AetherUtils.Core.Security.Encryption.IEncryptService`2
+  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  name: IEncryptService<T, U>
+  nameWithType: IEncryptService<T, U>
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, U>
+  nameWithType.vb: IEncryptService(Of T, U)
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, U)
+  name.vb: IEncryptService(Of T, U)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
+    name: IEncryptService
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: U
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
+    name: IEncryptService
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: U
+  - name: )
 - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
   commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
   href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
@@ -922,8 +1062,23 @@ references:
   - uid: AetherUtils.Core.Extensions
     name: Extensions
     href: AetherUtils.Core.Extensions.html
+- uid: AetherUtils.Core.Security.Encryption.StringEncryptionService
+  commentId: T:AetherUtils.Core.Security.Encryption.StringEncryptionService
+  parent: AetherUtils.Core.Security.Encryption
+  href: AetherUtils.Core.Security.Encryption.StringEncryptionService.html
+  name: StringEncryptionService
+  nameWithType: StringEncryptionService
+  fullName: AetherUtils.Core.Security.Encryption.StringEncryptionService
+- uid: AetherUtils.Core.Security.Encryption.FileEncryptionService
+  commentId: T:AetherUtils.Core.Security.Encryption.FileEncryptionService
+  parent: AetherUtils.Core.Security.Encryption
+  href: AetherUtils.Core.Security.Encryption.FileEncryptionService.html
+  name: FileEncryptionService
+  nameWithType: FileEncryptionService
+  fullName: AetherUtils.Core.Security.Encryption.FileEncryptionService
 - uid: System.Byte
   commentId: T:System.Byte
+  parent: System
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.byte
   name: byte
@@ -947,6 +1102,43 @@ references:
   fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>.EncryptAsync
   nameWithType.vb: ObjectEncryptionService(Of T).EncryptAsync
   fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).EncryptAsync
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService{{T},System.Byte[]}.EncryptAsync({T},System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.IEncryptService{`0,System.Byte[]}.EncryptAsync(`0,System.String)
+  parent: AetherUtils.Core.Security.Encryption.IEncryptService{{T},System.Byte[]}
+  definition: AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync(`0,System.String)
+  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  name: EncryptAsync(T, string)
+  nameWithType: IEncryptService<T, byte[]>.EncryptAsync(T, string)
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, byte[]>.EncryptAsync(T, string)
+  nameWithType.vb: IEncryptService(Of T, Byte()).EncryptAsync(T, String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, Byte()).EncryptAsync(T, String)
+  name.vb: EncryptAsync(T, String)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService{`0,System.Byte[]}.EncryptAsync(`0,System.String)
+    name: EncryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService{`0,System.Byte[]}.EncryptAsync(`0,System.String)
+    name: EncryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: '{T}'
   commentId: '!:T'
   definition: T
@@ -1002,6 +1194,42 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.byte
   - name: (
   - name: )
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync(`0,System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync(`0,System.String)
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  name: EncryptAsync(T, string)
+  nameWithType: IEncryptService<T, U>.EncryptAsync(T, string)
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, U>.EncryptAsync(T, string)
+  nameWithType.vb: IEncryptService(Of T, U).EncryptAsync(T, String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, U).EncryptAsync(T, String)
+  name.vb: EncryptAsync(T, String)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync(`0,System.String)
+    name: EncryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync(`0,System.String)
+    name: EncryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
 - uid: T
   name: T
@@ -1094,6 +1322,53 @@ references:
   fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>.DecryptAsync
   nameWithType.vb: ObjectEncryptionService(Of T).DecryptAsync
   fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).DecryptAsync
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService{{T},System.Byte[]}.DecryptAsync(System.Byte[],System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.IEncryptService{`0,System.Byte[]}.DecryptAsync(System.Byte[],System.String)
+  parent: AetherUtils.Core.Security.Encryption.IEncryptService{{T},System.Byte[]}
+  definition: AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync(`1,System.String)
+  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  name: DecryptAsync(byte[], string)
+  nameWithType: IEncryptService<T, byte[]>.DecryptAsync(byte[], string)
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, byte[]>.DecryptAsync(byte[], string)
+  nameWithType.vb: IEncryptService(Of T, Byte()).DecryptAsync(Byte(), String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, Byte()).DecryptAsync(Byte(), String)
+  name.vb: DecryptAsync(Byte(), String)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService{`0,System.Byte[]}.DecryptAsync(System.Byte[],System.String)
+    name: DecryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService{`0,System.Byte[]}.DecryptAsync(System.Byte[],System.String)
+    name: DecryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: System.Byte[]
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.byte
@@ -1146,6 +1421,42 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync(`1,System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync(`1,System.String)
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  name: DecryptAsync(U, string)
+  nameWithType: IEncryptService<T, U>.DecryptAsync(U, string)
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, U>.DecryptAsync(U, string)
+  nameWithType.vb: IEncryptService(Of T, U).DecryptAsync(U, String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, U).DecryptAsync(U, String)
+  name.vb: DecryptAsync(U, String)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync(`1,System.String)
+    name: DecryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  - name: (
+  - name: U
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync(`1,System.String)
+    name: DecryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  - name: (
+  - name: U
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptToFileAsync*
   commentId: Overload:AetherUtils.Core.Security.Encryption.ObjectEncryptionService`1.EncryptToFileAsync
   href: AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.html#AetherUtils_Core_Security_Encryption_ObjectEncryptionService_1_EncryptToFileAsync__0_System_String_System_String_
@@ -1169,3 +1480,4 @@ references:
   fullName: AetherUtils.Core.Security.Encryption.ObjectEncryptionService<T>.DecryptFromFileAsync
   nameWithType.vb: ObjectEncryptionService(Of T).DecryptFromFileAsync
   fullName.vb: AetherUtils.Core.Security.Encryption.ObjectEncryptionService(Of T).DecryptFromFileAsync
+shouldSkipMarkup: true

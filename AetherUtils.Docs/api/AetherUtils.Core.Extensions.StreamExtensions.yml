@@ -447,3 +447,4 @@ references:
     name: Drawing
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.drawing
+shouldSkipMarkup: true

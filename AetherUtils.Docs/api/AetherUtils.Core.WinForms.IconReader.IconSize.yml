@@ -251,3 +251,4 @@ references:
   - uid: AetherUtils.Core.WinForms.IconReader.IconSize
     name: IconSize
     href: AetherUtils.Core.WinForms.IconReader.IconSize.html
+shouldSkipMarkup: true

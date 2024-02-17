@@ -28,13 +28,26 @@ items:
   summary: Provides methods to encrypt and decrypt <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> arrays.
   example: []
   syntax:
-    content: 'public class ByteEncryptionService : EncryptionBase'
-    content.vb: Public Class ByteEncryptionService Inherits EncryptionBase
+    content: 'public class ByteEncryptionService : EncryptionBase, IEncryptService<byte[], byte[]>'
+    content.vb: Public Class ByteEncryptionService Inherits EncryptionBase Implements IEncryptService(Of Byte(), Byte())
   inheritance:
   - System.Object
   - AetherUtils.Core.Security.Encryption.EncryptionBase
+  implements:
+  - AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}
   inheritedMembers:
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.SHGFI_EXTENSION_SEPARATOR
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream(System.IO.Stream)
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream(System.Byte[],System.IO.Stream)
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString(System.String,System.Int32,AetherUtils.Core.Security.Encryption.KeyLength)
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
   - AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes(System.String,System.Byte[]@)
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes(System.Byte[]@)
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices(System.Collections.Generic.IReadOnlyList{System.Byte})
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString(System.Byte[])
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes(System.Byte[])
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String(System.String)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -85,6 +98,8 @@ items:
       description: The <see></see> encrypted data.
     content.vb: Public Function EncryptAsync(input As Byte(), passphrase As String) As Task(Of Byte())
   overload: AetherUtils.Core.Security.Encryption.ByteEncryptionService.EncryptAsync*
+  implements:
+  - AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}.EncryptAsync(System.Byte[],System.String)
   nameWithType.vb: ByteEncryptionService.EncryptAsync(Byte(), String)
   fullName.vb: AetherUtils.Core.Security.Encryption.ByteEncryptionService.EncryptAsync(Byte(), String)
   name.vb: EncryptAsync(Byte(), String)
@@ -126,12 +141,15 @@ items:
       description: The <see></see> decrypted data.
     content.vb: Public Function DecryptAsync(input As Byte(), passphrase As String) As Task(Of Byte())
   overload: AetherUtils.Core.Security.Encryption.ByteEncryptionService.DecryptAsync*
+  implements:
+  - AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}.DecryptAsync(System.Byte[],System.String)
   nameWithType.vb: ByteEncryptionService.DecryptAsync(Byte(), String)
   fullName.vb: AetherUtils.Core.Security.Encryption.ByteEncryptionService.DecryptAsync(Byte(), String)
   name.vb: DecryptAsync(Byte(), String)
 references:
 - uid: System.Byte
   commentId: T:System.Byte
+  parent: System
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.byte
   name: byte
@@ -196,6 +214,225 @@ references:
   name: EncryptionBase
   nameWithType: EncryptionBase
   fullName: AetherUtils.Core.Security.Encryption.EncryptionBase
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}
+  commentId: T:AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}
+  parent: AetherUtils.Core.Security.Encryption
+  definition: AetherUtils.Core.Security.Encryption.IEncryptService`2
+  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  name: IEncryptService<byte[], byte[]>
+  nameWithType: IEncryptService<byte[], byte[]>
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<byte[], byte[]>
+  nameWithType.vb: IEncryptService(Of Byte(), Byte())
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of Byte(), Byte())
+  name.vb: IEncryptService(Of Byte(), Byte())
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
+    name: IEncryptService
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
+    name: IEncryptService
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.SHGFI_EXTENSION_SEPARATOR
+  commentId: F:AetherUtils.Core.Security.Encryption.EncryptionBase.SHGFI_EXTENSION_SEPARATOR
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_SHGFI_EXTENSION_SEPARATOR
+  name: SHGFI_EXTENSION_SEPARATOR
+  nameWithType: EncryptionBase.SHGFI_EXTENSION_SEPARATOR
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.SHGFI_EXTENSION_SEPARATOR
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream(System.IO.Stream)
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream(System.IO.Stream)
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_ReadIvFromStream_System_IO_Stream_
+  name: ReadIvFromStream(Stream)
+  nameWithType: EncryptionBase.ReadIvFromStream(Stream)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream(System.IO.Stream)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream(System.IO.Stream)
+    name: ReadIvFromStream
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_ReadIvFromStream_System_IO_Stream_
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.ReadIvFromStream(System.IO.Stream)
+    name: ReadIvFromStream
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_ReadIvFromStream_System_IO_Stream_
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream(System.Byte[],System.IO.Stream)
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream(System.Byte[],System.IO.Stream)
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_WriteIvToStream_System_Byte___System_IO_Stream_
+  name: WriteIvToStream(byte[], Stream)
+  nameWithType: EncryptionBase.WriteIvToStream(byte[], Stream)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream(byte[], System.IO.Stream)
+  nameWithType.vb: EncryptionBase.WriteIvToStream(Byte(), Stream)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream(Byte(), System.IO.Stream)
+  name.vb: WriteIvToStream(Byte(), Stream)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream(System.Byte[],System.IO.Stream)
+    name: WriteIvToStream
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_WriteIvToStream_System_Byte___System_IO_Stream_
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteIvToStream(System.Byte[],System.IO.Stream)
+    name: WriteIvToStream
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_WriteIvToStream_System_Byte___System_IO_Stream_
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString(System.String,System.Int32,AetherUtils.Core.Security.Encryption.KeyLength)
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString(System.String,System.Int32,AetherUtils.Core.Security.Encryption.KeyLength)
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_DeriveKeyFromString_System_String_System_Int32_AetherUtils_Core_Security_Encryption_KeyLength_
+  name: DeriveKeyFromString(string, int, KeyLength)
+  nameWithType: EncryptionBase.DeriveKeyFromString(string, int, KeyLength)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString(string, int, AetherUtils.Core.Security.Encryption.KeyLength)
+  nameWithType.vb: EncryptionBase.DeriveKeyFromString(String, Integer, KeyLength)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString(String, Integer, AetherUtils.Core.Security.Encryption.KeyLength)
+  name.vb: DeriveKeyFromString(String, Integer, KeyLength)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString(System.String,System.Int32,AetherUtils.Core.Security.Encryption.KeyLength)
+    name: DeriveKeyFromString
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_DeriveKeyFromString_System_String_System_Int32_AetherUtils_Core_Security_Encryption_KeyLength_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: AetherUtils.Core.Security.Encryption.KeyLength
+    name: KeyLength
+    href: AetherUtils.Core.Security.Encryption.KeyLength.html
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.DeriveKeyFromString(System.String,System.Int32,AetherUtils.Core.Security.Encryption.KeyLength)
+    name: DeriveKeyFromString
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_DeriveKeyFromString_System_String_System_Int32_AetherUtils_Core_Security_Encryption_KeyLength_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: AetherUtils.Core.Security.Encryption.KeyLength
+    name: KeyLength
+    href: AetherUtils.Core.Security.Encryption.KeyLength.html
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_System_Int32_
+  name: GetRandomKey(int)
+  nameWithType: EncryptionBase.GetRandomKey(int)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(int)
+  nameWithType.vb: EncryptionBase.GetRandomKey(Integer)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(Integer)
+  name.vb: GetRandomKey(Integer)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+    name: GetRandomKey
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+    name: GetRandomKey
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
 - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   parent: AetherUtils.Core.Security.Encryption.EncryptionBase
@@ -226,6 +463,238 @@ references:
     name: Integer
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes(System.String,System.Byte[]@)
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes(System.String,System.Byte[]@)
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_WriteExtensionToBytes_System_String_System_Byte____
+  name: WriteExtensionToBytes(string, ref byte[])
+  nameWithType: EncryptionBase.WriteExtensionToBytes(string, ref byte[])
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes(string, ref byte[])
+  nameWithType.vb: EncryptionBase.WriteExtensionToBytes(String, Byte())
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes(String, Byte())
+  name.vb: WriteExtensionToBytes(String, Byte())
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes(System.String,System.Byte[]@)
+    name: WriteExtensionToBytes
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_WriteExtensionToBytes_System_String_System_Byte____
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.WriteExtensionToBytes(System.String,System.Byte[]@)
+    name: WriteExtensionToBytes
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_WriteExtensionToBytes_System_String_System_Byte____
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes(System.Byte[]@)
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes(System.Byte[]@)
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionFromBytes_System_Byte____
+  name: GetExtensionFromBytes(ref byte[])
+  nameWithType: EncryptionBase.GetExtensionFromBytes(ref byte[])
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes(ref byte[])
+  nameWithType.vb: EncryptionBase.GetExtensionFromBytes(Byte())
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes(Byte())
+  name.vb: GetExtensionFromBytes(Byte())
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes(System.Byte[]@)
+    name: GetExtensionFromBytes
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionFromBytes_System_Byte____
+  - name: (
+  - name: ref
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionFromBytes(System.Byte[]@)
+    name: GetExtensionFromBytes
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionFromBytes_System_Byte____
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices(System.Collections.Generic.IReadOnlyList{System.Byte})
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices(System.Collections.Generic.IReadOnlyList{System.Byte})
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_FindSeparatorIndices_System_Collections_Generic_IReadOnlyList_System_Byte__
+  name: FindSeparatorIndices(IReadOnlyList<byte>)
+  nameWithType: EncryptionBase.FindSeparatorIndices(IReadOnlyList<byte>)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices(System.Collections.Generic.IReadOnlyList<byte>)
+  nameWithType.vb: EncryptionBase.FindSeparatorIndices(IReadOnlyList(Of Byte))
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices(System.Collections.Generic.IReadOnlyList(Of Byte))
+  name.vb: FindSeparatorIndices(IReadOnlyList(Of Byte))
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices(System.Collections.Generic.IReadOnlyList{System.Byte})
+    name: FindSeparatorIndices
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_FindSeparatorIndices_System_Collections_Generic_IReadOnlyList_System_Byte__
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.FindSeparatorIndices(System.Collections.Generic.IReadOnlyList{System.Byte})
+    name: FindSeparatorIndices
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_FindSeparatorIndices_System_Collections_Generic_IReadOnlyList_System_Byte__
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString(System.Byte[])
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString(System.Byte[])
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionString_System_Byte___
+  name: GetExtensionString(byte[])
+  nameWithType: EncryptionBase.GetExtensionString(byte[])
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString(byte[])
+  nameWithType.vb: EncryptionBase.GetExtensionString(Byte())
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString(Byte())
+  name.vb: GetExtensionString(Byte())
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString(System.Byte[])
+    name: GetExtensionString
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionString_System_Byte___
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetExtensionString(System.Byte[])
+    name: GetExtensionString
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetExtensionString_System_Byte___
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes(System.Byte[])
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes(System.Byte[])
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetStringFromUtf8Bytes_System_Byte___
+  name: GetStringFromUtf8Bytes(byte[])
+  nameWithType: EncryptionBase.GetStringFromUtf8Bytes(byte[])
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes(byte[])
+  nameWithType.vb: EncryptionBase.GetStringFromUtf8Bytes(Byte())
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes(Byte())
+  name.vb: GetStringFromUtf8Bytes(Byte())
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes(System.Byte[])
+    name: GetStringFromUtf8Bytes
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetStringFromUtf8Bytes_System_Byte___
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetStringFromUtf8Bytes(System.Byte[])
+    name: GetStringFromUtf8Bytes
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetStringFromUtf8Bytes_System_Byte___
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String(System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String(System.String)
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetBytesFromUtf8String_System_String_
+  name: GetBytesFromUtf8String(string)
+  nameWithType: EncryptionBase.GetBytesFromUtf8String(string)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String(string)
+  nameWithType.vb: EncryptionBase.GetBytesFromUtf8String(String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String(String)
+  name.vb: GetBytesFromUtf8String(String)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String(System.String)
+    name: GetBytesFromUtf8String
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetBytesFromUtf8String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetBytesFromUtf8String(System.String)
+    name: GetBytesFromUtf8String
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetBytesFromUtf8String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
@@ -617,6 +1086,37 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
+  commentId: T:AetherUtils.Core.Security.Encryption.IEncryptService`2
+  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  name: IEncryptService<T, U>
+  nameWithType: IEncryptService<T, U>
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, U>
+  nameWithType.vb: IEncryptService(Of T, U)
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, U)
+  name.vb: IEncryptService(Of T, U)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
+    name: IEncryptService
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: U
+  - name: '>'
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2
+    name: IEncryptService
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: U
+  - name: )
 - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
   commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
   href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
@@ -784,6 +1284,53 @@ references:
   name: EncryptAsync
   nameWithType: ByteEncryptionService.EncryptAsync
   fullName: AetherUtils.Core.Security.Encryption.ByteEncryptionService.EncryptAsync
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}.EncryptAsync(System.Byte[],System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}.EncryptAsync(System.Byte[],System.String)
+  parent: AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}
+  definition: AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync(`0,System.String)
+  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  name: EncryptAsync(byte[], string)
+  nameWithType: IEncryptService<byte[], byte[]>.EncryptAsync(byte[], string)
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<byte[], byte[]>.EncryptAsync(byte[], string)
+  nameWithType.vb: IEncryptService(Of Byte(), Byte()).EncryptAsync(Byte(), String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of Byte(), Byte()).EncryptAsync(Byte(), String)
+  name.vb: EncryptAsync(Byte(), String)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}.EncryptAsync(System.Byte[],System.String)
+    name: EncryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}.EncryptAsync(System.Byte[],System.String)
+    name: EncryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: System.Byte[]
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.byte
@@ -857,6 +1404,42 @@ references:
   - name: (
   - name: )
   - name: )
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync(`0,System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync(`0,System.String)
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  name: EncryptAsync(T, string)
+  nameWithType: IEncryptService<T, U>.EncryptAsync(T, string)
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, U>.EncryptAsync(T, string)
+  nameWithType.vb: IEncryptService(Of T, U).EncryptAsync(T, String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, U).EncryptAsync(T, String)
+  name.vb: EncryptAsync(T, String)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync(`0,System.String)
+    name: EncryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.EncryptAsync(`0,System.String)
+    name: EncryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_EncryptAsync__0_System_String_
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: System.Threading.Tasks.Task`1
   commentId: T:System.Threading.Tasks.Task`1
   isExternal: true
@@ -928,3 +1511,87 @@ references:
   name: DecryptAsync
   nameWithType: ByteEncryptionService.DecryptAsync
   fullName: AetherUtils.Core.Security.Encryption.ByteEncryptionService.DecryptAsync
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}.DecryptAsync(System.Byte[],System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}.DecryptAsync(System.Byte[],System.String)
+  parent: AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}
+  definition: AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync(`1,System.String)
+  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  name: DecryptAsync(byte[], string)
+  nameWithType: IEncryptService<byte[], byte[]>.DecryptAsync(byte[], string)
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<byte[], byte[]>.DecryptAsync(byte[], string)
+  nameWithType.vb: IEncryptService(Of Byte(), Byte()).DecryptAsync(Byte(), String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of Byte(), Byte()).DecryptAsync(Byte(), String)
+  name.vb: DecryptAsync(Byte(), String)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}.DecryptAsync(System.Byte[],System.String)
+    name: DecryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService{System.Byte[],System.Byte[]}.DecryptAsync(System.Byte[],System.String)
+    name: DecryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync(`1,System.String)
+  commentId: M:AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync(`1,System.String)
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  name: DecryptAsync(U, string)
+  nameWithType: IEncryptService<T, U>.DecryptAsync(U, string)
+  fullName: AetherUtils.Core.Security.Encryption.IEncryptService<T, U>.DecryptAsync(U, string)
+  nameWithType.vb: IEncryptService(Of T, U).DecryptAsync(U, String)
+  fullName.vb: AetherUtils.Core.Security.Encryption.IEncryptService(Of T, U).DecryptAsync(U, String)
+  name.vb: DecryptAsync(U, String)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync(`1,System.String)
+    name: DecryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  - name: (
+  - name: U
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.IEncryptService`2.DecryptAsync(`1,System.String)
+    name: DecryptAsync
+    href: AetherUtils.Core.Security.Encryption.IEncryptService-2.html#AetherUtils_Core_Security_Encryption_IEncryptService_2_DecryptAsync__1_System_String_
+  - name: (
+  - name: U
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+shouldSkipMarkup: true

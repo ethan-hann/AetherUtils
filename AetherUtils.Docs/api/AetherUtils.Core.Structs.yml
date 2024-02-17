@@ -7,6 +7,7 @@ items:
   - AetherUtils.Core.Structs.ConfigOption
   - AetherUtils.Core.Structs.HashOptions
   - AetherUtils.Core.Structs.Pair`2
+  - AetherUtils.Core.Structs.ParsedHash
   - AetherUtils.Core.Structs.ReadOnlyPair`2
   - AetherUtils.Core.Structs.TrimmedString
   langs:
@@ -64,6 +65,13 @@ references:
   - name: " "
   - name: V
   - name: )
+- uid: AetherUtils.Core.Structs.ParsedHash
+  commentId: T:AetherUtils.Core.Structs.ParsedHash
+  parent: AetherUtils.Core.Structs
+  href: AetherUtils.Core.Structs.ParsedHash.html
+  name: ParsedHash
+  nameWithType: ParsedHash
+  fullName: AetherUtils.Core.Structs.ParsedHash
 - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
   commentId: T:AetherUtils.Core.Structs.ReadOnlyPair`2
   href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
@@ -132,3 +140,4 @@ references:
   - uid: AetherUtils.Core.Structs
     name: Structs
     href: AetherUtils.Core.Structs.html
+shouldSkipMarkup: true

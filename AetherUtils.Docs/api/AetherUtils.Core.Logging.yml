@@ -21,3 +21,4 @@ references:
   name: CLogger
   nameWithType: CLogger
   fullName: AetherUtils.Core.Logging.CLogger
+shouldSkipMarkup: true

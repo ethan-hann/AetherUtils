@@ -97,9 +97,8 @@ Class CLogger  <a class="header-action link-secondary" title="View source" href=
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides static methods to facilitate logging to a file as well as to the console for an application.
-Uses <span class="xref">NLog</span> internally.</p>
-</div>
+  <div class="markdown summary">Provides static methods to facilitate logging to a file as well as to the console for an application.
+Uses <span class="xref">NLog</span> internally.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -150,6 +149,40 @@ Uses <span class="xref">NLog</span> internally.</p>
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="AetherUtils_Core_Logging_CLogger__isInitialized" data-uid="AetherUtils.Core.Logging.CLogger._isInitialized">
+  _isInitialized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Logging/CLogger.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static bool _isInitialized</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -189,6 +222,78 @@ Uses <span class="xref">NLog</span> internally.</p>
 </h2>
 
 
+  <a id="AetherUtils_Core_Logging_CLogger_CreateLogConsoleFromOptions_" data-uid="AetherUtils.Core.Logging.CLogger.CreateLogConsoleFromOptions*"></a>
+
+  <h3 id="AetherUtils_Core_Logging_CLogger_CreateLogConsoleFromOptions_AetherUtils_Core_Configuration_LogOptions_" data-uid="AetherUtils.Core.Logging.CLogger.CreateLogConsoleFromOptions(AetherUtils.Core.Configuration.LogOptions)">
+  CreateLogConsoleFromOptions(LogOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Logging/CLogger.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static ConsoleTarget CreateLogConsoleFromOptions(LogOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="AetherUtils.Core.Configuration.LogOptions.html">LogOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ConsoleTarget</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AetherUtils_Core_Logging_CLogger_CreateLogFileFromOptions_" data-uid="AetherUtils.Core.Logging.CLogger.CreateLogFileFromOptions*"></a>
+
+  <h3 id="AetherUtils_Core_Logging_CLogger_CreateLogFileFromOptions_AetherUtils_Core_Configuration_LogOptions_" data-uid="AetherUtils.Core.Logging.CLogger.CreateLogFileFromOptions(AetherUtils.Core.Configuration.LogOptions)">
+  CreateLogFileFromOptions(LogOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Logging/CLogger.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static FileTarget CreateLogFileFromOptions(LogOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="AetherUtils.Core.Configuration.LogOptions.html">LogOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FileTarget</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="AetherUtils_Core_Logging_CLogger_GetCurrentLogger_" data-uid="AetherUtils.Core.Logging.CLogger.GetCurrentLogger*"></a>
 
   <h3 id="AetherUtils_Core_Logging_CLogger_GetCurrentLogger_System_String_" data-uid="AetherUtils.Core.Logging.CLogger.GetCurrentLogger(System.String)">
@@ -196,8 +301,7 @@ Uses <span class="xref">NLog</span> internally.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Logging/CLogger.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get a logger reference based on the specified name.</p>
-</div>
+  <div class="markdown level1 summary">Get a logger reference based on the specified name.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -207,15 +311,13 @@ Uses <span class="xref">NLog</span> internally.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the logger to get.</p>
-</dd>
+    <dd>The name of the logger to get.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">Logger</span></dt>
-    <dd><p>A <span class="xref">NLog.Logger</span> object that can be used for logging. Returns default name if logging has not been initialized.</p>
-</dd>
+    <dd>A <span class="xref">NLog.Logger</span> object that can be used for logging. Returns default name if logging has not been initialized.</dd>
   </dl>
 
 
@@ -235,8 +337,7 @@ Uses <span class="xref">NLog</span> internally.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Logging/CLogger.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get a logger reference based on the type of class.</p>
-</div>
+  <div class="markdown level1 summary">Get a logger reference based on the type of class.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -247,15 +348,13 @@ Uses <span class="xref">NLog</span> internally.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">Logger</span></dt>
-    <dd><p>A <span class="xref">NLog.Logger</span> object that can be used for logging. Returns default name if logging has not been initialized via <a class="xref" href="AetherUtils.Core.Logging.CLogger.html#AetherUtils_Core_Logging_CLogger_Initialize_AetherUtils_Core_Configuration_LogOptions_">Initialize(LogOptions)</a></p>
-</dd>
+    <dd>A <span class="xref">NLog.Logger</span> object that can be used for logging. Returns default name if logging has not been initialized via <a class="xref" href="AetherUtils.Core.Logging.CLogger.html#AetherUtils_Core_Logging_CLogger_Initialize_AetherUtils_Core_Configuration_LogOptions_">Initialize(LogOptions)</a></dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The class type to get the logger of.</p>
-</dd>
+    <dd>The class type to get the logger of.</dd>
   </dl>
 
 
@@ -274,8 +373,7 @@ Uses <span class="xref">NLog</span> internally.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Logging/CLogger.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get a logger reference based on the type of class as well as an additional name identifier.</p>
-</div>
+  <div class="markdown level1 summary">Get a logger reference based on the type of class as well as an additional name identifier.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -285,22 +383,19 @@ Uses <span class="xref">NLog</span> internally.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The additional name to add to the logger. (i.e., the method name)</p>
-</dd>
+    <dd>The additional name to add to the logger. (i.e., the method name)</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">Logger</span></dt>
-    <dd><p>A <span class="xref">NLog.Logger</span> object that can be used for logging. Returns default name if logging has not been initialized.</p>
-</dd>
+    <dd>A <span class="xref">NLog.Logger</span> object that can be used for logging. Returns default name if logging has not been initialized.</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The class type to get the logger of.</p>
-</dd>
+    <dd>The class type to get the logger of.</dd>
   </dl>
 
 
@@ -319,9 +414,8 @@ Uses <span class="xref">NLog</span> internally.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Logging/CLogger.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initialize the logger for the application. This should be called before any logging takes place;
-usually, directly after reading or creating the initial configuration for the application.</p>
-</div>
+  <div class="markdown level1 summary">Initialize the logger for the application. This should be called before any logging takes place; 
+usually, directly after reading or creating the initial configuration for the application.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -331,8 +425,7 @@ usually, directly after reading or creating the initial configuration for the ap
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="AetherUtils.Core.Configuration.LogOptions.html">LogOptions</a></dt>
-    <dd><p>The <a class="xref" href="AetherUtils.Core.Configuration.LogOptions.html">LogOptions</a> that are used to setup the logger.</p>
-</dd>
+    <dd>The <a class="xref" href="AetherUtils.Core.Configuration.LogOptions.html">LogOptions</a> that are used to setup the logger.</dd>
   </dl>
 
 

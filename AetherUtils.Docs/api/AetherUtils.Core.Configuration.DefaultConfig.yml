@@ -860,3 +860,4 @@ references:
   name: LogOptions
   nameWithType: LogOptions
   fullName: AetherUtils.Core.Configuration.LogOptions
+shouldSkipMarkup: true

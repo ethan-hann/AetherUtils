@@ -97,8 +97,7 @@ Class ArrayExtensions  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides extension methods for manipulating <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.array">Array</a> objects.</p>
-</div>
+  <div class="markdown summary">Provides extension methods for manipulating <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.array">Array</a> objects.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -160,8 +159,7 @@ Class ArrayExtensions  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/ArrayExtensions.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> represented by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</p>
-</div>
+  <div class="markdown level1 summary">Get an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> represented by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -171,15 +169,13 @@ Class ArrayExtensions  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>bytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array containing properly formatted image bytes.</p>
-</dd>
+    <dd>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array containing properly formatted image bytes.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></dt>
-    <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a>.</p>
-</dd>
+    <dd>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a>.</dd>
   </dl>
 
 
@@ -192,11 +188,9 @@ Class ArrayExtensions  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">bytes</code> was <code>null</code>.</p>
-</dd>
+    <dd>If <code class="paramref">bytes</code> was <code>null</code>.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>If <code class="paramref">bytes</code> did not have a valid <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.imaging.imageformat">ImageFormat</a>.</p>
-</dd>
+    <dd>If <code class="paramref">bytes</code> did not have a valid <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.imaging.imageformat">ImageFormat</a>.</dd>
   </dl>
 
 
@@ -208,9 +202,8 @@ Class ArrayExtensions  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/ArrayExtensions.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Convert the numeric value of each element of a specified array of bytes to
-its equivalent hexadecimal string representation.</p>
-</div>
+  <div class="markdown level1 summary">Convert the numeric value of each element of a specified array of bytes to
+its equivalent hexadecimal string representation.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -220,16 +213,14 @@ its equivalent hexadecimal string representation.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>bytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
-    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> of bytes.</p>
-</dd>
+    <dd>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> of bytes.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string of hexadecimal pairs separated by hyphens, where each pair represents the corresponding
-element in value; for example, &quot;7F-2C-4A-00&quot;.</p>
-</dd>
+    <dd>A string of hexadecimal pairs separated by hyphens, where each pair represents the corresponding
+    element in value; for example, "7F-2C-4A-00".</dd>
   </dl>
 
 
@@ -242,8 +233,7 @@ element in value; for example, &quot;7F-2C-4A-00&quot;.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">bytes</code> was <code>null</code>.</p>
-</dd>
+    <dd>If <code class="paramref">bytes</code> was <code>null</code>.</dd>
   </dl>
 
 
@@ -255,8 +245,7 @@ element in value; for example, &quot;7F-2C-4A-00&quot;.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/ArrayExtensions.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Convert an array of values to a string using the specified prefix, delimiter, and optional suffix.</p>
-</div>
+  <div class="markdown level1 summary">Convert an array of values to a string using the specified prefix, delimiter, and optional suffix.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -266,31 +255,25 @@ element in value; for example, &quot;7F-2C-4A-00&quot;.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>values</code> T[]</dt>
-    <dd><p>The array of values to combine.</p>
-</dd>
+    <dd>The array of values to combine.</dd>
     <dt><code>delimiter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
-    <dd><p>The delimiter to separate the values with; default is <code>','</code></p>
-</dd>
+    <dd>The delimiter to separate the values with; default is <code>','</code></dd>
     <dt><code>prefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The prefix to add to the resulting string; default is an empty string.</p>
-</dd>
+    <dd>The prefix to add to the resulting string; default is an empty string.</dd>
     <dt><code>suffix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The suffix to add to the resulting string; default is an empty string.</p>
-</dd>
+    <dd>The suffix to add to the resulting string; default is an empty string.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string formatted with the <code class="paramref">values</code> seperated by the <code class="paramref">delimiter</code>.</p>
-</dd>
+    <dd>A string formatted with the <code class="paramref">values</code> seperated by the <code class="paramref">delimiter</code>.</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of objects contained within the array.</p>
-</dd>
+    <dd>The type of objects contained within the array.</dd>
   </dl>
 
 
@@ -303,13 +286,11 @@ string str = values.ToStringList(',', "PRE(", ")");
 returns: "PRE(val1,val2,val3)"</code></pre>
 
 
-
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">values</code>, <code class="paramref">prefix</code>,
-or <code class="paramref">delimiter</code> was <code>null</code>.</p>
-</dd>
+    <dd>If <code class="paramref">values</code>, <code class="paramref">prefix</code>,
+    or <code class="paramref">delimiter</code> was <code>null</code>.</dd>
   </dl>
 
 

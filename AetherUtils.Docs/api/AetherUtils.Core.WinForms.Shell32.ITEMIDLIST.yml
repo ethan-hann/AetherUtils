@@ -332,3 +332,4 @@ references:
   - uid: AetherUtils.Core.WinForms.Shell32.SHITEMID
     name: SHITEMID
     href: AetherUtils.Core.WinForms.Shell32.SHITEMID.html
+shouldSkipMarkup: true

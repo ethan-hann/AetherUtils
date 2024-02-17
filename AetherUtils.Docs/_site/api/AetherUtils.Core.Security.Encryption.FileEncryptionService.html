@@ -97,18 +97,17 @@ Class FileEncryptionService  <a class="header-action link-secondary" title="View
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides methods to encrypt and decrypt files on the file system.
-<remarks>This service contains potentially destructive methods that can render a file unreadable for a few reasons:</remarks></p>
+  <div class="markdown summary">Provides methods to encrypt and decrypt files on the file system.
+<remarks>This service contains potentially destructive methods that can render a file unreadable for a few reasons:
 <ol><li>If a file is encrypted with <a class="xref" href="AetherUtils.Core.Security.Encryption.FileEncryptionService.html#AetherUtils_Core_Security_Encryption_FileEncryptionService_EncryptFileAsync_System_String_System_String_System_String_">EncryptFileAsync(string, string, string)</a> and then opened in a text editor
             (to view/edit the contents),
             and then the file is saved, it could render the file unable to be decrypted.</li><li>If after performing item 1, you attempt to encrypt the file again, it could be lost forever.</li><li>If the file extension of an encrypted file is changed manually, the file will be unable to be decrypted.</li></ol>
 <b>Use at your own risk!</b>
-
-</div>
+</remarks></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class FileEncryptionService : EncryptionBase</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class FileEncryptionService : EncryptionBase, IEncryptService&lt;string, string&gt;</code></pre>
   </div>
 
 
@@ -123,6 +122,12 @@ Class FileEncryptionService  <a class="header-action link-secondary" title="View
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="AetherUtils.Core.Security.Encryption.IEncryptService-2.html">IEncryptService</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -178,6 +183,32 @@ Class FileEncryptionService  <a class="header-action link-secondary" title="View
 
   <a id="AetherUtils_Core_Security_Encryption_FileEncryptionService__ctor_" data-uid="AetherUtils.Core.Security.Encryption.FileEncryptionService.#ctor*"></a>
 
+  <h3 id="AetherUtils_Core_Security_Encryption_FileEncryptionService__ctor" data-uid="AetherUtils.Core.Security.Encryption.FileEncryptionService.#ctor">
+  FileEncryptionService()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/FileEncryptionService.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal FileEncryptionService()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AetherUtils_Core_Security_Encryption_FileEncryptionService__ctor_" data-uid="AetherUtils.Core.Security.Encryption.FileEncryptionService.#ctor*"></a>
+
   <h3 id="AetherUtils_Core_Security_Encryption_FileEncryptionService__ctor_System_String_" data-uid="AetherUtils.Core.Security.Encryption.FileEncryptionService.#ctor(System.String)">
   FileEncryptionService(string)
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/FileEncryptionService.cs/#L28"><i class="bi bi-code-slash"></i></a>
@@ -207,6 +238,40 @@ Class FileEncryptionService  <a class="header-action link-secondary" title="View
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="AetherUtils_Core_Security_Encryption_FileEncryptionService_ByteEncryptor" data-uid="AetherUtils.Core.Security.Encryption.FileEncryptionService.ByteEncryptor">
+  ByteEncryptor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/FileEncryptionService.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static readonly ByteEncryptionService ByteEncryptor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AetherUtils.Core.Security.Encryption.ByteEncryptionService.html">ByteEncryptionService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -218,8 +283,7 @@ Class FileEncryptionService  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/FileEncryptionService.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get or set the file path that is used for encryption.</p>
-</div>
+  <div class="markdown level1 summary">Get or set the file path that is used for encryption.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -254,8 +318,7 @@ Class FileEncryptionService  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/FileEncryptionService.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Decrypt a file specified by <code class="paramref">filePath</code> using the <code class="paramref">passphrase</code>.</p>
-</div>
+  <div class="markdown level1 summary">Decrypt a file specified by <code class="paramref">filePath</code> using the <code class="paramref">passphrase</code>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -265,18 +328,15 @@ Class FileEncryptionService  <a class="header-action link-secondary" title="View
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The path to the file to decrypt.</p>
-</dd>
+    <dd>The path to the file to decrypt.</dd>
     <dt><code>passphrase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The passphrase used for decryption.</p>
-</dd>
+    <dd>The passphrase used for decryption.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>The decrypted contents of the file.</p>
-</dd>
+    <dd>The decrypted contents of the file.</dd>
   </dl>
 
 
@@ -289,11 +349,9 @@ Class FileEncryptionService  <a class="header-action link-secondary" title="View
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
-    <dd><p>If <code class="paramref">filePath</code> was not a valid path to a file.</p>
-</dd>
+    <dd>If <code class="paramref">filePath</code> was not a valid path to a file.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>If <code class="paramref">filePath</code> was <code>null</code> or empty.</p>
-</dd>
+    <dd>If <code class="paramref">filePath</code> was <code>null</code> or empty.</dd>
   </dl>
 
 
@@ -305,8 +363,7 @@ Class FileEncryptionService  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/FileEncryptionService.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Decrypt an encrypted file from disk using the specified <code class="paramref">passphrase</code> to derive the key.</p>
-</div>
+  <div class="markdown level1 summary">Decrypt an encrypted file from disk using the specified <code class="paramref">passphrase</code> to derive the key.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -316,18 +373,15 @@ Class FileEncryptionService  <a class="header-action link-secondary" title="View
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The path to the file on disk to decrypt.</p>
-</dd>
+    <dd>The path to the file on disk to decrypt.</dd>
     <dt><code>passphrase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The passphrase used for decryption.</p>
-</dd>
+    <dd>The passphrase used for decryption.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>The path to the decrypted file.</p>
-</dd>
+    <dd>The path to the decrypted file.</dd>
   </dl>
 
 
@@ -337,16 +391,14 @@ Class FileEncryptionService  <a class="header-action link-secondary" title="View
 
 
   <h4 class="section" id="AetherUtils_Core_Security_Encryption_FileEncryptionService_DecryptFileAsync_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the encrypted file's extension is different than the original file's,
-the encrypted file is deleted after decryption occurs and the file extension is
-changed back to the original extension.</p>
-</div>
+  <div class="markdown level1 remarks">If the encrypted file's extension is different than the original file's,
+    the encrypted file is deleted after decryption occurs and the file extension is
+    changed back to the original extension.</div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
-    <dd><p>If the file could not be found at the <code class="paramref">filePath</code>.</p>
-</dd>
+    <dd>If the file could not be found at the <code class="paramref">filePath</code>.</dd>
   </dl>
 
 
@@ -358,9 +410,8 @@ changed back to the original extension.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/FileEncryptionService.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Create and encrypt a file with the specified <code class="paramref">content</code> using the <code class="paramref">passphrase</code>.</p>
-<p>This method will either create a new file if one does not exist or overwrite the existing file.</p>
-</div>
+  <div class="markdown level1 summary">Create and encrypt a file with the specified <code class="paramref">content</code> using the <code class="paramref">passphrase</code>.
+<p>This method will either create a new file if one does not exist or overwrite the existing file.</p></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -370,18 +421,15 @@ changed back to the original extension.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The string to encrypt into the file.</p>
-</dd>
+    <dd>The string to encrypt into the file.</dd>
     <dt><code>passphrase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The passphrase used for encryption.</p>
-</dd>
+    <dd>The passphrase used for encryption.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>The path to the encrypted file.</p>
-</dd>
+    <dd>The path to the encrypted file.</dd>
   </dl>
 
 
@@ -394,14 +442,11 @@ changed back to the original extension.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>If <code class="paramref">content</code> was <code>null</code> or empty.</p>
-</dd>
+    <dd>If <code class="paramref">content</code> was <code>null</code> or empty.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">passphrase</code> was <code>null</code>.</p>
-</dd>
+    <dd>If <code class="paramref">passphrase</code> was <code>null</code>.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If the <a class="xref" href="AetherUtils.Core.Security.Encryption.FileEncryptionService.html#AetherUtils_Core_Security_Encryption_FileEncryptionService_FilePath">FilePath</a> property is empty.</p>
-</dd>
+    <dd>If the <a class="xref" href="AetherUtils.Core.Security.Encryption.FileEncryptionService.html#AetherUtils_Core_Security_Encryption_FileEncryptionService_FilePath">FilePath</a> property is empty.</dd>
   </dl>
 
 
@@ -413,8 +458,7 @@ changed back to the original extension.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/Encryption/FileEncryptionService.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Encrypt an existing file on disk using the specified <code class="paramref">passphrase</code> to derive the key.</p>
-</div>
+  <div class="markdown level1 summary">Encrypt an existing file on disk using the specified <code class="paramref">passphrase</code> to derive the key.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -424,22 +468,18 @@ changed back to the original extension.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The path to the file on disk to encrypt.</p>
-</dd>
+    <dd>The path to the file on disk to encrypt.</dd>
     <dt><code>passphrase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The passphrase used for encryption.</p>
-</dd>
+    <dd>The passphrase used for encryption.</dd>
     <dt><code>newExtension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The file extensions to change the encrypted file to.
-If no file extension change is wanted, supply the original file's extension; default is <code>.enc</code>.</p>
-</dd>
+    <dd>The file extensions to change the encrypted file to.
+    If no file extension change is wanted, supply the original file's extension; default is <code>.enc</code>.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>The path to the encrypted file.</p>
-</dd>
+    <dd>The path to the encrypted file.</dd>
   </dl>
 
 
@@ -449,16 +489,14 @@ If no file extension change is wanted, supply the original file's extension; def
 
 
   <h4 class="section" id="AetherUtils_Core_Security_Encryption_FileEncryptionService_EncryptFileAsync_System_String_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the original file's extension is different than the encrypted file's,
-the original file is deleted after encryption occurs and the file extension is
-changed to the new extension.</p>
-</div>
+  <div class="markdown level1 remarks">If the original file's extension is different than the encrypted file's,
+    the original file is deleted after encryption occurs and the file extension is
+    changed to the new extension.</div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
-    <dd><p>If the file could not be found at the <code class="paramref">filePath</code>.</p>
-</dd>
+    <dd>If the file could not be found at the <code class="paramref">filePath</code>.</dd>
   </dl>
 
 

@@ -515,3 +515,4 @@ references:
   name: FormatSize
   nameWithType: NumberExtensions.FormatSize
   fullName: AetherUtils.Core.Extensions.NumberExtensions.FormatSize
+shouldSkipMarkup: true

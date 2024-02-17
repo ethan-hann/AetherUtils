@@ -97,8 +97,7 @@ Class ProportionalRandomSelector&lt;T&gt;  <a class="header-action link-secondar
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a cryptographically strong, random item selector using proportional percentages.</p>
-</div>
+  <div class="markdown summary">Represents a cryptographically strong, random item selector using proportional percentages.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -110,8 +109,7 @@ Class ProportionalRandomSelector&lt;T&gt;  <a class="header-action link-secondar
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of item to select using this selector.</p>
-</dd>
+    <dd>The type of item to select using this selector.</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -168,6 +166,40 @@ Class ProportionalRandomSelector&lt;T&gt;  <a class="header-action link-secondar
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="AetherUtils_Core_Utility_ProportionalRandomSelector_1__percentages" data-uid="AetherUtils.Core.Utility.ProportionalRandomSelector`1._percentages">
+  _percentages
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Utility/ProportionalRandomSelector.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly Dictionary&lt;T, int&gt; _percentages</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -179,8 +211,7 @@ Class ProportionalRandomSelector&lt;T&gt;  <a class="header-action link-secondar
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Utility/ProportionalRandomSelector.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Add an item and its percentage to this selector.</p>
-</div>
+  <div class="markdown level1 summary">Add an item and its percentage to this selector.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -190,11 +221,9 @@ Class ProportionalRandomSelector&lt;T&gt;  <a class="header-action link-secondar
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>item</code> <span class="xref">T</span></dt>
-    <dd><p>The item to add.</p>
-</dd>
+    <dd>The item to add.</dd>
     <dt><code>percentage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The percentage indicating the likelihood of the item being selected.</p>
-</dd>
+    <dd>The percentage indicating the likelihood of the item being selected.</dd>
   </dl>
 
 
@@ -215,8 +244,7 @@ Class ProportionalRandomSelector&lt;T&gt;  <a class="header-action link-secondar
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Utility/ProportionalRandomSelector.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get a random item from the selector using the percentages defined within.</p>
-</div>
+  <div class="markdown level1 summary">Get a random item from the selector using the percentages defined within.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -227,8 +255,7 @@ Class ProportionalRandomSelector&lt;T&gt;  <a class="header-action link-secondar
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd><p>A random item or <code>null</code> if an item could not be selected.</p>
-</dd>
+    <dd>A random item or <code>null</code> if an item could not be selected.</dd>
   </dl>
 
 

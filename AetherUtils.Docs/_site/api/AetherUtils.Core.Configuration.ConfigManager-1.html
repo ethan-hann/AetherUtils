@@ -97,9 +97,8 @@ Class ConfigManager&lt;T&gt;  <a class="header-action link-secondary" title="Vie
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>This class cannot be instantiated. A child class must be created inheriting from <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html">ConfigManager&lt;T&gt;</a>.
-Handles saving, loading, and querying a generic configuration based on class T.</p>
-</div>
+  <div class="markdown summary">This class cannot be instantiated. A child class must be created inheriting from <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html">ConfigManager&lt;T&gt;</a>.
+Handles saving, loading, and querying a generic configuration based on class T.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -111,8 +110,7 @@ Handles saving, loading, and querying a generic configuration based on class T.<
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The DTO class that represents the configuration.</p>
-</dd>
+    <dd>The DTO class that represents the configuration.</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -183,9 +181,8 @@ Handles saving, loading, and querying a generic configuration based on class T.<
 
 
   <h2 id="AetherUtils_Core_Configuration_ConfigManager_1_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>The custom class should have its properties related to configuration marked with a <a class="xref" href="AetherUtils.Core.Attributes.ConfigAttribute.html">ConfigAttribute</a>.
-These properties are the only ones which will be serialized and de-serialized from disk.</p>
-</div>
+  <div class="markdown level0 remarks">The custom class should have its properties related to configuration marked with a <a class="xref" href="AetherUtils.Core.Attributes.ConfigAttribute.html">ConfigAttribute</a>.
+These properties are the only ones which will be serialized and de-serialized from disk.</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -199,9 +196,8 @@ These properties are the only ones which will be serialized and de-serialized fr
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>This class cannot be instantiated. A child class must be created inheriting from <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html">ConfigManager&lt;T&gt;</a>.
-Handles saving, loading, and querying a generic configuration based on class T.</p>
-</div>
+  <div class="markdown level1 summary">This class cannot be instantiated. A child class must be created inheriting from <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html">ConfigManager&lt;T&gt;</a>.
+Handles saving, loading, and querying a generic configuration based on class T.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -222,9 +218,72 @@ Handles saving, loading, and querying a generic configuration based on class T.<
 
 
   <h4 class="section" id="AetherUtils_Core_Configuration_ConfigManager_1__ctor_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The custom class should have its properties related to configuration marked with a <a class="xref" href="AetherUtils.Core.Attributes.ConfigAttribute.html">ConfigAttribute</a>.
-These properties are the only ones which will be serialized and de-serialized from disk.</p>
-</div>
+  <div class="markdown level1 remarks">The custom class should have its properties related to configuration marked with a <a class="xref" href="AetherUtils.Core.Attributes.ConfigAttribute.html">ConfigAttribute</a>.
+These properties are the only ones which will be serialized and de-serialized from disk.</div>
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="AetherUtils_Core_Configuration_ConfigManager_1__deserializer" data-uid="AetherUtils.Core.Configuration.ConfigManager`1._deserializer">
+  _deserializer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly IDeserializer _deserializer</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IDeserializer</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="AetherUtils_Core_Configuration_ConfigManager_1__serializer" data-uid="AetherUtils.Core.Configuration.ConfigManager`1._serializer">
+  _serializer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly ISerializer _serializer</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ISerializer</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
 
 
 
@@ -240,8 +299,7 @@ These properties are the only ones which will be serialized and de-serialized fr
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get a value indicating whether the configuration file exists on disk.</p>
-</div>
+  <div class="markdown level1 summary">Get a value indicating whether the configuration file exists on disk.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -272,8 +330,7 @@ These properties are the only ones which will be serialized and de-serialized fr
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get or set the path to the configuration file on disk.</p>
-</div>
+  <div class="markdown level1 summary">Get or set the path to the configuration file on disk.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -304,8 +361,7 @@ These properties are the only ones which will be serialized and de-serialized fr
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get or set the current configuration.</p>
-</div>
+  <div class="markdown level1 summary">Get or set the current configuration.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -336,8 +392,7 @@ These properties are the only ones which will be serialized and de-serialized fr
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get a value indicating whether the configuration has been initialized.</p>
-</div>
+  <div class="markdown level1 summary">Get a value indicating whether the configuration has been initialized.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -372,8 +427,7 @@ These properties are the only ones which will be serialized and de-serialized fr
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Create the default configuration.</p>
-</div>
+  <div class="markdown level1 summary">Create the default configuration.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -404,8 +458,7 @@ These properties are the only ones which will be serialized and de-serialized fr
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get a configuration value specified by the configuration <code class="paramref">option</code>.</p>
-</div>
+  <div class="markdown level1 summary">Get a configuration value specified by the configuration <code class="paramref">option</code>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -415,15 +468,13 @@ These properties are the only ones which will be serialized and de-serialized fr
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>option</code> <a class="xref" href="AetherUtils.Core.Structs.ConfigOption.html">ConfigOption</a></dt>
-    <dd><p>The <a class="xref" href="AetherUtils.Core.Structs.ConfigOption.html">ConfigOption</a> containing information about the value to get.</p>
-</dd>
+    <dd>The <a class="xref" href="AetherUtils.Core.Structs.ConfigOption.html">ConfigOption</a> containing information about the value to get.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd><p>The configuration value or <code>null</code> if the value did not exist.</p>
-</dd>
+    <dd>The configuration value or <code>null</code> if the value did not exist.</dd>
   </dl>
 
 
@@ -443,8 +494,7 @@ These properties are the only ones which will be serialized and de-serialized fr
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L191"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get a configuration value specified by <code class="paramref">configName</code>.</p>
-</div>
+  <div class="markdown level1 summary">Get a configuration value specified by <code class="paramref">configName</code>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -454,15 +504,13 @@ These properties are the only ones which will be serialized and de-serialized fr
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>configName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the configuration to get.</p>
-</dd>
+    <dd>The name of the configuration to get.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd><p>The configuration value or <code>null</code> if the value did not exist.</p>
-</dd>
+    <dd>The configuration value or <code>null</code> if the value did not exist.</dd>
   </dl>
 
 
@@ -482,8 +530,7 @@ These properties are the only ones which will be serialized and de-serialized fr
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Load a configuration file from disk based on the <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a>.</p>
-</div>
+  <div class="markdown level1 summary">Load a configuration file from disk based on the <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -494,8 +541,7 @@ These properties are the only ones which will be serialized and de-serialized fr
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the config loaded successfully; <code>false</code> otherwise.</p>
-</dd>
+    <dd><code>true</code> if the config loaded successfully; <code>false</code> otherwise.</dd>
   </dl>
 
 
@@ -508,8 +554,7 @@ These properties are the only ones which will be serialized and de-serialized fr
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>If <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a> is <code>null</code> or empty.</p>
-</dd>
+    <dd>If <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a> is <code>null</code> or empty.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
     <dd></dd>
   </dl>
@@ -523,8 +568,7 @@ These properties are the only ones which will be serialized and de-serialized fr
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Asynchronously load a configuration file from disk based on the <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a>.</p>
-</div>
+  <div class="markdown level1 summary">Asynchronously load a configuration file from disk based on the <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -535,8 +579,7 @@ These properties are the only ones which will be serialized and de-serialized fr
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p><code>true</code> if the config loaded successfully; <code>false</code> otherwise.</p>
-</dd>
+    <dd><code>true</code> if the config loaded successfully; <code>false</code> otherwise.</dd>
   </dl>
 
 
@@ -549,12 +592,10 @@ These properties are the only ones which will be serialized and de-serialized fr
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>If <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a> is <code>null</code> or empty.</p>
-</dd>
+    <dd>If <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a> is <code>null</code> or empty.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
-    <dd><p>If the configuration file specified by <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a>
-was not found on disk.</p>
-</dd>
+    <dd>If the configuration file specified by <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a>
+    was not found on disk.</dd>
   </dl>
 
 
@@ -566,8 +607,7 @@ was not found on disk.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Save a configuration file to disk based on the <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_CurrentConfig">CurrentConfig</a> and the <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a>.</p>
-</div>
+  <div class="markdown level1 summary">Save a configuration file to disk based on the <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_CurrentConfig">CurrentConfig</a> and the <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -578,8 +618,7 @@ was not found on disk.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the config saved successfully; <code>false</code> otherwise.</p>
-</dd>
+    <dd><code>true</code> if the config saved successfully; <code>false</code> otherwise.</dd>
   </dl>
 
 
@@ -592,8 +631,7 @@ was not found on disk.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>If <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a> is <code>null</code> or empty.</p>
-</dd>
+    <dd>If <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a> is <code>null</code> or empty.</dd>
   </dl>
 
 
@@ -605,8 +643,7 @@ was not found on disk.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Asynchronously save a configuration file to disk based on the <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_CurrentConfig">CurrentConfig</a> and the <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a>.</p>
-</div>
+  <div class="markdown level1 summary">Asynchronously save a configuration file to disk based on the <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_CurrentConfig">CurrentConfig</a> and the <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -617,8 +654,7 @@ was not found on disk.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p><code>true</code> if the config saved successfully; <code>false</code> otherwise.</p>
-</dd>
+    <dd><code>true</code> if the config saved successfully; <code>false</code> otherwise.</dd>
   </dl>
 
 
@@ -631,8 +667,7 @@ was not found on disk.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>If <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a> is <code>null</code> or empty.</p>
-</dd>
+    <dd>If <a class="xref" href="AetherUtils.Core.Configuration.ConfigManager-1.html#AetherUtils_Core_Configuration_ConfigManager_1_ConfigFilePath">ConfigFilePath</a> is <code>null</code> or empty.</dd>
   </dl>
 
 
@@ -644,8 +679,7 @@ was not found on disk.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Set a configuration value specified by the configuration <code class="paramref">option</code>.</p>
-</div>
+  <div class="markdown level1 summary">Set a configuration value specified by the configuration <code class="paramref">option</code>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -655,15 +689,51 @@ was not found on disk.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>option</code> <a class="xref" href="AetherUtils.Core.Structs.ConfigOption.html">ConfigOption</a></dt>
-    <dd><p>The <a class="xref" href="AetherUtils.Core.Structs.ConfigOption.html">ConfigOption</a> containing information about the value to set.</p>
-</dd>
+    <dd>The <a class="xref" href="AetherUtils.Core.Structs.ConfigOption.html">ConfigOption</a> containing information about the value to set.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the value was set successfully; <code>false</code> otherwise.</p>
-</dd>
+    <dd><code>true</code> if the value was set successfully; <code>false</code> otherwise.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AetherUtils_Core_Configuration_ConfigManager_1_Set_" data-uid="AetherUtils.Core.Configuration.ConfigManager`1.Set*"></a>
+
+  <h3 id="AetherUtils_Core_Configuration_ConfigManager_1_Set_AetherUtils_Core_Structs_ConfigOption_System_Object_" data-uid="AetherUtils.Core.Configuration.ConfigManager`1.Set(AetherUtils.Core.Structs.ConfigOption,System.Object)">
+  Set(ConfigOption, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Set a configuration option specified by <code class="paramref">option</code>.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool Set(ConfigOption option, object? instance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>option</code> <a class="xref" href="AetherUtils.Core.Structs.ConfigOption.html">ConfigOption</a></dt>
+    <dd>The configuration option to set.</dd>
+    <dt><code>instance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd>The instance of the configuration to set the option on.</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><code>true</code> if the value was set successfully; <code>false</code> otherwise.</dd>
   </dl>
 
 
@@ -683,8 +753,7 @@ was not found on disk.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Configuration/ConfigManager.cs/#L213"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Set a configuration <code class="paramref">value</code> specified by <code class="paramref">configName</code>.</p>
-</div>
+  <div class="markdown level1 summary">Set a configuration <code class="paramref">value</code> specified by <code class="paramref">configName</code>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -694,18 +763,15 @@ was not found on disk.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>configName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the configuration to set.</p>
-</dd>
+    <dd>The name of the configuration to set.</dd>
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd><p>The value to set.</p>
-</dd>
+    <dd>The value to set.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the value was set successfully; <code>false</code> otherwise.</p>
-</dd>
+    <dd><code>true</code> if the value was set successfully; <code>false</code> otherwise.</dd>
   </dl>
 
 

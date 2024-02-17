@@ -61,6 +61,8 @@ items:
   - System.Runtime.Serialization.ISerializable
   - System.Xml.Serialization.IXmlSerializable
   inheritedMembers:
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#get_Item(System.Object)
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#set_Item(System.Object,System.Object)
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.Add({TKey},{TValue})
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.Clear
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.ContainsKey({TKey})
@@ -70,6 +72,17 @@ items:
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.OnDeserialization(System.Object)
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.Remove({TKey})
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.Remove({TKey},{TValue}@)
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add(System.Collections.Generic.KeyValuePair{{TKey},{TValue}})
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Contains(System.Collections.Generic.KeyValuePair{{TKey},{TValue}})
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{{TKey},{TValue}}[],System.Int32)
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove(System.Collections.Generic.KeyValuePair{{TKey},{TValue}})
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{TKey,TValue}}#GetEnumerator
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#ICollection#CopyTo(System.Array,System.Int32)
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#Add(System.Object,System.Object)
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#Contains(System.Object)
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#GetEnumerator
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#Remove(System.Object)
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IEnumerable#GetEnumerator
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.TrimExcess
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.TrimExcess(System.Int32)
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.TryAdd({TKey},{TValue})
@@ -78,6 +91,18 @@ items:
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.Count
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.Item({TKey})
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.Keys
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#IsReadOnly
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#IDictionary{TKey,TValue}#Keys
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#IDictionary{TKey,TValue}#Values
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Keys
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Values
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#ICollection#IsSynchronized
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#ICollection#SyncRoot
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#IsFixedSize
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#IsReadOnly
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#Item(System.Object)
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#Keys
+  - System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#Values
   - System.Collections.Generic.Dictionary{{TKey},{TValue}}.Values
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -588,6 +613,60 @@ references:
   name: IXmlSerializable
   nameWithType: IXmlSerializable
   fullName: System.Xml.Serialization.IXmlSerializable
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#get_Item(System.Object)
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#get_Item(System.Object)
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#get_Item(System.Object)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.get_Item(object)
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.get_Item(object)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.get_Item(object)
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#get_Item(System.Object)
+    name: get_Item
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-get_item
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#set_Item(System.Object,System.Object)
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#set_Item(System.Object,System.Object)
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#set_Item(System.Object,System.Object)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.set_Item(object, object)
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.set_Item(object, object)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.set_Item(object, object)
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#set_Item(System.Object,System.Object)
+    name: set_Item
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-set_item
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
 - uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.Add({TKey},{TValue})
   commentId: M:System.Collections.Generic.Dictionary{`0,`1}.Add(`0,`1)
   parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
@@ -847,6 +926,362 @@ references:
   - name: " "
   - name: TValue
   - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add(System.Collections.Generic.KeyValuePair{{TKey},{TValue}})
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add(System.Collections.Generic.KeyValuePair{`0,`1})
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add(System.Collections.Generic.KeyValuePair{`0,`1})
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<KeyValuePair<TKey, TValue>>.Add(KeyValuePair<TKey, TValue>)
+  nameWithType: Dictionary<TKey, TValue>.ICollection<KeyValuePair<TKey, TValue>>.Add(KeyValuePair<TKey, TValue>)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>.Add(System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add(System.Collections.Generic.KeyValuePair{`0,`1})
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-icollection-system-collections-generic-keyvaluepair-tkey,tvalue---add
+  - name: (
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Contains(System.Collections.Generic.KeyValuePair{{TKey},{TValue}})
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Contains(System.Collections.Generic.KeyValuePair{`0,`1})
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Contains(System.Collections.Generic.KeyValuePair{`0,`1})
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<KeyValuePair<TKey, TValue>>.Contains(KeyValuePair<TKey, TValue>)
+  nameWithType: Dictionary<TKey, TValue>.ICollection<KeyValuePair<TKey, TValue>>.Contains(KeyValuePair<TKey, TValue>)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>.Contains(System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Contains(System.Collections.Generic.KeyValuePair{`0,`1})
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-icollection-system-collections-generic-keyvaluepair-tkey,tvalue---contains
+  - name: (
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{{TKey},{TValue}}[],System.Int32)
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<KeyValuePair<TKey, TValue>>.CopyTo(KeyValuePair<TKey, TValue>[], int)
+  nameWithType: Dictionary<TKey, TValue>.ICollection<KeyValuePair<TKey, TValue>>.CopyTo(KeyValuePair<TKey, TValue>[], int)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>.CopyTo(System.Collections.Generic.KeyValuePair<TKey, TValue>[], int)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-icollection-system-collections-generic-keyvaluepair-tkey,tvalue---copyto
+  - name: (
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove(System.Collections.Generic.KeyValuePair{{TKey},{TValue}})
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove(System.Collections.Generic.KeyValuePair{`0,`1})
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove(System.Collections.Generic.KeyValuePair{`0,`1})
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<KeyValuePair<TKey, TValue>>.Remove(KeyValuePair<TKey, TValue>)
+  nameWithType: Dictionary<TKey, TValue>.ICollection<KeyValuePair<TKey, TValue>>.Remove(KeyValuePair<TKey, TValue>)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>.Remove(System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove(System.Collections.Generic.KeyValuePair{`0,`1})
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-icollection-system-collections-generic-keyvaluepair-tkey,tvalue---remove
+  - name: (
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{TKey,TValue}}#GetEnumerator
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{TKey,TValue}}#GetEnumerator
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{TKey,TValue}}#GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<KeyValuePair<TKey, TValue>>.GetEnumerator()
+  nameWithType: Dictionary<TKey, TValue>.IEnumerable<KeyValuePair<TKey, TValue>>.GetEnumerator()
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{TKey,TValue}}#GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-ienumerable-system-collections-generic-keyvaluepair-tkey,tvalue---getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#ICollection#CopyTo(System.Array,System.Int32)
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#ICollection#CopyTo(System.Array,System.Int32)
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#ICollection#CopyTo(System.Array,System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  name: ICollection.CopyTo(Array, int)
+  nameWithType: Dictionary<TKey, TValue>.ICollection.CopyTo(Array, int)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.ICollection.CopyTo(System.Array, int)
+  spec.csharp:
+  - uid: System.Collections.ICollection
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#ICollection#CopyTo(System.Array,System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-icollection-copyto
+  - name: (
+  - uid: System.Array
+    name: Array
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.array
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#Add(System.Object,System.Object)
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Add(System.Object,System.Object)
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Add(System.Object,System.Object)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.Add(object, object)
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.Add(object, object)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.Add(object, object)
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Add(System.Object,System.Object)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-add
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#Contains(System.Object)
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Contains(System.Object)
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Contains(System.Object)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.Contains(object)
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.Contains(object)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.Contains(object)
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Contains(System.Object)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-contains
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#GetEnumerator
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#GetEnumerator
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.GetEnumerator()
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.GetEnumerator()
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#Remove(System.Object)
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Remove(System.Object)
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Remove(System.Object)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.Remove(object)
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.Remove(object)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.Remove(object)
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Remove(System.Object)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-remove
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IEnumerable#GetEnumerator
+  commentId: M:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IEnumerable#GetEnumerator
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#IEnumerable#GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable.GetEnumerator()
+  nameWithType: Dictionary<TKey, TValue>.IEnumerable.GetEnumerator()
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IEnumerable.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.IEnumerable
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IEnumerable#GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-ienumerable-getenumerator
+  - name: (
+  - name: )
 - uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.TrimExcess
   commentId: M:System.Collections.Generic.Dictionary{`0,`1}.TrimExcess
   parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
@@ -1025,6 +1460,311 @@ references:
   fullName: System.Collections.Generic.Dictionary<TKey, TValue>.Keys
   nameWithType.vb: Dictionary(Of TKey, TValue).Keys
   fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).Keys
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#IsReadOnly
+  commentId: P:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#IsReadOnly
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#IsReadOnly
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<KeyValuePair<TKey, TValue>>.IsReadOnly
+  nameWithType: Dictionary<TKey, TValue>.ICollection<KeyValuePair<TKey, TValue>>.IsReadOnly
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>.IsReadOnly
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.IsReadOnly
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.IsReadOnly
+  name.vb: System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.IsReadOnly
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#IsReadOnly
+    name: IsReadOnly
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-icollection-system-collections-generic-keyvaluepair-tkey,tvalue---isreadonly
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#IDictionary{TKey,TValue}#Keys
+  commentId: P:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#IDictionary{TKey,TValue}#Keys
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IDictionary{TKey,TValue}#Keys
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>.Keys
+  nameWithType: Dictionary<TKey, TValue>.IDictionary<TKey, TValue>.Keys
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.IDictionary<TKey, TValue>.Keys
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.Generic.IDictionary<TKey,TValue>.Keys
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.Generic.IDictionary<TKey,TValue>.Keys
+  name.vb: System.Collections.Generic.IDictionary<TKey,TValue>.Keys
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#IDictionary{TKey,TValue}#Keys
+    name: Keys
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-idictionary-tkey,tvalue--keys
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#IDictionary{TKey,TValue}#Values
+  commentId: P:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#IDictionary{TKey,TValue}#Values
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IDictionary{TKey,TValue}#Values
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>.Values
+  nameWithType: Dictionary<TKey, TValue>.IDictionary<TKey, TValue>.Values
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.IDictionary<TKey, TValue>.Values
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.Generic.IDictionary<TKey,TValue>.Values
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.Generic.IDictionary<TKey,TValue>.Values
+  name.vb: System.Collections.Generic.IDictionary<TKey,TValue>.Values
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#IDictionary{TKey,TValue}#Values
+    name: Values
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-idictionary-tkey,tvalue--values
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Keys
+  commentId: P:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Keys
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Keys
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>.Keys
+  nameWithType: Dictionary<TKey, TValue>.IReadOnlyDictionary<TKey, TValue>.Keys
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Keys
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Keys
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Keys
+  name.vb: System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Keys
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Keys
+    name: Keys
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-ireadonlydictionary-tkey,tvalue--keys
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Values
+  commentId: P:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Values
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Values
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>.Values
+  nameWithType: Dictionary<TKey, TValue>.IReadOnlyDictionary<TKey, TValue>.Values
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Values
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Values
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Values
+  name.vb: System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Values
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Values
+    name: Values
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-ireadonlydictionary-tkey,tvalue--values
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#ICollection#IsSynchronized
+  commentId: P:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#ICollection#IsSynchronized
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#ICollection#IsSynchronized
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  name: ICollection.IsSynchronized
+  nameWithType: Dictionary<TKey, TValue>.ICollection.IsSynchronized
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.ICollection.IsSynchronized
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.ICollection.IsSynchronized
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.ICollection.IsSynchronized
+  name.vb: System.Collections.ICollection.IsSynchronized
+  spec.csharp:
+  - uid: System.Collections.ICollection
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#ICollection#IsSynchronized
+    name: IsSynchronized
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-icollection-issynchronized
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#ICollection#SyncRoot
+  commentId: P:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#ICollection#SyncRoot
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#ICollection#SyncRoot
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  name: ICollection.SyncRoot
+  nameWithType: Dictionary<TKey, TValue>.ICollection.SyncRoot
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.ICollection.SyncRoot
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.ICollection.SyncRoot
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.ICollection.SyncRoot
+  name.vb: System.Collections.ICollection.SyncRoot
+  spec.csharp:
+  - uid: System.Collections.ICollection
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#ICollection#SyncRoot
+    name: SyncRoot
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-icollection-syncroot
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#IsFixedSize
+  commentId: P:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#IsFixedSize
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#IsFixedSize
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.IsFixedSize
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.IsFixedSize
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.IsFixedSize
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.IDictionary.IsFixedSize
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.IDictionary.IsFixedSize
+  name.vb: System.Collections.IDictionary.IsFixedSize
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#IsFixedSize
+    name: IsFixedSize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-isfixedsize
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#IsReadOnly
+  commentId: P:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#IsReadOnly
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#IsReadOnly
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.IsReadOnly
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.IsReadOnly
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.IsReadOnly
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.IDictionary.IsReadOnly
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.IDictionary.IsReadOnly
+  name.vb: System.Collections.IDictionary.IsReadOnly
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#IsReadOnly
+    name: IsReadOnly
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-isreadonly
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#Item(System.Object)
+  commentId: P:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Item(System.Object)
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Item(System.Object)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.Item[object]
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.Item[object]
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.Item[object]
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.IDictionary.Item(Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.IDictionary.Item(Object)
+  name.vb: System.Collections.IDictionary.Item(Object)
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Item(System.Object)
+    name: Item
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-item
+  - name: '['
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Item(System.Object)
+    name: System.Collections.IDictionary.Item
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-item
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#Keys
+  commentId: P:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Keys
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Keys
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.Keys
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.Keys
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.Keys
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.IDictionary.Keys
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.IDictionary.Keys
+  name.vb: System.Collections.IDictionary.Keys
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Keys
+    name: Keys
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-keys
+- uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.System#Collections#IDictionary#Values
+  commentId: P:System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Values
+  parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
+  definition: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Values
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.Values
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.Values
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.Values
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.IDictionary.Values
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.IDictionary.Values
+  name.vb: System.Collections.IDictionary.Values
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary{`0,`1}.System#Collections#IDictionary#Values
+    name: Values
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-values
 - uid: System.Collections.Generic.Dictionary{{TKey},{TValue}}.Values
   commentId: P:System.Collections.Generic.Dictionary{`0,`1}.Values
   parent: System.Collections.Generic.Dictionary{{TKey},{TValue}}
@@ -1898,6 +2638,58 @@ references:
     name: Serialization
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.xml.serialization
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#get_Item(System.Object)
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#get_Item(System.Object)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.get_Item(object)
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.get_Item(object)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.get_Item(object)
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#get_Item(System.Object)
+    name: get_Item
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-get_item
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#set_Item(System.Object,System.Object)
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#set_Item(System.Object,System.Object)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.set_Item(object, object)
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.set_Item(object, object)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.set_Item(object, object)
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#set_Item(System.Object,System.Object)
+    name: set_Item
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-set_item
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
 - uid: System.Collections.Generic.Dictionary`2.Add(`0,`1)
   commentId: M:System.Collections.Generic.Dictionary`2.Add(`0,`1)
   isExternal: true
@@ -2148,6 +2940,351 @@ references:
   - name: " "
   - name: TValue
   - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add(System.Collections.Generic.KeyValuePair{`0,`1})
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add(System.Collections.Generic.KeyValuePair{`0,`1})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<KeyValuePair<TKey, TValue>>.Add(KeyValuePair<TKey, TValue>)
+  nameWithType: Dictionary<TKey, TValue>.ICollection<KeyValuePair<TKey, TValue>>.Add(KeyValuePair<TKey, TValue>)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>.Add(System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add(System.Collections.Generic.KeyValuePair{`0,`1})
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-icollection-system-collections-generic-keyvaluepair-tkey,tvalue---add
+  - name: (
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Contains(System.Collections.Generic.KeyValuePair{`0,`1})
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Contains(System.Collections.Generic.KeyValuePair{`0,`1})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<KeyValuePair<TKey, TValue>>.Contains(KeyValuePair<TKey, TValue>)
+  nameWithType: Dictionary<TKey, TValue>.ICollection<KeyValuePair<TKey, TValue>>.Contains(KeyValuePair<TKey, TValue>)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>.Contains(System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Contains(System.Collections.Generic.KeyValuePair{`0,`1})
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-icollection-system-collections-generic-keyvaluepair-tkey,tvalue---contains
+  - name: (
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<KeyValuePair<TKey, TValue>>.CopyTo(KeyValuePair<TKey, TValue>[], int)
+  nameWithType: Dictionary<TKey, TValue>.ICollection<KeyValuePair<TKey, TValue>>.CopyTo(KeyValuePair<TKey, TValue>[], int)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>.CopyTo(System.Collections.Generic.KeyValuePair<TKey, TValue>[], int)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-icollection-system-collections-generic-keyvaluepair-tkey,tvalue---copyto
+  - name: (
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove(System.Collections.Generic.KeyValuePair{`0,`1})
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove(System.Collections.Generic.KeyValuePair{`0,`1})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<KeyValuePair<TKey, TValue>>.Remove(KeyValuePair<TKey, TValue>)
+  nameWithType: Dictionary<TKey, TValue>.ICollection<KeyValuePair<TKey, TValue>>.Remove(KeyValuePair<TKey, TValue>)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>.Remove(System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove(System.Collections.Generic.KeyValuePair{`0,`1})
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-icollection-system-collections-generic-keyvaluepair-tkey,tvalue---remove
+  - name: (
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{TKey,TValue}}#GetEnumerator
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{TKey,TValue}}#GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<KeyValuePair<TKey, TValue>>.GetEnumerator()
+  nameWithType: Dictionary<TKey, TValue>.IEnumerable<KeyValuePair<TKey, TValue>>.GetEnumerator()
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{TKey,TValue}}#GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-ienumerable-system-collections-generic-keyvaluepair-tkey,tvalue---getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#ICollection#CopyTo(System.Array,System.Int32)
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#ICollection#CopyTo(System.Array,System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  name: ICollection.CopyTo(Array, int)
+  nameWithType: Dictionary<TKey, TValue>.ICollection.CopyTo(Array, int)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.ICollection.CopyTo(System.Array, int)
+  spec.csharp:
+  - uid: System.Collections.ICollection
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#ICollection#CopyTo(System.Array,System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-icollection-copyto
+  - name: (
+  - uid: System.Array
+    name: Array
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.array
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Add(System.Object,System.Object)
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Add(System.Object,System.Object)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.Add(object, object)
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.Add(object, object)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.Add(object, object)
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Add(System.Object,System.Object)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-add
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Contains(System.Object)
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Contains(System.Object)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.Contains(object)
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.Contains(object)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.Contains(object)
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Contains(System.Object)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-contains
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#GetEnumerator
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.GetEnumerator()
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.GetEnumerator()
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Remove(System.Object)
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Remove(System.Object)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.Remove(object)
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.Remove(object)
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.Remove(object)
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Remove(System.Object)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-remove
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#IEnumerable#GetEnumerator
+  commentId: M:System.Collections.Generic.Dictionary`2.System#Collections#IEnumerable#GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable.GetEnumerator()
+  nameWithType: Dictionary<TKey, TValue>.IEnumerable.GetEnumerator()
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IEnumerable.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.IEnumerable
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IEnumerable#GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-ienumerable-getenumerator
+  - name: (
+  - name: )
 - uid: System.Collections.Generic.Dictionary`2.TrimExcess
   commentId: M:System.Collections.Generic.Dictionary`2.TrimExcess
   isExternal: true
@@ -2318,6 +3455,299 @@ references:
   fullName: System.Collections.Generic.Dictionary<TKey, TValue>.Keys
   nameWithType.vb: Dictionary(Of TKey, TValue).Keys
   fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).Keys
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#IsReadOnly
+  commentId: P:System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#IsReadOnly
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<KeyValuePair<TKey, TValue>>.IsReadOnly
+  nameWithType: Dictionary<TKey, TValue>.ICollection<KeyValuePair<TKey, TValue>>.IsReadOnly
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>.IsReadOnly
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.IsReadOnly
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.IsReadOnly
+  name.vb: System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.IsReadOnly
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#IsReadOnly
+    name: IsReadOnly
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-icollection-system-collections-generic-keyvaluepair-tkey,tvalue---isreadonly
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IDictionary{TKey,TValue}#Keys
+  commentId: P:System.Collections.Generic.Dictionary`2.System#Collections#Generic#IDictionary{TKey,TValue}#Keys
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>.Keys
+  nameWithType: Dictionary<TKey, TValue>.IDictionary<TKey, TValue>.Keys
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.IDictionary<TKey, TValue>.Keys
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.Generic.IDictionary<TKey,TValue>.Keys
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.Generic.IDictionary<TKey,TValue>.Keys
+  name.vb: System.Collections.Generic.IDictionary<TKey,TValue>.Keys
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IDictionary{TKey,TValue}#Keys
+    name: Keys
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-idictionary-tkey,tvalue--keys
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IDictionary{TKey,TValue}#Values
+  commentId: P:System.Collections.Generic.Dictionary`2.System#Collections#Generic#IDictionary{TKey,TValue}#Values
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>.Values
+  nameWithType: Dictionary<TKey, TValue>.IDictionary<TKey, TValue>.Values
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.IDictionary<TKey, TValue>.Values
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.Generic.IDictionary<TKey,TValue>.Values
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.Generic.IDictionary<TKey,TValue>.Values
+  name.vb: System.Collections.Generic.IDictionary<TKey,TValue>.Values
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IDictionary{TKey,TValue}#Values
+    name: Values
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-idictionary-tkey,tvalue--values
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Keys
+  commentId: P:System.Collections.Generic.Dictionary`2.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Keys
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>.Keys
+  nameWithType: Dictionary<TKey, TValue>.IReadOnlyDictionary<TKey, TValue>.Keys
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Keys
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Keys
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Keys
+  name.vb: System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Keys
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Keys
+    name: Keys
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-ireadonlydictionary-tkey,tvalue--keys
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Values
+  commentId: P:System.Collections.Generic.Dictionary`2.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Values
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>.Values
+  nameWithType: Dictionary<TKey, TValue>.IReadOnlyDictionary<TKey, TValue>.Values
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Values
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Values
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Values
+  name.vb: System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Values
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Values
+    name: Values
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-generic-ireadonlydictionary-tkey,tvalue--values
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#ICollection#IsSynchronized
+  commentId: P:System.Collections.Generic.Dictionary`2.System#Collections#ICollection#IsSynchronized
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  name: ICollection.IsSynchronized
+  nameWithType: Dictionary<TKey, TValue>.ICollection.IsSynchronized
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.ICollection.IsSynchronized
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.ICollection.IsSynchronized
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.ICollection.IsSynchronized
+  name.vb: System.Collections.ICollection.IsSynchronized
+  spec.csharp:
+  - uid: System.Collections.ICollection
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#ICollection#IsSynchronized
+    name: IsSynchronized
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-icollection-issynchronized
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#ICollection#SyncRoot
+  commentId: P:System.Collections.Generic.Dictionary`2.System#Collections#ICollection#SyncRoot
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  name: ICollection.SyncRoot
+  nameWithType: Dictionary<TKey, TValue>.ICollection.SyncRoot
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.ICollection.SyncRoot
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.ICollection.SyncRoot
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.ICollection.SyncRoot
+  name.vb: System.Collections.ICollection.SyncRoot
+  spec.csharp:
+  - uid: System.Collections.ICollection
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#ICollection#SyncRoot
+    name: SyncRoot
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-icollection-syncroot
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#IsFixedSize
+  commentId: P:System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#IsFixedSize
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.IsFixedSize
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.IsFixedSize
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.IsFixedSize
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.IDictionary.IsFixedSize
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.IDictionary.IsFixedSize
+  name.vb: System.Collections.IDictionary.IsFixedSize
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#IsFixedSize
+    name: IsFixedSize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-isfixedsize
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#IsReadOnly
+  commentId: P:System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#IsReadOnly
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.IsReadOnly
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.IsReadOnly
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.IsReadOnly
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.IDictionary.IsReadOnly
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.IDictionary.IsReadOnly
+  name.vb: System.Collections.IDictionary.IsReadOnly
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#IsReadOnly
+    name: IsReadOnly
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-isreadonly
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Item(System.Object)
+  commentId: P:System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Item(System.Object)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.Item[object]
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.Item[object]
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.Item[object]
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.IDictionary.Item(Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.IDictionary.Item(Object)
+  name.vb: System.Collections.IDictionary.Item(Object)
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Item(System.Object)
+    name: Item
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-item
+  - name: '['
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Item(System.Object)
+    name: System.Collections.IDictionary.Item
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-item
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Keys
+  commentId: P:System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Keys
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.Keys
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.Keys
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.Keys
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.IDictionary.Keys
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.IDictionary.Keys
+  name.vb: System.Collections.IDictionary.Keys
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Keys
+    name: Keys
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-keys
+- uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Values
+  commentId: P:System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Values
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary.Values
+  nameWithType: Dictionary<TKey, TValue>.IDictionary.Values
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>.System.Collections.IDictionary.Values
+  nameWithType.vb: Dictionary(Of TKey, TValue).System.Collections.IDictionary.Values
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue).System.Collections.IDictionary.Values
+  name.vb: System.Collections.IDictionary.Values
+  spec.csharp:
+  - uid: System.Collections.IDictionary
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  - name: .
+  - uid: System.Collections.Generic.Dictionary`2.System#Collections#IDictionary#Values
+    name: Values
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-values
 - uid: System.Collections.Generic.Dictionary`2.Values
   commentId: P:System.Collections.Generic.Dictionary`2.Values
   isExternal: true
@@ -2744,3 +4174,4 @@ references:
   fullName: AetherUtils.Core.Utility.SerializableDictionary<TKey, TValue>.WriteXml
   nameWithType.vb: SerializableDictionary(Of TKey, TValue).WriteXml
   fullName.vb: AetherUtils.Core.Utility.SerializableDictionary(Of TKey, TValue).WriteXml
+shouldSkipMarkup: true

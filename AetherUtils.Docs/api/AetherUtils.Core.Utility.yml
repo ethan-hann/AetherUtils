@@ -79,3 +79,4 @@ references:
   name: SizeConverter
   nameWithType: SizeConverter
   fullName: AetherUtils.Core.Utility.SizeConverter
+shouldSkipMarkup: true

@@ -66,3 +66,4 @@ references:
   - uid: AetherUtils.Core.Licensing
     name: Licensing
     href: AetherUtils.Core.Licensing.html
+shouldSkipMarkup: true

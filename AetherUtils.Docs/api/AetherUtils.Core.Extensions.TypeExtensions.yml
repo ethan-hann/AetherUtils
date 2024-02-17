@@ -612,3 +612,4 @@ references:
   name: CanSerializeJson
   nameWithType: TypeExtensions.CanSerializeJson
   fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson
+shouldSkipMarkup: true

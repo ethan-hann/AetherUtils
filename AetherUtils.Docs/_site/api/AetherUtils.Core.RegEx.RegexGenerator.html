@@ -181,11 +181,11 @@ public static Regex Base64Regex()</code></pre>
 
 
   <h4 class="section" id="AetherUtils_Core_RegEx_RegexGenerator_Base64Regex_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Pattern:<br></p>
+  <div class="markdown level1 remarks">Pattern:<br>
 <pre><code class="lang-csharp">^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$</code></pre><br>
-<p>Options:<br></p>
+Options:<br>
 <pre><code class="lang-csharp">RegexOptions.CultureInvariant</code></pre><br>
-<p>Explanation:<br></p>
+Explanation:<br>
 <pre><code class="lang-csharp">○ Match if at the beginning of the string.
 ○ Loop greedily any number of times.
     ○ 1st capture group.
@@ -199,8 +199,7 @@ public static Regex Base64Regex()</code></pre>
             ○ Match a sequence of expressions.
                 ○ Match a character in the set [+/-9A-Za-z] exactly 2 times.
                 ○ Match the string "==".
-○ Match if at the end of the string or if before an ending newline.</code></pre>
-</div>
+○ Match if at the end of the string or if before an ending newline.</code></pre></div>
 
 
 
@@ -234,19 +233,18 @@ public static Regex HexRegex()</code></pre>
 
 
   <h4 class="section" id="AetherUtils_Core_RegEx_RegexGenerator_HexRegex_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Pattern:<br></p>
+  <div class="markdown level1 remarks">Pattern:<br>
 <pre><code class="lang-csharp">^(0x|0X)?[a-fA-F0-9]+$</code></pre><br>
-<p>Options:<br></p>
+Options:<br>
 <pre><code class="lang-csharp">RegexOptions.CultureInvariant</code></pre><br>
-<p>Explanation:<br></p>
+Explanation:<br>
 <pre><code class="lang-csharp">○ Match if at the beginning of the string.
 ○ Optional (greedy).
     ○ 1st capture group.
         ○ Match '0'.
         ○ Match a character in the set [Xx].
 ○ Match a character in the set [0-9A-Fa-f] atomically at least once.
-○ Match if at the end of the string or if before an ending newline.</code></pre>
-</div>
+○ Match if at the end of the string or if before an ending newline.</code></pre></div>
 
 
 
@@ -280,11 +278,11 @@ public static Regex PathRegex()</code></pre>
 
 
   <h4 class="section" id="AetherUtils_Core_RegEx_RegexGenerator_PathRegex_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Pattern:<br></p>
+  <div class="markdown level1 remarks">Pattern:<br>
 <pre><code class="lang-csharp">^(([a-zA-Z]:)|(\\))(\\{1}|((\\{1})[^\\]([^/:*?&lt;&gt;"|]*))+)$</code></pre><br>
-<p>Options:<br></p>
+Options:<br>
 <pre><code class="lang-csharp">RegexOptions.CultureInvariant</code></pre><br>
-<p>Explanation:<br></p>
+Explanation:<br>
 <pre><code class="lang-csharp">○ Match if at the beginning of the string.
 ○ 1st capture group.
     ○ Match with 2 alternative expressions.
@@ -302,8 +300,7 @@ public static Regex PathRegex()</code></pre>
                             ○ 6th capture group.
                                 ○ Match the string "{1}".
                             ○ Match a character in the set [^"(*/:&lt;&gt;?[]^|] greedily any number of times.
-○ Match if at the end of the string or if before an ending newline.</code></pre>
-</div>
+○ Match if at the end of the string or if before an ending newline.</code></pre></div>
 
 
 

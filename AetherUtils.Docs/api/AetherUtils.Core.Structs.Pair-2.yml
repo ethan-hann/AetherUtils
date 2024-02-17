@@ -445,3 +445,4 @@ references:
   fullName: AetherUtils.Core.Structs.Pair<K, V>.Value
   nameWithType.vb: Pair(Of K, V).Value
   fullName.vb: AetherUtils.Core.Structs.Pair(Of K, V).Value
+shouldSkipMarkup: true

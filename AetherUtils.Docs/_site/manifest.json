@@ -92,6 +92,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AetherUtils.Core.Enums.CharacterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AetherUtils.Core.Enums.CharacterType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AetherUtils.Core.Enums.MemorySize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AetherUtils.Core.Enums.MemorySize.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AetherUtils.Core.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AetherUtils.Core.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AetherUtils.Core.Exceptions.PasswordRuleException.yml",
       "output": {
         ".html": {
@@ -462,6 +492,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AetherUtils.Core.Security.Encryption.IEncryptService-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AetherUtils.Core.Security.Encryption.IEncryptService-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AetherUtils.Core.Security.Encryption.KeyLength.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AetherUtils.Core.Security.Encryption.KeyLength.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AetherUtils.Core.Security.Encryption.ObjectEncryptionService-1.yml",
       "output": {
         ".html": {
@@ -536,6 +586,16 @@
       "output": {
         ".html": {
           "relative_path": "api/AetherUtils.Core.Security.Passwords.PasswordRule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AetherUtils.Core.Security.Passwords.PasswordRuleBuilder.html"
         }
       },
       "version": ""
@@ -706,6 +766,16 @@
       "output": {
         ".html": {
           "relative_path": "api/AetherUtils.Core.Structs.Pair-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AetherUtils.Core.Structs.ParsedHash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AetherUtils.Core.Structs.ParsedHash.html"
         }
       },
       "version": ""
@@ -886,6 +956,116 @@
       "output": {
         ".html": {
           "relative_path": "api/AetherUtils.Core.WinForms.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.Runner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Text.RegularExpressions.Generated.Base64Regex_1.RunnerFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Text.RegularExpressions.Generated.Base64Regex_1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Text.RegularExpressions.Generated.Base64Regex_1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.Runner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Text.RegularExpressions.Generated.HexRegex_2.RunnerFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Text.RegularExpressions.Generated.HexRegex_2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Text.RegularExpressions.Generated.HexRegex_2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.Runner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Text.RegularExpressions.Generated.PathRegex_0.RunnerFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Text.RegularExpressions.Generated.PathRegex_0.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Text.RegularExpressions.Generated.PathRegex_0.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Text.RegularExpressions.Generated.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Text.RegularExpressions.Generated.Utilities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Text.RegularExpressions.Generated.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Text.RegularExpressions.Generated.html"
         }
       },
       "version": ""

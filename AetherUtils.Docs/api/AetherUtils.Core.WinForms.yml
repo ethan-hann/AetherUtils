@@ -214,3 +214,4 @@ references:
   - uid: AetherUtils.Core.WinForms
     name: WinForms
     href: AetherUtils.Core.WinForms.html
+shouldSkipMarkup: true

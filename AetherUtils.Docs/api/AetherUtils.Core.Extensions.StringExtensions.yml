@@ -1284,6 +1284,7 @@ references:
     href: AetherUtils.Core.Security.Hashing.html
 - uid: System.Byte
   commentId: T:System.Byte
+  parent: System
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.byte
   name: byte
@@ -1364,3 +1365,4 @@ references:
   name: RemoveWhitespace
   nameWithType: StringExtensions.RemoveWhitespace
   fullName: AetherUtils.Core.Extensions.StringExtensions.RemoveWhitespace
+shouldSkipMarkup: true

@@ -4,7 +4,8 @@ items:
   commentId: T:AetherUtils.Core.Utility.SizeConverter
   id: SizeConverter
   parent: AetherUtils.Core.Utility
-  children: []
+  children:
+  - AetherUtils.Core.Utility.SizeConverter.MemorySizes
   langs:
   - csharp
   - vb
@@ -36,6 +37,33 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: AetherUtils.Core.Utility.SizeConverter.MemorySizes
+  commentId: F:AetherUtils.Core.Utility.SizeConverter.MemorySizes
+  id: MemorySizes
+  parent: AetherUtils.Core.Utility.SizeConverter
+  langs:
+  - csharp
+  - vb
+  name: MemorySizes
+  nameWithType: SizeConverter.MemorySizes
+  fullName: AetherUtils.Core.Utility.SizeConverter.MemorySizes
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/Utility/SizeConverter.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: MemorySizes
+    path: ../AetherUtils.Core/Utility/SizeConverter.cs
+    startLine: 6
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Utility
+  syntax:
+    content: private static readonly List<ReadOnlyPair<string, long>> MemorySizes
+    return:
+      type: System.Collections.Generic.List{AetherUtils.Core.Structs.ReadOnlyPair{System.String,System.Int64}}
+    content.vb: Private Shared ReadOnly MemorySizes As List(Of ReadOnlyPair(Of String, Long))
 references:
 - uid: AetherUtils.Core.Utility
   commentId: N:AetherUtils.Core.Utility
@@ -304,3 +332,128 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Collections.Generic.List{AetherUtils.Core.Structs.ReadOnlyPair{System.String,System.Int64}}
+  commentId: T:System.Collections.Generic.List{AetherUtils.Core.Structs.ReadOnlyPair{System.String,System.Int64}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ReadOnlyPair<string, long>>
+  nameWithType: List<ReadOnlyPair<string, long>>
+  fullName: System.Collections.Generic.List<AetherUtils.Core.Structs.ReadOnlyPair<string, long>>
+  nameWithType.vb: List(Of ReadOnlyPair(Of String, Long))
+  fullName.vb: System.Collections.Generic.List(Of AetherUtils.Core.Structs.ReadOnlyPair(Of String, Long))
+  name.vb: List(Of ReadOnlyPair(Of String, Long))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+    name: ReadOnlyPair
+    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Structs.ReadOnlyPair`2
+    name: ReadOnlyPair
+    href: AetherUtils.Core.Structs.ReadOnlyPair-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+shouldSkipMarkup: true

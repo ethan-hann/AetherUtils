@@ -97,8 +97,7 @@ Class DataTableExtensions  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides extension methods for manipulating <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a> objects.</p>
-</div>
+  <div class="markdown summary">Provides extension methods for manipulating <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a> objects.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -160,8 +159,7 @@ Class DataTableExtensions  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/DataTableExtensions.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Create and save a generated CSV file from a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a>.</p>
-</div>
+  <div class="markdown level1 summary">Create and save a generated CSV file from a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -171,14 +169,11 @@ Class DataTableExtensions  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>table</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a> to create a CSV file from.</p>
-</dd>
+    <dd>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a> to create a CSV file from.</dd>
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The path of a new CSV file to create or overwrite.</p>
-</dd>
+    <dd>The path of a new CSV file to create or overwrite.</dd>
     <dt><code>delimiter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
-    <dd><p>The delimiter to separate fields with; default is <code>,</code>.</p>
-</dd>
+    <dd>The delimiter to separate fields with; default is <code>,</code>.</dd>
   </dl>
 
 
@@ -192,11 +187,9 @@ Class DataTableExtensions  <a class="header-action link-secondary" title="View s
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">table</code> was <code>null</code>.</p>
-</dd>
+    <dd>If <code class="paramref">table</code> was <code>null</code>.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>If <code class="paramref">filePath</code> was <code>null</code> or empty.</p>
-</dd>
+    <dd>If <code class="paramref">filePath</code> was <code>null</code> or empty.</dd>
   </dl>
 
 
@@ -208,9 +201,8 @@ Class DataTableExtensions  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/DataTableExtensions.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Create and save individual CSV files based on a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> containing <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a> objects.
-Each file is saved as <code>tablename.csv</code>.</p>
-</div>
+  <div class="markdown level1 summary">Create and save individual CSV files based on a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> containing <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a> objects.
+Each file is saved as <code>tablename.csv</code>.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -220,14 +212,11 @@ Each file is saved as <code>tablename.csv</code>.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>tables</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a>&gt;</dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> containing <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a> objects.</p>
-</dd>
+    <dd>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> containing <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a> objects.</dd>
     <dt><code>folderPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The folder path that the CSV files should be saved into.</p>
-</dd>
+    <dd>The folder path that the CSV files should be saved into.</dd>
     <dt><code>delimiter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
-    <dd><p>The delimiter to separate fields with; default is <code>,</code>.</p>
-</dd>
+    <dd>The delimiter to separate fields with; default is <code>,</code>.</dd>
   </dl>
 
 
@@ -241,11 +230,9 @@ Each file is saved as <code>tablename.csv</code>.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">tables</code> was <code>null</code>.</p>
-</dd>
+    <dd>If <code class="paramref">tables</code> was <code>null</code>.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>If <code class="paramref">folderPath</code> was <code>null</code> or empty.</p>
-</dd>
+    <dd>If <code class="paramref">folderPath</code> was <code>null</code> or empty.</dd>
   </dl>
 
 

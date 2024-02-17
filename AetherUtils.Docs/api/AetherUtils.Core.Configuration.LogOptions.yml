@@ -1085,3 +1085,4 @@ references:
   name: LogFooter
   nameWithType: LogOptions.LogFooter
   fullName: AetherUtils.Core.Configuration.LogOptions.LogFooter
+shouldSkipMarkup: true

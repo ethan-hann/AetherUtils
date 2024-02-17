@@ -507,3 +507,4 @@ references:
   nameWithType.vb: ConfigOption.New
   fullName.vb: AetherUtils.Core.Structs.ConfigOption.New
   name.vb: New
+shouldSkipMarkup: true

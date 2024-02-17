@@ -414,3 +414,4 @@ references:
   name: PublicKey
   nameWithType: KeyPair.PublicKey
   fullName: AetherUtils.Core.Licensing.KeyPair.PublicKey
+shouldSkipMarkup: true

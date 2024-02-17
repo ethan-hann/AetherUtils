@@ -399,3 +399,4 @@ references:
   name: T
   nameWithType: T
   fullName: T
+shouldSkipMarkup: true

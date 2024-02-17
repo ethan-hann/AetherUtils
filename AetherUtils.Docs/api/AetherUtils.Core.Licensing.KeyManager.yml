@@ -654,3 +654,4 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+shouldSkipMarkup: true

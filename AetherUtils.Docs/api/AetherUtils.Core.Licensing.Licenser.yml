@@ -6,6 +6,9 @@ items:
   parent: AetherUtils.Core.Licensing
   children:
   - AetherUtils.Core.Licensing.Licenser.Validate(System.String,System.String)
+  - AetherUtils.Core.Licensing.Licenser._invalidExtensionFailure
+  - AetherUtils.Core.Licensing.Licenser._invalidFilePathFailure
+  - AetherUtils.Core.Licensing.Licenser._noLicenseFailure
   langs:
   - csharp
   - vb
@@ -37,6 +40,87 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: AetherUtils.Core.Licensing.Licenser._invalidExtensionFailure
+  commentId: F:AetherUtils.Core.Licensing.Licenser._invalidExtensionFailure
+  id: _invalidExtensionFailure
+  parent: AetherUtils.Core.Licensing.Licenser
+  langs:
+  - csharp
+  - vb
+  name: _invalidExtensionFailure
+  nameWithType: Licenser._invalidExtensionFailure
+  fullName: AetherUtils.Core.Licensing.Licenser._invalidExtensionFailure
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/Licensing/Licenser.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: _invalidExtensionFailure
+    path: ../AetherUtils.Core/Licensing/Licenser.cs
+    startLine: 9
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Licensing
+  syntax:
+    content: private static readonly GeneralValidationFailure _invalidExtensionFailure
+    return:
+      type: Standard.Licensing.Validation.GeneralValidationFailure
+    content.vb: Private Shared ReadOnly _invalidExtensionFailure As GeneralValidationFailure
+- uid: AetherUtils.Core.Licensing.Licenser._invalidFilePathFailure
+  commentId: F:AetherUtils.Core.Licensing.Licenser._invalidFilePathFailure
+  id: _invalidFilePathFailure
+  parent: AetherUtils.Core.Licensing.Licenser
+  langs:
+  - csharp
+  - vb
+  name: _invalidFilePathFailure
+  nameWithType: Licenser._invalidFilePathFailure
+  fullName: AetherUtils.Core.Licensing.Licenser._invalidFilePathFailure
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/Licensing/Licenser.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: _invalidFilePathFailure
+    path: ../AetherUtils.Core/Licensing/Licenser.cs
+    startLine: 15
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Licensing
+  syntax:
+    content: private static readonly GeneralValidationFailure _invalidFilePathFailure
+    return:
+      type: Standard.Licensing.Validation.GeneralValidationFailure
+    content.vb: Private Shared ReadOnly _invalidFilePathFailure As GeneralValidationFailure
+- uid: AetherUtils.Core.Licensing.Licenser._noLicenseFailure
+  commentId: F:AetherUtils.Core.Licensing.Licenser._noLicenseFailure
+  id: _noLicenseFailure
+  parent: AetherUtils.Core.Licensing.Licenser
+  langs:
+  - csharp
+  - vb
+  name: _noLicenseFailure
+  nameWithType: Licenser._noLicenseFailure
+  fullName: AetherUtils.Core.Licensing.Licenser._noLicenseFailure
+  type: Field
+  source:
+    remote:
+      path: AetherUtils.Core/Licensing/Licenser.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: _noLicenseFailure
+    path: ../AetherUtils.Core/Licensing/Licenser.cs
+    startLine: 21
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Licensing
+  syntax:
+    content: private static readonly GeneralValidationFailure _noLicenseFailure
+    return:
+      type: Standard.Licensing.Validation.GeneralValidationFailure
+    content.vb: Private Shared ReadOnly _noLicenseFailure As GeneralValidationFailure
 - uid: AetherUtils.Core.Licensing.Licenser.Validate(System.String,System.String)
   commentId: M:AetherUtils.Core.Licensing.Licenser.Validate(System.String,System.String)
   id: Validate(System.String,System.String)
@@ -346,6 +430,43 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Standard.Licensing.Validation.GeneralValidationFailure
+  commentId: T:Standard.Licensing.Validation.GeneralValidationFailure
+  parent: Standard.Licensing.Validation
+  isExternal: true
+  name: GeneralValidationFailure
+  nameWithType: GeneralValidationFailure
+  fullName: Standard.Licensing.Validation.GeneralValidationFailure
+- uid: Standard.Licensing.Validation
+  commentId: N:Standard.Licensing.Validation
+  isExternal: true
+  name: Standard.Licensing.Validation
+  nameWithType: Standard.Licensing.Validation
+  fullName: Standard.Licensing.Validation
+  spec.csharp:
+  - uid: Standard
+    name: Standard
+    isExternal: true
+  - name: .
+  - uid: Standard.Licensing
+    name: Licensing
+    isExternal: true
+  - name: .
+  - uid: Standard.Licensing.Validation
+    name: Validation
+    isExternal: true
+  spec.vb:
+  - uid: Standard
+    name: Standard
+    isExternal: true
+  - name: .
+  - uid: Standard.Licensing
+    name: Licensing
+    isExternal: true
+  - name: .
+  - uid: Standard.Licensing.Validation
+    name: Validation
+    isExternal: true
 - uid: AetherUtils.Core.Licensing.Licenser.Validate*
   commentId: Overload:AetherUtils.Core.Licensing.Licenser.Validate
   href: AetherUtils.Core.Licensing.Licenser.html#AetherUtils_Core_Licensing_Licenser_Validate_System_String_System_String_
@@ -461,3 +582,4 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+shouldSkipMarkup: true

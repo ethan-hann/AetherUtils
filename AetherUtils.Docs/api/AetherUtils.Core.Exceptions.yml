@@ -28,3 +28,4 @@ references:
   name: QrException
   nameWithType: QrException
   fullName: AetherUtils.Core.Exceptions.QrException
+shouldSkipMarkup: true

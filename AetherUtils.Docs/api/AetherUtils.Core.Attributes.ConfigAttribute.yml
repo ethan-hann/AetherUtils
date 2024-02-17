@@ -2309,3 +2309,4 @@ references:
   name: Name
   nameWithType: ConfigAttribute.Name
   fullName: AetherUtils.Core.Attributes.ConfigAttribute.Name
+shouldSkipMarkup: true

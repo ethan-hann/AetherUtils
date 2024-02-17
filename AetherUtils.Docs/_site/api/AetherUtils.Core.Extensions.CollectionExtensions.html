@@ -97,9 +97,8 @@ Class CollectionExtensions  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides extension methods for manipulating <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> and <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection&lt;T&gt;</a>
-objects.</p>
-</div>
+  <div class="markdown summary">Provides extension methods for manipulating <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> and <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection&lt;T&gt;</a>
+objects.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -150,6 +149,40 @@ objects.</p>
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="AetherUtils_Core_Extensions_CollectionExtensions_SyncRoot" data-uid="AetherUtils.Core.Extensions.CollectionExtensions.SyncRoot">
+  SyncRoot
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/CollectionExtensions.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static readonly object SyncRoot</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -161,8 +194,7 @@ objects.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/CollectionExtensions.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Rename a key contained in a dictionary. This method is thread-safe.</p>
-</div>
+  <div class="markdown level1 summary">Rename a key contained in a dictionary. This method is thread-safe.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -172,25 +204,20 @@ objects.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>dictionary</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
-    <dd><p>The dictionary to perform the rename on.</p>
-</dd>
+    <dd>The dictionary to perform the rename on.</dd>
     <dt><code>oldKey</code> <span class="xref">TKey</span></dt>
-    <dd><p>The name of the old key.</p>
-</dd>
+    <dd>The name of the old key.</dd>
     <dt><code>newKey</code> <span class="xref">TKey</span></dt>
-    <dd><p>The name to change <code class="paramref">oldKey</code> to.</p>
-</dd>
+    <dd>The name to change <code class="paramref">oldKey</code> to.</dd>
   </dl>
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TKey</code></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of the key.</p>
-</dd>
+    <dd>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of the key.</dd>
     <dt><code>TValue</code></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of the value.</p>
-</dd>
+    <dd>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of the value.</dd>
   </dl>
 
 
@@ -199,18 +226,15 @@ objects.</p>
 
 
   <h4 class="section" id="AetherUtils_Core_Extensions_CollectionExtensions_RenameKey__2_System_Collections_Generic_IDictionary___0___1____0___0__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the <code class="paramref">newKey</code> is the same as the <code class="paramref">oldKey</code> using the default equality operator,
-no operation is performed.</p>
-</div>
+  <div class="markdown level1 remarks">If the <code class="paramref">newKey</code> is the same as the <code class="paramref">oldKey</code> using the default equality operator,
+    no operation is performed.</div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">dictionary</code> is <code>null</code>.</p>
-</dd>
+    <dd>If <code class="paramref">dictionary</code> is <code>null</code>.</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>If <code class="paramref">newKey</code> already exists in <code class="paramref">dictionary</code>.</p>
-</dd>
+    <dd>If <code class="paramref">newKey</code> already exists in <code class="paramref">dictionary</code>.</dd>
   </dl>
 
 

@@ -97,8 +97,7 @@ Class TwoFactorUser  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>AetherUtils.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a 2-factor authentication user.</p>
-</div>
+  <div class="markdown summary">Represents a 2-factor authentication user.</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -173,8 +172,7 @@ Class TwoFactorUser  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Represents a 2-factor authentication user.</p>
-</div>
+  <div class="markdown level1 summary">Represents a 2-factor authentication user.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -184,11 +182,9 @@ Class TwoFactorUser  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>issuer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The issuer of the 2FA tokens.</p>
-</dd>
+    <dd>The issuer of the 2FA tokens.</dd>
     <dt><code>accountTitle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The account title as shown in the user's authenticator app.</p>
-</dd>
+    <dd>The account title as shown in the user's authenticator app.</dd>
   </dl>
 
 
@@ -213,12 +209,11 @@ Class TwoFactorUser  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The account title as shown in the user's authenticator app.</p>
-</div>
+  <div class="markdown level1 summary">The account title as shown in the user's authenticator app.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string AccountTitle { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string AccountTitle { get; internal set; }</code></pre>
   </div>
 
 
@@ -245,12 +240,11 @@ Class TwoFactorUser  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The issuer of the 2FA tokens.</p>
-</div>
+  <div class="markdown level1 summary">The issuer of the 2FA tokens.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Issuer { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Issuer { get; internal set; }</code></pre>
   </div>
 
 
@@ -277,12 +271,11 @@ Class TwoFactorUser  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The information needed for the user to set the account up in their authenticator app.</p>
-</div>
+  <div class="markdown level1 summary">The information needed for the user to set the account up in their authenticator app.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SetupCode? SetupInformation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public SetupCode? SetupInformation { get; internal set; }</code></pre>
   </div>
 
 

@@ -543,3 +543,4 @@ references:
   name: TimeSpanToString
   nameWithType: TimeExtensions.TimeSpanToString
   fullName: AetherUtils.Core.Extensions.TimeExtensions.TimeSpanToString
+shouldSkipMarkup: true

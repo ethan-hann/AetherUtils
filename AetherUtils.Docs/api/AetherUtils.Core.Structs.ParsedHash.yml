@@ -1,0 +1,991 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.Structs.ParsedHash
+  commentId: T:AetherUtils.Core.Structs.ParsedHash
+  id: ParsedHash
+  parent: AetherUtils.Core.Structs
+  children:
+  - AetherUtils.Core.Structs.ParsedHash.#ctor(AetherUtils.Core.Security.Hashing.HashEncoding,System.Byte[],System.Byte[],System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  - AetherUtils.Core.Structs.ParsedHash.Algorithm
+  - AetherUtils.Core.Structs.ParsedHash.Encoding
+  - AetherUtils.Core.Structs.ParsedHash.Hash
+  - AetherUtils.Core.Structs.ParsedHash.Iterations
+  - AetherUtils.Core.Structs.ParsedHash.Salt
+  langs:
+  - csharp
+  - vb
+  name: ParsedHash
+  nameWithType: ParsedHash
+  fullName: AetherUtils.Core.Structs.ParsedHash
+  type: Class
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/ParsedHash.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: ParsedHash
+    path: ../AetherUtils.Core/Structs/ParsedHash.cs
+    startLine: 5
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: internal class ParsedHash
+    content.vb: Friend Class ParsedHash
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - AetherUtils.Core.Structs.ParsedHash.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1
+  - AetherUtils.Core.Structs.ParsedHash.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1
+  - AetherUtils.Core.Structs.ParsedHash.AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1
+  - AetherUtils.Core.Structs.ParsedHash.AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1
+- uid: AetherUtils.Core.Structs.ParsedHash.Encoding
+  commentId: P:AetherUtils.Core.Structs.ParsedHash.Encoding
+  id: Encoding
+  parent: AetherUtils.Core.Structs.ParsedHash
+  langs:
+  - csharp
+  - vb
+  name: Encoding
+  nameWithType: ParsedHash.Encoding
+  fullName: AetherUtils.Core.Structs.ParsedHash.Encoding
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/ParsedHash.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Encoding
+    path: ../AetherUtils.Core/Structs/ParsedHash.cs
+    startLine: 7
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: internal HashEncoding Encoding { get; private set; }
+    parameters: []
+    return:
+      type: AetherUtils.Core.Security.Hashing.HashEncoding
+    content.vb: Friend Property Encoding As HashEncoding
+  overload: AetherUtils.Core.Structs.ParsedHash.Encoding*
+- uid: AetherUtils.Core.Structs.ParsedHash.Salt
+  commentId: P:AetherUtils.Core.Structs.ParsedHash.Salt
+  id: Salt
+  parent: AetherUtils.Core.Structs.ParsedHash
+  langs:
+  - csharp
+  - vb
+  name: Salt
+  nameWithType: ParsedHash.Salt
+  fullName: AetherUtils.Core.Structs.ParsedHash.Salt
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/ParsedHash.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Salt
+    path: ../AetherUtils.Core/Structs/ParsedHash.cs
+    startLine: 8
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: internal byte[] Salt { get; private set; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Friend Property Salt As Byte()
+  overload: AetherUtils.Core.Structs.ParsedHash.Salt*
+- uid: AetherUtils.Core.Structs.ParsedHash.Hash
+  commentId: P:AetherUtils.Core.Structs.ParsedHash.Hash
+  id: Hash
+  parent: AetherUtils.Core.Structs.ParsedHash
+  langs:
+  - csharp
+  - vb
+  name: Hash
+  nameWithType: ParsedHash.Hash
+  fullName: AetherUtils.Core.Structs.ParsedHash.Hash
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/ParsedHash.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Hash
+    path: ../AetherUtils.Core/Structs/ParsedHash.cs
+    startLine: 9
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: internal byte[] Hash { get; private set; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Friend Property Hash As Byte()
+  overload: AetherUtils.Core.Structs.ParsedHash.Hash*
+- uid: AetherUtils.Core.Structs.ParsedHash.Iterations
+  commentId: P:AetherUtils.Core.Structs.ParsedHash.Iterations
+  id: Iterations
+  parent: AetherUtils.Core.Structs.ParsedHash
+  langs:
+  - csharp
+  - vb
+  name: Iterations
+  nameWithType: ParsedHash.Iterations
+  fullName: AetherUtils.Core.Structs.ParsedHash.Iterations
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/ParsedHash.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Iterations
+    path: ../AetherUtils.Core/Structs/ParsedHash.cs
+    startLine: 11
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: internal int Iterations { get; private set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Friend Property Iterations As Integer
+  overload: AetherUtils.Core.Structs.ParsedHash.Iterations*
+- uid: AetherUtils.Core.Structs.ParsedHash.Algorithm
+  commentId: P:AetherUtils.Core.Structs.ParsedHash.Algorithm
+  id: Algorithm
+  parent: AetherUtils.Core.Structs.ParsedHash
+  langs:
+  - csharp
+  - vb
+  name: Algorithm
+  nameWithType: ParsedHash.Algorithm
+  fullName: AetherUtils.Core.Structs.ParsedHash.Algorithm
+  type: Property
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/ParsedHash.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: Algorithm
+    path: ../AetherUtils.Core/Structs/ParsedHash.cs
+    startLine: 13
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: internal HashAlgorithmName Algorithm { get; private set; }
+    parameters: []
+    return:
+      type: System.Security.Cryptography.HashAlgorithmName
+    content.vb: Friend Property Algorithm As HashAlgorithmName
+  overload: AetherUtils.Core.Structs.ParsedHash.Algorithm*
+- uid: AetherUtils.Core.Structs.ParsedHash.#ctor(AetherUtils.Core.Security.Hashing.HashEncoding,System.Byte[],System.Byte[],System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  commentId: M:AetherUtils.Core.Structs.ParsedHash.#ctor(AetherUtils.Core.Security.Hashing.HashEncoding,System.Byte[],System.Byte[],System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  id: '#ctor(AetherUtils.Core.Security.Hashing.HashEncoding,System.Byte[],System.Byte[],System.Int32,System.Security.Cryptography.HashAlgorithmName)'
+  parent: AetherUtils.Core.Structs.ParsedHash
+  langs:
+  - csharp
+  - vb
+  name: ParsedHash(HashEncoding, byte[], byte[], int, HashAlgorithmName)
+  nameWithType: ParsedHash.ParsedHash(HashEncoding, byte[], byte[], int, HashAlgorithmName)
+  fullName: AetherUtils.Core.Structs.ParsedHash.ParsedHash(AetherUtils.Core.Security.Hashing.HashEncoding, byte[], byte[], int, System.Security.Cryptography.HashAlgorithmName)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Structs/ParsedHash.cs
+      branch: master
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Structs/ParsedHash.cs
+    startLine: 15
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Structs
+  syntax:
+    content: internal ParsedHash(HashEncoding encoding, byte[] salt, byte[] hash, int iterations, HashAlgorithmName algorithm)
+    parameters:
+    - id: encoding
+      type: AetherUtils.Core.Security.Hashing.HashEncoding
+    - id: salt
+      type: System.Byte[]
+    - id: hash
+      type: System.Byte[]
+    - id: iterations
+      type: System.Int32
+    - id: algorithm
+      type: System.Security.Cryptography.HashAlgorithmName
+    content.vb: Friend Sub New(encoding As HashEncoding, salt As Byte(), hash As Byte(), iterations As Integer, algorithm As HashAlgorithmName)
+  overload: AetherUtils.Core.Structs.ParsedHash.#ctor*
+  nameWithType.vb: ParsedHash.New(HashEncoding, Byte(), Byte(), Integer, HashAlgorithmName)
+  fullName.vb: AetherUtils.Core.Structs.ParsedHash.New(AetherUtils.Core.Security.Hashing.HashEncoding, Byte(), Byte(), Integer, System.Security.Cryptography.HashAlgorithmName)
+  name.vb: New(HashEncoding, Byte(), Byte(), Integer, HashAlgorithmName)
+references:
+- uid: AetherUtils.Core.Structs
+  commentId: N:AetherUtils.Core.Structs
+  href: AetherUtils.html
+  name: AetherUtils.Core.Structs
+  nameWithType: AetherUtils.Core.Structs
+  fullName: AetherUtils.Core.Structs
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Structs
+    name: Structs
+    href: AetherUtils.Core.Structs.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Structs
+    name: Structs
+    href: AetherUtils.Core.Structs.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: AetherUtils.Core.Structs.ParsedHash.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  name: CanSerializeJson<ParsedHash>(ParsedHash)
+  nameWithType: TypeExtensions.CanSerializeJson<ParsedHash>(ParsedHash)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson<AetherUtils.Core.Structs.ParsedHash>(AetherUtils.Core.Structs.ParsedHash)
+  nameWithType.vb: TypeExtensions.CanSerializeJson(Of ParsedHash)(ParsedHash)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson(Of AetherUtils.Core.Structs.ParsedHash)(AetherUtils.Core.Structs.ParsedHash)
+  name.vb: CanSerializeJson(Of ParsedHash)(ParsedHash)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(AetherUtils.Core.Structs.ParsedHash)
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(AetherUtils.Core.Structs.ParsedHash)
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: )
+- uid: AetherUtils.Core.Structs.ParsedHash.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  name: CanSerializeXml<ParsedHash>(ParsedHash)
+  nameWithType: TypeExtensions.CanSerializeXml<ParsedHash>(ParsedHash)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml<AetherUtils.Core.Structs.ParsedHash>(AetherUtils.Core.Structs.ParsedHash)
+  nameWithType.vb: TypeExtensions.CanSerializeXml(Of ParsedHash)(ParsedHash)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml(Of AetherUtils.Core.Structs.ParsedHash)(AetherUtils.Core.Structs.ParsedHash)
+  name.vb: CanSerializeXml(Of ParsedHash)(ParsedHash)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(AetherUtils.Core.Structs.ParsedHash)
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(AetherUtils.Core.Structs.ParsedHash)
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: )
+- uid: AetherUtils.Core.Structs.ParsedHash.AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  name: SerializeJson<ParsedHash>(ParsedHash)
+  nameWithType: TypeExtensions.SerializeJson<ParsedHash>(ParsedHash)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson<AetherUtils.Core.Structs.ParsedHash>(AetherUtils.Core.Structs.ParsedHash)
+  nameWithType.vb: TypeExtensions.SerializeJson(Of ParsedHash)(ParsedHash)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson(Of AetherUtils.Core.Structs.ParsedHash)(AetherUtils.Core.Structs.ParsedHash)
+  name.vb: SerializeJson(Of ParsedHash)(ParsedHash)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(AetherUtils.Core.Structs.ParsedHash)
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(AetherUtils.Core.Structs.ParsedHash)
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: )
+- uid: AetherUtils.Core.Structs.ParsedHash.AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  parent: AetherUtils.Core.Extensions.TypeExtensions
+  definition: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  name: SerializeXml<ParsedHash>(ParsedHash)
+  nameWithType: TypeExtensions.SerializeXml<ParsedHash>(ParsedHash)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml<AetherUtils.Core.Structs.ParsedHash>(AetherUtils.Core.Structs.ParsedHash)
+  nameWithType.vb: TypeExtensions.SerializeXml(Of ParsedHash)(ParsedHash)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml(Of AetherUtils.Core.Structs.ParsedHash)(AetherUtils.Core.Structs.ParsedHash)
+  name.vb: SerializeXml(Of ParsedHash)(ParsedHash)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(AetherUtils.Core.Structs.ParsedHash)
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: <
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: '>'
+  - name: (
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(AetherUtils.Core.Structs.ParsedHash)
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: )
+  - name: (
+  - uid: AetherUtils.Core.Structs.ParsedHash
+    name: ParsedHash
+    href: AetherUtils.Core.Structs.ParsedHash.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  name: CanSerializeJson<T>(T)
+  nameWithType: TypeExtensions.CanSerializeJson<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson<T>(T)
+  nameWithType.vb: TypeExtensions.CanSerializeJson(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson(Of T)(T)
+  name.vb: CanSerializeJson(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeJson``1(``0)
+    name: CanSerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.TypeExtensions
+  commentId: T:AetherUtils.Core.Extensions.TypeExtensions
+  parent: AetherUtils.Core.Extensions
+  href: AetherUtils.Core.Extensions.TypeExtensions.html
+  name: TypeExtensions
+  nameWithType: TypeExtensions
+  fullName: AetherUtils.Core.Extensions.TypeExtensions
+- uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  name: CanSerializeXml<T>(T)
+  nameWithType: TypeExtensions.CanSerializeXml<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml<T>(T)
+  nameWithType.vb: TypeExtensions.CanSerializeXml(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml(Of T)(T)
+  name.vb: CanSerializeXml(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1(``0)
+    name: CanSerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_CanSerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  name: SerializeJson<T>(T)
+  nameWithType: TypeExtensions.SerializeJson<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson<T>(T)
+  nameWithType.vb: TypeExtensions.SerializeJson(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson(Of T)(T)
+  name.vb: SerializeJson(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1(``0)
+    name: SerializeJson
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  commentId: M:AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+  href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  name: SerializeXml<T>(T)
+  nameWithType: TypeExtensions.SerializeXml<T>(T)
+  fullName: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml<T>(T)
+  nameWithType.vb: TypeExtensions.SerializeXml(Of T)(T)
+  fullName.vb: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml(Of T)(T)
+  name.vb: SerializeXml(Of T)(T)
+  spec.csharp:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1(``0)
+    name: SerializeXml
+    href: AetherUtils.Core.Extensions.TypeExtensions.html#AetherUtils_Core_Extensions_TypeExtensions_SerializeXml__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: AetherUtils.Core.Extensions
+  commentId: N:AetherUtils.Core.Extensions
+  href: AetherUtils.html
+  name: AetherUtils.Core.Extensions
+  nameWithType: AetherUtils.Core.Extensions
+  fullName: AetherUtils.Core.Extensions
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Extensions
+    name: Extensions
+    href: AetherUtils.Core.Extensions.html
+- uid: AetherUtils.Core.Structs.ParsedHash.Encoding*
+  commentId: Overload:AetherUtils.Core.Structs.ParsedHash.Encoding
+  href: AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Encoding
+  name: Encoding
+  nameWithType: ParsedHash.Encoding
+  fullName: AetherUtils.Core.Structs.ParsedHash.Encoding
+- uid: AetherUtils.Core.Security.Hashing.HashEncoding
+  commentId: T:AetherUtils.Core.Security.Hashing.HashEncoding
+  parent: AetherUtils.Core.Security.Hashing
+  href: AetherUtils.Core.Security.Hashing.HashEncoding.html
+  name: HashEncoding
+  nameWithType: HashEncoding
+  fullName: AetherUtils.Core.Security.Hashing.HashEncoding
+- uid: AetherUtils.Core.Security.Hashing
+  commentId: N:AetherUtils.Core.Security.Hashing
+  href: AetherUtils.html
+  name: AetherUtils.Core.Security.Hashing
+  nameWithType: AetherUtils.Core.Security.Hashing
+  fullName: AetherUtils.Core.Security.Hashing
+  spec.csharp:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Security
+    name: Security
+    href: AetherUtils.Core.Security.html
+  - name: .
+  - uid: AetherUtils.Core.Security.Hashing
+    name: Hashing
+    href: AetherUtils.Core.Security.Hashing.html
+  spec.vb:
+  - uid: AetherUtils
+    name: AetherUtils
+    href: AetherUtils.html
+  - name: .
+  - uid: AetherUtils.Core
+    name: Core
+    href: AetherUtils.Core.html
+  - name: .
+  - uid: AetherUtils.Core.Security
+    name: Security
+    href: AetherUtils.Core.Security.html
+  - name: .
+  - uid: AetherUtils.Core.Security.Hashing
+    name: Hashing
+    href: AetherUtils.Core.Security.Hashing.html
+- uid: AetherUtils.Core.Structs.ParsedHash.Salt*
+  commentId: Overload:AetherUtils.Core.Structs.ParsedHash.Salt
+  href: AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Salt
+  name: Salt
+  nameWithType: ParsedHash.Salt
+  fullName: AetherUtils.Core.Structs.ParsedHash.Salt
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: AetherUtils.Core.Structs.ParsedHash.Hash*
+  commentId: Overload:AetherUtils.Core.Structs.ParsedHash.Hash
+  href: AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Hash
+  name: Hash
+  nameWithType: ParsedHash.Hash
+  fullName: AetherUtils.Core.Structs.ParsedHash.Hash
+- uid: AetherUtils.Core.Structs.ParsedHash.Iterations*
+  commentId: Overload:AetherUtils.Core.Structs.ParsedHash.Iterations
+  href: AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Iterations
+  name: Iterations
+  nameWithType: ParsedHash.Iterations
+  fullName: AetherUtils.Core.Structs.ParsedHash.Iterations
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AetherUtils.Core.Structs.ParsedHash.Algorithm*
+  commentId: Overload:AetherUtils.Core.Structs.ParsedHash.Algorithm
+  href: AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash_Algorithm
+  name: Algorithm
+  nameWithType: ParsedHash.Algorithm
+  fullName: AetherUtils.Core.Structs.ParsedHash.Algorithm
+- uid: System.Security.Cryptography.HashAlgorithmName
+  commentId: T:System.Security.Cryptography.HashAlgorithmName
+  parent: System.Security.Cryptography
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.security.cryptography.hashalgorithmname
+  name: HashAlgorithmName
+  nameWithType: HashAlgorithmName
+  fullName: System.Security.Cryptography.HashAlgorithmName
+- uid: System.Security.Cryptography
+  commentId: N:System.Security.Cryptography
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Security.Cryptography
+  nameWithType: System.Security.Cryptography
+  fullName: System.Security.Cryptography
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Security
+    name: Security
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security
+  - name: .
+  - uid: System.Security.Cryptography
+    name: Cryptography
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.cryptography
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Security
+    name: Security
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security
+  - name: .
+  - uid: System.Security.Cryptography
+    name: Cryptography
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.cryptography
+- uid: AetherUtils.Core.Structs.ParsedHash.#ctor*
+  commentId: Overload:AetherUtils.Core.Structs.ParsedHash.#ctor
+  href: AetherUtils.Core.Structs.ParsedHash.html#AetherUtils_Core_Structs_ParsedHash__ctor_AetherUtils_Core_Security_Hashing_HashEncoding_System_Byte___System_Byte___System_Int32_System_Security_Cryptography_HashAlgorithmName_
+  name: ParsedHash
+  nameWithType: ParsedHash.ParsedHash
+  fullName: AetherUtils.Core.Structs.ParsedHash.ParsedHash
+  nameWithType.vb: ParsedHash.New
+  fullName.vb: AetherUtils.Core.Structs.ParsedHash.New
+  name.vb: New
+shouldSkipMarkup: true
