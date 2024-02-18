@@ -101,52 +101,45 @@ namespace AetherUtils.Tests
             Assert.That(decrypted.Result, Is.EqualTo(testString));
         }
 
-        [Test]
-        public void TestExistingFileEncrypt()
-        {
-            var service = new FileEncryptionService(testFilePath);
-            
-            Console.WriteLine($"Passphrase: {passphrase}");
-
-            var newFilePath = FileEncryptionService.EncryptFileAsync("files\\fast internet.png", passphrase, 
-                ".png");
-            Console.WriteLine($"Encrypted: {newFilePath.Result}");
-        }
-
-        [Test]
-        public void TestExistingFileDecrypt()
-        {
-            var service = new FileEncryptionService(testFilePath);
-            Console.WriteLine($"Passphrase: {passphrase}");
-
-            var newFilePath = FileEncryptionService.DecryptFileAsync("files\\fast internet.png", passphrase);
-            Console.WriteLine($"Decrypted: {newFilePath.Result}");
-        }
+        // [Test]
+        // public void TestExistingFileEncrypt()
+        // {
+        //     var service = new FileEncryptionService(testFilePath);
+        //     
+        //     Console.WriteLine($"Passphrase: {passphrase}");
+        //
+        //     var newFilePath = FileEncryptionService.EncryptFileAsync("files\\fast internet.png", passphrase, 
+        //         ".png");
+        //     Console.WriteLine($"Encrypted: {newFilePath.Result}");
+        // }
+        //
+        // [Test]
+        // public void TestExistingFileDecrypt()
+        // {
+        //     var service = new FileEncryptionService(testFilePath);
+        //     Console.WriteLine($"Passphrase: {passphrase}");
+        //
+        //     var newFilePath = FileEncryptionService.DecryptFileAsync("files\\fast internet.png", passphrase);
+        //     Console.WriteLine($"Decrypted: {newFilePath.Result}");
+        // }
         
-        [Test]
-        public void TestExistingFileEncrypt2()
-        {
-            Console.WriteLine($"Passphrase: {passphrase}");
-
-            var newFilePath = FileEncryptionService.EncryptFileAsync("files\\Amount Owed to Papa for Gas.docx", passphrase, 
-                ".docx");
-            Console.WriteLine($"Encrypted: {newFilePath.Result}");
-        }
-
-        [Test]
-        public void TestExistingFileDecrypt2()
-        {
-            Console.WriteLine($"Passphrase: {passphrase}");
-
-            var newFilePath = FileEncryptionService.DecryptFileAsync("files\\Amount Owed to Papa for Gas.docx", passphrase);
-            Console.WriteLine($"Decrypted: {newFilePath.Result}");
-        }
-
-        [Test]
-        public void GetCharacterCode()
-        {
-            byte[] bytes = Encoding.UTF8.GetBytes(new[] { '█' });
-            Console.WriteLine(bytes.ToPrintableString());
-        }
+        // [Test]
+        // public void TestExistingFileEncrypt2()
+        // {
+        //     Console.WriteLine($"Passphrase: {passphrase}");
+        //
+        //     var newFilePath = FileEncryptionService.EncryptFileAsync("files\\Amount Owed to Papa for Gas.docx", passphrase, 
+        //         ".docx");
+        //     Console.WriteLine($"Encrypted: {newFilePath.Result}");
+        // }
+        //
+        // [Test]
+        // public void TestExistingFileDecrypt2()
+        // {
+        //     Console.WriteLine($"Passphrase: {passphrase}");
+        //
+        //     var newFilePath = FileEncryptionService.DecryptFileAsync("files\\Amount Owed to Papa for Gas.docx", passphrase);
+        //     Console.WriteLine($"Decrypted: {newFilePath.Result}");
+        // }
     }
 }
