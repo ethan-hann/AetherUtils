@@ -33,6 +33,8 @@ namespace AetherUtils.Core.Security.Hashing
         /// <param name="value">The plain text string to hash.</param>
         /// <returns>A cryptographically strong hashed string.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="value"/> was <c>null</c>.</exception>
+        /// <exception cref="CryptographicException">If <see cref="HashOptions.HashAlgorithm"/> is an unsupported hash
+        /// algorithm. Supported algorithms are SHA1, SHA256, SHA384, and SHA512</exception>
         public string HashString(string value)
         {
             ArgumentNullException.ThrowIfNull(nameof(value));

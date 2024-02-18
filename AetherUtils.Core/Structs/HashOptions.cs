@@ -29,7 +29,7 @@ namespace AetherUtils.Core.Structs
         /// <para>A cryptographically strong random value between the minimum and maximum iterations is
         /// retrieved every time this property is retrieved.</para>
         /// </summary>
-        public int Iterations => RandomNumberGenerator.GetInt32(_iterationsSpan.Key, _iterationsSpan.Value);
+        public int Iterations => Math.Abs(RandomNumberGenerator.GetInt32(_iterationsSpan.Key, _iterationsSpan.Value));
 
         /// <summary>
         /// The algorithm to use when hashing.

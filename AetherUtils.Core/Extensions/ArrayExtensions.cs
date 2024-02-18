@@ -44,6 +44,25 @@ public static class ArrayExtensions
     }
 
     /// <summary>
+    /// Convert a hexadecimal string representation of bytes into its equivalent <see cref="byte"/> array.
+    /// </summary>
+    /// <param name="byteString">The string containing the hexadecimal values.
+    /// This string can contain values seperated by '-' (<c>CE-B7-8D</c>) or not (<c>CEB78D</c>).</param>
+    /// <returns>A <see cref="byte"/> array representing the hexadecimal string.</returns>
+    public static IEnumerable<byte> FromPrintableString(this string byteString)
+    {
+        var hex = byteString.Trim();
+        if (hex.Contains('-'))
+            hex = hex.Replace("-", "");
+        
+        return Enumerable.Range(0, hex.Length)
+            .Where(x => x % 2 == 0)
+            .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
+            .ToArray();
+    }
+    
+
+    /// <summary>
     /// Convert an array of values to a string using the specified prefix, delimiter, and optional suffix.
     /// </summary>
     /// <example>

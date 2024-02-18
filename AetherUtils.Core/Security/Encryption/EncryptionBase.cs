@@ -54,7 +54,7 @@ namespace AetherUtils.Core.Security.Encryption
         /// </summary>
         /// <param name="keySize">The size, in bytes, for the generated key.</param>
         /// <returns>A cryptographically strong and random <see cref="byte"/> array.</returns>
-        private static byte[] GetRandomKey(int keySize = 32)
+        public static byte[] GetRandomKey(int keySize = 32)
         {
             var bytes = new byte[keySize];
             RandomNumberGenerator.Create().GetBytes(bytes);

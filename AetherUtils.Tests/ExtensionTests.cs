@@ -1,4 +1,5 @@
 ﻿using AetherUtils.Core.Extensions;
+using AetherUtils.Core.Security.Encryption;
 using AetherUtils.Core.Utility;
 
 namespace AetherUtils.Tests
@@ -51,6 +52,18 @@ namespace AetherUtils.Tests
 
             //Assert that an exception is thrown if we try to rename a key with a name that already exists in the dictionary.
             Assert.Throws<ArgumentException>(() => dictionary2.RenameKey(1, 2));
+        }
+
+        [Test]
+        public void PrintableStringTest()
+        {
+            byte[] original = EncryptionBase.GetRandomKey();
+            string s = original.ToPrintableString();
+            Console.WriteLine(s);
+            
+            byte[] fromBytes = (byte[]) s.FromPrintableString();
+            
+            Assert.That(original, Is.EqualTo(fromBytes));
         }
     }
 }
