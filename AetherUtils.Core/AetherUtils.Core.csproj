@@ -44,4 +44,8 @@
     </None>
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy bin\Release\AetherUtils.Core.1.0.0.nupkg F:\Nuget\AetherUtils.Core.1.0.0.nupkg" />
+  </Target>
+
 </Project>
