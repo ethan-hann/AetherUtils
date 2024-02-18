@@ -39,6 +39,9 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </Resource>
+    <None Include="bin\Release\AetherUtils.Core.xml" Pack="true">
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </None>
   </ItemGroup>
 
 </Project>
