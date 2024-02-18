@@ -3,7 +3,6 @@ name: CI
 on:
   push:
     branches:
-    - main
     - release
     paths:
     - build/**
@@ -11,7 +10,6 @@ on:
     - global.json
   pull_request:
     branches:
-    - main
     - release
     paths:
     - build/**
@@ -52,6 +50,9 @@ jobs:
 
     - name: Build
       run: msbuild $env:SOLUTION /p:Configuration=$env:BUILD_CONFIG /p:Platform="Any CPU" -p:Version=$env:BUILD_VERSION
+
+    - name: Run Tests
+      run: dotnet test /p:Configuration=$env:BUILD_CONFIG /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura --no-restore --no-build --verbosity normal
 
     - name: Publish to Feedz.IO
       run: nuget push **\*.nupkg -Source 'https://f.feedz.io/tortal/aetherutils/nuget/index.json' -ApiKey ${{secrets.FEEDZIO_API_KEY}}
