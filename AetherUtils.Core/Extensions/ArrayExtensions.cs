@@ -54,6 +54,7 @@ public static class ArrayExtensions
         var hex = byteString.Trim();
         if (hex.Contains('-'))
             hex = hex.Replace("-", "");
+        
         return Enumerable.Range(0, hex.Length)
             .Where(x => x % 2 == 0)
             .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
