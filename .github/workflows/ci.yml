@@ -4,17 +4,9 @@ on:
   push:
     branches:
     - release
-    paths:
-    - build/**
-    - .github/workflows/ci.yml
-    - global.json
   pull_request:
     branches:
     - release
-    paths:
-    - build/**
-    - .github/workflows/ci.yml
-    - global.json
   workflow_dispatch:
 
 jobs:
