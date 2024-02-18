@@ -1,4 +1,8 @@
 ﻿using System.Collections;
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8605 // Unboxing a possibly null value.
+#pragma warning disable CS8604 // Possible null reference argument.
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
 
 namespace AetherUtils.Core.WinForms;
 
@@ -68,8 +72,8 @@ public sealed class IconListManager
 
         //Check that we haven't already got the extension, if we have, then
         //return back its index
-        if (_extensionList.ContainsKey(extension.ToUpper()))
-            return (int)_extensionList[extension.ToUpper()]; //return existing index
+        if (_extensionList.ContainsKey(extension?.ToUpper() ?? string.Empty))
+            return (int)_extensionList[extension?.ToUpper()]; //return existing index
         // It's not already been added, so add it and record its position.
 
         var pos = ((ImageList)_imageLists[0]).Images.Count; //store current count -- new item's index

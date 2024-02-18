@@ -1,4 +1,9 @@
 ﻿using System.Runtime.InteropServices;
+// ReSharper disable UnusedMember.Global
+// ReSharper disable IdentifierTypo
+// ReSharper disable InconsistentNaming
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
 
 namespace AetherUtils.Core.WinForms;
 

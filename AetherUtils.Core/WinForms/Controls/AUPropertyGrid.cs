@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 namespace AetherUtils.Core.WinForms.Controls;
 
@@ -13,16 +14,16 @@ namespace AetherUtils.Core.WinForms.Controls;
 /// </remarks>
 public partial class AuPropertyGrid : PropertyGrid
 {
-    [EditorBrowsable]
-    [DisplayName("Custom Buttons")]
-    public Dictionary<string, ToolStripButton> CustomButtons { get; set; } = [];
+    private readonly Dictionary<string, ToolStripButton> _customButtons = [];
     
-    [EditorBrowsable]
-    [DisplayName("Hide Property Page Button?")]
-    private bool HidePropertyPageButton { get; set; } = true;
+    private bool HidePropertyPageButton { get; } = true;
 
     private ToolStrip? _toolStrip;
     
+    /// <summary>
+    /// Create a new property grid, specifying whether to hide the property page button by default.
+    /// </summary>
+    /// <param name="hidePropertyPageButton">Should the property page button be hidden?</param>
     public AuPropertyGrid(bool hidePropertyPageButton)
     {
         InitializeComponent();
@@ -30,6 +31,7 @@ public partial class AuPropertyGrid : PropertyGrid
         HidePropertyPageButton = hidePropertyPageButton;
         Setup();
     }
+    
     
     public AuPropertyGrid(IContainer container)
     {
@@ -74,10 +76,10 @@ public partial class AuPropertyGrid : PropertyGrid
         SuspendLayout();
         
         //Remove all custom buttons from the property grid first, in case the user added buttons.
-        CustomButtons.Values.ToList().ForEach(b => _toolStrip.Items.Remove(b));
+        _customButtons.Values.ToList().ForEach(b => _toolStrip.Items.Remove(b));
 
         //Re-add the new buttons to the property grid.
-        foreach (var button in CustomButtons)
+        foreach (var button in _customButtons)
         {
             button.Value.Tag = button.Key;
             _toolStrip.Items.Add(button.Value);
@@ -94,7 +96,7 @@ public partial class AuPropertyGrid : PropertyGrid
     /// <param name="key">The unique key of the button to get.</param>
     /// <returns></returns>
     public ToolStripButton? GetButton(string key) => 
-        CustomButtons.FirstOrDefault(b => b.Key.Equals(key)).Value;
+        _customButtons.FirstOrDefault(b => b.Key.Equals(key)).Value;
     
     /// <summary>
     /// Add a new button to the property grid with the specified key.
@@ -105,7 +107,7 @@ public partial class AuPropertyGrid : PropertyGrid
     public bool AddButton(string key, ToolStripButton button)
     {
         ArgumentException.ThrowIfNullOrEmpty(key, nameof(key));
-        return CustomButtons.TryAdd(key, button);
+        return _customButtons.TryAdd(key, button);
     }
 
     /// <summary>
@@ -116,6 +118,6 @@ public partial class AuPropertyGrid : PropertyGrid
     public bool RemoveButton(string key)
     {
         ArgumentException.ThrowIfNullOrEmpty(key, nameof(key));
-        return CustomButtons.Remove(key);
+        return _customButtons.Remove(key);
     }
 }

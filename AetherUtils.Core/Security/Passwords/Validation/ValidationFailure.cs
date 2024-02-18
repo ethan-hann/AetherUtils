@@ -7,8 +7,18 @@
 /// <param name="howToResolve">Indicates how to fix the failure.</param>
 public sealed class ValidationFailure(string message, string howToResolve) : IPasswordValidationFailure
 {
+    /// <summary>
+    /// Gets or sets the message that describes the password validation failure.
+    /// </summary>
     public string Message { get; set; } = message;
+    
+    /// <summary>
+    /// Gets or sets the message that describes how to resolve the validation failure.
+    /// </summary>
     public string HowToResolve { get; set; } = howToResolve;
     
+    /// <summary>
+    /// Create a new validation failure.
+    /// </summary>
     public ValidationFailure() : this(string.Empty, string.Empty) {}
 }

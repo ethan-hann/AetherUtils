@@ -1,5 +1,6 @@
 ﻿using AetherUtils.Core.Security.Hashing;
 using System.Security.Cryptography;
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 namespace AetherUtils.Core.Structs
 {
@@ -25,9 +26,10 @@ namespace AetherUtils.Core.Structs
 
         /// <summary>
         /// The number of iterations to perform when hashing.
-        /// <para>A random value between the minimum and maximum iterations is retrieved every time this property is called.</para>
+        /// <para>A cryptographically strong random value between the minimum and maximum iterations is
+        /// retrieved every time this property is retrieved.</para>
         /// </summary>
-        public int Iterations => new Random().Next(_iterationsSpan.Key, _iterationsSpan.Value);
+        public int Iterations => RandomNumberGenerator.GetInt32(_iterationsSpan.Key, _iterationsSpan.Value);
 
         /// <summary>
         /// The algorithm to use when hashing.

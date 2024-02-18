@@ -2,6 +2,9 @@
 
 namespace AetherUtils.Core.RegEx
 {
+    /// <summary>
+    /// Represents various regular expression generators.
+    /// </summary>
     public static partial class RegexGenerator
     {
         /// <summary>
