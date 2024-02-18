@@ -35,6 +35,7 @@ public partial class AuPropertyGrid : PropertyGrid
     {
         container.Add(this);
         InitializeComponent();
+        
         Setup();
     }
 
