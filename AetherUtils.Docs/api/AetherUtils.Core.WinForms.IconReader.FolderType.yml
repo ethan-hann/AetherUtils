@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: FolderType
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 15
+    startLine: 20
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -46,11 +46,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Open
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 20
+    startLine: 25
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -74,11 +74,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Closed
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 25
+    startLine: 30
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms

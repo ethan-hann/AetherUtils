@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/TimeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: TimeExtensions
     path: ../AetherUtils.Core/Extensions/TimeExtensions.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/TimeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: StartOfWeek
     path: ../AetherUtils.Core/Extensions/TimeExtensions.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/TimeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: StartOfMonth
     path: ../AetherUtils.Core/Extensions/TimeExtensions.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/TimeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: EndOfMonth
     path: ../AetherUtils.Core/Extensions/TimeExtensions.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/TimeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: TimeSpanToString
     path: ../AetherUtils.Core/Extensions/TimeExtensions.cs

@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: FileEncryptionService
     path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
@@ -48,6 +48,7 @@ items:
   - System.Object
   - AetherUtils.Core.Security.Encryption.EncryptionBase
   inheritedMembers:
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
   - AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -74,7 +75,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: FilePath
     path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
@@ -105,7 +106,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
@@ -140,7 +141,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: EncryptAsync
     path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
@@ -196,7 +197,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DecryptAsync
     path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
@@ -244,7 +245,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: EncryptFileAsync
     path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
@@ -298,7 +299,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DecryptFileAsync
     path: ../AetherUtils.Core/Security/Encryption/FileEncryptionService.cs
@@ -444,6 +445,37 @@ references:
   name: EncryptionBase
   nameWithType: EncryptionBase
   fullName: AetherUtils.Core.Security.Encryption.EncryptionBase
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  isExternal: true
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_System_Int32_
+  name: GetRandomKey(int)
+  nameWithType: EncryptionBase.GetRandomKey(int)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(int)
+  nameWithType.vb: EncryptionBase.GetRandomKey(Integer)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(Integer)
+  name.vb: GetRandomKey(Integer)
+  spec.csharp:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+    name: GetRandomKey
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+    name: GetRandomKey
+    href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
 - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   parent: AetherUtils.Core.Security.Encryption.EncryptionBase

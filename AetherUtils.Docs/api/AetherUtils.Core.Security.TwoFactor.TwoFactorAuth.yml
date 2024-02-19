@@ -35,7 +35,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: TwoFactorAuth
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GenerateSetupInformation
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GeneratePinAtInterval
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GeneratePinAtInterval
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -271,7 +271,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ValidateTwoFactorPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -315,7 +315,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ValidateTwoFactorPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -362,7 +362,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ValidateTwoFactorPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -403,7 +403,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ValidateTwoFactorPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -447,7 +447,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ValidateTwoFactorPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -494,7 +494,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ValidateTwoFactorPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -538,7 +538,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -582,7 +582,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -629,7 +629,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -670,7 +670,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPin
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -714,7 +714,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPins
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -755,7 +755,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPins
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -799,7 +799,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPins
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -837,7 +837,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPins
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
@@ -878,7 +878,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentPins
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorAuth.cs

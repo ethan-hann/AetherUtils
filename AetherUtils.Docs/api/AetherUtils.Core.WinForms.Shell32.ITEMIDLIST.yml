@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ITEMIDLIST
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 176
+    startLine: 181
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -48,11 +48,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: mkid
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 179
+    startLine: 184
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms

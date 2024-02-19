@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/Xml.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Xml
     path: ../AetherUtils.Core/Files/Xml.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/Xml.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SaveXml
     path: ../AetherUtils.Core/Files/Xml.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/Xml.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: LoadXml
     path: ../AetherUtils.Core/Files/Xml.cs

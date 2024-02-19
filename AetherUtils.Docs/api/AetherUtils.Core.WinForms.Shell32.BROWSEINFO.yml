@@ -23,11 +23,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: BROWSEINFO
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 182
+    startLine: 187
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -55,11 +55,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: hwndOwner
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 185
+    startLine: 190
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -82,11 +82,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: pidlRoot
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 186
+    startLine: 191
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -109,11 +109,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: pszDisplayName
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 187
+    startLine: 192
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -136,11 +136,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: lpszTitle
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 188
+    startLine: 193
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -163,11 +163,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ulFlags
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 189
+    startLine: 194
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -190,11 +190,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: lpfn
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 190
+    startLine: 195
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -217,11 +217,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: lParam
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 191
+    startLine: 196
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -244,11 +244,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconReader.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: iImage
     path: ../AetherUtils.Core/WinForms/IconReader.cs
-    startLine: 192
+    startLine: 197
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms

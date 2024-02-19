@@ -774,6 +774,22 @@ references:
   commentId: T:AetherUtils.Core.Extensions.ArrayExtensions
   fullName: AetherUtils.Core.Extensions.ArrayExtensions
   nameWithType: ArrayExtensions
+- uid: AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString(System.String)
+  name: FromPrintableString(string)
+  href: api/AetherUtils.Core.Extensions.ArrayExtensions.html#AetherUtils_Core_Extensions_ArrayExtensions_FromPrintableString_System_String_
+  commentId: M:AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString(System.String)
+  name.vb: FromPrintableString(String)
+  fullName: AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString(string)
+  fullName.vb: AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString(String)
+  nameWithType: ArrayExtensions.FromPrintableString(string)
+  nameWithType.vb: ArrayExtensions.FromPrintableString(String)
+- uid: AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString*
+  name: FromPrintableString
+  href: api/AetherUtils.Core.Extensions.ArrayExtensions.html#AetherUtils_Core_Extensions_ArrayExtensions_FromPrintableString_
+  commentId: Overload:AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString
+  isSpec: "True"
+  fullName: AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString
+  nameWithType: ArrayExtensions.FromPrintableString
 - uid: AetherUtils.Core.Extensions.ArrayExtensions.ToImage(System.Byte[])
   name: ToImage(byte[])
   href: api/AetherUtils.Core.Extensions.ArrayExtensions.html#AetherUtils_Core_Extensions_ArrayExtensions_ToImage_System_Byte___
@@ -1826,6 +1842,24 @@ references:
   fullName.vb: AetherUtils.Core.Files.Json(Of T).New()
   nameWithType: Json<T>.Json()
   nameWithType.vb: Json(Of T).New()
+- uid: AetherUtils.Core.Files.Json`1.#ctor(Newtonsoft.Json.Formatting)
+  name: Json(Formatting)
+  href: api/AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1__ctor_Newtonsoft_Json_Formatting_
+  commentId: M:AetherUtils.Core.Files.Json`1.#ctor(Newtonsoft.Json.Formatting)
+  name.vb: New(Formatting)
+  fullName: AetherUtils.Core.Files.Json<T>.Json(Newtonsoft.Json.Formatting)
+  fullName.vb: AetherUtils.Core.Files.Json(Of T).New(Newtonsoft.Json.Formatting)
+  nameWithType: Json<T>.Json(Formatting)
+  nameWithType.vb: Json(Of T).New(Formatting)
+- uid: AetherUtils.Core.Files.Json`1.#ctor(Newtonsoft.Json.JsonSerializerSettings)
+  name: Json(JsonSerializerSettings)
+  href: api/AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1__ctor_Newtonsoft_Json_JsonSerializerSettings_
+  commentId: M:AetherUtils.Core.Files.Json`1.#ctor(Newtonsoft.Json.JsonSerializerSettings)
+  name.vb: New(JsonSerializerSettings)
+  fullName: AetherUtils.Core.Files.Json<T>.Json(Newtonsoft.Json.JsonSerializerSettings)
+  fullName.vb: AetherUtils.Core.Files.Json(Of T).New(Newtonsoft.Json.JsonSerializerSettings)
+  nameWithType: Json<T>.Json(JsonSerializerSettings)
+  nameWithType.vb: Json(Of T).New(JsonSerializerSettings)
 - uid: AetherUtils.Core.Files.Json`1.#ctor*
   name: Json
   href: api/AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1__ctor_
@@ -2592,6 +2626,22 @@ references:
   commentId: T:AetherUtils.Core.Security.Encryption.EncryptionBase
   fullName: AetherUtils.Core.Security.Encryption.EncryptionBase
   nameWithType: EncryptionBase
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+  name: GetRandomKey(int)
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_System_Int32_
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+  name.vb: GetRandomKey(Integer)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(int)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(Integer)
+  nameWithType: EncryptionBase.GetRandomKey(int)
+  nameWithType.vb: EncryptionBase.GetRandomKey(Integer)
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey*
+  name: GetRandomKey
+  href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_
+  commentId: Overload:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey
+  isSpec: "True"
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey
+  nameWithType: EncryptionBase.GetRandomKey
 - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   name: GetRandomKeyPhrase(int)
   href: api/AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKeyPhrase_System_Int32_
@@ -4784,6 +4834,132 @@ references:
   commentId: N:AetherUtils.Core.WinForms
   fullName: AetherUtils.Core.WinForms
   nameWithType: AetherUtils.Core.WinForms
+- uid: AetherUtils.Core.WinForms.Controls
+  name: AetherUtils.Core.WinForms.Controls
+  href: api/AetherUtils.Core.WinForms.Controls.html
+  commentId: N:AetherUtils.Core.WinForms.Controls
+  fullName: AetherUtils.Core.WinForms.Controls
+  nameWithType: AetherUtils.Core.WinForms.Controls
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid
+  name: AuPropertyGrid
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html
+  commentId: T:AetherUtils.Core.WinForms.Controls.AuPropertyGrid
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid
+  nameWithType: AuPropertyGrid
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.#ctor(System.Boolean)
+  name: AuPropertyGrid(bool)
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid__ctor_System_Boolean_
+  commentId: M:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.#ctor(System.Boolean)
+  name.vb: New(Boolean)
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.AuPropertyGrid(bool)
+  fullName.vb: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.New(Boolean)
+  nameWithType: AuPropertyGrid.AuPropertyGrid(bool)
+  nameWithType.vb: AuPropertyGrid.New(Boolean)
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.#ctor(System.ComponentModel.IContainer)
+  name: AuPropertyGrid(IContainer)
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid__ctor_System_ComponentModel_IContainer_
+  commentId: M:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.#ctor(System.ComponentModel.IContainer)
+  name.vb: New(IContainer)
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.AuPropertyGrid(System.ComponentModel.IContainer)
+  fullName.vb: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.New(System.ComponentModel.IContainer)
+  nameWithType: AuPropertyGrid.AuPropertyGrid(IContainer)
+  nameWithType.vb: AuPropertyGrid.New(IContainer)
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.#ctor(System.ComponentModel.IContainer,System.Boolean)
+  name: AuPropertyGrid(IContainer, bool)
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid__ctor_System_ComponentModel_IContainer_System_Boolean_
+  commentId: M:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.#ctor(System.ComponentModel.IContainer,System.Boolean)
+  name.vb: New(IContainer, Boolean)
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.AuPropertyGrid(System.ComponentModel.IContainer, bool)
+  fullName.vb: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.New(System.ComponentModel.IContainer, Boolean)
+  nameWithType: AuPropertyGrid.AuPropertyGrid(IContainer, bool)
+  nameWithType.vb: AuPropertyGrid.New(IContainer, Boolean)
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.#ctor*
+  name: AuPropertyGrid
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid__ctor_
+  commentId: Overload:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.AuPropertyGrid
+  fullName.vb: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.New
+  nameWithType: AuPropertyGrid.AuPropertyGrid
+  nameWithType.vb: AuPropertyGrid.New
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.AddButton(System.String,System.Windows.Forms.ToolStripButton)
+  name: AddButton(string, ToolStripButton)
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid_AddButton_System_String_System_Windows_Forms_ToolStripButton_
+  commentId: M:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.AddButton(System.String,System.Windows.Forms.ToolStripButton)
+  name.vb: AddButton(String, ToolStripButton)
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.AddButton(string, System.Windows.Forms.ToolStripButton)
+  fullName.vb: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.AddButton(String, System.Windows.Forms.ToolStripButton)
+  nameWithType: AuPropertyGrid.AddButton(string, ToolStripButton)
+  nameWithType.vb: AuPropertyGrid.AddButton(String, ToolStripButton)
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.AddButton*
+  name: AddButton
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid_AddButton_
+  commentId: Overload:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.AddButton
+  isSpec: "True"
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.AddButton
+  nameWithType: AuPropertyGrid.AddButton
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid_Dispose_System_Boolean_
+  commentId: M:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.Dispose(bool)
+  fullName.vb: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.Dispose(Boolean)
+  nameWithType: AuPropertyGrid.Dispose(bool)
+  nameWithType.vb: AuPropertyGrid.Dispose(Boolean)
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.Dispose*
+  name: Dispose
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid_Dispose_
+  commentId: Overload:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.Dispose
+  isSpec: "True"
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.Dispose
+  nameWithType: AuPropertyGrid.Dispose
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.DrawButtons
+  name: DrawButtons()
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid_DrawButtons
+  commentId: M:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.DrawButtons
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.DrawButtons()
+  nameWithType: AuPropertyGrid.DrawButtons()
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.DrawButtons*
+  name: DrawButtons
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid_DrawButtons_
+  commentId: Overload:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.DrawButtons
+  isSpec: "True"
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.DrawButtons
+  nameWithType: AuPropertyGrid.DrawButtons
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.GetButton(System.String)
+  name: GetButton(string)
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid_GetButton_System_String_
+  commentId: M:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.GetButton(System.String)
+  name.vb: GetButton(String)
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.GetButton(string)
+  fullName.vb: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.GetButton(String)
+  nameWithType: AuPropertyGrid.GetButton(string)
+  nameWithType.vb: AuPropertyGrid.GetButton(String)
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.GetButton*
+  name: GetButton
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid_GetButton_
+  commentId: Overload:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.GetButton
+  isSpec: "True"
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.GetButton
+  nameWithType: AuPropertyGrid.GetButton
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.RemoveButton(System.String)
+  name: RemoveButton(string)
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid_RemoveButton_System_String_
+  commentId: M:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.RemoveButton(System.String)
+  name.vb: RemoveButton(String)
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.RemoveButton(string)
+  fullName.vb: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.RemoveButton(String)
+  nameWithType: AuPropertyGrid.RemoveButton(string)
+  nameWithType.vb: AuPropertyGrid.RemoveButton(String)
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.RemoveButton*
+  name: RemoveButton
+  href: api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html#AetherUtils_Core_WinForms_Controls_AuPropertyGrid_RemoveButton_
+  commentId: Overload:AetherUtils.Core.WinForms.Controls.AuPropertyGrid.RemoveButton
+  isSpec: "True"
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.RemoveButton
+  nameWithType: AuPropertyGrid.RemoveButton
 - uid: AetherUtils.Core.WinForms.IconListManager
   name: IconListManager
   href: api/AetherUtils.Core.WinForms.IconListManager.html

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/Feature.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Feature
     path: ../AetherUtils.Core/Licensing/Models/Feature.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/Feature.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Name
     path: ../AetherUtils.Core/Licensing/Models/Feature.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/Feature.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Text
     path: ../AetherUtils.Core/Licensing/Models/Feature.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/Feature.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Licensing/Models/Feature.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/Feature.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Licensing/Models/Feature.cs

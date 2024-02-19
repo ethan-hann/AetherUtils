@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Attributes/ConfigAttribute.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ConfigAttribute
     path: ../AetherUtils.Core/Attributes/ConfigAttribute.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Attributes/ConfigAttribute.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Attributes/ConfigAttribute.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Attributes/ConfigAttribute.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Name
     path: ../AetherUtils.Core/Attributes/ConfigAttribute.cs

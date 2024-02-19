@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Exceptions/QRException.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: QrException
     path: ../AetherUtils.Core/Exceptions/QRException.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Exceptions/QRException.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Exceptions/QRException.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Exceptions/QRException.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Exceptions/QRException.cs

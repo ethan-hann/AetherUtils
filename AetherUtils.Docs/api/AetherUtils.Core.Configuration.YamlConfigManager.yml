@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/YamlConfigManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: YamlConfigManager
     path: ../AetherUtils.Core/Configuration/YamlConfigManager.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/YamlConfigManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Configuration/YamlConfigManager.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/YamlConfigManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: CreateDefaultConfig
     path: ../AetherUtils.Core/Configuration/YamlConfigManager.cs

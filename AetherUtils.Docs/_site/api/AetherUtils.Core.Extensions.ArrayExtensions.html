@@ -93,7 +93,7 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/ethan-hann/AetherUtils/new/master/apiSpec/new?filename=AetherUtils_Core_Extensions_ArrayExtensions.md&amp;value=---%0Auid%3A%20AetherUtils.Core.Extensions.ArrayExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                               <a href="https://github.com/ethan-hann/AetherUtils/new/release/apiSpec/new?filename=AetherUtils_Core_Extensions_ArrayExtensions.md&amp;value=---%0Auid%3A%20AetherUtils.Core.Extensions.ArrayExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="AetherUtils.Core.Extensions.ArrayExtensions">
@@ -101,7 +101,7 @@
 
 
   <h1 id="AetherUtils_Core_Extensions_ArrayExtensions" data-uid="AetherUtils.Core.Extensions.ArrayExtensions" class="text-break">
-Class ArrayExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/ArrayExtensions.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class ArrayExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Extensions/ArrayExtensions.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -164,11 +164,48 @@ Class ArrayExtensions  <a class="header-action link-secondary" title="View sourc
 </h2>
 
 
+  <a id="AetherUtils_Core_Extensions_ArrayExtensions_FromPrintableString_" data-uid="AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString*"></a>
+
+  <h3 id="AetherUtils_Core_Extensions_ArrayExtensions_FromPrintableString_System_String_" data-uid="AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString(System.String)">
+  FromPrintableString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Extensions/ArrayExtensions.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Convert a hexadecimal string representation of bytes into its equivalent <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;byte&gt; FromPrintableString(this string byteString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>byteString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd>The string containing the hexadecimal values.
+    This string can contain values seperated by '-' (<code>CE-B7-8D</code>) or not (<code>CEB78D</code>).</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array representing the hexadecimal string.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="AetherUtils_Core_Extensions_ArrayExtensions_ToImage_" data-uid="AetherUtils.Core.Extensions.ArrayExtensions.ToImage*"></a>
 
   <h3 id="AetherUtils_Core_Extensions_ArrayExtensions_ToImage_System_Byte___" data-uid="AetherUtils.Core.Extensions.ArrayExtensions.ToImage(System.Byte[])">
   ToImage(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/ArrayExtensions.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Extensions/ArrayExtensions.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary">Get an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> represented by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> array.</div>
@@ -211,7 +248,7 @@ Class ArrayExtensions  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="AetherUtils_Core_Extensions_ArrayExtensions_ToPrintableString_System_Collections_Generic_IEnumerable_System_Byte__" data-uid="AetherUtils.Core.Extensions.ArrayExtensions.ToPrintableString(System.Collections.Generic.IEnumerable{System.Byte})">
   ToPrintableString(IEnumerable&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/ArrayExtensions.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Extensions/ArrayExtensions.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary">Convert the numeric value of each element of a specified array of bytes to
@@ -254,7 +291,7 @@ its equivalent hexadecimal string representation.</div>
 
   <h3 id="AetherUtils_Core_Extensions_ArrayExtensions_ToStringList__1___0___System_Char_System_String_System_String_" data-uid="AetherUtils.Core.Extensions.ArrayExtensions.ToStringList``1(``0[],System.Char,System.String,System.String)">
   ToStringList&lt;T&gt;(T[], char, string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Extensions/ArrayExtensions.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Extensions/ArrayExtensions.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary">Convert an array of values to a string using the specified prefix, delimiter, and optional suffix.</div>

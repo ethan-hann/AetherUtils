@@ -19,11 +19,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconListManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: IconListManager
     path: ../AetherUtils.Core/WinForms/IconListManager.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -60,11 +60,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconListManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/WinForms/IconListManager.cs
-    startLine: 20
+    startLine: 24
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -101,11 +101,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconListManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/WinForms/IconListManager.cs
-    startLine: 34
+    startLine: 38
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -142,11 +142,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconListManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: AddFileIcon
     path: ../AetherUtils.Core/WinForms/IconListManager.cs
-    startLine: 59
+    startLine: 63
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms
@@ -180,11 +180,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/WinForms/IconListManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ClearLists
     path: ../AetherUtils.Core/WinForms/IconListManager.cs
-    startLine: 96
+    startLine: 100
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.WinForms

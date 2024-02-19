@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/IConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: IConfig
     path: ../AetherUtils.Core/Configuration/IConfig.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/IConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ConfigFilePath
     path: ../AetherUtils.Core/Configuration/IConfig.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/IConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: IsInitialized
     path: ../AetherUtils.Core/Configuration/IConfig.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/IConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ConfigExists
     path: ../AetherUtils.Core/Configuration/IConfig.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/IConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: LoadAsync
     path: ../AetherUtils.Core/Configuration/IConfig.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/IConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Load
     path: ../AetherUtils.Core/Configuration/IConfig.cs
@@ -214,7 +214,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/IConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SaveAsync
     path: ../AetherUtils.Core/Configuration/IConfig.cs
@@ -245,7 +245,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/IConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Save
     path: ../AetherUtils.Core/Configuration/IConfig.cs
@@ -276,7 +276,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/IConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Get
     path: ../AetherUtils.Core/Configuration/IConfig.cs
@@ -311,7 +311,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/IConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Set
     path: ../AetherUtils.Core/Configuration/IConfig.cs

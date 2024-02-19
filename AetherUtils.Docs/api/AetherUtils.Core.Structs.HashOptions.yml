@@ -33,11 +33,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: HashOptions
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -74,11 +74,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SaltLength
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -105,11 +105,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: KeySize
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -136,18 +136,20 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Iterations
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 29
+    startLine: 31
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
   summary: >-
     The number of iterations to perform when hashing.
 
-    <p>A random value between the minimum and maximum iterations is retrieved every time this property is called.</p>
+    <p>A cryptographically strong random value between the minimum and maximum iterations is
+
+    retrieved every time this property is retrieved.</p>
   example: []
   syntax:
     content: public int Iterations { get; }
@@ -170,11 +172,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: HashAlgorithm
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 34
+    startLine: 36
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -201,11 +203,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Encoding
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 39
+    startLine: 41
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -232,11 +234,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 41
+    startLine: 43
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -264,11 +266,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 43
+    startLine: 45
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -298,11 +300,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 45
+    startLine: 47
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -336,11 +338,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 49
+    startLine: 51
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -372,11 +374,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 53
+    startLine: 55
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -408,11 +410,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 57
+    startLine: 59
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -442,11 +444,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 61
+    startLine: 63
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -478,11 +480,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 65
+    startLine: 67
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -516,11 +518,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 69
+    startLine: 71
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -552,11 +554,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 73
+    startLine: 75
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -588,11 +590,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 77
+    startLine: 79
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -626,11 +628,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 81
+    startLine: 83
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs
@@ -666,11 +668,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/HashOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/HashOptions.cs
-    startLine: 85
+    startLine: 87
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Structs

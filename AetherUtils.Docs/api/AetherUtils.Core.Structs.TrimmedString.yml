@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/TrimmedString.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: TrimmedString
     path: ../AetherUtils.Core/Structs/TrimmedString.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/TrimmedString.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: String
     path: ../AetherUtils.Core/Structs/TrimmedString.cs
@@ -86,7 +86,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/TrimmedString.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Lines
     path: ../AetherUtils.Core/Structs/TrimmedString.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/TrimmedString.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/TrimmedString.cs

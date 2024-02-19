@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/TypeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: TypeExtensions
     path: ../AetherUtils.Core/Extensions/TypeExtensions.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/TypeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetFriendlyName
     path: ../AetherUtils.Core/Extensions/TypeExtensions.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/TypeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SerializeXml
     path: ../AetherUtils.Core/Extensions/TypeExtensions.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/TypeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SerializeJson
     path: ../AetherUtils.Core/Extensions/TypeExtensions.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/TypeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: CanSerializeXml
     path: ../AetherUtils.Core/Extensions/TypeExtensions.cs
@@ -236,7 +236,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/TypeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: CanSerializeJson
     path: ../AetherUtils.Core/Extensions/TypeExtensions.cs

@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Hashing/HashService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: HashService
     path: ../AetherUtils.Core/Security/Hashing/HashService.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Hashing/HashService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: HashedString
     path: ../AetherUtils.Core/Security/Hashing/HashService.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Hashing/HashService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Security/Hashing/HashService.cs
@@ -130,11 +130,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Hashing/HashService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: HashString
     path: ../AetherUtils.Core/Security/Hashing/HashService.cs
-    startLine: 35
+    startLine: 37
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Hashing
@@ -155,6 +155,11 @@ items:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
     description: If <code class="paramref">value</code> was <code>null</code>.
+  - type: System.Security.Cryptography.CryptographicException
+    commentId: T:System.Security.Cryptography.CryptographicException
+    description: >-
+      If <xref href="AetherUtils.Core.Structs.HashOptions.HashAlgorithm" data-throw-if-not-resolved="false"></xref> is an unsupported hash
+          algorithm. Supported algorithms are SHA1, SHA256, SHA384, and SHA512
   nameWithType.vb: HashService.HashString(String)
   fullName.vb: AetherUtils.Core.Security.Hashing.HashService.HashString(String)
   name.vb: HashString(String)
@@ -172,11 +177,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Hashing/HashService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: CompareHash
     path: ../AetherUtils.Core/Security/Hashing/HashService.cs
-    startLine: 87
+    startLine: 89
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Hashing
@@ -214,11 +219,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Hashing/HashService.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: CompareHash
     path: ../AetherUtils.Core/Security/Hashing/HashService.cs
-    startLine: 96
+    startLine: 98
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Security.Hashing
@@ -891,6 +896,12 @@ references:
   nameWithType.vb: HashService.New
   fullName.vb: AetherUtils.Core.Security.Hashing.HashService.New
   name.vb: New
+- uid: AetherUtils.Core.Structs.HashOptions.HashAlgorithm
+  commentId: P:AetherUtils.Core.Structs.HashOptions.HashAlgorithm
+  href: AetherUtils.Core.Structs.HashOptions.html#AetherUtils_Core_Structs_HashOptions_HashAlgorithm
+  name: HashAlgorithm
+  nameWithType: HashOptions.HashAlgorithm
+  fullName: AetherUtils.Core.Structs.HashOptions.HashAlgorithm
 - uid: System.ArgumentNullException
   commentId: T:System.ArgumentNullException
   isExternal: true
@@ -898,6 +909,13 @@ references:
   name: ArgumentNullException
   nameWithType: ArgumentNullException
   fullName: System.ArgumentNullException
+- uid: System.Security.Cryptography.CryptographicException
+  commentId: T:System.Security.Cryptography.CryptographicException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.security.cryptography.cryptographicexception
+  name: CryptographicException
+  nameWithType: CryptographicException
+  fullName: System.Security.Cryptography.CryptographicException
 - uid: AetherUtils.Core.Security.Hashing.HashService.HashString*
   commentId: Overload:AetherUtils.Core.Security.Hashing.HashService.HashString
   href: AetherUtils.Core.Security.Hashing.HashService.html#AetherUtils_Core_Security_Hashing_HashService_HashString_System_String_

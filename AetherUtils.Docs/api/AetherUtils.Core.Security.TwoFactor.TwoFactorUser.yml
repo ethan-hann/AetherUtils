@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: TwoFactorUser
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Issuer
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: AccountTitle
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SetupInformation
     path: ../AetherUtils.Core/Security/TwoFactor/TwoFactorUser.cs

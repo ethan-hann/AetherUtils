@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/License.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: License
     path: ../AetherUtils.Core/Licensing/Models/License.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/License.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Id
     path: ../AetherUtils.Core/Licensing/Models/License.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/License.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Type
     path: ../AetherUtils.Core/Licensing/Models/License.cs
@@ -198,7 +198,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/License.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Expiration
     path: ../AetherUtils.Core/Licensing/Models/License.cs
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/License.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Quantity
     path: ../AetherUtils.Core/Licensing/Models/License.cs
@@ -287,7 +287,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/License.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ProductFeatures
     path: ../AetherUtils.Core/Licensing/Models/License.cs
@@ -330,7 +330,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/License.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Customer
     path: ../AetherUtils.Core/Licensing/Models/License.cs
@@ -373,7 +373,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/License.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Signature
     path: ../AetherUtils.Core/Licensing/Models/License.cs
@@ -416,7 +416,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Models/License.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ToString
     path: ../AetherUtils.Core/Licensing/Models/License.cs

@@ -93,7 +93,7 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/ethan-hann/AetherUtils/new/master/apiSpec/new?filename=AetherUtils_Core_Files_Json_1.md&amp;value=---%0Auid%3A%20AetherUtils.Core.Files.Json%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                               <a href="https://github.com/ethan-hann/AetherUtils/new/release/apiSpec/new?filename=AetherUtils_Core_Files_Json_1.md&amp;value=---%0Auid%3A%20AetherUtils.Core.Files.Json%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="AetherUtils.Core.Files.Json`1">
@@ -101,7 +101,7 @@
 
 
   <h1 id="AetherUtils_Core_Files_Json_1" data-uid="AetherUtils.Core.Files.Json`1" class="text-break">
-Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Files/Json.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Files/Json.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -188,10 +188,10 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
 
   <h3 id="AetherUtils_Core_Files_Json_1__ctor" data-uid="AetherUtils.Core.Files.Json`1.#ctor">
   Json()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Files/Json.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Files/Json.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">Create a new Json serializer with the default settings.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -210,6 +210,73 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
 
 
 
+  <a id="AetherUtils_Core_Files_Json_1__ctor_" data-uid="AetherUtils.Core.Files.Json`1.#ctor*"></a>
+
+  <h3 id="AetherUtils_Core_Files_Json_1__ctor_Newtonsoft_Json_Formatting_" data-uid="AetherUtils.Core.Files.Json`1.#ctor(Newtonsoft.Json.Formatting)">
+  Json(Formatting)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Files/Json.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Create a new Json serializer with the specified <span class="xref">Newtonsoft.Json.Formatting</span>.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Json(Formatting formatting)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>formatting</code> <span class="xref">Formatting</span></dt>
+    <dd>The formatting to use for the serializer.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AetherUtils_Core_Files_Json_1__ctor_" data-uid="AetherUtils.Core.Files.Json`1.#ctor*"></a>
+
+  <h3 id="AetherUtils_Core_Files_Json_1__ctor_Newtonsoft_Json_JsonSerializerSettings_" data-uid="AetherUtils.Core.Files.Json`1.#ctor(Newtonsoft.Json.JsonSerializerSettings)">
+  Json(JsonSerializerSettings)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Files/Json.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary">Create a new Json serializer with the specified <span class="xref">Newtonsoft.Json.JsonSerializerSettings</span>.</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Json(JsonSerializerSettings settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <span class="xref">JsonSerializerSettings</span></dt>
+    <dd>The settings to use for the serializer.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd>If <code class="paramref">settings</code> is <code>null</code>.</dd>
+  </dl>
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -218,10 +285,10 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
 
   <h3 id="AetherUtils_Core_Files_Json_1_FromJson_System_String_" data-uid="AetherUtils.Core.Files.Json`1.FromJson(System.String)">
   FromJson(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Files/Json.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Files/Json.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">Deserialize a Json string into a .NET object.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -231,13 +298,13 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>json</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>The Json string representing the .NET object.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>The .NET object of type <code class="typeparamref">T</code>.</dd>
   </dl>
 
 
@@ -247,6 +314,11 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd>If <code class="paramref">json</code> was <code>null</code> or empty.</dd>
+  </dl>
 
 
 
@@ -254,7 +326,7 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
 
   <h3 id="AetherUtils_Core_Files_Json_1_LoadJson_System_String_" data-uid="AetherUtils.Core.Files.Json`1.LoadJson(System.String)">
   LoadJson(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Files/Json.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Files/Json.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary">Deserialize and load a .NET object from a JSON file.</div>
@@ -297,7 +369,7 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
 
   <h3 id="AetherUtils_Core_Files_Json_1_SaveJson_System_String__0_" data-uid="AetherUtils.Core.Files.Json`1.SaveJson(System.String,`0)">
   SaveJson(string, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Files/Json.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Files/Json.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary">Serialize a .NET object, <code class="typeparamref">T</code>, to a JSON string and save to a file.
@@ -341,10 +413,10 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
 
   <h3 id="AetherUtils_Core_Files_Json_1_ToJson__0_" data-uid="AetherUtils.Core.Files.Json`1.ToJson(`0)">
   ToJson(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/master/AetherUtils.Core/Files/Json.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ethan-hann/AetherUtils/blob/release/AetherUtils.Core/Files/Json.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary">Serialize a .NET object, <code class="typeparamref">T</code>, to a JSON string.</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -354,13 +426,13 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>obj</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd>The .NET object to serialize.</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd>A Json string representing the .NET object.</dd>
   </dl>
 
 
@@ -370,6 +442,11 @@ Class Json&lt;T&gt;  <a class="header-action link-secondary" title="View source"
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd>If <code class="paramref">obj</code> was <code>null</code>.</dd>
+  </dl>
 
 
 

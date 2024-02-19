@@ -6,6 +6,8 @@ items:
   parent: AetherUtils.Core.Files
   children:
   - AetherUtils.Core.Files.Json`1.#ctor
+  - AetherUtils.Core.Files.Json`1.#ctor(Newtonsoft.Json.Formatting)
+  - AetherUtils.Core.Files.Json`1.#ctor(Newtonsoft.Json.JsonSerializerSettings)
   - AetherUtils.Core.Files.Json`1.FromJson(System.String)
   - AetherUtils.Core.Files.Json`1.LoadJson(System.String)
   - AetherUtils.Core.Files.Json`1.SaveJson(System.String,`0)
@@ -20,7 +22,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/Json.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Json
     path: ../AetherUtils.Core/Files/Json.cs
@@ -68,14 +70,16 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/Json.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Files/Json.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Files
+  summary: Create a new Json serializer with the default settings.
+  example: []
   syntax:
     content: public Json()
     content.vb: Public Sub New()
@@ -83,6 +87,125 @@ items:
   nameWithType.vb: Json(Of T).New()
   fullName.vb: AetherUtils.Core.Files.Json(Of T).New()
   name.vb: New()
+- uid: AetherUtils.Core.Files.Json`1.#ctor(Newtonsoft.Json.Formatting)
+  commentId: M:AetherUtils.Core.Files.Json`1.#ctor(Newtonsoft.Json.Formatting)
+  id: '#ctor(Newtonsoft.Json.Formatting)'
+  parent: AetherUtils.Core.Files.Json`1
+  langs:
+  - csharp
+  - vb
+  name: Json(Formatting)
+  nameWithType: Json<T>.Json(Formatting)
+  fullName: AetherUtils.Core.Files.Json<T>.Json(Newtonsoft.Json.Formatting)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Files/Json.cs
+      branch: release
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Files/Json.cs
+    startLine: 26
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Files
+  summary: Create a new Json serializer with the specified <xref href="Newtonsoft.Json.Formatting" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Json(Formatting formatting)
+    parameters:
+    - id: formatting
+      type: Newtonsoft.Json.Formatting
+      description: The formatting to use for the serializer.
+    content.vb: Public Sub New(formatting As Formatting)
+  overload: AetherUtils.Core.Files.Json`1.#ctor*
+  nameWithType.vb: Json(Of T).New(Formatting)
+  fullName.vb: AetherUtils.Core.Files.Json(Of T).New(Newtonsoft.Json.Formatting)
+  name.vb: New(Formatting)
+- uid: AetherUtils.Core.Files.Json`1.#ctor(Newtonsoft.Json.JsonSerializerSettings)
+  commentId: M:AetherUtils.Core.Files.Json`1.#ctor(Newtonsoft.Json.JsonSerializerSettings)
+  id: '#ctor(Newtonsoft.Json.JsonSerializerSettings)'
+  parent: AetherUtils.Core.Files.Json`1
+  langs:
+  - csharp
+  - vb
+  name: Json(JsonSerializerSettings)
+  nameWithType: Json<T>.Json(JsonSerializerSettings)
+  fullName: AetherUtils.Core.Files.Json<T>.Json(Newtonsoft.Json.JsonSerializerSettings)
+  type: Constructor
+  source:
+    remote:
+      path: AetherUtils.Core/Files/Json.cs
+      branch: release
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: .ctor
+    path: ../AetherUtils.Core/Files/Json.cs
+    startLine: 43
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Files
+  summary: Create a new Json serializer with the specified <xref href="Newtonsoft.Json.JsonSerializerSettings" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Json(JsonSerializerSettings settings)
+    parameters:
+    - id: settings
+      type: Newtonsoft.Json.JsonSerializerSettings
+      description: The settings to use for the serializer.
+    content.vb: Public Sub New(settings As JsonSerializerSettings)
+  overload: AetherUtils.Core.Files.Json`1.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If <code class="paramref">settings</code> is <code>null</code>.
+  nameWithType.vb: Json(Of T).New(JsonSerializerSettings)
+  fullName.vb: AetherUtils.Core.Files.Json(Of T).New(Newtonsoft.Json.JsonSerializerSettings)
+  name.vb: New(JsonSerializerSettings)
+- uid: AetherUtils.Core.Files.Json`1.LoadJson(System.String)
+  commentId: M:AetherUtils.Core.Files.Json`1.LoadJson(System.String)
+  id: LoadJson(System.String)
+  parent: AetherUtils.Core.Files.Json`1
+  langs:
+  - csharp
+  - vb
+  name: LoadJson(string)
+  nameWithType: Json<T>.LoadJson(string)
+  fullName: AetherUtils.Core.Files.Json<T>.LoadJson(string)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Files/Json.cs
+      branch: release
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: LoadJson
+    path: ../AetherUtils.Core/Files/Json.cs
+    startLine: 59
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Files
+  summary: Deserialize and load a .NET object from a JSON file.
+  example: []
+  syntax:
+    content: public T? LoadJson(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: The file to load.
+    return:
+      type: '{T}'
+      description: The <code class="typeparamref">T</code> object, or <code>null</code> if the object could not be deserialized.
+    content.vb: Public Function LoadJson(filePath As String) As T
+  overload: AetherUtils.Core.Files.Json`1.LoadJson*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If <code class="paramref">filePath</code> was <code>null</code> or empty.
+  - type: System.IO.FileNotFoundException
+    commentId: T:System.IO.FileNotFoundException
+    description: If the <code class="paramref">filePath</code> did not exist.
+  nameWithType.vb: Json(Of T).LoadJson(String)
+  fullName.vb: AetherUtils.Core.Files.Json(Of T).LoadJson(String)
+  name.vb: LoadJson(String)
 - uid: AetherUtils.Core.Files.Json`1.SaveJson(System.String,`0)
   commentId: M:AetherUtils.Core.Files.Json`1.SaveJson(System.String,`0)
   id: SaveJson(System.String,`0)
@@ -97,11 +220,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/Json.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SaveJson
     path: ../AetherUtils.Core/Files/Json.cs
-    startLine: 37
+    startLine: 80
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Files
@@ -145,23 +268,31 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/Json.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ToJson
     path: ../AetherUtils.Core/Files/Json.cs
-    startLine: 49
+    startLine: 98
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Files
+  summary: Serialize a .NET object, <code class="typeparamref">T</code>, to a JSON string.
+  example: []
   syntax:
     content: public string ToJson(T obj)
     parameters:
     - id: obj
       type: '{T}'
+      description: The .NET object to serialize.
     return:
       type: System.String
+      description: A Json string representing the .NET object.
     content.vb: Public Function ToJson(obj As T) As String
   overload: AetherUtils.Core.Files.Json`1.ToJson*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If <code class="paramref">obj</code> was <code>null</code>.
   nameWithType.vb: Json(Of T).ToJson(T)
   fullName.vb: AetherUtils.Core.Files.Json(Of T).ToJson(T)
 - uid: AetherUtils.Core.Files.Json`1.FromJson(System.String)
@@ -178,71 +309,34 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/Json.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: FromJson
     path: ../AetherUtils.Core/Files/Json.cs
-    startLine: 61
+    startLine: 117
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Files
+  summary: Deserialize a Json string into a .NET object.
+  example: []
   syntax:
     content: public T? FromJson(string json)
     parameters:
     - id: json
       type: System.String
+      description: The Json string representing the .NET object.
     return:
       type: '{T}'
+      description: The .NET object of type <code class="typeparamref">T</code>.
     content.vb: Public Function FromJson(json As String) As T
   overload: AetherUtils.Core.Files.Json`1.FromJson*
-  nameWithType.vb: Json(Of T).FromJson(String)
-  fullName.vb: AetherUtils.Core.Files.Json(Of T).FromJson(String)
-  name.vb: FromJson(String)
-- uid: AetherUtils.Core.Files.Json`1.LoadJson(System.String)
-  commentId: M:AetherUtils.Core.Files.Json`1.LoadJson(System.String)
-  id: LoadJson(System.String)
-  parent: AetherUtils.Core.Files.Json`1
-  langs:
-  - csharp
-  - vb
-  name: LoadJson(string)
-  nameWithType: Json<T>.LoadJson(string)
-  fullName: AetherUtils.Core.Files.Json<T>.LoadJson(string)
-  type: Method
-  source:
-    remote:
-      path: AetherUtils.Core/Files/Json.cs
-      branch: master
-      repo: https://github.com/ethan-hann/AetherUtils.git
-    id: LoadJson
-    path: ../AetherUtils.Core/Files/Json.cs
-    startLine: 78
-  assemblies:
-  - AetherUtils.Core
-  namespace: AetherUtils.Core.Files
-  summary: Deserialize and load a .NET object from a JSON file.
-  example: []
-  syntax:
-    content: public T? LoadJson(string filePath)
-    parameters:
-    - id: filePath
-      type: System.String
-      description: The file to load.
-    return:
-      type: '{T}'
-      description: The <code class="typeparamref">T</code> object, or <code>null</code> if the object could not be deserialized.
-    content.vb: Public Function LoadJson(filePath As String) As T
-  overload: AetherUtils.Core.Files.Json`1.LoadJson*
   exceptions:
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
-    description: If <code class="paramref">filePath</code> was <code>null</code> or empty.
-  - type: System.IO.FileNotFoundException
-    commentId: T:System.IO.FileNotFoundException
-    description: If the <code class="paramref">filePath</code> did not exist.
-  nameWithType.vb: Json(Of T).LoadJson(String)
-  fullName.vb: AetherUtils.Core.Files.Json(Of T).LoadJson(String)
-  name.vb: LoadJson(String)
+    description: If <code class="paramref">json</code> was <code>null</code> or empty.
+  nameWithType.vb: Json(Of T).FromJson(String)
+  fullName.vb: AetherUtils.Core.Files.Json(Of T).FromJson(String)
+  name.vb: FromJson(String)
 references:
 - uid: AetherUtils.Core.Files
   commentId: N:AetherUtils.Core.Files
@@ -885,6 +979,49 @@ references:
   nameWithType.vb: Json(Of T).New
   fullName.vb: AetherUtils.Core.Files.Json(Of T).New
   name.vb: New
+- uid: Newtonsoft.Json.Formatting
+  commentId: T:Newtonsoft.Json.Formatting
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: Formatting
+  nameWithType: Formatting
+  fullName: Newtonsoft.Json.Formatting
+- uid: Newtonsoft.Json
+  commentId: N:Newtonsoft.Json
+  isExternal: true
+  name: Newtonsoft.Json
+  nameWithType: Newtonsoft.Json
+  fullName: Newtonsoft.Json
+  spec.csharp:
+  - uid: Newtonsoft
+    name: Newtonsoft
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json
+    name: Json
+    isExternal: true
+  spec.vb:
+  - uid: Newtonsoft
+    name: Newtonsoft
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json
+    name: Json
+    isExternal: true
+- uid: Newtonsoft.Json.JsonSerializerSettings
+  commentId: T:Newtonsoft.Json.JsonSerializerSettings
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonSerializerSettings
+  nameWithType: JsonSerializerSettings
+  fullName: Newtonsoft.Json.JsonSerializerSettings
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
 - uid: System.ArgumentException
   commentId: T:System.ArgumentException
   isExternal: true
@@ -892,14 +1029,21 @@ references:
   name: ArgumentException
   nameWithType: ArgumentException
   fullName: System.ArgumentException
-- uid: AetherUtils.Core.Files.Json`1.SaveJson*
-  commentId: Overload:AetherUtils.Core.Files.Json`1.SaveJson
-  href: AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1_SaveJson_System_String__0_
-  name: SaveJson
-  nameWithType: Json<T>.SaveJson
-  fullName: AetherUtils.Core.Files.Json<T>.SaveJson
-  nameWithType.vb: Json(Of T).SaveJson
-  fullName.vb: AetherUtils.Core.Files.Json(Of T).SaveJson
+- uid: System.IO.FileNotFoundException
+  commentId: T:System.IO.FileNotFoundException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception
+  name: FileNotFoundException
+  nameWithType: FileNotFoundException
+  fullName: System.IO.FileNotFoundException
+- uid: AetherUtils.Core.Files.Json`1.LoadJson*
+  commentId: Overload:AetherUtils.Core.Files.Json`1.LoadJson
+  href: AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1_LoadJson_System_String_
+  name: LoadJson
+  nameWithType: Json<T>.LoadJson
+  fullName: AetherUtils.Core.Files.Json<T>.LoadJson
+  nameWithType.vb: Json(Of T).LoadJson
+  fullName.vb: AetherUtils.Core.Files.Json(Of T).LoadJson
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -917,6 +1061,18 @@ references:
   name: T
   nameWithType: T
   fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AetherUtils.Core.Files.Json`1.SaveJson*
+  commentId: Overload:AetherUtils.Core.Files.Json`1.SaveJson
+  href: AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1_SaveJson_System_String__0_
+  name: SaveJson
+  nameWithType: Json<T>.SaveJson
+  fullName: AetherUtils.Core.Files.Json<T>.SaveJson
+  nameWithType.vb: Json(Of T).SaveJson
+  fullName.vb: AetherUtils.Core.Files.Json(Of T).SaveJson
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -928,10 +1084,6 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: T
-  name: T
-  nameWithType: T
-  fullName: T
 - uid: AetherUtils.Core.Files.Json`1.ToJson*
   commentId: Overload:AetherUtils.Core.Files.Json`1.ToJson
   href: AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1_ToJson__0_
@@ -948,19 +1100,4 @@ references:
   fullName: AetherUtils.Core.Files.Json<T>.FromJson
   nameWithType.vb: Json(Of T).FromJson
   fullName.vb: AetherUtils.Core.Files.Json(Of T).FromJson
-- uid: System.IO.FileNotFoundException
-  commentId: T:System.IO.FileNotFoundException
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception
-  name: FileNotFoundException
-  nameWithType: FileNotFoundException
-  fullName: System.IO.FileNotFoundException
-- uid: AetherUtils.Core.Files.Json`1.LoadJson*
-  commentId: Overload:AetherUtils.Core.Files.Json`1.LoadJson
-  href: AetherUtils.Core.Files.Json-1.html#AetherUtils_Core_Files_Json_1_LoadJson_System_String_
-  name: LoadJson
-  nameWithType: Json<T>.LoadJson
-  fullName: AetherUtils.Core.Files.Json<T>.LoadJson
-  nameWithType.vb: Json(Of T).LoadJson
-  fullName.vb: AetherUtils.Core.Files.Json(Of T).LoadJson
 shouldSkipMarkup: true

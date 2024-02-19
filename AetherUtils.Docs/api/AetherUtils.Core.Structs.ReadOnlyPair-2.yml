@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/ReadOnlyPair.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ReadOnlyPair
     path: ../AetherUtils.Core/Structs/ReadOnlyPair.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/ReadOnlyPair.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Structs/ReadOnlyPair.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/ReadOnlyPair.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Key
     path: ../AetherUtils.Core/Structs/ReadOnlyPair.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Structs/ReadOnlyPair.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Value
     path: ../AetherUtils.Core/Structs/ReadOnlyPair.cs

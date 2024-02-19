@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/KeyManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: KeyManager
     path: ../AetherUtils.Core/Licensing/KeyManager.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/KeyManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SaveKeys
     path: ../AetherUtils.Core/Licensing/KeyManager.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/KeyManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SavePublicKey
     path: ../AetherUtils.Core/Licensing/KeyManager.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/KeyManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SavePublicKey
     path: ../AetherUtils.Core/Licensing/KeyManager.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/KeyManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: LoadKeys
     path: ../AetherUtils.Core/Licensing/KeyManager.cs
@@ -222,7 +222,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/KeyManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: LoadKeys
     path: ../AetherUtils.Core/Licensing/KeyManager.cs
@@ -260,7 +260,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/KeyManager.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DoesKeyFileExist
     path: ../AetherUtils.Core/Licensing/KeyManager.cs

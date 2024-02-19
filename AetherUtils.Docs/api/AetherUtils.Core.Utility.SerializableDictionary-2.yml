@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Utility/SerializableDictionary.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SerializableDictionary
     path: ../AetherUtils.Core/Utility/SerializableDictionary.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Utility
@@ -112,11 +112,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Utility/SerializableDictionary.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetSchema
     path: ../AetherUtils.Core/Utility/SerializableDictionary.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Utility
@@ -145,11 +145,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Utility/SerializableDictionary.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ReadXml
     path: ../AetherUtils.Core/Utility/SerializableDictionary.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Utility
@@ -181,11 +181,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Utility/SerializableDictionary.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: WriteXml
     path: ../AetherUtils.Core/Utility/SerializableDictionary.cs
-    startLine: 57
+    startLine: 58
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Utility

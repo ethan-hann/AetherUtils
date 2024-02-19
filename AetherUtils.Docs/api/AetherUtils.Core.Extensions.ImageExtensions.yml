@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/ImageExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ImageExtensions
     path: ../AetherUtils.Core/Extensions/ImageExtensions.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/ImageExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ResizeImage
     path: ../AetherUtils.Core/Extensions/ImageExtensions.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/ImageExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ResizeImageScaled
     path: ../AetherUtils.Core/Extensions/ImageExtensions.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/ImageExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ToByteArray
     path: ../AetherUtils.Core/Extensions/ImageExtensions.cs
@@ -205,7 +205,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/ImageExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: IsValidImage
     path: ../AetherUtils.Core/Extensions/ImageExtensions.cs

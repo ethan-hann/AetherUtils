@@ -22,6 +22,8 @@ items:
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.RegEx
+  summary: Represents various regular expression generators.
+  example: []
   syntax:
     content: public static class RegexGenerator
     content.vb: Public Module RegexGenerator
@@ -49,11 +51,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/RegEx/RegexGenerator.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: PathRegex
     path: ../AetherUtils.Core/RegEx/RegexGenerator.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.RegEx
@@ -124,11 +126,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/RegEx/RegexGenerator.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Base64Regex
     path: ../AetherUtils.Core/RegEx/RegexGenerator.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.RegEx
@@ -195,11 +197,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/RegEx/RegexGenerator.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: HexRegex
     path: ../AetherUtils.Core/RegEx/RegexGenerator.cs
-    startLine: 24
+    startLine: 27
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.RegEx

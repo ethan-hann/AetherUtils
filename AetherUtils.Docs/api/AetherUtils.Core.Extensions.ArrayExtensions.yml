@@ -5,6 +5,7 @@ items:
   id: ArrayExtensions
   parent: AetherUtils.Core.Extensions
   children:
+  - AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString(System.String)
   - AetherUtils.Core.Extensions.ArrayExtensions.ToImage(System.Byte[])
   - AetherUtils.Core.Extensions.ArrayExtensions.ToPrintableString(System.Collections.Generic.IEnumerable{System.Byte})
   - AetherUtils.Core.Extensions.ArrayExtensions.ToStringList``1(``0[],System.Char,System.String,System.String)
@@ -18,7 +19,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/ArrayExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ArrayExtensions
     path: ../AetherUtils.Core/Extensions/ArrayExtensions.cs
@@ -56,7 +57,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/ArrayExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ToImage
     path: ../AetherUtils.Core/Extensions/ArrayExtensions.cs
@@ -102,7 +103,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/ArrayExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ToPrintableString
     path: ../AetherUtils.Core/Extensions/ArrayExtensions.cs
@@ -135,6 +136,47 @@ items:
   nameWithType.vb: ArrayExtensions.ToPrintableString(IEnumerable(Of Byte))
   fullName.vb: AetherUtils.Core.Extensions.ArrayExtensions.ToPrintableString(System.Collections.Generic.IEnumerable(Of Byte))
   name.vb: ToPrintableString(IEnumerable(Of Byte))
+- uid: AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString(System.String)
+  commentId: M:AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString(System.String)
+  id: FromPrintableString(System.String)
+  isExtensionMethod: true
+  parent: AetherUtils.Core.Extensions.ArrayExtensions
+  langs:
+  - csharp
+  - vb
+  name: FromPrintableString(string)
+  nameWithType: ArrayExtensions.FromPrintableString(string)
+  fullName: AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString(string)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Extensions/ArrayExtensions.cs
+      branch: release
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: FromPrintableString
+    path: ../AetherUtils.Core/Extensions/ArrayExtensions.cs
+    startLine: 51
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Extensions
+  summary: Convert a hexadecimal string representation of bytes into its equivalent <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array.
+  example: []
+  syntax:
+    content: public static IEnumerable<byte> FromPrintableString(this string byteString)
+    parameters:
+    - id: byteString
+      type: System.String
+      description: >-
+        The string containing the hexadecimal values.
+            This string can contain values seperated by '-' (<code>CE-B7-8D</code>) or not (<code>CEB78D</code>).
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Byte}
+      description: A <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array representing the hexadecimal string.
+    content.vb: Public Shared Function FromPrintableString(byteString As String) As IEnumerable(Of Byte)
+  overload: AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString*
+  nameWithType.vb: ArrayExtensions.FromPrintableString(String)
+  fullName.vb: AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString(String)
+  name.vb: FromPrintableString(String)
 - uid: AetherUtils.Core.Extensions.ArrayExtensions.ToStringList``1(``0[],System.Char,System.String,System.String)
   commentId: M:AetherUtils.Core.Extensions.ArrayExtensions.ToStringList``1(``0[],System.Char,System.String,System.String)
   id: ToStringList``1(``0[],System.Char,System.String,System.String)
@@ -150,11 +192,11 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/ArrayExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ToStringList
     path: ../AetherUtils.Core/Extensions/ArrayExtensions.cs
-    startLine: 63
+    startLine: 82
   assemblies:
   - AetherUtils.Core
   namespace: AetherUtils.Core.Extensions
@@ -685,6 +727,12 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString*
+  commentId: Overload:AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString
+  href: AetherUtils.Core.Extensions.ArrayExtensions.html#AetherUtils_Core_Extensions_ArrayExtensions_FromPrintableString_System_String_
+  name: FromPrintableString
+  nameWithType: ArrayExtensions.FromPrintableString
+  fullName: AetherUtils.Core.Extensions.ArrayExtensions.FromPrintableString
 - uid: AetherUtils.Core.Extensions.ArrayExtensions.ToStringList*
   commentId: Overload:AetherUtils.Core.Extensions.ArrayExtensions.ToStringList
   href: AetherUtils.Core.Extensions.ArrayExtensions.html#AetherUtils_Core_Extensions_ArrayExtensions_ToStringList__1___0___System_Char_System_String_System_String_

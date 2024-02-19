@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Logging/CLogger.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: CLogger
     path: ../AetherUtils.Core/Logging/CLogger.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Logging/CLogger.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: IsInitialized
     path: ../AetherUtils.Core/Logging/CLogger.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Logging/CLogger.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Initialize
     path: ../AetherUtils.Core/Logging/CLogger.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Logging/CLogger.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentLogger
     path: ../AetherUtils.Core/Logging/CLogger.cs
@@ -163,7 +163,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Logging/CLogger.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentLogger
     path: ../AetherUtils.Core/Logging/CLogger.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Logging/CLogger.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCurrentLogger
     path: ../AetherUtils.Core/Logging/CLogger.cs

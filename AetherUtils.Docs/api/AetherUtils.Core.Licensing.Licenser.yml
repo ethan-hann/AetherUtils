@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Licenser.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Licenser
     path: ../AetherUtils.Core/Licensing/Licenser.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/Licenser.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Validate
     path: ../AetherUtils.Core/Licensing/Licenser.cs

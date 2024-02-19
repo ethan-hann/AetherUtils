@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/CollectionExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: CollectionExtensions
     path: ../AetherUtils.Core/Extensions/CollectionExtensions.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/CollectionExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: RenameKey
     path: ../AetherUtils.Core/Extensions/CollectionExtensions.cs

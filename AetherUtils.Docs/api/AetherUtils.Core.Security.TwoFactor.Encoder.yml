@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/Encoder.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Encoder
     path: ../AetherUtils.Core/Security/TwoFactor/Encoder.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/Encoder.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: UrlEncode
     path: ../AetherUtils.Core/Security/TwoFactor/Encoder.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/Encoder.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Base32Encode
     path: ../AetherUtils.Core/Security/TwoFactor/Encoder.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/TwoFactor/Encoder.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ToBytes
     path: ../AetherUtils.Core/Security/TwoFactor/Encoder.cs

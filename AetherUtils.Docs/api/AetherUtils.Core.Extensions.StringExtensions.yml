@@ -31,7 +31,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: StringExtensions
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ImageFromString
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ToSecureString
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -158,7 +158,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: FromSecureString
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -198,7 +198,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: Trim
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -251,7 +251,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DeserializeXml
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -297,7 +297,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DeserializeJson
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -343,7 +343,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: IsBase64Encoded
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -386,7 +386,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: IsHexEncoded
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -429,7 +429,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: StringToEncodedString
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -471,7 +471,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: BytesToEncodedString
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -513,7 +513,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: StringToEncodedBytes
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -555,7 +555,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: BytesToEncodedBytes
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -597,7 +597,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DecodedStringFromEncodedString
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -639,7 +639,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DecodedBytesFromEncodedString
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -681,7 +681,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: BytesFromString
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs
@@ -720,7 +720,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StringExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: RemoveWhitespace
     path: ../AetherUtils.Core/Extensions/StringExtensions.cs

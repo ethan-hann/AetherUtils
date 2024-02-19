@@ -852,6 +852,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AetherUtils.Core.WinForms.Controls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AetherUtils.Core.WinForms.Controls.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AetherUtils.Core.WinForms.IconListManager.yml",
       "output": {
         ".html": {

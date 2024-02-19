@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/LogOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: LogOptions
     path: ../AetherUtils.Core/Configuration/LogOptions.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/LogOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: AppName
     path: ../AetherUtils.Core/Configuration/LogOptions.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/LogOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: LogFileDirectory
     path: ../AetherUtils.Core/Configuration/LogOptions.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/LogOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: IncludeDateTime
     path: ../AetherUtils.Core/Configuration/LogOptions.cs
@@ -197,7 +197,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/LogOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: IncludeDateOnly
     path: ../AetherUtils.Core/Configuration/LogOptions.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/LogOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: NewFileEveryLaunch
     path: ../AetherUtils.Core/Configuration/LogOptions.cs
@@ -283,7 +283,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/LogOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: WriteLogToConsole
     path: ../AetherUtils.Core/Configuration/LogOptions.cs
@@ -326,7 +326,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/LogOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: LogLayout
     path: ../AetherUtils.Core/Configuration/LogOptions.cs
@@ -357,7 +357,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/LogOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: LogHeader
     path: ../AetherUtils.Core/Configuration/LogOptions.cs
@@ -400,7 +400,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/LogOptions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: LogFooter
     path: ../AetherUtils.Core/Configuration/LogOptions.cs

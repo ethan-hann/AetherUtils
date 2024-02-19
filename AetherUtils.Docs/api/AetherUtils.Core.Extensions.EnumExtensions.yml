@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/EnumExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: EnumExtensions
     path: ../AetherUtils.Core/Extensions/EnumExtensions.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/EnumExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ToDescriptionString
     path: ../AetherUtils.Core/Extensions/EnumExtensions.cs

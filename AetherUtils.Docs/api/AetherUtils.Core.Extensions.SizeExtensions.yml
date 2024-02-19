@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/SizeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SizeExtensions
     path: ../AetherUtils.Core/Extensions/SizeExtensions.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/SizeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCenterPoint
     path: ../AetherUtils.Core/Extensions/SizeExtensions.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/SizeExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetCenterPointF
     path: ../AetherUtils.Core/Extensions/SizeExtensions.cs

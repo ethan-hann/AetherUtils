@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/KeyPair.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: KeyPair
     path: ../AetherUtils.Core/Licensing/KeyPair.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/KeyPair.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: .ctor
     path: ../AetherUtils.Core/Licensing/KeyPair.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/KeyPair.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: PrivateKey
     path: ../AetherUtils.Core/Licensing/KeyPair.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Licensing/KeyPair.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: PublicKey
     path: ../AetherUtils.Core/Licensing/KeyPair.cs

@@ -193,4 +193,9 @@ items:
     name: Shell32.SHITEMID
   - uid: AetherUtils.Core.WinForms.User32
     name: User32
+- uid: AetherUtils.Core.WinForms.Controls
+  name: AetherUtils.Core.WinForms.Controls
+  items:
+  - uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid
+    name: AuPropertyGrid
 memberLayout: SamePage

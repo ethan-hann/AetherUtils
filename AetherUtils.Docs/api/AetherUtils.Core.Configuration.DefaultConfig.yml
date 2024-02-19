@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/DefaultConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DefaultConfig
     path: ../AetherUtils.Core/Configuration/DefaultConfig.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/DefaultConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ConnectionString
     path: ../AetherUtils.Core/Configuration/DefaultConfig.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/DefaultConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: LicenseFile
     path: ../AetherUtils.Core/Configuration/DefaultConfig.cs
@@ -164,7 +164,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Configuration/DefaultConfig.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: LogOptions
     path: ../AetherUtils.Core/Configuration/DefaultConfig.cs

@@ -34,7 +34,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: FileHelper
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: CreateDirectories
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SaveFile
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: OpenFile
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: OpenFileAsync
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -251,7 +251,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: OpenNonTextFile
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -296,7 +296,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: OpenNonTextFileAsync
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -341,7 +341,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SaveFile
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -392,7 +392,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SaveFile
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -440,7 +440,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SaveFileAsync
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -488,7 +488,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SaveFileAsync
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -539,7 +539,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SaveFileAsync
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -587,7 +587,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ExpandPath
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -629,7 +629,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: IsValidPath
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -670,7 +670,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: RemoveInvalidFileNameChars
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -712,7 +712,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: RemoveInvalidPathChars
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -754,7 +754,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DoesFileExist
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -799,7 +799,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DoesFolderExist
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -844,7 +844,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetExtension
     path: ../AetherUtils.Core/Files/FileHelper.cs
@@ -889,7 +889,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Files/FileHelper.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: DeleteFile
     path: ../AetherUtils.Core/Files/FileHelper.cs

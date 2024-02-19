@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: AetherUtils.Core.WinForms.Controls
+  commentId: N:AetherUtils.Core.WinForms.Controls
+  id: AetherUtils.Core.WinForms.Controls
+  children:
+  - AetherUtils.Core.WinForms.Controls.AuPropertyGrid
+  langs:
+  - csharp
+  - vb
+  name: AetherUtils.Core.WinForms.Controls
+  nameWithType: AetherUtils.Core.WinForms.Controls
+  fullName: AetherUtils.Core.WinForms.Controls
+  type: Namespace
+  assemblies:
+  - AetherUtils.Core
+references:
+- uid: AetherUtils.Core.WinForms.Controls.AuPropertyGrid
+  commentId: T:AetherUtils.Core.WinForms.Controls.AuPropertyGrid
+  href: AetherUtils.Core.WinForms.Controls.AuPropertyGrid.html
+  name: AuPropertyGrid
+  nameWithType: AuPropertyGrid
+  fullName: AetherUtils.Core.WinForms.Controls.AuPropertyGrid
+shouldSkipMarkup: true

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Utility/ProportionalRandomSelector.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ProportionalRandomSelector
     path: ../AetherUtils.Core/Utility/ProportionalRandomSelector.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Utility/ProportionalRandomSelector.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: AddPercentage
     path: ../AetherUtils.Core/Utility/ProportionalRandomSelector.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Utility/ProportionalRandomSelector.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: SelectItem
     path: ../AetherUtils.Core/Utility/ProportionalRandomSelector.cs

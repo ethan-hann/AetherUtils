@@ -5,6 +5,7 @@ items:
   id: EncryptionBase
   parent: AetherUtils.Core.Security.Encryption
   children:
+  - AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
   - AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   langs:
   - csharp
@@ -16,7 +17,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Encryption/EncryptionBase.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: EncryptionBase
     path: ../AetherUtils.Core/Security/Encryption/EncryptionBase.cs
@@ -52,6 +53,44 @@ items:
   - AetherUtils.Core.Security.Encryption.EncryptionBase.AetherUtils.Core.Extensions.TypeExtensions.CanSerializeXml``1
   - AetherUtils.Core.Security.Encryption.EncryptionBase.AetherUtils.Core.Extensions.TypeExtensions.SerializeJson``1
   - AetherUtils.Core.Security.Encryption.EncryptionBase.AetherUtils.Core.Extensions.TypeExtensions.SerializeXml``1
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+  commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(System.Int32)
+  id: GetRandomKey(System.Int32)
+  parent: AetherUtils.Core.Security.Encryption.EncryptionBase
+  langs:
+  - csharp
+  - vb
+  name: GetRandomKey(int)
+  nameWithType: EncryptionBase.GetRandomKey(int)
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(int)
+  type: Method
+  source:
+    remote:
+      path: AetherUtils.Core/Security/Encryption/EncryptionBase.cs
+      branch: release
+      repo: https://github.com/ethan-hann/AetherUtils.git
+    id: GetRandomKey
+    path: ../AetherUtils.Core/Security/Encryption/EncryptionBase.cs
+    startLine: 56
+  assemblies:
+  - AetherUtils.Core
+  namespace: AetherUtils.Core.Security.Encryption
+  summary: Get a cryptographically strong random key that can be used for encryption.
+  example: []
+  syntax:
+    content: public static byte[] GetRandomKey(int keySize = 32)
+    parameters:
+    - id: keySize
+      type: System.Int32
+      description: The size, in bytes, for the generated key.
+    return:
+      type: System.Byte[]
+      description: A cryptographically strong and random <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array.
+    content.vb: Public Shared Function GetRandomKey(keySize As Integer = 32) As Byte()
+  overload: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey*
+  nameWithType.vb: EncryptionBase.GetRandomKey(Integer)
+  fullName.vb: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey(Integer)
+  name.vb: GetRandomKey(Integer)
 - uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   commentId: M:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase(System.Int32)
   id: GetRandomKeyPhrase(System.Int32)
@@ -66,7 +105,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Security/Encryption/EncryptionBase.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: GetRandomKeyPhrase
     path: ../AetherUtils.Core/Security/Encryption/EncryptionBase.cs
@@ -698,6 +737,56 @@ references:
   - uid: AetherUtils.Core.Extensions
     name: Extensions
     href: AetherUtils.Core.Extensions.html
+- uid: System.Byte
+  commentId: T:System.Byte
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey*
+  commentId: Overload:AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey
+  href: AetherUtils.Core.Security.Encryption.EncryptionBase.html#AetherUtils_Core_Security_Encryption_EncryptionBase_GetRandomKey_System_Int32_
+  name: GetRandomKey
+  nameWithType: EncryptionBase.GetRandomKey
+  fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKey
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -715,15 +804,4 @@ references:
   name: GetRandomKeyPhrase
   nameWithType: EncryptionBase.GetRandomKeyPhrase
   fullName: AetherUtils.Core.Security.Encryption.EncryptionBase.GetRandomKeyPhrase
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 shouldSkipMarkup: true

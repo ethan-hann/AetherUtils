@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/ControlExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ControlExtensions
     path: ../AetherUtils.Core/Extensions/ControlExtensions.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/ControlExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: InvokeIfRequired
     path: ../AetherUtils.Core/Extensions/ControlExtensions.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/ControlExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ResizeColumns
     path: ../AetherUtils.Core/Extensions/ControlExtensions.cs
@@ -118,6 +118,7 @@ items:
 references:
 - uid: System.Windows.Forms.Control
   commentId: T:System.Windows.Forms.Control
+  parent: System.Windows.Forms
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.windows.forms.control
   name: Control
@@ -383,6 +384,43 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: System.Windows.Forms
+  commentId: N:System.Windows.Forms
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows.Forms
+  nameWithType: System.Windows.Forms
+  fullName: System.Windows.Forms
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Forms
+    name: Forms
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.forms
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Forms
+    name: Forms
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.forms
 - uid: System
   commentId: N:System
   isExternal: true
@@ -484,41 +522,4 @@ references:
   name: ResizeColumns
   nameWithType: ControlExtensions.ResizeColumns
   fullName: AetherUtils.Core.Extensions.ControlExtensions.ResizeColumns
-- uid: System.Windows.Forms
-  commentId: N:System.Windows.Forms
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Windows.Forms
-  nameWithType: System.Windows.Forms
-  fullName: System.Windows.Forms
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Windows
-    name: Windows
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.windows
-  - name: .
-  - uid: System.Windows.Forms
-    name: Forms
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.windows.forms
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Windows
-    name: Windows
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.windows
-  - name: .
-  - uid: System.Windows.Forms
-    name: Forms
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.windows.forms
 shouldSkipMarkup: true

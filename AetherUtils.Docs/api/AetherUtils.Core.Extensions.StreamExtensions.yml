@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StreamExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: StreamExtensions
     path: ../AetherUtils.Core/Extensions/StreamExtensions.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: AetherUtils.Core/Extensions/StreamExtensions.cs
-      branch: master
+      branch: release
       repo: https://github.com/ethan-hann/AetherUtils.git
     id: ToImage
     path: ../AetherUtils.Core/Extensions/StreamExtensions.cs

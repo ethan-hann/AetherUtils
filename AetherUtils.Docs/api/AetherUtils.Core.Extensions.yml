@@ -41,6 +41,7 @@ references:
   fullName: AetherUtils.Core.Extensions.CollectionExtensions
 - uid: AetherUtils.Core.Extensions.ControlExtensions
   commentId: T:AetherUtils.Core.Extensions.ControlExtensions
+  parent: AetherUtils.Core.Extensions
   href: AetherUtils.Core.Extensions.ControlExtensions.html
   name: ControlExtensions
   nameWithType: ControlExtensions
