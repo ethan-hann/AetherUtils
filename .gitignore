@@ -7,8 +7,8 @@
 Manual\ Database\ Querying\ and\ Filtering/
 
 # DocFX
-AetherUtils.Docs/api/.manifest
-AetherUtils.Docs/api/*.yml
+AetherUtils.Docs/_site/*
+AetherUtils.Docs/api/*
 AetherUtils.Docs/Generate\ Docs.bat
 
 # User-specific files
