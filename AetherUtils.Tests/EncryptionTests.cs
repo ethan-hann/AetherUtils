@@ -8,7 +8,7 @@ namespace AetherUtils.Tests
     public class EncryptionTests
     {
         private string testString = "Somewhere over the rainbow!!!";
-        private readonly string testFilePath = @"%temp%\AetherTests\files\TestEncryptedFileSave.enc";
+        private readonly string testFilePath = "files\\TestEncryptedFileSave.enc";
         private Guid testLicenseID = Guid.NewGuid();
         const string passphrase = "secure_password!";
 

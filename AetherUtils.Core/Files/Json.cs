@@ -64,7 +64,7 @@ namespace AetherUtils.Core.Files
             filePath = FileHelper.ExpandPath(filePath);
 
             if (!FileHelper.DoesFileExist(filePath, false))
-                throw new FileNotFoundException("File was not found");
+                throw new FileNotFoundException("File was not found", filePath);
 
             var json = FileHelper.OpenFile(filePath);
             return FromJson(json);

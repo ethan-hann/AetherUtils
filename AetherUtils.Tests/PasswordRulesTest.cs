@@ -18,6 +18,7 @@ public class PasswordRulesTest
                                             "yCoSO3ofTcGzVAxMCRWNz9FRG0bSrJemfFwmSxwb0pG0GOCRuVfN+IiXEvAu+R++uoQcP" +
                                             "M+zXAqXk3X/swj/xKwLmvSEn6g3rxCbeoJCYceP4rnrjFCSTHu7PUB+hnPAFzdlDiw==";
 
+    private const string filePath = "files\\password.rules";
     
     [Test]
     public void BuildRuleTest()
@@ -104,34 +105,30 @@ public class PasswordRulesTest
     }
 
     [Test]
-    public async Task TestSaveRules()
+    public async Task TestSaveAndLoadRules()
     {
         var rule = PasswordRule.New().AllowSpecials()
             .AllowNumbers()
             .MinimumNumberCount(1)
             .MinimumSpecialCount(1).Build();
         Console.WriteLine(rule.PasswordRules);
-        var saved = await rule.SaveToFileAsync("files\\password.rules", passphrase);
+        var saved = await rule.SaveToFileAsync(filePath, passphrase);
         Assert.That(saved, Is.True);
         
         var failures = rule.Validate(passwordWithSpecials);
         Assert.That(failures, Is.Empty);
         
         failures.ForEach(f => Console.WriteLine(((ValidationFailure)f).Message));
-    }
-
-    [Test]
-    public async Task TestLoadRules()
-    {
-        var rule = await PasswordRule.ParseFromFileAsync("files\\password.rules", passphrase);
-        Assert.That(rule, Is.Not.Null);
         
-        Console.WriteLine(rule.PasswordRules);
+        var rule2 = await PasswordRule.ParseFromFileAsync(filePath, passphrase);
+        Assert.That(rule2, Is.Not.Null);
         
-        var failures = rule.Validate(passwordWithSpecials);
-        Assert.That(failures, Is.Empty);
+        Console.WriteLine(rule2.PasswordRules);
         
-        failures.ForEach(f => Console.WriteLine(((ValidationFailure)f).Message));
+        var failures2 = rule2.Validate(passwordWithSpecials);
+        Assert.That(failures2, Is.Empty);
+        
+        failures2.ForEach(f => Console.WriteLine(((ValidationFailure)f).Message));
     }
 
     [Test]

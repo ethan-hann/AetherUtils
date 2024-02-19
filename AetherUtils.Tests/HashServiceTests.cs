@@ -86,7 +86,8 @@ namespace AetherUtils.Tests
         [Test]
         public void CompareHashManualTest()
         {
-            hashedString = "Hex:9998AFEC42D8A9467C7CE23736C17DD626994D81886F7D84BE310731E563BF4961E39686045B7BFAC6DF596107D1A8A7:20C0DDBD5F7FC62D66503ED9427CADC4:2827:SHA384";
+            hashedString = "Hex:9998AFEC42D8A9467C7CE23736C17DD626994D81886F7D84BE310731E563BF4961E39686045B" +
+                           "7BFAC6DF596107D1A8A7:20C0DDBD5F7FC62D66503ED9427CADC4:2827:SHA384";
             Assert.That(HashService.CompareHash(testString, hashedString), Is.True);
         }
     }

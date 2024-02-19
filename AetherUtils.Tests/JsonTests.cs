@@ -5,29 +5,19 @@ namespace AetherUtils.Tests
 {
     public class JsonTests
     {
-        DefaultConfig? config;
-        Json<DefaultConfig> jsonHelper;
-        private readonly string configPath = @"%temp%\AetherTests\json\config.json";
-
-        [SetUp]
-        public void SetUp()
-        {
-            config = new DefaultConfig();
-            jsonHelper = new Json<DefaultConfig>();
-        }
+        private readonly string configPath = "json\\config.json";
 
         [Test]
-        public void TestSavingJson()
+        public void TestLoadingAndSavingJson()
         {
+            var config = new DefaultConfig();
+            var jsonHelper = new Json<DefaultConfig>();
+            
             jsonHelper.SaveJson(configPath, config);
             Assert.That(FileHelper.DoesFileExist(configPath), Is.True);
-        }
-
-        [Test]
-        public void TestLoadingJson()
-        {
-            config = jsonHelper.LoadJson(configPath);
-            Assert.That(config, Is.Not.Null);
+            
+            var config2 = jsonHelper.LoadJson(configPath);
+            Assert.That(config2, Is.Not.Null);
         }
     }
 }

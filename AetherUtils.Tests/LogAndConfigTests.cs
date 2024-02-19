@@ -9,11 +9,12 @@ namespace AetherUtils.Tests
     public class LogAndConfigTests
     {
         private YamlConfigManager? _configManager;
+        private const string configFilePath = "config\\config.yaml";
 
         [SetUp]
         public void Setup()
         {
-            _configManager = new YamlConfigManager("config\\test.yaml");
+            _configManager = new YamlConfigManager(configFilePath);
 
             if (!_configManager.ConfigExists)
             {
