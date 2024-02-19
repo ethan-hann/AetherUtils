@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "src": "AetherUtils.Core",
+          "src": "../AetherUtils.Core",
           "files": [
             "**/*.csproj"
           ]
