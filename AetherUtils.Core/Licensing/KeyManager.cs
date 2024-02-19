@@ -1,6 +1,7 @@
 ﻿using AetherUtils.Core.Files;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using Standard.Licensing.Security.Cryptography;
 
 namespace AetherUtils.Core.Licensing
 {
@@ -9,6 +10,21 @@ namespace AetherUtils.Core.Licensing
     /// </summary>
     public static class KeyManager
     {
+        /// <summary>
+        /// Create a new public and private key pair using the specified passphrase.
+        /// </summary>
+        /// <param name="passphrase">The passphrase used to derive the key pair.</param>
+        /// <returns>A new <see cref="KeyPair"/> containing a public and private key.</returns>
+        public static KeyPair CreateKeys(string passphrase)
+        {
+            var generator = KeyGenerator.Create();
+            var keyPair = generator.GenerateKeyPair();
+            var privateKey = keyPair.ToEncryptedPrivateKeyString(passphrase);
+            var publicKey = keyPair.ToPublicKeyString();
+    
+            return new KeyPair(privateKey, publicKey);
+        }
+        
         /// <summary>
         /// Save the key pair to a file.
         /// </summary>
