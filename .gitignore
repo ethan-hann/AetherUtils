@@ -7,9 +7,10 @@
 Manual\ Database\ Querying\ and\ Filtering/
 
 # DocFX
-AetherUtils.Docs/_site/*
-AetherUtils.Docs/api/*
+AetherUtils.Docs/api/.manifest
+AetherUtils.Docs/api/*.yml
 AetherUtils.Docs/Generate\ Docs.bat
+AetherUtils.Docs/_site/*
 
 # User-specific files
 *.rsuser
