@@ -9,7 +9,6 @@ Manual\ Database\ Querying\ and\ Filtering/
 # DocFX
 AetherUtils.Docs/api/.manifest
 AetherUtils.Docs/api/*.yml
-AetherUtils.Docs/Generate\ Docs.bat
 AetherUtils.Docs/_site/*
 
 # User-specific files
@@ -18,6 +17,7 @@ AetherUtils.Docs/_site/*
 *.user
 *.userosscache
 *.sln.docstates
+*.bat
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
