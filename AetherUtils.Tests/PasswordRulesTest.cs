@@ -130,7 +130,6 @@ public class PasswordRulesTest
         
         failures2.ForEach(f => Console.WriteLine(((ValidationFailure)f).Message));
     }
-
     
     [Test]
     public void ValidPasswordTest()
