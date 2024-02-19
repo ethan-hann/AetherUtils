@@ -1,6 +1,7 @@
 ﻿using System.Text;
+using AetherUtils.Core.Security.Passwords;
 
-namespace AetherUtils.Core.Security.Passwords.Validation;
+namespace AetherUtils.Core.Validation;
 
 /// <summary>
 /// Validates a password against a <see cref="PasswordRule"/>.
@@ -23,12 +24,12 @@ public abstract class PasswordValidator
     /// </summary>
     /// <param name="rule">The <see cref="PasswordRule"/> used for validation.</param>
     /// <param name="password">The password to validate.</param>
-    /// <returns>A list of <see cref="IPasswordValidationFailure"/>.
+    /// <returns>A list of <see cref="IValidationFailure"/>.
     /// If validation was successful, this list is empty.</returns>
-    internal static List<IPasswordValidationFailure> Validate(PasswordRule rule, string password)
+    internal static List<IValidationFailure> Validate(PasswordRule rule, string password)
     {
         var data = rule.RuleData;
-        List<IPasswordValidationFailure> failures = [];
+        List<IValidationFailure> failures = [];
         
         if (!data.SpecialsAllowed && password.Any(c => SpecialChars.Contains(c)))
             failures.Add(new ValidationFailure()

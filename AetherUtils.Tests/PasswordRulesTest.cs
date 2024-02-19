@@ -1,6 +1,6 @@
 ﻿using AetherUtils.Core.Extensions;
 using AetherUtils.Core.Security.Passwords;
-using AetherUtils.Core.Security.Passwords.Validation;
+using AetherUtils.Core.Validation;
 
 namespace AetherUtils.Tests;
 

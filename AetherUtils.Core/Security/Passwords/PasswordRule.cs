@@ -5,8 +5,8 @@ using AetherUtils.Core.Enums;
 using AetherUtils.Core.Exceptions;
 using AetherUtils.Core.Files;
 using AetherUtils.Core.Security.Encryption;
-using AetherUtils.Core.Security.Passwords.Validation;
 using AetherUtils.Core.Utility;
+using AetherUtils.Core.Validation;
 
 namespace AetherUtils.Core.Security.Passwords;
 
@@ -440,9 +440,9 @@ public sealed class PasswordRule
     /// Validate a password against this rule.
     /// </summary>
     /// <param name="password">The password to validate.</param>
-    /// <returns>A list of <see cref="IPasswordValidationFailure"/> containing the reasons the
+    /// <returns>A list of <see cref="IValidationFailure"/> containing the reasons the
     /// password failed to validate. If this list is empty, the password validated successfully.</returns>
-    public List<IPasswordValidationFailure> Validate(string password) => PasswordValidator.Validate(this, password);
+    public List<IValidationFailure> Validate(string password) => PasswordValidator.Validate(this, password);
 
     /// <summary>
     /// Get the Json string representing this password rule.

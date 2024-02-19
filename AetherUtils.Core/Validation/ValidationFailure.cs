@@ -1,11 +1,11 @@
-﻿namespace AetherUtils.Core.Security.Passwords.Validation;
+﻿namespace AetherUtils.Core.Validation;
 
 /// <summary>
 /// Represents a validation failure when checking a password against a password rule.
 /// </summary>
 /// <param name="message">The message associated with the failure.</param>
 /// <param name="howToResolve">Indicates how to fix the failure.</param>
-public sealed class ValidationFailure(string message, string howToResolve) : IPasswordValidationFailure
+public sealed class ValidationFailure(string message, string howToResolve) : IValidationFailure
 {
     /// <summary>
     /// Gets or sets the message that describes the password validation failure.

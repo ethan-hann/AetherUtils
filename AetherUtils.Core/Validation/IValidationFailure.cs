@@ -1,14 +1,14 @@
 ﻿using AetherUtils.Core.Interfaces;
 
-namespace AetherUtils.Core.Security.Passwords.Validation;
+namespace AetherUtils.Core.Validation;
 
 /// <summary>
-/// Represents a failure of a password rule check.
+/// Represents a failure of a validation check.
 /// </summary>
-public interface IPasswordValidationFailure : IFluentInterface
+public interface IValidationFailure : IFluentInterface
 {
     /// <summary>
-    /// Gets or sets the message that describes the password validation failure.
+    /// Gets or sets the message that describes the validation failure.
     /// </summary>
     string Message { get; set; }
 

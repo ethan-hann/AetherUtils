@@ -208,10 +208,12 @@ namespace AetherUtils.Core.Files
         /// Get whether the specified <paramref name="path"/> is a valid absolute file path on Windows.
         /// </summary>
         /// <param name="path">A path to check.</param>
+        /// <param name="expandPath">Should the <paramref name="path"/> be expanded before checking?</param>
         /// <exception cref="ArgumentException">If the <paramref name="path"/> was <c>null</c> or empty.</exception>
-        public static bool IsValidPath(string path)
+        public static bool IsValidPath(string path, bool expandPath = true)
         {
             ArgumentException.ThrowIfNullOrEmpty(path, nameof(path));
+            path = expandPath ? ExpandPath(path) : path;
             return RegexGenerator.PathRegex().IsMatch(path);
         }
 
