@@ -6,6 +6,11 @@
 # Manual Database Querying and Filtering
 Manual\ Database\ Querying\ and\ Filtering/
 
+# DocFX
+docfx_project/api/.manifest
+docfx_project/api/*.yml
+docs
+
 # User-specific files
 *.rsuser
 *.suo
