@@ -1,4 +1,5 @@
-﻿namespace AetherUtils.Core.Exceptions;
+﻿#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+namespace AetherUtils.Core.Exceptions;
 
 /// <summary>
 /// Custom class for exceptions that occur when handling QR codes.

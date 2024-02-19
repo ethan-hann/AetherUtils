@@ -37,10 +37,10 @@ namespace AetherUtils.Tests
             var options = (LogOptions?)_configManager?.Get("logOptions");
             Assert.That(options, Is.Not.Null);
 
-            CLogger.Initialize(options);
-            Assert.That(CLogger.IsInitialized, Is.True);
+            AuLogger.Initialize(options);
+            Assert.That(AuLogger.IsInitialized, Is.True);
 
-            var log = CLogger.GetCurrentLogger<YamlConfigManager>("TestLoggerCreate()");
+            var log = AuLogger.GetCurrentLogger<YamlConfigManager>("TestLoggerCreate()");
             log.Debug("Test Log Message");
         }
 

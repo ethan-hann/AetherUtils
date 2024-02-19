@@ -9,7 +9,7 @@ namespace AetherUtils.Core.Logging
     /// Provides static methods to facilitate logging to a file as well as to the console for an application.<br/>
     /// This class is a wrapper around <a href="https://nlog-project.org/">NLog</a>.
     /// </summary>
-    public static class CLogger
+    public static class AuLogger
     {
         /// <summary>
         /// Get a value indicating if the logger has been initialized.
