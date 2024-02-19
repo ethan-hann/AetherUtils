@@ -72,6 +72,33 @@ namespace AetherUtils.Core.Licensing.Models
         [Browsable(false)]
         public string Signature { get; set; } = string.Empty;
         
+        /// <summary>
+        /// Create a new blank license model.
+        /// </summary>
+        public License() { }
+
+        /// <summary>
+        /// Create a new License model using an existing <see cref="Standard.Licensing.License"/>.
+        /// </summary>
+        /// <param name="existing">The existing license to create the model from.</param>
+        public License(Standard.Licensing.License existing)
+        {
+            Id = existing.Id.ToString();
+            Type = existing.Type;
+            Expiration = existing.Expiration;
+            Quantity = existing.Quantity;
+            
+            foreach (var feature in existing.ProductFeatures.GetAll())
+                ProductFeatures.Add(new Feature(feature.Key, feature.Value));
+            
+            Customer = new Customer
+            {
+                Name = existing.Customer.Name,
+                Email = existing.Customer.Email,
+                Company = existing.Customer.Company
+            };
+            Signature = existing.Signature;
+        }
 
         /// <summary>
         /// Get a string that represents this license:<br/>
