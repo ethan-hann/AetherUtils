@@ -15,7 +15,7 @@
     <FileVersion></FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageIcon>logo.png</PackageIcon>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageProjectUrl>https://ethan-hann.github.io/AetherUtils</PackageProjectUrl>
   </PropertyGroup>
 
@@ -45,6 +45,12 @@
     <None Include="bin\Release\AetherUtils.Core.xml" Pack="true">
       <PackageCopyToOutput>true</PackageCopyToOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="WinForms\Controls\SplitButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>
