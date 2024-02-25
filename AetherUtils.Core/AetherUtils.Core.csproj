@@ -51,6 +51,9 @@
     <Compile Update="WinForms\Controls\SplitButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="WinForms\Controls\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>
