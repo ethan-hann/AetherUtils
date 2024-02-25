@@ -9,6 +9,8 @@ namespace AetherUtils.Tests
     {
         private string testString = "Somewhere over the rainbow!!!";
         private readonly string testFilePath = "files\\TestEncryptedFileSave.enc";
+        private readonly string testDecryptedFile = "files\\testPair.keys";
+        private readonly string testEncryptedFile = "files\\testPairEnc.keys";
         private Guid testLicenseID = Guid.NewGuid();
         const string passphrase = "secure_password!";
 
@@ -26,6 +28,22 @@ namespace AetherUtils.Tests
             Assert.That(decrypted.Result, Is.EqualTo(testString));
         }
 
+        [Test]
+        public void GetByteCount()
+        {
+            Console.WriteLine("AU\x01"u8.ToArray().Length);
+        }
+
+        [Test]
+        public async Task IsEncryptedFileTest()
+        {
+            //await FileEncryptionService.EncryptFileAsync(testEncryptedFile, passphrase, ".keys");
+            await FileEncryptionService.DecryptFileAsync(testEncryptedFile, passphrase);
+            
+            Assert.That(FileEncryptionService.IsEncryptedFile(testEncryptedFile), Is.False);
+            Assert.That(FileEncryptionService.IsEncryptedFile(testDecryptedFile), Is.False);
+        }
+        
         [Test]
         public void TestMultipleStringEncryption()
         {

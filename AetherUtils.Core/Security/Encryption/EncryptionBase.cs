@@ -32,6 +32,42 @@ namespace AetherUtils.Core.Security.Encryption
         internal static void WriteIvToStream(byte[] iv, Stream stream) => stream.Write(iv, 0, 16);
 
         /// <summary>
+        /// Writes a header to the stream to identify encryption. This header is 3 bytes in length.
+        /// </summary>
+        /// <param name="stream">The stream to write to.</param>
+        internal static void WriteHeaderToStream(Stream stream) => stream.Write("AU\x01"u8.ToArray(), 0, 3);
+
+        /// <summary>
+        /// Reads the header from the stream and advanced the stream's position by 3 bytes.
+        /// </summary>
+        /// <param name="stream">The stream to read from.</param>
+        internal static void RemoveHeaderFromStream(Stream stream)
+        {
+            //The header is 3 bytes so just advanced the stream by 3 bytes.
+            for (var i = 0; i < 3; i++)
+                stream.ReadByte();
+        }
+
+        /// <summary>
+        /// Get a value indicating if the specified stream contains the header bytes indicating the stream is encrypted.
+        /// </summary>
+        /// <param name="stream">The stream to read.</param>
+        /// <returns><c>true</c> if the stream contains the header bytes; <c>false</c> otherwise.</returns>
+        internal static bool ContainsHeaderBytes(Stream stream)
+        {
+            using MemoryStream ms = new();
+            stream.CopyTo(ms);
+            
+            byte[] buffer = ms.GetBuffer();
+            var header = "AU\x01"u8.ToArray();
+            var containsHeader = false;
+            
+            for (var i = 0; i < header.Length; i++)
+                containsHeader |= buffer[i] == header[i];
+            return containsHeader;
+        }
+
+        /// <summary>
         /// Derives a key to use for encryption/decryption from an input string.
         /// <para>This method should be called with the same arguments when encrypting and decrypting. Failure to do so will
         /// result in a failed decryption based on different keys.</para>

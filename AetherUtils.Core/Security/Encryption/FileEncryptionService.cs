@@ -38,6 +38,24 @@ namespace AetherUtils.Core.Security.Encryption
         internal FileEncryptionService() => FilePath = string.Empty;
 
         /// <summary>
+        /// Get a value indicating if the specified file is encrypted.
+        /// </summary>
+        /// <param name="filePath">The full path to the file.</param>
+        /// <returns><c>true</c> if the file is encrypted; <c>false</c> otherwise.</returns>
+        /// <exception cref="ArgumentException">If <paramref name="filePath"/> is <c>null</c> or empty.</exception>
+        public static bool IsEncryptedFile(string filePath)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+            
+            try
+            {
+                using FileStream inputStream = new(filePath, FileMode.Open);
+                return ContainsHeaderBytes(inputStream);
+            }
+            catch (CryptographicException) { return false; }
+        }
+
+        /// <summary>
         /// Create a file with the specified <paramref name="content"/> and encrypt the contents
         /// using the <paramref name="passphrase"/>.
         /// <para>This method will either create a new file if one does not exist or overwrite the existing file.</para>

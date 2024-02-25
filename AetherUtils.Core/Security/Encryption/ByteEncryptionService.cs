@@ -22,6 +22,7 @@ public sealed class ByteEncryptionService : EncryptionBase, IEncryptService<byte
         aes.Key = DeriveKeyFromString(passphrase);
 
         await using MemoryStream output = new();
+        WriteHeaderToStream(output);
         WriteIvToStream(aes.IV, output);
 
         await using CryptoStream cryptoStream = new(output, aes.CreateEncryptor(), CryptoStreamMode.Write);
@@ -45,6 +46,7 @@ public sealed class ByteEncryptionService : EncryptionBase, IEncryptService<byte
         using Aes aes = Aes.Create();
         aes.Key = DeriveKeyFromString(passphrase);
         await using MemoryStream inputStream = new(input);
+        RemoveHeaderFromStream(inputStream);
         aes.IV = ReadIvFromStream(inputStream);
 
         await using CryptoStream cryptoStream = new(inputStream, aes.CreateDecryptor(), CryptoStreamMode.Read);
