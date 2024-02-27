@@ -209,4 +209,54 @@ public class PasswordRulesTest
         }
         Assert.That(passwords.TrueForAll(p => rule.Validate(p).Count == 0));
     }
+
+    [Test]
+    public void PrefixPasswordTest()
+    {
+        PasswordRule rule = PasswordRule.New().AddPrefix("PRE").AllowSpecials()
+            .AllowNumbers().MinimumSpecialCount(5).MinimumNumberCount(2).MinimumLength(12).Build();
+        Console.WriteLine(rule.PasswordRules);
+        List<string> passwords = [];
+        for (int i = 0; i < 100; i++)
+        {
+            passwords.Add(rule.GetValidPassword());
+            Console.WriteLine(passwords[i]);
+        }
+        
+        foreach (var p in passwords)
+        {
+            var validation = rule.Validate(p);
+            validation.ForEach(v => Console.WriteLine($"{p}: {v.Message}"));
+        }
+        Assert.That(passwords.TrueForAll(p => rule.Validate(p).Count == 0));
+    }
+
+    [Test]
+    public void SuffixPasswordTest()
+    {
+        PasswordRule rule = PasswordRule.New().AllowSpecials()
+            .AllowNumbers().MinimumSpecialCount(5).MinimumNumberCount(2).MinimumLength(12).Build();
+        Console.WriteLine(rule.PasswordRules);
+        List<string> passwords = [];
+        for (int i = 0; i < 100; i++)
+        {
+            passwords.Add(rule.GetValidPassword());
+            Console.WriteLine(passwords[i]);
+        }
+        
+        foreach (var p in passwords)
+        {
+            var validation = rule.Validate(p);
+            validation.ForEach(v => Console.WriteLine($"{p}: {v.Message}"));
+        }
+        Assert.That(passwords.TrueForAll(p => rule.Validate(p).Count == 0));
+    }
+
+    [Test]
+    public void TemplatePasswordTest()
+    {
+        PasswordRule rule = PasswordRule.New().BuildFromTemplate("{name{John Smith}:upperFirst,lowerSecond}{special}{special}{date}");
+        Console.WriteLine(rule.PasswordRules);
+        Console.WriteLine(rule.GetValidPassword());
+    }
 }

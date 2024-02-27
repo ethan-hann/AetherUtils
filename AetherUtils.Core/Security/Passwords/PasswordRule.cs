@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Data;
+using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
 using AetherUtils.Core.Enums;
@@ -22,7 +23,8 @@ public sealed class PasswordRule
     private bool _isBuilding;
     private bool _isBuilt;
 
-    internal PasswordRuleData RuleData = new();
+    internal PasswordRuleData ruleData = new();
+    internal TemplateData? templateData;
 
     private static readonly Json<PasswordRuleData> Serializer = new();
     private static readonly StringEncryptionService Encryptor = new();
@@ -43,7 +45,7 @@ public sealed class PasswordRule
         var p = Serializer.FromJson(json);
         if (p == null) return;
         
-        RuleData = p;
+        ruleData = p;
         CompileRules();
         
         _isBuilt = true;
@@ -64,29 +66,37 @@ public sealed class PasswordRule
     {
         if (!_isBuilding)
             throw new PasswordRuleException("Password rules are not being built!");
-        RuleData.WhitespaceAllowed = true;
+        ruleData.WhitespaceAllowed = true;
     }
 
     /// <summary>
     /// Allows a password to contain special characters.
     /// </summary>
     /// <exception cref="PasswordRuleException">If the password rule is not being built.</exception>
-    internal void AllowSpecials()
+    internal void AllowSpecials(char[]? specialList = null)
     {
         if (!_isBuilding)
             throw new PasswordRuleException("Password rules are not being built!");
-        RuleData.SpecialsAllowed = true;
+
+        if (specialList != null)
+            ruleData.SpecialChars = specialList;
+        
+        ruleData.SpecialsAllowed = true;
     }
 
     /// <summary>
     /// Allows a password to contain numbers.
     /// </summary>
     /// <exception cref="PasswordRuleException">If the password rule is not being built.</exception>
-    internal void AllowNumbers()
+    internal void AllowNumbers(char[]? numberList = null)
     {
         if (!_isBuilding)
             throw new PasswordRuleException("Password rules are not being built!");
-        RuleData.NumbersAllowed = true;
+
+        if (numberList != null)
+            ruleData.NumberChars = numberList;
+        
+        ruleData.NumbersAllowed = true;
     }
 
     /// <summary>
@@ -102,7 +112,7 @@ public sealed class PasswordRule
         if (length < 0)
             throw new PasswordRuleException("Password minimum length cannot be less than 0.");
         
-        RuleData.MinimumLengthAllowed = length;
+        ruleData.MinimumLengthAllowed = length;
     }
 
     /// <summary>
@@ -118,7 +128,7 @@ public sealed class PasswordRule
         if (count < 0)
             throw new PasswordRuleException("Password minimum number count cannot be less than 0.");
 
-        RuleData.MinimumNumberCount = count;
+        ruleData.MinimumNumberCount = count;
     }
 
     /// <summary>
@@ -134,7 +144,7 @@ public sealed class PasswordRule
         if (count < 0)
             throw new PasswordRuleException("Password minimum letter count cannot be less than 0.");
 
-        RuleData.MinimumSpecialCount = count;
+        ruleData.MinimumSpecialCount = count;
     }
 
     /// <summary>
@@ -150,7 +160,7 @@ public sealed class PasswordRule
         if (expires < DateTime.MinValue || expires > DateTime.MaxValue)
             throw new PasswordRuleException("Password expiration was outside of valid range.");
 
-        RuleData.Expiration = expires;
+        ruleData.Expiration = expires;
     }
 
     /// <summary>
@@ -164,10 +174,20 @@ public sealed class PasswordRule
         _isBuilding = PasswordRules.Equals(string.Empty);
         _isBuilt = !_isBuilding;
     }
+    
+    internal void BuildFromTemplate(string template)
+    {
+        CompileRules();
+        ruleData.TemplateText = template;
+        templateData = new TemplateData(template);
+        
+        _isBuilding = false;
+        _isBuilt = !_isBuilding;
+    }
 
     private void CompileRules() => PasswordRules = ToJsonString();
     
-    private string ToJsonString() => Serializer.ToJson(RuleData);
+    private string ToJsonString() => Serializer.ToJson(ruleData);
     
     /// <summary>
     /// Parse a password rule from a Json string.
@@ -233,7 +253,7 @@ public sealed class PasswordRule
 
         var rule = new PasswordRule(true)
         {
-            RuleData = data
+            ruleData = data
         };
         
         rule.CompileRules();
@@ -243,9 +263,13 @@ public sealed class PasswordRule
     /// <summary>
     /// Get a random, cryptographically strong password that follows the password rule.
     /// </summary>
+    /// <remarks>If the rule was built using a template, this method returns a password following that template instead.</remarks>
     /// <returns>A new, random password that adheres to the password rule created.</returns>
     public string GetValidPassword()
     {
+        if (!ruleData.TemplateText.Equals(string.Empty))
+            return GetValidPasswordFromTemplate();
+        
         var sb = new StringBuilder();
         
         //Keep track of the current count of characters in the new password string.
@@ -261,12 +285,12 @@ public sealed class PasswordRule
             15, 5);
         
         //Set the minimum length of our new password to the length defined in the rule data.
-        var minLength = RuleData.MinimumLengthAllowed;
+        var minLength = ruleData.MinimumLengthAllowed;
         
         //Keep track of the number of different character types in the new password string.
         var specialCount = 0;
         var numberCount = 0;
-        
+
         //Continue looping until we've reached the required minimum password length.
         while (currentCount != minLength)
         {
@@ -291,12 +315,27 @@ public sealed class PasswordRule
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            Debug.WriteLine($"{c}: {currentCount}");
         }
-
+        
+        //First add our prefix to the password, if required.
+        if (!ruleData.Prefix.Equals(string.Empty))
+            sb = sb.Insert(0, ruleData.Prefix);
+        
+        //Then, add our suffix and current year if required.
+        if (!ruleData.Suffix.Equals(string.Empty))
+            sb = sb.Append(ruleData.Suffix);
+        if (ruleData.AppendCurrentYear)
+            sb = sb.Append(DateTime.Now.Year);
+        
+        //Finally, return our string.
         return sb.ToString();
     }
 
+    private string GetValidPasswordFromTemplate()
+    {
+        return "";
+    }
+    
     /// <summary>
     /// Get a <see cref="ProportionalRandomSelector{T}"/> based on the supplied percentages.
     /// Each percentage indicates the likelihood for that character type to be chosen.
@@ -310,11 +349,11 @@ public sealed class PasswordRule
         var disallowedTypes = new List<CharacterType>();
         
         //remove the character types not allowed
-        if (!RuleData.WhitespaceAllowed)
+        if (!ruleData.WhitespaceAllowed)
             disallowedTypes.Add(CharacterType.WhiteSpace);
-        if (!RuleData.NumbersAllowed)
+        if (!ruleData.NumbersAllowed)
             disallowedTypes.Add(CharacterType.Number);
-        if (!RuleData.SpecialsAllowed)
+        if (!ruleData.SpecialsAllowed)
             disallowedTypes.Add(CharacterType.Special);
 
         characterTypes = characterTypes.Except(disallowedTypes).ToList();
@@ -354,11 +393,11 @@ public sealed class PasswordRule
     private void AddWhiteSpace(ref StringBuilder builder, ref int currentCount)
     {
         //if whitespace is not allowed in the rule
-        if (!RuleData.WhitespaceAllowed) return;
+        if (!ruleData.WhitespaceAllowed) return;
         
         //Finally add a whitespace character if these fail
-        builder.Append(PasswordValidator.WhiteSpaceChars[RandomNumberGenerator.GetInt32(
-                                                         PasswordValidator.WhiteSpaceChars.Length)]);
+        builder.Append(ruleData.WhiteSpaceChars[RandomNumberGenerator.GetInt32(
+            ruleData.WhiteSpaceChars.Length)]);
         currentCount++;
     }
 
@@ -372,17 +411,17 @@ public sealed class PasswordRule
     private bool AddSpecial(ref StringBuilder builder, ref int currentCount, ref int specialCount)
     {
         //if special characters are not allowed in the rule
-        if (!RuleData.SpecialsAllowed) return false;
+        if (!ruleData.SpecialsAllowed) return false;
         
         //If no minimum specials are defined, we'll use the default of 2.
-        var numOfSpecialsAllowed = RuleData.MinimumSpecialCount <= -1 ? 2 : RuleData.MinimumSpecialCount;
+        var numOfSpecialsAllowed = ruleData.MinimumSpecialCount <= -1 ? 2 : ruleData.MinimumSpecialCount;
 
         //If we've already reached the number of specials required, just return.
         if (specialCount == numOfSpecialsAllowed) return false;
         
         //Otherwise, lets add a special character and increment our counts
-        builder.Append(PasswordValidator.SpecialChars[RandomNumberGenerator.GetInt32(
-                                                      PasswordValidator.SpecialChars.Length)]);
+        builder.Append(ruleData.SpecialChars[RandomNumberGenerator.GetInt32(
+            ruleData.SpecialChars.Length)]);
         currentCount++;
         specialCount++;
         return true;
@@ -398,17 +437,17 @@ public sealed class PasswordRule
     private bool AddNumber(ref StringBuilder builder, ref int currentCount, ref int numberCount)
     {
         //If numbers are not allowed in the rule
-        if (!RuleData.NumbersAllowed) return false;
+        if (!ruleData.NumbersAllowed) return false;
         
         //If no minimum number count is defined, we'll use the default of 2.
-        var numOfNumbersAllowed = RuleData.MinimumNumberCount <= -1 ? 2 : RuleData.MinimumNumberCount;
+        var numOfNumbersAllowed = ruleData.MinimumNumberCount <= -1 ? 2 : ruleData.MinimumNumberCount;
         
         //If we've already reached the number of digits required, just return.
         if (numberCount == numOfNumbersAllowed) return false;
         
         //Otherwise, let's add a number character and increment our counts.
-        builder.Append(PasswordValidator.NumberChars[RandomNumberGenerator.GetInt32(
-                                                     PasswordValidator.NumberChars.Length)]);
+        builder.Append(ruleData.NumberChars[RandomNumberGenerator.GetInt32(
+            ruleData.NumberChars.Length)]);
         currentCount++;
         numberCount++;
         return true;
@@ -427,8 +466,8 @@ public sealed class PasswordRule
         if (AddNumber(ref builder, ref currentCount, ref numberCount)) return;
 
         //Finally, add a character if we've met the required number of both specials and digits.
-        builder.Append(PasswordValidator.RegularChars[RandomNumberGenerator.GetInt32(
-            PasswordValidator.RegularChars.Length)]);
+        builder.Append(ruleData.RegularChars[RandomNumberGenerator.GetInt32(
+            ruleData.RegularChars.Length)]);
         
         //Then try to add a special character.
         if (AddSpecial(ref builder, ref currentCount, ref specialCount)) return;

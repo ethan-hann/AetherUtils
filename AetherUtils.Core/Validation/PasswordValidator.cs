@@ -10,13 +10,6 @@ namespace AetherUtils.Core.Validation;
 /// </summary>
 public abstract class PasswordValidator
 {
-    //List taken from: https://owasp.org/www-community/password-special-characters
-    //Excluding a space character since that is handled in the WhiteSpaceChars array.
-    internal static readonly char[] SpecialChars = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~".ToCharArray();
-    internal static readonly char[] RegularChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-    internal static readonly char[] NumberChars = "1234567890".ToCharArray();
-    internal static readonly char[] WhiteSpaceChars = " ".ToCharArray();
-    
     private PasswordValidator() {}
 
     /// <summary>
@@ -28,24 +21,29 @@ public abstract class PasswordValidator
     /// If validation was successful, this list is empty.</returns>
     internal static List<IValidationFailure> Validate(PasswordRule rule, string password)
     {
-        var data = rule.RuleData;
+        var data = rule.ruleData;
+        
+        //If we are using a template on this rule, validate against it instead.
+        if (!data.TemplateText.Equals(string.Empty))
+            return ValidateFromTemplate(rule, password);
+        
         List<IValidationFailure> failures = [];
         
-        if (!data.SpecialsAllowed && password.Any(c => SpecialChars.Contains(c)))
+        if (!data.SpecialsAllowed && password.Any(c => data.SpecialChars.Contains(c)))
             failures.Add(new ValidationFailure()
             {
                 Message = "Password is not allowed to contain special characters.",
                 HowToResolve = "Remove the special characters from the password and validate again."
             });
         
-        if (!data.WhitespaceAllowed && password.Any(c => WhiteSpaceChars.Contains(c)))
+        if (!data.WhitespaceAllowed && password.Any(c => data.WhiteSpaceChars.Contains(c)))
             failures.Add(new ValidationFailure()
             {
                 Message = "Password is not allowed to contain any whitespace characters.",
                 HowToResolve = "Remove the whitespace characters (space) from the password and validate again."
             });
         
-        if (!data.NumbersAllowed && password.Any(c => NumberChars.Contains(c)))
+        if (!data.NumbersAllowed && password.Any(c => data.NumberChars.Contains(c)))
             failures.Add(new ValidationFailure()
             {
                 Message = "Password is not allowed to contain any number characters.",
@@ -59,8 +57,8 @@ public abstract class PasswordValidator
                 HowToResolve = "Add more characters to the password to increase its length."
             });
 
-        var specialCount = password.Count(c => SpecialChars.Contains(c));
-        var numberCount = password.Count(c => NumberChars.Contains(c));
+        var specialCount = password.Count(c => data.SpecialChars.Contains(c));
+        var numberCount = password.Count(c => data.NumberChars.Contains(c));
         
         if (data.MinimumSpecialCount > -1 && specialCount < data.MinimumSpecialCount)
             failures.Add(new ValidationFailure()
@@ -85,5 +83,10 @@ public abstract class PasswordValidator
         
         
         return failures;
+    }
+
+    private static List<IValidationFailure> ValidateFromTemplate(PasswordRule rule, string password)
+    {
+        return [];
     }
 }

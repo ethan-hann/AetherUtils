@@ -14,10 +14,10 @@ internal sealed class PasswordRuleBuilder : IPasswordRuleBuilder
         _rule.AllowWhiteSpace();
         return this;
     }
-
-    public IPasswordRuleBuilder AllowNumbers()
+    
+    public IPasswordRuleBuilder AllowNumbers(char[]? numberList = null)
     {
-        _rule.AllowNumbers();
+        _rule.AllowNumbers(numberList);
         return this;
     }
     
@@ -39,9 +39,9 @@ internal sealed class PasswordRuleBuilder : IPasswordRuleBuilder
         return this;
     }
 
-    public IPasswordRuleBuilder AllowSpecials()
+    public IPasswordRuleBuilder AllowSpecials(char[]? specialList = null)
     {
-        _rule.AllowSpecials();
+        _rule.AllowSpecials(specialList);
         return this;
     }
 
@@ -49,6 +49,12 @@ internal sealed class PasswordRuleBuilder : IPasswordRuleBuilder
     {
         _rule.Expires(expires);
         return this;
+    }
+
+    public PasswordRule BuildFromTemplate(string template)
+    {
+        _rule.BuildFromTemplate(template);
+        return _rule;
     }
 
     public PasswordRule Build()

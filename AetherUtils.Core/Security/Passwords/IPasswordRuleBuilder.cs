@@ -16,14 +16,21 @@ public interface IPasswordRuleBuilder : IFluentInterface
     /// <summary>
     /// Allows a password to contain special characters.
     /// </summary>
+    /// <param name="specialList">An optional array of characters to allow as specials for the password.
+    /// If not provided, the default list of specials will be used:<br/>
+    /// <c>!&quot;#$%&amp;&apos;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~</c>
+    /// </param>
     /// <returns>The builder instance.</returns>
-    IPasswordRuleBuilder AllowSpecials();
+    IPasswordRuleBuilder AllowSpecials(char[]? specialList = null);
 
     /// <summary>
     /// Allows a password to contain numbers.
     /// </summary>
+    /// <param name="numberList">An optional array of integers (supplied as characters) to allow as numbers in the password.
+    /// If not provided, the default list of numbers will be used:<br/>
+    /// <c>1234567890</c></param>
     /// <returns>The builder instance.</returns>
-    IPasswordRuleBuilder AllowNumbers();
+    IPasswordRuleBuilder AllowNumbers(char[]? numberList = null);
 
     /// <summary>
     /// Set the minimum length a password should be.
@@ -51,6 +58,13 @@ public interface IPasswordRuleBuilder : IFluentInterface
     /// <param name="expires">The expiration expires of passwords validated against the rule.</param>
     /// <returns>The builder instance.</returns>
     IPasswordRuleBuilder Expires(DateTime expires);
+    
+    /// <summary>
+    /// Allow this password rule to be built based on the supplied template expression.
+    /// </summary>
+    /// <param name="template">The template to build the rule from.</param>
+    /// <returns>The built <see cref="PasswordRule"/>.</returns>
+    PasswordRule BuildFromTemplate(string template);
 
     /// <summary>
     /// Build and compile the password rule.
