@@ -16,6 +16,7 @@ public sealed class FontHandler
 {
     private static readonly object Lock = new object();
     private static FontHandler? _instance = null;
+    
     private readonly Dictionary<string, string> _fontDict = new();
     
     private PrivateFontCollection _privateFonts = new();
@@ -39,14 +40,17 @@ public sealed class FontHandler
     /// <summary>
     /// Add the font specified to the font collection.
     /// </summary>
+    /// <param name="execAssembly">The currently executing assembly to add the font to.</param>
     /// <param name="fontName">The font family name.</param>
     /// <param name="fontResourcePath">The fully qualified path to the embedded resource.</param>
-    public void AddFont(string fontName, string fontResourcePath)
+    public bool AddFont(Assembly execAssembly, string fontName, string fontResourcePath)
     {
-        if (_fontDict.ContainsValue(fontResourcePath)) return;
-        
-        _fontDict[fontName] = fontResourcePath;
-        _privateFonts = Assembly.GetExecutingAssembly().AddFontResource(fontResourcePath, _privateFonts);
+        if (_fontDict.ContainsValue(fontResourcePath)) return false;
+
+        _privateFonts = execAssembly.AddFontResource(fontResourcePath, _privateFonts);
+
+        var addedFontName = _privateFonts.Families.LastOrDefault()?.Name;
+        return addedFontName != null && _fontDict.TryAdd(fontName, addedFontName);
     }
 
     /// <summary>
@@ -61,7 +65,10 @@ public sealed class FontHandler
     {
         if (_privateFonts.Families.Length <= 0) return false;
 
-        var customFont = new Font(_privateFonts.Families.First(f => f.Name.Equals(fontName)), fontSize, style);
+        var fontFamilyName = _fontDict[fontName];
+        var customFont = new Font(_privateFonts.Families.First(f => f.Name.Equals(fontFamilyName)), 
+            fontSize, style);
+        
         control.ApplyFont(customFont);
         return true;
     }
