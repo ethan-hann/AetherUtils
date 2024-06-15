@@ -47,5 +47,18 @@ namespace AetherUtils.Core.Extensions
 
             listView.EndUpdate();
         }
+
+        /// <summary>
+        /// Apply a font to this control. This method is thread-safe.
+        /// </summary>
+        /// <param name="c">The <see cref="Control"/> to apply the font to.</param>
+        /// <param name="font">The <see cref="Font"/> to apply to the control.</param>
+        public static void ApplyFont(this Control c, Font font)
+        {
+            if (c.InvokeRequired)
+                c.Invoke(() => { c.Font = font; });
+            else
+                c.Font = font;
+        }
     }
 }

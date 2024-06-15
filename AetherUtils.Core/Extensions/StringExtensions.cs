@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Security;
 using System.Text;
 using System.Xml;
@@ -265,4 +266,44 @@ public static class StringExtensions
     /// <param name="str">The string to remove whitespace from.</param>
     /// <returns>A new string, without the whitespace characters.</returns>
     public static string RemoveWhitespace(this string str) => new(str.Where(c => !char.IsWhiteSpace(c)).ToArray());
+    
+    /// <summary>
+    /// Creates a new <see cref="Bitmap"/> image from the specified text. This image can then be used for a drag-drop operation to
+    /// show a preview of the data being dragged.
+    /// </summary>
+    /// <param name="text">The text to capture as a Bitmap.</param>
+    /// <param name="font">The font to draw the image string with.</param>
+    /// <returns>A new Bitmap "screenshot" of the text.</returns>
+    public static Bitmap CreateDragImage(this string text, Font font)
+    {
+        ArgumentException.ThrowIfNullOrEmpty(text, nameof(text));
+        ArgumentNullException.ThrowIfNull(font, nameof(font));
+        
+        using var g = Graphics.FromImage(new Bitmap(1, 1));
+        var textSize = g.MeasureString(text, font);
+
+        var bitmap = new Bitmap((int)textSize.Width, (int)textSize.Height);
+
+        using var gr = Graphics.FromImage(bitmap);
+        gr.Clear(Color.Transparent);
+        gr.DrawString(text, font, Brushes.Black, 0, 0);
+
+        bitmap.MakeTransparent();
+        return bitmap;
+    }
+    
+    /// <summary>
+    /// Opens the specified URL in the default web browser.
+    /// </summary>
+    /// <param name="url">The URL to open.</param>
+    public static void OpenUrl(this string url)
+    {
+        ArgumentException.ThrowIfNullOrEmpty(url, nameof(url));
+        
+        Process.Start(new ProcessStartInfo
+        {
+            FileName = url,
+            UseShellExecute = true
+        });
+    }
 }

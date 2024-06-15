@@ -15,8 +15,9 @@
     <FileVersion></FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageIcon>logo.png</PackageIcon>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <PackageProjectUrl>https://ethan-hann.github.io/AetherUtils</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ethan-hann/AetherUtils</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

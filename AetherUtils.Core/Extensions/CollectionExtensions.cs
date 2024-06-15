@@ -39,4 +39,21 @@ public static class CollectionExtensions
             dictionary.Add(newKey, value);
         }
     }
+    
+    /// <summary>
+    /// Checks if the two lists contain the same items.
+    /// </summary>
+    /// <typeparam name="T">The type of items in the lists.</typeparam>
+    /// <param name="list1">The source list.</param>
+    /// <param name="list2">The list to compare list 1 against.</param>
+    /// <returns></returns>
+    public static bool AreListsEqual<T>(this IList<T> list1, IList<T> list2) where T : notnull
+    {
+        if (list1.Count != list2.Count) return false;
+
+        var dict1 = list1.GroupBy(x => x).ToDictionary(g => g.Key, g =>g.Count());
+        var dict2 = list2.GroupBy(x => x).ToDictionary(g => g.Key, g =>g.Count());
+
+        return dict1.Count == dict2.Count && !dict1.Except(dict2).Any();
+    }
 }
