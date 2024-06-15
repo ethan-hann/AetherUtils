@@ -14,8 +14,8 @@ namespace AetherUtils.Core.Reflection;
 /// </summary>
 public sealed class FontHandler
 {
-    private readonly object _lock = new object();
-    private FontHandler? _instance = null;
+    private static readonly object Lock = new object();
+    private static FontHandler? _instance = null;
     private readonly Dictionary<string, string> _fontDict = new();
     
     private PrivateFontCollection _privateFonts = new();
@@ -23,11 +23,11 @@ public sealed class FontHandler
     /// <summary>
     /// Get the single instance of the <see cref="FontLoader"/>.
     /// </summary>
-    public FontHandler Instance
+    public static FontHandler Instance
     {
         get
         {
-            lock (_lock)
+            lock (Lock)
             {
                 return _instance ??= new FontHandler();
             }

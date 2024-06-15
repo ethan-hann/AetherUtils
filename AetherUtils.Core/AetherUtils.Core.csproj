@@ -8,7 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>12</LangVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Title>Aether Utils Core</Title>
+    <Title>AetherUtils</Title>
     <Copyright>2024 Ethan Hann</Copyright>
     <Description>A set of core utilities and custom controls for other projects.</Description>
     <AssemblyVersion></AssemblyVersion>
@@ -18,6 +18,8 @@
     <Version>1.0.5</Version>
     <PackageProjectUrl>https://ethan-hann.github.io/AetherUtils</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ethan-hann/AetherUtils</RepositoryUrl>
+    <Authors>Ethan Hann</Authors>
+    <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
