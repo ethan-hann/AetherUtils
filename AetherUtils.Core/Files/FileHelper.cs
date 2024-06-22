@@ -1,4 +1,6 @@
-﻿using AetherUtils.Core.RegEx;
+﻿using System.Diagnostics;
+using System.Security;
+using AetherUtils.Core.RegEx;
 using System.Text;
 
 namespace AetherUtils.Core.Files
@@ -215,6 +217,56 @@ namespace AetherUtils.Core.Files
             ArgumentException.ThrowIfNullOrEmpty(path, nameof(path));
             path = expandPath ? ExpandPath(path) : path;
             return RegexGenerator.PathRegex().IsMatch(path);
+        }
+        
+        /// <summary>
+        /// Enumerates directories in the specified path, handling restricted access and other exceptions.
+        /// </summary>
+        /// <param name="path">The directory path to search for directories.</param>
+        /// <param name="searchPattern">The search string to match against the names of directories in <paramref name="path"/>. Defaults to "*".</param>
+        /// <param name="searchOption">Specifies whether to search the current directory, or all subdirectories. Defaults to <see cref="SearchOption.TopDirectoryOnly"/>.</param>
+        /// <returns>An enumerable collection of directory names in the specified directory.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="path"/> is null.</exception>
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="searchOption"/> is not a valid <see cref="SearchOption"/> value.</exception>
+        public static IEnumerable<string> SafeEnumerateDirectories(string path, string searchPattern = "*", SearchOption searchOption = SearchOption.TopDirectoryOnly)
+        {
+            var directories = new List<string>();
+            try
+            {
+                directories.AddRange(Directory.EnumerateDirectories(path, searchPattern, searchOption));
+            }
+            catch (UnauthorizedAccessException) {}
+            catch (PathTooLongException) {}
+            catch (DirectoryNotFoundException){}
+            catch (SecurityException){}
+            catch (IOException) {}
+
+            return directories;
+        }
+
+        /// <summary>
+        /// Enumerates files in the specified path, handling restricted access and other exceptions.
+        /// </summary>
+        /// <param name="path">The directory path to search for files.</param>
+        /// <param name="searchPattern">The search string to match against the names of files in <paramref name="path"/>. Defaults to "*.*".</param>
+        /// <param name="searchOption">Specifies whether to search the current directory, or all subdirectories. Defaults to <see cref="SearchOption.TopDirectoryOnly"/>.</param>
+        /// <returns>An enumerable collection of file names in the specified directory.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="path"/> is null.</exception>
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="searchOption"/> is not a valid <see cref="SearchOption"/> value.</exception>
+        public static IEnumerable<string> SafeEnumerateFiles(string path, string searchPattern = "*.*", SearchOption searchOption = SearchOption.TopDirectoryOnly)
+        {
+            var files = new List<string>();
+            try
+            {
+                files.AddRange(Directory.EnumerateFiles(path, searchPattern, searchOption));
+            }
+            catch (UnauthorizedAccessException) {}
+            catch (PathTooLongException) {}
+            catch (DirectoryNotFoundException){}
+            catch (SecurityException){}
+            catch (IOException) {}
+
+            return files;
         }
 
         #endregion
