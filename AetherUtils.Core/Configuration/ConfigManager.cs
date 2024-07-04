@@ -147,6 +147,12 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     }
 
     /// <summary>
+    /// Get the current configuration as an object.
+    /// </summary>
+    /// <returns>The current configuration or <c>null</c> if not initialized.</returns>
+    public T? GetConfig() => CurrentConfig;
+
+    /// <summary>
     /// Get a configuration value specified by the configuration <paramref name="option"/>.
     /// </summary>
     /// <param name="option">The <see cref="ConfigOption"/> containing information about the value to get.</param>
