@@ -153,6 +153,16 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     public T? GetConfig() => CurrentConfig;
 
     /// <summary>
+    /// Set the current configuration object. This is more convenient than setting each property manually using <see cref="Set(AetherUtils.Core.Structs.ConfigOption)"/>.
+    /// </summary>
+    /// <param name="config">The configuration object to set the internal config to.</param>
+    public void SetConfig(T? config)
+    {
+        if (config != null)
+            CurrentConfig = config;
+    }
+
+    /// <summary>
     /// Get a configuration value specified by the configuration <paramref name="option"/>.
     /// </summary>
     /// <param name="option">The <see cref="ConfigOption"/> containing information about the value to get.</param>

@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System.ComponentModel;
+using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
@@ -10,6 +11,7 @@ namespace AetherUtils.Core.Utility
 
     /// <summary>
     /// Represents a generic key-value dictionary that is serializable via XML serialization.
+    /// Also implements <see cref="INotifyPropertyChanged"/> and <see cref="IEquatable{T}"/> for comparisons.
     /// <para>This derived type from <see cref="Dictionary{TKey, TValue}"/> does not allow <c>null</c> for its values.</para>
     /// </summary>
     /// <typeparam name="TKey">The <see cref="Type"/> for the keys in this dictionary.</typeparam>
@@ -17,7 +19,7 @@ namespace AetherUtils.Core.Utility
     [XmlRoot("dictionary")]
     [Serializable]
     public sealed class SerializableDictionary<TKey, TValue> : 
-        Dictionary<TKey, TValue>, IXmlSerializable where TKey : notnull where TValue : notnull
+        Dictionary<TKey, TValue>, IXmlSerializable, INotifyPropertyChanged, ICloneable, IEquatable<SerializableDictionary<TKey, TValue>> where TKey : notnull
     {
         public XmlSchema? GetSchema() => null;
 
@@ -26,7 +28,7 @@ namespace AetherUtils.Core.Utility
             XmlSerializer keySerializer = new(typeof(TKey));
             XmlSerializer valueSerializer = new(typeof(TValue));
 
-            bool wasEmpty = reader.IsEmptyElement;
+            var wasEmpty = reader.IsEmptyElement;
 
             reader.Read();
             if (wasEmpty)
@@ -36,11 +38,11 @@ namespace AetherUtils.Core.Utility
             {
                 reader.ReadStartElement("item");
                 reader.ReadStartElement("key");
-                TKey? key = (TKey?)keySerializer.Deserialize(reader);
+                var key = (TKey?)keySerializer.Deserialize(reader);
                 reader.ReadEndElement();
 
                 reader.ReadStartElement("value");
-                TValue? value = (TValue?)valueSerializer.Deserialize(reader);
+                var value = (TValue?)valueSerializer.Deserialize(reader);
                 reader.ReadEndElement();
 
                 if (key == null)
@@ -54,6 +56,7 @@ namespace AetherUtils.Core.Utility
                 reader.MoveToContent();
             }
             reader.ReadEndElement();
+            OnPropertyChanged(nameof(Count));
         }
 
         public void WriteXml(XmlWriter writer)
@@ -61,7 +64,7 @@ namespace AetherUtils.Core.Utility
             XmlSerializer keySerializer = new(typeof(TKey));
             XmlSerializer valueSerializer = new(typeof(TValue));
 
-            foreach (TKey key in Keys)
+            foreach (var key in Keys)
             {
                 writer.WriteStartElement("item");
                 writer.WriteStartElement("key");
@@ -69,11 +72,40 @@ namespace AetherUtils.Core.Utility
                 writer.WriteEndElement();
 
                 writer.WriteStartElement("value");
-                TValue value = this[key];
+                var value = this[key];
                 valueSerializer.Serialize(writer, value);
                 writer.WriteEndElement();
                 writer.WriteEndElement();
             }
+            
+            OnPropertyChanged(nameof(Count));
         }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        
+        public object Clone()
+        {
+            var clone = new SerializableDictionary<TKey, TValue>();
+            foreach (var pair in this)
+                clone.Add(pair.Key, pair.Value);
+            return clone;
+        }
+
+        public bool Equals(SerializableDictionary<TKey, TValue>? other)
+        {
+            return other != null && Keys.SequenceEqual(other.Keys) && Values.SequenceEqual(other.Values);
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return Equals(obj as SerializableDictionary<TKey, TValue>);
+        }
+
+        public override int GetHashCode() => HashCode.Combine(Keys);
     }
 }
