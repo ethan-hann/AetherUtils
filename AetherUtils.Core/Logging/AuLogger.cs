@@ -65,7 +65,11 @@ namespace AetherUtils.Core.Logging
                 logFile.Header = options.LogHeader;
             if (!options.LogFooter.Equals(string.Empty))
                 logFile.Footer = options.LogFooter;
-
+            
+            //Set up appropriate locking and access
+            logFile.KeepFileOpen = false;
+            logFile.ConcurrentWrites = true;
+            
             return logFile;
         }
 
