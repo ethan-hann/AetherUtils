@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFrameworks>net9.0-windows;net8.0-windows</TargetFrameworks>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
@@ -11,11 +11,11 @@
     <Title>AetherUtils</Title>
     <Copyright>2024 Ethan Hann</Copyright>
     <Description>A set of core utilities and custom controls for other projects.</Description>
-    <AssemblyVersion>1.0.11</AssemblyVersion>
-    <FileVersion>1.0.11</FileVersion>
+    <AssemblyVersion>1.0.12</AssemblyVersion>
+    <FileVersion>1.0.12</FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageIcon>logo.png</PackageIcon>
-    <Version>1.0.11</Version>
+    <Version>1.0.12</Version>
     <PackageProjectUrl>https://ethan-hann.github.io/AetherUtils</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ethan-hann/AetherUtils</RepositoryUrl>
     <Authors>Ethan Hann</Authors>
