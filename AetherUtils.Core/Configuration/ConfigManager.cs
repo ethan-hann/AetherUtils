@@ -1,22 +1,45 @@
-﻿using AetherUtils.Core.Attributes;
-using AetherUtils.Core.Files;
-using AetherUtils.Core.Reflection;
-using AetherUtils.Core.Structs;
+﻿// // ConfigManager.cs : AetherUtils
+// // Copyright (C) 2025  Ethan Hann
+// //
+// // MIT License
+// // Permission is hereby granted, free of charge, to any person obtaining a copy
+// // of this software and associated documentation files (the "Software"), to deal
+// // in the Software without restriction, including without limitation the rights
+// // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// // copies of the Software, and to permit persons to whom the Software is
+// // furnished to do so, subject to the following conditions:
+// //
+// // The above copyright notice and this permission notice shall be included in all
+// // copies or substantial portions of the Software.
+// //
+// // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// // SOFTWARE.
+
 using System.Collections;
 using System.Diagnostics;
 using System.Reflection;
+using AetherUtils.Core.Attributes;
+using AetherUtils.Core.Files;
+using AetherUtils.Core.Reflection;
+using AetherUtils.Core.Structs;
+using JetBrains.Annotations;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
 namespace AetherUtils.Core.Configuration;
 
 /// <summary>
-/// Provides methods for saving, loading, and querying a generic configuration.
-/// This class cannot be instantiated. A child class must be created inheriting from this class.
+///     Provides methods for saving, loading, and querying a generic configuration.
+///     This class cannot be instantiated. A child class must be created inheriting from this class.
 /// </summary>
 /// <remarks>
-/// The custom class should have its properties related to configuration marked with a <see cref="ConfigAttribute"/>.
-/// These properties are the only ones which will be serialized and de-serialized from disk.
+///     The custom class should have its properties related to configuration marked with a <see cref="ConfigAttribute" />.
+///     These properties are the only ones which will be serialized and de-serialized from disk.
 /// </remarks>
 /// <typeparam name="T">The DTO class that represents the configuration.</typeparam>
 public abstract class ConfigManager<T>(string configFilePath) : IConfig
@@ -31,65 +54,62 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
         .IncludeNonPublicProperties().Build();
 
     /// <summary>
-    /// Get or set the current configuration.
+    ///     Get or set the current configuration.
     /// </summary>
     protected T? CurrentConfig { get; set; }
 
     /// <summary>
-    /// Get or set the path to the configuration file on disk.
+    ///     Get or set the path to the configuration file on disk.
     /// </summary>
     public string? ConfigFilePath { get; set; } = configFilePath;
 
     /// <summary>
-    /// Get a value indicating whether the configuration has been initialized.
+    ///     Get a value indicating whether the configuration has been initialized.
     /// </summary>
     public bool IsInitialized => CurrentConfig != null;
 
     /// <summary>
-    /// Get a value indicating whether the configuration file exists on disk.
+    ///     Get a value indicating whether the configuration file exists on disk.
     /// </summary>
     public bool ConfigExists => ConfigFilePath != null && FileHelper.DoesFileExist(ConfigFilePath);
 
     /// <summary>
-    /// Create the default configuration.
-    /// </summary>
-    public abstract bool CreateDefaultConfig();
-
-    /// <summary>
-    /// Asynchronously load a configuration file from disk based on the <see cref="ConfigFilePath"/>.
+    ///     Asynchronously load a configuration file from disk based on the <see cref="ConfigFilePath" />.
     /// </summary>
     /// <returns><c>true</c> if the config loaded successfully; <c>false</c> otherwise.</returns>
-    /// <exception cref="ArgumentException">If <see cref="ConfigFilePath"/> is <c>null</c> or empty.</exception>
-    /// <exception cref="FileNotFoundException">If the configuration file specified by <see cref="ConfigFilePath"/>
-    /// was not found on disk.</exception>
+    /// <exception cref="ArgumentException">If <see cref="ConfigFilePath" /> is <c>null</c> or empty.</exception>
+    /// <exception cref="FileNotFoundException">
+    ///     If the configuration file specified by <see cref="ConfigFilePath" />
+    ///     was not found on disk.
+    /// </exception>
     public Task<bool> LoadAsync()
     {
         ArgumentException.ThrowIfNullOrEmpty(ConfigFilePath);
-        
+
         var filePath = FileHelper.ExpandPath(ConfigFilePath);
-        
+
         if (!FileHelper.DoesFileExist(filePath, false))
             throw new FileNotFoundException("Configuration file not found.", filePath);
 
         var text = FileHelper.OpenFileAsync(filePath, false);
         CurrentConfig = _deserializer.Deserialize<T>(text.Result);
         ConfigFilePath = filePath;
-        
+
         return Task.FromResult(IsInitialized);
     }
-    
+
     /// <summary>
-    /// Load a configuration file from disk based on the <see cref="ConfigFilePath"/>.
+    ///     Load a configuration file from disk based on the <see cref="ConfigFilePath" />.
     /// </summary>
     /// <returns><c>true</c> if the config loaded successfully; <c>false</c> otherwise.</returns>
-    /// <exception cref="ArgumentException">If <see cref="ConfigFilePath"/> is <c>null</c> or empty.</exception>
+    /// <exception cref="ArgumentException">If <see cref="ConfigFilePath" /> is <c>null</c> or empty.</exception>
     /// <exception cref="FileNotFoundException"></exception>
     public bool Load()
     {
         ArgumentException.ThrowIfNullOrEmpty(ConfigFilePath);
-        
+
         var filePath = FileHelper.ExpandPath(ConfigFilePath);
-        
+
         if (!FileHelper.DoesFileExist(filePath, false))
             throw new FileNotFoundException("Configuration file not found.", filePath);
 
@@ -101,45 +121,23 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     }
 
     /// <summary>
-    /// Asynchronously save a configuration file to disk based on the <see cref="CurrentConfig"/> and the <see cref="ConfigFilePath"/>.
+    ///     Asynchronously save a configuration file to disk based on the <see cref="CurrentConfig" /> and the
+    ///     <see cref="ConfigFilePath" />.
     /// </summary>
     /// <returns><c>true</c> if the config saved successfully; <c>false</c> otherwise.</returns>
-    /// <exception cref="ArgumentException">If <see cref="ConfigFilePath"/> is <c>null</c> or empty.</exception>
-    public Task<bool> SaveAsync()
-    {
-        ArgumentException.ThrowIfNullOrEmpty(ConfigFilePath);
-        
-        var filePath = FileHelper.ExpandPath(ConfigFilePath);
-        
-        var serializedString = _serializer.Serialize(CurrentConfig);
-        FileHelper.CreateDirectories(filePath);
-        FileHelper.SaveFileAsync(filePath, serializedString, false);
-
-        var fileExists = FileHelper.DoesFileExist(filePath);
-        
-        if (fileExists)
-            ConfigFilePath = filePath;
-        
-        return Task.FromResult(fileExists);
-    }
-
-    /// <summary>
-    /// Save a configuration file to disk based on the <see cref="CurrentConfig"/> and the <see cref="ConfigFilePath"/>.
-    /// </summary>
-    /// <returns><c>true</c> if the config saved successfully; <c>false</c> otherwise.</returns>
-    /// <exception cref="ArgumentException">If <see cref="ConfigFilePath"/> is <c>null</c> or empty.</exception>
-    public bool Save()
+    /// <exception cref="ArgumentException">If <see cref="ConfigFilePath" /> is <c>null</c> or empty.</exception>
+    public async Task<bool> SaveAsync()
     {
         ArgumentException.ThrowIfNullOrEmpty(ConfigFilePath);
 
         var filePath = FileHelper.ExpandPath(ConfigFilePath);
-        
+
         var serializedString = _serializer.Serialize(CurrentConfig);
         FileHelper.CreateDirectories(filePath);
-        FileHelper.SaveFile(filePath, serializedString, false);
+        await FileHelper.SaveFileAsync(filePath, serializedString, false);
 
         var fileExists = FileHelper.DoesFileExist(filePath);
-        
+
         if (fileExists)
             ConfigFilePath = filePath;
 
@@ -147,25 +145,32 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     }
 
     /// <summary>
-    /// Get the current configuration as an object.
+    ///     Save a configuration file to disk based on the <see cref="CurrentConfig" /> and the <see cref="ConfigFilePath" />.
     /// </summary>
-    /// <returns>The current configuration or <c>null</c> if not initialized.</returns>
-    public T? GetConfig() => CurrentConfig;
-
-    /// <summary>
-    /// Set the current configuration object. This is more convenient than setting each property manually using <see cref="Set(AetherUtils.Core.Structs.ConfigOption)"/>.
-    /// </summary>
-    /// <param name="config">The configuration object to set the internal config to.</param>
-    public void SetConfig(T? config)
+    /// <returns><c>true</c> if the config saved successfully; <c>false</c> otherwise.</returns>
+    /// <exception cref="ArgumentException">If <see cref="ConfigFilePath" /> is <c>null</c> or empty.</exception>
+    public bool Save()
     {
-        if (config != null)
-            CurrentConfig = config;
+        ArgumentException.ThrowIfNullOrEmpty(ConfigFilePath);
+
+        var filePath = FileHelper.ExpandPath(ConfigFilePath);
+
+        var serializedString = _serializer.Serialize(CurrentConfig);
+        FileHelper.CreateDirectories(filePath);
+        FileHelper.SaveFile(filePath, serializedString, false);
+
+        var fileExists = FileHelper.DoesFileExist(filePath);
+
+        if (fileExists)
+            ConfigFilePath = filePath;
+
+        return fileExists;
     }
 
     /// <summary>
-    /// Get a configuration value specified by the configuration <paramref name="option"/>.
+    ///     Get a configuration value specified by the configuration <paramref name="option" />.
     /// </summary>
-    /// <param name="option">The <see cref="ConfigOption"/> containing information about the value to get.</param>
+    /// <param name="option">The <see cref="ConfigOption" /> containing information about the value to get.</param>
     /// <returns>The configuration value or <c>null</c> if the value did not exist.</returns>
     public object? Get(ConfigOption option)
     {
@@ -176,15 +181,15 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
         {
             var attrib = result.Property.GetCustomAttribute<ConfigAttribute>();
             if (attrib == null) continue;
-            
+
             if (!attrib.Name.Equals(option.Name)) continue;
-            
+
             if (!option.ArrayIndexExists)
                 return result.Property.GetValue(result.Instance);
-            
+
             var currentVal = result.Property.GetValue(result.Instance);
             if (currentVal == null || !Reflect.IsList(currentVal.GetType())) continue;
-            
+
             try
             {
                 var currentList = currentVal as IList;
@@ -200,39 +205,55 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     }
 
     /// <summary>
-    /// Get a configuration value specified by <paramref name="configName"/>.
+    ///     Set a configuration value specified by the configuration <paramref name="option" />.
+    /// </summary>
+    /// <param name="option">The <see cref="ConfigOption" /> containing information about the value to set.</param>
+    /// <returns><c>true</c> if the value was set successfully; <c>false</c> otherwise.</returns>
+    public bool Set(ConfigOption option) => IsInitialized && Set(option, CurrentConfig);
+
+    /// <summary>
+    ///     Create the default configuration.
+    /// </summary>
+    [UsedImplicitly]
+    public abstract bool CreateDefaultConfig();
+
+    /// <summary>
+    ///     Get the current configuration as an object.
+    /// </summary>
+    /// <returns>The current configuration or <c>null</c> if not initialized.</returns>
+    [UsedImplicitly]
+    public T? GetConfig() => CurrentConfig;
+
+    /// <summary>
+    ///     Set the current configuration object. This is more convenient than setting each property manually using
+    ///     <see cref="Set(AetherUtils.Core.Structs.ConfigOption)" />.
+    /// </summary>
+    /// <param name="config">The configuration object to set the internal config to.</param>
+    [UsedImplicitly]
+    public void SetConfig(T? config)
+    {
+        if (config != null)
+            CurrentConfig = config;
+    }
+
+    /// <summary>
+    ///     Get a configuration value specified by <paramref name="configName" />.
     /// </summary>
     /// <param name="configName">The name of the configuration to get.</param>
     /// <returns>The configuration value or <c>null</c> if the value did not exist.</returns>
-    public object? Get(string configName)
-    {
-        return !IsInitialized ? default
-            : Get(new ConfigOption(configName, null));
-    }
+    public object? Get(string configName) => !IsInitialized ? null : Get(new ConfigOption(configName, null));
 
     /// <summary>
-    /// Set a configuration value specified by the configuration <paramref name="option"/>.
-    /// </summary>
-    /// <param name="option">The <see cref="ConfigOption"/> containing information about the value to set.</param>
-    /// <returns><c>true</c> if the value was set successfully; <c>false</c> otherwise.</returns>
-    public bool Set(ConfigOption option)
-    {
-        return IsInitialized && Set(option, CurrentConfig);
-    }
-
-    /// <summary>
-    /// Set a configuration <paramref name="value"/> specified by <paramref name="configName"/>.
+    ///     Set a configuration <paramref name="value" /> specified by <paramref name="configName" />.
     /// </summary>
     /// <param name="configName">The name of the configuration to set.</param>
     /// <param name="value">The value to set.</param>
     /// <returns><c>true</c> if the value was set successfully; <c>false</c> otherwise.</returns>
-    public bool Set(string configName, object? value)
-    {
-        return IsInitialized && Set(new ConfigOption(configName, value), CurrentConfig);
-    }
+    [UsedImplicitly]
+    public bool Set(string configName, object? value) => IsInitialized && Set(new ConfigOption(configName, value), CurrentConfig);
 
     /// <summary>
-    /// Set a configuration option specified by <paramref name="option"/>.
+    ///     Set a configuration option specified by <paramref name="option" />.
     /// </summary>
     /// <param name="option">The configuration option to set.</param>
     /// <param name="instance">The instance of the configuration to set the option on.</param>
@@ -253,15 +274,15 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
 
             var currentVal = result.Property.GetValue(result.Instance);
             if (currentVal == null || !Reflect.IsList(currentVal.GetType())) continue;
-            
+
             var elementType = Reflect.GetCollectionElementType(currentVal.GetType());
             if (elementType == null) continue;
-            
+
             var newList = Activator.CreateInstance(currentVal.GetType()) as IList;
-                
+
             if (currentVal is not IList currentList) continue;
             if (newList == null) continue;
-                
+
             foreach (var t in currentList)
                 newList.Add(t);
 

@@ -1,119 +1,148 @@
-﻿using AetherUtils.Core.Extensions;
+﻿// // ObjectEncryptionService.cs : AetherUtils
+// // Copyright (C) 2025  Ethan Hann
+// //
+// // MIT License
+// // Permission is hereby granted, free of charge, to any person obtaining a copy
+// // of this software and associated documentation files (the "Software"), to deal
+// // in the Software without restriction, including without limitation the rights
+// // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// // copies of the Software, and to permit persons to whom the Software is
+// // furnished to do so, subject to the following conditions:
+// //
+// // The above copyright notice and this permission notice shall be included in all
+// // copies or substantial portions of the Software.
+// //
+// // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// // SOFTWARE.
+
+using AetherUtils.Core.Extensions;
 using AetherUtils.Core.Files;
 
-namespace AetherUtils.Core.Security.Encryption
+namespace AetherUtils.Core.Security.Encryption;
+
+/// <summary>
+///     Provides methods to encrypt and decrypt XML serializable .NET objects.
+/// </summary>
+/// <typeparam name="T">The object type to encrypt/decrypt. This type must support XML serialization.</typeparam>
+public sealed class ObjectEncryptionService<T> : EncryptionBase, IEncryptService<T, byte[]> where T : class
 {
+    private readonly FileEncryptionService _fileEncryptionService = new();
+    private readonly StringEncryptionService _stringEncryptor = new();
+
     /// <summary>
-    /// Provides methods to encrypt and decrypt XML serializable .NET objects.
+    ///     Encrypt a .NET XML serializable object to an encrypted <see cref="byte" /> array.
     /// </summary>
-    /// <typeparam name="T">The object type to encrypt/decrypt. This type must support XML serialization.</typeparam>
-    public sealed class ObjectEncryptionService<T> : EncryptionBase, IEncryptService<T, byte[]> where T : class
+    /// <param name="input">The serializable .NET object.</param>
+    /// <param name="passphrase">The passphrase for encryption.</param>
+    /// <returns>An encrypted .NET object represented as a serialized <see cref="byte" /> array.</returns>
+    /// <exception cref="InvalidOperationException">
+    ///     If the <paramref name="input" /> could not serialized to type
+    ///     <typeparamref name="T" />.
+    /// </exception>
+    public async Task<byte[]> EncryptAsync(T input, string passphrase)
     {
-        private readonly StringEncryptionService _stringEncryptor = new();
-        private readonly FileEncryptionService _fileEncryptionService = new();
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
 
-        /// <summary>
-        /// Encrypt a .NET XML serializable object to an encrypted <see cref="byte"/> array.
-        /// </summary>
-        /// <param name="input">The serializable .NET object.</param>
-        /// <param name="passphrase">The passphrase for encryption.</param>
-        /// <returns>An encrypted .NET object represented as a serialized <see cref="byte"/> array.</returns>
-        /// <exception cref="InvalidOperationException">If the <paramref name="input"/> could not serialized to type <typeparamref name="T"/>.</exception>
-        public async Task<byte[]> EncryptAsync(T input, string passphrase)
-        {
-            ArgumentNullException.ThrowIfNull(input, nameof(input));
+        if (!input.CanSerializeXml())
+            throw new InvalidOperationException($"{input.GetType()} does not support XML serialization.");
 
-            if (!input.CanSerializeXml())
-                throw new InvalidOperationException($"{input.GetType()} does not support XML serialization.");
+        if (input is string inputString)
+            return await _stringEncryptor.EncryptAsync(inputString, passphrase);
 
-            if (input is string inputString)
-                return await _stringEncryptor.EncryptAsync(inputString, passphrase);
-            
-            var objectString = input.SerializeXml();
+        var objectString = input.SerializeXml();
 
-            return await _stringEncryptor.EncryptAsync(objectString, passphrase);
-        }
+        return await _stringEncryptor.EncryptAsync(objectString, passphrase);
+    }
 
-        /// <summary>
-        /// Decrypt a .NET object represented as an encrypted XML serialized <see cref="byte"/> array.
-        /// </summary>
-        /// <param name="input">The serialized, encrypted .NET object as a <see cref="byte"/> array.</param>
-        /// <param name="passphrase">The passphrase for decryption.</param>
-        /// <returns>The <typeparamref name="T"/> object, decrypted and deserialized.</returns>
-        /// <exception cref="ArgumentNullException">If the <paramref name="input"/> was <c>null</c> or 0-length.</exception>
-        /// <exception cref="FormatException">If the <paramref name="input"/> could not be deserialized to type <typeparamref name="T"/>.</exception>
-        public async Task<T> DecryptAsync(byte[] input, string passphrase)
-        {
-            if (input == null || input.Length == 0) throw new ArgumentNullException(nameof(input));
+    /// <summary>
+    ///     Decrypt a .NET object represented as an encrypted XML serialized <see cref="byte" /> array.
+    /// </summary>
+    /// <param name="input">The serialized, encrypted .NET object as a <see cref="byte" /> array.</param>
+    /// <param name="passphrase">The passphrase for decryption.</param>
+    /// <returns>The <typeparamref name="T" /> object, decrypted and deserialized.</returns>
+    /// <exception cref="ArgumentNullException">If the <paramref name="input" /> was <c>null</c> or 0-length.</exception>
+    /// <exception cref="FormatException">
+    ///     If the <paramref name="input" /> could not be deserialized to type
+    ///     <typeparamref name="T" />.
+    /// </exception>
+    public async Task<T> DecryptAsync(byte[] input, string passphrase)
+    {
+        if (input == null || input.Length == 0) throw new ArgumentNullException(nameof(input));
 
-            var decrypted = await _stringEncryptor.DecryptAsync(input, passphrase);
+        var decrypted = await _stringEncryptor.DecryptAsync(input, passphrase);
 
-            var result = decrypted.DeserializeXml<T>();
-            
-            if (result == null)
-                throw new FormatException("The input was not in the correct format for decryption.");
-            return result;
-        }
+        var result = decrypted.DeserializeXml<T>();
 
-        /// <summary>
-        /// Encrypt a .NET XML serializable object to an encrypted file.
-        /// </summary>
-        /// <param name="input">The serializable .NET object.</param>
-        /// <param name="filePath">The file to create (or overwrite).</param>
-        /// <param name="passphrase">The passphrase for encryption.</param>
-        /// <returns>An encrypted .NET object represented as a serialized <see cref="byte"/> array; or an empty <see cref="byte"/> array if the encryption failed.</returns>
-        /// <exception cref="InvalidOperationException">If the <paramref name="input"/> could not serialized to type <typeparamref name="T"/>.</exception>
-        public async Task<byte[]> EncryptToFileAsync(T input, string filePath, string passphrase)
-        {
-            ArgumentNullException.ThrowIfNull(input, nameof(input));
-            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
-
-            _fileEncryptionService.FilePath = filePath;
-
-            if (!input.CanSerializeXml())
-                throw new InvalidOperationException($"{input.GetType()} does not support XML serialization.");
-
-            if (input is string inputString)
-                return await _stringEncryptor.EncryptAsync(inputString, passphrase);
-            
-            var objectString = input.SerializeXml();
-
-            var encryptedPath = string.Empty;
-            if (objectString is { } obj)
-                encryptedPath = await _fileEncryptionService.EncryptAsync(obj, passphrase);
-
-            if (!encryptedPath.Equals(string.Empty))
-                return await File.ReadAllBytesAsync(encryptedPath);
-
-            return [];
-        }
-
-        /// <summary>
-        /// Decrypt a .NET object from an encrypted file.
-        /// </summary>
-        /// <param name="filePath">The path to the file containing an encrypted, serialized .NET object.</param>
-        /// <param name="passphrase">The passphrase for decryption.</param>
-        /// <returns>The <typeparamref name="T"/> object, decrypted and deserialized.</returns>
-        /// <exception cref="FileNotFoundException">If the file specified by <paramref name="filePath"/> did not exist.</exception>
-        /// <exception cref="FormatException">If the object could not be deserialized to a new .NET object.</exception>
-        public async Task<T> DecryptFromFileAsync(string filePath, string passphrase)
-        {
-            ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
-
-            filePath = FileHelper.ExpandPath(filePath);
-            
-            if (!FileHelper.DoesFileExist(filePath))
-                throw new FileNotFoundException(nameof(filePath));
-
-            
-
-            var decryptedContents = await _fileEncryptionService.DecryptAsync(filePath, passphrase);
-
-            T? result = decryptedContents.DeserializeXml<T>();
-            if (result is not null)
-                return result;
-
+        if (result == null)
             throw new FormatException("The input was not in the correct format for decryption.");
-        }
+        return result;
+    }
+
+    /// <summary>
+    ///     Encrypt a .NET XML serializable object to an encrypted file.
+    /// </summary>
+    /// <param name="input">The serializable .NET object.</param>
+    /// <param name="filePath">The file to create (or overwrite).</param>
+    /// <param name="passphrase">The passphrase for encryption.</param>
+    /// <returns>
+    ///     An encrypted .NET object represented as a serialized <see cref="byte" /> array; or an empty
+    ///     <see cref="byte" /> array if the encryption failed.
+    /// </returns>
+    /// <exception cref="InvalidOperationException">
+    ///     If the <paramref name="input" /> could not serialized to type
+    ///     <typeparamref name="T" />.
+    /// </exception>
+    public async Task<byte[]> EncryptToFileAsync(T input, string filePath, string passphrase)
+    {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+        ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+
+        _fileEncryptionService.FilePath = filePath;
+
+        if (!input.CanSerializeXml())
+            throw new InvalidOperationException($"{input.GetType()} does not support XML serialization.");
+
+        if (input is string inputString)
+            return await _stringEncryptor.EncryptAsync(inputString, passphrase);
+
+        var objectString = input.SerializeXml();
+
+        var encryptedPath = await _fileEncryptionService.EncryptAsync(objectString, passphrase);
+
+        if (!encryptedPath.Equals(string.Empty))
+            return await File.ReadAllBytesAsync(encryptedPath);
+
+        return [];
+    }
+
+    /// <summary>
+    ///     Decrypt a .NET object from an encrypted file.
+    /// </summary>
+    /// <param name="filePath">The path to the file containing an encrypted, serialized .NET object.</param>
+    /// <param name="passphrase">The passphrase for decryption.</param>
+    /// <returns>The <typeparamref name="T" /> object, decrypted and deserialized.</returns>
+    /// <exception cref="FileNotFoundException">If the file specified by <paramref name="filePath" /> did not exist.</exception>
+    /// <exception cref="FormatException">If the object could not be deserialized to a new .NET object.</exception>
+    public async Task<T> DecryptFromFileAsync(string filePath, string passphrase)
+    {
+        ArgumentException.ThrowIfNullOrEmpty(filePath, nameof(filePath));
+
+        filePath = FileHelper.ExpandPath(filePath);
+
+        if (!FileHelper.DoesFileExist(filePath))
+            throw new FileNotFoundException(nameof(filePath));
+
+        var decryptedContents = await _fileEncryptionService.DecryptAsync(filePath, passphrase);
+
+        var result = decryptedContents.DeserializeXml<T>();
+        if (result is not null)
+            return result;
+
+        throw new FormatException("The input was not in the correct format for decryption.");
     }
 }

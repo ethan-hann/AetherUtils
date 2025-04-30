@@ -1,9 +1,32 @@
-﻿using System.Runtime.InteropServices;
-// ReSharper disable UnusedMember.Global
-// ReSharper disable IdentifierTypo
+﻿// // IconReader.cs : AetherUtils
+// // Copyright (C) 2025  Ethan Hann
+// //
+// // MIT License
+// // Permission is hereby granted, free of charge, to any person obtaining a copy
+// // of this software and associated documentation files (the "Software"), to deal
+// // in the Software without restriction, including without limitation the rights
+// // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// // copies of the Software, and to permit persons to whom the Software is
+// // furnished to do so, subject to the following conditions:
+// //
+// // The above copyright notice and this permission notice shall be included in all
+// // copies or substantial portions of the Software.
+// //
+// // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// // SOFTWARE.
+
+using System.Runtime.InteropServices;
+using JetBrains.Annotations;
+// ReSharper disable CollectionNeverQueried.Global
+
 // ReSharper disable InconsistentNaming
+// ReSharper disable MemberCanBePrivate.Global
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
 
 namespace AetherUtils.Core.WinForms;
 
@@ -28,6 +51,7 @@ public static class IconReader
         /// <summary>
         ///     Specify closed folder.
         /// </summary>
+        [UsedImplicitly]
         Closed = 1
     }
 
@@ -75,7 +99,7 @@ public static class IconReader
 
         // Copy (clone) the returned icon to a new object, thus allowing us to clean-up properly
         var icon = (Icon)Icon.FromHandle(shfi.hIcon).Clone();
-        User32.DestroyIcon(shfi.hIcon); // Cleanup
+        _ = User32.DestroyIcon(shfi.hIcon); // Cleanup
         return icon;
     }
 
@@ -85,6 +109,7 @@ public static class IconReader
     /// <param name="size">Specify large or small icons.</param>
     /// <param name="folderType">Specify open or closed FolderType.</param>
     /// <returns>System.Drawing.Icon</returns>
+    [UsedImplicitly]
     public static Icon GetFolderIcon(IconSize size, FolderType folderType)
     {
         // Need to add size check, although errors generated at present!
@@ -99,7 +124,7 @@ public static class IconReader
 
         // Get the folder icon
         var shfi = new Shell32.SHFILEINFO();
-        Shell32.SHGetFileInfo(null,
+        Shell32.SHGetFileInfo(string.Empty,
             Shell32.FILE_ATTRIBUTE_DIRECTORY,
             ref shfi,
             (uint)Marshal.SizeOf(shfi),
@@ -110,7 +135,7 @@ public static class IconReader
         // Now clone the icon, so that it can be successfully stored in an ImageList
         var icon = (Icon)Icon.FromHandle(shfi.hIcon).Clone();
 
-        User32.DestroyIcon(shfi.hIcon); // Cleanup
+        _ = User32.DestroyIcon(shfi.hIcon); // Cleanup
         return icon;
     }
 }
@@ -122,6 +147,7 @@ public static class IconReader
 
 // This code has been left largely untouched from that in the CRC example. The main changes have been moving
 // the icon reading code over to the IconReader type.
+[UsedImplicitly]
 public class Shell32
 {
     public const int MAX_PATH = 256;
@@ -163,7 +189,7 @@ public class Shell32
     public const uint FILE_ATTRIBUTE_DIRECTORY = 0x00000010;
     public const uint FILE_ATTRIBUTE_NORMAL = 0x00000080;
 
-    [DllImport("Shell32.dll")]
+    [DllImport("Shell32.dll", CharSet = CharSet.Unicode)]
     public static extern IntPtr SHGetFileInfo(
         string pszPath,
         uint dwFileAttributes,
@@ -217,6 +243,7 @@ public class Shell32
 /// <summary>
 ///     Wraps necessary functions imported from User32.dll. Code courtesy of MSDN Cold Rooster Consulting example.
 /// </summary>
+[UsedImplicitly]
 public class User32
 {
     /// <summary>

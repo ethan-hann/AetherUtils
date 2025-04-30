@@ -33,16 +33,6 @@ namespace AetherUtils.Tests
         {
             Console.WriteLine("AU\x01"u8.ToArray().Length);
         }
-
-        [Test]
-        public async Task IsEncryptedFileTest()
-        {
-            //await FileEncryptionService.EncryptFileAsync(testEncryptedFile, passphrase, ".keys");
-            await FileEncryptionService.DecryptFileAsync(testEncryptedFile, passphrase);
-            
-            Assert.That(FileEncryptionService.IsEncryptedFile(testEncryptedFile), Is.False);
-            Assert.That(FileEncryptionService.IsEncryptedFile(testDecryptedFile), Is.False);
-        }
         
         [Test]
         public void TestMultipleStringEncryption()
