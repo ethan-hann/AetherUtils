@@ -1,23 +1,44 @@
-﻿using AetherUtils.Core.Configuration;
+﻿// JsonTests.cs : AetherUtils
+// Copyright (C) 2025  Ethan Hann
+// 
+// MIT License
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
+using AetherUtils.Core.Configuration;
 using AetherUtils.Core.Files;
 
-namespace AetherUtils.Tests
-{
-    public class JsonTests
-    {
-        private readonly string configPath = "json\\config.json";
+namespace AetherUtils.Tests;
 
-        [Test]
-        public void TestLoadingAndSavingJson()
-        {
-            var config = new DefaultConfig();
-            var jsonHelper = new Json<DefaultConfig>();
-            
-            jsonHelper.SaveJson(configPath, config);
-            Assert.That(FileHelper.DoesFileExist(configPath), Is.True);
-            
-            var config2 = jsonHelper.LoadJson(configPath);
-            Assert.That(config2, Is.Not.Null);
-        }
+public class JsonTests
+{
+    private readonly string configPath = "json\\config.json";
+
+    [Test]
+    public void TestLoadingAndSavingJson()
+    {
+        var config = new DefaultConfig();
+        var jsonHelper = new Json<DefaultConfig>();
+
+        jsonHelper.SaveJson(configPath, config);
+        Assert.That(FileHelper.DoesFileExist(configPath), Is.True);
+
+        var config2 = jsonHelper.LoadJson(configPath);
+        Assert.That(config2, Is.Not.Null);
     }
 }

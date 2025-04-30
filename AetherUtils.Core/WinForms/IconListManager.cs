@@ -1,24 +1,24 @@
-﻿// // IconListManager.cs : AetherUtils
-// // Copyright (C) 2025  Ethan Hann
-// //
-// // MIT License
-// // Permission is hereby granted, free of charge, to any person obtaining a copy
-// // of this software and associated documentation files (the "Software"), to deal
-// // in the Software without restriction, including without limitation the rights
-// // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// // copies of the Software, and to permit persons to whom the Software is
-// // furnished to do so, subject to the following conditions:
-// //
-// // The above copyright notice and this permission notice shall be included in all
-// // copies or substantial portions of the Software.
-// //
-// // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// // SOFTWARE.
+﻿// IconListManager.cs : AetherUtils
+// Copyright (C) 2025  Ethan Hann
+// 
+// MIT License
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 
 using System.Collections;
 using JetBrains.Annotations;
@@ -31,11 +31,11 @@ namespace AetherUtils.Core.WinForms;
 [UsedImplicitly]
 public sealed class IconListManager
 {
+    private static readonly char[] Separator = ['.'];
     private readonly Hashtable _extensionList = new();
     private readonly IconReader.IconSize _iconSize;
     private readonly ArrayList _imageLists = new(); //will hold ImageList objects
     private readonly bool _manageBothSizes; //flag, used to determine whether to create two ImageLists.
-    private static readonly char[] Separator = ['.'];
 
     /// <summary>
     ///     Creates an instance of <c>IconListManager</c> that will add icons to a single <c>ImageList</c> using the
@@ -97,9 +97,9 @@ public sealed class IconListManager
         //return back its index
         if (_extensionList.ContainsKey(extension.ToUpper()))
             return (int)(_extensionList[extension.ToUpper()
-                                        ?? throw new InvalidOperationException()] 
+                                        ?? throw new InvalidOperationException()]
                          ?? throw new InvalidOperationException()); //return existing index
-        
+
         // It's not already been added, so add it and record its position.
         var pos = ((ImageList)_imageLists[0]!).Images.Count; //store current count -- new item's index
 
