@@ -88,13 +88,14 @@ public class ConfigManager<T> where T : class, new()
     /// <summary>
     ///     Asynchronously load a configuration file from disk based on the <see cref="ConfigFilePath" />.
     /// </summary>
+    /// <param name="applyDefaults">Indicates whether the default values should be applied to the loaded configuration.</param>
     /// <returns><c>true</c> if the config loaded successfully; <c>false</c> otherwise.</returns>
     /// <exception cref="ArgumentException">If <see cref="ConfigFilePath" /> is <c>null</c> or empty.</exception>
     /// <exception cref="FileNotFoundException">
     ///     If the configuration file specified by <see cref="ConfigFilePath" />
     ///     was not found on disk.
     /// </exception>
-    public Task<bool> LoadAsync()
+    public Task<bool> LoadAsync(bool applyDefaults = false)
     {
         ArgumentException.ThrowIfNullOrEmpty(ConfigFilePath);
 
@@ -106,7 +107,7 @@ public class ConfigManager<T> where T : class, new()
         var text = FileHelper.OpenFileAsync(filePath, false);
         CurrentConfig = _deserializer.Deserialize<T>(text.Result);
         
-        if (CurrentConfig != null)
+        if (applyDefaults && CurrentConfig != null)
             ConfigDefaultsApplier.ApplyDefaults(CurrentConfig);
         
         ConfigFilePath = filePath;
@@ -117,10 +118,11 @@ public class ConfigManager<T> where T : class, new()
     /// <summary>
     ///     Load a configuration file from disk based on the <see cref="ConfigFilePath" />.
     /// </summary>
+    /// <param name="applyDefaults">Indicates whether the default values should be applied to the loaded configuration.</param>
     /// <returns><c>true</c> if the config loaded successfully; <c>false</c> otherwise.</returns>
     /// <exception cref="ArgumentException">If <see cref="ConfigFilePath" /> is <c>null</c> or empty.</exception>
-    /// <exception cref="FileNotFoundException"></exception>
-    public bool Load()
+    /// <exception cref="FileNotFoundException">If the configuration file specified by <see cref="ConfigFilePath" /> was not found on disk.</exception>
+    public bool Load(bool applyDefaults = false)
     {
         ArgumentException.ThrowIfNullOrEmpty(ConfigFilePath);
 
@@ -132,7 +134,7 @@ public class ConfigManager<T> where T : class, new()
         var text = FileHelper.OpenFile(filePath, false);
         CurrentConfig = _deserializer.Deserialize<T>(text);
         
-        if (CurrentConfig != null)
+        if (applyDefaults && CurrentConfig != null)
             ConfigDefaultsApplier.ApplyDefaults(CurrentConfig);
         
         ConfigFilePath = filePath;
