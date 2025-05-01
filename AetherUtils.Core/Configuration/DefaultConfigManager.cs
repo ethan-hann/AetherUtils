@@ -1,4 +1,4 @@
-﻿// YamlConfigManager.cs : AetherUtils
+﻿// DefaultConfigManager.cs : AetherUtils
 // Copyright (C) 2025  Ethan Hann
 // 
 // MIT License
@@ -23,18 +23,13 @@
 namespace AetherUtils.Core.Configuration;
 
 /// <summary>
-///     Represents a configuration manager for a YAML configuration file using <see cref="DefaultConfig" />
-///     as the base configuration.
+/// A default implementation of <see cref="ConfigManager{T}"/> allowing for passing the configuration file path directly in.
 /// </summary>
-/// <param name="configFilePath">The path to the configuration file.</param>
-public sealed class YamlConfigManager(string configFilePath) : ConfigManager<DefaultConfig>(configFilePath)
+public sealed class DefaultConfigManager : ConfigManager<DefaultConfig>
 {
     /// <summary>
-    ///     Create a new, default configuration in memory.
+    /// Create a manager with the specified config file path.
     /// </summary>
-    public override bool CreateDefaultConfig()
-    {
-        CurrentConfig = new DefaultConfig();
-        return IsInitialized;
-    }
+    /// <param name="configFilePath">The full path to a configuration file to save and/or load.</param>
+    public DefaultConfigManager(string configFilePath) : base(configFilePath) { }
 }

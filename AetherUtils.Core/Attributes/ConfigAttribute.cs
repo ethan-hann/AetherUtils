@@ -23,13 +23,30 @@
 namespace AetherUtils.Core.Attributes;
 
 /// <summary>
-///     Specifies the name of a property in a YAML configuration file.
+///     Specifies the name of a property in a YAML configuration file, an optional comment description, and an optional default value to apply.
+///     <example>
+///         [Config("connectionString", "The connection string used for connecting to a database.", "host=;port=;user=;password=;database=;")]<br/>
+///         public string ConnectionString { get; set; } = string.Empty;
+///     </example>
+///     <param name="name">The name of the property as it will appear in the YAML file.</param>
+///     <param name="description">A description of the property that will appear as a comment above the property in YAML.</param>
+///     <param name="defaultValue">The default value that should be applied to the property in the YAML file.</param>
 /// </summary>
 [AttributeUsage(AttributeTargets.Property)]
-public sealed class ConfigAttribute(string name) : Attribute
+public sealed class ConfigAttribute(string name, string? description = null, object? defaultValue = null) : Attribute
 {
     /// <summary>
     ///     The YAML name of the property in the configuration file.
     /// </summary>
     public string Name { get; } = name;
+
+    /// <summary>
+    ///     An optional description that will be written as a comment above the config name in the YAML file.
+    /// </summary>
+    public string? Description { get; } = description;
+    
+    /// <summary>
+    ///     An optional default value for this configuration option. Defaults to <c>null</c> if not specified.
+    /// </summary>
+    public object? DefaultValue { get; } = defaultValue;
 }

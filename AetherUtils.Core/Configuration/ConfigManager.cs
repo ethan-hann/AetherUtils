@@ -34,34 +34,37 @@ using YamlDotNet.Serialization.NamingConventions;
 namespace AetherUtils.Core.Configuration;
 
 /// <summary>
-///     Provides methods for saving, loading, and querying a generic configuration.
-///     This class cannot be instantiated. A child class must be created inheriting from this class.
+///     Provides methods for saving, loading, and querying a generic YAML configuration.
 /// </summary>
 /// <remarks>
 ///     The custom class should have its properties related to configuration marked with a <see cref="ConfigAttribute" />.
 ///     These properties are the only ones which will be serialized and de-serialized from disk.
 /// </remarks>
-/// <typeparam name="T">The DTO class that represents the configuration.</typeparam>
-public abstract class ConfigManager<T>(string configFilePath) : IConfig
-    where T : class
+/// <typeparam name="T">The <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a> class that represents the configuration.</typeparam>
+public class ConfigManager<T> where T : class, new()
 {
     private readonly IDeserializer _deserializer = new DeserializerBuilder()
         .WithNamingConvention(CamelCaseNamingConvention.Instance)
+        .IgnoreUnmatchedProperties()
         .IncludeNonPublicProperties().Build();
 
-    private readonly ISerializer _serializer = new SerializerBuilder()
-        .WithNamingConvention(CamelCaseNamingConvention.Instance)
-        .IncludeNonPublicProperties().Build();
+    private readonly ISerializer _serializer = YamlCommentInjector
+        .ApplyToBuilder<T>(new SerializerBuilder()
+            .WithNamingConvention(CamelCaseNamingConvention.Instance)
+            .IncludeNonPublicProperties()
+            .EnsureRoundtrip())
+        .Build();
 
     /// <summary>
     ///     Get or set the current configuration.
     /// </summary>
-    protected T? CurrentConfig { get; set; }
+    [UsedImplicitly]
+    public T? CurrentConfig { get; set; }
 
     /// <summary>
     ///     Get or set the path to the configuration file on disk.
     /// </summary>
-    public string? ConfigFilePath { get; set; } = configFilePath;
+    public string? ConfigFilePath { get; set; }
 
     /// <summary>
     ///     Get a value indicating whether the configuration has been initialized.
@@ -73,6 +76,15 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     /// </summary>
     public bool ConfigExists => ConfigFilePath != null && FileHelper.DoesFileExist(ConfigFilePath);
 
+    /// <summary>
+    /// Create a configuration manager with the specified config file.
+    /// </summary>
+    /// <param name="configFilePath">The full path to a configuration file to save and/or load.</param>
+    public ConfigManager(string configFilePath)
+    {
+        ConfigFilePath = configFilePath;
+    }
+    
     /// <summary>
     ///     Asynchronously load a configuration file from disk based on the <see cref="ConfigFilePath" />.
     /// </summary>
@@ -93,6 +105,10 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
 
         var text = FileHelper.OpenFileAsync(filePath, false);
         CurrentConfig = _deserializer.Deserialize<T>(text.Result);
+        
+        if (CurrentConfig != null)
+            ConfigDefaultsApplier.ApplyDefaults(CurrentConfig);
+        
         ConfigFilePath = filePath;
 
         return Task.FromResult(IsInitialized);
@@ -115,6 +131,10 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
 
         var text = FileHelper.OpenFile(filePath, false);
         CurrentConfig = _deserializer.Deserialize<T>(text);
+        
+        if (CurrentConfig != null)
+            ConfigDefaultsApplier.ApplyDefaults(CurrentConfig);
+        
         ConfigFilePath = filePath;
 
         return IsInitialized;
@@ -215,7 +235,18 @@ public abstract class ConfigManager<T>(string configFilePath) : IConfig
     ///     Create the default configuration.
     /// </summary>
     [UsedImplicitly]
-    public abstract bool CreateDefaultConfig();
+    public virtual bool CreateDefaultConfig()
+    {
+        try
+        {
+            SetConfig(new T());
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
 
     /// <summary>
     ///     Get the current configuration as an object.

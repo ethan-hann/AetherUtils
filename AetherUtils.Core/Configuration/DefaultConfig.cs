@@ -44,21 +44,21 @@ public sealed class DefaultConfig
     /// <summary>
     ///     The connection string used for connecting to a database.
     /// </summary>
-    [Config("connectionString")]
+    [Config("connectionString", "The connection string used for connecting to a database.", "host=;port=;user=;password=;database=;")]
     [UsedImplicitly]
-    public string ConnectionString { get; set; } = "host=;port=;user=;password=;database=;";
+    public string ConnectionString { get; set; } = string.Empty;
 
     /// <summary>
     ///     The full path to a valid license file for an application.
     /// </summary>
-    [Config("licenseFile")]
+    [Config("licenseFile", "The full path to a valid license file for an application.", "")]
     [UsedImplicitly]
     public string LicenseFile { get; set; } = string.Empty;
 
     /// <summary>
     ///     A collection of options used for logging.
     /// </summary>
-    [Config("logOptions")]
+    [Config("logOptions", "A collection of options used for logging.")]
     [UsedImplicitly]
     public LogOptions LogOptions { get; set; } = new();
 }

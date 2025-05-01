@@ -34,53 +34,54 @@ public sealed class LogOptions
     /// <summary>
     ///     The name of the application doing the logging.
     /// </summary>
-    [Config("appName")]
+    [Config("appName", "The name of the application doing the logging.", "MyApp")]
     public string AppName { get; [UsedImplicitly] set; } = string.Empty;
 
     /// <summary>
     ///     The directory that the log file should be saved to.
     /// </summary>
-    [Config("logFileDirectory")]
-    public string LogFileDirectory { get; [UsedImplicitly] set; } = @"%TEMP%\logs";
+    [Config("logFileDirectory", "The directory that the log file should be saved to.", @"%TEMP%\logs")]
+    public string LogFileDirectory { get; [UsedImplicitly] set; } = string.Empty;
 
     /// <summary>
     ///     Indicates if the log file name should include the current formatted <see cref="DateTime" /> the file was created.
     /// </summary>
-    [Config("includeDateTime")]
-    public bool IncludeDateTime { get; [UsedImplicitly] set; } = false;
+    [Config("includeDateTime", "Indicates if the log file name should include the current formatted datetime the file was created.", false)]
+    public bool IncludeDateTime { get; [UsedImplicitly] set; }
 
     /// <summary>
     ///     Indicates if the log file name should include the date only, instead of the full formatted <see cref="DateTime" />.
     /// </summary>
-    [Config("includeDateOnly")]
-    public bool IncludeDateOnly { get; [UsedImplicitly] set; } = true;
+    [Config("includeDateOnly", "Indicates if the log file name should include the date only, instead of the full formatted datetime.", true)]
+    public bool IncludeDateOnly { get; [UsedImplicitly] set; }
 
     /// <summary>
     ///     Indicates whether a new log file should be created for every new launch of the application.
     /// </summary>
-    [Config("newFileEveryLaunch")]
-    public bool NewFileEveryLaunch { get; [UsedImplicitly] set; } = false;
+    [Config("newFileEveryLaunch", "Indicates whether a new log file should be created for every new launch of the application.", false)]
+    public bool NewFileEveryLaunch { get; [UsedImplicitly] set; }
 
     /// <summary>
     ///     Indicates whether the log should write to the system console in addition to a log file.
     /// </summary>
-    [Config("writeLogToConsole")]
-    public bool WriteLogToConsole { get; [UsedImplicitly] set; } = true;
+    [Config("writeLogToConsole", "Indicates whether the log should write to the system console in addition to a log file.", true)]
+    public bool WriteLogToConsole { get; [UsedImplicitly] set; }
 
     /// <summary>
     ///     Specifies the default log layout to use for NLog.
     /// </summary>
-    public string LogLayout { get; [UsedImplicitly] set; } = "${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}";
+    [Config("logLayout", "Specifies the default log layout to use for NLog.", "${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}")]
+    public string LogLayout { get; [UsedImplicitly] set; } = string.Empty;
 
     /// <summary>
     ///     Specifies the header to add at the top of each log file.
     /// </summary>
-    [Config("logHeader")]
+    [Config("logHeader", "Specifies the header to add at the top of each log file.", "")]
     public string LogHeader { get; [UsedImplicitly] set; } = string.Empty;
 
     /// <summary>
     ///     Specifies the footer to add at the end of each log file.
     /// </summary>
-    [Config("logFooter")]
+    [Config("logFooter", "Specifies the footer to add at the end of each log file.", "")]
     public string LogFooter { get; [UsedImplicitly] set; } = string.Empty;
 }
