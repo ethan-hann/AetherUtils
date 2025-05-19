@@ -71,7 +71,7 @@ public sealed class LogOptions
     ///     Specifies the default log layout to use for NLog.
     /// </summary>
     [Config("logLayout", "Specifies the default log layout to use for NLog.", "${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}")]
-    public string LogLayout { get; [UsedImplicitly] set; } = string.Empty;
+    public string LogLayout { get; [UsedImplicitly] set; } = "${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}";
 
     /// <summary>
     ///     Specifies the header to add at the top of each log file.
